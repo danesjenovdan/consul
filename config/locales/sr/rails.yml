@@ -9,7 +9,7 @@ sr:
       - Пет
       - Суб
     abbr_month_names:
-      - 
+      -
       - Јан
       - Феб
       - Мар
@@ -35,7 +35,7 @@ sr:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-      - 
+      -
       - Јануар
       - Фебруар
       - Март
@@ -180,7 +180,9 @@ sr:
           quadrillion: Квадрилион
           thousand: Хиљада
           trillion: Трилион
+          unit: ""
       format:
+        delimiter: ""
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -197,7 +199,11 @@ sr:
           tb: ТБ
     percentage:
       format:
+        delimiter: ""
         format: "%n%"
+    precision:
+      format:
+        delimiter: ""
   support:
     array:
       last_word_connector: ", и "
