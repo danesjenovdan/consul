@@ -180,3 +180,13 @@ it:
       nil: 'Senza status'
     errors:
       data_consent: "Per procedere, è necessario accettare il trattamento dei dati."
+  activerecord:
+    attributes:
+      budget/investment:
+        q1: "Indicare la motivazione della proposta. Qual è il tema, la problematica ossia la sfida che il progetto affronta?"
+        q2: "Quali proposte concrete proponete? Qual è il senso principale della vostra proposta?"
+        q3: "In che maniera il progetto dovrebbe venir realizzato? Quali attività sono previste?"
+        q4: "Dove nel concreto verrebbe realizzato il progetto?"
+        q5: "La tempistica: quando dovrebbe venir realizzato il progetto?"
+        q6: "Quali sono le migliorie apportate dal progetto?"
+        q7: "Previsione delle spese della proposta progettuale"

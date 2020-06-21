@@ -47,6 +47,7 @@ class Budget
     validates :heading_id, presence: true
     validates :unfeasibility_explanation, presence: { if: :unfeasibility_explanation_required? }
     validates :price, presence: { if: :price_required? }
+    validates :q1, presence: true
 
     validates :title, length: { in: 4..Budget::Investment.title_max_length }
     validates :description, length: { maximum: Budget::Investment.description_max_length }
@@ -352,6 +353,13 @@ class Budget
 
     def milestone_status_id
       milestones.published.with_status.order_by_publication_date.last&.status_id
+    end
+
+
+
+    def description
+      compiled_description = q1.to_s + q2.to_s + q3.to_s + q4.to_s + q5.to_s + q6.to_s + q7.to_s
+      read_attribute(:description) != '' ? compiled_description : read_attribute(:description) 
     end
 
     private
