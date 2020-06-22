@@ -64,6 +64,9 @@ sl:
       address: Naslov stalnega prebivališča
       name_and_last_name: Ime in priimek
       accept_terms: Strinjam se s %{conditions}
+      table_content: Vsebina
+      table_price: Znesek z DDV
+      table_total: Skupaj
     presentation:
       accepting:
         title_1: Kakšen je proračun?
