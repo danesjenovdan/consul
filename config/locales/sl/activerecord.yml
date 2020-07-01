@@ -123,6 +123,7 @@ sl:
         organization_name: "Če vlagaš predlog v imenu organizacije ali skupine ljudi, jo/jih navedi."
         image: "Opisna slika predloga"
         image_title: "Naslov slike"
+        
       budget/investment/milestone:
         title: "Naslov"
         description: "Opis"

@@ -64,6 +64,9 @@ sl:
       address: Naslov stalnega prebivališča
       name_and_last_name: Ime in priimek
       accept_terms: Strinjam se s %{conditions}
+      table_content: Vsebina
+      table_price: Znesek z DDV
+      table_total: Skupaj
     presentation:
       accepting:
         title_1: Kakšen je proračun?
@@ -180,3 +183,13 @@ sl:
       nil: 'Ni statusa'
     errors:
       data_consent: "Za nadaljevanje se moraš strinjati z obdelavo podatkov."
+  activerecord:
+    attributes:
+      budget/investment:
+        q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
+        q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
+        q3: "Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?"
+        q4: "Kje konkretno naj bi se projekt izvajal?"
+        q5: "Časovni okvir: kdaj naj bi se projekt izvedel?"
+        q6: "Kaj bi se po izvedbi projekta spremenilo, izboljšalo?"
+        q7: "Predvideni stroški predlaganega projekta"

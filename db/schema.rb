@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190903130333) do
+ActiveRecord::Schema.define(version: 20200618132416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -246,6 +246,13 @@ ActiveRecord::Schema.define(version: 20190903130333) do
     t.datetime "ignored_flag_at"
     t.integer  "flags_count",                                 default: 0
     t.string   "status"
+    t.text     "q1"
+    t.text     "q2"
+    t.text     "q3"
+    t.text     "q4"
+    t.text     "q5"
+    t.text     "q6"
+    t.text     "q7"
   end
 
   add_index "budget_investments", ["administrator_id"], name: "index_budget_investments_on_administrator_id", using: :btree
