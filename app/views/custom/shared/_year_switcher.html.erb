@@ -1,10 +1,10 @@
 <% if I18n.available_locales.size > 1 %>
   <div class="locale" id="js-locale" data-current-local="<%= I18n.locale %>">
     <form class="locale-form">
-      <select class="js-location-changer locale-switcher inline-block" name="locale-switcher" id="locale-switcher">
+      <select class="js-location-changer locale-switcher inline-block" name="locale-switcher" id="year-switcher">
         <optgroup label="Proračun za leto:">
           <option selected="true" value="https://predlagam-odlocam.koper.si">2020</option>
-          <option selected="true" value="https://2019.predlagam-odlocam.koper.si">2019</option>
+          <option value="https://2019.predlagam-odlocam.koper.si">2019</option>
         </optgroup>
       </select>
     </form>
