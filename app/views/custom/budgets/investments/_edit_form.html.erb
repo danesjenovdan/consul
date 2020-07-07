@@ -280,12 +280,12 @@
     });
 
     $('#editabletable').on('change', 'td', function(evt, newValue) {
-      $('#budget_investment_q7').val($('#editabletable')[0].outerHTML);
-
       var totalValue = $('td.value').toArray().reduce(function(prev, cur) {
         return prev + (parseInt($(cur).text() || 0));
       }, 0);
       $('#total-value').text(totalValue || 0);
+
+      $('#budget_investment_q7').val($('#editabletable')[0].outerHTML);
     });
   }
 
