@@ -50,7 +50,7 @@ class Budget
     validates :q1, presence: true
 
     validates :title, length: { in: 4..Budget::Investment.title_max_length }
-    validates :description, length: { maximum: Budget::Investment.description_max_length }
+    # validates :description, length: { maximum: Budget::Investment.description_max_length }
     validates :terms_of_service, acceptance: { allow_nil: false }, on: :create
 
     scope :sort_by_confidence_score, -> { reorder(confidence_score: :desc, id: :desc) }
