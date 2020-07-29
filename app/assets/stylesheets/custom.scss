@@ -7,3 +7,26 @@
 .top-bar, header {
   background: #ffffff !important;
 }
+
+.top-bar {
+  .menu > li {
+    a {
+      color: $brand;
+      
+      @include breakpoint(medium) {
+        font-size: $small-font-size;
+        padding: rem-calc(11) rem-calc(16);
+      }
+    }
+  }
+}
+
+.dropdown.menu > li {
+  &.is-active > a {
+    color: $brand;
+  }
+
+  &.is-dropdown-submenu-parent > a::after {
+    border-color: $brand transparent transparent;
+  }
+}
