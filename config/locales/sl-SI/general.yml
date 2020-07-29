@@ -159,11 +159,11 @@ sl:
     footer:
       accessibility: Dostopnost
       conditions: Pogoji uporabe
-      consul: Aplikacija CONSUL
+      consul: CONSUL
       contact_us: Tehnična pomoč
       description: Ta portal uporablja %{consul}, ki je %{open_source}.
       open_source: odprtokodna programska oprema
-      participation_text: Odloči se, kako sooblikovati tako mesto, v kakršnem si želiš živeti.
+      participation_text: Sooblikuj tako državo, v kakršni si želiš živeti.
       participation_title: Sodelovanje
       privacy: Politika zasebnosti
     header:
