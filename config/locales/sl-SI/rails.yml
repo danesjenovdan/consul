@@ -1,5 +1,9 @@
 sl:
   date:
+    formats:
+      default: "%d. %m. %Y"
+      long: "%B %d, %Y"
+      short: "%b %d"
     abbr_day_names:
       - Ned
       - Pon
