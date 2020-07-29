@@ -157,7 +157,7 @@ sl:
       ie: Zaznali smo, da za brskanje po internetu uporabljaš Internet Explorer. Za boljšo izkušno te spletne strani, ti predlagamo preklop na %{firefox} ali %{chrome}.
       ie_title: Ta spletna stran ni optimizirana za tvoj brskalnik
     footer:
-      accessibility: Dostopnosti
+      accessibility: Dostopnost
       conditions: Pogoji uporabe
       consul: Aplikacija CONSUL
       contact_us: Tehnična pomoč
@@ -165,7 +165,7 @@ sl:
       open_source: odprtokodna programska oprema
       participation_text: Odloči se, kako sooblikovati tako mesto, v kakršnem si želiš živeti.
       participation_title: Sodelovanje
-      privacy: Politiko zasebnosti
+      privacy: Politika zasebnosti
     header:
       administration: Administracija
       available_locales: Razpoložljivi jeziki
