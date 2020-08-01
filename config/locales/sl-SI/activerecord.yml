@@ -1,5 +1,9 @@
 sl:
   activerecord:
+    models:
+      proposal:
+        one: "Predlog"
+        other: "Predloge"
     attributes:
       budget:
         name: "Ime"
