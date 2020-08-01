@@ -8,6 +8,7 @@
     <%= f.translatable_fields do |translations_form| %>
       <div class="small-12 column">
         <%= translations_form.text_field :title,
+              label: 'Naslov',
               maxlength: Debate.title_max_length,
               placeholder: t("debates.form.debate_title"),
               data: { js_suggest_result: "js_suggest_result",
@@ -18,6 +19,7 @@
 
       <div class="small-12 column">
         <%= translations_form.text_area :description,
+              label: 'Opis',
               maxlength: Debate.description_max_length,
               class: "html-area" %>
       </div>
@@ -27,6 +29,7 @@
 
     <div class="small-12 column">
       <%= f.text_field :tag_list, value: @debate.tag_list.to_s,
+                        label: 'Oznake (tagi)',
                         hint: t("debates.form.tags_instructions"),
                         placeholder: t("debates.form.tags_placeholder"),
                         data: { js_url: suggest_tags_path },

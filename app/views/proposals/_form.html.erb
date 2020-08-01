@@ -8,6 +8,7 @@
     <%= f.translatable_fields do |translations_form| %>
       <div class="small-12 column">
         <%= translations_form.text_field :title,
+              label: 'Naslov',
               maxlength: Proposal.title_max_length,
               data: { js_suggest_result: "js_suggest_result",
                       js_suggest: ".js-suggest",
@@ -17,12 +18,14 @@
 
       <div class="small-12 column">
         <%= translations_form.text_area :summary,
+                                        label: 'Povzetek',
                                         rows: 4, maxlength: 200,
                                         hint: t("proposals.form.proposal_summary_note") %>
       </div>
 
       <div class="small-12 column">
         <%= translations_form.text_area :description,
+                                        label: 'Opis',
                                         maxlength: Proposal.description_max_length,
                                         class: "html-area" %>
       </div>
@@ -48,7 +51,7 @@
 
     <div class="small-12 medium-6 column">
       <%= f.select :geozone_id, geozone_select_options,
-        include_blank: t("geozones.none") %>
+        include_blank: t("geozones.none"), label: t("geozones.geozones") %>
     </div>
 
     <% if feature?(:map) %>
@@ -66,7 +69,7 @@
       </div>
     <% end %>
 
-    <div class="small-12 column">
+    <!-- <div class="small-12 column">
       <%= f.label :tag_list, t("proposals.form.tags_label") %>
       <p class="help-text" id="tag-list-help-text"><%= t("proposals.form.tags_instructions") %></p>
 
@@ -84,7 +87,7 @@
                         class: "js-tag-list tag-autocomplete",
                         aria: { describedby: "tag-list-help-text" },
                         data: { js_url: suggest_tags_path } %>
-    </div>
+    </div> -->
 
     <% if current_user.unverified? %>
       <div class="small-12 column">

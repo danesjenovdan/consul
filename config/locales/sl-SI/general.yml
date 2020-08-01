@@ -151,7 +151,8 @@ sl:
     topic: Tema
     image: Slika
   geozones:
-    none: Celo mesto/občina
+    none: Brez teme
+    geozones: Teme
   layouts:
     application:
       ie: Zaznali smo, da za brskanje po internetu uporabljaš Internet Explorer. Za boljšo izkušno te spletne strani, ti predlagamo preklop na %{firefox} ali %{chrome}.
@@ -250,8 +251,8 @@ sl:
       tags_label: Oznake
       tags_placeholder: "Vpiši oznake, ki jih želiš uporabiti, loči jih z vejico (',')"
       map_location: "Lokacija na zemljevidu"
-      map_location_instructions: "Na zemljevidu najdi lokacijo in postavi označevalec."
-      map_remove_marker: "Odstrani označevalec"
+      map_location_instructions: "Označi lokacijo na zemljevidu."
+      map_remove_marker: "Odstrani lokacijo."
       map_skip_checkbox: "Ta predlog nima konkretne lokacije ali je ne poznam."
     index:
       featured_proposals: Izpostavljeno
