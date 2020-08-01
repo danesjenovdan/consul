@@ -4,3 +4,8 @@
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
 $brand: #0072bb;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+$body-font-family: 'Oswald', Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: $body-font-family;
