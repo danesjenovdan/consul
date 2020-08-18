@@ -17,8 +17,9 @@ set :db_server, deploysecret(:db_server)
 set :ssh_options, port: deploysecret(:ssh_port)
 
 set :server_name, deploysecret(:server_name)
-set :repo_url, "https://github.com/danesjenovdan/consul.git"
+set :repo_url, 'https://github.com/danesjenovdan/consul.git'
 
+# added by muki
 set :revision, `git rev-parse --short #{fetch(:branch)}`.strip
 
 set :log_level, :info

@@ -36,11 +36,14 @@ it:
       email_already_sent: Abbiamo già inviato un'e-mail con un link di conferma. Se non è possibile recuperare l'email, qui si può richiedere che venga reinviata
     residence:
       new:
+        date_of_birth: Data di nascita
         document_number: Numero del documento
         document_number_help_title: Aiuto
         document_type:
           passport: Passaporto
+        document_type_label: Tipo di documento
         error_not_allowed_age: Non hai l'età minima richiesta per partecipare
+        postal_code: Cap
         terms: termini e condizioni d'uso
     sms:
       create:

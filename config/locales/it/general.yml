@@ -2,6 +2,8 @@ it:
   account:
     show:
       change_credentials_link: Modificare le mie credenziali
+      email_on_comment_label: Avvisami via email quando qualcuno commenta le mie proposte o dibattiti
+      email_on_comment_reply_label: Avvisami via email quando qualcuno risponde ai miei commenti
       erase_account_link: Cancella il mio account
       finish_verification: Completa la verifica
       notifications: Notifiche
@@ -9,9 +11,15 @@ it:
       organization_responsible_name_placeholder: Rappresentante dell'organizzazione o collettivo
       personal: Dettagli personali
       phone_number_label: Numero di telefono
+      public_activity_label: Mantenere pubbliche la mia lista delle attività
+      public_interests_label: Mantieni pubbliche le etichette degli elementi che seguo
       public_interests_my_title_list: Etichette di elementi che segui
       public_interests_user_title_list: Etichette degli elementi che segue questo utente
       save_changes_submit: Salvare le modifiche
+      subscription_to_website_newsletter_label: Ricevere per e-mail informazioni interessanti pubblicate sul sito
+      email_on_direct_message_label: Ricevere e-mail con i messaggi privati
+      email_digest_label: Ricevere un riepilogo delle notifiche di proposta
+      official_position_badge_label: Visualizza l'etichetta (badge) del tipo di utente
       recommendations: Raccomandazioni
       title: Il mio account
       user_permission_debates: Partecipare ai dibattiti
@@ -88,8 +96,8 @@ it:
     index:
       featured_debates: In primo piano
       filter_topic:
-        one: " con argomento '%{topic}'"
-        other: " con argomento '%{topic}'"
+        one: " con argomento '%{topic}'\ncon argomento '%{topîc}'"
+        other: " con argomento '%{topic}'\ncon argomento '%{topîc}'"
       orders:
         confidence_score: più apprezzati
         created_at: più recenti
@@ -108,6 +116,9 @@ it:
         button: Ricercare
         placeholder: Ricerca dibattiti...
         title: Ricercare
+      search_results_html:
+        one: " contenenti il termine <strong>'%{search_term}'</strong>"
+        other: " contenenti il termine <strong>'%{search_term}'</strong>"
       select_order: Ordinare per
       start_debate: Avvia un dibattito
       title: Dibattiti
@@ -141,6 +152,7 @@ it:
       comments_title: Commenti
       edit_debate_link: Modificare
       flag: Questo dibattito è stato contrassegnato come inappropriato da diversi utenti.
+      login_to_comment: È necessario %{signin} o %{signup} per lasciare un commento.
       share: Condividere
       author: Autore
     update:
@@ -158,6 +170,7 @@ it:
     direct_message: messaggio privato
     error: errore
     errors: errori
+    not_saved_html: "Si è verificato un errore.<br>Controllare le caselle contrassegnate."
     policy: Informativa sulla privacy
     proposal: Proposta
     proposal_notification: "Notifica"
@@ -214,8 +227,8 @@ it:
       budgets: Bilancio partecipativo
       notification_item:
         new_notifications:
-          one: Hai una nuova notifica
-          other: Hai %{count} nuove notifiche
+          one: "Hai una nuova notifica\nHai %{count} nuove notifiche"
+          other: "Hai una nuova notifica\nHai %{count} nuove notifiche"
         notifications: Notifiche
         no_notifications: "Non hai nuove notifiche"
     admin:
@@ -244,6 +257,7 @@ it:
   map:
     title: "Distretti"
     proposal_for_district: "Avviare una proposta per il vostro distretto"
+    select_district: Ambito operativo
     start_proposal: Creare una proposta
   omniauth:
     facebook:
@@ -286,6 +300,8 @@ it:
       done: Fatto
       other: Altri
     form:
+      geozone: Ambito operativo
+      proposal_responsible_name: Nome e cognome della persona che presenta la proposta
       proposal_responsible_name_note: "(individualmente o come rappresentante di un’associazione; non sarà reso pubblico)"
       proposal_summary_note: "(massimo 200 caratteri)"
       proposal_video_url_note: È possibile aggiungere un link a YouTube o Vimeo
@@ -330,6 +346,9 @@ it:
         button: Ricercare
         placeholder: Cerca proposte...
         title: Ricercare
+      search_results_html:
+        one: " contenenti il termine <strong>'%{search_term}'</strong>"
+        other: " contenenti il termine <strong>'%{search_term}'</strong>"
       select_order: Ordinare per
       select_order_long: "Stai visualizzando le proposte in base a:"
       start_proposal: Crea una proposta
@@ -486,6 +505,10 @@ it:
       back: Ritorno al voto
       cant_answer_not_logged_in: "È necessario %{signin} o %{signup} per partecipare."
       comments_tab: Commenti
+      login_to_comment: È necessario %{signin} o %{signup} per lasciare un commento.
+      signin: Accedere
+      signup: Registrati
+      cant_answer_verify_html: "È necessario %{verify_link} per rispondere."
       verify_link: "verifica la tua utenza"
       cant_answer_expired: "Questa votazione è conclusa."
       cant_answer_wrong_geozone: "Questo quesito non è disponibile nella tua zona."
@@ -611,6 +634,54 @@ it:
     whatsapp: WhatsApp
     telegram: "Telegram di %{org}"
     instagram: "Instagram di %{org}"
+  spending_proposals:
+    form:
+      association_name_label: "Se proponete in nome di un'associazione o altro gruppo aggiungete qui il nome"
+      association_name: "Nome Associazione"
+      description: Descrizione
+      external_url: Link alla documentazione integrativa
+      geozone: Ambito operativo
+      submit_buttons:
+        create: Crea
+        new: Crea
+      title: Titolo della proposta di spesa
+    index:
+      title: Bilancio partecipativo
+      unfeasible: Progetti di investimento irrealizzabili
+      by_geozone: "Progetti di investimento con ambito di applicazione: %{geozone}"
+      search_form:
+        button: Ricercare
+        placeholder: Progetti di investimento...
+        title: Ricercare
+      search_results:
+        one: " che contengono i termini '%{search_term}'"
+        other: " che contengono i termini '%{search_term}'"
+      sidebar:
+        geozones: Ambito operativo
+        feasibility: Fattibilità
+        unfeasible: Irrealizzabile
+      start_spending_proposal: Crea un progetto di investimento
+    new:
+      more_info: Come funziona il bilancio partecipativo?
+      recommendation_one: È obbligatorio che la proposta faccia riferimento a un’attività inseribile a bilancio.
+      recommendation_three: Cerca di entrare molto nel dettaglio descrivendo la tua proposta di spesa così che il gruppo dei revisori capisca le tue argomentazioni.
+      recommendation_two: Qualsiasi proposta o commento che suggerisca azioni illegali verrà eliminato.
+      recommendations_title: Come creare una proposta di spesa
+      start_new: Creare una proposta di spesa
+    show:
+      author_deleted: Utente cancellato
+      code: "Codice proposta:"
+      share: Condividere
+    wrong_price_format: Solo numeri interi
+    spending_proposal:
+      spending_proposal: Progetto di investimento
+      already_supported: Hanno già sostenuto questo progetto. Condividilo!
+      support: Sostieni
+      support_title: Sostenere questo progetto
+      supports:
+        zero: Nessun sostegno
+        one: 1 sostegno
+        other: "%{count} sostegni"
   stats:
     index:
       visits: Visite
@@ -634,6 +705,10 @@ it:
         submit_button: Invia messaggio
         title: Invia un messaggio privato a %{receiver}
         verified_only: Per inviare un messaggio privato %{verify_account}
+        verify_account: verifica il tuo account
+        authenticate: È necessario %{signin} o %{signup} per continuare.
+        signin: accedere
+        signup: accedere
       show:
         receiver: Messaggio inviato a %{receiver}
     show:
@@ -676,7 +751,10 @@ it:
     comment_unauthenticated: È necessario %{signin} o %{signup} per votare.
     disagree: Non sono d'accordo
     organizations: Le organizzazioni non sono ammesse a votare
+    signin: Accedere
+    signup: Registrati
     supports: Supporti
+    unauthenticated: È necessario %{signin} o %{signup} per continuare.
     verified_only: Solo gli utenti verificati possono votare le proposte; %{verify_account}.
     budget_investments:
       not_logged_in: È necessario %{signin} o %{signup} per continuare.
@@ -752,4 +830,6 @@ it:
     help:
       alt: Selezionare il testo che si desidera commentare e premere il pulsante con la matita.
       text: Per commentare questo documento è necessario %{sign_in} o %{sign_up}. Quindi selezionare il testo che si desidera commentare e premere il pulsante con la matita.
+      text_sign_in: account di accesso
+      text_sign_up: registrarsi
       title: Come posso commentare questo documento?

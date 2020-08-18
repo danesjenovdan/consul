@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200519120717) do
+ActiveRecord::Schema.define(version: 20200618132416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -273,7 +273,15 @@ ActiveRecord::Schema.define(version: 20200519120717) do
     t.datetime "confirmed_hide_at"
     t.datetime "ignored_flag_at"
     t.integer "flags_count", default: 0
+    t.string "status"
     t.integer "original_heading_id"
+    t.text "q1"
+    t.text "q2"
+    t.text "q3"
+    t.text "q4"
+    t.text "q5"
+    t.text "q6"
+    t.text "q7"
     t.index ["administrator_id"], name: "index_budget_investments_on_administrator_id"
     t.index ["author_id"], name: "index_budget_investments_on_author_id"
     t.index ["community_id"], name: "index_budget_investments_on_community_id"
@@ -288,6 +296,9 @@ ActiveRecord::Schema.define(version: 20200519120717) do
     t.datetime "updated_at", null: false
     t.text "description"
     t.text "summary"
+    t.string "presentation_summary_1"
+    t.string "presentation_summary_2"
+    t.string "presentation_summary_3"
     t.index ["budget_phase_id"], name: "index_budget_phase_translations_on_budget_phase_id"
     t.index ["locale"], name: "index_budget_phase_translations_on_locale"
   end
@@ -299,6 +310,9 @@ ActiveRecord::Schema.define(version: 20200519120717) do
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.boolean "enabled", default: true
+    t.text "presentation_summary_1"
+    t.text "presentation_summary_2"
+    t.text "presentation_summary_3"
     t.index ["ends_at"], name: "index_budget_phases_on_ends_at"
     t.index ["kind"], name: "index_budget_phases_on_kind"
     t.index ["next_phase_id"], name: "index_budget_phases_on_next_phase_id"
@@ -545,7 +559,7 @@ ActiveRecord::Schema.define(version: 20200519120717) do
     t.string "title"
     t.string "attachment_file_name"
     t.string "attachment_content_type"
-    t.integer "attachment_file_size"
+    t.bigint "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.integer "user_id"
     t.string "documentable_type"
@@ -641,7 +655,7 @@ ActiveRecord::Schema.define(version: 20200519120717) do
     t.datetime "updated_at", null: false
     t.string "attachment_file_name"
     t.string "attachment_content_type"
-    t.integer "attachment_file_size"
+    t.bigint "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.integer "user_id"
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
@@ -1347,7 +1361,7 @@ ActiveRecord::Schema.define(version: 20200519120717) do
     t.string "name", null: false
     t.string "image_file_name"
     t.string "image_content_type"
-    t.integer "image_file_size"
+    t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -1493,6 +1507,10 @@ ActiveRecord::Schema.define(version: 20200519120717) do
     t.boolean "public_interests", default: false
     t.boolean "recommended_debates", default: true
     t.boolean "recommended_proposals", default: true
+    t.text "phone"
+    t.text "address"
+    t.boolean "is_anonymous", default: false, null: false
+    t.boolean "data_consent", default: false, null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["geozone_id"], name: "index_users_on_geozone_id"

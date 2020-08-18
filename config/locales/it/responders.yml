@@ -24,6 +24,7 @@ it:
         poll: "Sondaggio creato correttamente."
         poll_booth: "Seggio creato correttamente."
         proposal: "Proposta aggiornata correttamente."
+        spending_proposal: "Progetto di investimento aggiornato correttamente."
         budget_investment: "Progetto di investimento aggiornato correttamente."
         topic: "Argomento aggiornato con successo."
         valuator_group: "Gruppo di stimatori aggiornato con successo"

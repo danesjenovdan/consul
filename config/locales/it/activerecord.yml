@@ -72,6 +72,9 @@ it:
       proposal:
         one: "Proposta cittadina"
         other: "Proposte cittadine"
+      spending_proposal:
+        one: "Progetto di investimento"
+        other: "Progetti di investimento"
       site_customization/page:
         one: Pagina personalizzata
         other: Pagine personalizzate
@@ -200,6 +203,7 @@ it:
         allow_custom_content: "Consenti blocco contenuto"
         latitude: "Latitudine (opzionale)"
         longitude: "Longitudine (opzionale)"
+      budget/heading:
         name: "Denominazione della voce di bilancio"
         price: "Costi"
         population: "Popolazione"
@@ -239,6 +243,7 @@ it:
         description: "Testo proposta"
         summary: "Sommario proposta"
         retired_explanation: "Spiegazione"
+        terms_of_service: "Termini del servizio"
       user:
         login: "E-mail o nome utente"
         email: "Email"
@@ -474,6 +479,8 @@ it:
           attributes:
             email:
               password_already_set: "Questo utente ha già una password"
+            document_number:
+              invalid: "Il codice anagrafico inserito non è corretto."
         debate:
           attributes:
             tag_list:

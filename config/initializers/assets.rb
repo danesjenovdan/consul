@@ -16,3 +16,11 @@ Rails.application.config.assets.precompile += %w[print.css]
 Rails.application.config.assets.precompile += %w[pdf_fonts.css]
 
 # Loads custom images and custom fonts before app/assets/images and app/assets/fonts
+# TODO this is commented out because it looks like it should be, but maybe it shouldn't
+# assets_path = Rails.application.config.assets.paths
+
+# %w[images fonts javascripts].each do |asset|
+#   assets_path.insert(0, Rails.root.join("app", "assets", asset, "custom").to_s)
+# end
+
+Rails.application.config.assets.precompile += %w( custom.scss custom.js )

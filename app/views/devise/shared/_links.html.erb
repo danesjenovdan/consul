@@ -1,7 +1,12 @@
-<div class="text-center">
-  <%- if controller_name != "sessions" %>
-    <%= link_to t("devise_views.shared.links.login"), new_session_path(resource_name) %><br>
-  <% end -%>
+<!-- <div class="text-center">
+   <%- if controller_name != "sessions" %>
+     <%= link_to t("devise_views.shared.links.login"), new_session_path(resource_name) %><br>
+   <% end -%> -->
+<!-- TODO move this to custom -->
+<div class="text-left">
+	<%- if controller_name != 'sessions' %>
+	  <%= link_to t("devise_views.shared.links.login"), new_session_path(resource_name) %><br>
+	<% end -%>
 
   <%#- if devise_mapping.registerable? &&
         controller_name != "registrations" ||

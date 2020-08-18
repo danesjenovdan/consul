@@ -7,7 +7,7 @@ gem "acts_as_votable", "~> 0.11.1"
 gem "ahoy_matey", "~> 1.6.0"
 gem "ancestry", "~> 3.0.7"
 gem "audited", "~> 4.9.0"
-gem "autoprefixer-rails", "~> 8.2.0"
+gem "autoprefixer-rails", "~> 9.8.6.1"
 gem "cancancan", "~> 2.3.0"
 gem "ckeditor", "~> 4.3.0"
 gem "cocoon", "~> 1.2.14"
@@ -64,6 +64,10 @@ source "https://rails-assets.org" do
   gem "rails-assets-leaflet"
   gem "rails-assets-markdown-it", "~> 9.0.1"
 end
+
+gem 'route_translator', '~> 8.0.0'
+gem 'faker', '~> 1.8.7'
+
 
 group :development, :test do
   gem "bullet", "~> 5.9.0"

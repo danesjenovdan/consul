@@ -69,4 +69,10 @@ module ApplicationHelper
   def management_controller?
     controller.class.to_s.include?("Management")
   end
+
+  def kaminari_path(url)
+    # this doesn't work any more because of forced locale
+    # "#{root_url.chomp("\/")}"
+    "#{url}"
+  end
 end

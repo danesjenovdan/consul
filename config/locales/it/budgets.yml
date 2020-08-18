@@ -12,6 +12,10 @@ it:
           other: "Hai votato <span>%{count}</span> investimenti."
         voted_info: "Il tuo scrutinio è confermato!"
         voted_info_2: "Ma puoi modificare il tuo voto ogni volta che vuoi finché questa fase sarà chiusa."
+        voted_html:
+          one: "Hai votato <span>un</span> progetto di investimento."
+          other: "Hai votato <span>%{count}</span> progetti di investimento."
+        voted_info_html: "È possibile cambiare il proprio voto in qualsiasi momento fino alla fine di questa fase. <br> Non è necessario spendere tutti i fondi disponibili."
         zero: Non hai ancora votato nessun progetto di investimento.
       reasons_for_not_balloting:
         not_logged_in: È necessario %{signin} o %{signup} per continuare.
@@ -30,6 +34,9 @@ it:
         unfeasible: Mostrare gli investimenti irrealizzabili
         unselected_title: Investimenti che non sono stati selezionati per la fase di voto
         unselected: Mostrare gli investimenti non selezionati per la fase di voto
+        share_title: Inoltra
+        share: Inoltra
+        copy: Copia il link!
     phase:
       drafting: Bozza (Non visibile al pubblico)
       informing: Informazione
@@ -69,6 +76,7 @@ it:
         map_location: "Posizione sulla mappa"
         map_location_instructions: "Scorri la mappa sino a individuare il luogo giusto e posiziona il segnaposto."
         map_remove_marker: "Rimuovi segnaposto"
+        location: "Informazioni aggiuntive sul luogo"
         map_skip_checkbox: "Questo investimento non ha una precisa collocazione geografica ovvero io non ne sono a conoscenza."
       index:
         title: Bilancio partecipativo
@@ -79,10 +87,14 @@ it:
           button: Ricercare
           placeholder: Ricercare progetti di investimento...
           title: Ricercare
+        search_results_html:
+          one: " contenente il termine <strong>'%{search_term}'</strong>"
+          other: " contenente il termine <strong>'%{search_term}'</strong>"
         sidebar:
           my_ballot: I miei voti
           voted_info: È possibile %{link} in qualsiasi momento fino alla fine di questa fase. Non è necessario spendere tutti i fondi disponibili.
           voted_info_link: cambiare il tuo voto
+          different_heading_assigned_html: "Hai voti attivi in un'altra voce: %{heading_link}"
           change_ballot: "Se cambi idea è possibile cancellare il tuo voto in %{check_ballot} e ricominciare da capo."
           check_ballot_link: "controllare il mio voto"
           zero: Non hai ancora votato nessun progetto di investimento in questo gruppo.
@@ -96,11 +108,17 @@ it:
           random: casuale
           confidence_score: più apprezzati
           price: per costi
+          created_at: per data
       show:
         author_deleted: Utente cancellato
         price_explanation: Informazioni sui costi
         unfeasibility_explanation: Informazioni sulla infattibilità
+        code_html: "Codice del progetto di investimento: <strong>%{code}</strong>"
+        location_html: "Ubicazione: <strong>%{location}</strong>"
+        organization_name_html: "Proposto per conto di: <strong>%{name}</strong>"
         share: Condividere
+        share_title: Inoltra
+        copy: Copia il link!
         title: Progetto di investimento
         supports: Sostegni
         votes: Voti
@@ -108,7 +126,10 @@ it:
         comments_tab: Commenti
         milestones_tab: Traguardi
         author: Autore
+        project_unfeasible_html: "Questo progetto di investimento <strong>è stato contrassegnato come irrealizzabile</strong> e non accederà alla fase di voto finale."
+        project_selected_html: "Il progetto di investimento <strong>è stato selezionato</strong> per la fase di voto."
         project_winner: "Progetto di investimento vincitore"
+        project_not_selected_html: "Questo progetto di investimento <strong>non è stato selezionato</strong> per la fase di voto finale."
       wrong_price_format: Solo numeri interi
       investment:
         add: Votare
@@ -125,6 +146,7 @@ it:
         give_support: Sostieni
       header:
         check_ballot: Controlla il mio voto
+        different_heading_assigned_html: "Hai voti attivi in un'altra voce: %{heading_link}"
         change_ballot: "Se cambi idea è possibile cancellare il tuo voto in %{check_ballot} e ricominciare da capo."
         check_ballot_link: "controlla il mio voto"
         price: "Questa sezione dispone di un budget di"
@@ -144,6 +166,7 @@ it:
       page_title: "%{budget} - risultati"
       heading: "Risultati per il bilancio partecipativo"
       heading_selection_title: "Per circoscrizione"
+      spending_proposal: Titolo della proposta
       ballot_lines_count: Voti
       hide_discarded_link: Nascondere le scartate
       show_all_link: Visualizzare tutti

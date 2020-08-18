@@ -39,6 +39,11 @@ it:
         editing: Modifica banner
         form:
           submit_button: Salva modifiche
+      errors:
+        form:
+          error:
+            one: "errore ha impedito il salvataggio di questo banner"
+            other: "errori hanno impedito il salvataggio di questo banner"
       new:
         creating: Crea banner
     activity:
@@ -249,11 +254,14 @@ it:
       edit:
         classification: Classificazione
         compatibility: Compatibilità
+        mark_as_incompatible: Contrassegnare come incompatibile
         selection: Selezione
+        mark_as_selected: Contrassegnare come selezionato
         assigned_valuators: Valutatori
         select_heading: Selezionare intestazione
         submit_button: Aggiorna
         user_tags: Etichette assegnate dall’utente
+        tags: Etichette
         tags_placeholder: "Scrivere i tag separati da virgole (,)"
         undefined: Non definito
       search_unfeasible: Ricerca irrealizzabile
@@ -276,6 +284,8 @@ it:
         no_statuses_defined: Non ci sono ancora status d’investimento definiti
       new:
         creating: Crea traguardo-milestone
+        date: Data
+        description: Descrizione
       edit:
         title: Modifica traguardo-milestone
       create:
@@ -307,12 +317,20 @@ it:
     progress_bars:
       index:
         title: "Barre progresso"
+        table_id: "ID"
         table_kind: "Tipo"
         table_title: "Titolo"
     comments:
       index:
         id: "ID"
         content: "Contenuto"
+        filter: Filtro
+        filters:
+          all: Tutti
+          with_confirmed_hide: Confermato
+          without_confirmed_hide: In sospeso
+        hidden_debate: Dibattito nascosto
+        hidden_proposal: Proposta nascosta
         title: Commenti nascosti
     dashboard:
       index:
@@ -397,6 +415,9 @@ it:
         edit:
           back: Indietro
           submit_button: Salva modifiche
+        errors:
+          form:
+            error: Errore
         form:
           enabled: Abilitato
           process: Procedimento
@@ -454,6 +475,8 @@ it:
           back: Indietro
           id: Id
           supports: Sostegni
+          select: Selezionare
+          selected: Selezionato
         form:
           custom_categories: Categorie
           custom_categories_description: Categorie che gli utenti possono selezionare creando la proposta.
@@ -472,6 +495,7 @@ it:
           submit_button: Salva modifiche
           warning: Hai modificato il testo, non dimenticare di cliccare su Salva per salvare le modifiche in modo permanente.
         form:
+          title_html: 'Stai modificando <span class="strong">%{draft_version_title}</span> dal procedimento <span class="strong">%{process_title}</span>'
           launch_text_editor: Avviare l'editor di testo
           close_text_editor: Chiudere l'editor di testo
           use_markdown: Usa il Markdown per formattare il testo
@@ -511,8 +535,12 @@ it:
           back: Indietro
           title: "Modificare \"%{question_title}\""
           submit_button: Salva modifiche
+        errors:
+          form:
+            error: Errore
         form:
           add_option: Aggiungere l'opzione
+          title: Quesito
           title_placeholder: Aggiungi quesito
           value_placeholder: Aggiungi una risposta chiusa
           question_options: "Possibile risposta (facoltativa, risposta aperta di default)"
@@ -597,6 +625,7 @@ it:
         buttons:
           save: "Salva"
       title_moderated_content: Contenuto moderato
+      title_budgets: Bilanci
       title_profiles: Profili
       title_settings: Impostazioni
       title_site_customization: Contenuto del sito
@@ -737,6 +766,15 @@ it:
         delete: Eliminare
       search:
         title: "Stimatori: Ricerca utenti"
+      summary:
+        title: Riassunto della valutazione dei progetti di investimento
+        valuator_name: Valutatore
+        finished_and_feasible_count: Finito e fattibile
+        finished_and_unfeasible_count: Finito e non realizzabile
+        finished_count: Terminati
+        in_evaluation_count: Valutazione in corso
+        total_count: Totale
+        cost: Costi
       form:
         edit_title: "Stimatori: Modificare stimatore"
         updated: "Stimatore aggiornato con successo"
@@ -757,6 +795,7 @@ it:
         title: "Gruppo di stimatori: %{group}"
         no_valuators: "Non risultano stimatori assegnati a questo gruppo"
       form:
+        name: "Nome del gruppo"
         new: "Crea gruppo di stimatori"
         edit: "Salvare il gruppo di stimatori"
     poll_officers:
@@ -885,6 +924,7 @@ it:
         title: "Modifica la domanda"
       new:
         title: "Creare una domanda per il sondaggio %{poll}"
+        poll_label: "Sondaggio"
       answers:
         images:
           add_image: "Aggiungi immagine"
@@ -961,6 +1001,8 @@ it:
         no_location: "Nessuna Posizione"
       new:
         title: "Nuovo seggio"
+        name: "Nominativo"
+        location: "Luogo"
         submit_button: "Creare seggio"
       edit:
         title: "Modificare il seggio"
@@ -1002,6 +1044,9 @@ it:
           pending: In sospeso
           rejected: Respinto
           verified: Verificato
+        hidden_count_html:
+          one: C'è anche <strong>una organizzazione</strong> senza utenti o con un utente nascosto.
+          other: Ci sono <strong>%{count} organizzazioni</strong> senza utenti o con un utente nascosto.
         name: Nominativo
         email: Email
         phone_number: Telefono
@@ -1083,6 +1128,9 @@ it:
       proposal_search:
         button: Ricercare
         placeholder: Ricercare le proposte per titolo, codice. descrizione o domanda
+      spending_proposal_search:
+        button: Ricercare
+        placeholder: Ricercare le proposte di spesa per titolo o descrizione
       user_search:
         button: Ricercare
         placeholder: Cerca utente in base al nome o all’email
@@ -1100,6 +1148,62 @@ it:
       content: Contenuto
       created_at: Creato al
       delete: Eliminare
+    spending_proposals:
+      index:
+        geozone_filter_all: Tutti gli ambiti
+        administrator_filter_all: Tutti gli amministratori
+        valuator_filter_all: Tutti gli stimatori
+        tags_filter_all: Tutte le etichette
+        filters:
+          valuation_open: Aperti
+          without_admin: Senza amministratore designato
+          managed: Gestito
+          valuating: Valutazione in corso
+          valuation_finished: Stima conclusa
+          all: Tutti
+        title: Progetti di investimento per bilancio partecipativo
+        assigned_admin: Amministratore assegnato
+        no_admin_assigned: Nessun amministratore assegnato
+        no_valuators_assigned: Nessuno stimatore assegnato
+        summary_link: "Sintesi del progetto di investimento"
+        valuator_summary_link: "Riepilogo del valutatore"
+        feasibility:
+          feasible: "Realizzabile (%{price})"
+          not_feasible: "Non è fattibile"
+          undefined: "Non definito"
+      show:
+        assigned_admin: Amministratore assegnato
+        assigned_valuators: Stimatori assegnati
+        back: Indietro
+        classification: Classificazione
+        heading: "Progetto di investimento %{id}"
+        edit: Modificare
+        edit_classification: Modifica classificazione
+        association_name: Associazione
+        by: Autore
+        sent: Inviato
+        geozone: Ambito
+        dossier: Dossier
+        edit_dossier: Modificare il dossier
+        tags: Etichette
+        undefined: Non definito
+      edit:
+        classification: Classificazione
+        assigned_valuators: Stimatori
+        submit_button: Aggiorna
+        tags: Etichette
+        tags_placeholder: "Scrivi le etichette che vuoi separate da virgole (,)"
+        undefined: Non definito
+      summary:
+        title: Riepilogo per progetti di investimento
+        title_proposals_with_supports: Riepilogo per progetti di investimento che hanno superato la fase di 'appoggio'
+        geozone_name: Ambito
+        finished_and_feasible_count: Concluso e realizzabile
+        finished_and_unfeasible_count: Concluso e irrealizzabile
+        finished_count: Terminati
+        in_evaluation_count: Stima in corso
+        total_count: Totale
+        cost_for_geozone: Costi
     geozones:
       index:
         title: Geozona
@@ -1111,6 +1215,11 @@ it:
         external_code: Codice esterno
         census_code: Codice anagrafico
         coordinates: Coordinate
+      errors:
+        form:
+          error:
+            one: "errore ha impedito il salvataggio di questo distretto"
+            other: "errori hanno impedito il salvataggio di questo distretto"
       edit:
         form:
           submit_button: Salva modifiche
@@ -1230,6 +1339,9 @@ it:
           notice: Blocco di contenuto eliminato con successo
         edit:
           title: Modificare il blocco di contenuto
+        errors:
+          form:
+            error: Errore
         index:
           create: Creare un nuovo blocco di contenuto
           delete: Elimina blocco
@@ -1275,6 +1387,8 @@ it:
           created_at: Creato al
           status: Stato
           updated_at: Aggiornato al
+          status_draft: Bozza
+          status_published: Pubblicato
           title: Titolo
           slug: Slug
           cards_title: Schede
@@ -1323,3 +1437,6 @@ it:
       edited_by: "Modificato da"
       actions: "Azioni"
       empty: "Non ci sono modifiche registrate"
+    translations:
+      remove_language: Rimuovi lingua
+      add_language: Aggiungi lingua

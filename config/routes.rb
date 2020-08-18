@@ -26,9 +26,13 @@ Rails.application.routes.draw do
   draw :valuation
   draw :verification
 
-  root "welcome#index"
-  get "/welcome", to: "welcome#welcome"
-  get "/consul.json", to: "installation#details"
+  root 'welcome#index'
+  # added by muki for localized routes
+  localized do
+    root 'welcome#index'
+  end
+  get '/welcome', to: 'welcome#welcome'
+  get '/consul.json', to: "installation#details"
 
   resources :stats, only: [:index]
   resources :images, only: [:destroy]
@@ -37,9 +41,11 @@ Rails.application.routes.draw do
   resources :remote_translations, only: [:create]
 
   # More info pages
-  get "help",             to: "pages#show", id: "help/index",             as: "help"
-  get "help/how-to-use",  to: "pages#show", id: "help/how_to_use/index",  as: "how_to_use"
-  get "help/faq",         to: "pages#show", id: "faq",                    as: "faq"
+  localized do
+    get "help",             to: "pages#show", id: "help/index",             as: "help"
+    get "help/how-to-use",  to: "pages#show", id: "help/how_to_use/index",  as: "how_to_use"
+    get "help/faq",         to: "pages#show", id: "faq",                    as: "faq"
+  end
 
   # Static pages
   resources :pages, path: "/", only: [:show]
