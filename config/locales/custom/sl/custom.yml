@@ -80,23 +80,23 @@ sl:
         title_1: Kaj potem?
         title_2: In moja vloga?
         title_3: In nato?
-    about:
-      intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
-      main_title: Kako deluje?
-      heading_1: Zbiranje predlogov
-      description_1: "Občanke in občani predloge projektov oddajo med 22. 6. in 13. 7. 2020. Posamezni predlog projekta mora biti v skladu s predpisanimi pogoji, njegova vrednost pa ne sme biti nižja od 5.000 in višja od 20.000 €. Predlog projekta lahko oddajo prek spleta, elektronske pošte ali na obrazcu v vložišču MOK ali na sedežih krajevnih skupnosti."
-      date_1: 22. 6. - 13. 7. 2020
-      heading_2: Pregled predlogov
-      description_2: "Vse oddane predloge projektov pregleda komisija, jih finančno ovrednoti in preveri, ali so izvedljivi, skladni z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna ter v skladu s pravili o vrednosti predlogov in drugimi predpisanimi pogoji. Komisija lahko podobne predloge združi."
-      date_2: 14. 7. - 20. 8. 2020
-      heading_3: Glasovanje
-      description_3: "Glasovanje bo potekalo med 14. in 21. 9. 2020 prek spleta ali v prostorih Mestne občine Koper in na sedežih krajevnih skupnosti. Sodeluje lahko vsaka občanka ali občan s stalnim bivališčem v Mestni občini Koper, ki je dopolnil/-a 15 let. Glasuje se tako, da občan/-ka v izbranem območju razdeli predvidenih 160.000 € sredstev, namenjenih območju, med projekte, za katere si želi, da bi bili izvedeni."
-      date_3: 14. 9. - 21. 9. 2020
-      heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Koper za leti 2021 in 2020."
-      date_4: 25. 9. 2020
-      heading_5: Spremljanje izvedbe
-      description_5: " Vsi izglasovani projekti bodo izvedeni v letih 2021 in 2022. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
+        about:
+          intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
+          main_title: Kako deluje?
+          heading_1: Zbiranje predlogov
+          description_1: "Občanke in občani predloge projektov oddajo med 2. 11. in 10. 11. 2020. Posamezni predlog projekta mora biti v skladu s predpisanimi pogoji, njegova vrednost pa ne sme biti nižja od 5.000 in višja od 20.000 €. Predlog projekta lahko oddajo prek spleta, elektronske pošte ali na obrazcu v vložišču MOM ali na sedežih krajevnih skupnosti."
+          date_1: 2. 11. - 10. 11. 2020
+          heading_2: Pregled predlogov
+          description_2: "Vse oddane predloge projektov pregleda komisija, jih finančno ovrednoti in preveri, ali so izvedljivi, skladni z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna ter v skladu s pravili o vrednosti predlogov in drugimi predpisanimi pogoji. Komisija lahko podobne predloge združi."
+          date_2: 11. 11. - 1. 12. 2020
+          heading_3: Glasovanje
+          description_3: "Glasovanje bo potekalo med 3. in 10. 12. 2020 prek spleta ali v prostorih Mestne občine Maribor in na sedežih krajevnih skupnosti. Sodeluje lahko vsaka občanka ali občan s stalnim bivališčem v Mestni občini Maribor, ki je dopolnil/-a 15 let. Glasuje se tako, da občan/-ka v izbranem območju razdeli predvidenih 125.000 € sredstev, namenjenih območju, med projekte, za katere si želi, da bi bili izvedeni."
+          date_3: 3. 12. - 10. 12. 2020
+          heading_4: Razglasitev rezultatov
+          description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Koper za leti 2021 in 2020."
+          date_4: 14. 12. 2020
+          heading_5: Spremljanje izvedbe
+          description_5: " Vsi izglasovani projekti bodo izvedeni v letih 2021 in 2022. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
     help:
       main_title: "Pogosta vprašanja"
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
