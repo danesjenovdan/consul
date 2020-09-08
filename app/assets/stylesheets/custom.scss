@@ -14,3 +14,62 @@
 @import 'jquery-ui/autocomplete';
 @import 'autocomplete_overrides';
 @import 'jquery-ui/sortable';
+
+
+// MARIBOR COLORS
+.header-logo {
+    height: 62px;
+    width: 200px;
+    background-image: image-url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.welcome-column {
+    background-image: none !important;
+
+    &.accepting {
+        background-color: #94A8CA !important;
+    }
+    &.balloting {
+        background-color: #7D96BB !important;
+    }
+    &.finished {
+        background-color: #6487AE !important;
+    }
+
+    .linkable {
+        background-image: none !important;
+    }
+
+    .action-button.large {
+        background-color: #1A365D !important;
+        background-image: none !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+    }
+}
+
+.top-bar {
+    background: #ffffff !important;
+
+    .site-title-holder {
+        display: none !important;
+    }
+
+    .language-picker li a {
+        line-height: 62px;
+    }
+}
+
+.footer footer {
+    background: #1A365D !important;
+
+    .loginlinks {
+        display: none; // SAMO DOKLER NI REGISTRACIJE TODO
+    }
+
+    ul li a {
+        color: #ffffff !important;
+    }
+}
