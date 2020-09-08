@@ -112,7 +112,7 @@
 
               </div>
 
-              <% if phase.kind != CustomPhasesHelper::CUSTOM_PHASE_ACCEPTING && @denied_investments.count > 0 %>
+              <% if !['drafting', 'informing', 'accepting', 'reviewing', 'selecting', 'valuating'].include?(@budget.phase) && @denied_investments.count > 0 %>
                 <div class="row budget-investments">
                   <h2 class="phase-title"><%= t('custom.titles.denied_proposals') %> (<%= @denied_investments_count %>)</h2>
 
