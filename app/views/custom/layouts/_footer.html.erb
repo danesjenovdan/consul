@@ -14,7 +14,7 @@
   </div>
   <div class="row">
     <div class="main-indented-content clearfix">
-      <!-- ODSTRANIL STANDARDNE LOGOTIPE
+      <!-- ODSTRANIL STANDARDNE LOGOTIPE IN DODAL DISCLAIMER
       <div class="small-12 large-6 column ">
         <h1 class="logo <%= t("custom.classes.footer_logo") %>"></h1>
       </div>
@@ -22,7 +22,12 @@
 
       <div class="small-12 large-6 column links-holder">
       -->
-      <div class="small-12 large-12 column links-holder">
+      <div class="small-12 large-6 column links-holder" style="text-align: left;">
+        <ul class="no-bullet inline-block footer-links" style="text-align: left;">
+          <li class="inline-block">Spletna platforma bo celovitost ponujene storitve zagotavljala od 1. oktobra 2020.</li>
+        </ul>
+      </div>
+      <div class="small-12 large-6 column links-holder">
         <ul class="no-bullet inline-block footer-links">
           <li class="inline-block"><%= link_to t("custom.titles.about"), page_path('o-participativnem-proracunu') %>&nbsp;&nbsp;|&nbsp;</li>
           <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path(t('custom.meta.tos')) %>&nbsp;|&nbsp;</li>

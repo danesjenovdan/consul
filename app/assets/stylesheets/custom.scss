@@ -18,8 +18,9 @@
 
 // MARIBOR COLORS
 .header-logo {
-    height: 62px;
-    width: 200px;
+    height: 100px;
+    width: 350px;
+    max-width: 100%;
     background-image: image-url('logo.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -64,7 +65,7 @@
     }
 
     .language-picker li a {
-        line-height: 62px;
+        line-height: 100px;
     }
 }
 
@@ -75,6 +76,7 @@
         display: none; // SAMO DOKLER NI REGISTRACIJE TODO
     }
 
+    ul li,
     ul li a {
         color: #ffffff !important;
     }
