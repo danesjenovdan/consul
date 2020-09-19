@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
   end
 
   def is_old_enough(birthday)
-    date_limit = Date.parse('2005-02-26')
+    date_limit = Date.parse('2005-09-22')
     if date_limit < birthday
       return false
     end
