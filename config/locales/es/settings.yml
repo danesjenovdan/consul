@@ -79,7 +79,7 @@ es:
       poster_description_description: Descripción detallada de la funcionalidad de póster
     analytics_url: "URL de estadísticas externas"
     proposal_notification_minimum_interval_in_days: "Intervalo mínimo (en días) para que los autores de propuestas puedan enviar nuevas notificaciones de propuesta"
-    proposal_notification_minimum_interval_in_days_description: "El número de días en los que un usuario puede enviar una notificación a todos los que apoyan su propuesta"
+    proposal_notification_minimum_interval_in_days_description: "El número de días en los que un usuario puede enviar una notificación a todos los que siguen su propuesta"
     direct_message_max_per_day: "Mensajes directos máximos por día"
     direct_message_max_per_day_description: "Número de mensajes directos máximos que un usuario puede enviar por día"
     feature:
@@ -89,6 +89,8 @@ es:
       facebook_login_description: "Permitir que los usuarios se registren con su cuenta de Facebook"
       google_login: "Registro con Google"
       google_login_description: "Permitir que los usuarios se registren con su cuenta de Google"
+      wordpress_login: "Registro con Wordpress"
+      wordpress_login_description: "Permitir que los usuarios se registren con su cuenta de Wordpress"
       featured_proposals: "Propuestas destacadas"
       featured_proposals_description: "Muestra propuestas destacadas en la página principal de propuestas"
       signature_sheets: "Hojas de firmas"
@@ -125,6 +127,9 @@ es:
       valuation_comment_notification: "Notificar comentarios de evaluación"
       valuation_comment_notification_description: "Envía un email a todos los usuarios menos al que haya comentado asociados a un presupuesto participativo cuando se cree un nuevo comentario de evaluación"
       graphql_api: "API GraphQL"
+      dashboard:
+        notification_emails: "Emails del panel de progreso"
+        notification_emails_description: "Activar el envío de emails de notificaciones a los autores de las propuestas en la sección de panel de progreso"
     remote_census:
       general:
         endpoint: "Endpoint"

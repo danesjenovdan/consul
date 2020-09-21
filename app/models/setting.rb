@@ -38,7 +38,6 @@ class Setting < ApplicationRecord
       setting = find_by(key: key) || new(key: key)
       setting.value = value.presence
       setting.save!
-      value
     end
 
     def rename_key(from:, to:)
@@ -84,6 +83,7 @@ class Setting < ApplicationRecord
         "feature.facebook_login": true,
         "feature.google_login": true,
         "feature.twitter_login": true,
+        "feature.wordpress_login": false,
         "feature.public_stats": true,
         "feature.signature_sheets": true,
         "feature.user.recommendations": true,
@@ -170,7 +170,7 @@ class Setting < ApplicationRecord
         "hot_score_period_in_days": 31,
         "related_content_score_threshold": -0.3,
         "featured_proposals_number": 3,
-        "dashboard.emails": nil,
+        "feature.dashboard.notification_emails": nil,
         "remote_census.general.endpoint": "",
         "remote_census.request.method_name": "",
         "remote_census.request.structure": "",
