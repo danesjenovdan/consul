@@ -149,6 +149,7 @@
     width: 296px;
   }
   &.reviewing,
+  &.valuating,
   &.reviewing_ballots {
     background: image-url('phases/kajpazdaj.png') center no-repeat;
     background-size: 100%;
@@ -630,7 +631,8 @@ only screen and (min-resolution: 240dpi) {
 
 @media (min-width: 576px) {
   .action-button.large.w485 {
-    min-width: 485px;
+    width: 485px;
+    max-width: 100%;
   }
 }
 
@@ -974,8 +976,6 @@ span:hover:before {
       z-index: 1;
       border-right: none;
     }
-
-    border-right: 1px solid #000000;
   }
 
   .welcome-column:first-of-type {
@@ -1137,6 +1137,18 @@ form label {
 
 .pad-t-60 {
   padding-top: rem-calc(60)
+}
+
+/* MUKI FIX FOR NAVIGATION ON MOBILE */
+@media (max-width: 767px) {
+  .pagination-next,
+  .pagination-previous {
+    display: inline-block !important;
+  }
+  .pagination-first,
+  .pagination-last {
+    display: none !important;
+  }
 }
 
 .pagination {
@@ -2200,4 +2212,27 @@ input.error {
     display: block;
   }
 }
+
+/* muki overrides */
+.custombackbutton {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  .arrow-large-left {
+    background-image: image-url('arrow.svg');
+    background-position: center;
+    background-size: 25px 22px;
+    width: 23px;
+    height: 30px;
+    transform: rotate(180deg);
+    top: -1.5px;
+    position: relative;
+  }
+  a {
+    text-decoration: underline;
+    line-height: 30px;
+  }
+}
+/* end muki overrides */
 

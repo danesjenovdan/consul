@@ -39,26 +39,13 @@ sl:
   comments:
     comments_closed: Komentarji so zaprti
     verified_only: Če želiš sodelovati, %{verify_account}
-    verify_account: potrdi svoj račun
     comment:
-      admin: Administrator
       author: Avtor
       deleted: Ta komentar je bil izbrisan
-      moderator: Moderator
       responses:
-        one: 1 odgovor
-        two: 2 odgovora
-        three: 3 odgovori
-        four: 4 odgovori
-        other: "%{count} odgovorov"
         zero: Ni odgovorov
       user_deleted: Uporabnik izbrisan
       votes:
-        one: 1 glas
-        two: 2 glasova
-        three: 3 glasovi
-        four: 4 glasovi
-        other: "%{count} glasov"
         zero: Ni glasov
     form:
       comment_as_admin: Komentiraj kot administrator
@@ -71,7 +58,7 @@ sl:
       most_commented: Največ komentarjev
     select_order: Uredi po
     show:
-      return_to_commentable: 'Pojdi nazaj na '
+      return_to_commentable: "Pojdi nazaj na "
   comments_helper:
     comment_button: Oddaj komentar
     comment_link: Komentiraj
@@ -84,18 +71,8 @@ sl:
         submit_button: Začni razpravo
     debate:
       comments:
-        one: 1 komentar
-        two: 2 komentarja
-        three: 3 komentarji
-        four: 4 komentarji
-        other: "%{count} komentarjev"
         zero: Brez komentarjev
       votes:
-        one: 1 glas
-        two: 2 glasova
-        three: 3 glasovi
-        four: 4 glasovi
-        other: "%{count} glasov"
         zero: Ni glasov
     edit:
       editing: Uredi razpravo
@@ -103,16 +80,11 @@ sl:
         submit_button: Shrani spremembe
       show_link: Poglej razpravo
     form:
-      debate_text: Začetno besedilo razprave
       debate_title: Naslov razprave
       tags_instructions: Dodaj oznake tej razpravi.
-      tags_label: Tematike
       tags_placeholder: "Vnesi oznake, ki jih želiš uporabiti, in jih loči z vejico (',')"
     index:
       featured_debates: Izpostavljeno
-      filter_topic:
-        one: " s temo '%{topic}'"
-        other: " s temo '%{topic}'"
       orders:
         confidence_score: najbolje ocenjene
         created_at: najnovejše
@@ -127,9 +99,6 @@ sl:
         button: Išči
         placeholder: Išči razprave...
         title: Išči
-      search_results_html:
-        one: " s ključno besedo <strong>'%{search_term}'</strong>"
-        other: " s ključno besedo <strong>'%{search_term}'</strong>"
       select_order: Uredi po
       start_debate: Začni razpravo
       title: Razprave
@@ -160,16 +129,10 @@ sl:
     show:
       author_deleted: Uporabnik izbrisan
       comments:
-        one: 1 komentar
-        two: 2 komentarja
-        three: 3 komentarji
-        four: 4 komentarji
-        other: "%{count} komentarjev"
         zero: Ni komentarjev
       comments_title: Komentarji
       edit_debate_link: Uredi
       flag: To razpravo je več uporabnikov označilo kot neprimerno.
-      login_to_comment: Če želiš komentirati, se moraš %{signin} ali %{signup}.
       share: Deli
       author: Avtor
     update:
@@ -187,14 +150,12 @@ sl:
     direct_message: Zasebno sporočilo
     error: Napaka
     errors: Napake
-    not_saved_html: "Nekaj je šlo narobe.<br>Prosimo, preveri označena polja."
+    not_saved_html: "Prišlo je do napake.<br>Prosimo, preveri označena polja."
     policy: politiko zasebnosti
     proposal: Predlog
     proposal_notification: "Obvestilo"
-    spending_proposal: Predlog porabe
     budget/investment: Naložba
     budget/heading: Proračunska postavka
-    poll/shift: Shift
     poll/question/answer: Odgovor
     user: Račun
     verification/sms: telefon
@@ -204,26 +165,17 @@ sl:
     image: Slika
   geozones:
     none: Celo mesto/občina
-    all: Vse
   layouts:
     application:
-      chrome: Google Chrome
-      firefox: Firefox
       ie: Zaznali smo, da za brskanje po internetu uporabljaš Internet Explorer. Za boljšo izkušno te spletne strani, ti predlagamo preklop na %{firefox} ali %{chrome}.
       ie_title: Ta spletna stran ni optimizirana za tvoj brskalnik
     footer:
       accessibility: Dostopnosti
       conditions: Pogoji uporabe
       consul: Aplikacija CONSUL
-      consul_url: https://github.com/consul/consul
       contact_us: Tehnična pomoč
-      copyright: CONSUL, %{year}
       description: Ta portal uporablja %{consul}, ki je %{open_source}.
-      faq: tehnična pomoč
-      open_data_text: Vsaka podrobnost o mestnem/občinskem svetu je na dosegu tvojih prstov.
-      open_data_title: Odprti podatki
       open_source: odprtokodna programska oprema
-      open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
       participation_text: Odloči se, kako sooblikovati tako mesto, v kakršnem si želiš živeti.
       participation_title: Sodelovanje
       privacy: O participativnem proračunu
@@ -231,18 +183,11 @@ sl:
       transparency_title: Transparentnost
       transparency_url: https://transparency.consul
     header:
-      administration_menu: Admin
       administration: Administracija
       available_locales: Razpoložljivi jeziki
       collaborative_legislation: Zakonodajni procesi
       debates: Razprave
-      external_link_blog: Blog
-      external_link_opendata: Odprti podatki
-      external_link_opendata_url: https://opendata.consul
-      external_link_transparency: Transparentnost
-      external_link_transparency_url: https://transparency.consul
-      locale: 'Jezik:'
-      logo: CONSUL logo
+      locale: "Jezik:"
       management: Upravljanje
       moderation: Moderacija
       valuation: Vrednotenje
@@ -257,24 +202,10 @@ sl:
       budgets: Participativni proračun
       spending_proposals: Predlogi porabe
       notification_item:
-        new_notifications:
-          one: Imaš novo obvestilo
-          two: Imaš novi obvestili
-          three: Imaš 3 nova obvestila
-          four: Imaš 4 nova obvestila
-          other: You have %{count} novih obvestil
         notifications: Obvestila
         no_notifications: "Nimaš novih obvestil"
     admin:
-      watch_form_message: 'Imaš neshranjene spremembe. Res želiš zapustiti to stran?'
-  legacy_legislation:
-    help:
-      alt: Izberi besedilo, ki ga želiš komentirati, in klikni na gumb s svinčnikom.
-      text: Če želiš komentirati ta dokument, se moraš %{sign_in} ali %{sign_up}. Nato izberi besedilo, ki ga želiš komentirati, in klikni gumb s svinčnikom.
-      text_sign_in: vpisati
-      text_sign_up: registrirati
-      title: Kako lahko komentiram ta dokument?
-  locale: slovenščina
+      watch_form_message: "Imaš neshranjene spremembe. Res želiš zapustiti to stran?"
   notifications:
     index:
       empty_notifications: Nimaš novih obvestil.
@@ -283,32 +214,12 @@ sl:
       title: Obvestila
       unread: Neprebrano
     notification:
-      action:
-        comments_on:
-          one: Nekdo je komentiral
-          two: Obstajata 2 nova komentarja na
-          three: Obstajajo 3 novi komentarji na
-          four: Obstajajo 4 novi komentarji na
-          other: Obstaja %{count} novih komentarjev na
-        proposal_notification:
-          one: Obstaja novo obvestilo o
-          two: Obstajata novi obvestili o
-          three: Obstajajo 3 nova obvestila o
-          four: Obstajajo 4 nova obvestila o
-          other: Obstaja %{count} novih obvestil o
-        replies_to:
-          one: Nekdo je odgovoril na tvoj komentar o
-          two: Obstajata 2 nova odgovora na tvoj komentar o
-          three: Obstajajo 3 novi odgovori na tvoj komentar o
-          four: Obstajajo 4 novi odgovori na tvoj komentar o
-          other: Obstaja %{count} novih odgovorov na tvoj komentar o
       mark_as_read: Označi kot prebrano
       mark_as_unread: Označi kot neprebrano
       notifiable_hidden: Ta vir ni več na voljo.
   map:
     title: "Občine"
     proposal_for_district: "Začni nov predlog v svoji občini"
-    select_district: Področje uporabe
     start_proposal: Ustvari predlog
   omniauth:
     facebook:
@@ -341,9 +252,7 @@ sl:
     retire_form:
       title: Upokoji predlog
       warning: "Če upokojiš predlog, lahko še vedno prejema podporo, ampak bo odstranjen iz glavnega seznama, vsem uporabnikom pa bo vidno sporočilo, da avtor meni, da predlog ni več vreden podpore"
-      retired_reason_label: Razlog za upokojitev predloga
       retired_reason_blank: Izberi možnost
-      retired_explanation_label: Razlaga
       retired_explanation_placeholder: Na kratko razloži, zakaj meniš, da ta predlog ne bi smel več dobivati podpore
       submit_button: Upokoji predlog
     retire_options:
@@ -353,17 +262,8 @@ sl:
       done: Izveden
       other: Drugo
     form:
-      geozone: Področje uporabe
-      proposal_external_url: Povezava do dodatne dokumentacije
-      proposal_question: Predlagano vprašanje
-      proposal_question_example_html: "Treba ga je povzeti v eno vprašanje z jasnim 'da' ali 'ne' odgovorom. <br>Npr. 'Ali se strinjate, da Prešernova cesta postane peš cona?'"
-      proposal_responsible_name: Polno ime predlagatelja
       proposal_responsible_name_note: "(posamično ali kot predstavnik kolektiva; ne bo javno prikazano)"
-      proposal_summary: Povzetek predloga
       proposal_summary_note: "(največ 200 znakov)"
-      proposal_text: Besedilo predloga
-      proposal_title: Naslov predloga
-      proposal_video_url: Povezava na video
       proposal_video_url_note: Lahko dodaš povezavo na YouTube ali Vimeo
       tag_category_label: "Kategorije"
       tags_instructions: "Kategoriziraj ta predlog. Izbiraš lahko med predlaganimi kategorijami ali dodaš novo."
@@ -375,9 +275,6 @@ sl:
       map_skip_checkbox: "Ta predlog nima konkretne lokacije ali je ne poznam."
     index:
       featured_proposals: Izpostavljeno
-      filter_topic:
-        one: " s temo '%{topic}'"
-        other: " s temami '%{topic}'"
       orders:
         confidence_score: najbolje ocenjeni
         created_at: najnovejši
@@ -402,12 +299,8 @@ sl:
         button: Išči
         placeholder: Išči predloge...
         title: Išči
-      search_results_html:
-        one: " vsebuje besedo <strong>'%{search_term}'</strong>"
-        two: " vsebujeta besedo <strong>'%{search_term}'</strong>"
-        other: " vsebujejo besedo <strong>'%{search_term}'</strong>"
       select_order: Razvrsti po
-      select_order_long: 'Predloge si ogleduješ glede na:'
+      select_order_long: "Predloge si ogleduješ glede na:"
       start_proposal: Ustvari predlog
       title: Predlogi
       top: Najboljši tega tedna
@@ -419,9 +312,6 @@ sl:
       section_footer:
         title: Pomoč glede predlogov
         description: Ustvari državljanski predlog. Če dobi dovolj podpore, bo napredoval v fazo glasovanja, kjer se bodo o njem odločali vsi tvoji someščani/soobčani.
-        help_text_1: "Državljanski predlogi so priložnost za sosede in kolektive, da se direktno odločajo o razvoju svojih mest oz. občin. Predlog lahko ustvari kdorkoli."
-        help_text_2: "Za ustvarjanje predloga se moraš registrirati na %{org}. Predlogi, ki dobijo podporo 1 % spletnih uporabnikov, napredujejo v fazo glasovanja. Če želiš podpreti predloge, potrebuješ verificiran račun."
-        help_text_3: "Državljansko glasovanje se zgodi, ko predlogi dobijo potrebno podporo. Če je več ljudi za kot proti, predlog izvede mestni oz. občinski svet."
     new:
       form:
         submit_button: Ustvari predlog
@@ -443,61 +333,33 @@ sl:
         guide: "Zdaj ga lahko deliš z drugimi, da lahko začne pridobivati podporo."
         edit: "Preden ga deliš, lahko še spremeniš besedilo."
         view_proposal: Ne zdaj, pojdi v moj predlog
-      improve_info: "Izboljšaj svojo kampanjo in pridobi več podpore"
-      improve_info_link: "Oglej si več informacij"
       already_supported: Ta predlog si že podprl/-a. Deli ga z drugimi!
       comments:
-        one: 1 komentar
-        two: 2 komentarja
-        three: 3 komentarji
-        four: 4 komentarji
-        other: "%{count} komentarjev"
         zero: Brez komentarjev
-      reason_for_supports_necessary: 1 % cenzusa
       support: Glasuj za predlog!
       support_title: Podpri ta predlog
       supports:
-        one: 1 podpornik
-        two: 2 podpornika
-        three: 3 podporniki
-        four: 4 podporniki
-        other: "%{count} podpornikov"
         zero: Brez podpornikov
       votes:
-        one: 1 glas
-        two: 2 glasova
-        three: 3 glasovi
-        four: 4 glasovi
-        other: "%{count} glasov"
         zero: Brez glasov
       supports_necessary: "%{number} potrebnih podpornikov"
       total_percent: 100 %
       archived: "Ta predlog je bil arhiviran in ne more zbirati podpornikov."
-      successful: "Ta predlog je dosegel zahtevano število podpornikov in bo na voljo v %{voting}."
-      voting: "naslednjem glasovanju"
+      successful: "Ta predlog je dosegel zahtevano podporo."
     show:
       author_deleted: Uporabnik izbrisan
-      code: 'Koda predloga:'
+      code: "Koda predloga:"
       comments:
-        one: 1 komentar
-        two: 2 komentarja
-        three: 3 komentarji
-        four: 4 komentarji
-        other: "%{count} komentarjev"
         zero: Brez komentarjev
       comments_tab: Komentarji
-      edit_proposal_link: Uredi
       flag: Ta predlog je več uporabnikov označilo kot neprimeren.
-      login_to_comment: Za komentiranje se moraš %{signin} ali %{signup}.
       notifications_tab: Obvestila
       retired_warning: "Avtor meni, da ta predlog ne bi smel več dobivati podpore."
       retired_warning_link_to_explanation: Preberi razlago, preden glasuješ zanj.
       retired: Predlog upokojen s strani avtorja
       share: Deli
-      send_notification: Pošlji obvestilo
       no_notifications: "Ta predlog nima obvestil."
       embed_video_title: "Video o %{proposal}"
-      title_external_url: "Dodatna dokumentacija"
       title_video_url: "Zunanji video"
       author: Avtor
     update:
@@ -511,11 +373,9 @@ sl:
     index:
       filters:
         current: "Odprta"
-        incoming: "Dohodna"
         expired: "Potečena"
       title: "Glasovanja"
       participate_button: "Sodeluj v tem glasovanju"
-      participate_button_incoming: "Več informacij"
       participate_button_expired: "Glasovanje končano"
       no_geozone_restricted: "Povsod"
       geozone_restricted: "Področja"
@@ -528,8 +388,6 @@ sl:
       section_footer:
         title: Pomoč glede glasovanja
         description: Za glasovanje o državljanskih predlogih se registriraj. Pomagaj sprejemati direktne odločitve.
-        help_text_1: "Glasovanje se izvaja, ko državljanski predlog prejme zadostno podporo, tj. 1 % cenzusa z glasovalno pravico. Glasovanje lahko vključuje tudi vprašanja, ki jih mestni/občinski svet zastavi prebivalcem."
-        help_text_2: "Za sodelovanje v naslednjem glasovanju, se moraš registrirati v %{org} in verificirati svoj račun. Glasujejo lahko vsi registrirani volivci s tvojega področja, starejši od 16 let. Rezultati vseh glasovanj so zavezujoči za mestni/občinski svet."
       no_polls: "Trenutno ni odprtih glasovanj."
     show:
       already_voted_in_booth: "O tem vprašanju si že glasoval/-a na fizičnem mestu. Ne moreš glasovati ponovno."
@@ -537,12 +395,7 @@ sl:
       back: Nazaj na glasovanje
       cant_answer_not_logged_in: "Za sodelovaje se moraš %{signin} ali %{signup}."
       comments_tab: Komentarji
-      login_to_comment: Za komentiranje se moraš %{signin} ali %{signup}.
-      signin: vpisati
-      signup: registrirati
-      cant_answer_verify_html: "Za odgovarjanje moraš %{verify_link}."
       verify_link: "potrditi svoj račun"
-      cant_answer_incoming: "To glasovanje se še ni začelo."
       cant_answer_expired: "To glasovanje je že končano."
       cant_answer_wrong_geozone: "To vprašanje ni na voljo v tvojem mestu/občini."
       more_info_title: "Več informacij"
@@ -550,14 +403,11 @@ sl:
       zoom_plus: Povečaj sliko
       read_more: "Preberi več %{answer}"
       read_less: "Preberi manj %{answer}"
-      participate_in_other_polls: Sodeluj v drugih glasovanjih
       videos: "Zunanji video"
       info_menu: "Informacije"
       stats_menu: "Statistika o sodelovanju"
       results_menu: "Rezultati glasovanja"
       stats:
-        title: "Podatki o sodelovanju"
-        total_participation: "Skupno sodelujočih"
         total_votes: "Skupno število glasov"
         votes: "GLASOV"
         web: "SPLETNI"
@@ -570,25 +420,20 @@ sl:
         title: "Vprašanja"
         most_voted_answer: "Najbolj izglasovan odgovor: "
   poll_questions:
-    create_question: "Ustvari vprašanje"
     show:
       vote_answer: "Glasuj %{answer}"
       voted: "Glasoval/-a si %{answer}"
-      voted_token: "Lahko si zapišeš ta identifikator glasu, da preveriš svoj glas ob končnih rezultatih:"
   proposal_notifications:
     new:
       title: "Pošlji sporočilo"
-      title_label: "Naslov"
-      body_label: "Sporočilo"
       submit_button: "Pošlji sporočilo"
-      info_about_receivers_html: "To sporočilo bo poslano <strong>%{count} ljudem</strong> in bo vidno na %{proposal_page}.<br> Sporočil ne pošljemo takoj in naenkrat, uporabniki jih dobijo postopoma skupaj z ostalimi obvestili."
       proposal_page: "strani predloga"
     show:
       back: "Vrni se na mojo aktivnost"
   shared:
-    edit: 'Uredi'
-    save: 'Shrani'
-    delete: 'Izbriši'
+    edit: "Uredi"
+    save: "Shrani"
+    delete: "Izbriši"
     "yes": "Da"
     "no": "Ne"
     search_results: "Rezultati iskanja"
@@ -620,17 +465,6 @@ sl:
     follow: "Sledi"
     following: "Sledim"
     follow_entity: "Sledi %{entity}"
-    followable:
-      budget_investment:
-        create:
-          notice_html: "Zdaj slediš temu naložbenemu projektu! </br> O morebitnih spremembah te bomo obveščali sproti."
-        destroy:
-          notice_html: "Prenehal/-a si slediti temu naložbenemu projektu! </br> Nič več ne boš dobival/-a obvestil o tem projektu."
-      proposal:
-          create:
-            notice_html: "Zdaj slediš temu državljanskemu predlogu! </br>Sproti te bomo obveščali o spremembah, tako da boš na tekočem."
-          destroy:
-            notice_html: "Prenehal/-a si slediti temu državljanskemu predlogu. </br> Nič več ne boš dobival/-a obvestil o tem predlogu."
     hide: Skrij
     print:
       print_button: Natisni te informacije
@@ -638,29 +472,18 @@ sl:
     show: Pokaži
     suggest:
       debate:
-        found:
-          one: "Obstaja razprava z besedo '%{query}', namesto ustvarjanja nove lahko sodeluješ v obstoječi."
-          other: "Obstajajo razprave z besedo '%{query}', namesto ustvarjanja nove lahko sodeluješ v kateri od obstoječih."
         message: "Ogleduješ si %{limit} od %{count} razprav, ki vsebujejo besedo '%{query}'"
         see_all: "Poglej vse"
       budget_investment:
-        found:
-          one: "Obstaja naložba z besedo '%{query}', namesto ustvarjanja nove lahko sodeluješ v obstoječi."
-          other: "Obstajajo investicije z besedo '%{query}', namesto ustvarjanja nove lahko sodeluješ v kateri od obstoječih."
         message: "Ogleduješ si %{limit} od %{count} investicij, ki vsebujejo besedo '%{query}'"
         see_all: "Poglej vse"
       proposal:
-        found:
-          one: "Obstaja predlog z besedo '%{query}', namesto ustvarjanja novega lahko sodeluješ v obstoječem."
-          other: "Obstjaajo predlogi z besedo '%{query}', namesot ustvarjanja novega lahko sodeluješ v katerem od obstoječih."
         message: "Ogleduješ si %{limit} od %{count} predlogov, ki vsebuejo besedo '%{query}'"
         see_all: "Poglej vse"
     tags_cloud:
-      tags: Trending
       districts: "Področja"
       districts_list: "Seznam področij"
       categories: "Kategorije"
-    target_blank_html: " (povezava se odpre v novem oknu)"
     you_are_in: "Si v"
     unflag: Odznači
     unfollow_entity: "Prenehaj slediti %{entity}"
@@ -755,16 +578,10 @@ sl:
   users:
     direct_messages:
       new:
-        body_label: Sporočilo
         direct_messages_bloqued: "Ta uporabnik/-ca se je odločil/-a, da ne želi prejemati direktnih sporočil."
         submit_button: Pošlji sporočilo
         title: Pošlji zasebno sporočilo %{receiver}
-        title_label: Naslov
         verified_only: Za pošiljanje zasebnega sporočila %{verify_account}
-        verify_account: verificiraj svoj račun
-        authenticate: Za nadaljevanje se moraš %{signin} ali %{signup}.
-        signin: vpisati
-        signup: registrirati
       show:
         receiver: Sporočilo %{receiver} poslano
     show:
@@ -777,45 +594,12 @@ sl:
       budget_investments: Proračunske naložbe
       comments: Komentarji
       actions: Dejanja
-      filters:
-        comments:
-          one: 1 komentar
-          two: 2 komentarja
-          three: 3 komentarji
-          four: 4 komentarji
-          other: "%{count} komentarjev"
-        debates:
-          one: 1 razprava
-          two: 2 razpravi
-          three: 3 razprave
-          four: 4 razprave
-          other: "%{count} razprav"
-        proposals:
-          one: 1 predlog
-          two: 2 predloga
-          three: 3 predlogi
-          four: 4 predlogi
-          other: "%{count} predlogov"
-        budget_investments:
-          one: 1 naložba
-          two: 2 investiciji
-          three: 3 investicije
-          four: 4 investicije
-          other: "%{count} investicij"
-        follows:
-          one: 1 sledilec
-          two: 2 sledilca
-          three: 3 sledilci
-          four: 4 sledilci
-          other: "%{count} sledilcev"
       no_activity: Uporabnik nima javnih aktivnosti
       no_private_messages: "Ta uporabnik/-ca ne sprejema zasebnih sporočil."
       private_activity: Ta uporabnik/-ca se je odločil/-a za zaseben seznam aktivnosti.
       send_private_message: "Pošlji zasebno sporočilo"
       delete_alert: "Si prepričan/-a, da želiš izbrisati svoj naložbeni projekt? Tega ni mogoče razveljaviti."
     proposals:
-      send_notification: "Pošlji obvestilo"
-      retire: "Upokojitev"
       retired: "Upokoji predlog"
       see: "Poglej predlog"
   votes:
@@ -824,27 +608,14 @@ sl:
     comment_unauthenticated: Za glasovanje se moraš %{signin} ali %{signup}.
     disagree: Ne strinjam se
     organizations: Organizacijam ni dovoljeno glasovati.
-    signin: vpisati
-    signup: registrirati
     supports: Glasovi
-    unauthenticated: Za nadaljevanje se moraš %{signin} ali %{signup}.
     verified_only: Samo verificirani uporabniki lahko glasujejo o predlogih; %{verify_account}.
-    verify_account: potrdi svoj račun
-    spending_proposals:
-      not_logged_in: Za nadaljevanje se moraš %{signin} ali %{signup}.
-      not_verified: Le verificirani uporabniki lahko glasujejo o predlogih; %{verify_account}.
-      organization: Organizacijam ni dovoljeno glasovati.
-      unfeasible: Neizvedljivih investicijskih projektov ni mogoče podpreti
-      not_voting_allowed: Faza glasovanja je zaključena
     budget_investments:
       not_logged_in: Za nadaljevanje se moraš %{signin} ali %{signup}.
       not_verified: Samo verificirani uporabniki lahko glasujejo o investicijskih projektih; %{verify_account}.
       organization: Organizacijam ni dovoljeno glasovati.
       unfeasible: Neizvedljivih investicijskih projektov ni mogoče podpreti
       not_voting_allowed: Faza glasovanja je zaključena
-      different_heading_assigned:
-        one: "Podpiraš lahko le investicijske projekte v območju %{count}"
-        other: "Podpiraš lahko le investicijske projekte v %{count} območjih"
   welcome:
     feed:
       most_active:
@@ -882,7 +653,7 @@ sl:
       user_permission_info: S svojim računom lahko ...
       user_permission_proposal: Ustvari nove predloge
       user_permission_support_proposal: Podpri predloge*
-      user_permission_verify: Za izvedbo vseh dejanj verificiraj svoj račun.
+      user_permission_verify: "Za izvedbo vseh dejanj verificiraj svoj račun."
       user_permission_verify_info: "* Samo za uporabnike, ki so na popisu."
       user_permission_verify_my_account: Preveri moj račun
       user_permission_votes: Sodeluj v končnem glasovanju
@@ -893,7 +664,6 @@ sl:
     title: "Povezane vsebine"
     add: "Dodaj povezane vsebine"
     label: "Dodaj povezavo do povezanih vsebin"
-    placeholder: "%{url}"
     help: "Dodaš lahko povezave %{models} znotraj %{org}."
     submit: "Dodaj"
     error: "Povezava ni veljavna. Ne pozabi začeti z %{url}."

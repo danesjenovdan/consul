@@ -1,8 +1,16 @@
 <h2 class="inline-block"><%= t("admin.milestones.index.milestone") %></h2>
 
 <%= link_to t("admin.progress_bars.manage"),
-            polymorphic_path([:admin, *resource_hierarchy_for(milestoneable.progress_bars.new)]),
+            admin_polymorphic_path(milestoneable.progress_bars.new),
             class: "button hollow float-right" %>
+
+<% if milestoneable.milestone_tag_list.any? %>
+  <div>
+    <strong>
+      <%= t("admin.milestones.index.milestone_tags") %>:
+    </strong> <%= milestoneable.milestone_tag_list.sort.join(", ") %>
+  </div>
+<% end %>
 
 <% if milestoneable.milestones.any? %>
   <table>
@@ -23,16 +31,14 @@
         <tr id="<%= dom_id(milestone) %>" class="milestone">
           <td class="text-center"><%= milestone.id %></td>
           <td>
-            <%= link_to milestone.title,
-                        polymorphic_path([:admin, *resource_hierarchy_for(milestone)],
-                                         action: :edit) %>
+            <%= link_to milestone.title, admin_polymorphic_path(milestone, action: :edit) %>
           </td>
           <td class="small small-5"><%= milestone.description %></td>
           <td class="small">
             <%= l(milestone.publication_date.to_date) if milestone.publication_date.present? %>
           </td>
           <td class="small">
-            <%= milestone.status.present? ? milestone.status.name : '' %>
+            <%= milestone.status.present? ? milestone.status.name : "" %>
           </td>
           <td class="small">
             <%= link_to t("admin.milestones.index.show_image"),
@@ -51,7 +57,7 @@
           </td>
           <td class="small-2">
             <%= link_to t("admin.milestones.index.delete"),
-                        polymorphic_path([:admin, *resource_hierarchy_for(milestone)]),
+                        admin_polymorphic_path(milestone),
                         method: :delete,
                         class: "button hollow alert expanded" %>
           </td>
@@ -65,7 +71,6 @@
 
 <p>
   <%= link_to t("admin.milestones.index.new_milestone"),
-              polymorphic_path([:admin, *resource_hierarchy_for(milestoneable.milestones.new)],
-                               action: :new),
+              admin_polymorphic_path(milestoneable.milestones.new, action: :new),
               class: "button hollow" %>
 </p>

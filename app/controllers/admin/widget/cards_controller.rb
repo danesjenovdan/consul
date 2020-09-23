@@ -1,5 +1,6 @@
 class Admin::Widget::CardsController < Admin::BaseController
   include Translatable
+  include ImageAttributes
 
   def new
     if header_card?
@@ -33,7 +34,7 @@ class Admin::Widget::CardsController < Admin::BaseController
 
   def destroy
     @card = ::Widget::Card.find(params[:id])
-    @card.destroy
+    @card.destroy!
 
     redirect_to_customization_page_cards_or_homepage
   end
@@ -41,8 +42,6 @@ class Admin::Widget::CardsController < Admin::BaseController
   private
 
     def card_params
-      image_attributes = [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy]
-
       params.require(:widget_card).permit(
         :link_url, :button_text, :button_url, :alignment, :header, :site_customization_page_id,
         :columns,
@@ -61,7 +60,7 @@ class Admin::Widget::CardsController < Admin::BaseController
       if @card.site_customization_page_id
         redirect_to admin_site_customization_page_cards_path(page), notice: notice
       else
-        redirect_to admin_homepage_url, notice: notice
+        redirect_to admin_homepage_path, notice: notice
       end
     end
 

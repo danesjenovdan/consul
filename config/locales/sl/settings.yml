@@ -13,18 +13,11 @@ sl:
     votes_for_proposal_success: "Število glasov, nujnih za odobritev predloga"
     months_to_archive_proposals: "Meseci za arhiviranje predlogov"
     email_domain_for_officials: "Domena e-naslovov javnih uslužbencev"
-    per_page_code_head: "Koda, ki bo vključena na vsaki strani (<head>)"
-    per_page_code_body: "Code to be included on every page (<body>)"
     twitter_handle: "Twitter uporabniško ime"
-    twitter_hashtag: "Twitter hashtag"
     facebook_handle: "Facebook uporabniško ime"
     youtube_handle: "Youtube uporabniško ime"
     telegram_handle: "Telegram uporabniško ime"
     instagram_handle: "Instagram uporabniško ime"
-    blog_url: "Blog URL"
-    transparency_url: "Transparency URL"
-    opendata_url: "Open Data URL"
-    url: "Main URL"
     org_name: "Organizacija"
     place_name: "Mesto"
     feature:
@@ -55,6 +48,16 @@ sl:
     meta_title: "Naslov strani (SEO)"
     meta_description: "Opis strani (SEO)"
     meta_keywords: "Ključne besede (SEO)"
-    verification_offices_url: URL pisarne za preverjanje
     min_age_to_participate: Minimalna starost za sodelovanje
-    proposal_improvement_path: Notranja povezava za informacije o izboljšanju predloga
+    feature:
+      twitter_login: "Prijava v Twitter"
+      facebook_login: "Prijava v Facebook"
+      google_login: "Prijava v Google"
+      signature_sheets: "Podpisni listi"
+      user:
+        recommendations: "Priporočila"
+        skip_verification: "Preskoči verifikacijo uporabnika"
+      community: "Skupnost o predlogih in naložbah"
+      map: "Geolokacija predlogov in proračunskih naložb"
+      allow_images: "Dovoli nalaganje in prikaz slik"
+      allow_attached_documents: "Dovoli nalaganje in prikaz pripetih dokumentov"

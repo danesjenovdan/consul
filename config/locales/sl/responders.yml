@@ -25,13 +25,11 @@ sl:
         poll: "Glasovanje uspešno posodobljeno."
         poll_booth: "Volišče uspešno posodobljeno."
         proposal: "Predlog uspešno posodobljen."
-        spending_proposal: "Predlog porabe uspešno posodobljen."
         budget_investment: "Naložbeni projekt uspešno posodobljen."
         topic: "Tema uspešno posodobljena."
         valuator_group: "Cenilska skupina uspešno posodobljena"
         translation: "Posodobljeni prevodi."
       destroy:
-        spending_proposal: "Predlog porabe uspešno izbrisan."
         budget_investment: "Naložbeni projekt uspešno izbrisan."
         error: "Izbris ni mogoč"
         topic: "Tema uspešno izbrisana."

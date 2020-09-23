@@ -1,9 +1,16 @@
 require 'date'
 require_dependency Rails.root.join('app', 'models', 'user').to_s
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
 
   validate :emso_number, on: :create
+  validate :validate_data_consent, on: :create
+  
+  def validate_data_consent
+    unless data_consent
+      errors.add(:data_consent, I18n.t('custom.errors.data_consent'))
+    end
+  end
 
   def emso_number
     unless organization

@@ -310,7 +310,7 @@ function setEh(what) {
   return mh;
 }
 
-$(document).on('page:change', function () {
+$(document).on('turbolinks:load', function () {
   var custom_phases_tabs = $("#custom_phases_tabs li");
   if (custom_phases_tabs.length > 0) {
     if ($(window).width() > 575) {

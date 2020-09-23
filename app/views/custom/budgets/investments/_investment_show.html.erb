@@ -12,13 +12,14 @@
           investment.author,
           Flag.flagged?(current_user, investment),
           @investment_votes] do %>
-
+              
   <section class="budget-investment-show" id="<%= dom_id(investment) %>">
 
     <div class="row">
       <div class="small-12 medium-7 medium-centered">
 
-        <% if current_budget.phase == 'reviewing' %>
+        <% if current_budget.phase == 'accepting' %>
+        <% elsif current_budget.phase == 'reviewing' %>
           <div class="callout warning">
             <%= t("custom.messages.finished_accepting") %>
           </div>
@@ -59,6 +60,7 @@
 
         <h1><%= investment.title %></h1>
         <div class="budget-investment-info">
+          
           <%= render '/shared/author_info', resource: investment %>
 
           <span class="bullet">&nbsp;&ndash;&nbsp;</span>
@@ -69,12 +71,31 @@
           <span class="js-flag-actions">
             <%= render 'budgets/investments/flag_actions', investment: @investment %>
           </span>
+
+          <% if current_budget.phase == 'accepting' %>
+            <% if current_user == investment.author %>
+              <%= link_to t('custom.titles.edit'), budget_investments_path(@budget) + '/' + @investment.id.to_s + '/uredi' %>
+            <% end %>
+          <% end %>
         </div>
 
         <%= render_image(investment.image, :large, true) if investment.image.present? %>
 
         <div class="small-12 medium-9 medium-centered bggray">
-          <%= safe_html_with_links investment.description.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q1') %></h4>
+          <%= safe_html_with_links investment.q1.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q2') %></h4>
+          <%= safe_html_with_links investment.q2.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q3') %></h4>
+          <%= safe_html_with_links investment.q3.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q4') %></h4>
+          <%= safe_html_with_links investment.q4.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q5') %></h4>
+          <%= safe_html_with_links investment.q5.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q6') %></h4>
+          <%= safe_html_with_links investment.q6.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q7') %></h4>
+          <%= safe_html_with_links investment.q7.html_safe %>
         </div>
 
         <% if feature?(:map) && map_location_available?(@investment.map_location) %>
@@ -176,6 +197,10 @@
               </div>
             </div>
           <% end %>
+          <div class="custombackbutton">
+            <i class="custom-icon arrow-large-left"></i>
+            <%= link_to t('custom.headings.back_to_all_proposals'), budget_investments_path(@budget) %>
+          </div>
         <% end %>
 
         <div class="horizontal-line"></div>
@@ -201,8 +226,9 @@
             </div>
           </div>
         </div>
-
+        <!-- remove line because of removed comments
         <div class="horizontal-line"></div>
+        end remove line -->
       </div>
     </div>
   </section>
