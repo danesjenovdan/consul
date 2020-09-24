@@ -16,20 +16,30 @@
     </div>
     -->
 
+    <label for="q1"><%= t('activerecord.attributes.budget/investment.q1') %></label>
     <div class="ckeditor small-12 column">
       <%= f.cktext_area :q1, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
+    <label for="q2"><%= t('activerecord.attributes.budget/investment.q2') %></label>
     <div class="ckeditor small-12 column">
       <%= f.cktext_area :q2, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
+    <label for="q3"><%= t('activerecord.attributes.budget/investment.q3') %></label>
     <div class="ckeditor small-12 column">
       <%= f.cktext_area :q3, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
+    <label for="q4"><%= t('activerecord.attributes.budget/investment.q4') %></label>
     <div class="ckeditor small-12 column">
       <%= f.cktext_area :q4, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    </div>
+
+    <label for="q5"><%= t('activerecord.attributes.budget/investment.q5') %></label>
+    <div class="small-12 column">
+      <%= f.label :price, t("budgets.investments.show.price") %>
+      <%= f.number_field :price, label: '&nbsp;(€)' %>
     </div>
 
     <div class="ckeditor small-12 column">
