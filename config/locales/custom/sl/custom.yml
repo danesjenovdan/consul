@@ -34,7 +34,7 @@ sl:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljam
       headings: Območja
-      headings_sidebar: "<li><h4>Območje 1:</h4>Krajevne skupnosti: Koper – center, Olmo - Prisoje, Semedela, Žusterna, Za gradom</li><li><h4>Območje 2:</h4>Krajevne skupnosti: Škocjan, Šmarje, Vanganel</li><li><h4>Območje 3:</h4>Krajevne skupnosti: Dekani, Hrvatini, Škofije</li><li><h4>Območje 4:</h4>Krajevne skupnosti: Bertoki, Pobegi – Čežarji, Sv. Anton</li><li><h4>Območje 5:</h4>Krajevne skupnosti: Boršt, Gračišče, Gradin, Marezige</li><li><h4>Območje 6:</h4>Krajevne skupnosti: Črni Kal, Podgorje, Rakitovec, Zazid</li>"
+      headings_sidebar: "<li><h4>Območje 1:</h4>Levi breg - krajevne skupnosti: KS Malečnik-Ruperče, KS Kamnica, KS Bresternica-Gaj</li><li><h4>Območje 2:</h4>Levi breg - mestne četrti: MČ Ivan Cankar, MČ Center, MČ Koroška vrata</li><li><h4>Območje 3:</h4>Desni breg - krajevne skupnosti: KS Razvanje, KS Limbuš, KS Pekre</li><li><h4>Območje 4:</h4>Desni breg - mestne četrti: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno, MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova vas, MČ Radvanje</li>"
       select_heading: Izberi območje
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Predlog projekta mora izpolnjevati naslednje kriterije in merila:"
