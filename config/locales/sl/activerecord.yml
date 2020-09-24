@@ -239,7 +239,7 @@ sl:
         user:
           attributes:
             username:
-              taken: "Uporabnik s tem elektronskim naslovom že obstaja."
+              taken: "Uporabnik s tem uporabniškim imenom že obstaja."
             password:
               too_short: "Geslo je prekratko (dolgo mora biti vsaj %{count} znakov)."
             password_confirmation:
@@ -247,6 +247,7 @@ sl:
             current_password:
               blank: "Trenutno geslo ne sme biti prazno."
             email:
+              taken: "Uporabnik s tem elektronskim naslovom že obstaja."
               password_already_set: "Ta uporabnik že ima geslo"
             document_number:
               invalid: "Vnešena EMŠO številka ni pravilna."
