@@ -186,10 +186,11 @@ sl:
   activerecord:
     attributes:
       budget/investment:
-        q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
-        q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
-        q3: "Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?"
-        q4: "Kje konkretno naj bi se projekt izvajal?"
-        q5: "Časovni okvir: kdaj naj bi se projekt izvedel?"
+        q1: "Kateri izziv, problem, temo bo projekt reševal?"
+        q2: "Kakšno rešitev predlagate?"
+        q3: "Kako bo projekt reševal problem (kaj je potrebno narediti)?"
+        q4: "Kakšna bo rešitev (stanje po zaključku projekta)?"
+        q5: "Kje se bo projekt izvajal?"
+        # questions below are ignored in MB
         q6: "Kaj bi se po izvedbi projekta spremenilo, izboljšalo?"
         q7: "Predvideni stroški predlaganega projekta"

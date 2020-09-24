@@ -36,34 +36,38 @@
       <%= f.cktext_area :q5, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
-    <div class="ckeditor small-12 column">
-      <%= f.cktext_area :q6, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
-    </div>
+    <%
 
-    <div class="small-12 column">
-      <%= f.label :price, t("budgets.investments.show.price") %>
-      <%= f.number_field :price, label: '&nbsp;(€)' %>
-    </div>
+    # <div class="ckeditor small-12 column">
+    #   <%= f.cktext_area :q6, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    # </div>
 
-    <div class="small-12 column">
-      <%= f.label :q7 %>
-      <%= f.hidden_field :q7 %>
-      <table id="editabletable">
-        <tr>
-          <th><%= t("custom.form.table_content") %></th>
-          <th><%= t("custom.form.table_price") %></th>
-        </tr>
-        <tr>
-          <td></td>
-          <td class="value"></td>
-        </tr>
-        <tr>
-          <th><%= t("custom.form.table_total") %></th>
-          <th id="total-value"></th>
-        </tr>
-      </table>
-      <a href="#" class="action-button small" id="add-table-row">Dodaj postavko</a>
-    </div>
+    # <div class="small-12 column">
+    #   <%= f.label :price, t("budgets.investments.show.price") %>
+    #   <%= f.number_field :price, label: '&nbsp;(€)' %>
+    # </div>
+
+    # <div class="small-12 column">
+    #   <%= f.label :q7 %>
+    #   <%= f.hidden_field :q7 %>
+    #   <table id="editabletable">
+    #     <tr>
+    #       <th><%= t("custom.form.table_content") %></th>
+    #       <th><%= t("custom.form.table_price") %></th>
+    #     </tr>
+    #     <tr>
+    #       <td></td>
+    #       <td class="value"></td>
+    #     </tr>
+    #     <tr>
+    #       <th><%= t("custom.form.table_total") %></th>
+    #       <th id="total-value"></th>
+    #     </tr>
+    #   </table>
+    #   <a href="#" class="action-button small" id="add-table-row">Dodaj postavko</a>
+    # </div>
+
+    %>
 
     <% if feature?(:allow_images) %>
       <div class="images small-12 column">

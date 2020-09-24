@@ -32,13 +32,17 @@
       <%= f.cktext_area :q4, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
-    <div class="ckeditor small-12 column">
-      <%= f.cktext_area :q5, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
-    </div>
+    <%
 
-    <div class="ckeditor small-12 column">
-      <%= f.cktext_area :q6, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
-    </div>
+    # <div class="ckeditor small-12 column">
+    #   <%= f.cktext_area :q5, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    # </div>
+
+    # <div class="ckeditor small-12 column">
+    #   <%= f.cktext_area :q6, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    # </div>
+
+    %>
 
     <div class="small-12 column">
       <%= f.label :price, t("budgets.investments.show.price") %>
