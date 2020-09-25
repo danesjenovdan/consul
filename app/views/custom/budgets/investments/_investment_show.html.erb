@@ -83,19 +83,15 @@
 
         <div class="small-12 medium-9 medium-centered bggray">
           <h4><%= t('activerecord.attributes.budget/investment.q1') %></h4>
-          <%= safe_html_with_links investment.q1.html_safe %>
+          <%= auto_link_already_sanitized_html investment.q1.html_safe %>
           <h4><%= t('activerecord.attributes.budget/investment.q2') %></h4>
-          <%= safe_html_with_links investment.q2.html_safe %>
+          <%= auto_link_already_sanitized_html investment.q2.html_safe %>
           <h4><%= t('activerecord.attributes.budget/investment.q3') %></h4>
-          <%= safe_html_with_links investment.q3.html_safe %>
+          <%= auto_link_already_sanitized_html investment.q3.html_safe %>
           <h4><%= t('activerecord.attributes.budget/investment.q4') %></h4>
-          <%= safe_html_with_links investment.q4.html_safe %>
+          <%= auto_link_already_sanitized_html investment.q4.html_safe %>
           <h4><%= t('activerecord.attributes.budget/investment.q5') %></h4>
-          <%= safe_html_with_links investment.q5.html_safe %>
-          <h4><%= t('activerecord.attributes.budget/investment.q6') %></h4>
-          <%= safe_html_with_links investment.q6.html_safe %>
-          <h4><%= t('activerecord.attributes.budget/investment.q7') %></h4>
-          <%= safe_html_with_links investment.q7.html_safe %>
+          <%= auto_link_already_sanitized_html investment.q5.html_safe %>
         </div>
 
         <% if feature?(:map) && map_location_available?(@investment.map_location) %>
