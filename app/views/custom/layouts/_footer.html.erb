@@ -3,11 +3,6 @@
     <div class="row loginlinks ">
       <div class="main-indented-content clearfix">
       <div class="small-12 large-6 column">
-        <ul class="no-bullet inline-block footer-links">
-          <!-- REMOVING LOGIN HERE
-          <%= render "devise/menu/login_items" %>
-          -->
-        </ul>
       </div>
       </div>
     </div>
@@ -22,12 +17,16 @@
 
       <div class="small-12 large-6 column links-holder">
       -->
-      <div class="small-12 large-6 column links-holder" style="text-align: left;">
-        <ul class="no-bullet inline-block footer-links" style="text-align: left;">
-          <li class="inline-block">Spletna platforma bo celovitost ponujene storitve zagotavljala od 1. oktobra 2020.</li>
+
+      <div class="small-12 large-6 column mbloginlinks">
+        <ul class="no-bullet inline-block footer-links">
+          <%= render "devise/menu/login_items" %>
         </ul>
       </div>
-      <div class="small-12 large-6 column links-holder">
+      <div class="small-12 large-6 column links-holder" style="text-align: left;">
+        
+      </div>
+      <div class="small-12 large-6 column links-holder mblinks">
         <ul class="no-bullet inline-block footer-links">
           <li class="inline-block"><%= link_to t("custom.titles.about"), page_path('o-participativnem-proracunu') %>&nbsp;&nbsp;|&nbsp;</li>
           <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path(t('custom.meta.tos')) %>&nbsp;|&nbsp;</li>

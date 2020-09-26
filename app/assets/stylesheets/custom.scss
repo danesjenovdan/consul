@@ -76,9 +76,11 @@
         display: none; // SAMO DOKLER NI REGISTRACIJE TODO
     }
 
-    ul li,
-    ul li a {
-        color: #ffffff !important;
+    .mblinks {
+        ul li,
+        ul li a {
+            color: #ffffff !important;
+        }
     }
 
     .logorow {

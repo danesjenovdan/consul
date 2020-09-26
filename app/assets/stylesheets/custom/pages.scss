@@ -817,7 +817,8 @@ footer {
     padding-left: 0;
   }
 
-  .loginlinks {
+  .loginlinks,
+  .mbloginlinks {
     a {
       color: #272266;
       font-size: 14px;
@@ -1213,7 +1214,8 @@ form label {
 .budget-investment-show .button.button-support.small.expanded,
 .budget-investment-holder .button.button-support.small.expanded,
 .budget-investment-holder .delete.small.expanded,
-footer .loginlinks a {
+footer .loginlinks a,
+footer .mbloginlinks a {
   border: none !important;
   background-size: 300% 100%;
 
