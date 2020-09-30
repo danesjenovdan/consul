@@ -65,9 +65,7 @@
                 <% end %>
 
                 <div style="position: relative;">
-                  <!-- REMOVE CATEGORIES DROPDOWN
                   <%= render 'budgets/investments/categories' %>
-                  END REMOVE CATEGORIES DROPDOWN -->
                   <% if @budget.headings.count > 1 %>
                     <%= render 'budgets/investments/districts' %>
                   <% end %>
@@ -120,9 +118,7 @@
                     <%= render('shared/order_links', i18n_namespace: "budgets.investments.index") unless @current_filter == "unfeasible" %>
                   <% end %>
 
-                  <!-- REMOVE CATEGORIES DROPDOWN
                   <%= render 'budgets/investments/categories' %>
-                  END REMOVE CATEGORIES DROPDOWN -->
                   <% if @budget.headings.count > 1 %>
                     <%= render 'budgets/investments/districts' %>
                   <% end %>
@@ -154,9 +150,7 @@
 
               <div class="row budget-investments">
                 <div>
-                  <!-- REMOVE CATEGORIES DROPDOWN
                   <%= render 'budgets/investments/categories' %>
-                  END REMOVE CATEGORIES DROPDOWN -->
                   <% if @budget.headings.count > 1 %>
                     <%= render 'budgets/investments/districts' %>
                   <% end %>
