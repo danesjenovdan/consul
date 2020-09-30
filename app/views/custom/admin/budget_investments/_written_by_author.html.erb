@@ -62,7 +62,7 @@
   </p>
 <% end %>
 
-<%= auto_link_already_sanitized_html @investment.description %>
+<%= auto_link_already_sanitized_html @investment.description.html_safe %>
 
 <p>
   <strong><%= t("admin.budget_investments.show.image") %></strong>:
