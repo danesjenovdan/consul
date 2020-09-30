@@ -55,12 +55,12 @@ module Budgets
     def update
       @investment.update(title: params[:budget_investment][:title],
                          q1: params[:budget_investment][:q1],
-                         q2: params[:budget_investment][:q2],
-                         q3: params[:budget_investment][:q3],
-                         q4: params[:budget_investment][:q4],
-                         q5: params[:budget_investment][:q5],
-                         q6: params[:budget_investment][:q6],
-                         q7: params[:budget_investment][:q7],
+                        #  q2: params[:budget_investment][:q2],
+                        #  q3: params[:budget_investment][:q3],
+                        #  q4: params[:budget_investment][:q4],
+                        #  q5: params[:budget_investment][:q5],
+                        #  q6: params[:budget_investment][:q6],
+                        #  q7: params[:budget_investment][:q7],
                          price: params[:budget_investment][:price],
                          map_location_attributes: {latitude: params[:budget_investment][:map_location_attributes][:latitude],
                                                    longitude: params[:budget_investment][:map_location_attributes][:longitude],
@@ -86,7 +86,9 @@ module Budgets
     private
       def investment_params
         params.require(:budget_investment)
-              .permit(:title, :description, :q1, :q2, :q3, :q4, :q5, :q6, :q7, :heading_id, :tag_list, :price,
+              .permit(:title, :description, :q1,
+              # :q2, :q3, :q4, :q5, :q6, :q7, 
+                      :heading_id, :tag_list, :price,
                       :organization_name, :location, :terms_of_service, :skip_map,
                       image_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
                       documents_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
