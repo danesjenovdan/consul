@@ -2113,7 +2113,8 @@ input.error {
       background: transparent;
     }
 
-    .progress-bar-meter {
+    .progress-bar-meter,
+    .progress-meter {
       -webkit-animation: progressBar 2s ease-in-out;
       -webkit-animation-fill-mode: both;
       -moz-animation: progressBar 2s ease-in-out;
