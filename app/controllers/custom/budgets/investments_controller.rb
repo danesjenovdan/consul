@@ -59,8 +59,8 @@ module Budgets
                          q3: params[:budget_investment][:q3],
                          q4: params[:budget_investment][:q4],
                          q5: params[:budget_investment][:q5],
+                        q6: params[:budget_investment][:q6],
                         #  Below questions are ignored in MB.
-                        #  q6: params[:budget_investment][:q6],
                         #  q7: params[:budget_investment][:q7],
                          price: params[:budget_investment][:price],
                          map_location_attributes: {latitude: params[:budget_investment][:map_location_attributes][:latitude],
@@ -87,8 +87,8 @@ module Budgets
     private
       def investment_params
         params.require(:budget_investment)
-              .permit(:title, :description, :q1, :q2, :q3, :q4, :q5, :heading_id, :tag_list, :price,
-                      # :q6, :q7, are ignored in MB
+              .permit(:title, :description, :q1, :q2, :q3, :q4, :q5, :q6, :heading_id, :tag_list, :price,
+                      # :q7, are ignored in MB
                       :organization_name, :location, :terms_of_service, :skip_map,
                       image_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
                       documents_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
