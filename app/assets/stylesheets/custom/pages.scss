@@ -2110,11 +2110,10 @@ input.error {
     font-weight: 600;
 
     .progress-meter {
-      background: transparent;
+      background: #3c3583;
     }
 
-    .progress-bar-meter,
-    .progress-meter {
+    .progress-bar-meter {
       -webkit-animation: progressBar 2s ease-in-out;
       -webkit-animation-fill-mode: both;
       -moz-animation: progressBar 2s ease-in-out;
