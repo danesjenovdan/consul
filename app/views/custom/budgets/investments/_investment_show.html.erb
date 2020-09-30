@@ -90,6 +90,8 @@
           <%= auto_link_already_sanitized_html investment.q4.html_safe %>
           <h4><%= t('activerecord.attributes.budget/investment.q5') %></h4>
           <%= auto_link_already_sanitized_html investment.q5.html_safe %>
+          <h4><%= t('activerecord.attributes.budget/investment.q6') %></h4>
+          <%= auto_link_already_sanitized_html investment.q6.html_safe %>
         </div>
 
         <% if feature?(:map) && map_location_available?(@investment.map_location) %>
