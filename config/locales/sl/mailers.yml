@@ -54,7 +54,7 @@ sl:
       title: "Hvala, ker si ustvaril/-a investicijo!"
       intro: "Hej <strong>%{author}</strong>,"
       text: "Zahvaljujemo se ti za ustvarjeno investicijo <strong>%{investment}</strong> za participativni proračun <strong>%{budget}</strong>."
-      follow: "O tem, kako proces napreduje, te bomo sproti obveščali. Spremljaš ga lahko na <strong>%{link}</strong>."
+      follow: "O tem, kako proces napreduje, te bomo sproti obveščali."
       follow_link: "Participativni proračuni"
       sincerely: "Z lepimi pozdravi,"
       share: "Deli svoj projekt"
