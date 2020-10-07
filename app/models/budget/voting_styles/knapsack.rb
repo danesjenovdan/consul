@@ -1,6 +1,6 @@
 class Budget::VotingStyles::Knapsack < Budget::VotingStyles::Base
   def enough_resources?(investment)
-    investment.price.to_i <= 40000 # amount_available(investment.heading)
+    investment.price.to_i <= amount_available(investment.heading)
   end
 
   def reason_for_not_being_ballotable(investment)
@@ -16,7 +16,8 @@ class Budget::VotingStyles::Knapsack < Budget::VotingStyles::Base
   end
 
   def amount_limit(heading)
-    ballot.budget.heading_price(heading)
+    40000
+    # ballot.budget.heading_price(heading)
   end
 
   def format(amount)
