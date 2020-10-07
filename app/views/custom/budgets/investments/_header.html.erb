@@ -27,7 +27,7 @@
         </h2>
         <p class="large-description">
           <% if current_budget.current_phase.summary %>
-            <%= strip_tags(current_budget.current_phase.description.html_safe) %>
+            <%= current_budget.current_phase.description.html_safe %>
           <% end %>
         </p>
         <% if current_budget.phase == 'accepting' %>
