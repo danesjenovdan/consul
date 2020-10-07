@@ -26,8 +26,8 @@ class Budget
     end
 
     def description
-      compiled_description = q1.to_s + q2.to_s + q3.to_s + q4.to_s + q5.to_s + q6.to_s
-      # + q7.to_s are ignored in MB
+      compiled_description = q1.to_s + q2.to_s + q3.to_s + q4.to_s + q5.to_s
+      # + q6.to_s + q7.to_s are ignored in MB
       read_attribute(:description) != '' ? compiled_description : read_attribute(:description) 
     end
 
