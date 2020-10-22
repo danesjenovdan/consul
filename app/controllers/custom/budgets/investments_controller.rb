@@ -37,7 +37,7 @@ module Budgets
       # @unfeasible_investments_count = unfeasible_investments.count
       # @unfesible_investments = unfeasible_investments.page(params[:page]).per(21).for_render
       
-      all_investments = Budget::Investment.where('budget_id = ?', @budget.id).order('id DESC')
+      all_investments = Budget::Investment.where('budget_id = ?', @budget.id).order('id DESC').apply_filters_and_search(@budget, params, @current_filter)
       @all_investments_count = all_investments.count
       @all_investments = all_investments.page(params[:page]).per(400).for_render
       @all_investment_ids = @investments.pluck(:id)
