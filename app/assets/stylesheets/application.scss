@@ -16,7 +16,6 @@
 @import "legislation_process_form";
 @import "community";
 @import "stats";
-@import "custom";
 @import "c3";
 @import "annotator.min";
 @import "annotator_overrides";
@@ -27,3 +26,5 @@
 @import "jquery-ui/sortable";
 @import "leaflet";
 @import "sticky_overrides";
+
+@import "custom";
