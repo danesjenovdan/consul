@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <%= render "layouts/common_head", default_title: setting["org_name"] %>
+    <%= render "layouts/meta_tags" %>
+    <%= raw setting["html.per_page_code_head"] %>
+  </head>
+
+  <body class="auth-page">
+    <main>
+      <div class="backgrounded">
+        <div class="row">
+          <h1>ТВОЈЕ ИДЕЈЕ МЕЊАЈУ ГРАД.</h1>
+          <div class="small-12 medium-9 column">
+            <div class="row">
+              <div class="small-12 medium-9 large-7 centered column">
+                <div class="auth-form margin">
+                  <div class="auth-container">
+                    <%= render "layouts/flash" %>
+
+                    <%= yield %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="turquise">
+        <div class="row">
+          <h1>МАПА ПРОЈЕКАТА</h1>
+          <div class="trio-container">
+            <div class="btn-round-container">
+              <button class="btn-round">ПРОЈЕКТИ У ТОКУ</button>
+            </div>
+            <div class="btn-round-container">
+              <button class="btn-round">ИЗГЛАСАНИ ПРОЈЕКТИ</button>
+            </div>
+            <div class="btn-round-container">
+              <button class="btn-round">ЗАВРШЕНИ ПРОЈЕКТИ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+    <%= raw setting["html.per_page_code_body"] %>
+
+    <div class="footer">
+      <%= render "layouts/footer" %>
+    </div>
+  </body>
+</html>

@@ -17,7 +17,6 @@
 @import "legislation_process_form";
 @import "community";
 @import "stats";
-@import "custom";
 @import "c3";
 @import "annotator.min";
 @import "amsify.suggestags";
@@ -35,3 +34,5 @@
 @import "sdg_management/*";
 @import "sdg_management/**/*";
 @import "widgets/**/*";
+
+@import "custom";
