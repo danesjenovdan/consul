@@ -333,3 +333,115 @@ button,
 .wrapper {
     overflow: hidden;
 }
+
+
+
+.main-backgrounded {
+    background-image: image-url('panorama.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// DEBATES
+
+#debates,
+#proposals {
+    padding: 25px;
+    border-radius: 30px;
+    background-color: rgba(147, 213, 151, 0.8);
+
+    .votes {
+        border-left: none;
+    }
+
+    .btn-round {
+        background-color: #fab7b0;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 100px;
+        border: 2px solid #3d484b;
+        color: #3d484b;
+        box-shadow: 5px 5px #558b87;
+        width: 300px;
+        margin-top: 0;
+        padding: 10px 30px;
+    }
+    ul {
+        li {
+            a.is-active {
+                color: #ffff95;
+                border-bottom-color: #ffff95;
+            }
+        }
+    }
+    .debate-panel,
+    .proposal-panel {
+        background-color: #7dc2b9 !important;
+        border: none !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+
+        .truncate {
+            background: rgb(255,255,255) !important;
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(125,194,185,1) 100%) !important;
+        }
+
+        .debate-content {
+            h3 {
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+            .debate-info {
+                margin-top: -7px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+#girl {
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: image-url('girl.png');
+}
+
+.view-mode-button {
+    border-radius: 40px;
+    box-shadow: none;
+    background: #fab7b0 !important;
+}
+
+.proposal-panel {
+    padding: 20px !important;
+
+    .proposal-image-container {
+        border-radius: 20px;
+
+        img {
+            border-radius: 20px;
+        }
+    }
+}
+
+ul.tags li a {
+    border-radius: 15px !important;
+    background-color: #ffa8a7 !important;
+    text-transform: uppercase;
+    min-width: 60px;
+    text-align: center;
+}
+
+#proposals {
+    .progress {
+        background-color: #ffa8a7 !important;
+        border-color: #ffa8a7 !important;
+
+        .meter {
+            background-color: #feff99;
+        }
+    }
+}
