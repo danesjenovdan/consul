@@ -14,3 +14,37 @@
 @import 'jquery-ui/autocomplete';
 @import 'autocomplete_overrides';
 @import 'jquery-ui/sortable';
+
+.welcome-columns {
+    .welcome-column {
+        background-image: none !important;
+
+        &.accepting {
+            background-color: #f5d6d7 !important;
+        }
+
+        &.balloting {
+            background-color: #f0c2c3 !important;
+        }
+
+        &.finished {
+            background-color: #ebadaf !important;
+        }
+
+        .linkable,
+        .hoverlinkable {
+            background-image: none !important;
+        }
+
+        .action-button.large {
+            background-color: #272B68 !important;
+            background-image: none !important;
+            color: #ffffff !important;
+            text-transform: uppercase !important;
+        }
+
+        .column-content {
+            color: #000000;
+        }
+    }
+}
