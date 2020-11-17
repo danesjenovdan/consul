@@ -15,20 +15,24 @@
 @import 'autocomplete_overrides';
 @import 'jquery-ui/sortable';
 
+.top-bar {
+    background-color: #F4D5D6 !important;
+}
+
 .welcome-columns {
     .welcome-column {
         background-image: none !important;
 
         &.accepting {
-            background-color: #f5d6d7 !important;
+            background-color: #E9ABAC !important;
         }
 
         &.balloting {
-            background-color: #f0c2c3 !important;
+            background-color: #E39698 !important;
         }
 
         &.finished {
-            background-color: #ebadaf !important;
+            background-color: #DD8083 !important;
         }
 
         .linkable,
