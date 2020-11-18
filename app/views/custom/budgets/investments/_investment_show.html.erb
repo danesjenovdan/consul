@@ -118,7 +118,7 @@
 
         <% if investment.external_url.present? %>
           <div class="document-link">
-            <%= text_with_links investment.external_url %>
+            <%= sanitize_and_auto_link investment.external_url %>
           </div>
         <% end %>
 

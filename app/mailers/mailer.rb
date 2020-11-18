@@ -1,7 +1,7 @@
 class Mailer < ApplicationMailer
   after_action :prevent_delivery_to_users_without_email
 
-  helper :text_with_links
+  helper :sanitize_and_auto_link
   helper :mailer
   helper :users
 
