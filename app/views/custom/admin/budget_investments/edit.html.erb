@@ -52,7 +52,7 @@
 
       <div class="small-12 medium-6">
         <%= f.select(:administrator_id,
-                       @admins.collect{ |a| [a.name_and_email, a.id ] },
+                       @admins.collect{ |a| [a.description_or_name_and_email, a.id ] },
                        { include_blank: t("admin.budget_investments.edit.undefined") }) %>
       </div>
     </div>
@@ -81,12 +81,17 @@
       </ul>
     </div>
 
-    <div class="small-12 column">
+    <style>
+    #valuators-picker ul li label input {
+      position: static;
+    }
+    </style>
+    <div class="small-12 column" id="valuators-picker">
       <hr>
       <%= f.label :valuator_ids, t("admin.budget_investments.edit.assigned_valuators") %>
       <ul>
         <%= f.collection_check_boxes :valuator_ids, @valuators, :id, :email do |b| %>
-            <li style="list-style: none;"><%= b.label(title: valuator_label(b.object)) { b.check_box + truncate(b.object.description_or_email, length: 60) } %></li>
+            <li><%= b.label(title: valuator_label(b.object)) { b.check_box + truncate(b.object.description_or_email, length: 60) } %></li>
         <% end %>
       </ul>
     </div>

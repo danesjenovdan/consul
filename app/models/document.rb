@@ -81,10 +81,10 @@ class Document < ApplicationRecord
 
     def validate_attachment_size
       if documentable_class.present? &&
-         attachment_file_size > documentable_class.max_file_size
+         attachment_file_size > 5.megabytes
         errors.add(:attachment, I18n.t("documents.errors.messages.in_between",
                                       min: "0 Bytes",
-                                      max: "#{max_file_size(documentable_class)} MB"))
+                                      max: "5 MB"))
       end
     end
 
