@@ -34,11 +34,11 @@ sl:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li><h4>Območje 1:</h4>Krajevne skupnosti: Koper – center, Olmo - Prisoje, Semedela, Žusterna, Za gradom</li><li><h4>Območje 2:</h4>Krajevne skupnosti: Škocjan, Šmarje, Vanganel</li><li><h4>Območje 3:</h4>Krajevne skupnosti: Dekani, Hrvatini, Škofije</li><li><h4>Območje 4:</h4>Krajevne skupnosti: Bertoki, Pobegi – Čežarji, Sv. Anton</li><li><h4>Območje 5:</h4>Krajevne skupnosti: Boršt, Gračišče, Gradin, Marezige</li><li><h4>Območje 6:</h4>Krajevne skupnosti: Črni Kal, Podgorje, Rakitovec, Zazid</li>"
+      headings_sidebar: "<li><h4>Območje 1:</h4>Kromberk – Loke, Nova Gorica, Rožna Dolina in Solkan</li><li><h4>Območje 2:</h4>Čepovan, Lokve – Lazna, Ravnica in Trnovo</li><li><h4>Območje 3:</h4>Banjšice, Grgar, Grgarske Ravne – Bate in Lokovec</li><li><h4>Območje 4:</h4>Branik, Dornberk, Gradišče in Prvačina</li><li><h4>Območje 5:</h4>Osek – Vitovlje, Ozeljan – Šmihel in Šempas</li>"
       select_heading: Izberi območje
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
-      instructions: "Projektni predlog mora izpolnjevati naslednje pogoje:"
-      instructions_description: "<li>Prispeva k uresničevanju javnega interesa in se izvaja na območju Mestne občine Koper.</li><li>Prispeva k namenom poziva — spodbuja aktivno participacijo in vključenost občanov, dviga kakovost bivanja v lokalnem okolju, gradi skupnostni pristop in je namenjen splošni javni uporabi.</li><li>Je takšne narave, da ga bo Mestna občina Nova Gorica lahko izpeljala v okviru občinskih zmogljivosti in zakonskih pristojnosti.</li><li>Ni uvrščen v proračun oz. načrt razvojnih programov občinskih vlaganj po krajevnih skupnostih in ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov Mestne občine Koper.</li><li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li><li>V preteklih petih letih ni bil financiran/sofinanciran iz proračuna Mestne občine Koper.</li><li>Je finančno ovrednoten med 5.000 in 20.000 € z vključenim DDV-jem.</li><li>Je realno izvedljiv v proračunskih letih 2021 in 2022.</li><li>Je umeščen v enega od šestih območij občine, opredeljenih za participativni proračun.</li>"
+      instructions: "Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje naslednja merila:"
+      instructions_description: "<li>prispeva k uresničevanju javnega interesa na območju MONG;</li><li>je finančno ovrednoten do 20.000 EUR z vključenim DDV-jem;</li><li>pri investicijah, ki pomenijo trajni poseg v nepremičnino, da je tak poseg omogočen z veljavnimi prostorskimi predpisi;</li><li>še ni bil (so)financiran s strani javnih sredstev;</li><li>ni uvrščen v načrt vlaganj (proračun ali NRP) s strani MONG ali KS;</li><li>bo izveden bo na območju mestne občine in je umeščen v enega od 5 območij občine;</li><li>ne predvideva kompleksnejših investicij v javno infrastrukturo (kjer je potrebno urejati dve ali več kategorij javne infrastrukture, kot na primer javno razsvetljavo, odvodnjavanje, cesto, vodovod, kanalizacija).</li>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     titles:
       edit: Uredi predlog
@@ -170,9 +170,9 @@ sl:
       trying: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
       in_case_first: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je "
       in_case_second: " izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
-      terms_first_checkbox: "obdeluje moje osebne podatke (ime in priimek, naslov stalnega prebivališča, e-naslov, telefonska številka) za namen izvedbe projekta Odločamo - skupaj v dokumentarni zbirki MOK,"
+      terms_first_checkbox: "obdeluje moje osebne podatke (ime in priimek, naslov stalnega prebivališča, e-naslov, telefonska številka) za namen izvedbe projekta Odločamo - skupaj."
       terms_second_checkbox: "objavi osebne podatke (ime in priimek) na spletni strani MOK z namenom javne objave pobud Odločamo - skupaj. (Opomba: če tega polja ne odkljuš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani občine)."
-      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Nova Gorica:"
+      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Nova gorica:"
     classes:
       footer_logo: nova-gorica
     statuses:
