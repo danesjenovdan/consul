@@ -1,6 +1,6 @@
 <div class="small-12 medium-6">
 
-  <%= render "admin/shared/globalize_locales", resource: @heading %>
+  <%= render "shared/globalize_locales", resource: @heading %>
 
   <%= translatable_form_for [:admin, @budget, @group, @heading], url: path do |f| %>
 
