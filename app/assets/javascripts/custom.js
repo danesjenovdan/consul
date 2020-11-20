@@ -178,11 +178,14 @@ var destroy_non_idempotent_modules = function() {
   App.SocialShare.destroy();
 };
 
-$(document).on("turbolinks:load", initialize_modules);
-$(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
+// $(document).on("turbolinks:load", initialize_modules);
+// $(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
 
 $(function(){
   $(document).ready(initialize_modules);
   $(document).on('page:load', initialize_modules);
   $(document).on('ajax:complete', initialize_modules);
+
+  $(document).on("turbolinks:load", initialize_modules);
+  $(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
 });

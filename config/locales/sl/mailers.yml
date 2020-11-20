@@ -1,5 +1,11 @@
 sl:
   mailers:
+    evaluation_comment:
+      subject: "Nov komentar na vrednotenje predloga"
+      title: Nov komentar na predlogu %{investment}
+      hi: Živjo!
+      new_comment_by: Nekdo (<strong>%{commenter}</strong>) je pustil nov komentar na predlogu %{investment}.
+      commenter_info: "%{commenter}, %{time}:"
     no_reply: "To sporočilo je bilo poslano z e-naslova, ki ne sprejema odgovorov."
     comment:
       hi: Hej

@@ -22,7 +22,7 @@ sl:
         not_selected: Neizbranih investicij ni mogoče podpreti.
         not_enough_money_html: "<small>Nimaš dovolj razpoložljivih sredstev za ta projekt.</small>" #<br><small>Lahko pa kadarkoli %{change_ballot}</small>
         no_ballots_allowed: Faza izbiranja je končana
-        different_heading_assigned_html: "Glasoval/-a si že v drugem območju: %{heading_link}"
+        different_heading_assigned: "Glasoval/-a si že v drugem območju: %{heading_link}"
         change_ballot: spremeniš svoje glasove
     groups:
       show:
@@ -94,7 +94,7 @@ sl:
             other: "<strong>Glasoval/-a si za %{count} predlogov s stroški %{amount_spent}</strong>"
           voted_info: Lahko %{link} kadarkoli do konca te faze. Ni treba porabiti vsega denarja, ki je na voljo.
           voted_info_link: spremeniš svoj glas
-          different_heading_assigned_html: "Glasoval/-a si že v drugem območju: %{heading_link}"
+          different_heading_assigned: "Glasoval/-a si že v drugem območju: %{heading_link}"
           change_ballot: "Če si premisliš, lahko odstraniš svoje glasove v %{check_ballot} in začneš znova."
           check_ballot_link: "preveri moja glasovanja"
           zero: Nisi glasoval za noben naložbeni projekt v tej skupini.
@@ -151,7 +151,7 @@ sl:
         give_support: Glasuj za predlog!
       header:
         check_ballot: Preveri moja glasovanja
-        different_heading_assigned_html: "Glasoval/-a si že v drugem območju: %{heading_link}"
+        different_heading_assigned: "Glasoval/-a si že v drugem območju: %{heading_link}"
         change_ballot: "Če bi glasoval/-a v tem območju, odstrani svoje glasove v območju %{heading_link}."
         check_ballot_link: "preveri moja glasovanja"
         price: "Višina sredstev namenjenih temu območju je"
