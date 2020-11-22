@@ -70,6 +70,13 @@
         </span>
       <% end %>
 
+      <%= f.label :is_anonymous do %>
+        <%= f.check_box :is_anonymous, title: t('custom.terms.terms_second_checkbox'), label: false %>
+        <span class="checkbox">
+          <%= t("custom.terms.terms_second_checkbox") %>
+        </span>
+      <% end %>
+
       <div class="small-12 medium-10 small-centered button-holder pad-t-60">
         <%= button_tag(type: 'submit', class: "action-button huge") do %>
           <%= t("devise_views.users.registrations.new.submit") %>&nbsp;<i class="custom-icon arrow-large-right"></i>
