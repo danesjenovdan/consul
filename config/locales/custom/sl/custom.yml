@@ -38,7 +38,7 @@ sl:
       select_heading: Izberi območje
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje naslednja merila:"
-      instructions_description: "<li>prispeva k uresničevanju javnega interesa na območju MONG;</li><li>je finančno ovrednoten do 20.000 EUR z vključenim DDV-jem;</li><li>pri investicijah, ki pomenijo trajni poseg v nepremičnino, da je tak poseg omogočen z veljavnimi prostorskimi predpisi;</li><li>še ni bil (so)financiran s strani javnih sredstev;</li><li>ni uvrščen v načrt vlaganj (proračun ali NRP) s strani MONG ali KS;</li><li>bo izveden bo na območju mestne občine in je umeščen v enega od 5 območij občine;</li><li>ne predvideva kompleksnejših investicij v javno infrastrukturo (kjer je potrebno urejati dve ali več kategorij javne infrastrukture, kot na primer javno razsvetljavo, odvodnjavanje, cesto, vodovod, kanalizacija).</li>"
+      instructions_description: "<li>prispeva k uresničevanju javnega interesa na območju MONG;</li><li>je finančno ovrednoten do 20.000 EUR z vključenim DDV-jem;</li><li>pri investicijah, ki pomenijo trajni poseg v nepremičnino, da je tak poseg omogočen z veljavnimi prostorskimi predpisi;</li><li>ni uvrščen v načrt vlaganj (proračun ali NRP) s strani MONG ali KS;</li><li>bo izveden bo na območju mestne občine in je umeščen v enega od 5 območij občine;</li><li>ne predvideva kompleksnejših investicij v javno infrastrukturo (kjer je potrebno urejati dve ali več kategorij javne infrastrukture istočasno, kot na primer javno razsvetljavo, odvodnjavanje, cesto, vodovod, kanalizacija).</li>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     titles:
       edit: Uredi predlog
@@ -170,9 +170,9 @@ sl:
       trying: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
       in_case_first: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je "
       in_case_second: " izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
-      terms_first_checkbox: "obdeluje moje osebne podatke (ime in priimek, naslov stalnega prebivališča, e-naslov, telefonska številka) za namen izvedbe projekta Odločamo - skupaj."
-      terms_second_checkbox: "objavi osebne podatke (ime in priimek) na spletni strani MOK z namenom javne objave pobud Odločamo - skupaj. (Opomba: če tega polja ne odkljuš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani občine)."
-      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Nova gorica:"
+      terms_first_checkbox: "obdeluje moje osebne podatke (ime in priimek, naslov stalnega prebivališča, e-naslov, telefonska številka EMŠO) za namen izvedbe projekta Odločamo - skupaj."
+      terms_second_checkbox: "objavi osebne podatke (ime in priimek) na spletni strani MONG z namenom javne objave pobud Odločamo - skupaj. (Opomba: če tega polja ne odkljuš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani občine)."
+      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Nova Gorica:"
     classes:
       footer_logo: nova-gorica
     statuses:

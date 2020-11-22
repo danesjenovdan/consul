@@ -27,12 +27,14 @@
       <%= render 'documents/nested_documents', documentable: @investment, f: f %>
     </div>
 
+    <!-- TODO remove tags
     <div class="small-12 column">
       <%= f.label :tag_list, t("admin.budget_investments.edit.user_tags") %>
       <%= f.text_field :tag_list,
                        value: @investment.tag_list.sort.join(','),
                        label: false %>
     </div>
+    -->
 
     <div class="small-12 column">
       <div class="small-12 medium-6">
@@ -58,6 +60,7 @@
     </div>
 
 
+    <!-- TODO remove tags
     <div class="small-12 column">
       <%= f.label :valuation_tag_list, t("admin.budget_investments.edit.tags") %>
       <div class="tags">
@@ -71,6 +74,7 @@
                         placeholder: t("admin.budget_investments.edit.tags_placeholder"),
                         class: 'js-tag-list' %>
     </div>
+    -->
 
     <div class="small-12 column margin-top">
       <%= f.label :valuator_ids, t("admin.budget_investments.edit.user_groups") %>
