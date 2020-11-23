@@ -27,7 +27,7 @@
           <div class="callout warning">
             <%= t("custom.messages.finished_voting") %>
           </div>
-        <% elsif investment.unfeasible? %>
+        <% elsif @budget.balloting_or_later? && investment.unfeasible? %>
           <div class="callout warning">
             <%= t("budgets.investments.show.project_unfeasible_html") %>
           </div>
