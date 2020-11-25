@@ -10,7 +10,7 @@ sl:
     confirmations:
       confirmed: "Tvoj račun je potrjen."
       send_instructions: "V nekaj minutah dobiš e-pošto z navodili, kako ponastaviti svoje geslo."
-      send_paranoid_instructions: "Če imamo tvoj e-naslov v bazi, v nekaj minutah dobiš e-pošto z navodili, kako ponastaviti svoje geslo."
+      send_paranoid_instructions: "Če imamo tvoj e-naslov v bazi, v nekaj minutah dobiš e-pošto z navodili za potrditev svoje registracije."
     failure:
       already_authenticated: "Si že vpisan/-a."
       inactive: "Tvoj račun še ni bil aktiviran."
