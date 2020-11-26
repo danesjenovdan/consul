@@ -5,7 +5,7 @@
     <%= form_for Comment.new, remote: true, html: { id: "new_comment_#{css_id}" } do |f| %>
       <%= f.text_area :body,
         id: "comment-body-#{css_id}",
-        maxlength: Comment.body_max_length,
+        maxlength: 5000,
         label: leave_comment_text(commentable) %>
 
       <%= f.hidden_field :commentable_type, value: commentable.class.name, id: "comment_commentable_type_#{css_id}" %>
