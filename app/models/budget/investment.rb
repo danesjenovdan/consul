@@ -337,7 +337,7 @@ class Budget
     end
 
     def should_show_price?
-      selected? && price.present? && budget.published_prices?
+      selected? && price.present? && budget.published_prices? && feasible?
     end
 
     def should_show_price_explanation?
