@@ -1,5 +1,5 @@
 <% unless @valid_orders.length == 1 and @valid_orders[0] == 'created_at' %>
-  <ul class="float-right ordering">
+  <ul class="float-right ordering" style="display: none;">
     <% @valid_orders.each do |order| %>
       <li class="inline-block <%= order == @current_order ? 'is-active' : '' %>">
         <%= link_to current_path_with_query_params(order: order, page: 1) do %>
