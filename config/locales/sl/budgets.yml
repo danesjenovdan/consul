@@ -20,6 +20,7 @@ sl:
         not_verified: Le verificirani uporabniki lahko glasujejo o naložbah; %{verify_account}.
         organization: Organizacijam ni dovoljeno glasovati.
         not_selected: Neizbranih investicij ni mogoče podpreti.
+        not_enough_money: "Nimaš dovolj razpoložljivih sredstev za ta projekt." #<br><small>Lahko pa kadarkoli %{change_ballot}</small>
         not_enough_money_html: "<small>Nimaš dovolj razpoložljivih sredstev za ta projekt.</small>" #<br><small>Lahko pa kadarkoli %{change_ballot}</small>
         no_ballots_allowed: Faza izbiranja je končana
         different_heading_assigned: "Glasoval/-a si že v drugem območju: %{heading_link}"
@@ -105,6 +106,7 @@ sl:
           by_feasibility: Po izvedljivosti
           feasible: Izvedljivi projekti
           unfeasible: Neizvedljivi projekti
+          different_heading_assigned_html: Si že glasoval/-a v drugem območju.
         orders:
           random: naključno
           confidence_score: najbolje ocenjeni
@@ -152,7 +154,7 @@ sl:
       header:
         check_ballot: Preveri moja glasovanja
         different_heading_assigned: "Glasoval/-a si že v drugem območju: %{heading_link}"
-        change_ballot: "Če bi glasoval/-a v tem območju, odstrani svoje glasove v območju %{heading_link}."
+        change_ballot: "Če želiš glasovati v tem območju, odstrani svoje glasove v območju %{heading_link}."
         check_ballot_link: "preveri moja glasovanja"
         price: "Višina sredstev namenjenih temu območju je"
     progress_bar:
