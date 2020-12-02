@@ -24,7 +24,7 @@
 
       &::before {
         color: #8aa8be;
-        content: '■';
+        content: "■";
         padding-right: $line-height / 4;
         vertical-align: text-bottom;
       }
@@ -67,7 +67,7 @@
     @include breakpoint(large down) {
 
       &::after {
-        content: '\63';
+        content: "\63";
         font-family: "icons" !important;
         font-size: rem-calc(24);
         pointer-events: none;
@@ -92,7 +92,7 @@
       }
 
       &::after {
-        content: '';
+        content: "";
       }
     }
 
@@ -138,7 +138,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
     }
   }
 }
@@ -212,7 +212,7 @@
     }
 
     .quiz-title {
-      background: #e5ecf2;
+      background: $highlight;
 
       .quiz-header-title {
         font-size: $small-font-size;
@@ -468,8 +468,8 @@
           cursor: pointer;
           position: absolute;
           margin-left: rem-calc(-20);
-          font-family: 'icons';
-          content: '\58';
+          font-family: "icons";
+          content: "\58";
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
@@ -478,8 +478,8 @@
           cursor: pointer;
           position: absolute;
           margin-left: rem-calc(-20);
-          font-family: 'icons';
-          content: '\5a';
+          font-family: "icons";
+          content: "\5a";
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
@@ -507,7 +507,7 @@
 
       .anchor::before {
         display: none;
-        content: '#';
+        content: "#";
         color: $text-medium;
         position: absolute;
         left: 0;
@@ -759,7 +759,7 @@
                 display: inline-block;
 
                 &::after {
-                  content: '|';
+                  content: "|";
                   color: #838383;
                 }
               }
@@ -780,7 +780,7 @@
 
                 &::after {
                   margin-left: rem-calc(4);
-                  content: '|';
+                  content: "|";
                 }
               }
 
@@ -830,7 +830,7 @@
 
       &::before {
         margin-right: rem-calc(4);
-        content: '—';
+        content: "—";
       }
     }
   }
@@ -980,5 +980,29 @@
   .proposal h3 {
     font-size: rem-calc(20);
     margin-top: 0;
+  }
+}
+
+.process-proposal {
+  margin-bottom: $line-height;
+
+  .header {
+    background: $highlight;
+    padding: $line-height;
+
+    @include breakpoint(medium) {
+      height: $line-height * 4;
+    }
+  }
+
+  .process-title {
+    font-size: $small-font-size;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .process-link {
+    font-size: rem-calc(19);
+    font-weight: bold;
   }
 }

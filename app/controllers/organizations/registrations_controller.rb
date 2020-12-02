@@ -1,11 +1,10 @@
 class Organizations::RegistrationsController < Devise::RegistrationsController
 
+  # removed invisible captcha, because we actually take people's address
   # invisible_captcha only: [:create], honeypot: :address, scope: :user
 
   def new
-    super do |user|
-      user.build_organization
-    end
+    super(&:build_organization)
   end
 
   def success
@@ -35,5 +34,4 @@ class Organizations::RegistrationsController < Devise::RegistrationsController
       params.require(:user).permit(:email, :password, :phone_number, :password_confirmation, :terms_of_service,
                                    organization_attributes: [:name, :responsible_name])
     end
-
 end

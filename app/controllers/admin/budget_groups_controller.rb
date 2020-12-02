@@ -1,4 +1,5 @@
 class Admin::BudgetGroupsController < Admin::BaseController
+  include Translatable
   include FeatureFlags
   feature_flag :budgets
 
@@ -37,7 +38,7 @@ class Admin::BudgetGroupsController < Admin::BaseController
     if @group.headings.any?
       redirect_to groups_index, alert: t("admin.budget_groups.destroy.unable_notice")
     else
-      @group.destroy
+      @group.destroy!
       redirect_to groups_index, notice: t("admin.budget_groups.destroy.success_notice")
     end
   end
@@ -45,11 +46,11 @@ class Admin::BudgetGroupsController < Admin::BaseController
   private
 
     def load_budget
-      @budget = Budget.includes(:groups).find(params[:budget_id])
+      @budget = Budget.find_by_slug_or_id! params[:budget_id]
     end
 
     def load_group
-      @group = @budget.groups.find(params[:id])
+      @group = @budget.groups.find_by_slug_or_id! params[:id]
     end
 
     def groups_index
@@ -57,7 +58,7 @@ class Admin::BudgetGroupsController < Admin::BaseController
     end
 
     def budget_group_params
-      params.require(:budget_group).permit(:name, :max_votable_headings)
+      valid_attributes = [:max_votable_headings]
+      params.require(:budget_group).permit(*valid_attributes, translation_params(Budget::Group))
     end
-
 end
