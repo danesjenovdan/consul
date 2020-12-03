@@ -27,7 +27,7 @@
 
               <% verify_account = link_to(t("votes.verify_account"), verification_path) %>
               <% signin = link_to(t("budgets.investments.index.sidebar.signin"), new_user_session_path) %>
-              <% signup = link_to(t("budgets.investments.index.sidebar.signin"), new_user_registration_path) %>
+              <% signup = link_to(t("budgets.investments.index.sidebar.signup"), new_user_registration_path) %>
               <% my_heading = link_to(investment.heading.name,
                                       budget_investments_path(budget_id: investment.budget_id,
                                                               heading_id: investment.heading_id)) %>
