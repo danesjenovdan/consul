@@ -576,6 +576,8 @@ sl:
     manage:
       all: "Nimaš dovoljenja za izvedbo '%{action}' glede %{subject}."
   users:
+    signin: vpisati
+    signup: registrirati
     direct_messages:
       new:
         direct_messages_bloqued: "Ta uporabnik/-ca se je odločil/-a, da ne želi prejemati direktnih sporočil."
