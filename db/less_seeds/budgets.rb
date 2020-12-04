@@ -70,6 +70,7 @@ section "Creating Budgets" do
   end
 end
 
+## If you want to add investment, othervise we use blank slate. 
 =begin
 section "Creating Investments" do
   tags = ActsAsTaggableOn::Tag.category.limit(10)
@@ -82,10 +83,10 @@ section "Creating Investments" do
       group: heading.group,
       budget: heading.group.budget,
       title: "Test investment",
-      description: "<p>Test investmne description</p>",
+      description: "<p>Test investmen description</p>",
       created_at: rand((Time.current - 1.week)..Time.current),
       feasibility: %w{undecided unfeasible feasible feasible feasible feasible}.sample,
-      unfeasibility_explanation: "Janša said budget cuts, mean no money for this =(",
+      unfeasibility_explanation: "Faker::Lorem.paragraph",
       valuation_finished: [false, true].sample,
       tag_list: tags.sample(3).join(','),
       price: rand(1..100) * 100000,
