@@ -26,12 +26,7 @@ end
 
 section "Creating Budgets" do
   Budget.create(
-    name: "#{I18n.t('seeds.budgets.budget')} #{Date.current.year - 1}",
-    currency_symbol: I18n.t('seeds.budgets.currency'),
-    phase: 'finished'
-  )
-  Budget.create(
-    name: "#{I18n.t('seeds.budgets.budget')} #{Date.current.year}",
+    name: "Testni budget #{Date.current.year}",
     currency_symbol: I18n.t('seeds.budgets.currency'),
     phase: 'accepting'
   )
@@ -75,6 +70,7 @@ section "Creating Budgets" do
   end
 end
 
+=begin
 section "Creating Investments" do
   tags = ActsAsTaggableOn::Tag.category.limit(10)
   100.times do
@@ -85,11 +81,11 @@ section "Creating Investments" do
       heading: heading,
       group: heading.group,
       budget: heading.group.budget,
-      title: Faker::Lorem.sentence(3).truncate(60),
-      description: "<p>#{Faker::Lorem.paragraphs.join('</p><p>')}</p>",
+      title: "Test investment",
+      description: "<p>Test investmne description</p>",
       created_at: rand((Time.current - 1.week)..Time.current),
       feasibility: %w{undecided unfeasible feasible feasible feasible feasible}.sample,
-      unfeasibility_explanation: Faker::Lorem.paragraph,
+      unfeasibility_explanation: "Janša said budget cuts, mean no money for this =(",
       valuation_finished: [false, true].sample,
       tag_list: tags.sample(3).join(','),
       price: rand(1..100) * 100000,
@@ -117,42 +113,4 @@ section "Geolocating Investments" do
     end
   end
 end
-
-section "Balloting Investments" do
-  Budget.finished.first.investments.last(20).each do |investment|
-    investment.update(selected: true, feasibility: "feasible")
-  end
-end
-
-section "Winner Investments" do
-  budget = Budget.finished.first
-  50.times do
-    heading = budget.headings.all.sample
-    investment = Budget::Investment.create!(
-      author: User.all.sample,
-      heading: heading,
-      group: heading.group,
-      budget: heading.group.budget,
-      title: Faker::Lorem.sentence(3).truncate(60),
-      description: "<p>#{Faker::Lorem.paragraphs.join('</p><p>')}</p>",
-      created_at: rand((Time.current - 1.week)..Time.current),
-      feasibility: "feasible",
-      valuation_finished: true,
-      selected: true,
-      price: rand(10000..heading.price),
-      skip_map: "1",
-      terms_of_service: "1"
-    )
-    add_image_to(investment) if Random.rand > 0.3
-  end
-  budget.headings.each do |heading|
-    Budget::Result.new(budget, heading).calculate_winners
-  end
-end
-
-section "Creating Valuation Assignments" do
-  (1..50).to_a.sample.times do
-    Budget::Investment.all.sample.valuators << Valuator.first
-  end
-end
-
+=end
