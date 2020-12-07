@@ -445,3 +445,43 @@ ul.tags li a {
         }
     }
 }
+
+.icon-unlike::before {
+    content: "";
+}
+
+.icon-like::before {
+    content: "";
+}
+
+.icon-like {
+    width: 46px;
+    height: 42px;
+    display: block !important;
+    margin-bottom: 8px;
+    background: unset !important;
+    background-image: image-url('thumbsup.png') !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.icon-unlike {
+    width: 46px;
+    height: 42px;
+    display: block !important;
+    margin-bottom: 8px;
+    background: unset !important;
+    background-image: image-url('thumbsdown.png') !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.proposal .supports {
+    padding-bottom: 0;
+}
+
+.help-header {
+    background-color: rgba(147, 213, 151, 1) !important;
+}
