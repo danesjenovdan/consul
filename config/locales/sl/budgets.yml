@@ -87,6 +87,8 @@ sl:
           placeholder: Išči investicijske projekte ...
           title: Išči
         sidebar:
+          signin: prijaviti
+          signup: vpisati
           my_ballot: Moja glasovanja
           voted_html:
             one: "<strong>Glasoval/-a si za en predlog s stroški %{amount_spent}</strong>"
