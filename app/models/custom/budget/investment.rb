@@ -18,7 +18,7 @@ class Budget
     end
 
     def should_show_ballots?
-      (budget.balloting? && selected?) || (budget.reviewing_ballots?)
+      budget.balloting? && selected?
     end
 
     def should_show_vote_count?
