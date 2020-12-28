@@ -102,7 +102,7 @@ sr:
     index:
       featured_debates: Истакнуто
       orders:
-        confidence_score: највиша ознака
+        confidence_score: највише подржани
         created_at: најновије
         hot_score: најактивније
         most_commented: са највише коментара
