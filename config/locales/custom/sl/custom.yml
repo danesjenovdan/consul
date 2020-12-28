@@ -46,7 +46,7 @@ sl:
       added_proposals: Oddani predlogi
       selected_proposals: Izbrani predlogi
       finished_proposals: Izglasovani predlogi
-      denied_proposals: Neizbrani predlogi
+      denied_proposals: Neuvrščeni in neizglasovani predlogi
       register_with: Za registracijo izpolni ta obrazec
       sign_in_with: Za vpis izpolni ta obrazec
       about: O participativnem proračunu
