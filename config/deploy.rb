@@ -16,6 +16,8 @@ set :server_name, deploysecret(:server_name)
 set :db_server, deploysecret(:db_server)
 set :ssh_options, port: deploysecret(:ssh_port)
 
+set :branch, deploysecret(:branch)
+
 set :server_name, deploysecret(:server_name)
 set :repo_url, "https://github.com/danesjenovdan/consul.git"
 
