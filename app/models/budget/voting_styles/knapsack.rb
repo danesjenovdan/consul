@@ -16,7 +16,8 @@ class Budget::VotingStyles::Knapsack < Budget::VotingStyles::Base
   end
 
   def amount_limit(heading)
-    ballot.budget.heading_price(heading)
+    # ballot.budget.heading_price(heading)
+    50000
   end
 
   def format(amount)
