@@ -16,11 +16,15 @@ header {
     background-color: $brand !important;
     background-repeat: no-repeat !important;
     background-position: right center !important;
-    background-size: contain !important;
+    background-size: 25vw !important;
 
     #responsive-menu {
         display: none !important;
     }
+}
+.close-button {
+    background-color: white;
+    padding: 10px 20px;
 }
 .top-links {
     background-color: $brand;
@@ -60,7 +64,7 @@ header {
     }
     margin-top: -24px;
     position: relative;
-    background-image: image-url('kg.jpg');
+    background-image: image-url('kg2.jpg');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -97,6 +101,30 @@ header {
             left: 0;
             top: 0;
             max-width: 100%;
+            width: 450px;
+            height: 380px;
+            margin: auto;
+            margin-top: 60px;
+        }
+    }
+    &.round-city::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: image-url('round_city.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 20vw;
+        height: 20vw;
+        right: 20px;
+        bottom: -3vw;
+
+        @media (max-width: 767px) {
+            position: relative;
+            right: 0;
+            bottom: -100px;
+            max-width: 100%;
+            min-width: 450px;
             width: 450px;
             height: 380px;
             margin: auto;
