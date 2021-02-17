@@ -457,6 +457,16 @@ button,
             border-radius: 20px;
         }
     }
+
+}
+.proposal-image-container-featured {
+    border-radius: 20px;
+
+    img {
+        border-radius: 10px;
+        width: 75px;
+        height: 75px;
+    }
 }
 
 ul.tags li a {
