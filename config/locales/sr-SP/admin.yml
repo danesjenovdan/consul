@@ -420,7 +420,7 @@ sr:
       index:
         id: ИД
         author: Аутор
-        title: Дискусије 
+        title: Дискусије
         no_debates: Нема расправа.
     hidden_debates:
       index:
@@ -677,7 +677,7 @@ sr:
         information_texts: Текстови са прилагођеним информацијама
         information_texts_menu:
           basic: "Основно прилагођавање"
-          debates: "Дискусије "
+          debates: "Дискусије"
           community: "Заједница"
           proposals: "Предлози"
           polls: "Анкете"
@@ -699,7 +699,7 @@ sr:
       dashboard: Контролна табла за предлоге
       administrator_tasks: Захтевани ресурси
       dashboard_actions: Ресурси и радње
-      debates: "Дискусије "
+      debates: "Дискусије"
       comments: "Коментари"
       local_census_records: Управљање локалним пописом
     administrators:
@@ -1379,7 +1379,7 @@ sr:
           comment_votes: Коментаришите видео запис
           comments: Коментари
           debate_votes: Гласови расправа
-          debates: Дискусије 
+          debates: Дискусије
           proposal_votes: Гласови предлога
           proposals: Предлози
           budgets: Отворени буџети
@@ -1399,7 +1399,7 @@ sr:
         incomplete_verifications: Доврши потврђивање
         polls: Гласање
       graph:
-        debate_created: Дискусије 
+        debate_created: Дискусије
         visit: Посете
         level_2_user: Корисници нивоа два
         proposal_created: Предлози грађана
@@ -1574,7 +1574,7 @@ sr:
         link_url: Линк УРЛ
       feeds:
         proposals: Предлози
-        debates: Дискусије 
+        debates: Дискусије
         processes: Процеси
       new:
         header_title: Ново заглавље

@@ -125,10 +125,10 @@ sr:
         other: " који садржи појам <strong>%{search_term}</strong>"
       select_order: Наручено по
       start_debate: Започните расправу
-      title: Дискусије 
+      title: Дискусије
       section_header:
         icon_alt: Икона дискусије
-        title: Дискусије 
+        title: Дискусије
         help: Помоћ у вези дискусије
       section_footer:
         title: Помоћ у вези расправа
@@ -240,7 +240,7 @@ sr:
       administration: Администрација
       available_locales: Доступни језици
       collaborative_legislation: Заједнички закон
-      debates: Дискусије 
+      debates: Дискусије
       locale: "Језик:"
       logo: ЦОНСУЛ лого
       management: Управљање
@@ -547,7 +547,7 @@ sr:
       access_community: Приступите заједници
       latest_activity: "Најновија активност заједнице: %{at}"
       participants: Учесници
-      debates: Дискусије 
+      debates: Дискусије
       comments: Коментари
       latest_comments: Најновија порука
     messages:
@@ -811,7 +811,7 @@ sr:
   stats:
     index:
       visits: Посете
-      debates: Дискусије 
+      debates: Дискусије
       proposals: Предлози
       comments: Коментари
       proposal_votes: Гласајте предлог
@@ -845,7 +845,7 @@ sr:
       deleted_budget_investment: Овај инвестициони пројект је обрисан
       proposals: Предлози
       proposals_status: Статус
-      debates: Дискусије 
+      debates: Дискусије
       budget_investments: Буџетске инвестиције
       comments: Коментари
       actions: Радње
@@ -856,7 +856,7 @@ sr:
           other: "%{count} коментара"
         debates:
           one: '%{count} Расправа'
-          few: "%{count} Дискусије "
+          few: "%{count} Дискусије"
           other: "%{count} Расправа"
         proposals:
           one: 1 Предлог

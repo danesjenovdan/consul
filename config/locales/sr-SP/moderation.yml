@@ -40,12 +40,12 @@ sr:
         orders:
           created_at: Најновије
           flags: Највише означено
-        title: Дискусије 
+        title: Дискусије
     header:
       title: Модерирање
     menu:
       flagged_comments: Коментари
-      flagged_debates: Дискусије 
+      flagged_debates: Дискусије
       flagged_investments: Буџетске инвестиције
       proposals: Предлози
       proposal_notifications: Обавештења о предлозима
