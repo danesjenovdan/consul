@@ -36,8 +36,8 @@ sr:
         other: "Komentari"
       debate:
         one: "Расправа"
-        few: "Расправе"
-        other: "Расправе"
+        few: "Дискусије "
+        other: "Дискусије "
       tag:
         one: "Ознака"
         few: "Ознаке"

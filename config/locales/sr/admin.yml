@@ -418,7 +418,7 @@ sr:
       index:
         id: ИД
         author: Аутор
-        title: Расправе
+        title: Дискусије 
         no_debates: Нема расправа.
     hidden_debates:
       index:
@@ -427,7 +427,7 @@ sr:
           all: Све
           with_confirmed_hide: Потврђено
           without_confirmed_hide: Необрађено
-        title: Сакривене расправе
+        title: Сакривене дискусије
         no_hidden_debates: Нема сакривених расправа.
     documents:
       new:
@@ -641,7 +641,7 @@ sr:
       budgets: Партиципативни буџети
       geozones: Управљати геозонама
       hidden_comments: Сакривени коментари
-      hidden_debates: Сакривене расправе
+      hidden_debates: Сакривене дискусије
       hidden_proposals: Сакривени предлози
       hidden_budget_investments: Сакривене буџетске инвестиције
       hidden_proposal_notifications: Сакривена обавештења о предлогу
@@ -674,7 +674,7 @@ sr:
         information_texts: Текстови са прилагођеним информацијама
         information_texts_menu:
           basic: "Основно прилагођавање"
-          debates: "Расправе"
+          debates: "Дискусије "
           community: "Заједница"
           proposals: "Предлози"
           polls: "Анкете"
@@ -696,7 +696,7 @@ sr:
       dashboard: Контролна табла за предлоге
       administrator_tasks: Захтевани ресурси
       dashboard_actions: Ресурси и радње
-      debates: "Расправе"
+      debates: "Дискусије "
       comments: "Коментари"
       local_census_records: Управљање локалним пописом
     administrators:
@@ -1286,7 +1286,7 @@ sr:
         placeholder: Тражите предлоге по наслову, коду, опису или питању
       debate_search:
         button: Тражите
-        placeholder: Тражите расправе по наслову или опису
+        placeholder: Тражите дискусије по наслову или опису
       user_search:
         button: Тражите
         placeholder: Тражи корисника по имену или емаилу
@@ -1376,7 +1376,7 @@ sr:
           comment_votes: Коментаришите видео запис
           comments: Коментари
           debate_votes: Гласови расправа
-          debates: Расправе
+          debates: Дискусије 
           proposal_votes: Гласови предлога
           proposals: Предлози
           budgets: Отворени буџети
@@ -1396,7 +1396,7 @@ sr:
         incomplete_verifications: Доврши потврђивање
         polls: Гласање
       graph:
-        debate_created: Расправе
+        debate_created: Дискусије 
         visit: Посете
         level_2_user: Корисници нивоа два
         proposal_created: Предлози грађана
@@ -1565,7 +1565,7 @@ sr:
         link_url: Линк УРЛ
       feeds:
         proposals: Предлози
-        debates: Расправе
+        debates: Дискусије 
         processes: Процеси
       new:
         header_title: Ново заглавље

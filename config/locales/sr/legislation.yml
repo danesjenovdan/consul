@@ -113,7 +113,7 @@ sr:
         organizations: Организацијама није дозвољено да учествују у дебатама
         unauthenticated: Морате %{signin} или %{signup} да бисте наставили.
         verified_only: Само потврђени корисници могу учествовати, %{verify_account}.
-        debate_phase_not_open: Фаза расправе се завршила и одговори се више не прихватају
+        debate_phase_not_open: Фаза дискусије се завршила и одговори се више не прихватају
     shared:
       share: Подели
       share_comment: Коментаришите на %{version_name} од нацрта процеса %{process_name}
