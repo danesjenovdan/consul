@@ -34,18 +34,18 @@ sr:
         headers:
           debate: Расправа
           moderate: Модерирајте
-        hide_debates: Сакријте расправе
+        hide_debates: Сакријте дискусије
         ignore_flags: Означи као прегледано
         order: Наруџбина
         orders:
           created_at: Најновије
           flags: Највише означено
-        title: Расправе
+        title: Дискусије
     header:
       title: Модерирање
     menu:
       flagged_comments: Коментари
-      flagged_debates: Расправе
+      flagged_debates: Дискусије
       flagged_investments: Буџетске инвестиције
       proposals: Предлози
       proposal_notifications: Обавештења о предлозима
@@ -114,4 +114,4 @@ sr:
         search: Тражите
         search_placeholder: емаил или име корисника
         title: Блокирајте кориснике
-      notice_hide: Корисник је блокиран. Све корисникове расправе и коментару су сакривени.
+      notice_hide: Корисник је блокиран. Све корисникове дискусије и коментару су сакривени.

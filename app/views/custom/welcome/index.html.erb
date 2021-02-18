@@ -4,7 +4,7 @@
   <%= render "shared/canonical", href: root_url %>
 <% end %>
 
-<%= render "shared/banner" %>
+<%= render Shared::BannerComponent.new("homepage") %>
 
 <% provide :social_media_meta_tags do %>
   <%= render "shared/social_media_meta_tags",
@@ -14,7 +14,7 @@
 <%= render "header", header: @header %>
 
 <main>
-  <div class="backgrounded">
+  <div class="backgrounded round-city">
     <div class="row">
       <h1>ТВОЈЕ ИДЕЈЕ МЕЊАЈУ ГРАД.</h1>
       <a class="customest-button" href="/users/sign_in"></a>

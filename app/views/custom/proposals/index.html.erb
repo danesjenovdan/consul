@@ -59,7 +59,7 @@
   <div class="row">
     <div id="proposals" class="proposals-list small-12 medium-8 column">
 
-      <%= render "shared/banner" %>
+    <%= render Shared::BannerComponent.new("proposals") %>
 
       <% if show_featured_proposals? %>
         <div id="featured-proposals" class="row featured-proposals">
@@ -91,8 +91,7 @@
       <% end %>
 
       <% unless params[:retired].present? || params[:selected].present? %>
-        <%= render "shared/advanced_search",
-                   search_path: proposals_path(page: 1) %>
+        <%= render Shared::AdvancedSearchComponent.new %>
       <% end %>
 
       <% unless params[:selected].present? %>

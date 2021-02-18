@@ -87,7 +87,7 @@ module ProposalsHelper
       if params[:selected].present?
         "small-12 medium-9 column"
       else
-        "small-12 medium-5 large-6 column"
+        "small-12 medium-5 large-5 column"
       end
     else
       if params[:selected].present?
