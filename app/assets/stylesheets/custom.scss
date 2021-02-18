@@ -381,6 +381,7 @@ button,
     padding: 25px;
     border-radius: 30px;
     background-color: rgba(74, 80, 185, 0.8);
+    color: white;
 
     .votes {
         border-left: none;
@@ -429,6 +430,19 @@ button,
             }
         }
     }
+}
+
+.float-right-medium {
+    a {
+        color: #ffffff;
+    };
+    @include breakpoint(medium) {
+      float: right !important;
+    }
+  }
+
+.input-group-field::placeholder {
+    color: black !important;
 }
 
 #girl {
