@@ -40,8 +40,10 @@
     },
     renderAnnotationComments: function(event) {
       if (event.offset) {
+        var default_top = $(".calc-comments").offset().top + $(".calc-comments .draft-panel").outerHeight();
+
         $("#comments-box").css({
-          top: event.offset - $(".calc-comments").offset().top
+          top: event.offset - default_top
         });
       }
       if (App.LegislationAnnotatable.isMobile()) {
@@ -109,7 +111,7 @@
         });
         if ($("[data-legislation-open-phase]").data("legislation-open-phase") !== false) {
           App.LegislationAnnotatable.highlight("#7fff9a");
-          $("#comments-box textarea").focus();
+          $("#comments-box textarea").trigger("focus");
           $("#new_legislation_annotation").on("ajax:complete", function(e, data) {
             if (data.status === 200) {
               App.LegislationAnnotatable.remove_highlight();
