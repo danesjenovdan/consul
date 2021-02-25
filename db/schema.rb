@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200618132416) do
+ActiveRecord::Schema.define(version: 2021_01_23_100638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -271,8 +271,8 @@ ActiveRecord::Schema.define(version: 20200618132416) do
     t.datetime "confirmed_hide_at"
     t.datetime "ignored_flag_at"
     t.integer "flags_count", default: 0
-    t.string "status"
     t.integer "original_heading_id"
+    t.string "status"
     t.text "q1"
     t.text "q2"
     t.text "q3"

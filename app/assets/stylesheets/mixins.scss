@@ -142,7 +142,7 @@
 }
 
 %font-icon {
-  @extend %fa-icon;
+  @extend %fa-icon !optional;
   font-family: "Font Awesome 5 Free";
   margin-right: rem-calc(4);
   vertical-align: middle;
@@ -226,7 +226,7 @@
 @mixin header-font-size($heading-tag) {
   @each $size, $headers in $header-styles {
     @include breakpoint($size) {
-      font-size: rem-calc(map-get(map-get($headers, $heading-tag), font-size));
+      font-size: 23;
     }
   }
 }
