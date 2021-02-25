@@ -1043,6 +1043,9 @@ footer {
 
 .tags {
   display: inline-block;
+  li {
+    display: inline;
+  }
 }
 
 .tags a,
