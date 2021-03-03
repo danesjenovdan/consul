@@ -2794,6 +2794,25 @@ table {
 // 24. Homepage
 // ------------
 
+ @mixin side-menu-and-content {
+    display: flex;
+  
+    > :first-child {
+      flex: 25%;
+      min-width: 250px;
+  
+      > :first-child {
+        height: 100%;
+      }
+    }
+  
+    > :last-child {
+      flex: 75%;
+      overflow-x: auto;
+      padding: $line-height !important;
+    }
+  }
+  
 .home-page {
 
   a {

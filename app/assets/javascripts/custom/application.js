@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
 //= require jquery-ui/widgets/datepicker
 //= require jquery-ui/i18n/datepicker-ar
@@ -62,6 +62,7 @@
 //= require moderator_legislation_proposals
 //= require gettext
 //= require annotator
+//= require jquery.amsify.suggestags
 //= require tags
 //= require users
 //= require votes
@@ -111,8 +112,8 @@
 //= require columns_selector
 //= require budget_edit_associations
 //= require datepicker
-//= require custom/tags
-//= require custom/equalizer
+//= require_tree ./sdg
+//= require_tree ./sdg_management
 
 var initialize_modules = function() {
   "use strict";
@@ -141,7 +142,6 @@ var initialize_modules = function() {
   App.MarkdownEditor.initialize();
   App.HTMLEditor.initialize();
   App.LegislationAdmin.initialize();
-  //App.LegislationAllegations.initialize();
   App.Legislation.initialize();
   if ($(".legislation-annotatable").length) {
     App.LegislationAnnotatable.initialize();
@@ -165,6 +165,9 @@ var initialize_modules = function() {
     App.ColumnsSelector.initialize();
   }
   App.BudgetEditAssociations.initialize();
+  App.Datepicker.initialize();
+  //App.SDGRelatedListSelector.initialize();
+  //App.SDGManagementRelationSearch.initialize();
 };
 
 var destroy_non_idempotent_modules = function() {
@@ -178,14 +181,5 @@ var destroy_non_idempotent_modules = function() {
   App.SocialShare.destroy();
 };
 
-// $(document).on("turbolinks:load", initialize_modules);
-// $(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
-
-$(function(){
-  $(document).ready(initialize_modules);
-  $(document).on('page:load', initialize_modules);
-  $(document).on('ajax:complete', initialize_modules);
-
-  $(document).on("turbolinks:load", initialize_modules);
-  $(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
-});
+$(document).on("turbolinks:load", initialize_modules);
+$(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
