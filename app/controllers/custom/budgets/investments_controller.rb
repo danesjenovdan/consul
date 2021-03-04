@@ -53,19 +53,7 @@ module Budgets
     end
 
     def update
-      @investment.update(title: params[:budget_investment][:title],
-                         q1: params[:budget_investment][:q1],
-                         q2: params[:budget_investment][:q2],
-                         q3: params[:budget_investment][:q3],
-                         q4: params[:budget_investment][:q4],
-                         q5: params[:budget_investment][:q5],
-                        # q6: params[:budget_investment][:q6],
-                        #  Below questions are ignored in MB.
-                        #  q7: params[:budget_investment][:q7],
-                         price: params[:budget_investment][:price],
-                         map_location_attributes: {latitude: params[:budget_investment][:map_location_attributes][:latitude],
-                                                   longitude: params[:budget_investment][:map_location_attributes][:longitude],
-                                                   zoom: params[:budget_investment][:map_location_attributes][:zoom]})
+      @investment.update(investment_params)
       
       redirect_to budget_investment_path(@budget, @investment),
                   notice: t('custom.titles.investment_updated')

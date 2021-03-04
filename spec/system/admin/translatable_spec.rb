@@ -1,9 +1,8 @@
 require "rails_helper"
 
-describe "Admin edit translatable records" do
+describe "Admin edit translatable records", :admin do
   before do
     translatable.update!(attributes)
-    login_as(create(:administrator).user)
   end
 
   let(:fields) { translatable.translated_attribute_names }
@@ -493,6 +492,7 @@ describe "Admin edit translatable records" do
       select "Français", from: :add_language
 
       expect_to_have_language_selected "Français"
+      expect(page).to have_select :add_language, selected: "Add language"
       expect(page).to have_field "contents_content_#{content.key}values_value_fr"
     end
 

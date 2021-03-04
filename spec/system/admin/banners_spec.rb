@@ -1,10 +1,6 @@
 require "rails_helper"
 
-describe "Admin banners magement" do
-  before do
-    login_as(create(:administrator).user)
-  end
-
+describe "Admin banners magement", :admin do
   context "Index" do
     before do
       create(:banner, title: "Banner number one",
@@ -73,7 +69,7 @@ describe "Admin banners magement" do
   end
 
   scenario "Publish a banner" do
-    section = create(:web_section, name: "proposals")
+    section = WebSection.find_by(name: "proposals")
 
     visit admin_root_path
 
@@ -92,7 +88,7 @@ describe "Admin banners magement" do
     fill_in "post_ended_at", with: next_week.strftime("%d/%m/%Y")
     fill_in "banner_background_color", with: "#850000"
     fill_in "banner_font_color", with: "#ffb2b2"
-    check "banner_web_section_ids_#{section.id}"
+    check section.name.titleize
 
     click_button "Save changes"
 
@@ -114,14 +110,9 @@ describe "Admin banners magement" do
 
     fill_in "Title", with: "En Français"
     fill_in "Description", with: "Link en Français"
-
     fill_in "Link", with: "https://www.url.com"
-
-    last_week = Time.current - 1.week
-    next_week = Time.current + 1.week
-
-    fill_in "Post started at", with: last_week.strftime("%d/%m/%Y")
-    fill_in "Post ended at", with: next_week.strftime("%d/%m/%Y")
+    fill_in "Post started at", with: Time.current - 1.week
+    fill_in "Post ended at", with: Time.current + 1.week
 
     click_button "Save changes"
     click_link "Edit banner"
@@ -177,45 +168,6 @@ describe "Admin banners magement" do
 
     expect(page).not_to have_content "Hello"
     expect(page).not_to have_content "Wrong text"
-  end
-
-  scenario "when change date field on edit banner page display expected format", :js do
-    banner = create(:banner)
-    visit edit_admin_banner_path(banner)
-
-    fill_in "Post started at", with: "20/02/2002"
-    find_field("Post started at").click
-    within(".ui-datepicker") { click_link "22" }
-
-    expect(page).to have_field "Post started at", with: "22/02/2002"
-  end
-
-  scenario "when date picker is opened and click on browser history back datepicker is closed", :js do
-    banner = create(:banner)
-    visit admin_banners_path(banner)
-    click_link "Edit banner"
-    find_field("Post started at").click
-
-    expect(page).to have_css "#ui-datepicker-div"
-
-    go_back
-
-    expect(page).to have_content("Banners")
-    expect(page).not_to have_css "#ui-datepicker-div"
-  end
-
-  scenario "date picker works after using the browser back button", :js do
-    banner = create(:banner)
-
-    visit edit_admin_banner_path(banner)
-    click_link "Manage banners"
-
-    expect(page).to have_link "Edit banner"
-
-    go_back
-    find_field("Post started at").click
-
-    expect(page).to have_css "#ui-datepicker-div"
   end
 
   scenario "Delete a banner" do
