@@ -44,7 +44,6 @@
 //= require turbolinks
 //= require turbolinks_anchors
 //= require ckeditor/loader
-//= require_directory ./ckeditor
 //= require social-share-button
 //= require initial
 //= require ahoy
@@ -112,8 +111,6 @@
 //= require columns_selector
 //= require budget_edit_associations
 //= require datepicker
-//= require_tree ./sdg
-//= require_tree ./sdg_management
 
 var initialize_modules = function() {
   "use strict";
