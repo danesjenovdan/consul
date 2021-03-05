@@ -1,22 +1,12 @@
-<%= render "admin/shared/globalize_locales", resource: @phase %>
+<%= render "shared/globalize_locales", resource: @phase %>
 
 <%= translatable_form_for [:admin, @phase.budget, @phase] do |f| %>
 
   <div class="small-12 medium-6 column">
-    <%= f.label :starts_at, t("admin.budget_phases.edit.start_date") %>
-    <%= f.text_field :starts_at,
-                      value: format_date_for_calendar_form(@phase.starts_at),
-                      class: "js-calendar-full",
-                      id: "start_date",
-                      label: false %>
+    <%= f.date_field :starts_at, id: "start_date" %>
   </div>
   <div class="small-12 medium-6 column">
-    <%= f.label :ends_at, t("admin.budget_phases.edit.end_date") %>
-    <%= f.text_field :ends_at,
-                      value: format_date_for_calendar_form(@phase.ends_at),
-                      class: "js-calendar-full",
-                      id: "end_date",
-                      label: false %>
+    <%= f.date_field :ends_at, id: "end_date" %>
   </div>
 
   <%= f.translatable_fields do |translations_form| %>

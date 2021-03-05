@@ -22,6 +22,7 @@ $sidebar-hover:  #25597c;
 $sidebar-active: #f4fcd0;
 
 .admin {
+  @include admin-layout;
 
   h2 {
     font-weight: 100;
@@ -61,10 +62,7 @@ $sidebar-active: #f4fcd0;
     border-bottom: 1px solid #eee;
     color: #000;
     height: auto;
-
-    @include breakpoint(medium) {
-      box-shadow: 0 2px 2px #eee;
-    }
+    padding-top: $line-height / 2;
 
     @include breakpoint(small only) {
 
@@ -137,7 +135,6 @@ $sidebar-active: #f4fcd0;
 
     @include breakpoint(medium) {
       height: auto !important;
-      padding-top: $line-height / 2;
     }
 
     a {
@@ -224,6 +221,11 @@ $sidebar-active: #f4fcd0;
       label {
         color: #fff;
       }
+
+      a {
+        color: inherit;
+        white-space: nowrap;
+      }
     }
 
     .break {
@@ -234,16 +236,8 @@ $sidebar-active: #f4fcd0;
       table-layout: fixed;
     }
 
-    [type="submit"] ~ a,
-    a ~ a {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: $line-height / 2;
-
-      @include breakpoint(medium) {
-        margin-left: $line-height / 2;
-        margin-top: 0;
-      }
+    [type="submit"] ~ a {
+      margin-left: $line-height / 2;
     }
   }
 
@@ -287,7 +281,6 @@ $sidebar-active: #f4fcd0;
   }
 
   .admin-content {
-
     .proposal-form {
       padding-top: 0;
     }
@@ -304,11 +297,6 @@ $sidebar-active: #f4fcd0;
 
 .for-print-only {
   display: none;
-}
-
-.admin-content {
-  overflow: scroll;
-  padding: $line-height !important;
 }
 
 @include breakpoint(medium) {
@@ -367,100 +355,60 @@ $sidebar-active: #f4fcd0;
   color: $text-medium;
 }
 
-// 02. Sidebar
-// -----------
+.icon-sortable {
+  font-family: "Font Awesome 5 Free";
+  font-size: $small-font-size;
+  position: relative;
 
-.admin-sidebar {
-  background: $sidebar;
-  background: linear-gradient(to bottom, #245b80 0%, #488fb5 100%);
-  border-right: 1px solid $border;
-
-  @include breakpoint(medium) {
-    min-height: rem-calc(1100);
+  &::before,
+  &::after {
+    left: 6px;
+    opacity: 0.5;
+    position: absolute;
   }
 
-  ul {
-    list-style-type: none;
-    margin-bottom: 0;
-    margin-left: 0;
-    padding: 0;
-
-    [class^="icon-"] {
-      color: #fff;
-      display: inline-block;
-      font-size: rem-calc(24);
-      line-height: $line-height;
-      padding: $line-height / 2 $line-height / 4;
-      padding-left: 0;
-      vertical-align: middle;
-    }
+  &::before {
+    content: "\f0d8";
+    bottom: 0;
   }
 
-  li {
-    margin: 0;
-    outline: 0;
+  &::after {
+    content: "\f0d7";
+    top: 0;
+  }
 
-    ul {
-      margin-left: $line-height / 1.5;
-      border-left: 1px solid $sidebar-hover;
-      padding-left: $line-height / 2;
-    }
+  &.asc {
 
-    &.is-active a {
-      background: $sidebar-hover;
-      border-left: 2px solid $sidebar-active;
-      font-weight: bold;
+    &::after {
+      opacity: 1;
     }
   }
 
-  li a {
-    color: #fff;
-    display: block;
-    line-height: rem-calc(48);
-    padding-left: rem-calc(12);
-    vertical-align: top;
+  &.desc {
 
-    &:hover {
-      background: $sidebar-hover;
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-
-  .is-accordion-submenu-parent {
-
-    > a::after {
-      border: 0;
-      content: '\61' !important;
-      font-family: "icons" !important;
-      height: auto;
-      position: absolute !important;
-      right: 30px;
-      top: 6px !important;
-    }
-  }
-
-  .submenu {
-    border-bottom: 0;
-    margin-left: $line-height;
-
-    li:first-child {
-      padding-top: $line-height / 2;
-    }
-
-    li:last-child {
-      padding-bottom: $line-height / 2;
-    }
-
-    a {
-      font-weight: normal;
-    }
-
-    .is-active {
-      border-bottom: 0;
+    &::before {
+      opacity: 1;
     }
   }
 }
+
+code {
+  word-break: break-all;
+}
+
+.content-type {
+  white-space: nowrap;
+  padding-right: $line-height;
+
+  label {
+    margin-left: 0 !important;
+  }
+}
+
+// 02. Sidebar
+// -----------
+
+// See admin/menu.scss
 
 // 03. List elements
 // -----------------
@@ -602,7 +550,7 @@ $sidebar-active: #f4fcd0;
   border-radius: rem-calc(3);
   font-size: rem-calc(16);
   font-weight: normal;
-  margin: $line-height;
+  margin-bottom: $line-height;
   padding: $line-height / 2;
 
   strong {
@@ -663,6 +611,16 @@ $sidebar-active: #f4fcd0;
     &:nth-child(odd) td:last-child {
       background: $success-bg;
     }
+  }
+}
+
+.admin-content > header {
+  align-items: flex-start;
+  display: flex;
+
+  a {
+    @include hollow-button;
+    margin-left: auto;
   }
 }
 
@@ -1113,7 +1071,7 @@ table {
     }
 
     .map-icon::after {
-      content: '';
+      content: "";
       width: 14px;
       height: 14px;
       margin: 8px 0 0 8px;
@@ -1158,6 +1116,11 @@ table {
   .filter {
     display: inline-block;
     margin: 0 $line-height / 2;
+
+    label {
+      font-weight: normal;
+      margin: 0;
+    }
   }
 
   .button {
@@ -1173,7 +1136,7 @@ table {
 
   &.enabled::before,
   &.disabled::before {
-    font-family: 'icons';
+    font-family: "icons";
     left: 0;
     position: absolute;
   }
@@ -1183,7 +1146,7 @@ table {
 
     &::before {
       color: $check;
-      content: '\6c';
+      content: "\6c";
     }
   }
 
@@ -1192,8 +1155,54 @@ table {
 
     &::before {
       color: #000;
-      content: '\76';
+      content: "\76";
     }
+  }
+}
+
+.columns-selector {
+
+  span[class^="icon-"] {
+    vertical-align: middle;
+  }
+
+  &[aria-expanded='false'] {
+    @include hollow-button;
+
+    + .columns-selector-wrapper {
+      display: none;
+    }
+  }
+
+  &[aria-expanded='true'] {
+    @include regular-button;
+  }
+}
+
+.columns-selector-wrapper {
+  background: $light-gray;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+
+  .column-selector-item {
+    display: inline-block;
+
+    &.hidden {
+      display: none;
+    }
+
+    label {
+      font-size: 17px;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.column-selectable {
+
+  .hidden {
+    display: none;
   }
 }
 

@@ -6,21 +6,20 @@ class Admin::ManagersController < Admin::BaseController
   end
 
   def search
-    @users = User.search(params[:name_or_email])
+    @users = User.search(params[:search])
                  .includes(:manager)
                  .page(params[:page])
-                 .for_render
   end
 
   def create
     @manager.user_id = params[:user_id]
-    @manager.save
+    @manager.save!
 
     redirect_to admin_managers_path
   end
 
   def destroy
-    @manager.destroy
+    @manager.destroy!
     redirect_to admin_managers_path
   end
 end

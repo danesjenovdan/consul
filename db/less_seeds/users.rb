@@ -66,7 +66,7 @@ section "Creating Users" do
   admin = create_user('consul@danesjenovdan.si', 'admin')
   admin.create_administrator
   admin.update(residence_verified_at: Time.current,
-               confirmed_phone: Faker::PhoneNumber.phone_number, document_type: "1",
+               confirmed_phone: '1234567890', document_type: "1",
                verified_at: Time.current, document_number: unique_document_number)
 
   # moderator = create_user('consul+mod@danesjenovdan.si', 'moderator')
@@ -78,7 +78,7 @@ section "Creating Users" do
   manager = create_user('consul+manager@danesjenovdan.si', 'manager')
   manager.create_manager
   manager.update(residence_verified_at: Time.current,
-                 confirmed_phone: Faker::PhoneNumber.phone_number, document_type: "1",
+                 confirmed_phone: '1234567890', document_type: "1",
                  verified_at: Time.current, document_number: unique_document_number)
 
   # valuator = create_user('valuator@consul.dev', 'valuator')

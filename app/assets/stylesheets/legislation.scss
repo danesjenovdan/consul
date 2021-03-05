@@ -71,8 +71,13 @@
 .legislation-text {
   margin-bottom: 1rem;
 
+  > * {
+    @include grid-column-gutter;
+  }
+
   h3 a {
     color: $black;
+    margin-bottom: 1rem;
   }
 }
 
@@ -83,7 +88,7 @@
 }
 
 .legislation-calendar {
-  background: #e5ecf2;
+  background: $highlight;
   padding-top: 1rem;
 
   h4 {

@@ -1,5 +1,8 @@
 require_dependency Rails.root.join('app', 'models', 'abilities', 'common').to_s
 
+# TODO this was copied from the original, it might need tweaking
+# to allow users to edit their submitted proposals
+
 module Abilities
   class Common
     include CanCan::Ability
@@ -18,6 +21,26 @@ module Abilities
       can :update, Proposal do |proposal|
         proposal.editable_by?(user)
       end
+      can :publish, Proposal do |proposal|
+        proposal.draft? && proposal.author.id == user.id && !proposal.retired?
+      end
+      can :dashboard, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+      can :manage_polls, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+      can :manage_mailing, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+      can :manage_poster, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+
+      can :results, Poll do |poll|
+        poll.related&.author&.id == user.id
+      end
+
       can [:retire_form, :retire], Proposal, author_id: user.id
 
       can :read, Legislation::Proposal
@@ -28,13 +51,13 @@ module Abilities
 
       can :create, Comment
       can :create, Debate
-      can :create, Proposal
+      can [:create, :created], Proposal
       can :create, Legislation::Proposal
 
       can :suggest, Debate
       can :suggest, Proposal
       can :suggest, Legislation::Proposal
-      can :suggest, ActsAsTaggableOn::Tag
+      can :suggest, Tag
 
       can [:flag, :unflag], Comment
       cannot [:flag, :unflag], Comment, user_id: user.id
@@ -53,7 +76,9 @@ module Abilities
 
       can [:create, :destroy], Follow
 
-      can [:destroy], Document, documentable: { author_id: user.id }
+      can [:destroy], Document do |document|
+        document.documentable&.author_id == user.id
+      end
 
       can [:destroy], Image, imageable: { author_id: user.id }
 
@@ -65,18 +90,16 @@ module Abilities
       end
 
       if user.level_two_or_three_verified?
-        can :vote, Proposal
+        can :vote, Proposal, &:published?
         can :vote_featured, Proposal
-        can :vote, SpendingProposal
-        can :create, SpendingProposal
 
         can :vote, Legislation::Proposal
         can :vote_featured, Legislation::Proposal
         can :create, Legislation::Answer
 
         can :create, Budget::Investment,               budget: { phase: "accepting" }
-        can :edit, Budget::Investment,                 budget: { phase: "accepting" }
-        can :update, Budget::Investment,               budget: { phase: "accepting" }
+        can :edit, Budget::Investment,                 budget: { phase: "accepting" }, author_id: user.id
+        can :update, Budget::Investment,               budget: { phase: "accepting" }, author_id: user.id
         can :suggest, Budget::Investment,              budget: { phase: "accepting" }
         can :destroy, Budget::Investment,              budget: { phase: ["accepting", "reviewing"] }, author_id: user.id
         can :vote, Budget::Investment,                 budget: { phase: "selecting" }
@@ -86,6 +109,7 @@ module Abilities
 
         can :create, DirectMessage
         can :show, DirectMessage, sender_id: user.id
+
         can :answer, Poll do |poll|
           poll.answerable_by?(user)
         end

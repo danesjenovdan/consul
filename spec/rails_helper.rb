@@ -1,19 +1,23 @@
-ENV['RAILS_ENV'] ||= 'test'
-if ENV['TRAVIS']
-  require 'coveralls'
-  Coveralls.wear!('rails')
+ENV["RAILS_ENV"] ||= "test"
+if ENV["COVERALLS"]
+  require "coveralls"
+  Coveralls.wear!("rails")
 end
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path("../../config/environment", __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 
-require 'rspec/rails'
-require 'spec_helper'
-require 'capybara/rails'
-require 'capybara/rspec'
-require 'selenium/webdriver'
+require "rspec/rails"
+require "spec_helper"
+require "capybara/rails"
+require "capybara/rspec"
+require "selenium/webdriver"
+require "view_component/test_helpers"
+
+RSpec.configure do |config|
+  config.include ViewComponent::TestHelpers, type: :component
+end
 
 Rails.application.load_tasks if Rake::Task.tasks.empty?
-I18n.default_locale = :en
 
 include Warden::Test::Helpers
 Warden.test_mode!
@@ -27,13 +31,11 @@ RSpec.configure do |config|
   end
 end
 
-Capybara.register_driver :chrome do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
-end
-
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w(headless no-sandbox window-size=1200,600) }
+    "goog:chromeOptions" => {
+      args: %W[headless no-sandbox window-size=1200,600 proxy-server=127.0.0.1:#{Capybara::Webmock.port_number}]
+    }
   )
 
   Capybara::Selenium::Driver.new(
@@ -43,8 +45,8 @@ Capybara.register_driver :headless_chrome do |app|
   )
 end
 
-Capybara.javascript_driver = :headless_chrome
-
 Capybara.exact = true
+Capybara.enable_aria_label = true
+Capybara.disable_animation = true
 
 OmniAuth.config.test_mode = true

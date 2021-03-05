@@ -1,4 +1,4 @@
-class AddExtraQuestionsToBudgetForm < ActiveRecord::Migration
+class AddExtraQuestionsToBudgetForm < ActiveRecord::Migration[4.2]
   def change
     add_column :budget_investments, :q1, :text, null: true
     add_column :budget_investments, :q2, :text, null: true

@@ -102,6 +102,7 @@ it:
       alert:
         unverified_user: L'utente non è verificato
       create: Crea un investimento di bilancio
+      edit: Modifica budget investimento
       filters:
         heading: Concetto
         unfeasible: Il progetto non è realizzabile
@@ -146,5 +147,4 @@ it:
         submit: Manda inviti
         title: Manda inviti
       create:
-        success_html: <strong>%{count} inviti</strong> sono stati inviati.
         title: Manda inviti

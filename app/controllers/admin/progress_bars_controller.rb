@@ -26,15 +26,15 @@ class Admin::ProgressBarsController < Admin::BaseController
 
   def update
     if @progress_bar.update(progress_bar_params)
-      redirect_to progress_bars_index, notice: t('admin.progress_bars.update.notice')
+      redirect_to progress_bars_index, notice: t("admin.progress_bars.update.notice")
     else
       render :edit
     end
   end
 
   def destroy
-    @progress_bar.destroy
-    redirect_to progress_bars_index, notice: t('admin.progress_bars.delete.notice')
+    @progress_bar.destroy!
+    redirect_to progress_bars_index, notice: t("admin.progress_bars.delete.notice")
   end
 
   private
@@ -64,6 +64,6 @@ class Admin::ProgressBarsController < Admin::BaseController
     end
 
     def progress_bars_index
-      polymorphic_path([:admin, *resource_hierarchy_for(@progressable), ProgressBar.new])
+      admin_polymorphic_path(@progressable.progress_bars.new)
     end
 end

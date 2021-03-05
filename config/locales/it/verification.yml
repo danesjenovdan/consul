@@ -50,7 +50,6 @@ it:
         flash:
           success: Inserisci il codice di conferma inviato tramite SMS
       edit:
-        confirmation_code: Inserisci il codice ricevuto sul tuo telefonino
         resend_sms_link: Cliccare qui per richiedere un nuovo codice
         resend_sms_text: Non hai ricevuto un SMS con il codice di conferma?
         submit_button: Inviare

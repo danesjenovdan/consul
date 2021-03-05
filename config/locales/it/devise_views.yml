@@ -6,7 +6,6 @@ it:
         submit: Inviare nuovamente le istruzioni
         title: Inviare nuovamente le istruzioni di conferma
       show:
-        instructions_html: Stiamo confermando l'account con email %{email}
         new_password_confirmation_label: Reintrodurre la password
         new_password_label: Nuova password
         please_set_password: Si prega di scegliere la nuova pasword (che permetterà di accedere con l'email di cui sopra)
@@ -116,7 +115,7 @@ it:
           redeemable_code: Codice di verifica ricevuto via e-mail (opzionale)
           submit: Registrarsi
           terms: Registrandoti accetti %{terms}
-          terms_link: termini di utilizzo.
+          terms_link: termini e condizioni d'uso
           terms_title: Registrandoti accetti i termini e le condizioni d'uso
           title: Registrarsi
           username_is_available: Nome utente disponibile
