@@ -4,7 +4,7 @@
             new_admin_budget_path,
             class: "button float-right" %>
 
-<%= render 'shared/filter_subnav', i18n_namespace: "admin.budgets.index" %>
+<%= render "shared/filter_subnav", i18n_namespace: "admin.budgets.index" %>
 
 <% if @budgets.any? %>
   <h3><%= page_entries_info @budgets %></h3>
@@ -14,30 +14,20 @@
       <tr>
         <th><%= t("admin.budgets.index.table_name") %></th>
         <th><%= t("admin.budgets.index.table_phase") %></th>
-        <th><%= t("admin.budgets.index.table_investments") %></th>
-        <th><%= t("admin.budgets.index.table_edit_groups") %></th>
-        <th><%= t("admin.budgets.index.table_edit_budget") %></th>
+        <th><%= t("admin.actions.actions") %></th>
       </tr>
     </thead>
     <tbody>
       <% @budgets.each do |budget| %>
         <tr id="<%= dom_id(budget) %>" class="budget">
           <td>
-            <%= link_to budget.name, admin_budget_path(budget) %>
+            <%= budget.name %>
           </td>
           <td class="small">
             <%= t("budgets.phase.#{budget.phase}") %>
           </td>
           <td>
-            <%= link_to t("admin.budgets.index.budget_investments"),
-                           admin_budget_budget_investments_path(budget_id: budget.id),
-                           class: "button hollow medium" %>
-          </td>
-          <td class="small">
-            <%= link_to t("admin.budgets.index.edit_groups"), admin_budget_groups_path(budget) %>
-          </td>
-          <td class="small">
-            <%= link_to t("admin.budgets.index.edit_budget"), edit_admin_budget_path(budget) %>
+            <%= render Admin::Budgets::TableActionsComponent.new(budget) %>
           </td>
         </tr>
       <% end %>

@@ -1,7 +1,7 @@
 require_dependency Rails.root.join('app', 'models', 'budget', 'heading').to_s
 
 class Budget
-  class Heading < ActiveRecord::Base
+  class Heading < ApplicationRecord
 
     translates :name, touch: true
     include Globalizable

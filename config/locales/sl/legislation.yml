@@ -4,35 +4,14 @@ sl:
       comments:
         see_all: Poglej vse
         see_complete: Poglej zaključene
-        comments_count:
-          one: "%{count} komentar"
-          two: "%{count} komentarja"
-          three: "%{count} komentarji"
-          four: "%{count} komentarji"
-          other: "%{count} komentarjev"
-        replies_count:
-          one: "%{count} odgovor"
-          two: "%{count} odgovora"
-          three: "%{count} odgovori"
-          four: "%{count} odgovori"
-          other: "%{count} odgovorov"
         cancel: Prekliči
         publish_comment: Oddaj komentar
       form:
         phase_not_open: Ta faza ni odprta
-        login_to_comment: Za komentiranje se moraš %{signin} ali %{signup}.
-        signin: vpisati
-        signup: registrirati
       index:
         title: Komentarji
         comments_about: Komentarji o
         see_in_context: Poglej v kontekstu
-        comments_count:
-          one: "%{count} komentar"
-          two: "%{count} komentarja"
-          three: "%{count} komentarji"
-          four: "%{count} komentarji"
-          other: "%{count} komentarjev"
       show:
         title: Komentar
       version_chooser:
@@ -68,10 +47,8 @@ sl:
         filter: Filtriraj
         filters:
           open: Odprti procesi
-          next: Naslednji
           past: Pretekli
         no_open_processes: Ni odprtih procesov
-        no_next_processes: Ni načrtovanih procesov
         no_past_processes: Ni preteklih procesov
         section_header:
           icon_alt: Ikona zakonodajnih procesov
@@ -86,7 +63,7 @@ sl:
       phase_not_open:
         not_open: Ta faza še ni odprta
       phase_empty:
-          empty: Nič še ni objavljeno
+        empty: Nič še ni objavljeno
       process:
         see_latest_comments: Poglej zadnje komentarje
         see_latest_comments_title: Komentarji na ta proces
@@ -107,11 +84,6 @@ sl:
       question:
         comments:
           zero: Ni komentarjev
-          one: "%{count} komentar"
-          two: "%{count} komentarja"
-          three: "%{count} komentarji"
-          four: "%{count} komentarji"
-          other: "%{count} komentarjev"
         debate: Razprava
       show:
         answer_question: Dodaj odgovor
@@ -126,7 +98,6 @@ sl:
         signup: registrirati
         unauthenticated: Za sodelovanje se moraš %{signin} ali %{signup}.
         verified_only: Le preverjeni uporabniki lahko sodelujejo, %{verify_account}.
-        verify_account: verificiraj svoj račun
         debate_phase_not_open: Faza razprave se je zaključila, novi odgovori niso več mogoči
     shared:
       share: Deli
@@ -135,4 +106,3 @@ sl:
       form:
         tags_label: "Kategorije"
       not_verified: "Za glasovanje o predlogih %{verify_account}."
-      closed: "Ta proces je zaprt in ne more sprejemati glasov."

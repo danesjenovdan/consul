@@ -1,5 +1,5 @@
-require 'i18n/exceptions'
-require 'action_view/helpers/tag_helper'
+require "i18n/exceptions"
+require "action_view/helpers/tag_helper"
 
 module ActionView
   module Helpers
@@ -7,13 +7,15 @@ module ActionView
       include TagHelper
 
       def t(key, options = {})
-        current_locale = options[:locale].present? ? options[:locale] : I18n.locale
+        current_locale = options[:locale].presence || I18n.locale
 
-        i18_content = I18nContent.by_key(key).first
-        translation = I18nContentTranslation.where(i18n_content_id: i18_content&.id,
-                                                   locale: current_locale).first&.value
+        @i18n_content_translations ||= {}
+        @i18n_content_translations[current_locale] ||= I18nContent.translations_hash(current_locale)
+
+        translation = @i18n_content_translations[current_locale][key]
+
         if translation.present?
-          translation
+          translation % options
         else
           translate(key, options)
         end

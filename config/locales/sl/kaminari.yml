@@ -2,9 +2,6 @@ sl:
   helpers:
     page_entries_info:
       entry:
-        one: Vnos
-        two: Vnosa
-        other: Vnosi
         zero: Vnososv
       more_pages:
         display_entries: Prikazujem <strong>%{first}&nbsp;-&nbsp;%{last}</strong> od <strong>%{total} %{entry_name}</strong>
@@ -24,4 +21,3 @@ sl:
       last: Zadnja
       next: Naslednja
       previous: Prejšnja
-      truncate: "&hellip;"

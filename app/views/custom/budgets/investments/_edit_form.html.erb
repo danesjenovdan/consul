@@ -4,15 +4,43 @@
   <div class="row">
 
     <div class="small-12 column">
-      <%= f.text_field :title, maxlength: SpendingProposal.title_max_length %>
+      <%= f.text_field :title, maxlength: Budget::Investment.title_max_length %>
     </div>
     <div id="js-suggest"></div>
 
     <%= f.invisible_captcha :subtitle %>
 
+    <!-- 
     <div class="ckeditor small-12 column">
-      <%= f.cktext_area :description, maxlength: SpendingProposal.description_max_length, ckeditor: { language: I18n.locale } %>
+      <%= f.cktext_area :description, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale }, value: t("custom.meta.guiding_questions").html_safe %>
     </div>
+    -->
+
+    <div class="ckeditor small-12 column">
+      <label for="q1"><%= t('activerecord.attributes.budget/investment.q1') %></label>
+      <%= f.cktext_area :q1, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    </div>
+
+    <div class="ckeditor small-12 column">
+    <label for="q2"><%= t('activerecord.attributes.budget/investment.q2') %></label>
+      <%= f.cktext_area :q2, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    </div>
+
+    <div class="ckeditor small-12 column">
+      <label for="q3"><%= t('activerecord.attributes.budget/investment.q3') %></label>
+      <%= f.cktext_area :q3, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    </div>
+
+    <div class="ckeditor small-12 column">
+      <label for="q4"><%= t('activerecord.attributes.budget/investment.q4') %></label>
+      <%= f.cktext_area :q4, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    </div>
+
+    <div class="ckeditor small-12 column">
+      <label for="q5"><%= t('activerecord.attributes.budget/investment.q5') %></label>
+      <%= f.cktext_area :q5, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+    </div>
+
     <div class="small-12 column">
       <%= f.label :price, t("budgets.investments.show.price") %>
       <%= f.number_field :price, label: '&nbsp;(€)' %>
@@ -62,7 +90,6 @@
       </div>
     <% end %>
 
-    <!-- REMOVE TAGS
     <div class="small-12 column">
       <%= f.label :tag_list, t("budgets.investments.form.tags_label") %>
       <p class="help-text hide" id="tag-list-help-text">(<%= t("budgets.investments.form.tags_instructions") %>)</p>
@@ -79,7 +106,6 @@
                        class: 'js-tag-list tag-autocomplete',
                        data: { js_url: suggest_tags_path } %>
     </div>
-    END REMOVE TAGS -->
 
     <% unless current_user.manager? %>
 
@@ -100,5 +126,7 @@
         <%= t("management.budgets.create_new_investment") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
       <% end %>
     </div>
+    
+    <div class="small-12 column" style="width: 100%; height: 180px"></div>
   </div>
 <% end %>

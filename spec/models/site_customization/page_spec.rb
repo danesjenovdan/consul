@@ -1,7 +1,9 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe SiteCustomization::Page, type: :model do
   let(:custom_page) { build(:site_customization_page) }
+
+  it_behaves_like "globalizable", :site_customization_page
 
   it "is valid" do
     expect(custom_page).to be_valid

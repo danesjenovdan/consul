@@ -53,12 +53,7 @@ module Budgets
     end
 
     def update
-      @investment.update(title: params[:budget_investment][:title],
-                         description: params[:budget_investment][:description],
-                         price: params[:budget_investment][:price],
-                         map_location_attributes: {latitude: params[:budget_investment][:map_location_attributes][:latitude],
-                                                   longitude: params[:budget_investment][:map_location_attributes][:longitude],
-                                                   zoom: params[:budget_investment][:map_location_attributes][:zoom]})
+      @investment.update(investment_params)
       
       redirect_to budget_investment_path(@budget, @investment),
                   notice: t('custom.titles.investment_updated')
@@ -80,7 +75,8 @@ module Budgets
     private
       def investment_params
         params.require(:budget_investment)
-              .permit(:title, :description, :heading_id, :tag_list, :price,
+              .permit(:title, :description, :q1, :q2, :q3, :q4, :q5, :heading_id, :tag_list, :price,
+                      # :q6, :q7, are ignored in MB
                       :organization_name, :location, :terms_of_service, :skip_map,
                       image_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
                       documents_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],

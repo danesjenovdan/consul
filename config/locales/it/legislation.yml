@@ -113,7 +113,6 @@ it:
         signup: Registrati
         unauthenticated: È necessario %{signin} o %{signup} per partecipare.
         verified_only: Possono partecipare solo gli utenti verificati, %{verify_account}.
-        verify_account: verifica il tuo account
         debate_phase_not_open: La fase di dibattito è conclusa e non è più possibile accettare risposte
     shared:
       share: Condividere
@@ -122,3 +121,32 @@ it:
       form:
         tags_label: "Categorie"
       not_verified: "Per votare le proposte %{verify_account}."
+    summary:
+      title: "Sommario"
+      votes:
+        zero: "%{count} voti"
+        one: "%{count} voto"
+        other: "%{count} voti"
+      debate_phase: "Fase di dibattito"
+      proposals_phase: "Fase di proposta"
+      allegations_phase: "Fase di commento"
+      debates:
+        zero: "Nessun dibattito"
+        one: "%{count} dibattito"
+        other: "%{count} dibattiti"
+      proposals:
+        zero: "Nessuna proposta"
+        one: "%{count} proposta"
+        other: "%{count} proposte"
+      comments:
+        zero: "Nessun commento"
+        one: "%{count} commento"
+        other: "%{count} commenti"
+      download: "Scarica sommario"
+      top_comments:
+        zero: "Nessun commento"
+        one: "%{count} commento"
+        other: "Migliori commenti"
+      most_voted_comments: "Commenti più votati"
+      no_allegation: "Non ci sono commenti"
+      process_empty: "Questo processo non aveva alcuna fase di partecipazione"
