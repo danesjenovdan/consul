@@ -40,6 +40,7 @@
 
     <% if feature?(:map) %>
       <div class="small-12 column">
+      <p> @investment.map_location</p>
         <%= render 'map_locations/form_fields',
                    form: f,
                    map_location: @investment.map_location || MapLocation.new,

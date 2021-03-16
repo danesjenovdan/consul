@@ -52,9 +52,9 @@ section "Creating Settings" do
     "meta_description": '',
     "meta_keywords": 'citizen participation, open government',
     "verification_offices_url": '',
-    "map_latitude": 46.06,
-    "map_longitude": 14.39,
-    "map_zoom": 10,
+    "map.latitude": 46.06,
+    "map.longitude": 14.39,
+    "map.zoom": 10,
 
     "feature.homepage.widgets.feeds.proposals": false,
     "feature.homepage.widgets.feeds.debates": false,

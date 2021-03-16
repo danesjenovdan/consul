@@ -44,7 +44,6 @@
 //= require turbolinks
 //= require turbolinks_anchors
 //= require ckeditor/loader
-//= require_directory ./ckeditor
 //= require social-share-button
 //= require initial
 //= require ahoy
@@ -141,7 +140,7 @@ var initialize_modules = function() {
   App.MarkdownEditor.initialize();
   App.HTMLEditor.initialize();
   App.LegislationAdmin.initialize();
-  App.LegislationAllegations.initialize();
+  //App.LegislationAllegations.initialize();
   App.Legislation.initialize();
   if ($(".legislation-annotatable").length) {
     App.LegislationAnnotatable.initialize();
@@ -178,11 +177,14 @@ var destroy_non_idempotent_modules = function() {
   App.SocialShare.destroy();
 };
 
-$(document).on("turbolinks:load", initialize_modules);
-$(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
+// $(document).on("turbolinks:load", initialize_modules);
+// $(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
 
 $(function(){
   $(document).ready(initialize_modules);
   $(document).on('page:load', initialize_modules);
   $(document).on('ajax:complete', initialize_modules);
+
+  $(document).on("turbolinks:load", initialize_modules);
+  $(document).on("turbolinks:before-cache", destroy_non_idempotent_modules);
 });

@@ -53,8 +53,6 @@
                     <%= t('custom.titles.selected_proposals') %> (<%= @investments_count %>)
                   <% elsif @budget.phase == 'valuating' %>
                     <%= t('custom.titles.added_proposals') %> (<%= @all_investments_count  %>)
-                  <% elsif @budget.phase == 'publishing_prices' %>
-                    <%= t('custom.titles.selected_proposals') %> (<%= @investments_count  %>)
                   <% else %>
                     <%= t('custom.titles.added_proposals') %> (<%= @investments_count %>)
                   <% end %>
@@ -110,7 +108,7 @@
 
               </div>
 
-              <% if !['drafting', 'informing', 'accepting', 'reviewing', 'selecting', 'valuating'].include?(@budget.phase) && @denied_investments.count > 0 %>
+              <% if phase.kind != CustomPhasesHelper::CUSTOM_PHASE_ACCEPTING && phase.kind != CustomPhasesHelper::CUSTOM_PHASE_SELECTING && @denied_investments.count > 0 %>
                 <div class="row budget-investments">
                   <h2 class="phase-title"><%= t('custom.titles.denied_proposals') %> (<%= @denied_investments_count %>)</h2>
 
