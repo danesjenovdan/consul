@@ -30,7 +30,7 @@
               <%= strip_tags(investment&.description&.gsub('><', '> <'))&.truncate(90, separator: ' ', omission: '...') %>
             </div>
 
-            <% if investment.should_show_price? %>
+            
               <div id="<%= dom_id(investment) %>_price"
                    class="supports inline-block"
                    <%= 'data-equalizer-watch' if feature?(:allow_images) && investment.image.present? %>>
@@ -39,7 +39,7 @@
                   <!-- <%= investment.formatted_price %> -->
                 </span>
               </div>
-            <% end %>
+            
 
             <% if investment.budget.phase == 'finished' && investment.status && investment.winner %>
               <div class="clearfix btop">
