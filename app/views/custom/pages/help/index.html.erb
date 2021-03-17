@@ -3,6 +3,7 @@
 <% content_for :canonical do %>
   <%= render "shared/canonical", href: help_url %>
 <% end %>
+
 <% banner ||= @banners&.sample %>
 <%= render Shared::BannerComponent.new(banner) %>
 

@@ -37,7 +37,7 @@ module Budgets
       # @unfeasible_investments_count = unfeasible_investments.count
       # @unfesible_investments = unfeasible_investments.page(params[:page]).per(21).for_render
       
-      all_investments = Budget::Investment.where('budget_id = ?', @budget.id).order('id DESC')
+      all_investments = Budget::Investment.where('budget_id = ?', @budget.id).order('id DESC').apply_filters_and_search(@budget, params, @current_filter)
       @all_investments_count = all_investments.count
       @all_investments = all_investments.page(params[:page]).per(400).for_render
       @all_investment_ids = @investments.pluck(:id)
@@ -53,7 +53,18 @@ module Budgets
     end
 
     def update
-      @investment.update(investment_params)
+      @investment.update(title: params[:budget_investment][:title],
+                         q1: params[:budget_investment][:q1],
+                        #  q2: params[:budget_investment][:q2],
+                        #  q3: params[:budget_investment][:q3],
+                        #  q4: params[:budget_investment][:q4],
+                        #  q5: params[:budget_investment][:q5],
+                        #  q6: params[:budget_investment][:q6],
+                        #  q7: params[:budget_investment][:q7],
+                         price: params[:budget_investment][:price],
+                         map_location_attributes: {latitude: params[:budget_investment][:map_location_attributes][:latitude],
+                                                   longitude: params[:budget_investment][:map_location_attributes][:longitude],
+                                                   zoom: params[:budget_investment][:map_location_attributes][:zoom]})
       
       redirect_to budget_investment_path(@budget, @investment),
                   notice: t('custom.titles.investment_updated')
@@ -75,8 +86,9 @@ module Budgets
     private
       def investment_params
         params.require(:budget_investment)
-              .permit(:title, :description, :q1, :q2, :q3, :q4, :q5, :heading_id, :tag_list, :price,
-                      # :q6, :q7, are ignored in MB
+              .permit(:title, :description, :q1,
+              # :q2, :q3, :q4, :q5, :q6, :q7, 
+                      :heading_id, :tag_list, :price,
                       :organization_name, :location, :terms_of_service, :skip_map,
                       image_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
                       documents_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
