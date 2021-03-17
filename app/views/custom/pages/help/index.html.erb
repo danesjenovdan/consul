@@ -4,9 +4,8 @@
   <%= render "shared/canonical", href: help_url %>
 <% end %>
 
-<% if has_banners? %>
-  <%= render "shared/banner" %>
-<% end %>
+<% banner ||= @banners&.sample %>
+<%= render Shared::BannerComponent.new(banner) %>
 
 <div class="row help">
 

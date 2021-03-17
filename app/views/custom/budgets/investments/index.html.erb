@@ -60,14 +60,12 @@
                   <% end %>
                 </h2>
 
-                <% if @investments.count > 0 %>
+                <!-- <% if @investments.count > 0 %>
                   <%= render('shared/order_links', i18n_namespace: "budgets.investments.index") unless @current_filter == "unfeasible" %>
-                <% end %>
+                <% end %> -->
 
                 <div style="position: relative;">
-                  <!-- REMOVE CATEGORIES DROPDOWN
                   <%= render 'budgets/investments/categories' %>
-                  END REMOVE CATEGORIES DROPDOWN -->
                   <% if @budget.headings.count > 1 %>
                     <%= render 'budgets/investments/districts' %>
                   <% end %>
@@ -116,13 +114,11 @@
                 <div class="row budget-investments">
                   <h2 class="phase-title"><%= t('custom.titles.denied_proposals') %> (<%= @denied_investments_count %>)</h2>
 
-                  <% if @denied_investments_count > 0 %>
+                  <!-- <% if @denied_investments_count > 0 %>
                     <%= render('shared/order_links', i18n_namespace: "budgets.investments.index") unless @current_filter == "unfeasible" %>
-                  <% end %>
+                  <% end %> -->
 
-                  <!-- REMOVE CATEGORIES DROPDOWN
                   <%= render 'budgets/investments/categories' %>
-                  END REMOVE CATEGORIES DROPDOWN -->
                   <% if @budget.headings.count > 1 %>
                     <%= render 'budgets/investments/districts' %>
                   <% end %>
@@ -154,9 +150,7 @@
 
               <div class="row budget-investments">
                 <div>
-                  <!-- REMOVE CATEGORIES DROPDOWN
                   <%= render 'budgets/investments/categories' %>
-                  END REMOVE CATEGORIES DROPDOWN -->
                   <% if @budget.headings.count > 1 %>
                     <%= render 'budgets/investments/districts' %>
                   <% end %>
