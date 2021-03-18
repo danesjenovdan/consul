@@ -92,6 +92,8 @@
           <%= auto_link_already_sanitized_html(wysiwyg(investment.q4)) %>
           <h4><%= t('activerecord.attributes.budget/investment.q5') %></h4>
           <%= auto_link_already_sanitized_html(wysiwyg(investment.q5)) %>
+          <h4><%= t('activerecord.attributes.budget/investment.q6') %></h4>
+          <%= auto_link_already_sanitized_html(wysiwyg(investment.q6)) %>
         </div>
 
         <% if feature?(:map) && map_location_available?(@investment.map_location) %>

@@ -41,6 +41,11 @@
       <%= f.cktext_area :q5, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
+    <div class="ckeditor small-12 column">
+    <label for="q6"><%= t('activerecord.attributes.budget/investment.q6') %></label>
+    <%= f.cktext_area :q6, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
+  </div>
+
     <div class="small-12 column">
       <%= f.label :price, t("budgets.investments.show.price") %>
       <%= f.number_field :price, label: '&nbsp;(€)' %>
