@@ -61,12 +61,10 @@
         </span>
       <% end %>
 
-      <p><%= t("custom.terms.terms_checkboxes_text") %></p>
-
       <%= f.label :data_consent do %>
-        <%= f.check_box :data_consent, title: t('custom.terms.terms_first_checkbox'), label: false %>
+        <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: false %>
         <span class="checkbox">
-          <%= t("custom.terms.terms_first_checkbox") %>
+          <%= t("custom.terms.terms_second_checkbox") %>
         </span>
       <% end %>
 
