@@ -21,7 +21,7 @@
   <% else %>
 
     <div class="add in-favor">
-      <% if investment.budget.balloting? && investment.selected? && current_user.geozone_id ==  investment.heading_id%>
+      <% if investment.budget.balloting? && investment.selected? && current_user.balloted_heading_id ==  investment.heading_id%>
         <% if reason.present? && !ballot.has_investment?(investment) %>
 
 
