@@ -14,14 +14,14 @@ sl:
     edit: uredi
   custom:
     meta:
-      pp_name: Predlagam - odločam
-      place_name: Mestna občina Medvode
+      pp_name: Sodeluj in glasuj
+      place_name: Občina Medvode
       guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
       tos: "pogoji-uporabe"
     social:
-      fb_desc: Predlagam odločam - Participativni proračun Mestne občine Medvode
-      tw_desc: "Predlagam odločam - Participativni proračun Mestne občine Medvode: "
-      email_desc: Oglej si predlog proračunske naložbe v projektu Predlagam odločam - Participativni proračun Mestne občine Medvode
+      fb_desc: Sodeluj in glasuj - Participativni proračun občine Medvode
+      tw_desc: "Sodeluj in glasuj - Participativni proračun občine Medvode: "
+      email_desc: Oglej si predlog proračunske naložbe v projektu Sodeluj in glasuj - Participativni proračun občine Medvode
     headings:
       drafting: Osnutek (skrito javnosti)
       informing: Informiranje
@@ -34,11 +34,11 @@ sl:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li><h4>Območje 1:</h4>Krajevne skupnosti: Medvode – center, Olmo - Prisoje, Semedela, Žusterna, Za gradom</li><li><h4>Območje 2:</h4>Krajevne skupnosti: Škocjan, Šmarje, Vanganel</li><li><h4>Območje 3:</h4>Krajevne skupnosti: Dekani, Hrvatini, Škofije</li><li><h4>Območje 4:</h4>Krajevne skupnosti: Bertoki, Pobegi – Čežarji, Sv. Anton</li><li><h4>Območje 5:</h4>Krajevne skupnosti: Boršt, Gračišče, Gradin, Marezige</li><li><h4>Območje 6:</h4>Krajevne skupnosti: Črni Kal, Podgorje, Rakitovec, Zazid</li>"
+      headings_sidebar: "<li><h4>Območje 1:</h4>Polhograjci 1 (Topol pri Medvodah, Belo, Brezovica pri Medvodah, Tehovec, Trnovec, Setnica – del)</li><li><h4>Območje 2:</h4>KS Medvode - center</li><li><h4>Območje 3:</h4>KS Pirniče (Verje, Zgornje Pirniče, Spodnje Pirniče, Vikrče, Zavrh pod Šmarno goro)</li><li><h4>Območje 4:</h4>Preska</li><li><h4>Območje 5:</h4>KS Senica (Spodnja Senica, Zgornja Senica, Ladja)</li><li><h4>Območje 6:</h4>KS Seničica – Golo Brdo (Seničica, Golo Brdo)</li><li><h4>Območje 7:</h4>S Smlednik (Smlednik, Valburga, Hraše, Dragočajna, Moše)</li><li><h4>Območje 8:</h4>KS Sora (Sora, Rakovnik, Dol, Osolnik)</li><li><h4>Območje 9:</h4>KS Vaše – Goričane (Vaše, Goričane)</li><li><h4>Območje 10:</h4>KS Zbilje</li><li><h4>Območje 11:</h4>Polhograjci 2 (Studenčice, Žlebe)</li>"
       select_heading: Izberi območje
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
-      instructions: "Projektni predlog mora izpolnjevati naslednje pogoje:"
-      instructions_description: "<li>Prispeva k uresničevanju javnega interesa in se izvaja na območju Mestne občine Medvode.</li><li>Prispeva k namenom poziva — spodbuja aktivno participacijo in vključenost občanov, dviga kakovost bivanja v lokalnem okolju, gradi skupnostni pristop in je namenjen splošni javni uporabi.</li><li>Je takšne narave, da ga bo Mestna občina Medvode lahko izpeljala v okviru občinskih zmogljivosti in zakonskih pristojnosti.</li><li>Ni uvrščen v proračun oz. načrt razvojnih programov občinskih vlaganj po krajevnih skupnostih in ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov Mestne občine Medvode.</li><li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li><li>V preteklih petih letih ni bil financiran/sofinanciran iz proračuna Mestne občine Medvode.</li><li>Je finančno ovrednoten med 5.000 in 20.000 € z vključenim DDV-jem.</li><li>Je realno izvedljiv v proračunskih letih 2021 in 2022.</li><li>Je umeščen v enega od šestih območij občine, opredeljenih za participativni proračun.</li>"
+      instructions: "Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje kriterije:"
+      instructions_description: "<li>1. je skladen z zakonodajo in veljavnimi občinskimi akti,</li><li>2. je takšen, da je izvedba v pristojnosti Občine Medvode,</li><li>3. je namenjen splošni javni uporabi,</li><li>4. ni že uvrščen v proračun Občine Medvode oziroma načrt razvojnih programov,</li><li>5. v zadnjih 5 letih ni bil sofinanciran s strani Občine Medvode,</li><li>6. je finančno ovrednoten med 3.000 in 20.000 EUR z vključenim DDV,</li><li>7. je umeščen v enega od 11 območij občine, opredeljenih za participativni proračun,</li><li>8. je izvedljiv v proračunskem obdobju 2021 ali 2022,</li><li>9. je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično).</li>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     titles:
       edit: Uredi predlog
@@ -90,10 +90,10 @@ sl:
       description_2: "Vse oddane predloge projektov pregleda komisija, jih finančno ovrednoti in preveri, ali so izvedljivi, skladni z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna ter v skladu s pravili o vrednosti predlogov in drugimi predpisanimi pogoji. Komisija lahko podobne predloge združi."
       date_2: 14. 7. - 20. 8. 2020
       heading_3: Glasovanje
-      description_3: "Glasovanje bo potekalo med 14. in 21. 9. 2020 prek spleta ali v prostorih Mestne občine Medvode in na sedežih krajevnih skupnosti. Sodeluje lahko vsaka občanka ali občan s stalnim bivališčem v Mestni občini Medvode, ki je dopolnil/-a 15 let. Glasuje se tako, da občan/-ka v izbranem območju razdeli predvidenih 160.000 € sredstev, namenjenih območju, med projekte, za katere si želi, da bi bili izvedeni."
+      description_3: "Glasovanje bo potekalo med 14. in 21. 9. 2020 prek spleta ali v prostorih občine Medvode in na sedežih krajevnih skupnosti. Sodeluje lahko vsaka občanka ali občan s stalnim bivališčem v Mestni občini Medvode, ki je dopolnil/-a 15 let. Glasuje se tako, da občan/-ka v izbranem območju razdeli predvidenih 160.000 € sredstev, namenjenih območju, med projekte, za katere si želi, da bi bili izvedeni."
       date_3: 14. 9. - 21. 9. 2020
       heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Medvode za leti 2021 in 2020."
+      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna občine Medvode za leti 2021 in 2020."
       date_4: 25. 9. 2020
       heading_5: Spremljanje izvedbe
       description_5: " Vsi izglasovani projekti bodo izvedeni v letih 2021 in 2022. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
@@ -104,7 +104,7 @@ sl:
       heading_2: "Kako ustvarim in potrdim svoj račun?"
       description_2: "Račun ustvariš tako, da v nogi spletnega mesta klikneš na gumb Registracija, klik na kateri koli gumb za akcijo te prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, telefonsko, EMŠO in geslo. Po kreiranju računa ga moraš potrditi s klikom na povezavo v e-pošti, ki jo bomo poslali na tvoj e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Predlog projekta ustvariš v okviru spletnega orodja, oddaš ga lahko tudi na fizičnem obrazcu osebno v vložišču Mestne občine Medvode ali sedežih krajevnih skupnosti v času uradnih ur ali izpolnjenega pošlješ na elektronski naslov obcina@Medvode.si."
+      description_3: "Predlog projekta ustvariš v okviru spletnega orodja, oddaš ga lahko tudi na fizičnem obrazcu osebno v vložišču občine Medvode ali sedežih krajevnih skupnosti v času uradnih ur ali izpolnjenega pošlješ na elektronski naslov obcina@Medvode.si."
       heading_4: "Pozabil/-a sem svoje geslo. Kaj lahko storim?"
       description_4: "Klikni na gumb Prijava, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel/-a navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
@@ -113,7 +113,7 @@ sl:
       technical_issues: "Imaš tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnike Mestne občine Medvode na <a href="mailto:predlagam-odlocam@Medvode.si">predlagam-odlocam@Medvode.si</a>.'
+      other_contact: 'Kontaktiraj predstavnike občine Medvode na <a href="mailto:predlagam-odlocam@Medvode.si">predlagam-odlocam@Medvode.si</a>.'
     terms:
       main_title: "Pogoji uporabe"
       active_use: "Aktivna uporaba spletnega orodja se ureja s spodnjimi pogoji za uporabo, zato se morajo vsi, ki želijo aktivno sodelovati, registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe."
