@@ -15,3 +15,61 @@
 @import 'autocomplete_overrides';
 @import 'jquery-ui/sortable';
 
+
+// MARIBOR COLORS
+.header-logo {
+    height: 100px;
+    width: 350px;
+    max-width: 100%;
+    background-image: image-url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+
+    @media (max-width: 767px) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.welcome-column {
+    background-image: none !important;
+
+    &.accepting {
+        background-color: #B9E5FB !important;
+    }
+    &.balloting {
+        background-color: #C8E2AE !important;
+    }
+    &.finished {
+        background-color: #FFE3A6 !important;
+    }
+
+    .linkable {
+        background-image: none !important;
+    }
+
+    .action-button.large {
+        background-color: #00aeef !important;
+        background-image: none !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+    }
+}
+
+.top-bar {
+    background: #ffffff !important;
+
+    .site-title-holder {
+        display: none !important;
+    }
+
+    .language-picker li a {
+        line-height: 100px;
+    }
+}
+
+
+.progress-meter {
+    transition: width 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
