@@ -251,6 +251,8 @@ sl:
               password_already_set: "Ta uporabnik že ima geslo"
             document_number:
               invalid: "Vnešena EMŠO številka ni pravilna."
+            address: 
+              invalid: "Vnešena ulica/naselje ni na našem seznamu. Izberite ulico/naselje iz seznama."
         debate:
           attributes:
             tag_list:

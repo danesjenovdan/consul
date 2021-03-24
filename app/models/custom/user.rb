@@ -5,11 +5,17 @@ class User < ApplicationRecord
 
   validate :emso_number, on: :create
   validate :validate_data_consent, on: :create
+  validate :validate_address, on: :create
+
   
   def validate_data_consent
     unless data_consent
       errors.add(:data_consent, I18n.t('custom.errors.data_consent'))
     end
+  end
+
+  def validate_address
+    errors.add(:address, I18n.t('activerecord.errors.models.user.attributes.address.invalid')) unless is_valid_address?
   end
 
   def emso_number
@@ -67,4 +73,99 @@ class User < ApplicationRecord
     end
     false
   end
+end
+
+
+
+def is_valid_address?
+  valid_address = [
+    "Topol pri Medvodah",
+    "Belo",
+    "Brezovica pri Medvodah",
+    "Tehovec",
+    "Trnovec",
+    "Setnica",
+    "Arharjeva ulica", 
+    "Barletove ceste 2", 
+    "Cesta komandanta staneta", 
+    "Cesta na Senico", 
+    "Cesta na Svetje", 
+    "Cesta ob Sori", 
+    "Cesta talcev", 
+    "Čarmanova ulica", 
+    "Čelesnikova ulica", 
+    "Dimčeva ulica", 
+    "Donova cesta", 
+    "Finžgarjeva ulica", 
+    "Gorenjska cesta", 
+    "Grajzerjeva ulica", 
+    "Jamnikova ulica", 
+    "Kebetova ulica", 
+    "Klanska ulica", 
+    "Kržišnikova ulica", 
+    "Kuraltova ulica", 
+    "Ostrovrharjeva ulica",
+    "Medvoška cesta",
+    "Podvizova ulica",
+    "Seškova cesta",
+    "Šetinova ulica",
+    "Šlosarjeva ulica",
+    "Šmalčeva ulica",
+    "Štalčeva ulica",
+    "Tehovnikova ulica",
+    "Trampuževa ulica",
+    "Turkova ulica",
+    "Ulica Ivanke Ovijač",
+    "Ulica k studencu",
+    "Ulica ob gozdu",
+    "Ulica Simona Jenka",
+    "Višnarjeva ulica",
+    "Zbiljska cesta",
+    "Žontarjeva ulica",
+    "Verje",
+    "Zgornje Pirniče",
+    "Spodnje Pirniče",
+    "Vikrče",
+    "Zavrh pod Šmarno goro",
+    "Barletova cesta",
+    "Bečanova ulica",
+    "Bergantova cesta",
+    "Bernikova ulica",
+    "Bizantova cesta",
+    "Bogatajeva ulica",
+    "Cesta ob železnici",
+    "Cesta v Bonovec",
+    "Cesta v Žlebe",
+    "Dobnikarjeva ulica",
+    "Hrastarjeva ulica",
+    "Iztokova ulica",
+    "Kalanova ulica",
+    "Kurirska cesta",
+    "Na Čerenu",
+    "Preška cesta",
+    "Škofjeloška cesta",
+    "Trilerjeva ulica",
+    "Spodnja Senica",
+    "Zgornja Senica",
+    "Ladja",
+    "Seničica",
+    "Golo Brdo",
+    "Smlednik",
+    "Valburga",
+    "Hraše",
+    "Dragočajna",
+    "Moše",
+    "Sora",
+    "Rakovnik",
+    "Dol",
+    "Osolnik",
+    "Vaše",
+    "Goričane",
+    "Zbilje",
+    "Studenčice",
+    "Žlebe"
+  ];
+r = /#{valid_address.join("|")}/ # assuming there are no special chars
+print(r === address)
+  return r === address
 end

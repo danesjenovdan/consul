@@ -1,5 +1,99 @@
 <% provide :title do %><%= t("devise_views.users.registrations.new.title") %>
 <% end %>
+<script>
+$( function() {
+  var availableTags = [
+    "Topol pri Medvodah",
+    "Belo",
+    "Brezovica pri Medvodah",
+    "Tehovec",
+    "Trnovec",
+    "Setnica",
+    "Arharjeva ulica", 
+    "Barletove ceste 2", 
+    "Cesta komandanta staneta", 
+    "Cesta na Senico", 
+    "Cesta na Svetje", 
+    "Cesta ob Sori", 
+    "Cesta talcev", 
+    "Čarmanova ulica", 
+    "Čelesnikova ulica", 
+    "Dimčeva ulica", 
+    "Donova cesta", 
+    "Finžgarjeva ulica", 
+    "Gorenjska cesta", 
+    "Grajzerjeva ulica", 
+    "Jamnikova ulica", 
+    "Kebetova ulica", 
+    "Klanska ulica", 
+    "Kržišnikova ulica", 
+    "Kuraltova ulica", 
+    "Ostrovrharjeva ulica",
+    "Medvoška cesta",
+    "Podvizova ulica",
+    "Seškova cesta",
+    "Šetinova ulica",
+    "Šlosarjeva ulica",
+    "Šmalčeva ulica",
+    "Štalčeva ulica",
+    "Tehovnikova ulica",
+    "Trampuževa ulica",
+    "Turkova ulica",
+    "Ulica Ivanke Ovijač",
+    "Ulica k studencu",
+    "Ulica ob gozdu",
+    "Ulica Simona Jenka",
+    "Višnarjeva ulica",
+    "Zbiljska cesta",
+    "Žontarjeva ulica",
+    "Verje",
+    "Zgornje Pirniče",
+    "Spodnje Pirniče",
+    "Vikrče",
+    "Zavrh pod Šmarno goro",
+    "Barletova cesta",
+    "Bečanova ulica",
+    "Bergantova cesta",
+    "Bernikova ulica",
+    "Bizantova cesta",
+    "Bogatajeva ulica",
+    "Cesta ob železnici",
+    "Cesta v Bonovec",
+    "Cesta v Žlebe",
+    "Dobnikarjeva ulica",
+    "Hrastarjeva ulica",
+    "Iztokova ulica",
+    "Kalanova ulica",
+    "Kurirska cesta",
+    "Na Čerenu",
+    "Preška cesta",
+    "Škofjeloška cesta",
+    "Trilerjeva ulica",
+    "Spodnja Senica",
+    "Zgornja Senica",
+    "Ladja",
+    "Seničica",
+    "Golo Brdo",
+    "Smlednik",
+    "Valburga",
+    "Hraše",
+    "Dragočajna",
+    "Moše",
+    "Sora",
+    "Rakovnik",
+    "Dol",
+    "Osolnik",
+    "Vaše",
+    "Goričane",
+    "Zbilje",
+    "Studenčice",
+    "Žlebe"
+  ];
+  $( "#address" ).autocomplete({
+    source: availableTags
+  });
+} );
+</script>
 
 <h2><%= t("custom.titles.register_with") %></h2>
 
@@ -37,7 +131,17 @@
       <!-- PERSONAL DATA SUBMISSION -->
       <%= f.text_field :phone, label: t('custom.form.phone'), required: true%>
 
-      <%= f.text_area :address, label: t('custom.form.address'), required: true %>
+      <div class="ui-widget">
+
+      <%= f.text_area :address, id:"address", label: t('custom.form.address'), required: true,
+      source: ["neki", "kevin"]
+       %>
+       </div>
+
+       <!--<div class="ui-widget">
+        <label for="tags">Address: </label>
+          <input type="text" :address required: true id="address">
+        </div> -->
       <!-- END PERSONAL DATA SUBMISSION -->
 
       <%= f.password_field :password, autocomplete: "off",
