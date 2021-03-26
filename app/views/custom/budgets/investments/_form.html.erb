@@ -50,6 +50,7 @@
   function setInputFilter(inputFilter) {
     ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
       $( "#price" ).on(event, function() {
+        console.log('this.value: ', this.value);
         if (inputFilter(this.value)) {
           this.oldValue = this.value;
           this.oldSelectionStart = this.selectionStart;
@@ -68,12 +69,15 @@
       return /^\d*$/.test(value);
       });
     }
+    setInputFilter(function(value) {
+    return /^\d*$/.test(value);
+    })
   </script>
 
 
 <div class="small-12 column">
   <%= f.label :price, t("budgets.investments.show.price") %>
-  <%= f.text_field :price, id:"price",label: '&nbsp;(€)' %>
+  <%= f.text_field :price, id:"price", value: 0, label: '&nbsp;(€)' %>
 </div>
 
     <% if feature?(:allow_images) %>
