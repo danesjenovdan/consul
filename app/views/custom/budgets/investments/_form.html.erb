@@ -46,10 +46,35 @@
     <%= f.cktext_area :q6, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
   </div>
 
-    <div class="small-12 column">
-      <%= f.label :price, t("budgets.investments.show.price") %>
-      <%= f.number_field :price, label: '&nbsp;(€)' %>
-    </div>
+  <script>
+  function setInputFilter(inputFilter) {
+    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+      $( "#price" ).on(event, function() {
+        if (inputFilter(this.value)) {
+          this.oldValue = this.value;
+          this.oldSelectionStart = this.selectionStart;
+          this.oldSelectionEnd = this.selectionEnd; }
+        else if (this.hasOwnProperty("oldValue")) {
+            this.value = this.oldValue;
+            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+          } else {
+            this.value = "";
+          }
+        });
+      });
+    }
+    window.onload = function () {
+      setInputFilter(function(value) {
+      return /^\d*$/.test(value);
+      });
+    }
+  </script>
+
+
+<div class="small-12 column">
+  <%= f.label :price, t("budgets.investments.show.price") %>
+  <%= f.text_field :price, id:"price",label: '&nbsp;(€)' %>
+</div>
 
     <% if feature?(:allow_images) %>
       <div class="images small-12 column">
