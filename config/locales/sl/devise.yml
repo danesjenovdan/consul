@@ -47,8 +47,8 @@ sl:
       updated: "Tvoj račun je bil uspešno posodobljen."
     sessions:
       signed_in: "Uspešno si se vpisal/-a."
-      signed_out: "Uspešno si se izpisal."
-      already_signed_out: "Uspešno si se izpisal."
+      signed_out: "Uspešno si se izpisal/-a."
+      already_signed_out: "Uspešno si se izpisal/-a."
     unlocks:
       send_instructions: "V nekaj minutah dobiš e-pošto z navodili, kako odkleniti svoj račun."
       send_paranoid_instructions: "Če imaš uporabniški račun, v nekaj minutah dobiš e-pošto z navodili, kako ga odkleniti."

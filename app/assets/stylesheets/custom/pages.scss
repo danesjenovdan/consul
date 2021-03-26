@@ -978,6 +978,14 @@ span:hover:before {
   .welcome-column:last-of-type {
     border: none;
   }
+  .custom-icon.arrow-small-right,
+  .custom-icon.arrow-large-right {
+    background-image: image-url('arrow-white.svg');
+    background-position: center;
+    background-size: 45px 42px;
+    width: 33px;
+    height: 29px;
+  }
 }
 
 form label {
