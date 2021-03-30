@@ -1096,6 +1096,11 @@ footer {
   top: 8px;
 }
 
+.year-picker {
+  left: 8px;
+  right: auto;
+}
+
 @media (max-width: 768px) {
   .language-picker  {
     position: relative;
