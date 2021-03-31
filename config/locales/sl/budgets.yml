@@ -154,7 +154,7 @@ sl:
       header:
         check_ballot: Preveri moja glasovanja
         different_heading_assigned: "Glasoval/-a si že v drugem območju: %{heading_link}"
-        change_ballot: "Če želiš glasovati v tem območju, odstrani svoje glasove v območju %{heading_link}."
+        change_ballot: "V tem območju ti ni dovoljeno glasovati. Glasuješ lahko v območju %{heading_link}."
         check_ballot_link: "preveri moja glasovanja"
         price: "Višina sredstev namenjenih temu območju je"
     progress_bar:
