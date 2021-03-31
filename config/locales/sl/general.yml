@@ -618,6 +618,8 @@ sl:
       organization: Organizacijam ni dovoljeno glasovati.
       unfeasible: Neizvedljivih investicijskih projektov ni mogoče podpreti
       not_voting_allowed: Faza glasovanja je zaključena
+    signin: "prijaviti"
+    signup: "registrirati"
   welcome:
     feed:
       most_active:
