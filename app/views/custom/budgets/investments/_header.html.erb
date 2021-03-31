@@ -83,9 +83,11 @@
                         <%= t("budgets.investments.index.by_heading_single") %>
                       </h2>
                     <% end %>
+                    <% if current_user && current_user.balloted_heading_id == params[:heading_id].to_i %>
                     <div id="progress_bar" class="no-margin-top clearfix">
                       <%= render 'budgets/ballot/progress_bar' %>
                     </div>
+                    <% end %>
                   </div>
                 <% else %>
                   <% if @budget.headings.count > 1 %>

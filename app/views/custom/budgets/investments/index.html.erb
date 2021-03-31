@@ -40,9 +40,7 @@
     <% if phase.enabled %>
       <div class="tabs-panel <%= 'is-active' if phase.url %>" id="tab-<%= phase.kind %>">
         <% if phase.url %>
-          <% if current_user && current_user.balloted_heading_id == params[:heading_id].to_i %>
             <%= render '/budgets/investments/header' %>
-          <% end %>
           <div class="main-indented-content">
 
             <% if @investments.count > 0 || @heading.present? %>
