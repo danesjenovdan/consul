@@ -961,6 +961,7 @@ header {
 // 03. Footer
 // ----------
 
+
 footer {
   background-color: $input-gray;
   color: $black;
@@ -976,6 +977,11 @@ footer {
     text-align: right;
   }
 
+  .logo-right {
+    text-align: right;
+    background-position: right center
+  }
+
   .logo {
     background: image-url('municipalities/default.png') no-repeat;
     background-size: 119px 61px;
@@ -988,6 +994,20 @@ footer {
       background: image-url('municipalities/default.png') no-repeat;
       background-size: 119px 61px;
     }
+  }
+
+  .logo-djnd {
+      background: image-url('djnd.svg') no-repeat;
+      background-size: 119px 61px;
+      background-position: right;
+      display: block;
+      height: rem-calc(61);
+      margin-top: -20px;
+  
+      &.default {
+        background: image-url('djnd.svg') no-repeat;
+        background-size: 119px 61px;
+      }
   }
 
   .footer-links {
@@ -1006,6 +1026,14 @@ footer {
         background-size: 119px 61px;
       }
     }
+    .logo-djnd {
+      background: image-url('djnd.svg') no-repeat;
+      background-size: 119px 61px;
+      &.default {
+        background: image-url('djnd.svg') no-repeat;
+        background-size: 119px 61px;
+      }
+  }
   }
 
   a,
