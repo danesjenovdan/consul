@@ -115,6 +115,8 @@ sl:
         currency_symbol: "Valuta"
       budget/investment:
         heading_id: "Območje"
+        number: 
+          invalid: "Dovoljene so le števke, brez ločil. (e.g. 10000)"
         title: "Naslov predloga"
         description: "Opis"
         external_url: "Povezava do dodatne dokumentacije"
