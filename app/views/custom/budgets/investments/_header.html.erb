@@ -72,11 +72,18 @@
           <div class="row progress-votes">
             <div class="row">
               <div class="small-12 column">
+              
                 <% if @ballot.valid_heading?(@heading) %>
                   <div class="progress-bar-nav" data-fixed-bar>
                     <% if @budget.headings.count > 1 %>
                       <h2>
+                      <% if current_user && current_user.balloted_heading_id == params[:heading_id].to_i %>
                         <%= t("budgets.investments.index.by_heading", heading: @heading.name) %>
+                      <% elsif  current_user && current_user.balloted_heading_id && @budget.headings[current_user.balloted_heading_id]%>
+                        <%= t("budgets.investments.index.by_wrong_heading", heading: @budget.headings[current_user.balloted_heading_id].name) %>
+                      <% else %>
+                      <%= t("budgets.investments.index.sign_in_heading")%>
+                      <% end %>
                       </h2>
                     <% elsif @budget.headings.count == 1 %>
                       <h2>
