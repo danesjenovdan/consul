@@ -86,7 +86,7 @@ def is_valid_address?
     "Trnovec",
     "Setnica",
     "Arharjeva ulica", 
-    "Barletove ceste 2", 
+    "Barletova cesta 2", 
     "Cesta komandanta staneta", 
     "Cesta na Senico", 
     "Cesta na Svetje", 
