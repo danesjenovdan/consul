@@ -997,15 +997,14 @@ footer {
   }
 
   .logo-djnd {
-      background: image-url('djnd.svg') no-repeat;
+      background: image-url('djnd.png') no-repeat;
       background-size: 119px 61px;
       background-position: right;
       display: block;
       height: rem-calc(61);
-      margin-top: -20px;
   
       &.default {
-        background: image-url('djnd.svg') no-repeat;
+        background: image-url('djnd.png') no-repeat;
         background-size: 119px 61px;
       }
   }
@@ -1027,10 +1026,10 @@ footer {
       }
     }
     .logo-djnd {
-      background: image-url('djnd.svg') no-repeat;
+      background: image-url('djnd.png') no-repeat;
       background-size: 119px 61px;
       &.default {
-        background: image-url('djnd.svg') no-repeat;
+        background: image-url('djnd.png') no-repeat;
         background-size: 119px 61px;
       }
   }
