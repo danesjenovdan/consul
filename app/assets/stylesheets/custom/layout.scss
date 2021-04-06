@@ -1035,6 +1035,12 @@ footer {
   }
   }
 
+  @media (max-width: 767px) {
+    .logo-djnd {
+      background-position: center;
+    }
+  }
+
   a,
   a:active,
   a:focus {
