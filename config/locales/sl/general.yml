@@ -577,7 +577,7 @@ sl:
       all: "Nimaš dovoljenja za izvedbo '%{action}' glede %{subject}."
   users:
     login_to_comment: "Za komentiranje se %{signin}."
-    signin: "vpiši."
+    signin: "vpiši"
     direct_messages:
       new:
         direct_messages_bloqued: "Ta uporabnik/-ca se je odločil/-a, da ne želi prejemati direktnih sporočil."
