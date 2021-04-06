@@ -83,7 +83,7 @@ sl:
         by_heading: "Izbrano območje: %{heading}."
         by_heading_single: "Tvoj proračun"
         by_wrong_heading: "V tem območju ne moreš glasovati.  Glasuješ lahko v območju%{heading}."
-        sign_in_heading: "Za glasovanje se moraš vpisati."
+        sign_in_heading: "Za glasovanje se moraš prijaviti ali registrirati."
         search_form:
           button: Išči
           placeholder: Išči investicijske projekte ...
