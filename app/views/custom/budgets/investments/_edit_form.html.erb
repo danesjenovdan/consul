@@ -75,8 +75,9 @@
 
 
     <div class="small-12 column">
-      <%= f.label :price, t("budgets.investments.show.price") %>
-      <%= f.text_field :price, id:"price",label: '&nbsp;(€)' %>
+    <%= f.label :price, t("budgets.investments.show.price") + '&nbsp;(€)' %>
+    <p>Oceno stroškov najdete <a href="https://sodelujinglasuj.si/system/documents/attachments/000/000/005/original/875e010af22e23a1d8a10c4efd3a6fc6785a2c82.pdf">tukaj</a>.</p>
+    <%= f.text_field :price, id:"price", label: false %>
     </div>
 
     <% if feature?(:allow_images) %>

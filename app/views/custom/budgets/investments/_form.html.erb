@@ -33,6 +33,7 @@
 
     <div class="ckeditor small-12 column">
       <label for="q4"><%= t('activerecord.attributes.budget/investment.q4') %></label>
+      <p>Soglasije lastnika najdete <a href="https://sodelujinglasuj.si/system/documents/attachments/000/000/006/original/d488016ad91350d6aaf5160da4e7f0171d781e19.pdf">tukaj</a>. Prenesite ga na svoj računalnik, izpolnite in priložite obrazcu za oddajo predloga.</p>
       <%= f.cktext_area :q4, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
@@ -76,8 +77,9 @@
 
 
 <div class="small-12 column">
-  <%= f.label :price, t("budgets.investments.show.price") %>
-  <%= f.text_field :price, id:"price", value: 0, label: '&nbsp;(€)' %>
+  <%= f.label :price, t("budgets.investments.show.price") + '&nbsp;(€)' %>
+  <p>Oceno stroškov najdete <a href="https://sodelujinglasuj.si/system/documents/attachments/000/000/005/original/875e010af22e23a1d8a10c4efd3a6fc6785a2c82.pdf">tukaj</a>.</p>
+  <%= f.text_field :price, id:"price", label: false %>
 </div>
 
     <% if feature?(:allow_images) %>
