@@ -31,6 +31,35 @@
         margin-bottom: 5px;
     }
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.eu-logo {
+    // height: 100px;
+    width: 355px;
+    height: 180px;
+    max-width: 100%;
+    background-image: image-url('logo_med_PNG.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: right top;
+    position: relative;
+
+    @media (max-width: 767px) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    p {
+        font-family: 'Montserrat', sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        font-size: 11px;
+        line-height: 16px;
+        padding-left: 30px;
+    }
+}
 
 .welcome-column {
     background-image: none !important;
