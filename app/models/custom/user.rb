@@ -87,7 +87,7 @@ def is_valid_address?
     "Setnica",
     "Arharjeva ulica", 
     "Barletova cesta 2", 
-    "Cesta komandanta staneta", 
+    "Cesta komandanta Staneta",
     "Cesta na Senico", 
     "Cesta na Svetje", 
     "Cesta ob Sori", 
