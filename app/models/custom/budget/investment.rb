@@ -10,11 +10,20 @@ class Budget
     #              accepted_content_types: [ "application/pdf", "image/gif", "image/jpeg", "image/png", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.ms-powerpoint", "application/vnd.openxmlformats-officedocument.presentationml.presentation" ]
 
     # remove existing validator
+    validate :validate_price, on: :create
+
+
     self.class_eval do
       _validators[:title]
         .find { |v| v.is_a? ActiveRecord::Validations::PresenceValidator }
         .attributes
         .delete(:title)
+    end
+
+    def validate_price
+      unless price
+        errors.add(:price, I18n.t('custom.errors.price'))
+      end
     end
 
     def should_show_ballots?

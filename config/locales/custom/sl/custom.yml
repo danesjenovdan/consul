@@ -183,6 +183,7 @@ sl:
       nil: 'Ni statusa'
     errors:
       data_consent: "Za nadaljevanje se moraš strinjati z obdelavo podatkov."
+      price: "Polje vrednost projekta ne sme biti prazen."
   activerecord:
     attributes:
       budget/investment:
