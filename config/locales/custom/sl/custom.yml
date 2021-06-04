@@ -44,6 +44,7 @@ sl:
       edit: Uredi predlog
       investment_updated: Predlog uspešno posodobljen
       added_proposals: Oddani predlogi
+      voted_proposals: Predlogi, uvrščeni na glasovanje
       selected_proposals: Izbrani predlogi
       finished_proposals: Izglasovani predlogi
       denied_proposals: Neizbrani predlogi
