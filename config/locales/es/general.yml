@@ -29,6 +29,9 @@ es:
     close: Cerrar
     menu: Menú
   comments:
+    actions:
+      confirm_delete: "¿Estás seguro/a? Esta acción borrará este comentario. No puedes deshacer esta acción."
+      delete: "Borrar comentario"
     comments_closed: Los comentarios están cerrados
     verified_only: Para participar %{verify_account}
     comment:
@@ -249,8 +252,8 @@ es:
         new_notifications:
           one: Tienes una nueva notificación
           other: Tienes %{count} notificaciones nuevas
+          zero: "No tienes notificaciones nuevas"
         notifications: Notificaciones
-        no_notifications: "No tienes notificaciones nuevas"
       sdg: "ODS"
   notifications:
     index:
@@ -344,7 +347,6 @@ es:
       map_location: "Ubicación en el mapa"
       map_location_instructions: "Navega por el mapa hasta la ubicación y coloca el marcador."
       map_remove_marker: "Eliminar el marcador"
-      map_skip_checkbox: "Esta propuesta no tiene una ubicación concreta o no la conozco."
     index:
       featured_proposals: Destacadas
       orders:

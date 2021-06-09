@@ -105,7 +105,7 @@ describe "Home" do
     end
   end
 
-  describe "IE alert" do
+  describe "IE alert", :no_js do
     scenario "IE visitors are presented with an alert until they close it", :page_driver do
       # Selenium API does not include page request/response inspection methods
       # so we must use Capybara::RackTest driver to set the browser's headers
@@ -135,6 +135,24 @@ describe "Home" do
 
     def ie_alert_box_xpath
       "/html/body/div[@class='wrapper ']/comment()[contains(.,'ie-callout')]"
+    end
+  end
+
+  describe "Menu button" do
+    scenario "is not present on large screens" do
+      visit root_path
+
+      expect(page).not_to have_button "Menu"
+    end
+
+    scenario "toggles the menu on small screens", :small_window do
+      visit root_path
+
+      expect(page).not_to have_link "Sign in"
+
+      click_button "Menu"
+
+      expect(page).to have_link "Sign in"
     end
   end
 

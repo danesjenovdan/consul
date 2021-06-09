@@ -16,10 +16,17 @@
 // 01. Global styles
 // -----------------
 
+$admin-border-color: #d3d9dd;
+$admin-border:   2px solid $admin-border-color;
 $admin-color:    #245b80;
+$admin-text:     #434d54;
+
 $sidebar:        #245b80;
 $sidebar-hover:  #25597c;
 $sidebar-active: #f4fcd0;
+
+$table-border:   $admin-border;
+$table-header:   #ecf1f6;
 
 .admin {
   @include admin-layout;
@@ -35,6 +42,10 @@ $sidebar-active: #f4fcd0;
     &.title {
       text-transform: uppercase;
     }
+  }
+
+  h3 {
+    margin: $line-height 0;
   }
 
   .back {
@@ -99,7 +110,7 @@ $sidebar-active: #f4fcd0;
       }
     }
 
-    [class^="icon-"]:not(.icon-circle) {
+    [class^="icon-"] {
       font-size: $base-font-size;
     }
   }
@@ -148,15 +159,7 @@ $sidebar-active: #f4fcd0;
     right: 12px;
   }
 
-  .menu-icon {
-
-    &::after {
-      background: #000;
-      box-shadow: 0 7px 0 #000, 0 14px 0 #000;
-    }
-  }
-
-  .notifications .icon-circle {
+  .notifications.unread-notifications::after {
     color: $admin-color;
   }
 
@@ -193,38 +196,54 @@ $sidebar-active: #f4fcd0;
       line-height: $line-height * 2;
 
       .button {
+        @include brand-text;
         background: #fff;
-        color: $brand;
       }
-    }
-  }
-
-  tr {
-    background: #fff;
-    border: 1px solid $border;
-
-    &:hover {
-      background: #f3f6f7;
     }
   }
 
   table {
 
+    caption {
+      @include element-invisible;
+    }
+
     thead {
-      color: #fff;
+
+      &,
+      tr {
+        border: 0;
+      }
+
+      th:first-of-type {
+        border-top-left-radius: rem-calc(8);
+      }
+
+      th:last-of-type {
+        border-top-right-radius: rem-calc(8);
+      }
     }
 
     th {
-      background: $brand;
-      color: #fff;
+      background: $table-header;
+      color: $admin-text;
+      padding: $line-height / 2;
 
       label {
-        color: #fff;
+        color: $white;
       }
 
       a {
         color: inherit;
         white-space: nowrap;
+      }
+    }
+
+    tr {
+      border: $table-border;
+
+      &:hover {
+        background: #f3f6f7;
       }
     }
 
@@ -249,6 +268,23 @@ $sidebar-active: #f4fcd0;
 
     .input-group-label {
       height: $line-height * 2;
+    }
+
+    .checkbox,
+    .radio {
+      font-weight: bold;
+    }
+
+    select {
+      height: $input-height;
+    }
+
+    [type]:not([type="button"], [type=checkbox], [type=file], [type=radio], [type=submit]),
+    select {
+      background-color: $white;
+      border: $admin-border;
+      border-radius: rem-calc(6);
+      box-shadow: none;
     }
   }
 
@@ -617,9 +653,10 @@ code {
 .admin-content > header {
   align-items: flex-start;
   display: flex;
+  flex-wrap: wrap;
 
   a {
-    @include hollow-button;
+    @include regular-button;
     margin-left: auto;
   }
 }
@@ -632,7 +669,7 @@ code {
     display: block;
 
     &.is-active {
-      color: $brand;
+      @include brand-text;
       font-weight: bold;
       text-decoration: underline;
     }
@@ -764,10 +801,6 @@ table {
       color: $text-medium;
     }
 
-    [type]:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]) {
-      background: $white;
-    }
-
     .legislation-process-start,
     .legislation-process-end {
       @include breakpoint(medium) {
@@ -800,7 +833,6 @@ table {
 .legislation-questions-form {
 
   [type]:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]) {
-    background: $white;
     margin-bottom: 0;
 
     @include breakpoint(medium) {
@@ -924,10 +956,6 @@ table {
     @include breakpoint(medium) {
       text-align: right;
     }
-  }
-
-  [type]:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]) {
-    background: $white;
   }
 
   .control {
@@ -1128,41 +1156,9 @@ table {
   }
 }
 
-.budget-phase-enabled {
-  font-weight: bold;
-  padding-left: rem-calc(20);
-  position: relative;
-  text-decoration: none;
-
-  &.enabled::before,
-  &.disabled::before {
-    font-family: "icons";
-    left: 0;
-    position: absolute;
-  }
-
-  &.enabled {
-    color: $check;
-
-    &::before {
-      color: $check;
-      content: "\6c";
-    }
-  }
-
-  &.disabled {
-    color: #000;
-
-    &::before {
-      color: #000;
-      content: "\76";
-    }
-  }
-}
-
 .columns-selector {
 
-  span[class^="icon-"] {
+  [class^="icon-"] {
     vertical-align: middle;
   }
 
