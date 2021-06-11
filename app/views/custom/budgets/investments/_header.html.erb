@@ -79,10 +79,10 @@
                       <h2>
                       <% if current_user && current_user.balloted_heading_id == params[:heading_id].to_i %>
                         <%= t("budgets.investments.index.by_heading", heading: @heading.name) %>
-                      <% elsif  current_user && current_user.balloted_heading_id && @budget.headings[current_user.balloted_heading_id]%>
-                        <%= t("budgets.investments.index.by_wrong_heading", heading: @budget.headings[current_user.balloted_heading_id].name) %>
+                      <% elsif  current_user && current_user.balloted_heading_id && @budget.headings[current_user.balloted_heading_id - 1] %>
+                        <%= t("budgets.investments.index.by_wrong_heading", heading: @budget.headings[current_user.balloted_heading_id - 1].name) %>
                       <% else %>
-                      <%= t("budgets.investments.index.sign_in_heading")%>
+                        <%= t("budgets.investments.index.sign_in_heading")%>
                       <% end %>
                       </h2>
                     <% elsif @budget.headings.count == 1 %>
