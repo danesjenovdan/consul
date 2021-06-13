@@ -82,7 +82,7 @@ sl:
         unfeasible_text: "Investicije morajo izpolnjevati nekatere kriterije (legalnost, konkretnost, da so v pristojnosti občine/mesta, ne presegajo meje proračuna), da se jih označi kot izvedljive in lahko dosežejo fazo končnega glasovanja. Vse investicije, ki ne izpolnjuejo teh kriterijev, so označene kot neizvedljive in objavljene na spodnjem seznamu, skupaj s poročili o neizvedljivosti."
         by_heading: "Izbrano območje: %{heading}."
         by_heading_single: "Tvoj proračun"
-        by_wrong_heading: "V tem območju ne moreš glasovati. Glasuješ lahko v območju %{heading}."
+        by_wrong_heading: "V tem območju ne moreš glasovati. Glasuješ lahko v območju: %{heading}."
         sign_in_heading: "Za glasovanje se moraš prijaviti ali registrirati."
         search_form:
           button: Išči
@@ -157,7 +157,7 @@ sl:
         check_ballot: Preveri moja glasovanja
         different_heading_assigned: "Glasoval/-a si že v drugem območju: %{heading_link}"
         different_heading_assigned_html: "Glasoval/-a si že v drugem območju: %{heading_link}"
-        change_ballot: "V tem območju ti ni dovoljeno glasovati. Glasuješ lahko v območju %{heading_link}."
+        change_ballot: "V tem območju ti ni dovoljeno glasovati. Glasuješ lahko v območju: %{heading_link}."
         check_ballot_link: "preveri moja glasovanja"
         price: "Višina sredstev namenjenih temu območju je"
     progress_bar:
