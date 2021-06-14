@@ -2,7 +2,7 @@ require_dependency Rails.root.join('app', 'controllers', 'users', 'registrations
 
 class Users::RegistrationsController < Devise::RegistrationsController
   def get_balloted_heading_id(address)
-    balloted_heading_id = nil
+    balloted_heading_id = 0
     if address.include? "Topol pri Medvodah"
       balloted_heading_id = 1
     end
@@ -259,7 +259,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       balloted_heading_id = 11
     end
 
-    return balloted_heading_id + 5
+    balloted_heading_id += 5
+    return balloted_heading_id
   end
 
   def sign_up_params
