@@ -1,4 +1,58 @@
-// Override and add customized styles in this file.
-//
-// You can also create SCSS files in the app/assets/stylesheets/custom/
-// folder and they will be loaded automatically.
+@import 'custom/fonts';
+@import 'custom/foundation_and_overrides';
+@import 'custom/layout';
+@import 'icons';
+@import 'custom/icons';
+@import "custom/pages";
+
+.header-logo {
+    height: 100px;
+    width: 350px;
+    max-width: 100%;
+    background-image: image-url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+
+    @media (max-width: 767px) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.welcome-column {
+    background-image: none !important;
+
+    &.accepting {
+        background-color: #B9E5FB !important;
+    }
+    &.balloting {
+        background-color: #C8E2AE !important;
+    }
+    &.finished {
+        background-color: #FFE3A6 !important;
+    }
+
+    .linkable {
+        background-image: none !important;
+    }
+
+    .action-button.large {
+        background-color: #00aeef !important;
+        background-image: none !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+    }
+}
+
+.top-bar {
+    background: #ffffff !important;
+
+    .site-title-holder {
+        display: none !important;
+    }
+
+    .language-picker li a {
+        line-height: 100px;
+    }
+}
