@@ -1,22 +1,4 @@
-// Overrides and adds customized foundation settings in this file
-// Read more on documentation:
-// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
-// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
-//
-
-.welcome-column {
-
-    &.accepting {
-        background-color: #B9E5FB !important;
-    }
-    &.balloting {
-        background-color: #C8E2AE !important;
-    }
-    &.finished {
-        background-color: #FFE3A6 !important;
-    }
-
-    .linkable {
-        background-image: none !important;
-    }
-}
+// Welcome-columns phases colors 
+$accepting: #B9E5FB;
+$balloting: #C8E2AE;
+$finnished: #FFE3A6;

@@ -23,7 +23,19 @@
 .welcome-column {
     background-image: none !important;
 
+    &.accepting {
+        background-color: $accepting !important;
+    }
+    &.balloting {
+        background-color: $balloting !important;
+    }
+    &.finished {
+        background-color: $finnished !important;
+    }
 
+    .linkable {
+        background-image: none !important;
+    }
     .linkable {
         background-image: none !important;
     }
