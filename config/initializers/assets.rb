@@ -18,3 +18,5 @@ Rails.application.config.assets.precompile += %w[sdg/*.png]
 Rails.application.config.assets.precompile += %w[sdg/**/*.png]
 
 # Loads custom images and custom fonts before app/assets/images and app/assets/fonts
+
+Rails.application.config.assets.precompile += %w( custom.scss custom.js )

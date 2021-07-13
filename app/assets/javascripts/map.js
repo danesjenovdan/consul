@@ -6,6 +6,11 @@
       $("*[data-map]:visible").each(function() {
         App.Map.initializeMap(this);
       });
+      $(".js-toggle-map").on({
+        click: function() {
+          App.Map.toggleMap();
+        }
+      });
     },
     destroy: function() {
       App.Map.maps.forEach(function(map) {
@@ -143,6 +148,10 @@
           }
         });
       }
+    },
+    toggleMap: function() {
+      $(".map").toggle();
+      $(".js-location-map-remove-marker").toggle();
     },
     cleanInvestmentCoordinates: function(element) {
       var clean_markers, markers;
