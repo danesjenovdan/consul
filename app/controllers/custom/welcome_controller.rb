@@ -1,4 +1,4 @@
-require_dependency Rails.root.join('app', 'controllers', 'welcome_controller').to_s
+require_dependency Rails.root.join("app", "controllers", "welcome_controller").to_s
 
 class WelcomeController < ApplicationController
   skip_authorization_check
@@ -6,5 +6,4 @@ class WelcomeController < ApplicationController
   before_action only: [:index]
 
   layout "devise", only: [:verification]
-
 end

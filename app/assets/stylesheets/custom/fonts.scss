@@ -2,15 +2,20 @@
 
 @import url('https://use.fontawesome.com/releases/v5.6.3/css/solid.css');
 
-.fa, .fab, .fal, .far, .fas {
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  line-height: 1
+  line-height: 1;
 }
-.fa-check:before {
-  content: "\f00c"
+
+.fa-check::before {
+  content: "\f00c";
 }

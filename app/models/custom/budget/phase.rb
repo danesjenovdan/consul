@@ -1,4 +1,4 @@
-require_dependency Rails.root.join('app', 'models', 'budget', 'phase').to_s
+require_dependency Rails.root.join("app", "models", "budget", "phase").to_s
 
 class Budget
   class Phase < ApplicationRecord

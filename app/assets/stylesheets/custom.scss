@@ -1,3 +1,5 @@
+// https://github.com/danesjenovdan/consul/commit/38436b110274faab3d77c11fda255d3c1020fb6e
+// Foundation_and_overrides + fonts loading order has changed, see commit.
 @import "foundation_and_overrides";
 @import "fonts";
 @import 'custom/fonts';
@@ -45,13 +47,13 @@
     .action-button.large {
         background-color: #00aeef !important;
         background-image: none !important;
-        color: #ffffff !important;
+        color: #fff !important;
         text-transform: uppercase !important;
     }
 }
 
 .top-bar {
-    background: #ffffff !important;
+    background: #fff !important;
 
     .site-title-holder {
         display: none !important;

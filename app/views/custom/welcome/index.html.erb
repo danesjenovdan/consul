@@ -26,7 +26,7 @@
               <% unless phase.url %>
                 <div class="abtom4">
                   <% if phase.description %>
-                    <div class="large-description"><%= phase.description.html_safe %></div>
+                    <div class="large-description"><%= sanitize_and_auto_link phase.description %></div>
                   <% else %>
                     <p class="large-description">&nbsp;</p>
                   <% end %>

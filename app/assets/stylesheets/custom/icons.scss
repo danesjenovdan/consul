@@ -1,5 +1,5 @@
 .custom-icon {
-  background: image-url('icons.png') no-repeat;
+  background: image-url("icons.png") no-repeat;
   background-size: 36px 323px;
   display: inline-block;
   vertical-align: middle;
@@ -10,7 +10,7 @@
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 240dpi) {
   .custom-icon {
-    background: image-url('icons@2x.png') no-repeat;
+    background: image-url("icons@2x.png") no-repeat;
     background-size: 36px 323px;
   }
 }
