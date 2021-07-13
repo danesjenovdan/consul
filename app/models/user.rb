@@ -74,6 +74,7 @@ class User < ApplicationRecord
     class_name:  "Poll::Recount",
     foreign_key: :author_id,
     inverse_of:  :author
+  has_many :related_contents, foreign_key: :author_id, inverse_of: :author, dependent: nil
   has_many :topics, foreign_key: :author_id, inverse_of: :author
   belongs_to :geozone
 
@@ -158,11 +159,6 @@ class User < ApplicationRecord
 
   def legislation_proposal_votes(proposals)
     voted = votes.for_legislation_proposals(proposals)
-    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
-  end
-
-  def budget_investment_votes(budget_investments)
-    voted = votes.for_budget_investments(budget_investments)
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
   end
 

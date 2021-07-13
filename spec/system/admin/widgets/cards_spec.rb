@@ -163,7 +163,7 @@ describe "Cards", :admin do
         visit admin_site_customization_pages_path
 
         within "#site_customization_page_#{custom_page.id}" do
-          click_link "See Cards"
+          click_link "Manage cards"
         end
 
         click_link "Create card"
@@ -172,6 +172,7 @@ describe "Cards", :admin do
           href: admin_site_customization_page_widget_cards_path(custom_page))
 
         fill_in "Title", with: "Card for a custom page"
+        fill_in "Link URL", with: "/any_path"
         click_button "Create card"
 
         expect(page).to have_current_path admin_site_customization_page_widget_cards_path(custom_page)

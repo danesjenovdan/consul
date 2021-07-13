@@ -5,10 +5,7 @@ en:
       erase_account_link: Erase my account
       finish_verification: Complete verification
       notifications: Notifications
-      organization_name_label: Name of organization
-      organization_responsible_name_placeholder: Representative of the organization/collective
       personal: Personal details
-      phone_number_label: Phone number
       public_interests_my_title_list: Tags of elements you follow
       public_interests_user_title_list: Tags of elements this user follows
       save_changes_submit: Save changes
@@ -22,7 +19,6 @@ en:
       user_permission_verify: To perform all the actions verify your account.
       user_permission_verify_info: "* Only for users on Census."
       user_permission_votes: Participate on final voting
-      username_label: Username
       verified_account: Account verified
       verify_my_account: Verify my account
   application:
@@ -65,7 +61,6 @@ en:
       newest: Newest first
       oldest: Oldest first
       most_commented: Most commented
-    select_order: Sort by
     show:
       return_to_commentable: "Go back to "
   comments_helper:
@@ -93,7 +88,6 @@ en:
         submit_button: Save changes
       show_link: View debate
     form:
-      debate_title: Debate title
       tags_instructions: Tag this debate.
       tags_placeholder: "Enter the tags you would like to use, separated by commas (',')"
     index:
@@ -119,7 +113,6 @@ en:
       search_results:
         one: " containing the term <strong>'%{search_term}'</strong>"
         other: " containing the term <strong>'%{search_term}'</strong>"
-      select_order: Order by
       start_debate: Start a debate
       title: Debates
       section_header:
@@ -233,7 +226,6 @@ en:
     header:
       administration_menu: Menu
       administration: Administration
-      available_locales: Available languages
       collaborative_legislation: Collaborative legislation
       debates: Debates
       locale: "Language:"
@@ -384,7 +376,6 @@ en:
       search_results:
         one: " containing the term <strong>'%{search_term}'</strong>"
         other: " containing the term <strong>'%{search_term}'</strong>"
-      select_order: Order by
       select_order_long: "You are viewing proposals according to:"
       start_proposal: Create a proposal
       title: Proposals
@@ -677,6 +668,7 @@ en:
       back: "Go back to my content"
   shared:
     edit: "Edit"
+    filter: "Filter"
     save: "Save"
     delete: "Delete"
     "yes": "Yes"
@@ -782,6 +774,8 @@ en:
         zero: "0 languages in use"
         one: "1 language in use"
         other: "%{count} languages in use"
+    optional: "Optional"
+    required: "Required"
   social:
     facebook: "%{org} Facebook"
     twitter: "%{org} Twitter"
@@ -932,6 +926,7 @@ en:
     help: "You can add links of %{models} inside of %{org}."
     submit: "Add"
     error: "Link not valid. Remember to start with %{url}."
+    error_duplicate: "The related content you are adding already exists."
     error_itself: "Link not valid. You cannot relate a content to itself."
     success: "You added a new related content"
     is_related: "Is it related content?"
@@ -957,9 +952,6 @@ en:
       title: Links
       note: Add the links that are of interest
       add_new_link: Add new link
-    link_fields:
-      label_placeholder: Link title
-      url_placeholder: Link address
   communities:
     show:
       surveys: Surveys

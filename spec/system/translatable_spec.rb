@@ -47,7 +47,6 @@ describe "Public area translatable records" do
       fill_in "Title", with: "Titre en Français"
       fill_in_ckeditor "Description", with: "Contenu en Français"
 
-      select "Everywhere", from: "budget_investment_heading_id"
       check "budget_investment_terms_of_service"
       click_button "Create Investment"
 
@@ -76,7 +75,6 @@ describe "Public area translatable records" do
       fill_in "Title", with: "Titre en Français"
       fill_in_ckeditor "Description", with: "Contenu en Français"
 
-      select "Everywhere", from: "budget_investment_heading_id"
       check "budget_investment_terms_of_service"
       click_button "Create Investment"
 
@@ -99,7 +97,6 @@ describe "Public area translatable records" do
       visit new_budget_investment_path(budget)
       click_link "Remove language"
 
-      select "Everywhere", from: "budget_investment_heading_id"
       check "budget_investment_terms_of_service"
       click_button "Create Investment"
 
@@ -118,7 +115,7 @@ describe "Public area translatable records" do
     scenario "Highlight new locale added" do
       visit new_proposal_path
 
-      select "Español", from: "locale-switcher"
+      select "Español", from: "Language:"
 
       expect_to_have_language_selected "Español"
     end
@@ -209,7 +206,7 @@ describe "Public area translatable records" do
 
           expect(page).to have_field "Debate title", with: "Title in English"
 
-          select "Español", from: "locale-switcher"
+          select "Español", from: "Language:"
 
           expect(page).to have_field "Título del debate", with: "Título corregido"
           expect(page).to have_ckeditor "Texto inicial del debate", with: "Texto corregido"
