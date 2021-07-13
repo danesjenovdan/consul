@@ -31,7 +31,7 @@ class Budget < ApplicationRecord
             self,
             heading_id: current_user&.balloted_heading_id ?
               current_user&.balloted_heading_id :
-              self&.headings.first.id
+              self.headings.first.id
           )
         else
           url = budget_investments_url.call(self)
