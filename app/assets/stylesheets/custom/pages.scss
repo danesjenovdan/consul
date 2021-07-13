@@ -1,6 +1,6 @@
 
 .phase-enrichment {
-  background: image-url('custom_phases.png') no-repeat;
+  background: image-url("custom_phases.png") no-repeat;
   background-size: 960px 270px;
 
   &.accepting {
@@ -35,7 +35,7 @@
   &.reviewing,
   &.valuating,
   &.reviewing_ballots {
-    background: image-url('phases/kajpazdaj.png') center no-repeat;
+    background: image-url("phases/kajpazdaj.png") center no-repeat;
     background-size: 100%;
     @include breakpoint(medium up) {
       background-size: 127%;
@@ -49,7 +49,7 @@
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 240dpi) {
   .phase-enrichment {
-    background: image-url('custom_phases@2x.png') no-repeat;
+    background: image-url("custom_phases@2x.png") no-repeat;
     background-size: 960px 270px;
   }
 }
@@ -279,7 +279,7 @@ span:hover:before {
   }
   .custom-icon.arrow-small-right,
   .custom-icon.arrow-large-right {
-    background-image: image-url('arrow-white.svg');
+    background-image: image-url("arrow-white.svg");
     background-position: center;
     background-size: 45px 42px;
     width: 33px;
@@ -289,7 +289,7 @@ span:hover:before {
 
 .custom-icon.arrow-small-right,
 .custom-icon.arrow-large-right {
-  background-image: image-url('arrow.svg');
+  background-image: image-url("arrow.svg");
   background-position: center;
   background-size: 45px 42px;
   width: 33px;
