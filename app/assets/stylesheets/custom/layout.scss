@@ -190,7 +190,7 @@ a {
 }
 
 .large-description,
-.large-description p, {
+.large-description p {
   font-size: $large-font-size;
 }
 
@@ -255,6 +255,10 @@ a {
 
 .wrapper {
   // height: 100%;
+  header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0rem;
+  }
 }
 
 .push {
@@ -267,6 +271,9 @@ a {
   position: relative;
   right: 0;
   width: 100%;
+  margin-top: 0rem;
+  padding-bottom: 0rem;
+  padding-top: 0rem;
 }
 
 // 02. Header
