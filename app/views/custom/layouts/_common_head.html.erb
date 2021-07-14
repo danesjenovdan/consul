@@ -3,5 +3,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title><%= content_for?(:title) ? yield(:title) : default_title %></title>
 <%= stylesheet_link_tag "custom" %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
 <%= csrf_meta_tags %>
 <%= favicon_link_tag "favicon.ico" %>
