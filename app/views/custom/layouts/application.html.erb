@@ -11,10 +11,10 @@
                      type: "image/png" %>
     <%= content_for :social_media_meta_tags %>
 
-    <%= raw setting["html.per_page_code_head"] %>
+    <%= sanitize setting["html.per_page_code_head"] %>
   </head>
   <body class="<%= yield (:body_class) %>">
-    <%= raw setting["html.per_page_code_body"] %>
+    <%= sanitize setting["html.per_page_code_body"] %>
 
     <div class="wrapper <%= yield (:wrapper_class) %>">
       <%= render "layouts/header", with_subnavigation: true %>
