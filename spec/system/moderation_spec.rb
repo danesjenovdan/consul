@@ -23,7 +23,8 @@ describe "Moderation" do
     login_as(user)
 
     visit root_path
-    click_link "Menu"
+    #REWORK CHANGE
+    #click_link "Menu"
 
     expect(page).not_to have_link("Moderation")
 
@@ -39,7 +40,8 @@ describe "Moderation" do
     login_as(user)
 
     visit root_path
-    click_link "Menu"
+    #REWORK CHANGE
+    #click_link "Menu"
 
     expect(page).not_to have_link("Moderation")
 
@@ -55,7 +57,8 @@ describe "Moderation" do
     login_as(user)
 
     visit root_path
-    click_link "Menu"
+    #REWORK CHANGE
+    #click_link "Menu"
 
     expect(page).not_to have_link("Moderation")
 
@@ -71,7 +74,8 @@ describe "Moderation" do
     login_as(user)
 
     visit root_path
-    click_link "Menu"
+    #REWORK CHANGE
+    #click_link "Menu"
 
     expect(page).not_to have_link("Moderation")
 
@@ -87,7 +91,8 @@ describe "Moderation" do
 
     login_as(user)
     visit root_path
-    click_link "Menu"
+    #REWORK CHANGE
+    #click_link "Menu"
     click_link "Moderation"
 
     expect(page).to have_current_path(moderation_root_path)
@@ -99,7 +104,8 @@ describe "Moderation" do
 
     login_as(user)
     visit root_path
-    click_link "Menu"
+    #REWORK CHANGE
+    #click_link "Menu"
     click_link "Moderation"
 
     expect(page).to have_current_path(moderation_root_path)
@@ -111,7 +117,8 @@ describe "Moderation" do
     login_as(user)
 
     visit root_path
-    click_link "Menu"
+    #REWORK CHANGE
+    #click_link "Menu"
 
     expect(page).to have_link("Moderation")
     expect(page).not_to have_link("Administration")
@@ -128,7 +135,8 @@ describe "Moderation" do
       login_as(user)
 
       visit root_path
-      click_link "Menu"
+      #REWORK CHANGE
+      #click_link "Menu"
       click_link "Moderation"
 
       expect(page).to have_link("Go back to OrgName")

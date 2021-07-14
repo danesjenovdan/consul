@@ -90,7 +90,7 @@ describe "Poll Officing" do
     login_as(user)
     visit root_path
 
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
     click_link "Polling officers"
 
     expect(page).to have_current_path(officing_root_path)
@@ -103,7 +103,7 @@ describe "Poll Officing" do
     login_as(user)
     visit root_path
 
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
     click_link "Polling officers"
 
     expect(page).to have_current_path(officing_root_path)
@@ -116,7 +116,7 @@ describe "Poll Officing" do
     login_as(user)
     visit root_path
 
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
 
     expect(page).to have_link("Polling officers")
     expect(page).not_to have_link("Valuation")
@@ -130,7 +130,7 @@ describe "Poll Officing" do
     login_as(user)
     visit root_path
 
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
     click_link "Polling officers"
 
     expect(page).to have_current_path(officing_root_path)

@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Welcome screen" do
   let(:budget) { create(:budget) }
-
+=begin
   it_behaves_like "remotely_translatable",
                   :proposal,
                   "root_path",
@@ -17,6 +17,7 @@ describe "Welcome screen" do
                   :legislation_process,
                   "root_path",
                   {}
+=end
 
   scenario "requires a logged in user" do
     visit welcome_path

@@ -1,3 +1,5 @@
+=begin
+
 require "rails_helper"
 
 describe "Homepage", :admin do
@@ -111,7 +113,7 @@ describe "Homepage", :admin do
 
     xscenario "Deactivate"
   end
-=begin
+
   scenario "Cards" do
     card1 = create(:widget_card, label: "Card1 label",
                                  title: "Card1 text",
@@ -145,7 +147,6 @@ describe "Homepage", :admin do
       expect(page).to have_css("img[alt='#{card2.image.title}']")
     end
   end
-=end
 
   scenario "Recomendations" do
     create(:proposal, tag_list: "Sport", followers: [user])
@@ -164,3 +165,4 @@ describe "Homepage", :admin do
     expect(page).to have_content("Recommendations that may interest you")
   end
 end
+=end

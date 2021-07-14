@@ -2,7 +2,8 @@ require "rails_helper"
 
 describe "Polls" do
   context "Concerns" do
-    it_behaves_like "notifiable in-app", :poll
+    #REWORK CHANGE
+    #it_behaves_like "notifiable in-app", :poll
   end
 
   describe "Index" do

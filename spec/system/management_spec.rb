@@ -8,7 +8,7 @@ describe "Management" do
     login_as(user)
 
     visit root_path
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
     click_link "Management"
 
     expect(page).to have_content("My content")
@@ -21,7 +21,7 @@ describe "Management" do
     login_as(user)
     visit root_path
 
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
     click_link "Management"
 
     expect(page).not_to have_content("My content")

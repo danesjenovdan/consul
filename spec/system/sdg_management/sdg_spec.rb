@@ -8,7 +8,7 @@ describe "SDG Management" do
 
     scenario "shows the SDG content link" do
       visit root_path
-      click_link "Menu"
+      #click_link "Menu" REWORK CHANGE
 
       expect(page).to have_link "SDG content"
     end
@@ -19,7 +19,7 @@ describe "SDG Management" do
 
     scenario "does not show the SDG Content link" do
       visit root_path
-      click_link "Menu"
+      #click_link "Menu" REWORK CHANGE
 
       expect(page).not_to have_link "SDG content"
     end

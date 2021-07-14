@@ -72,7 +72,7 @@ describe "Admin" do
     Setting["feature.sdg"] = true
 
     visit root_path
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
 
     expect(page).to have_link("Administration")
     expect(page).to have_link("Moderation")
@@ -84,7 +84,7 @@ describe "Admin" do
   scenario "Admin dashboard", :admin do
     visit root_path
 
-    click_link "Menu"
+    #click_link "Menu"
     click_link "Administration"
 
     expect(page).to have_current_path(admin_root_path)

@@ -22,7 +22,7 @@ describe "Valuation budget investments" do
 
   scenario "Display link to valuation section" do
     visit root_path
-    click_link "Menu"
+    #click_link "Menu" REWORK CHANGE
 
     expect(page).to have_link "Valuation", href: valuation_root_path
   end
