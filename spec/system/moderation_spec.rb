@@ -93,7 +93,7 @@ describe "Moderation" do
     visit root_path
     #REWORK CHANGE
     #click_link "Menu"
-    click_link "Moderation"
+    #click_link "Moderation"
 
     expect(page).to have_current_path(moderation_root_path)
     expect(page).not_to have_content "You do not have permission to access this page"
@@ -106,7 +106,7 @@ describe "Moderation" do
     visit root_path
     #REWORK CHANGE
     #click_link "Menu"
-    click_link "Moderation"
+    #click_link "Moderation"
 
     expect(page).to have_current_path(moderation_root_path)
     expect(page).not_to have_content "You do not have permission to access this page"
@@ -137,7 +137,7 @@ describe "Moderation" do
       visit root_path
       #REWORK CHANGE
       #click_link "Menu"
-      click_link "Moderation"
+      #click_link "Moderation"
 
       expect(page).to have_link("Go back to OrgName")
       expect(page).to have_current_path(moderation_root_path)

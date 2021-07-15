@@ -9,7 +9,7 @@ describe "Management" do
 
     visit root_path
     #click_link "Menu" REWORK CHANGE
-    click_link "Management"
+    #click_link "Management" REWORK CHANGE
 
     expect(page).to have_content("My content")
     expect(page).to have_content("My account")
@@ -22,7 +22,7 @@ describe "Management" do
     visit root_path
 
     #click_link "Menu" REWORK CHANGE
-    click_link "Management"
+    #click_link "Management" REWORK CHANGE
 
     expect(page).not_to have_content("My content")
     expect(page).not_to have_content("My account")

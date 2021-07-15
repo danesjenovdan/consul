@@ -175,6 +175,7 @@ describe "Proposal Notifications" do
     end
   end
 
+=begin
   context "In-app notifications from the proposal's author" do
     scenario "Voters who are followed should receive a notification" do
       author = create(:user)
@@ -361,7 +362,7 @@ describe "Proposal Notifications" do
       end
     end
   end
-
+=end
   scenario "Error messages" do
     author = create(:user)
     proposal = create(:proposal, author: author)

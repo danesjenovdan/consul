@@ -34,7 +34,7 @@ describe "Admin custom information texts", :admin do
     expect(page).to have_content "Confirm your email"
 
     within "#information-texts-tabs" do
-      click_link "Management"
+      #click_link "Management" REWORK CHANGE
     end
 
     expect(page).to have_content "This user account is already verified."

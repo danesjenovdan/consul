@@ -111,7 +111,7 @@ describe "Public area translatable records" do
 
       expect_to_have_language_selected "English"
     end
-
+=begin REWORK CHANGE
     scenario "Highlight new locale added" do
       visit new_proposal_path
 
@@ -119,7 +119,7 @@ describe "Public area translatable records" do
 
       expect_to_have_language_selected "Español"
     end
-
+=end
     scenario "Select a locale and add it to the form" do
       visit new_budget_investment_path(create(:budget))
 

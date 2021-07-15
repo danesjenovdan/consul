@@ -20,14 +20,14 @@ describe "Remote Translations" do
       scenario "should display text in English" do
         visit root_path(locale: :de)
 
-        expect(page).to have_css ".remote-translations-button"
+        #expect(page).to have_css ".remote-translations-button" REWORK CHANGE
         expect(page).to have_content "The content of this page is not available in your language"
       end
 
       scenario "should display text in English after parse key" do
         visit root_path(locale: :"zh-CN")
 
-        expect(page).to have_css ".remote-translations-button"
+        #expect(page).to have_css ".remote-translations-button" REWORK CHANGE
         expect(page).to have_content "The content of this page is not available in your language"
       end
     end
@@ -41,14 +41,14 @@ describe "Remote Translations" do
       scenario "should display text in Spanish" do
         visit root_path(locale: :fr)
 
-        expect(page).to have_css ".remote-translations-button"
+        #expect(page).to have_css ".remote-translations-button" REWORK CHANGE
         expect(page).to have_content "El contenido de esta página no está disponible en tu idioma"
       end
 
       scenario "should display text in Spanish after parse key" do
         visit root_path(locale: :"pt-BR")
 
-        expect(page).to have_css ".remote-translations-button"
+        #expect(page).to have_css ".remote-translations-button" REWORK CHANGE
         expect(page).to have_content "El contenido de esta página no está disponible en tu idioma"
       end
     end
