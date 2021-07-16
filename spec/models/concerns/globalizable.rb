@@ -85,7 +85,8 @@ shared_examples_for "globalizable" do |factory_name|
       expect(record.send(attribute)).to eq "In English"
       I18n.with_locale(:es) { expect(record.send(attribute)).to eq "Actualizado" }
     end
-=begin REWORK CHANGE 
+
+=begin REWORK CHANGE
     it "Does not save invalid translations" do
       skip("cannot have invalid translations") if required_fields.empty?
 

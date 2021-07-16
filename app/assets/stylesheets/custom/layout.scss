@@ -312,11 +312,11 @@ footer {
 
   .logo-right {
     text-align: right;
-    background-position: right center
+    background-position: right center;
   }
 
   .logo {
-    background: image-url('municipalities/default.png') no-repeat;
+    background: image-url("municipalities/default.png") no-repeat;
     background-size: 119px 61px;
     display: block;
     height: rem-calc(61);
@@ -324,22 +324,22 @@ footer {
     width: 119px;
 
     &.default {
-      background: image-url('municipalities/default.png') no-repeat;
+      background: image-url("municipalities/default.png") no-repeat;
       background-size: 119px 61px;
     }
   }
 
   .logo-djnd {
-      background: image-url('djnd.png') no-repeat;
+    background: image-url("djnd.png") no-repeat;
+    background-size: 119px 61px;
+    background-position: right;
+    display: block;
+    height: rem-calc(61);
+
+    &.default {
+      background: image-url("djnd.png") no-repeat;
       background-size: 119px 61px;
-      background-position: right;
-      display: block;
-      height: rem-calc(61);
-  
-      &.default {
-        background: image-url('djnd.png') no-repeat;
-        background-size: 119px 61px;
-      }
+    }
   }
 
   .footer-links {
@@ -350,22 +350,24 @@ footer {
   only screen and (min--moz-device-pixel-ratio: 1.5),
   only screen and (min-resolution: 240dpi) {
     .logo {
-      background: image-url('municipalities/default@2x.png') no-repeat;
+      background: image-url("municipalities/default@2x.png") no-repeat;
       background-size: 119px 61px;
 
       &.default {
-        background: image-url('municipalities/default@2x.png') no-repeat;
+        background: image-url("municipalities/default@2x.png") no-repeat;
         background-size: 119px 61px;
       }
     }
+
     .logo-djnd {
-      background: image-url('djnd.png') no-repeat;
+      background: image-url("djnd.png") no-repeat;
       background-size: 119px 61px;
+
       &.default {
-        background: image-url('djnd.png') no-repeat;
+        background: image-url("djnd.png") no-repeat;
         background-size: 119px 61px;
       }
-  }
+    }
   }
 
   @media (max-width: 767px) {

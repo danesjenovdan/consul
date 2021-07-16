@@ -1,5 +1,5 @@
-require "rails_helper"
 =begin REWORK CHANGE
+require "rails_helper"
 describe ApplicationController do
   describe "#current_budget" do
     it "returns the last budget that is not in draft phase" do

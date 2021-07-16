@@ -198,7 +198,7 @@ describe "Budget Investments" do
       end
     end
   end
-=end 
+=end
 
   context("Filters") do
     scenario "by unfeasibility" do
