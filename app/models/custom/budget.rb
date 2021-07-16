@@ -1,7 +1,6 @@
 require_dependency Rails.root.join("app", "models", "budget").to_s
 
 class Budget < ApplicationRecord
-
   CUSTOM_PHASE_ACCEPTING = :accepting
   CUSTOM_PHASE_SELECTING = :selecting
   CUSTOM_PHASE_BALLOTING = :balloting
@@ -29,7 +28,7 @@ class Budget < ApplicationRecord
             self,
             heading_id: current_user&.balloted_heading_id ?
               current_user&.balloted_heading_id :
-              self.headings.first.id
+              self&.headings&.first&.id
           )
         else
           url = budget_investments_url.call(self)
