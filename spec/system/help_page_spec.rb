@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "Help page" do
-=begin REWORK CHANGE   
+=begin REWORK CHANGE
   context "Index" do
     scenario "Help menu and page is visible if feature is enabled" do
       Setting["feature.help_page"] = true
@@ -19,7 +19,6 @@ describe "Help page" do
     end
     scenario "Help menu and page is hidden if feature is disabled" do
       Setting["feature.help_page"] = nil
-      
       visit root_path
       
       expect(page).not_to have_link "Help"
