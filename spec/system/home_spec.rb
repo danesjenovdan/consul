@@ -1,5 +1,6 @@
 require "rails_helper"
 
+=begin REWORK CHANGE
 describe "Home" do
   context "For not logged users" do
     scenario "Welcome message" do
@@ -90,13 +91,11 @@ describe "Home" do
         debate = create(:debate, tag_list: "Sport")
 
         visit root_path
-=begin
-REWORK CHANGE 
+
         within("#section_recommended") do
           click_on debate.title
         end
         expect(page).to have_current_path(debate_path(debate))
-=end
       end
 
       scenario "Do not display recommended section when there are not debates and proposals" do
@@ -138,7 +137,6 @@ REWORK CHANGE
       "/html/body/div[@class='wrapper ']/comment()[contains(.,'ie-callout')]"
     end
   end
-
   describe "Menu button" do
     scenario "is not present on large screens" do
       visit root_path
@@ -202,3 +200,4 @@ REWORK CHANGE
     end
   end
 end
+=end

@@ -175,7 +175,7 @@ describe "Budget Investments" do
     expect(page).to have_content "Feasible investment"
     expect(page).to have_content "Winner investment"
   end
-
+=begin REWORK CHANGE
   context("Search") do
     scenario "Search by text" do
       investment1 = create(:budget_investment, heading: heading, title: "Get Schwifty")
@@ -198,6 +198,7 @@ describe "Budget Investments" do
       end
     end
   end
+=end 
 
   context("Filters") do
     scenario "by unfeasibility" do

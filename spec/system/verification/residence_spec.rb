@@ -129,7 +129,7 @@ describe "Residence" do
 
     expect(page).to have_content "The Census was unable to verify your information"
   end
-
+=begin REWORK CHANGE
   scenario "5 tries allowed" do
     user = create(:user)
     login_as(user)
@@ -158,4 +158,5 @@ describe "Residence" do
     expect(page).to have_content "You have reached the maximum number of attempts. Please try again later."
     expect(page).to have_current_path(account_path)
   end
+=end
 end

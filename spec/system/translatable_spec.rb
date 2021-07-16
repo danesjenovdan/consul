@@ -187,6 +187,7 @@ describe "Public area translatable records" do
       end.to_h
     end
 
+=begin REWORK CHANGE
     context "Update a translation" do
       context "With valid data" do
         let(:translatable) { create(:debate) }
@@ -212,7 +213,6 @@ describe "Public area translatable records" do
           expect(page).to have_ckeditor "Texto inicial del debate", with: "Texto corregido"
         end
       end
-
       context "Update a translation with invalid data" do
         let(:translatable) { create(:proposal) }
 
@@ -233,6 +233,7 @@ describe "Public area translatable records" do
         end
       end
     end
+=end
 
     context "Globalize javascript interface" do
       let(:translatable) { create(:debate) }

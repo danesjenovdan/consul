@@ -33,7 +33,7 @@ shared_examples "milestoneable" do |factory_name|
         expect(page).to have_link("https://consul.dev")
         expect(page).to have_content(first_milestone.status.name)
       end
-
+=begin REWORK CHANGE
       select "Español", from: "Language:"
 
       find("#tab-milestones-label").click
@@ -42,6 +42,7 @@ shared_examples "milestoneable" do |factory_name|
         expect(page).to have_content("Último hito con el link https://consul.dev")
         expect(page).to have_link("https://consul.dev")
       end
+=end
     end
 
     scenario "Show no_milestones text" do
