@@ -39,13 +39,13 @@ class Budget < ApplicationRecord
       end
       custom_phases[phase] = CustomPhase.new(
         phase,
-        current_phase.summary,
-        current_phase.presentation_summary_1,
-        current_phase.presentation_summary_2,
-        current_phase.presentation_summary_2,
-        current_phase.description,
-        current_phase.starts_at,
-        current_phase.ends_at,
+        current_phase&.summary,
+        current_phase&.presentation_summary_1,
+        current_phase&.presentation_summary_2,
+        current_phase&.presentation_summary_2,
+        current_phase&.description,
+        current_phase&.starts_at,
+        current_phase&.ends_at,
         url,
         enabled
       )

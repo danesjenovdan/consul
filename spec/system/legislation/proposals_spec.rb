@@ -18,8 +18,8 @@ describe "Legislation Proposals" do
     within("#navigation_bar") do
       expect(page).to have_css(".is-active", count: 1)
     end
-=end
   end
+=end
 
   describe "Random pagination" do
     let(:per_page) { 4 }
