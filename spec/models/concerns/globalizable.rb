@@ -138,7 +138,7 @@ shared_examples_for "globalizable" do |factory_name|
 
       expect(record.translations.map(&:locale)).to match_array %i[en es]
     end
-=begin REWORK CHANGE 
+=begin REWORK CHANGE
     it "Does not remove translations when there's invalid data" do
       skip("cannot have invalid translations") if required_fields.empty?
 
