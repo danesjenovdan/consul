@@ -7,8 +7,7 @@ class Budget < ApplicationRecord
   CUSTOM_PHASE_BALLOTING = :balloting
   CUSTOM_PHASE_FINISHED = :finished
 
-  CustomPhase = Struct.new(:kind, :summary, :presentation_summary_1, :presentation_summary_2,
-    :presentation_summary_3, :description, :starts_at, :ends_at, :url, :enabled) do
+  CustomPhase = Struct.new(:kind, :summary, :description, :starts_at, :ends_at, :url, :enabled) do
   end
 
   def self.current
@@ -23,7 +22,6 @@ class Budget < ApplicationRecord
       CUSTOM_PHASE_BALLOTING => true,
       CUSTOM_PHASE_FINISHED => true
     }.each do |phase, enabled|
-      current_phase = self.phases.public_send(phase)
       url = nil
       if self.phase === phase.to_s
         if self.phase === "balloting"
@@ -40,9 +38,6 @@ class Budget < ApplicationRecord
       custom_phases[phase] = CustomPhase.new(
         phase,
         current_phase&.summary,
-        current_phase&.presentation_summary_1,
-        current_phase&.presentation_summary_2,
-        current_phase&.presentation_summary_2,
         current_phase&.description,
         current_phase&.starts_at,
         current_phase&.ends_at,

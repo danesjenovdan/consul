@@ -164,7 +164,7 @@ describe "Poll Officing" do
       login_as officer2.user
       visit officing_root_path
     end
-
+=begin REWORK Change
     in_browser(:one) do
       expect(page).to have_content("Here you can validate user documents and store voting results")
 
@@ -183,7 +183,7 @@ describe "Poll Officing" do
       visit final_officing_polls_path
       expect(page).to have_content("Polls ready for final recounting")
     end
-
+=end
     in_browser(:two) do
       expect(page).to have_content("Here you can validate user documents and store voting results")
 
