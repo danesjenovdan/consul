@@ -37,21 +37,21 @@ describe "Admin budget groups", :admin do
         expect(page).to have_content(group1.name)
         expect(page).to have_content(group1.max_votable_headings)
         expect(page).to have_content(group1.headings.count)
-        expect(page).to have_link "Manage headings"
+        expect(page).to have_link "Headings"
       end
 
       within "#budget_group_#{group2.id}" do
         expect(page).to have_content(group2.name)
         expect(page).to have_content(group2.max_votable_headings)
         expect(page).to have_content(group2.headings.count)
-        expect(page).to have_link "Manage headings"
+        expect(page).to have_link "Headings"
       end
 
       within "#budget_group_#{group3.id}" do
         expect(page).to have_content(group3.name)
         expect(page).to have_content(group3.max_votable_headings)
         expect(page).to have_content(group3.headings.count)
-        expect(page).to have_link "Manage headings"
+        expect(page).to have_link "Headings"
       end
     end
 
@@ -129,6 +129,25 @@ describe "Admin budget groups", :admin do
       expect(page).to have_field "Maximum number of headings in which a user can select projects", with: "2"
     end
 
+    describe "Select for maxium number of headings to select projects" do
+      scenario "is present if there are headings in the group" do
+        group = create(:budget_group, budget: budget)
+        create(:budget_heading, group: group)
+
+        visit edit_admin_budget_group_path(budget, group)
+
+        expect(page).to have_field "Maximum number of headings in which a user can select projects"
+      end
+
+      scenario "is not present if there are no headings in the group" do
+        group = create(:budget_group, budget: budget)
+
+        visit edit_admin_budget_group_path(budget, group)
+
+        expect(page).not_to have_field "Maximum number of headings in which a user can select projects"
+      end
+    end
+
     scenario "Changing name for current locale will update the slug if budget is in draft phase" do
       group = create(:budget_group, budget: budget, name: "Old English Name")
 
@@ -142,7 +161,7 @@ describe "Admin budget groups", :admin do
 
       visit budget_group_path(budget, id: "old-english-name")
 
-      expect(page).to have_content "Select an option"
+      expect(page).to have_content "Select a heading"
 
       visit edit_admin_budget_group_path(budget, group)
 
@@ -154,7 +173,7 @@ describe "Admin budget groups", :admin do
 
       visit budget_group_path(budget, id: "new-english-name")
 
-      expect(page).to have_content "Select an option"
+      expect(page).to have_content "Select a heading"
     end
   end
 

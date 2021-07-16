@@ -2,7 +2,8 @@ require "rails_helper"
 
 describe "Polls" do
   context "Concerns" do
-    it_behaves_like "notifiable in-app", :poll
+    #REWORK CHANGE
+    #it_behaves_like "notifiable in-app", :poll
   end
 
   describe "Index" do
@@ -197,7 +198,7 @@ describe "Polls" do
         expect(answer2.title).to appear_before(answer1.title)
       end
     end
-
+=begin REWORK CHANGe
     scenario "Answer images are shown" do
       question = create(:poll_question, :yes_no, poll: poll)
       create(:image, imageable: question.question_answers.first, title: "The yes movement")
@@ -206,7 +207,7 @@ describe "Polls" do
 
       expect(page).to have_css "img[alt='The yes movement']"
     end
-
+=end
     scenario "Buttons to slide through images work back and forth" do
       question = create(:poll_question, :yes_no, poll: poll)
       create(:image, imageable: question.question_answers.last, title: "The no movement")

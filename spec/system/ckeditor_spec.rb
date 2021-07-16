@@ -8,11 +8,12 @@ describe "CKEditor" do
     visit new_debate_path
 
     expect(page).to have_css ".translatable-fields[data-locale='en'] .cke_wysiwyg_frame"
-
+=begin REWORK CHANGE
     click_link "Debates"
     click_link "Start a debate"
 
     expect(page).to have_css ".translatable-fields[data-locale='en'] .cke_wysiwyg_frame"
+=end
   end
 
   scenario "uploading an image through the upload tab", :admin do

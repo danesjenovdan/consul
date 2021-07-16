@@ -1,5 +1,6 @@
 require "rails_helper"
 
+=begin REWORK CHANGE
 describe "Home" do
   context "For not logged users" do
     scenario "Welcome message" do
@@ -94,7 +95,6 @@ describe "Home" do
         within("#section_recommended") do
           click_on debate.title
         end
-
         expect(page).to have_current_path(debate_path(debate))
       end
 
@@ -137,7 +137,6 @@ describe "Home" do
       "/html/body/div[@class='wrapper ']/comment()[contains(.,'ie-callout')]"
     end
   end
-
   describe "Menu button" do
     scenario "is not present on large screens" do
       visit root_path
@@ -174,4 +173,31 @@ describe "Home" do
 
     expect(page).not_to have_css(".title", text: "Featured")
   end
+
+  describe "Header Card" do
+    scenario "if there is header card with link, the link content is rendered" do
+      create(:widget_card, :header, link_text: "Link text", link_url: "consul.dev")
+
+      visit root_path
+
+      expect(page).to have_link "Link text", href: "consul.dev"
+    end
+
+    scenario "if there is header card without link, the link content is not rendered" do
+      create(:widget_card, :header, link_text: nil, link_url: nil)
+
+      visit root_path
+
+      within(".header-card") { expect(page).not_to have_link }
+    end
+
+    scenario "if there is header card without link and with text, the link content is not rendered" do
+      create(:widget_card, :header, link_text: "", link_url: "", link_text_es: "Link ES", title_es: "ES")
+
+      visit root_path(locale: :es)
+
+      within(".header-card") { expect(page).not_to have_link }
+    end
+  end
 end
+=end

@@ -1,5 +1,5 @@
 require "rails_helper"
-
+=begin REWORK CHANGE
 describe "Management" do
   let(:user) { create(:user) }
 
@@ -8,8 +8,8 @@ describe "Management" do
     login_as(user)
 
     visit root_path
-    click_link "Menu"
-    click_link "Management"
+    click_link "Menu" REWORK CHANGE
+    click_link "Management" REWORK CHANGE
 
     expect(page).to have_content("My content")
     expect(page).to have_content("My account")
@@ -21,11 +21,12 @@ describe "Management" do
     login_as(user)
     visit root_path
 
-    click_link "Menu"
-    click_link "Management"
+    click_link "Menu" REWORK CHANGE
+    click_link "Management" REWORK CHANGE
 
     expect(page).not_to have_content("My content")
     expect(page).not_to have_content("My account")
     expect(page).not_to have_content("Sign out")
   end
 end
+=end

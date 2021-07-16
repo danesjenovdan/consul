@@ -3,8 +3,9 @@ class Budget < ApplicationRecord
   include Sluggable
   include StatsVersionable
   include Reportable
+  include Imageable
 
-  translates :name, touch: true
+  translates :name, :main_link_text, touch: true
   include Globalizable
 
   class Translation
@@ -27,6 +28,7 @@ class Budget < ApplicationRecord
   validates :currency_symbol, presence: true
   validates :slug, presence: true, format: /\A[a-z0-9\-_]+\z/
   validates :voting_style, inclusion: { in: VOTING_STYLES }
+  validates :main_link_url, presence: true, if: -> { main_link_text.present? }
 
   has_many :investments, dependent: :destroy
   has_many :ballots, dependent: :destroy
@@ -42,6 +44,7 @@ class Budget < ApplicationRecord
   has_one :poll
 
   after_create :generate_phases
+  accepts_nested_attributes_for :phases
 
   scope :published, -> { where(published: true) }
   scope :drafting,  -> { where.not(id: published) }
@@ -157,6 +160,14 @@ class Budget < ApplicationRecord
 
   def balloting_or_later?
     current_phase&.balloting_or_later?
+  end
+
+  def single_group?
+    groups.one?
+  end
+
+  def single_heading?
+    single_group? && headings.one?
   end
 
   def heading_price(heading)
