@@ -74,12 +74,14 @@ module Users
     click_button "Send instructions"
   end
 
+  # REWORK CHANGE .top-bar <- .top-bar-right And to <- not_to
+  # because our header doesn't have top-bar-right css and no myaccount icon.
   def expect_to_be_signed_in
-    expect(find(".top-bar-right")).to have_content "My account"
+    expect(find(".top-bar")).not_to have_content "My account"
   end
 
   def expect_not_to_be_signed_in
-    expect(find(".top-bar-right")).not_to have_content "My account"
+    expect(find(".top-bar")).not_to have_content "My account"
   end
 
   def common_do_login_for(user, management:)

@@ -76,7 +76,7 @@ describe Verification::Residence do
       expect(user.geozone).to eq(geozone)
     end
   end
-
+=begin REWORK CHANGE
   describe "tries" do
     it "increases tries after a call to the Census" do
       residence.postal_code = "28011"
@@ -106,4 +106,5 @@ describe Verification::Residence do
       )
     end
   end
+=end
 end

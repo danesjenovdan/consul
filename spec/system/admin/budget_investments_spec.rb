@@ -1280,6 +1280,7 @@ describe "Admin budget investments", :admin do
 
     # The feature tested in this scenario works as expected but some underlying reason
     # we're not aware of makes it fail at random
+=begin REWORK CHANGE
     xscenario "Shows alert with unfeasible status when 'Valuation finished' is checked" do
       budget_investment = create(:budget_investment, :unfeasible)
 
@@ -1292,6 +1293,7 @@ describe "Admin budget investments", :admin do
 
       expect(valuation).to be_checked
     end
+=end
 
     scenario "Undoes check in 'Valuation finished' if user clicks 'cancel' on alert" do
       budget_investment = create(:budget_investment)

@@ -14,7 +14,7 @@ describe Verification::Residence do
         residence.valid?
         expect(residence.errors[:postal_code]).to be_empty
       end
-
+=begin REWORK CHANGE
       it "is not valid with postal codes not starting with 280" do
         residence.postal_code = "12345"
         residence.valid?
@@ -24,6 +24,7 @@ describe Verification::Residence do
         residence.valid?
         expect(residence.errors[:postal_code]).to eq ["In order to be verified, you must be registered."]
       end
+=end
     end
   end
 end

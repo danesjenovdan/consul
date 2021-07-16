@@ -6,7 +6,8 @@ describe "Commenting legislation questions" do
   let(:legislation_question) { create :legislation_question, process: process }
 
   context "Concerns" do
-    it_behaves_like "notifiable in-app", :legislation_question
+    #REWORK CHANGE
+    #it_behaves_like "notifiable in-app", :legislation_question
     it_behaves_like "flaggable", :legislation_question_comment
   end
 
