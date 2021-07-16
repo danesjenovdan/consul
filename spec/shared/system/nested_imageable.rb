@@ -266,7 +266,6 @@ def imageable_redirected_to_resource_show_or_navigate_to
     click_on "Not now, go to my proposal" rescue Capybara::ElementNotFound
   end
 end
-
 def imageable_attach_new_file(_imageable_factory_name, path, success = true)
   click_link "Add image"
   within "#nested-image" do

@@ -11,7 +11,7 @@ class Budget < ApplicationRecord
   end
 
   def self.current
-    where.not(phase: "drafting").order(:created_at).last
+    where.not(phase: :drafting).order(:created_at).last
   end
 
   def custom_phases(current_user, budget_investments_url)

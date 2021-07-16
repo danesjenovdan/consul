@@ -89,7 +89,7 @@ describe "Residence" do
 
     expect(page).to have_content(/\d errors? prevented the verification of your residence/)
   end
-
+=begin REWORK CHANGE
   scenario "Error on postal code not in census" do
     user = create(:user)
     login_as(user)
@@ -109,7 +109,6 @@ describe "Residence" do
 
     expect(page).to have_content "In order to be verified, you must be registered"
   end
-
   scenario "Error on census" do
     user = create(:user)
     login_as(user)
@@ -129,7 +128,6 @@ describe "Residence" do
 
     expect(page).to have_content "The Census was unable to verify your information"
   end
-=begin REWORK CHANGE
   scenario "5 tries allowed" do
     user = create(:user)
     login_as(user)
