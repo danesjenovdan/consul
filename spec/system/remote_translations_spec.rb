@@ -52,7 +52,6 @@ describe "Remote Translations" do
       end
     end
   end
-  
   scenario "Not display remote translation button when locale is not included in microsoft translate client" do
     visit root_path(locale: :nl)
     expect(page).not_to have_css ".remote-translations-button"
