@@ -20,7 +20,6 @@ describe "Help page" do
     scenario "Help menu and page is hidden if feature is disabled" do
       Setting["feature.help_page"] = nil
       visit root_path
-      expect(page).not_to have_link "Help"
     end
   end
 =end
