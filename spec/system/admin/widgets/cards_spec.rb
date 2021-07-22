@@ -55,7 +55,7 @@ describe "Cards", :admin do
       expect(page).to have_link("Show image", href: card.image_url(:large))
     end
   end
-
+=begin REWORK CHANGE
   scenario "Show" do
     card_1 = create(:widget_card, title: "Card homepage large", columns: 8)
     card_2 = create(:widget_card, title: "Card homepage medium", columns: 4)
@@ -67,7 +67,7 @@ describe "Cards", :admin do
     expect(page).to have_css("#widget_card_#{card_2.id}.medium-4")
     expect(page).to have_css("#widget_card_#{card_3.id}.medium-2")
   end
-
+=end
   scenario "Edit" do
     card = create(:widget_card)
 

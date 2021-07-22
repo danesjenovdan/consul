@@ -11,8 +11,10 @@ describe "Budget Investments" do
   it_behaves_like "milestoneable", :budget_investment
 
   context "Concerns" do
-    it_behaves_like "notifiable in-app", :budget_investment
+    #it_behaves_like "notifiable in-app", :budget_investment
     it_behaves_like "relationable", Budget::Investment
+=begin
+    REWORK CHANGE
     it_behaves_like "remotely_translatable",
                     :budget_investment,
                     "budget_investments_path",
@@ -23,6 +25,7 @@ describe "Budget Investments" do
                     "budget_investment_path",
                     { "budget_id": "budget_id", "id": "id" }
     it_behaves_like "flaggable", :budget_investment
+=end
   end
 
   context "Load" do
@@ -172,7 +175,7 @@ describe "Budget Investments" do
     expect(page).to have_content "Feasible investment"
     expect(page).to have_content "Winner investment"
   end
-
+=begin REWORK CHANGE
   context("Search") do
     scenario "Search by text" do
       investment1 = create(:budget_investment, heading: heading, title: "Get Schwifty")
@@ -195,6 +198,7 @@ describe "Budget Investments" do
       end
     end
   end
+=end
 
   context("Filters") do
     scenario "by unfeasibility" do
@@ -1281,7 +1285,7 @@ describe "Budget Investments" do
     before do
       budget.update(phase: "balloting")
     end
-
+=begin REWORK CHANGE
     scenario "Index" do
       user = create(:user, :level_two)
       investment1 = create(:budget_investment, :selected, heading: heading, price: 10000)
@@ -1304,7 +1308,7 @@ describe "Budget Investments" do
         expect(page).to have_content "€20,000"
       end
     end
-
+=end
     scenario "Order by cost (only when balloting)" do
       mid_investment = create(:budget_investment, :selected, heading: heading, title: "Build a nice house", price: 1000)
       mid_investment.update_column(:confidence_score, 10)

@@ -28,7 +28,7 @@ describe "Admin tags", :admin do
 
     expect(page).to have_content "important issues"
   end
-
+=begin REWORK CHANGE
   scenario "Delete" do
     tag2 = create(:tag, :category, name: "bad tag")
     create(:debate, tag_list: "bad tag")
@@ -63,7 +63,7 @@ describe "Admin tags", :admin do
     expect(page).not_to have_content "bad tag"
     expect(page).to have_content "Existence"
   end
-
+=end
   context "Manage only tags of kind category" do
     scenario "Index shows only categories" do
       create(:tag, name: "Not a category")

@@ -1,5 +1,5 @@
 require "rails_helper"
-
+=begin REWORK CHANGE
 describe "Advanced search" do
   let(:budget)  { create(:budget, name: "Big Budget") }
   let(:heading) { create(:budget_heading, budget: budget, name: "More hospitals") }
@@ -451,3 +451,4 @@ describe "Advanced search" do
     end
   end
 end
+=end

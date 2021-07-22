@@ -4,8 +4,10 @@ describe "Proposals" do
   it_behaves_like "milestoneable", :proposal
 
   context "Concerns" do
-    it_behaves_like "notifiable in-app", :proposal
+    #it_behaves_like "notifiable in-app", :proposal
     it_behaves_like "relationable", Proposal
+=begin
+    REWORK CHANGE
     it_behaves_like "remotely_translatable",
                     :proposal,
                     "proposals_path",
@@ -14,6 +16,7 @@ describe "Proposals" do
                     :proposal,
                     "proposal_path",
                     { "id": "id" }
+=end
     it_behaves_like "flaggable", :proposal
   end
 
@@ -1109,6 +1112,7 @@ describe "Proposals" do
       expect(page).to have_content archived_proposal.title
     end
   end
+=begin REWORK CHANGE
 
   context "Search" do
     context "Basic search" do
@@ -1163,7 +1167,6 @@ describe "Proposals" do
         expect(page).to have_selector("input[name='search'][value='Schwifty']")
       end
     end
-
     scenario "Order by relevance by default" do
       create(:proposal, title: "In summary", summary: "Title content too", cached_votes_up: 10)
       create(:proposal, title: "Title content", summary: "Summary", cached_votes_up: 1)
@@ -1181,7 +1184,6 @@ describe "Proposals" do
         expect(all(".proposal")[2].text).to match "In summary"
       end
     end
-
     scenario "Reorder results maintaing search" do
       create(:proposal, title: "Show you got",      cached_votes_up: 10,  created_at: 1.week.ago)
       create(:proposal, title: "Show what you got", cached_votes_up: 1,   created_at: 1.month.ago)
@@ -1229,7 +1231,7 @@ describe "Proposals" do
         expect(page).not_to have_content "Do not display"
       end
     end
-
+=begin REWORK CHANGE
     scenario "After a search do not show featured proposals" do
       Setting["feature.featured_proposals"] = true
       create_featured_proposals
@@ -1245,6 +1247,7 @@ describe "Proposals" do
       expect(page).not_to have_selector("#featured-proposals")
     end
   end
+=end
 
   scenario "Conflictive" do
     good_proposal = create(:proposal)

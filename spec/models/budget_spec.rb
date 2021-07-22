@@ -225,7 +225,7 @@ describe Budget do
       end
     end
   end
-
+=begin REWORK CHANGE
   describe "#current" do
     it "returns nil if there is only one budget and it is still in drafting phase" do
       create(:budget, :drafting)
@@ -248,7 +248,7 @@ describe Budget do
       expect(Budget.current.name).to eq "Current"
     end
   end
-
+=end
   describe "heading_price" do
     it "returns the heading price if the heading provided is part of the budget" do
       heading = create(:budget_heading, price: 100, budget: budget)
