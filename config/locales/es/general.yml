@@ -5,10 +5,7 @@ es:
       erase_account_link: Darme de baja
       finish_verification: Finalizar verificación
       notifications: Notificaciones
-      organization_name_label: Nombre de la organización
-      organization_responsible_name_placeholder: Representante de la asociación/colectivo
       personal: Datos personales
-      phone_number_label: Teléfono
       public_interests_my_title_list: Etiquetas de los elementos que sigues
       public_interests_user_title_list: Etiquetas de los elementos que sigue este usuario
       save_changes_submit: Guardar cambios
@@ -22,7 +19,6 @@ es:
       user_permission_verify: Para poder realizar todas las acciones, verifica tu cuenta.
       user_permission_verify_info: "* Sólo usuarios empadronados."
       user_permission_votes: Participar en las votaciones finales*
-      username_label: Nombre de usuario
       verified_account: Cuenta verificada
       verify_my_account: Verificar mi cuenta
   application:
@@ -65,7 +61,6 @@ es:
       newest: Más nuevos primero
       oldest: Más antiguos primero
       most_commented: Más comentados
-    select_order: Ordenar por
     show:
       return_to_commentable: "Volver a "
   comments_helper:
@@ -93,7 +88,6 @@ es:
         submit_button: Guardar cambios
       show_link: Ver debate
     form:
-      debate_title: Título del debate
       tags_instructions: Etiqueta este debate.
       tags_placeholder: "Escribe las etiquetas que desees separadas por coma (',')"
     index:
@@ -119,7 +113,6 @@ es:
       search_results:
         one: " que contiene <strong>'%{search_term}'</strong>"
         other: " que contienen <strong>'%{search_term}'</strong>"
-      select_order: Ordenar por
       start_debate: Empieza un debate
       title: Debates
       section_header:
@@ -134,9 +127,7 @@ es:
     new:
       form:
         submit_button: Empieza un debate
-      info: Si lo que quieres es hacer una propuesta, esta es la sección incorrecta, entra en %{info_link}.
-      info_link: crear nueva propuesta
-      more_info: Más información
+      more_info: "¿Cómo funcionan los debates?"
       recommendation_four: Disfruta de este espacio, de las voces que lo llenan, también es tuyo.
       recommendation_one: No escribas el título del debate o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten.
       recommendation_three: Las críticas despiadadas son muy bienvenidas. Este es un espacio de pensamiento. Pero te recomendamos conservar la elegancia y la inteligencia. El mundo es mejor con ellas presentes.
@@ -233,7 +224,6 @@ es:
     header:
       administration_menu: Menú
       administration: Administración
-      available_locales: Idiomas disponibles
       collaborative_legislation: Legislación colaborativa
       debates: Debates
       locale: "Idioma:"
@@ -384,7 +374,6 @@ es:
       search_results:
         one: " que contiene <strong>'%{search_term}'</strong>"
         other: " que contienen <strong>'%{search_term}'</strong>"
-      select_order: Ordenar por
       select_order_long: "Estas viendo las propuestas"
       start_proposal: Crea una propuesta
       title: Propuestas ciudadanas
@@ -677,6 +666,7 @@ es:
       back: "Volver a mi contenido"
   shared:
     edit: "Editar"
+    filter: "Filtrar"
     save: "Guardar"
     delete: "Borrar"
     "yes": "Si"
@@ -782,6 +772,8 @@ es:
         zero: "0 idiomas en uso"
         one: "1 idioma en uso"
         other: "%{count} idiomas en uso"
+    optional: "Opcional"
+    required: "Obligatorio"
   social:
     facebook: "Facebook de %{org}"
     twitter: "Twitter de %{org}"
@@ -932,6 +924,7 @@ es:
     help: "Puedes introducir cualquier enlace de %{models} que esté dentro de %{org}."
     submit: "Añadir"
     error: "Enlace no válido. Recuerda que debe empezar por %{url}."
+    error_duplicate: "El contenido relacionado que estás añadiendo ya existe."
     error_itself: "Enlace no válido. No se puede relacionar un contenido consigo mismo."
     success: "Has añadido un nuevo contenido relacionado"
     is_related: "¿Es contenido relacionado?"
@@ -957,9 +950,6 @@ es:
       title: Enlaces
       note: Añade los enlaces que sean de interés.
       add_new_link: Añadir nuevo enlace
-    link_fields:
-      label_placeholder: Título del enlace
-      url_placeholder: Dirección del enlace
   communities:
     show:
       surveys: Encuestas

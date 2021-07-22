@@ -31,6 +31,14 @@ $table-header:   #ecf1f6;
 .admin {
   @include admin-layout;
 
+  > header {
+    border-bottom: 1px solid #eee;
+
+    > * {
+      @include full-width-background($adjust-margin: false, $adjust-padding: true);
+    }
+  }
+
   h2 {
     font-weight: 100;
     margin-bottom: $line-height;
@@ -52,26 +60,16 @@ $table-header:   #ecf1f6;
     float: none;
   }
 
-  .header {
-    border: 0;
-  }
-
   .top-links {
     background: #000;
+    color: $white;
 
     a {
       line-height: rem-calc($line-height * 1.5);
     }
   }
 
-  .admin-top-bar {
-    background: #fff;
-  }
-
   .top-bar {
-    background: #fff !important;
-    border-bottom: 1px solid #eee;
-    color: #000;
     height: auto;
     padding-top: $line-height / 2;
 
@@ -116,29 +114,28 @@ $table-header:   #ecf1f6;
   }
 
   .menu .menu-text {
+    padding: 0;
 
     h1 {
       margin-top: $line-height / 2;
       margin-bottom: 0;
 
       @include breakpoint(medium) {
-        margin-left: $line-height / 2;
         margin-top: 0;
       }
 
       small {
-        color: #000;
+        color: inherit;
         text-transform: uppercase;
       }
     }
 
     a {
-      color: #000 !important;
-      line-height: $line-height !important;
-
-      @include breakpoint(medium) {
-        line-height: $line-height !important;
-      }
+      display: inline-block;
+      font-family: "Lato" !important;
+      font-size: rem-calc(24);
+      font-weight: lighter;
+      padding: 0;
     }
   }
 
@@ -146,10 +143,6 @@ $table-header:   #ecf1f6;
 
     @include breakpoint(medium) {
       height: auto !important;
-    }
-
-    a {
-      color: #000 !important;
     }
   }
 
@@ -161,10 +154,6 @@ $table-header:   #ecf1f6;
 
   .notifications.unread-notifications::after {
     color: $admin-color;
-  }
-
-  .dropdown.menu > .is-dropdown-submenu-parent > a::after {
-    border-color: #000 transparent transparent;
   }
 
   .fieldset {
@@ -194,11 +183,6 @@ $table-header:   #ecf1f6;
 
     &.with-button {
       line-height: $line-height * 2;
-
-      .button {
-        @include brand-text;
-        background: #fff;
-      }
     }
   }
 
@@ -243,7 +227,7 @@ $table-header:   #ecf1f6;
       border: $table-border;
 
       &:hover {
-        background: #f3f6f7;
+        background: adjust-color(darken($table-background, 2%), $red: -4, $green: -1);
       }
     }
 
@@ -257,6 +241,11 @@ $table-header:   #ecf1f6;
 
     [type="submit"] ~ a {
       margin-left: $line-height / 2;
+    }
+
+    [type="checkbox"] {
+      margin-bottom: 0;
+      vertical-align: middle;
     }
   }
 
@@ -288,7 +277,13 @@ $table-header:   #ecf1f6;
     }
   }
 
-  .menu.simple {
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  .menu.simple,
+  .order-links {
     margin-bottom: $line-height / 2;
 
     h2 {
@@ -297,10 +292,13 @@ $table-header:   #ecf1f6;
     }
 
     .is-active {
-      border-bottom: 2px solid $admin-color;
       color: $admin-color;
       font-weight: bold;
     }
+  }
+
+  .order-links {
+    margin-bottom: $line-height;
   }
 
   .tabs-panel {
@@ -317,17 +315,13 @@ $table-header:   #ecf1f6;
   }
 
   .admin-content {
-    .proposal-form {
+    .proposal-new {
       padding-top: 0;
     }
   }
 
   .is-featured {
     margin-top: rem-calc(36);
-  }
-
-  .select-order {
-    min-width: rem-calc(160);
   }
 }
 
@@ -457,7 +451,7 @@ code {
   &:hover,
   &:active,
   &:focus {
-    border-bottom: 1px dotted #fff;
+    border-bottom-color: transparent;
     color: #cf2a0e;
   }
 }
@@ -465,16 +459,6 @@ code {
 [class^="icon-"].delete {
   border: 0;
   font-size: $base-font-size;
-}
-
-.verified {
-  color: $check;
-
-  a {
-    border-bottom: 1px dotted $check;
-    color: $check;
-    font-size: rem-calc(12);
-  }
 }
 
 .archived {
@@ -525,10 +509,6 @@ code {
 
 // 04. Stats
 // ---------
-
-.stats {
-  background: #fff;
-}
 
 .stats-numbers {
   p {
@@ -598,7 +578,7 @@ code {
   background: #fafafa;
   border-bottom-left-radius: rem-calc(6);
   border-bottom-right-radius: rem-calc(6);
-  border-top: 2px solid #000;
+  border-top: 2px solid;
   font-size: $small-font-size;
   padding: $line-height / 2;
 }
@@ -655,7 +635,8 @@ code {
   display: flex;
   flex-wrap: wrap;
 
-  a {
+  a,
+  button {
     @include regular-button;
     margin-left: auto;
   }
@@ -665,7 +646,7 @@ code {
 .admin-content .select-heading {
 
   a {
-    color: $text;
+    color: inherit;
     display: block;
 
     &.is-active {
@@ -731,7 +712,7 @@ table {
 // ---------------
 
 .markdown-editor {
-  background-color: #fff;
+  background-color: $body-background;
 
   .markdown-area,
   .markdown-preview {
@@ -1189,7 +1170,7 @@ table {
     }
 
     label {
-      font-size: 17px;
+      font-size: $base-font-size;
       line-height: 1.5rem;
     }
   }
@@ -1205,7 +1186,7 @@ table {
 // 11. Newsletters
 // -----------------
 
-.newsletter-body-content {
+.admin .newsletter-body-content {
 
   table,
   tbody,

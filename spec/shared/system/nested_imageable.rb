@@ -38,12 +38,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       visit send(path, arguments)
 
       click_link "Add image"
-      image_input = find(".image").find("input[type=file]", visible: :hidden)
-      attach_file(
-        image_input[:id],
-        Rails.root.join("spec/fixtures/files/clippy.jpg"),
-        make_visible: true
-      )
+      attach_file "Choose image", Rails.root.join("spec/fixtures/files/clippy.jpg")
 
       expect(page).to have_selector ".file-name", text: "clippy.jpg"
     end
@@ -67,12 +62,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       click_link "Add image"
       input_title = find(".image input[name$='[title]']")
       fill_in input_title[:id], with: "Title"
-      image_input = find(".image").find("input[type=file]", visible: :hidden)
-      attach_file(
-        image_input[:id],
-        Rails.root.join("spec/fixtures/files/clippy.jpg"),
-        make_visible: true
-      )
+      attach_file "Choose image", Rails.root.join("spec/fixtures/files/clippy.jpg")
 
       if has_many_images
         expect(find("input[id$='_title']").value).to eq "Title"
@@ -212,7 +202,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
         # Pending. Review soon and test
       else
         expect(page).to have_selector "figure img"
-        expect(page).to have_selector "figure figcaption"
+        expect(page).to have_selector "figure figcaption" if show_caption_for?(imageable_factory_name)
       end
     end
 
@@ -259,18 +249,19 @@ def do_login_for(user)
 end
 
 def imageable_redirected_to_resource_show_or_navigate_to
-  find("a", text: "Not now, go to my proposal")
-  click_on "Not now, go to my proposal"
-rescue
-  nil
+  case imageable.class.to_s
+  when "Budget"
+    visit edit_admin_budget_path(Budget.last)
+  when "Proposal"
+    click_on "Not now, go to my proposal" rescue Capybara::ElementNotFound
+  end
 end
 
 def imageable_attach_new_file(_imageable_factory_name, path, success = true)
   click_link "Add image"
   within "#nested-image" do
     image = find(".image")
-    image_input = image.find("input[type=file]", visible: :hidden)
-    attach_file(image_input[:id], path, make_visible: true)
+    attach_file "Choose image", path
     within image do
       if success
         expect(page).to have_css(".loading-bar.complete")
@@ -287,8 +278,11 @@ def imageable_fill_new_valid_proposal
   check :proposal_terms_of_service
 end
 
+def imageable_fill_new_valid_budget
+  fill_in "Name", with: "Budget name"
+end
+
 def imageable_fill_new_valid_budget_investment
-  page.select imageable.heading.name_scoped_by_group, from: :budget_investment_heading_id
   fill_in "Title", with: "Budget investment title"
   fill_in_ckeditor "Description", with: "Budget investment description"
   check :budget_investment_terms_of_service
@@ -310,4 +304,8 @@ def expect_image_has_cached_attachment(extension)
       expect(find("input[name$='[cached_attachment]']", visible: :hidden).value).to end_with(extension)
     end
   end
+end
+
+def show_caption_for?(imageable_factory_name)
+  imageable_factory_name != "budget"
 end
