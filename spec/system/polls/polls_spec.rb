@@ -130,8 +130,7 @@ describe "Polls" do
       Setting["feature.sdg"] = true
       Setting["sdg.process.polls"] = true
 
-      create(:poll, sdg_goals: [SDG::Goal[1]],
-                    sdg_targets: [SDG::Target["1.1"]])
+      create(:poll, sdg_goals: [SDG::Goal[1]], sdg_targets: [SDG::Target["1.1"]])
 
       visit polls_path
 
@@ -415,8 +414,7 @@ describe "Polls" do
       Setting["feature.sdg"] = true
       Setting["sdg.process.polls"] = true
 
-      poll = create(:poll, sdg_goals: [SDG::Goal[1]],
-                           sdg_targets: [SDG::Target["1.1"]])
+      poll = create(:poll, sdg_goals: [SDG::Goal[1]], sdg_targets: [SDG::Target["1.1"]])
 
       visit poll_path(poll)
 
