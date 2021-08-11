@@ -15,8 +15,7 @@ describe "Proposals" do
     it_behaves_like "remotely_translatable",
                     :proposal,
                     "proposal_path",
-                    { "id": "id" }
-=end
+                    { id: "id" }
     it_behaves_like "flaggable", :proposal
   end
 
@@ -1260,9 +1259,9 @@ describe "Proposals" do
     expect(page).not_to have_content "This proposal has been flagged as inappropriate by several users."
   end
 
-  it_behaves_like "followable", "proposal", "proposal_path", { "id": "id" }
+  it_behaves_like "followable", "proposal", "proposal_path", { id: "id" }
 
-  it_behaves_like "imageable", "proposal", "proposal_path", { "id": "id" }
+  it_behaves_like "imageable", "proposal", "proposal_path", { id: "id" }
 
   it_behaves_like "nested imageable",
                   "proposal",
@@ -1275,12 +1274,12 @@ describe "Proposals" do
   it_behaves_like "nested imageable",
                   "proposal",
                   "edit_proposal_path",
-                  { "id": "id" },
+                  { id: "id" },
                   nil,
                   "Save changes",
                   "Proposal updated successfully"
 
-  it_behaves_like "documentable", "proposal", "proposal_path", { "id": "id" }
+  it_behaves_like "documentable", "proposal", "proposal_path", { id: "id" }
 
   it_behaves_like "nested documentable",
                   "user",
@@ -1295,7 +1294,7 @@ describe "Proposals" do
                   "user",
                   "proposal",
                   "edit_proposal_path",
-                  { "id": "id" },
+                  { id: "id" },
                   nil,
                   "Save changes",
                   "Proposal updated successfully"
