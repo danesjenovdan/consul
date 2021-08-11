@@ -500,10 +500,10 @@ describe "Polls" do
       expect(page).not_to have_content("Participation statistics")
 
       visit results_poll_path(poll)
-      expect(page).to have_content("You do not have permission to carry out the action 'results' on poll.")
+      expect(page).to have_content("You do not have permission to carry out the action 'results' on Poll.")
 
       visit stats_poll_path(poll)
-      expect(page).to have_content("You do not have permission to carry out the action 'stats' on poll.")
+      expect(page).to have_content("You do not have permission to carry out the action 'stats' on Poll.")
     end
 
     scenario "Do not show poll results or stats to admins if disabled", :admin do
@@ -526,10 +526,10 @@ describe "Polls" do
       expect(page).not_to have_content("Participation statistics")
 
       visit results_poll_path(poll)
-      expect(page).to have_content("You do not have permission to carry out the action 'results' on poll.")
+      expect(page).to have_content("You do not have permission to carry out the action 'results' on Poll.")
 
       visit stats_poll_path(poll)
-      expect(page).to have_content("You do not have permission to carry out the action 'stats' on poll.")
+      expect(page).to have_content("You do not have permission to carry out the action 'stats' on Poll.")
     end
 
     scenario "Generates navigation links for polls without a slug" do
