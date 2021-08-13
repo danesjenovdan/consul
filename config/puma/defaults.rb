@@ -12,7 +12,8 @@ state_path "#{rails_root}/tmp/pids/puma.state"
 stdout_redirect "#{rails_root}/log/puma_access.log", "#{rails_root}/log/puma_error.log", true
 
 bind "unix://#{rails_root}/tmp/sockets/puma.sock"
-daemonize
+# muki removed in order not to daemonize on k8s
+# daemonize
 
 threads 0, 16
 workers 2
