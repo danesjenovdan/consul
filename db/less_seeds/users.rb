@@ -58,7 +58,6 @@ section "Creating Users" do
   def unique_document_number
     @document_number ||= 1203989100100
     @document_number += 20
-    
     return fix_my_emso(@document_number.to_s)
   end
 
