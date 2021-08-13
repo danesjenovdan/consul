@@ -10,6 +10,7 @@ data:
       host: postgresql.shared
       port: 5432
       username: postgresql
+      password: <%= ENV['POSTGRES_PASSWORD'] %>
       database: consul_staging
   secrets.yml: |
     http_basic_auth: &http_basic_auth
