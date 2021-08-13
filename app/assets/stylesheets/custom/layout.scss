@@ -390,3 +390,89 @@ footer {
 .home-page footer {
   background-color: $white;
 }
+
+.horizontal-line {
+  margin: rem-calc(20) 0;
+  border-bottom: 2px solid $rhino;
+}
+
+.callout {
+  border-radius: 4px;
+  border: 0;
+  font-size: $small-font-size;
+
+  a:not(.button) {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  &.success,
+  &.notice {
+    background-color: $color-success-new;
+    color: $black;
+  }
+
+  &.primary {
+    background-color: $color-success-new;
+    color: $black;
+
+    a {
+      color: $link !important;
+    }
+  }
+
+  &.custom {
+    background-color: $alabaster;
+    color: $black;
+  }
+
+  &.warning {
+    color: $black;
+    background: image-url('warning.png') rem-calc(10) no-repeat $color-warning-new;
+    padding-left: rem-calc(45);
+  }
+
+  &.alert,
+  &.error {
+    background-color: $color-warning-new;
+    color: $black;
+  }
+
+  // this is just for the flash messages
+  &.flash {
+    &.success,
+    &.notice {
+      background-color: $success-bg;
+      color: $color-success;
+    }
+
+    &.primary {
+      background-color: $info-bg;
+      color: $color-info;
+
+      a {
+        color: $link !important;
+      }
+    }
+
+    &.custom {
+      background-color: $alabaster;
+      color: $black;
+    }
+
+    &.warning {
+      background-color: $warning-bg;
+      color: $color-warning;
+    }
+
+    &.alert,
+    &.error {
+      background-color: $alert-bg;
+      color: $color-alert;
+    }
+  }
+
+  .close {
+    text-decoration: none !important;
+  }
+}
