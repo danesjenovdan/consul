@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: db-conf
 data:
-  DATABASE_YAML: |-
+  database.yml: |
     default: &default
       adapter: postgresql
       encoding: unicode

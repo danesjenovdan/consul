@@ -49,6 +49,3 @@ spec:
           - name: db-conf
             configMap:
               name: db-conf
-              items:
-                - key: db-conf.DATABASE_YAML
-                  path: database.yml
