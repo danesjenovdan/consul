@@ -28,9 +28,6 @@ spec:
             - "0.0.0.0"
           ports:
             - containerPort: 3000
-          # envFrom:
-          #     - secretRef:
-          #         name: consul-credentials
           env:
             - name: SSH_AUTH_SOCK
               value: /tmp/agent.sock
@@ -42,10 +39,10 @@ spec:
               memory: 1Gi
               cpu: 1000m
           volumeMounts:
-          - name: db-conf
-            mountPath: /var/www/consul/config/database.yml
-            subPath: database.yml
-        volumes:
-          - name: db-conf
-            configMap:
-              name: db-conf
+            - name: db-conf
+              mountPath: /var/www/consul/config/database.yml
+              subPath: database.yml
+      volumes:
+        - name: db-conf
+          configMap:
+            name: db-conf
