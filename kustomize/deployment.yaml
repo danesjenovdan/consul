@@ -41,3 +41,14 @@ spec:
             limits:
               memory: 1Gi
               cpu: 1000m
+          volumeMounts:
+            - name: db-conf
+              mountPath: /var/www/consul/config/database.yml
+              subPath: database.yml
+        volumes:
+          - name: db-conf
+            configMap:
+              name: db-conf
+              items:
+                - key: db-conf.DATABASE_YAML
+                  path: database.yml
