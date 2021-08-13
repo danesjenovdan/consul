@@ -31,6 +31,8 @@ spec:
           env:
             - name: SSH_AUTH_SOCK
               value: /tmp/agent.sock
+            - name: RAILS_ENV
+              value: production
           resources:
             requests:
               memory: 1Gi

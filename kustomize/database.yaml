@@ -4,7 +4,7 @@ metadata:
   name: db-conf
 data:
   database.yml: |
-    default: &default
+    production:
       adapter: postgresql
       encoding: unicode
       host: postgresql.shared
