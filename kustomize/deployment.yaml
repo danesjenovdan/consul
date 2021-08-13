@@ -33,6 +33,9 @@ spec:
               value: /tmp/agent.sock
             - name: RAILS_ENV
               value: production
+          envFrom:
+            - secretRef:
+                name: consul-credentials
           resources:
             requests:
               memory: 1Gi
