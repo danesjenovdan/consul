@@ -9,7 +9,7 @@ data:
       encoding: unicode
       host: postgresql.shared
       port: 5432
-      username: postgresql
+      username: <%= ENV['POSTGRES_USERNAME'] %>
       password: <%= ENV['POSTGRES_PASSWORD'] %>
       database: consul_staging
   secrets.yml: |
