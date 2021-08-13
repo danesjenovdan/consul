@@ -44,6 +44,9 @@ spec:
             - name: db-conf
               mountPath: /var/www/consul/config/database.yml
               subPath: database.yml
+            - name: db-conf
+              mountPath: /var/www/consul/config/secrets.yml
+              subPath: secrets.yml
       volumes:
         - name: db-conf
           configMap:
