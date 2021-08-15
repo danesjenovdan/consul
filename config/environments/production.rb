@@ -56,6 +56,7 @@ Rails.application.configure do
   config.log_tags = [:request_id]
 
   # Use a different cache store in production.
+  config.cache_store = :mem_cache_store
   config.cache_store = :dalli_store, {
     servers: ["memcached.shared:11211:1"],
     password: ENV["MEMCACHED_PASSWORD"],
