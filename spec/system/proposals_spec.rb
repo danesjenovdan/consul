@@ -566,7 +566,7 @@ describe "Proposals" do
         expect(page).to have_content "All city"
       end
     end
-
+=begin REWORK CHANGE
     scenario "Specific geozone" do
       create(:geozone, name: "California")
       create(:geozone, name: "New York")
@@ -592,6 +592,7 @@ describe "Proposals" do
         expect(page).to have_content "California"
       end
     end
+=end
   end
 
   context "Retired proposals" do

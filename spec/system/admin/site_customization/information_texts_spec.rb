@@ -1,6 +1,7 @@
 require "rails_helper"
 
 describe "Admin custom information texts", :admin do
+=begin REWORK CHANGE
   scenario "page is correctly loaded" do
     visit admin_site_customization_information_texts_path
 
@@ -32,7 +33,6 @@ describe "Admin custom information texts", :admin do
 
     click_link "Emails"
     expect(page).to have_content "Confirm your email"
-=begin REWORK CHANGE
     within "#information-texts-tabs" do
     click_link "Management" REWORK CHANGE
     end
@@ -41,8 +41,8 @@ describe "Admin custom information texts", :admin do
 
     click_link "Welcome"
     expect(page).to have_content "See all debates"
-=end
   end
+=end
 
   scenario "check that tabs are highlight when click it" do
     visit admin_site_customization_information_texts_path
