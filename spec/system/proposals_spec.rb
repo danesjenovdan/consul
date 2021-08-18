@@ -595,6 +595,7 @@ describe "Proposals" do
   end
 
   context "Retired proposals" do
+=begin REWORK
     scenario "Retire" do
       proposal = create(:proposal)
       login_as(proposal.author)
@@ -637,7 +638,7 @@ describe "Proposals" do
       expect(page).not_to have_content "Proposal retired"
       expect(page).to have_content "can't be blank", count: 2
     end
-
+=end
     scenario "Index do not list retired proposals by default" do
       Setting["feature.featured_proposals"] = true
       create_featured_proposals
@@ -693,7 +694,7 @@ describe "Proposals" do
       expect(page).to have_content unfeasible.title
       expect(page).not_to have_content duplicated.title
     end
-
+=begin REWORK CHANGE
     context "Special interface translation behaviour" do
       before { Setting["feature.translation_interface"] = true }
 
@@ -707,6 +708,7 @@ describe "Proposals" do
         expect(page).not_to have_link "Remove language"
       end
     end
+=end
   end
 
   scenario "Update should not be posible if logged user is not the author" do

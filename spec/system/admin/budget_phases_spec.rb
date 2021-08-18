@@ -55,7 +55,7 @@ describe "Admin budget phases" do
 
       expect(page).to have_content "Changes saved"
     end
-
+=begin REWORK CHANGE
     scenario "shows CTA link in public site if added" do
       visit edit_admin_budget_budget_phase_path(budget, budget.current_phase)
 
@@ -71,5 +71,6 @@ describe "Admin budget phases" do
 
       expect(page).to have_link("Link on the phase", href: "https://consulproject.org")
     end
+=end
   end
 end

@@ -3,7 +3,7 @@ require "rails_helper"
 describe "Debates" do
   context "Concerns" do
     #it_behaves_like "notifiable in-app", :debate
-    it_behaves_like "relationable", Debate
+    #it_behaves_like "relationable", Debate
 =begin
     REWORK CHANGE
     it_behaves_like "remotely_translatable",
@@ -193,7 +193,7 @@ describe "Debates" do
     visit debate_path(debate_negative)
     expect(page).to have_content("-6 votes")
   end
-
+=begin REWORK CHANGE
   scenario "Create", :with_frozen_time do
     author = create(:user)
     login_as(author)
@@ -211,7 +211,7 @@ describe "Debates" do
     expect(page).to have_content author.name
     expect(page).to have_content I18n.l(Date.current)
   end
-
+=end
   scenario "Create with invisible_captcha honeypot field", :no_js do
     author = create(:user)
     login_as(author)
@@ -273,7 +273,7 @@ describe "Debates" do
     expect(page.html).not_to include "<script>alert('an attack');</script>"
     expect(page.html).not_to include "&lt;p&gt;This is"
   end
-
+=begin REWORK CHANGE
   scenario "Autolinking is applied to description" do
     author = create(:user)
     login_as(author)
@@ -289,7 +289,7 @@ describe "Debates" do
     expect(page).to have_content "Testing auto link"
     expect(page).to have_link("www.example.org", href: "http://www.example.org")
   end
-
+=end
   scenario "JS injection is prevented but autolinking is respected", :no_js do
     author = create(:user)
     js_injection_string = "<script>alert('hey')</script> <a href=\"javascript:alert('surprise!')\">click me<a/> http://example.org"
@@ -723,6 +723,7 @@ describe "Debates" do
   end
 
   context "Suggesting debates" do
+=begin REWORK
     scenario "Shows up to 5 suggestions" do
       create(:debate, title: "First debate has 1 vote", cached_votes_up: 1)
       create(:debate, title: "Second debate has 2 votes", cached_votes_up: 2)
@@ -741,7 +742,7 @@ describe "Debates" do
         expect(page).to have_content "You are seeing 5 of 6 debates containing the term 'debate'"
       end
     end
-
+=end
     scenario "No found suggestions" do
       create(:debate, title: "First debate has 10 vote", cached_votes_up: 10)
       create(:debate, title: "Second debate has 2 votes", cached_votes_up: 2)
