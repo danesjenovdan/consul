@@ -3,7 +3,7 @@
   <% if ballot.has_investment?(investment) %>
     <div class="remove supported inline-block">
       <% if investment.budget.balloting? && investment.selected? %>
-        <%= link_to t('budgets.ballots.show.remove'),
+        <%= link_to t("budgets.ballots.show.remove"),
                            budget_ballot_line_path(id: investment.id,
                                                    budget_id: investment.budget_id,
                                                    investments_ids: investment_ids),
@@ -15,7 +15,7 @@
     </div>
   <% else %>
     <div class="add in-favor">
-      <% if investment.budget.balloting? && investment.selected?%>
+      <% if investment.budget.balloting? && investment.selected? %>
         <% if reason.present? && !ballot.has_investment?(investment) %>
               <% verify_account = link_to(t("votes.verify_account"), verification_path) %>
               <% signin = link_to(t("votes.signin"), new_user_session_path) %>
@@ -31,7 +31,7 @@
                         verify_account: verify_account, signin: signin,
                         signup: signup, my_heading: my_heading,
                         change_ballot: change_ballot,
-                        heading_link: heading_link(@assigned_heading, @budget)).html_safe %>
+                        heading_link: heading_link(@assigned_heading, @budget)) %>
           </div>
 
         <% else %>
@@ -39,7 +39,7 @@
                                               budget_id: investment.budget_id,
                                               investments_ids: investment_ids),
                       class: "button button-support small expanded addinfavor",
-                      title: t('budgets.investments.investment.support_title'),
+                      title: t("budgets.investments.investment.support_title"),
                       method: :post,
                       remote: true do %>
             <i></i><%= t("budgets.investments.investment.add") %>

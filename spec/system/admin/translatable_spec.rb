@@ -67,10 +67,10 @@ describe "Admin edit translatable records", :admin do
       end
     end
 
+=begin REWORK CHANGE
     context "Markdownit field" do
       let(:translatable) { create(:legislation_draft_version) }
       let(:path) { edit_admin_legislation_process_draft_version_path(translatable.process, translatable) }
-=begin REWORK CHANGE
       scenario "Maintains existing translations" do
         visit path
 
@@ -98,8 +98,8 @@ describe "Admin edit translatable records", :admin do
 
         expect(page).to have_field "Text", with: "Texte en Français"
       end
-=end
     end
+=end
 
     context "Locale with non-underscored name" do
       let(:translatable) { create(:legislation_question) }
@@ -141,9 +141,9 @@ describe "Admin edit translatable records", :admin do
       end
     end
 
+=begin REWORK CHANGE
     context "CKEditor field" do
       let(:translatable) { create(:budget_investment) }
-=begin REWORK CHANGE
       scenario "Shows validation errors" do
         visit edit_admin_budget_budget_investment_path(translatable.budget, translatable)
 
@@ -158,8 +158,8 @@ describe "Admin edit translatable records", :admin do
 
         expect(page).to have_ckeditor "Description", with: ""
       end
-=end
     end
+=end
 
     context "Markdownit field" do
       let(:translatable) { create(:legislation_draft_version) }
@@ -283,9 +283,9 @@ describe "Admin edit translatable records", :admin do
       end
     end
 
+=begin REWORK CHANGE
     context "Markdownit field" do
       let(:translatable) { create(:legislation_draft_version) }
-=begin REWORK CHANGE
       scenario "Shows validation errors" do
         visit edit_admin_legislation_process_draft_version_path(translatable.process, translatable)
 
@@ -305,8 +305,8 @@ describe "Admin edit translatable records", :admin do
 
         expect(page).to have_field "Text", with: ""
       end
-=end
     end
+=end
   end
 
   context "Update a translation not having the current locale" do
@@ -415,10 +415,10 @@ describe "Admin edit translatable records", :admin do
         expect(page).to have_content "Titre en Français"
       end
     end
+
+=begin REWORK CHANGE
     context "For Budget::Phase" do
       let(:translatable) { create(:budget).phases.last }
-      
-=begin REWORK CHANGE
       scenario "Shows first available fallback" do
         translatable.update!({ name_fr: "Name en Français", description_fr: "Phase en Français" })
 
@@ -436,8 +436,8 @@ describe "Admin edit translatable records", :admin do
 
         expect(page).to have_content "Phase en Français"
       end
-=end
     end
+=end
 
     context "For ActivePoll" do
       let(:translatable) { create(:active_poll) }

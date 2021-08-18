@@ -428,7 +428,7 @@ footer {
 
   &.warning {
     color: $black;
-    background: image-url('warning.png') rem-calc(10) no-repeat $color-warning-new;
+    background: image-url("warning.png") rem-calc(10) no-repeat $color-warning-new;
     padding-left: rem-calc(45);
   }
 

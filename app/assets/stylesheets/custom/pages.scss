@@ -326,7 +326,7 @@ span:hover::before {
   text-align: center;
   width: 100%;
   box-shadow: 0 4px 43px -10px rgba(0, 0, 0, 0.21);
-  border: none;
+  border: 0;
 
   ul {
     display: flex;
@@ -338,17 +338,20 @@ span:hover::before {
   }
 
   .tabs {
-    border: none;
+    border: 0;
+
     .active-phase {
       // TODO: make it shiny
       > a {
         color: $minsk !important;
       }
     }
+
     a:focus {
       outline: none;
     }
   }
+
   .main-indented-content {
     margin: 0 auto;
   }
@@ -391,11 +394,11 @@ span:hover::before {
 
     display: inline-block;
     padding: 7px 15px 7px 10px;
+  }
 
-    i {
-      background: image-url("check.svg") left no-repeat;
-      width: 30px;
-    }
+  .active-phase a h3 i {
+    background: image-url("check.svg") left no-repeat;
+    width: 30px;
   }
 
   .tabs .is-active a h3 {
@@ -410,26 +413,19 @@ span:hover::before {
 
     border-radius: 20px;
     background-image: linear-gradient(to right, $mandys-pink 0%, #272266 100%);
-
-    i {
-      //background: image-url("check.png") left no-repeat;
-      //width: 30px;
-    }
   }
 
   .tabs .is-active a span {
     font-weight: 500;
   }
 
-  .tabs .tabs-title > a[aria-selected="true"],
-  .tabs .tabs-title > a.is-active,
   .tabs .tabs-title > a:hover {
     background: none;
-    border-bottom: none;
+    border-bottom: 0;
   }
 
   .tabs {
-    border-left: none;
+    border-left: 0;
     width: 100%;
 
     ul {
@@ -438,12 +434,13 @@ span:hover::before {
     }
 
     li {
-      border-right: none;
+      border-right: 0;
       padding-bottom: 10px;
       margin-bottom: 5px;
-      border-bottom: none;
+      border-bottom: 0;
+
       &:last-of-type {
-        border-bottom: none;
+        border-bottom: 0;
       }
     }
   }
@@ -461,7 +458,7 @@ span:hover::before {
 
     li {
       border-right: 2px solid $mandys-pink;
-      border-bottom: none;
+      border-bottom: 0;
       padding-bottom: initial;
       margin-bottom: initial;
     }
@@ -478,70 +475,73 @@ span:hover::before {
       border: 1px solid #d7d7d7;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.21);
 
-      .budget-investment-content {
-        padding: rem-calc(15);
-
-        a {
-          color: $rhino;
-        }
-
-        .investment-title {
-          color: $black;
-
-          h3 {
-            line-height: rem-calc(23);
-            height: rem-calc(72);
-          }
-
-          &:hover {
-            color: $rhino;
-          }
-        }
-
-        .investment-project-info {
-          font-size: rem-calc($tiniest-font-size);
-          margin-bottom: 0;
-        }
-
-        .investment-project-description {
-          line-height: rem-calc(24);
-          height: rem-calc(72);
-          margin-bottom: rem-calc(10);
-        }
-
-        .tags {
-          margin-bottom: 0;
-
-          a {
-            margin-bottom: 0;
-          }
-        }
-
-        .total-supports {
-          margin-right: 40px;
-        }
-      }
-
       .panel {
         min-height: rem-calc(192);
         padding: 0 rem-calc(10);
       }
+    }
+  }
 
-      .image-holder {
-        text-align: center;
+  .budget-investment-holder {
+    .image-holder {
+      text-align: center;
 
-        img {
-          height: auto;
-          width: 100%;
-          max-height: 180px;
-          object-fit: cover;
-        }
+      img {
+        height: auto;
+        width: 100%;
+        max-height: 180px;
+        object-fit: cover;
       }
-      .callout {
-        &.warning {
-          z-index: auto;
-        }
+    }
+
+    .callout {
+      &.warning {
+        z-index: auto;
       }
+    }
+  }
+
+  .budget-investment-content {
+    padding: rem-calc(15);
+
+    a {
+      color: $rhino;
+    }
+
+    .investment-title {
+      color: $black;
+
+      h3 {
+        line-height: rem-calc(23);
+        height: rem-calc(72);
+      }
+
+      &:hover {
+        color: $rhino;
+      }
+    }
+
+    .investment-project-info {
+      font-size: rem-calc($tiniest-font-size);
+      margin-bottom: 0;
+    }
+
+    .investment-project-description {
+      line-height: rem-calc(24);
+      height: rem-calc(72);
+      margin-bottom: rem-calc(10);
+    }
+
+    .tags {
+      margin-bottom: 0;
+
+      a {
+        margin-bottom: 0;
+      }
+    }
+
+    .total-supports {
+      margin-right: 40px;
     }
   }
 
@@ -587,7 +587,7 @@ span:hover::before {
   background: #fff !important;
 
   h3 {
-    color: #000000;
+    color: #000;
     font-size: 20px;
     font-weight: 500;
     line-height: 37px;
@@ -596,7 +596,7 @@ span:hover::before {
   h3,
   .social-share-full,
   .copylink,
-  #shortner {
+  .shortner {
     display: inline-block;
     margin: 0 20px 0 0;
   }
@@ -610,20 +610,20 @@ span:hover::before {
   }
 
   .copylink {
-    color: #000000;
+    color: #000;
     font-size: 20px;
     font-weight: 500;
     line-height: 37px;
     cursor: pointer;
   }
 
-  #shortner {
+  .shortner {
     width: 187px;
     border-radius: 4px;
     border: 2px solid #f7d3c9;
     background-color: #fff;
 
-    color: #000000;
+    color: #000;
     font-size: 18px;
     font-weight: 400;
     line-height: 40px;
@@ -638,9 +638,6 @@ span:hover::before {
 
     background-size: 300% 100%;
 
-    moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 
     border-radius: 76px;
@@ -649,9 +646,6 @@ span:hover::before {
 
     &:hover {
       background-position: 100% 0;
-      moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
     }
   }
@@ -706,6 +700,7 @@ span:hover::before {
   margin: auto;
   text-align: center;
   margin-top: 10px;
+
   .arrow-large-left {
     background-image: image-url("arrow.svg");
     background-position: center;
@@ -716,6 +711,7 @@ span:hover::before {
     top: -1.5px;
     position: relative;
   }
+
   a {
     text-decoration: underline;
     line-height: 30px;
@@ -767,7 +763,7 @@ span:hover::before {
 
 .budget-investment-show .social-box {
   h4 {
-    color: #000000;
+    color: #000;
     font-size: 24px;
     font-weight: 700;
     line-height: 37px;
@@ -796,7 +792,7 @@ span:hover::before {
   line-height: 40px;
   padding: 0 20px;
   margin: 0;
-  border: none;
+  border: 0;
   width: auto;
   display: inline-block;
   text-decoration: none;
@@ -817,7 +813,7 @@ span:hover::before {
     //letter-spacing: 2px;
   }
 
-  &:after {
+  &::after {
     content: "";
   }
 
@@ -828,27 +824,26 @@ span:hover::before {
     border-radius: 30px !important;
     font-size: 0 !important;
     border-left-color: $mandys-pink !important;
-    -webkit-animation: rotating 2s 0.25s linear infinite;
     animation: rotating 2s 0.25s linear infinite;
     background: none !important;
     box-shadow: none !important;
 
-    &:after {
+    &::after {
       content: "";
     }
 
     &:hover {
       color: $mandys-pink !important;
-      background: white !important;
+      background: #fff !important;
     }
   }
 
   &.validate {
     font-size: 13px;
-    color: white;
+    color: #fff;
     background: #272266;
 
-    &:after {
+    &::after {
       font-family: "FontAwesome";
       content: "\f00c";
     }
@@ -864,11 +859,15 @@ span:hover::before {
   line-height: 40px;
   padding: 0 20px;
   margin: 0;
-  border: none;
+  border: 0;
   width: auto;
   display: inline-block;
   background-image: linear-gradient(to right, $mandys-pink, #f2d6d0, #fcede9);
   background-color: #f2d6d0;
+
+  transition-property: width, height, background-position, color, border-radius, border-color, box-shadow;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 
   i {
     background: image-url("best.png") center no-repeat;
@@ -881,10 +880,6 @@ span:hover::before {
     background-size: 100%;
   }
 
-  transition-property: width, height, background-position, color, border-radius, border-color, box-shadow;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-
   &:hover {
     background-position: 100% 0;
     transition-property: width, height, background-position, color, border-radius, border-color box-shadow;
@@ -894,7 +889,7 @@ span:hover::before {
 
 
   //transition: all 0.25s ease;
-  &:after {
+  &::after {
     content: "";
   }
 
@@ -904,7 +899,6 @@ span:hover::before {
     border-radius: 30px !important;
     font-size: 0 !important;
     border-left-color: $mandys-pink !important;
-    -webkit-animation: rotating 2s 0.25s linear infinite;
     animation: rotating 2s 0.25s linear infinite;
     background: none !important;
     box-shadow: none !important;
@@ -913,22 +907,22 @@ span:hover::before {
       display: none;
     }
 
-    &:after {
+    &::after {
       content: "";
     }
 
     &:hover {
       color: $mandys-pink !important;
-      background: white !important;
+      background: #fff !important;
     }
   }
 
   &.validate {
     font-size: 13px;
-    color: white;
+    color: #fff;
     background: #272266;
 
-    &:after {
+    &::after {
       font-family: "FontAwesome";
       content: "\f00c";
     }
@@ -941,6 +935,6 @@ span:hover::before {
   margin: 0 0.9375rem 0.9375rem;
 }
 
-.budget-investments .budget-investment-holder .budget-investment .budget-investment-content .investment-title h3 {
+.budget-investment-holder .budget-investment .budget-investment-content .investment-title h3 {
   height: auto;
 }

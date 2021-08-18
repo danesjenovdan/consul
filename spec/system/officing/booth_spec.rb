@@ -18,7 +18,7 @@ describe "Booth", :with_frozen_time do
 
     expect(page).to have_content "You don't have officing shifts today"
   end
-=end 
+=end
   scenario "Officer with single booth assignment today" do
     officer = create(:poll_officer)
     poll = create(:poll)
