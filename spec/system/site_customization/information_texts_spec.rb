@@ -49,4 +49,3 @@ describe "Custom information texts", :admin do
   end
 end
 =end
-
