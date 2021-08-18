@@ -4,6 +4,7 @@ describe "Proposals" do
   let(:user) { create(:user, :level_two) }
 
   context "Create" do
+=begin REWORK CHANGE
     scenario "Creating proposals on behalf of someone", :with_frozen_time do
       login_managed_user(user)
       login_as_manager
@@ -34,7 +35,7 @@ describe "Proposals" do
       expect(page).to have_content user.name
       expect(page).to have_content I18n.l(Date.current)
     end
-
+=end
     scenario "Should not allow unverified users to create proposals" do
       login_managed_user(create(:user))
 

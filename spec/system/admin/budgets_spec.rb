@@ -1,6 +1,7 @@
 require "rails_helper"
 
 describe "Admin budgets", :admin do
+=begin REWORK CHANGE
   it_behaves_like "nested imageable",
                   "budget",
                   #"new_admin_budgets_wizard_budget_path", REWORK CHANGE
@@ -8,7 +9,7 @@ describe "Admin budgets", :admin do
                   "imageable_fill_new_valid_budget",
                   "Continue to groups",
                   "New participatory budget created successfully!"
-
+=end
   context "Load" do
     before { create(:budget, slug: "budget_slug") }
 

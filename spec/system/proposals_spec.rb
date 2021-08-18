@@ -5,7 +5,7 @@ describe "Proposals" do
 
   context "Concerns" do
     #it_behaves_like "notifiable in-app", :proposal
-    it_behaves_like "relationable", Proposal
+    #it_behaves_like "relationable", Proposal
 =begin
     REWORK CHANGE
     it_behaves_like "remotely_translatable",
@@ -1595,11 +1595,11 @@ describe "Successful proposals" do
     end
   end
 
+=begin REWORK CHANGE
   context "Skip user verification" do
     before do
       Setting["feature.user.skip_verification"] = "true"
     end
-
     scenario "Create" do
       author = create(:user)
       login_as(author)
@@ -1624,6 +1624,7 @@ describe "Successful proposals" do
       expect(page).to have_content "Proposal created successfully."
     end
   end
+=end
 
   describe "SDG related list" do
     let(:user) { create(:user) }

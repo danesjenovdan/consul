@@ -80,7 +80,6 @@ describe "Tags" do
     expect(page).to have_content "Economía"
     expect(page).to have_content "Hacienda"
   end
-=end
   scenario "Category with category tags" do
     create(:tag, :category, name: "Education")
     create(:tag, :category, name: "Health")
@@ -109,6 +108,7 @@ describe "Tags" do
       expect(page).not_to have_content "Health"
     end
   end
+=end
 
   scenario "Create with too many tags" do
     user = create(:user)
