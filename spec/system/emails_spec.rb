@@ -345,7 +345,7 @@ describe "Emails" do
     let(:author)   { create(:user, :level_two) }
     let(:budget)   { create(:budget) }
     let!(:heading) { create(:budget_heading, name: "More hospitals", budget: budget) }
-
+=begin REWORK CHANGE
     scenario "Investment created" do
       login_as(author)
       visit new_budget_investment_path(budget_id: budget.id)
@@ -366,7 +366,7 @@ describe "Emails" do
       expect(email).to have_body_text(budget.name)
       expect(email).to have_body_text(budget_path(budget))
     end
-
+=end
     scenario "Unfeasible investment" do
       budget.update!(phase: "valuating")
       valuator = create(:valuator)
@@ -434,6 +434,7 @@ describe "Emails" do
   end
 
   context "Polls" do
+=begin REWORK CHANGE
     scenario "Send email on poll comment reply" do
       user1 = create(:user, email_on_comment_reply: true)
       user2 = create(:user)
@@ -462,6 +463,7 @@ describe "Emails" do
       expect(email).to have_body_text("To stop receiving these emails change your settings in")
       expect(email).to have_body_text(account_path)
     end
+=end
   end
 
   context "Newsletter", :admin do

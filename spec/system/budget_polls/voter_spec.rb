@@ -1,4 +1,5 @@
 require "rails_helper"
+=begin REWORK CHANGE
 
 describe "BudgetPolls", :with_frozen_time do
   let(:budget) { create(:budget, :balloting) }
@@ -13,7 +14,6 @@ describe "BudgetPolls", :with_frozen_time do
     create(:poll_shift, officer: officer, booth: booth, date: Date.current, task: :vote_collection)
     create(:poll_officer_assignment, officer: officer, poll: poll, booth: booth, date: Date.current)
   end
-=begin REWORK CHANGE
   context "Offline" do
     scenario "A citizen can cast a paper vote" do
       login_through_form_as_officer(officer.user)
@@ -89,7 +89,6 @@ describe "BudgetPolls", :with_frozen_time do
       end
     end
   end
-=end
   context "Online" do
     scenario "A citizen can cast vote online" do
       login_as(user)
@@ -142,3 +141,4 @@ describe "BudgetPolls", :with_frozen_time do
     end
   end
 end
+=end

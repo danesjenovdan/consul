@@ -327,7 +327,7 @@ span:hover::before {
   width: 100%;
   box-shadow: 0 4px 43px -10px rgba(0, 0, 0, 0.21);
   border: none;
-  
+
   ul {
     display: flex;
     align-content: space-around;
@@ -345,7 +345,7 @@ span:hover::before {
         color: $minsk !important;
       }
     }
-    a:focus{
+    a:focus {
       outline: none;
     }
   }
@@ -354,10 +354,11 @@ span:hover::before {
   }
 
   .tabs {
-    margin: 0.5rem 0 0 0;
+    margin: 0.5rem 0 0;
   }
 
-  .tabs h2, .tabs h3 {
+  .tabs h2,
+  .tabs h3 {
     color: #32366a;
     font-size: 16px;
     line-height: 20px;
@@ -392,7 +393,7 @@ span:hover::before {
     padding: 7px 15px 7px 10px;
 
     i {
-      background: image-url('check.svg') left no-repeat;
+      background: image-url("check.svg") left no-repeat;
       width: 30px;
     }
   }
@@ -411,7 +412,7 @@ span:hover::before {
     background-image: linear-gradient(to right, $mandys-pink 0%, #272266 100%);
 
     i {
-      //background: image-url('check.png') left no-repeat;
+      //background: image-url("check.png") left no-repeat;
       //width: 30px;
     }
   }
@@ -420,7 +421,9 @@ span:hover::before {
     font-weight: 500;
   }
 
-  .tabs .tabs-title > a[aria-selected='true'], .tabs .tabs-title > a.is-active, .tabs .tabs-title > a:hover {
+  .tabs .tabs-title > a[aria-selected="true"],
+  .tabs .tabs-title > a.is-active,
+  .tabs .tabs-title > a:hover {
     background: none;
     border-bottom: none;
   }
@@ -439,7 +442,7 @@ span:hover::before {
       padding-bottom: 10px;
       margin-bottom: 5px;
       border-bottom: none;
-      &:last-of-type{
+      &:last-of-type {
         border-bottom: none;
       }
     }
@@ -467,7 +470,7 @@ span:hover::before {
 
 .budget-investments {
   .phase-title {
-    margin: rem-calc(30) 0 rem-calc(20) 0;
+    margin: rem-calc(30) 0 rem-calc(20);
   }
 
   .budget-investment-holder {
@@ -521,7 +524,7 @@ span:hover::before {
 
       .panel {
         min-height: rem-calc(192);
-        padding: 0 rem-calc(10) 0;
+        padding: 0 rem-calc(10);
       }
 
       .image-holder {
@@ -534,8 +537,8 @@ span:hover::before {
           object-fit: cover;
         }
       }
-      .callout{
-        &.warning{
+      .callout {
+        &.warning {
           z-index: auto;
         }
       }
@@ -564,7 +567,7 @@ span:hover::before {
     .budget-investment-holder {
       .budget-investment {
         .panel {
-          padding: 0 rem-calc(15) 0;
+          padding: 0 rem-calc(15);
         }
       }
     }
@@ -664,10 +667,10 @@ span:hover::before {
   }
 
   .social-share-button .ssb-twitter::before {
-    background-image: image-url('twitter.svg');
+    background-image: image-url("twitter.svg");
     left: 30px;
     top: 18px;
-    content: ' ';
+    content: " ";
     background-size: 38px 38px;
     width: 40px;
     height: 40px;
@@ -675,10 +678,10 @@ span:hover::before {
   }
 
   .social-share-button .ssb-facebook::before {
-    background-image: image-url('facebook.svg');
+    background-image: image-url("facebook.svg");
     left: 30px;
     top: 18px;
-    content: ' ';
+    content: " ";
     background-size: 38px 38px;
     width: 40px;
     height: 40px;
@@ -686,10 +689,10 @@ span:hover::before {
   }
 
   .social-share-button .ssb-email::before {
-    background-image: image-url('envelope.svg');
+    background-image: image-url("envelope.svg");
     left: 30px;
     top: 18px;
-    content: ' ';
+    content: " ";
     background-size: 38px 38px;
     width: 40px;
     height: 40px;
@@ -704,7 +707,7 @@ span:hover::before {
   text-align: center;
   margin-top: 10px;
   .arrow-large-left {
-    background-image: image-url('arrow.svg');
+    background-image: image-url("arrow.svg");
     background-position: center;
     background-size: 25px 22px;
     width: 23px;
@@ -846,7 +849,7 @@ span:hover::before {
     background: #272266;
 
     &:after {
-      font-family: 'FontAwesome';
+      font-family: "FontAwesome";
       content: "\f00c";
     }
   }
@@ -868,12 +871,12 @@ span:hover::before {
   background-color: #f2d6d0;
 
   i {
-    background: image-url('best.png') center no-repeat;
+    background: image-url("best.png") center no-repeat;
     display: inline-block;
     left: -10px;
     width: 16px;
     height: 19px;
-    top: 0px;
+    top: 0;
     position: relative;
     background-size: 100%;
   }
@@ -926,7 +929,7 @@ span:hover::before {
     background: #272266;
 
     &:after {
-      font-family: 'FontAwesome';
+      font-family: "FontAwesome";
       content: "\f00c";
     }
   }
@@ -935,7 +938,7 @@ span:hover::before {
 .border-tb {
   border-top: 2px solid #3c3583;
   padding-top: 10px;
-  margin: 0 0.9375rem 0.9375rem 0.9375rem;
+  margin: 0 0.9375rem 0.9375rem;
 }
 
 .budget-investments .budget-investment-holder .budget-investment .budget-investment-content .investment-title h3 {
