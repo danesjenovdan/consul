@@ -46,7 +46,8 @@ RUN apt-get update -qq && apt-get install -y chromium
 # Copy the Rails application into place
 COPY . .
 
-# precompile assets
+# precompile assets for production
+ENV RAILS_ENV production
 RUN ./bin/rake assets:precompile
 
 # Define the script we want run once the container boots
