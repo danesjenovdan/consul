@@ -235,7 +235,7 @@ describe "Polls" do
       expect(page).to have_link("Yes", href: new_user_session_path)
       expect(page).to have_link("No", href: new_user_session_path)
     end
-
+=begin REWORK CHANGE
     scenario "Level 1 users" do
       visit polls_path
       expect(page).not_to have_selector(".already-answer")
@@ -253,7 +253,7 @@ describe "Polls" do
       expect(page).to have_link("Yes", href: verification_path)
       expect(page).to have_link("No", href: verification_path)
     end
-
+=end
     scenario "Level 2 users in an expired poll" do
       expired_poll = create(:poll, :expired, geozone_restricted: true)
       expired_poll.geozones << geozone
@@ -272,7 +272,7 @@ describe "Polls" do
       end
       expect(page).to have_content("This poll has finished")
     end
-
+=begin REWORK CHANGE
     scenario "Level 2 users in a poll with questions for a geozone which is not theirs" do
       poll.update!(geozone_restricted: true)
       poll.geozones << create(:geozone)
@@ -290,7 +290,7 @@ describe "Polls" do
         expect(page).not_to have_link("No")
       end
     end
-
+=end
     scenario "Level 2 users reading a same-geozone poll" do
       poll.update!(geozone_restricted: true)
       poll.geozones << geozone
@@ -372,7 +372,7 @@ describe "Polls" do
         expect(page).to have_link("Yes")
       end
     end
-
+=begin REWORK CHANGE
     scenario "Level 2 votes, signs out, signs in, votes again" do
       poll.update!(geozone_restricted: true)
       poll.geozones << geozone
@@ -410,7 +410,7 @@ describe "Polls" do
         expect(page).to have_link("Yes")
       end
     end
-
+=end
     scenario "Shows SDG tags when feature is enabled" do
       Setting["feature.sdg"] = true
       Setting["sdg.process.polls"] = true
@@ -424,7 +424,7 @@ describe "Polls" do
       expect(page).to have_content "target 1.1"
     end
   end
-
+=begin REWORK CHANGE
   context "Booth & Website", :with_frozen_time do
     let(:poll) { create(:poll, summary: "Summary", description: "Description") }
     let(:booth) { create(:poll_booth) }
@@ -546,4 +546,5 @@ describe "Polls" do
       expect(page).to have_link "Information"
     end
   end
+=end
 end

@@ -1,6 +1,6 @@
 require "rails_helper"
 require "sessions_helper"
-
+=begin REWORK CHANGE
 describe "Budget Investments" do
   let(:author)  { create(:user, :level_two, username: "Isabel") }
   let(:budget)  { create(:budget, name: "Big Budget") }
@@ -11,10 +11,8 @@ describe "Budget Investments" do
   it_behaves_like "milestoneable", :budget_investment
 
   context "Concerns" do
-    #it_behaves_like "notifiable in-app", :budget_investment
+    it_behaves_like "notifiable in-app", :budget_investment
     it_behaves_like "relationable", Budget::Investment
-=begin
-    REWORK CHANGE
     it_behaves_like "remotely_translatable",
                     :budget_investment,
                     "budget_investments_path",
@@ -25,8 +23,9 @@ describe "Budget Investments" do
                     "budget_investment_path",
                     { "budget_id": "budget_id", "id": "id" }
     it_behaves_like "flaggable", :budget_investment
-=end
+
   end
+
 
   context "Load" do
     let(:investment) { create(:budget_investment, heading: heading) }
@@ -48,6 +47,7 @@ describe "Budget Investments" do
       expect(page).to have_content investment.title
     end
   end
+
 
   scenario "Index" do
     investments = [create(:budget_investment, heading: heading),
@@ -72,7 +72,6 @@ describe "Budget Investments" do
 
     expect(page).to have_current_path budget_path(budget)
   end
-
   scenario "Index view mode" do
     investments = [create(:budget_investment, heading: heading),
                    create(:budget_investment, heading: heading),
@@ -175,7 +174,7 @@ describe "Budget Investments" do
     expect(page).to have_content "Feasible investment"
     expect(page).to have_content "Winner investment"
   end
-=begin REWORK CHANGE
+
   context("Search") do
     scenario "Search by text" do
       investment1 = create(:budget_investment, heading: heading, title: "Get Schwifty")
@@ -198,7 +197,7 @@ describe "Budget Investments" do
       end
     end
   end
-=end
+
 
   context("Filters") do
     scenario "by unfeasibility" do
@@ -273,6 +272,7 @@ describe "Budget Investments" do
       end
     end
   end
+
 
   context "Orders" do
     before { budget.update(phase: "selecting") }
@@ -507,6 +507,7 @@ describe "Budget Investments" do
       all(".budget-investment h3").map(&:text)
     end
   end
+
 
   context "Phase I - Accepting" do
     before { budget.update(phase: "accepting") }
@@ -780,6 +781,7 @@ describe "Budget Investments" do
     end
   end
 
+
   scenario "Show" do
     investment = create(:budget_investment, heading: heading)
 
@@ -963,6 +965,7 @@ describe "Budget Investments" do
 
     expect(page).to have_content("This investment project has been selected for balloting phase")
   end
+
 
   describe "winner budget investment text" do
     let(:investment) do
@@ -1228,6 +1231,7 @@ describe "Budget Investments" do
       budget.update(phase: "valuating")
     end
 
+
     scenario "Sidebar in show should display support text and count" do
       investment = create(:budget_investment, :selected, budget: budget, voters: [create(:user)])
 
@@ -1248,7 +1252,6 @@ describe "Budget Investments" do
         expect(page).to have_content "1 support"
       end
     end
-
     scenario "Show should display support text and count" do
       investment = create(:budget_investment, budget: budget, heading: heading, voters: [create(:user)])
 
@@ -1259,6 +1262,7 @@ describe "Budget Investments" do
         expect(page).to have_content "1 support"
       end
     end
+
   end
 
   context "Publishing prices phase" do
@@ -1281,11 +1285,11 @@ describe "Budget Investments" do
     end
   end
 
+
   context "Balloting Phase" do
     before do
       budget.update(phase: "balloting")
     end
-=begin REWORK CHANGE
     scenario "Index" do
       user = create(:user, :level_two)
       investment1 = create(:budget_investment, :selected, heading: heading, price: 10000)
@@ -1308,7 +1312,6 @@ describe "Budget Investments" do
         expect(page).to have_content "€20,000"
       end
     end
-=end
     scenario "Order by cost (only when balloting)" do
       mid_investment = create(:budget_investment, :selected, heading: heading, title: "Build a nice house", price: 1000)
       mid_investment.update_column(:confidence_score, 10)
@@ -1515,6 +1518,8 @@ describe "Budget Investments" do
     end
   end
 
+
+
   context "sidebar map" do
     scenario "Display 6 investment's markers on sidebar map" do
       investment1 = create(:budget_investment, heading: heading)
@@ -1639,7 +1644,6 @@ describe "Budget Investments" do
           expect(page).not_to have_link "Remove image"
         end
       end
-
       scenario "Contains remove image button in phases different from accepting" do
         budget.update!(phase: "reviewing")
         investment = create(:budget_investment, :with_image, heading: heading, author: author)
@@ -1655,6 +1659,7 @@ describe "Budget Investments" do
       end
     end
   end
+
 
   describe "SDG related list" do
     before do
@@ -1692,3 +1697,4 @@ describe "Budget Investments" do
     end
   end
 end
+=end

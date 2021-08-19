@@ -23,33 +23,33 @@
       <% end %>
 
     <div class="ckeditor small-12 column">
-      <label for="q1"><%= t('activerecord.attributes.budget/investment.q1') %></label>
+      <label for="q1"><%= t("activerecord.attributes.budget/investment.q1") %></label>
       <%= f.cktext_area :q1, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
     <div class="ckeditor small-12 column">
-    <label for="q2"><%= t('activerecord.attributes.budget/investment.q2') %></label>
+    <label for="q2"><%= t("activerecord.attributes.budget/investment.q2") %></label>
       <%= f.cktext_area :q2, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
     <div class="ckeditor small-12 column">
-      <label for="q3"><%= t('activerecord.attributes.budget/investment.q3') %></label>
+      <label for="q3"><%= t("activerecord.attributes.budget/investment.q3") %></label>
       <%= f.cktext_area :q3, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
     <div class="ckeditor small-12 column">
-      <label for="q4"><%= t('activerecord.attributes.budget/investment.q4') %></label>
+      <label for="q4"><%= t("activerecord.attributes.budget/investment.q4") %></label>
       <p>Soglasije lastnika najdete <a target="_blank" href="https://sodelujinglasuj.si/system/documents/attachments/000/000/006/original/d488016ad91350d6aaf5160da4e7f0171d781e19.pdf">tukaj</a>. Prenesite ga na svoj računalnik, izpolnite in priložite obrazcu za oddajo predloga.</p>
       <%= f.cktext_area :q4, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
     <div class="ckeditor small-12 column">
-      <label for="q5"><%= t('activerecord.attributes.budget/investment.q5') %></label>
+      <label for="q5"><%= t("activerecord.attributes.budget/investment.q5") %></label>
       <%= f.cktext_area :q5, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
     </div>
 
     <div class="ckeditor small-12 column">
-        <label for="q6"><%= t('activerecord.attributes.budget/investment.q6') %></label>
+        <label for="q6"><%= t("activerecord.attributes.budget/investment.q6") %></label>
         <%= f.cktext_area :q6, maxlength: Budget::Investment.description_max_length, ckeditor: { language: I18n.locale } %>
      </div>
 

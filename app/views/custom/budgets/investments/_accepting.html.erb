@@ -4,7 +4,7 @@
       <div class="row">
         <div class="small-12 medium-9 medium-centered text-center">
           <h2><%= t("custom.headings.#{phase.kind}") %>!</h2>
-          <p><%= raw(phase.summary) %></p>
+          <p><%= phase.summary %></p>
         </div>
       </div>
     </div>
@@ -16,12 +16,12 @@
         <div class="small-12 medium-6 column ">
           <div class="medium-8 medium-centered js-padt">
             <h2><%= t("custom.presentation.accepting.title_1") %></h2>
-            <p><%= raw(phase.presentation_summary_1) %></p>
+            <p><%= phase.presentation_summary_1 %></p>
           </div>
         </div>
         <div class="small-12 medium-6 column">
           <div class="medium-centered">
-            <%= image_tag(image_path_for('phases/proracun.png')) %>
+            <%= image_tag(image_path_for("phases/proracun.png")) %>
           </div>
         </div>
       </div>
@@ -32,13 +32,13 @@
       <div class="row qs">
         <div class="small-12 medium-6 column hide-for-small-only">
           <div class=" medium-centered">
-            <%= image_tag(image_path_for('phases/predlog.png')) %>
+            <%= image_tag(image_path_for("phases/predlog.png")) %>
           </div>
         </div>
         <div class="small-12 medium-6 column ">
           <div class="medium-8 medium-centered js-padt">
             <h2><%= t("custom.presentation.accepting.title_2") %></h2>
-            <p><%= raw(phase.presentation_summary_2) %></p>
+            <p><%= phase.presentation_summary_2 %></p>
           </div>
         </div>
       </div>
@@ -51,12 +51,12 @@
         <div class="small-12 medium-6 column ">
           <div class="medium-8 medium-centered js-padt">
             <h2><%= t("custom.presentation.accepting.title_3") %></h2>
-            <p><%= raw(phase.presentation_summary_3) %></p>
+            <p><%= phase.presentation_summary_3 %></p>
           </div>
         </div>
         <div class="small-12 medium-6 column ">
           <div class="medium-centered">
-            <%= image_tag(image_path_for('phases/ilustracije-sprite-notranje-glasuj.png')) %>
+            <%= image_tag(image_path_for("phases/ilustracije-sprite-notranje-glasuj.png")) %>
           </div>
         </div>
       </div>

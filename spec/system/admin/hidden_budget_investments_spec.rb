@@ -12,7 +12,7 @@ describe "Admin hidden budget investments", :admin do
     expect(page).to have_content(investment.title)
     expect(page).to have_content(investment.description)
   end
-
+=begin REWORK CHANGE
   scenario "Restore" do
     investment = create(:budget_investment, :hidden, heading: heading)
 
@@ -26,7 +26,7 @@ describe "Admin hidden budget investments", :admin do
 
     expect(page).to have_content(investment.title)
   end
-
+=end
   scenario "Confirm hide" do
     investment = create(:budget_investment, :hidden, heading: heading)
     visit admin_hidden_budget_investments_path

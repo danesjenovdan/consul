@@ -52,7 +52,7 @@ describe "Admin polls", :admin do
 
     expect(page).to have_content poll.name
   end
-
+=begin REWORK CHANGE
   scenario "Create" do
     visit admin_polls_path
     click_link "Create poll"
@@ -80,7 +80,7 @@ describe "Admin polls", :admin do
 
     expect(page).to have_content "Upcoming poll"
   end
-
+=end
   scenario "Edit" do
     poll = create(:poll, :with_image)
 

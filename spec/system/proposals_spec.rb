@@ -5,7 +5,7 @@ describe "Proposals" do
 
   context "Concerns" do
     #it_behaves_like "notifiable in-app", :proposal
-    it_behaves_like "relationable", Proposal
+    #it_behaves_like "relationable", Proposal
 =begin
     REWORK CHANGE
     it_behaves_like "remotely_translatable",
@@ -337,7 +337,7 @@ describe "Proposals" do
     expect(page).to have_css "meta[name='twitter:title'][content=\'#{proposal.title}\']", visible: :hidden
     expect(page).to have_css "meta[property='og:title'][content=\'#{proposal.title}\']", visible: :hidden
   end
-
+=begin REWORK CHANGE
   scenario "Create and publish", :with_frozen_time do
     author = create(:user)
     login_as(author)
@@ -372,7 +372,7 @@ describe "Proposals" do
     expect(page).to have_content "Solidarity"
     expect(page).to have_content I18n.l(Date.current)
   end
-
+=end
   scenario "Create with invisible_captcha honeypot field", :no_js do
     author = create(:user)
     login_as(author)
@@ -566,7 +566,7 @@ describe "Proposals" do
         expect(page).to have_content "All city"
       end
     end
-
+=begin REWORK CHANGE
     scenario "Specific geozone" do
       create(:geozone, name: "California")
       create(:geozone, name: "New York")
@@ -592,9 +592,11 @@ describe "Proposals" do
         expect(page).to have_content "California"
       end
     end
+=end
   end
 
   context "Retired proposals" do
+=begin REWORK
     scenario "Retire" do
       proposal = create(:proposal)
       login_as(proposal.author)
@@ -637,7 +639,7 @@ describe "Proposals" do
       expect(page).not_to have_content "Proposal retired"
       expect(page).to have_content "can't be blank", count: 2
     end
-
+=end
     scenario "Index do not list retired proposals by default" do
       Setting["feature.featured_proposals"] = true
       create_featured_proposals
@@ -693,7 +695,7 @@ describe "Proposals" do
       expect(page).to have_content unfeasible.title
       expect(page).not_to have_content duplicated.title
     end
-
+=begin REWORK CHANGE
     context "Special interface translation behaviour" do
       before { Setting["feature.translation_interface"] = true }
 
@@ -707,6 +709,7 @@ describe "Proposals" do
         expect(page).not_to have_link "Remove language"
       end
     end
+=end
   end
 
   scenario "Update should not be posible if logged user is not the author" do
@@ -1263,7 +1266,7 @@ describe "Proposals" do
   it_behaves_like "followable", "proposal", "proposal_path", { "id": "id" }
 
   it_behaves_like "imageable", "proposal", "proposal_path", { "id": "id" }
-
+=begin REWORK CHANGE
   it_behaves_like "nested imageable",
                   "proposal",
                   "new_proposal_path",
@@ -1279,7 +1282,7 @@ describe "Proposals" do
                   nil,
                   "Save changes",
                   "Proposal updated successfully"
-
+=end
   it_behaves_like "documentable", "proposal", "proposal_path", { "id": "id" }
 
   it_behaves_like "nested documentable",
@@ -1396,6 +1399,7 @@ describe "Proposals" do
   end
 
   context "Suggesting proposals" do
+=begin REWORK CHANGE
     scenario "Show up to 5 suggestions" do
       create(:proposal, title: "First proposal, has search term")
       create(:proposal, title: "Second title")
@@ -1414,7 +1418,7 @@ describe "Proposals" do
         expect(page).to have_content "You are seeing 5 of 6 proposals containing the term 'search'"
       end
     end
-
+=end
     scenario "No found suggestions" do
       create(:proposal, title: "First proposal").update_column(:confidence_score, 10)
       create(:proposal, title: "Second proposal").update_column(:confidence_score, 8)
@@ -1592,11 +1596,11 @@ describe "Successful proposals" do
     end
   end
 
+=begin REWORK CHANGE
   context "Skip user verification" do
     before do
       Setting["feature.user.skip_verification"] = "true"
     end
-
     scenario "Create" do
       author = create(:user)
       login_as(author)
@@ -1621,6 +1625,7 @@ describe "Successful proposals" do
       expect(page).to have_content "Proposal created successfully."
     end
   end
+=end
 
   describe "SDG related list" do
     let(:user) { create(:user) }

@@ -57,7 +57,8 @@ class Budget
 
     validates_translation :title, presence: true, length: { in: 4..Budget::Investment.title_max_length }
     # TODO find a way to disable this in custom file, instead of commenting it out here
-    #validates_translation :description, presence: true, length: { maximum: Budget::Investment.description_max_length }
+    #validates_translation :description, presence: true, length:
+    #{ maximum: Budget::Investment.description_max_length }
 
     validates :author, presence: true
     validates :heading_id, presence: true

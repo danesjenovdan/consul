@@ -24,7 +24,7 @@ section "Creating Settings" do
 
     # added by MUKI
     "org_name": "Participativni proračun",
-    "place_name": I18n.t('custom.meta.place_name'),
+    "place_name": I18n.t("custom.meta.place_name"),
 
     "feature.debates": false,
     "feature.proposals": false,
@@ -48,10 +48,10 @@ section "Creating Settings" do
     "feature.user.skip_verification": true,
     "feature.help_page": true,
 
-    "meta_title": 'Participativni proračun',
-    "meta_description": '',
-    "meta_keywords": 'citizen participation, open government',
-    "verification_offices_url": '',
+    "meta_title": "Participativni proračun",
+    "meta_description": "",
+    "meta_keywords": "citizen participation, open government",
+    "verification_offices_url": "",
     "map.latitude": 46.06,
     "map.longitude": 14.39,
     "map.zoom": 10,
