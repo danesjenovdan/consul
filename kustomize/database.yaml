@@ -42,7 +42,7 @@ data:
       #   :password: "<password>"
       #   :authentication: "plain"
       #   :enable_starttls_auto: true
-      force_ssl: true
+      force_ssl: false
       delay_jobs: true
       rollbar_server_token: ""
       http_basic_username: ""

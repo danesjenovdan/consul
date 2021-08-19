@@ -1,4 +1,4 @@
-FROM ruby:2.6.7
+FROM ruby:2.6.7 as build
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -49,7 +49,6 @@ COPY . .
 # precompile assets
 RUN ./bin/rake assets:precompile
 
-# Define the script we want run once the container boots
-# Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
-# CMD [ "config/containers/app_cmd.sh" ]
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+FROM nginx:alpine
+
+COPY --from=build /var/www/consul/public /usr/share/nginx/html

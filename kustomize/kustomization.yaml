@@ -10,3 +10,6 @@ images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul
     newTag: '9c0935ea85752fffc3f8e113b34ca01c88fc2216'
+  - name: consul-assets
+    newName: rg.fr-par.scw.cloud/djnd/consul-assets
+    newTag: 'latest'
