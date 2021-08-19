@@ -59,8 +59,10 @@ spec:
           env:
             - name: RAILS_ENV
               value: production
-            - name: RAILS_ASSET_HOST
-              value: https://files.consul.lb.djnd.si
+            # - name: RAILS_ASSET_HOST
+            #   value: https://files.consul.lb.djnd.si
+            - name: RAILS_SERVE_STATIC_FILES
+              value: "true"
           envFrom:
             - secretRef:
                 name: consul-credentials
@@ -78,19 +80,19 @@ spec:
             - name: db-conf
               mountPath: /var/www/consul/config/secrets.yml
               subPath: secrets.yml
-        - name: consul-nginx
-          ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
-          image: consul-assets
-          resources:
-            requests:
-              memory: 500Mi
-              cpu: 200m
-            limits:
-              memory: 500Mi
-              cpu: 200m
+        # - name: consul-nginx
+        #   ports:
+        #     - name: http
+        #       containerPort: 80
+        #       protocol: TCP
+        #   image: consul-assets
+        #   resources:
+        #     requests:
+        #       memory: 500Mi
+        #       cpu: 200m
+        #     limits:
+        #       memory: 500Mi
+        #       cpu: 200m
       volumes:
         - name: db-conf
           configMap:
