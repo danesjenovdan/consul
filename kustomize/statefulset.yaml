@@ -111,10 +111,10 @@ spec:
           resources:
             requests:
               memory: 1Gi
-              cpu: 1000m
+              cpu: 500m
             limits:
               memory: 1Gi
-              cpu: 1000m
+              cpu: 500m
           volumeMounts:
             - name: db-conf
               mountPath: /var/www/consul/config/database.yml
