@@ -142,3 +142,13 @@ spec:
         - name: db-conf
           configMap:
             name: db-conf
+  volumeClaimTemplates:
+    - metadata:
+        name: consul-persistent-storage
+      spec:
+        storageClassName: 'scw-bssd-retain'
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 2Gi
