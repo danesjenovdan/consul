@@ -1,4 +1,4 @@
-FROM ruby:2.6.7
+FROM ruby:2.6.7-buster
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -47,8 +47,8 @@ RUN apt-get update -qq && apt-get install -y chromium
 COPY . .
 
 # precompile assets for production
-ENV RAILS_ENV development
-RUN ./bin/rake assets:precompile
+# ENV RAILS_ENV development
+# RUN ./bin/rake assets:precompile
 
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)

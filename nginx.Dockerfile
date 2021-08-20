@@ -47,8 +47,8 @@ RUN apt-get update -qq && apt-get install -y chromium
 COPY . .
 
 # precompile assets for production
-ENV RAILS_ENV development
-RUN ./bin/rake assets:precompile
+# ENV RAILS_ENV development
+# RUN ./bin/rake assets:precompile
 
 FROM nginx:alpine
 
