@@ -131,7 +131,7 @@ spec:
           image: nginx:alpine
           volumeMounts:
             - name: consul-persistent-storage
-              mountPath: /usr/share/nginx/html/assets
+              mountPath: /usr/share/nginx/html/pvc
           resources:
             requests:
               memory: 500Mi
