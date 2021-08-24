@@ -74,6 +74,8 @@ spec:
             - name: db-conf
               mountPath: /var/www/consul/config/secrets.yml
               subPath: secrets.yml
+            - name: consul-persistent-storage
+              mountPath: /pvc
       containers:
         - name: consul
           image: consul
@@ -101,10 +103,10 @@ spec:
           env:
             - name: RAILS_ENV
               value: production
-            # - name: RAILS_ASSET_HOST
-            #   value: https://files.consul.lb.djnd.si
-            - name: RAILS_SERVE_STATIC_FILES
-              value: "true"
+            - name: RAILS_ASSET_HOST
+              value: https://files.consul.lb.djnd.si
+            # - name: RAILS_SERVE_STATIC_FILES
+            #   value: "true"
           envFrom:
             - secretRef:
                 name: consul-credentials
@@ -130,7 +132,7 @@ spec:
           image: nginx:alpine
           volumeMounts:
             - name: consul-persistent-storage
-              mountPath: /usr/share/nginx/html
+              mountPath: /usr/share/nginx/html/assets
           resources:
             requests:
               memory: 500Mi
