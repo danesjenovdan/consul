@@ -79,9 +79,6 @@ spec:
       containers:
         - name: consul
           image: consul
-          volumeMounts:
-            - name: consul-persistent-storage
-              mountPath: /pvc
           # lifecycle:
           #   postStart:
           #     exec:
@@ -124,6 +121,8 @@ spec:
             - name: db-conf
               mountPath: /var/www/consul/config/secrets.yml
               subPath: secrets.yml
+            - name: consul-persistent-storage
+              mountPath: /pvc
         - name: consul-nginx
           ports:
             - name: http
