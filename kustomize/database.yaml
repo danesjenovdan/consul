@@ -33,15 +33,13 @@ data:
     production:
       secret_key_base: "this-should-be-secret"
       server_name: ""
-      # mailer_delivery_method: :smtp
-      # smtp_settings:
-      #   :address: "smtp.example.com"
-      #   :port: 25
-      #   :domain: "your_domain.com"
-      #   :user_name: "<username>"
-      #   :password: "<password>"
-      #   :authentication: "plain"
-      #   :enable_starttls_auto: true
+      mailer_delivery_method: :smtp
+      smtp_settings:
+        :address: "smtp.example.com"
+        :port: 25
+        :domain: "posta.danesjenovdan.si"
+        :user_name: "<%= ENV['SMTP_USERNAME'] %>"
+        :password: "<%= ENV['SMTP_PASSWORD'] %>"
       force_ssl: false
       delay_jobs: true
       rollbar_server_token: ""
