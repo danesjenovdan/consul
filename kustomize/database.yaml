@@ -35,7 +35,7 @@ data:
       server_name: ""
       mailer_delivery_method: :smtp
       smtp_settings:
-        :address: "smtp.example.com"
+        :address: " smtp.flowmailer.net"
         :port: 25
         :domain: "posta.danesjenovdan.si"
         :user_name: "<%= ENV['SMTP_USERNAME'] %>"
