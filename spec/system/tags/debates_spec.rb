@@ -95,7 +95,7 @@ describe "Tags" do
     expect(page).to have_content error_message
     expect(page).to have_content "tags must be less than or equal to 6"
   end
-=begin REWORK CHANGE
+
   scenario "Create with dangerous strings" do
     user = create(:user)
     login_as(user)
@@ -116,7 +116,7 @@ describe "Tags" do
     expect(page).to have_content "scriptalert('hey');script"
     expect(page.html).not_to include "user_id=1, &a=3, <script>alert('hey');</script>"
   end
-=end
+
   scenario "Update" do
     debate = create(:debate, tag_list: "Economía")
 

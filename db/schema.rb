@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_115700) do
+ActiveRecord::Schema.define(version: 2021_01_23_100638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -228,15 +228,6 @@ ActiveRecord::Schema.define(version: 2021_05_19_115700) do
     t.string "title"
     t.text "description"
     t.datetime "hidden_at"
-    t.text "q0"
-    t.text "q1"
-    t.text "q2"
-    t.text "q3"
-    t.text "q4"
-    t.text "q5"
-    t.text "q6"
-    t.text "q8"
-    t.text "q9"
     t.index ["budget_investment_id"], name: "index_budget_investment_translations_on_budget_investment_id"
     t.index ["hidden_at"], name: "index_budget_investment_translations_on_hidden_at"
     t.index ["locale"], name: "index_budget_investment_translations_on_locale"
@@ -305,9 +296,6 @@ ActiveRecord::Schema.define(version: 2021_05_19_115700) do
     t.text "summary"
     t.string "name"
     t.string "main_link_text"
-    t.string "presentation_summary_1"
-    t.string "presentation_summary_2"
-    t.string "presentation_summary_3"
     t.index ["budget_phase_id"], name: "index_budget_phase_translations_on_budget_phase_id"
     t.index ["locale"], name: "index_budget_phase_translations_on_locale"
   end

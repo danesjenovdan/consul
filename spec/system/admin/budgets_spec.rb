@@ -1,15 +1,14 @@
 require "rails_helper"
 
 describe "Admin budgets", :admin do
-=begin REWORK CHANGE
   it_behaves_like "nested imageable",
                   "budget",
-                  #"new_admin_budgets_wizard_budget_path", REWORK CHANGE
+                  "new_admin_budgets_wizard_budget_path",
                   {},
                   "imageable_fill_new_valid_budget",
                   "Continue to groups",
                   "New participatory budget created successfully!"
-=end
+
   context "Load" do
     before { create(:budget, slug: "budget_slug") }
 
@@ -111,9 +110,9 @@ describe "Admin budgets", :admin do
     end
   end
 
-=begin REWORK CHANGE
   context "Publish" do
     let(:budget) { create(:budget, :drafting) }
+
     scenario "Can preview budget before it is published" do
       visit edit_admin_budget_path(budget)
 
@@ -121,6 +120,7 @@ describe "Admin budgets", :admin do
         expect(page).to have_current_path budget_path(budget)
       end
     end
+
     scenario "Can preview a budget after it is published" do
       visit edit_admin_budget_path(budget)
 
@@ -135,7 +135,7 @@ describe "Admin budgets", :admin do
       end
     end
   end
-=end
+
   context "Destroy" do
     let!(:budget) { create(:budget) }
     let(:heading) { create(:budget_heading, budget: budget) }
@@ -242,7 +242,7 @@ describe "Admin budgets", :admin do
         expect(page).to have_field "Show advanced stats"
       end
     end
-=begin REWORK CHANGE
+
     scenario "Show CTA link in public site if added" do
       visit edit_admin_budget_path(budget)
 
@@ -285,7 +285,6 @@ describe "Admin budgets", :admin do
 
       expect(page).to have_content "New English Name"
     end
-=end
   end
 
   context "Update" do

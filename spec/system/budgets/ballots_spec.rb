@@ -25,13 +25,13 @@ describe "Ballots" do
     end
   end
 
-=begin REWORK CHANGE
   context "Lines Load" do
     before do
       create(:budget_investment, :selected, heading: california, title: "More rain")
       budget.update!(slug: "budget_slug")
       login_as(user)
     end
+
     scenario "finds ballot lines using budget slug" do
       visit budget_investments_path("budget_slug", states, california)
       add_to_ballot("More rain")
@@ -39,7 +39,7 @@ describe "Ballots" do
       within("#sidebar") { expect(page).to have_content "More rain" }
     end
   end
-=end
+
   context "Voting" do
     before { login_as(user) }
 
@@ -62,7 +62,7 @@ describe "Ballots" do
           expect(page).to have_link "District 2"
         end
       end
-=begin REWORK CHANGE
+
       scenario "Investments" do
         create(:budget_heading, group: city, name: "Under the city")
 
@@ -100,9 +100,8 @@ describe "Ballots" do
         expect(page).to have_css(".budget-investment", count: 1)
         expect(page).to have_content "Climbing wall"
       end
-=end
     end
-=begin REWORK CHANGE
+
     context "Adding and Removing Investments" do
       scenario "Add a investment" do
         create(:budget_investment, :selected, heading: new_york, price: 10000, title: "Bring back King Kong")
@@ -187,6 +186,7 @@ describe "Ballots" do
         end
       end
     end
+
     #Break up or simplify with helpers
     context "Balloting in multiple headings" do
       scenario "Independent progress bar for headings" do
@@ -246,6 +246,7 @@ describe "Ballots" do
         expect(page).to have_content("You have active votes in another heading: District 1")
       end
     end
+
     scenario "Display progress bar after first vote" do
       create(:budget_investment, :selected, heading: new_york, price: 10000, title: "Park expansion")
 
@@ -257,9 +258,8 @@ describe "Ballots" do
         expect(page).to have_css("#total_amount", text: "€10,000")
       end
     end
-=end
   end
-=begin REWORK CHANGE
+
   context "Groups" do
     before { login_as(user) }
 
@@ -307,7 +307,7 @@ describe "Ballots" do
       expect(page).to have_link california.name, href: budget_investments_path(budget, heading_id: california.id)
     end
   end
-=end
+
   context "Showing the ballot" do
     scenario "Displaying the correct group, heading, count & amount" do
       group1 = create(:budget_group, budget: budget)
@@ -371,7 +371,7 @@ describe "Ballots" do
     expect(page).to have_current_path(budget_ballot_path(budget))
     expect(page).to have_content("You have voted 0 investments")
   end
-=begin REWORK CHANGE
+
   scenario "Removing investments from ballot (sidebar)" do
     investment1 = create(:budget_investment, :selected, price: 10000, heading: new_york)
     investment2 = create(:budget_investment, :selected, price: 20000, heading: new_york)
@@ -406,8 +406,7 @@ describe "Ballots" do
       expect(page).to have_content "€20,000"
     end
   end
-=end
-=begin REWORK CHANGE
+
   describe "Back link" do
     scenario "after adding and removing an investment from the ballot" do
       create(:budget_investment, :selected, heading: new_york, price: 10, title: "Sully monument")
@@ -674,5 +673,4 @@ describe "Ballots" do
       end
     end
   end
-=end
 end

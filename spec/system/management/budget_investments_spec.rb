@@ -6,8 +6,7 @@ describe "Budget Investments" do
   let(:group)   { create(:budget_group, budget: budget, name: "Whole city") }
   let(:heading) { create(:budget_heading, group: group, name: "Health") }
   let(:user)    { create(:user, :level_two) }
-#REWORK CHANGE
-=begin REWORK CHANGE
+
   it_behaves_like "nested documentable",
                   "user",
                   "budget_investment",
@@ -35,10 +34,9 @@ describe "Budget Investments" do
                   "management_budget_investment_path",
                   { "budget_id": "budget_id" },
                   management: true
-=end
+
   context "Load" do
     let(:investment) { create(:budget_investment, budget: budget) }
-=begin REWORK CHANGE
 
     scenario "finds investment using budget slug" do
       login_managed_user(user)
@@ -47,12 +45,11 @@ describe "Budget Investments" do
 
       expect(page).to have_content investment.title
     end
-=end
   end
 
   context "Create" do
     before { heading.budget.update(phase: "accepting") }
-=begin REWORK CHANGE
+
     scenario "Creating budget investments on behalf of someone, selecting a budget" do
       login_managed_user(user)
       login_as_manager(manager)
@@ -87,7 +84,7 @@ describe "Budget Investments" do
       expect(page).to have_content user.name
       expect(page).to have_content I18n.l(budget.created_at.to_date)
     end
-=end
+
     scenario "Should not allow unverified users to create budget investments" do
       login_managed_user(create(:user))
 
@@ -96,7 +93,7 @@ describe "Budget Investments" do
 
       expect(page).to have_content "User is not verified"
     end
-=begin REWORK CHANGE
+
     scenario "Shows suggestions to unverified managers" do
       login_managed_user(user)
 
@@ -121,7 +118,7 @@ describe "Budget Investments" do
         expect(page).not_to have_content "Plant trees"
       end
     end
-=end
+
     scenario "when user has not been selected we can't create a budget investment" do
       Setting["feature.user.skip_verification"] = "true"
       login_as_manager(manager)
@@ -267,7 +264,6 @@ describe "Budget Investments" do
   end
 
   context "Supporting" do
-=begin REWORK CHANGE
     scenario "Supporting budget investments on behalf of someone in index view" do
       budget_investment = create(:budget_investment, heading: heading)
 
@@ -386,7 +382,7 @@ describe "Budget Investments" do
       expect(page).to have_button "Support"
       expect(page).not_to have_button "Remove your support"
     end
-=end
+
     scenario "Should not allow unverified users to vote proposals" do
       login_managed_user(create(:user))
       create(:budget_investment, budget: budget)

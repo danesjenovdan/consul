@@ -143,7 +143,7 @@ describe "Cross-Site Scripting protection" do
 
     expect(page.text).not_to be_empty
   end
-=begin REWORK CHANGE
+
   scenario "investment description" do
     investment = create(:budget_investment, description: attack_code)
 
@@ -151,7 +151,7 @@ describe "Cross-Site Scripting protection" do
 
     expect(page.text).not_to be_empty
   end
-=end
+
   scenario "budget phase description" do
     budget = create(:budget)
     budget.current_phase.update!(description: attack_code)

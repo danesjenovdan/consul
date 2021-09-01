@@ -52,7 +52,7 @@ describe "Tags" do
     expect(page).to have_content "Economía"
     expect(page).to have_content "Hacienda"
   end
-=begin REWORK CHANGE
+
   scenario "Create" do
     user = create(:user)
     login_as(user)
@@ -71,7 +71,7 @@ describe "Tags" do
     expect(page).to have_content "Hacienda"
     expect(page).to have_content "Impuestos"
   end
-=end
+
   scenario "Create with too many tags" do
     user = create(:user)
     login_as(user)

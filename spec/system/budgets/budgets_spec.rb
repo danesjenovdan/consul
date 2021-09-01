@@ -5,7 +5,6 @@ describe "Budgets" do
   let(:level_two_user)     { create(:user, :level_two) }
   let(:allowed_phase_list) { ["balloting", "reviewing_ballots", "finished"] }
 
-=begin REWORK CHANGE
   context "Load" do
     before { budget.update(slug: "budget_slug") }
 
@@ -232,7 +231,7 @@ describe "Budgets" do
 
     expect(page).to have_css(".tabs-panel.is-active", count: 1)
   end
-=end
+
   context "Show" do
     let!(:budget) { create(:budget, :selecting) }
     let!(:group)  { create(:budget_group, budget: budget) }
@@ -302,6 +301,41 @@ describe "Budgets" do
       expect(page).to have_link "See results"
     end
 
+    scenario "Show link to see all investments" do
+      budget = create(:budget)
+      group = create(:budget_group, budget: budget)
+      heading = create(:budget_heading, group: group)
+
+      create_list(:budget_investment, 3, :selected, heading: heading, price: 999)
+
+      budget.update!(phase: "informing")
+
+      visit budget_path(budget)
+      expect(page).not_to have_link "See all investments"
+
+      %w[accepting reviewing selecting valuating].each do |phase_name|
+        budget.update!(phase: phase_name)
+
+        visit budget_path(budget)
+        expect(page).to have_link "See all investments",
+                                  href: budget_investments_path(budget)
+      end
+
+      %w[publishing_prices balloting reviewing_ballots].each do |phase_name|
+        budget.update!(phase: phase_name)
+
+        visit budget_path(budget)
+        expect(page).to have_link "See all investments",
+                                  href: budget_investments_path(budget)
+      end
+
+      budget.update!(phase: "finished")
+
+      visit budget_path(budget)
+      expect(page).to have_link "See all investments",
+                                  href: budget_investments_path(budget)
+    end
+
     scenario "Show investments list" do
       budget = create(:budget, phase: "balloting")
       group = create(:budget_group, budget: budget)
@@ -320,8 +354,8 @@ describe "Budgets" do
                                 href: budget_investments_path(budget)
     end
 
-    scenario "Show investments list when budget has multiple headings" do
-      budget = create(:budget, phase: "accepting")
+    scenario "Do not show investments list when budget has multiple headings" do
+      budget = create(:budget)
       group = create(:budget_group, budget: budget)
       heading_1 = create(:budget_heading, group: group)
       create(:budget_heading, group: group)
@@ -347,7 +381,7 @@ describe "Budgets" do
       expect(page).to have_content "It's time to support projects!"
       expect(page).to have_content "So far you've supported 3 projects."
     end
-=begin REWORK CHANGE
+
     scenario "Show supports only if the support has not been removed" do
       voter = create(:user, :level_two)
       budget = create(:budget, phase: "selecting")
@@ -383,7 +417,6 @@ describe "Budgets" do
 
       expect(page).to have_content "So far you've supported 0 projects."
     end
-=end
   end
 
   context "In Drafting phase" do

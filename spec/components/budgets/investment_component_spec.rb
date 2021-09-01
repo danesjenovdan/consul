@@ -21,7 +21,7 @@ describe Budgets::InvestmentComponent, type: :component do
 
     expect(page).to have_css "img[src*='budget_investment_no_image']"
   end
-=begin REWORK CHANGE
+
   it "shows supports count when budget is valuating" do
     budget = create(:budget, :valuating)
     investment = create(:budget_investment, budget: budget)
@@ -34,7 +34,7 @@ describe Budgets::InvestmentComponent, type: :component do
 
     expect(page).not_to have_content "Supports"
   end
-=end
+
   it "shows price when investment is selected and budget prices are published" do
     budget = create(:budget, :finished)
     investment = create(:budget_investment, :selected, budget: budget)

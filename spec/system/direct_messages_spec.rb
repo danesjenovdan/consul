@@ -45,7 +45,7 @@ describe "Direct messages" do
       expect(page).to have_content "This user doesn't accept private messages."
       expect(page).not_to have_link "Send private message"
     end
-=begin REWORK CHANGE
+
     scenario "Unverified user" do
       sender = create(:user)
       receiver = create(:user)
@@ -56,7 +56,7 @@ describe "Direct messages" do
       expect(page).to have_content "To send a private message verify your account"
       expect(page).not_to have_link "Send private message"
     end
-=end
+
     scenario "User not logged in" do
       receiver = create(:user)
 

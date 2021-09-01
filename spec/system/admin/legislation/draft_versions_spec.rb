@@ -1,5 +1,5 @@
 require "rails_helper"
-=begin REWORK CHANGE
+
 describe "Admin legislation draft versions", :admin do
   context "Index" do
     scenario "Displaying legislation process draft versions" do
@@ -137,4 +137,3 @@ describe "Admin legislation draft versions", :admin do
     end
   end
 end
-=end

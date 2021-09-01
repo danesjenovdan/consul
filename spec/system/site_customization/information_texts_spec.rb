@@ -1,6 +1,5 @@
 require "rails_helper"
 
-=begin REWORK CHANGE
 describe "Custom information texts", :admin do
   scenario "Show custom texts instead of default ones" do
     debate_key = "debates.index.section_footer.title"
@@ -28,6 +27,7 @@ describe "Custom information texts", :admin do
       expect(page).not_to have_content "Help about proposals"
     end
   end
+=begin REWORK CHANGE
   scenario "Show custom text with options" do
     user = create(:user, username: "Rachel")
     create(:budget_investment, author_id: user.id)
@@ -47,5 +47,5 @@ describe "Custom information texts", :admin do
     expect(page).to have_content "Custom hi to Rachel"
     expect(page).not_to have_content "%{author}"
   end
-end
 =end
+end

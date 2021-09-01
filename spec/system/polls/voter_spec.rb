@@ -30,7 +30,7 @@ describe "Voter" do
       expect(Poll::Voter.count).to eq(1)
       expect(Poll::Voter.first.origin).to eq("web")
     end
-=begin REWORK CHANGE
+
     scenario "Voting via web as unverified user" do
       user = create(:user, :incomplete_verification)
 
@@ -45,7 +45,7 @@ describe "Voter" do
       expect(page).to have_content("You must verify your account in order to answer")
       expect(page).not_to have_content("You have already participated in this poll. If you vote again it will be overwritten")
     end
-=end
+
     scenario "Voting in booth" do
       login_through_form_as_officer(officer.user)
 
@@ -132,13 +132,13 @@ describe "Voter" do
         expect(page).not_to have_button "Confirm vote"
         expect(page).to have_content "Has already participated in this poll"
       end
-=begin REWORK CHANGE
+
       scenario "Trying to vote in booth and then in web" do
         login_through_form_as_officer(officer.user)
 
         vote_for_poll_via_booth
 
-        visit root_pathsy
+        visit root_path
         click_link "Sign out"
 
         login_as user
@@ -188,9 +188,8 @@ describe "Voter" do
           expect(page).to have_link(answer_no.title)
         end
       end
-=end
     end
-=begin REWORK CHANGE
+
     scenario "Voting in poll and then verifiying account" do
       user = create(:user)
 
@@ -229,7 +228,7 @@ describe "Voter" do
         expect(page).to have_content "1"
       end
     end
-=end
+
     context "Side menu" do
       scenario "'Validate document' menu item with votable polls" do
         login_through_form_as_officer(officer.user)
