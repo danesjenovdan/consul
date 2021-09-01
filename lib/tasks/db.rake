@@ -17,4 +17,10 @@ namespace :db do
     Poll.find_each(&:calculate_tsvector)
     Legislation::Process.find_each(&:calculate_tsvector)
   end
+
+  desc "Resets the database and loads it from db/less_seeds.rb"
+  task :less_seed, [:print_log] => [:environment] do |t, args|
+    @avoid_log = args[:print_log] == "avoid_log"
+    load(Rails.root.join("db", "less_seeds.rb"))
+  end
 end

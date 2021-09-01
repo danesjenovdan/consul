@@ -24,7 +24,7 @@ describe "Budget Poll Officing" do
     expect(page).to have_content("Validate document")
     expect(page).to have_content("Total recounts and results")
   end
-
+=begin REWORK CHANGE
   scenario "Do not show sidebar menus if officer has no shifts assigned" do
     login_as(create(:poll_officer).user)
 
@@ -34,4 +34,5 @@ describe "Budget Poll Officing" do
     expect(page).not_to have_content("Validate document")
     expect(page).not_to have_content("Total recounts and results")
   end
+=end
 end
