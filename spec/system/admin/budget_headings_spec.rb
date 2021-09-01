@@ -158,7 +158,7 @@ describe "Admin budget headings", :admin do
       expect(page).to have_field "Latitude (optional)", with: heading.latitude
       expect(find_field("Allow content block")).not_to be_checked
     end
-=begin REWORK CHANGE
+
     scenario "Changing name for current locale will update the slug if budget is in draft phase" do
       heading = create(:budget_heading, group: group, name: "Old English Name")
 
@@ -186,7 +186,6 @@ describe "Admin budget headings", :admin do
 
       expect(page).to have_content "New English Name"
     end
-=end
   end
 
   context "Update" do

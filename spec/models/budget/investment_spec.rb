@@ -20,7 +20,6 @@ describe Budget::Investment do
     expect(investment).not_to be_valid
   end
 
-=begin
   describe "#title" do
     it "is not valid without a title" do
       investment.title = nil
@@ -37,7 +36,6 @@ describe Budget::Investment do
       expect(investment).not_to be_valid
     end
   end
-=end
 
   it "set correct group and budget ids" do
     budget = create(:budget)
@@ -171,7 +169,6 @@ describe Budget::Investment do
     end
   end
 
-=begin REWORK CHANGE
   describe "#should_show_vote_count?" do
     it "returns true in valuating phase" do
       budget = create(:budget, :valuating)
@@ -214,7 +211,6 @@ describe Budget::Investment do
       end
     end
   end
-=end
 
   describe "#should_show_price?" do
     let(:budget) { create(:budget, :publishing_prices) }

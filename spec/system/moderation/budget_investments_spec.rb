@@ -5,7 +5,7 @@ describe "Moderate budget investments" do
   let(:heading)     { create(:budget_heading, budget: budget, price: 666666) }
   let(:mod)         { create(:moderator) }
   let!(:investment) { create(:budget_investment, heading: heading, author: create(:user)) }
-=begin REWORK CHANGE
+
   scenario "Hiding an investment" do
     login_as(mod.user)
     visit budget_investment_path(budget, investment)
@@ -43,7 +43,7 @@ describe "Moderate budget investments" do
       expect(page).not_to have_link("Hide author")
     end
   end
-=end
+
   describe "/moderation/ screen" do
     before do
       login_as(mod.user)

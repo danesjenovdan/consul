@@ -35,14 +35,13 @@ describe "Poll budget ballot sheets" do
   end
 
   context "Booth assignment" do
-=begin REWORK CHANGE
     scenario "Try to access ballot sheets officing without booth assignment" do
       login_as(poll_officer.user)
       visit officing_poll_ballot_sheets_path(poll)
 
       expect(page).to have_content "You don't have officing shifts today"
     end
-=end
+
     scenario "Access ballot sheets officing with one booth assignment" do
       create(:poll_shift, :recount_scrutiny_task, officer: poll_officer, booth: booth,
                                                   date: Date.current)

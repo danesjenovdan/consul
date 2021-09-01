@@ -1,6 +1,5 @@
 require "rails_helper"
 
-=begin REWORK CHANGE
 describe "Votes" do
   let(:manuela) { create(:user, verified_at: Time.current) }
 
@@ -51,6 +50,7 @@ describe "Votes" do
         end
       end
     end
+
     describe "Single investment" do
       let(:investment) { create(:budget_investment, heading: heading) }
 
@@ -102,6 +102,7 @@ describe "Votes" do
         expect(page).not_to have_css("budget_investment_#{investment.id}_votes")
       end
     end
+
     context "Voting in multiple headings of a single group" do
       let(:new_york) { heading }
       let(:san_francisco) { create(:budget_heading, group: group) }
@@ -209,6 +210,7 @@ describe "Votes" do
       end
     end
   end
+
   context "Investments - Approval" do
     let(:budget) { create(:budget, :balloting, :approval) }
     before { login_as(manuela) }
@@ -238,4 +240,3 @@ describe "Votes" do
     end
   end
 end
-=end
