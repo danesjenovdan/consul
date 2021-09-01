@@ -34,7 +34,7 @@ describe "Public area translatable records" do
       expect(page).to have_content "Full proposal for our candidature"
       expect(page).to have_content "2032 will make Australia famous again"
     end
-=begin REWORK CHANGE
+
     scenario "Add multiple translations at once" do
       budget = create(:budget_heading, name: "Everywhere").group.budget
 
@@ -52,7 +52,7 @@ describe "Public area translatable records" do
 
       expect(page).to have_content "Budget Investment created successfully"
     end
-=end
+
     scenario "Add only single translation at once not having the current locale" do
       visit new_proposal_path
       click_link "Remove language"
@@ -65,7 +65,7 @@ describe "Public area translatable records" do
 
       expect(page).to have_content "Proposal created successfully"
     end
-=begin REWORK CHANGE
+
     scenario "Add a translation for a locale with non-underscored name" do
       budget = create(:budget_heading, name: "Everywhere").group.budget
 
@@ -80,7 +80,7 @@ describe "Public area translatable records" do
 
       expect(page).to have_content "Budget Investment created successfully"
     end
-=end
+
     scenario "Add an invalid translation" do
       visit new_debate_path
 
@@ -90,7 +90,7 @@ describe "Public area translatable records" do
       expect(page).to have_css "#error_explanation"
       expect(page).to have_field "Debate title", with: "", class: "is-invalid-input"
     end
-=begin REWORK CHANGE
+
     scenario "Shows errors when submiting without any active translations" do
       budget = create(:budget_heading, name: "Everywhere").group.budget
 
@@ -103,8 +103,8 @@ describe "Public area translatable records" do
       expect(page).to have_css "#error_explanation"
       expect(page).to have_field "Title", with: ""
     end
-=end
   end
+
   context "Globalize javascript interface" do
     scenario "Highlight current locale" do
       visit new_debate_path
@@ -119,6 +119,7 @@ describe "Public area translatable records" do
 
       expect_to_have_language_selected "Español"
     end
+=end
     scenario "Select a locale and add it to the form" do
       visit new_budget_investment_path(create(:budget))
 
@@ -135,7 +136,6 @@ describe "Public area translatable records" do
 
       expect_not_to_have_language("English")
     end
-=end
 
     context "Languages in use" do
       scenario "Show default description" do
@@ -160,14 +160,14 @@ describe "Public area translatable records" do
         expect(page).to have_content "0 languages in use"
       end
     end
+
     context "When translation interface feature setting" do
-=begin REWORK CHANGE
       scenario "Is enabled translation interface should be rendered" do
         visit new_budget_investment_path(create(:budget))
 
         expect(page).to have_css ".globalize-languages"
       end
-=end
+
       scenario "Is disabled translation interface should not be rendered" do
         Setting["feature.translation_interface"] = nil
 

@@ -1,5 +1,5 @@
 require "rails_helper"
-=begin REWORK CHANGE
+
 describe "Tags" do
   let(:author)  { create(:user, :level_two, username: "Isabel") }
   let(:budget)  { create(:budget, name: "Big Budget") }
@@ -261,7 +261,6 @@ describe "Tags" do
       expect(page).not_to have_content investment3.title
     end
 =end
-=begin REWORK CHANGE
   end
 
   context "Categories" do
@@ -332,4 +331,3 @@ describe "Tags" do
     end
   end
 end
-=end

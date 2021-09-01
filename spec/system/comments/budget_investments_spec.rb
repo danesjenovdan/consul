@@ -1,5 +1,5 @@
 require "rails_helper"
-=begin REWORK CHANGE
+
 describe "Commenting Budget::Investments" do
   let(:user) { create :user }
   let(:investment) { create :budget_investment }
@@ -588,4 +588,3 @@ describe "Commenting Budget::Investments" do
     end
   end
 end
-=end
