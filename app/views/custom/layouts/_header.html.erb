@@ -15,6 +15,9 @@
       -->
       <div>
         <li class="inline-block"><%= link_to t("custom.titles.about"), page_path("o-participativnem-proracunu") %></li>
+      <div class="language-picker">
+        <%= render "shared/year_switcher", href: root_url, budgets: @budgets %>
+      </div>
       </div>
     </div>
   </div>

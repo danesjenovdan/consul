@@ -3,9 +3,14 @@ require_dependency Rails.root.join("app", "controllers", "budgets", "investments
 module Budgets
   class InvestmentsController < ApplicationController
     before_action :load_categories, only: [:index, :new, :create, :edit, :update]
+    before_action :load_budgets,  only: [:index, :new, :create, :edit, :update]
 
     has_orders %w[most_voted newest], only: :show
     has_orders ->(c) { c.investments_orders }, only: :index
+
+    def load_budgets
+      @budgets = Budget.where("id > -1");
+    end
 
     def index
       @investments_count = investments.count
