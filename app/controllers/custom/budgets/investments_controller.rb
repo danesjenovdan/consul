@@ -4,13 +4,13 @@ module Budgets
   class InvestmentsController < ApplicationController
     before_action :load_categories, only: [:index, :new, :create, :edit, :update]
 
-    has_orders %w[most_voted newest], only: :show
     has_orders ->(c) { c.investments_orders }, only: :index
 
     def index
       @investments_count = investments.count
-      @investments = investments.page(params[:page]).per(400).for_render
+      @investments = investments.page(params[:page]).per(12).for_render
       @investment_ids = @investments.pluck(:id)
+
       # left over from long ago
       #@denied_investments = Budget::Investment.where(selected: false).page(params[:page]).per(21).for_render
       if @budget.phase == "finished"

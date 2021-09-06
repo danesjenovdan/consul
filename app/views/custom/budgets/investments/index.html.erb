@@ -51,7 +51,6 @@
                     <%= t("custom.titles.added_proposals") %> (<%= @investments_count %>)
                   <% end %>
                 </h2>
-
                 <% if @budget.phase == "valuating" %>
                   <div class="row small-up-1 medium-up-1 large-up-3">
                   <% @all_investments.each_with_index do |investment, index| %>
