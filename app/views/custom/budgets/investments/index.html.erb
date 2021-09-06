@@ -31,7 +31,7 @@
           <div class="main-indented-content">
 
           <div style="position: relative;">
-            <% if @budget.headings.count > 1 %>
+            <% if @budget.headings.count > 1 && @investments.count > 0%>
               <%= render "budgets/investments/districts" %>
             <% end %>
           </div>
@@ -131,7 +131,7 @@
             <% else %>
               <div class="row budget-investments">
                 <div>
-                  <% if @budget.headings.count > 1 %>
+                  <% if @budget.headings.count > 1 && @investments.count > 0%>
                     <%= render "budgets/investments/districts" %>
                   <% end %>
                 </div>
