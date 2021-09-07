@@ -14,6 +14,34 @@ spec:
       labels:
         app: consul
     spec:
+      initContainers:
+        - name: migrate
+          image: consul
+          command:
+            - bin/rake
+            - db:migrate
+          ports:
+            - containerPort: 3000
+          env:
+            - name: RAILS_ENV
+              value: production
+          envFrom:
+            - secretRef:
+                name: consul-credentials
+          resources:
+            requests:
+              memory: 1Gi
+              cpu: 200m
+            limits:
+              memory: 1Gi
+              cpu: 200m
+          volumeMounts:
+            - name: db-conf
+              mountPath: /var/www/consul/config/database.yml
+              subPath: database.yml
+            - name: db-conf
+              mountPath: /var/www/consul/config/secrets.yml
+              subPath: secrets.yml
       containers:
         - name: consul
           image: consul
@@ -28,12 +56,16 @@ spec:
             - "0.0.0.0"
           ports:
             - containerPort: 3000
-          # envFrom:
-          #     - secretRef:
-          #         name: consul-credentials
           env:
-            - name: SSH_AUTH_SOCK
-              value: /tmp/agent.sock
+            - name: RAILS_ENV
+              value: production
+            - name: RAILS_ASSET_HOST
+              value: https://files.consul.lb.djnd.si
+            # - name: RAILS_SERVE_STATIC_FILES
+            #   value: "true"
+          envFrom:
+            - secretRef:
+                name: consul-credentials
           resources:
             requests:
               memory: 1Gi
@@ -41,3 +73,27 @@ spec:
             limits:
               memory: 1Gi
               cpu: 1000m
+          volumeMounts:
+            - name: db-conf
+              mountPath: /var/www/consul/config/database.yml
+              subPath: database.yml
+            - name: db-conf
+              mountPath: /var/www/consul/config/secrets.yml
+              subPath: secrets.yml
+        - name: consul-nginx
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          image: consul-assets
+          resources:
+            requests:
+              memory: 500Mi
+              cpu: 200m
+            limits:
+              memory: 500Mi
+              cpu: 200m
+      volumes:
+        - name: db-conf
+          configMap:
+            name: db-conf
