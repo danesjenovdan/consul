@@ -416,6 +416,11 @@ span:hover::before {
     }
   }
 
+  .custom-phases-nav .tabs .active-phase a h3 i {
+    background: url(/assets/custom/check.svg) left no-repeat;
+    width: 30px;
+}
+
   .main-indented-content {
     margin: 0 auto;
     padding: 10px;
