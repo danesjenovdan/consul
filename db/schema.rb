@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_14_190058) do
+ActiveRecord::Schema.define(version: 2021_09_07_122051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -288,6 +288,7 @@ ActiveRecord::Schema.define(version: 2021_08_14_190058) do
     t.text "q5"
     t.text "q6"
     t.text "q7"
+    t.text "answers", default: [], array: true
     t.index ["administrator_id"], name: "index_budget_investments_on_administrator_id"
     t.index ["author_id"], name: "index_budget_investments_on_author_id"
     t.index ["community_id"], name: "index_budget_investments_on_community_id"
@@ -340,6 +341,7 @@ ActiveRecord::Schema.define(version: 2021_08_14_190058) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "main_link_text"
+    t.text "questions", default: [], array: true
     t.index ["budget_id"], name: "index_budget_translations_on_budget_id"
     t.index ["locale"], name: "index_budget_translations_on_locale"
   end
