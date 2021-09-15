@@ -50,6 +50,8 @@ describe "Budget Investments" do
   end
 
   scenario "Index" do
+    budget.update!(phase: "valuating")
+
     investments = [create(:budget_investment, heading: heading),
                    create(:budget_investment, heading: heading),
                    create(:budget_investment, :feasible, heading: heading)]
@@ -206,6 +208,8 @@ describe "Budget Investments" do
     end
 
     scenario "Advanced search combined with filter by status" do
+      budget.update!(phase: "valuating")
+
       create(:budget_investment, :feasible, heading: heading, title: "Feasible environment")
       create(:budget_investment, :feasible, heading: heading, title: "Feasible health")
       create(:budget_investment, :unfeasible, heading: heading, title: "Unfeasible environment")
@@ -239,6 +243,8 @@ describe "Budget Investments" do
 
   context("Filters") do
     scenario "by unfeasibility" do
+      budget.update!(phase: "valuating")
+
       investment1 = create(:budget_investment, :unfeasible, :finished, heading: heading)
       investment2 = create(:budget_investment, :feasible, heading: heading)
       investment3 = create(:budget_investment, heading: heading)
@@ -522,7 +528,7 @@ describe "Budget Investments" do
     end
 
     scenario "Order always is random for unfeasible and unselected investments" do
-      Budget::Phase::PHASE_KINDS.each do |phase|
+      Budget::Phase::kind_or_later("valuating").each do |phase|
         budget.update!(phase: phase)
 
         visit budget_investments_path(budget, heading_id: heading.id, filter: "unfeasible")
