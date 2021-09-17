@@ -3,14 +3,19 @@ require_dependency Rails.root.join("app", "controllers", "budgets", "investments
 module Budgets
   class InvestmentsController < ApplicationController
     before_action :load_categories, only: [:index, :new, :create, :edit, :update]
+    before_action :load_budgets,  only: [:index, :new, :create, :edit, :update]
 
-    has_orders %w[most_voted newest], only: :show
     has_orders ->(c) { c.investments_orders }, only: :index
+
+    def load_budgets
+      @budgets = Budget.where("id > -1");
+    end
 
     def index
       @investments_count = investments.count
-      @investments = investments.page(params[:page]).per(400).for_render
+      @investments = investments.page(params[:page]).per(12).for_render
       @investment_ids = @investments.pluck(:id)
+
       # left over from long ago
       #@denied_investments = Budget::Investment.where(selected: false).page(params[:page]).per(21).for_render
       if @budget.phase == "finished"
@@ -70,9 +75,9 @@ module Budgets
 
       def investment_params
         params.require(:budget_investment)
-              .permit(:title, :description, :q1, :q2, :q3, :q4, :q5, :q6, :heading_id, :tag_list, :price,
-                      # :q6, :q7, are ignored in MB
+              .permit(:title, :heading_id, :tag_list, :price,
                       :organization_name, :location, :terms_of_service, :skip_map,
+                      answers: [],
                       image_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
                       documents_attributes: [:id, :title, :attachment,
                         :cached_attachment, :user_id, :_destroy],

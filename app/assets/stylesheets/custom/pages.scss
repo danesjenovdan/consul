@@ -68,6 +68,7 @@ only screen and (min-resolution: 240dpi) {
 
       &:hover {
         color: $black;
+        text-decoration: none !important;
       }
     }
 
@@ -158,7 +159,7 @@ only screen and (min-resolution: 240dpi) {
   .welcome-column .column-content h1 {
     font-size: 60px;
     font-weight: 800;
-    letter-spacing: 20.4px;
+    letter-spacing: 2.4px;
     line-height: 66px;
     margin-bottom: 47px;
   }
@@ -173,6 +174,48 @@ only screen and (min-resolution: 240dpi) {
   background: #e1e1e1;
 }
 
+.callout {
+  z-index: 1000;
+}
+
+footer .loginlinks a {
+  border: none !important;
+  background-size: 300% 100%;
+
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+  //background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673)!important;
+  background-image: linear-gradient(to right, $mandys-pink, #f2d6d0, #fcede9, $mandys-pink) !important;
+
+  &:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+
+  &.transparent {
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      background-position: 100% 0;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+  }
+}
+
+
 footer {
   height: max-content;
   border-top: 3px solid #e1e1e1;
@@ -182,13 +225,14 @@ footer {
   }
 
   .loginlinks {
+    display: flex;
+    flex-direction: row;
     a {
       color: #272266;
       font-size: 14px;
       font-weight: 700;
 
       padding: 7px 17px;
-      display: inline;
       margin: 0 10px 0 0;
 
       box-shadow: 0 0 8px rgba(50, 54, 106, 0.25);
@@ -350,14 +394,40 @@ span:hover::before {
     a:focus {
       outline: none;
     }
+    .tabs-title {
+      margin-right: 0 !important;
+    }
+
+    .tabs-title > a {
+      padding: 0;
+      &:hover {
+        @include brand-text;
+        background: none;
+        text-decoration: none;
+      }
+  
+      &[aria-selected="true"],
+      &.is-active {
+        @include brand-text;  
+        &::after {
+          border-bottom: none;
+        }
+      }
+    }
   }
+
+  .custom-phases-nav .tabs .active-phase a h3 i {
+    background: url(/assets/custom/check.svg) left no-repeat;
+    width: 30px;
+}
 
   .main-indented-content {
     margin: 0 auto;
+    padding: 10px;
   }
 
   .tabs {
-    margin: 0.5rem 0 0;
+    margin: 0 0 0;
   }
 
   .tabs h2,
@@ -472,10 +542,10 @@ span:hover::before {
 
   .budget-investment-holder {
     .budget-investment {
-      border: 1px solid #d7d7d7;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.21);
 
       .panel {
+        border-bottom: 0 !important;
         min-height: rem-calc(192);
         padding: 0 rem-calc(10);
       }
@@ -490,6 +560,7 @@ span:hover::before {
         height: auto;
         width: 100%;
         max-height: 180px;
+        min-height: 180px;
         object-fit: cover;
       }
     }
@@ -567,6 +638,7 @@ span:hover::before {
     .budget-investment-holder {
       .budget-investment {
         .panel {
+          border-bottom: 0 !important;
           padding: 0 rem-calc(15);
         }
       }

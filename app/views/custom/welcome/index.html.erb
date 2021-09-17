@@ -25,6 +25,8 @@
               <h2><%= strip_tags(phase.summary) %></h2>
               <% unless phase.url %>
                 <div class="abtom4">
+                 <div class="large-description"><%= sanitize_and_auto_link phase.description %></div>
+                  <div class="large-description"><%= sanitize_and_auto_link phase.summary %></div>
                   <% if phase.description %>
                     <div class="large-description"><%= sanitize_and_auto_link phase.description %></div>
                   <% else %>
