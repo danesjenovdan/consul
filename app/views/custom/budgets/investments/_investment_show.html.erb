@@ -77,18 +77,10 @@
         <%= render_image(investment.image, :large, true) if investment.image.present? %>
 
         <div class="small-12 medium-9 medium-centered bggray">
-          <h4><%= t("activerecord.attributes.budget/investment.q1") %></h4>
-          <%= auto_link_already_sanitized_html(wysiwyg(investment.q1)) %>
-          <h4><%= t("activerecord.attributes.budget/investment.q2") %></h4>
-          <%= auto_link_already_sanitized_html(wysiwyg(investment.q2)) %>
-          <h4><%= t("activerecord.attributes.budget/investment.q3") %></h4>
-          <%= auto_link_already_sanitized_html(wysiwyg(investment.q3)) %>
-          <h4><%= t("activerecord.attributes.budget/investment.q4") %></h4>
-          <%= auto_link_already_sanitized_html(wysiwyg(investment.q4)) %>
-          <h4><%= t("activerecord.attributes.budget/investment.q5") %></h4>
-          <%= auto_link_already_sanitized_html(wysiwyg(investment.q5)) %>
-          <h4><%= t("activerecord.attributes.budget/investment.q6") %></h4>
-          <%= auto_link_already_sanitized_html(wysiwyg(investment.q6)) %>
+        <% @budget.questions.each_with_index do |key, index|%>
+           <h4><%= key %></h4>
+          <%= auto_link_already_sanitized_html(wysiwyg(investment.answers[index])) %>
+          <% end %>
         </div>
 
         <% if feature?(:map) && map_location_available?(@investment.map_location) %>

@@ -6,6 +6,8 @@ class Budget < ApplicationRecord
   CUSTOM_PHASE_BALLOTING = :balloting
   CUSTOM_PHASE_FINISHED = :finished
 
+  translates :name, :main_link_text, :questions, :questionsString, :questions, touch: true
+
   CustomPhase = Struct.new(:kind, :summary, :presentation_summary_1,
     :presentation_summary_2, :presentation_summary_3, :description,
     :starts_at, :ends_at, :url, :enabled) do

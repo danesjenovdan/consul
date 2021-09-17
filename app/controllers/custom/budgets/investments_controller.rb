@@ -75,9 +75,9 @@ module Budgets
 
       def investment_params
         params.require(:budget_investment)
-              .permit(:title, :description, :q1, :q2, :q3, :q4, :q5, :q6, :heading_id, :tag_list, :price,
-                      # :q6, :q7, are ignored in MB
+              .permit(:title, :heading_id, :tag_list, :price,
                       :organization_name, :location, :terms_of_service, :skip_map,
+                      answers: [],
                       image_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
                       documents_attributes: [:id, :title, :attachment,
                         :cached_attachment, :user_id, :_destroy],
