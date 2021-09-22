@@ -26,9 +26,11 @@
         </div>
           <div class="input_fields_wrap" id=<%= translations_form.locale %>>
             <% budget.questions.each_with_index do |key, index|%>
-            <div class="small-12 medium-9 large-6 column end">
-                <%= translations_form.text_field :questions, label: "Question #{index+1}", value: key,  multiple: true, class: "form-control" %>
-                <a href="#" class="delete remove_field">Remove question</a>
+            <div class="small-12 column">
+              <div class="small-12 medium-9 large-6 column end">
+                  <%= translations_form.text_field :questions, label: "Question", value: key,  multiple: true, class: "form-control" %>
+                  <a href="#" class="delete remove_field">Remove question</a>
+              </div>
             </div>
             <% end %>
       </div>
@@ -54,7 +56,8 @@
           if(numberOfReRenders % numberOfLanguages === 1 || numberOfLanguages === 1){ //max input box allowed
             x++;
             wrapper = $("#"+e.target.id+".input_fields_wrap");
-            $(wrapper).append('<div class="small-12 medium-9 large-6 column end"><%= translations_form.text_field :questions, label: "Question:", multiple: true, class: "form-control", value: ""%><a href="#" class="delete remove_field">Remove question</a></div>'); //add input box
+            // TODO break it into multiple lines
+            $(wrapper).append('<div class="small-12 column"><div class="small-12 medium-9 large-6 column end"><%= translations_form.text_field :questions, label: "Question:", multiple: true, class: "form-control", value: ""%><a href="#" class="delete remove_field">Remove question</a></div></div>'); //add input box
           }
         });
         $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
