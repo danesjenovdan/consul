@@ -81,25 +81,18 @@ $table-header:   #ecf1f6;
 
       .top-bar-right {
 
+        > ul {
+          border-bottom: 0;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+
         .submenu {
-          border: 0;
-          display: block;
-          margin-top: 0;
           position: initial;
-          width: 100%;
-        }
-
-        .is-active {
-          font-weight: normal;
-          text-decoration: none;
-        }
-
-        .is-submenu-item {
-          padding: $line-height / 2 0;
         }
 
         a {
-          font-weight: normal !important;
+          font-weight: normal;
         }
       }
 
@@ -111,10 +104,6 @@ $table-header:   #ecf1f6;
     [class^="icon-"] {
       font-size: $base-font-size;
     }
-  }
-
-  .menu .menu-text {
-    padding: 0;
 
     h1 {
       margin-top: $line-height / 2;
@@ -128,14 +117,15 @@ $table-header:   #ecf1f6;
         color: inherit;
         text-transform: uppercase;
       }
-    }
 
-    a {
-      display: inline-block;
-      font-family: "Lato" !important;
-      font-size: rem-calc(24);
-      font-weight: lighter;
-      padding: 0;
+      a {
+        color: inherit;
+        display: inline-block;
+        font-family: "Lato" !important;
+        font-size: rem-calc(24);
+        font-weight: lighter;
+        line-height: 1;
+      }
     }
   }
 
@@ -189,7 +179,10 @@ $table-header:   #ecf1f6;
   table {
 
     caption {
-      @include element-invisible;
+      font-style: italic;
+      font-weight: normal;
+      padding: 0;
+      text-align: $global-left;
     }
 
     thead {
@@ -274,6 +267,10 @@ $table-header:   #ecf1f6;
       border: $admin-border;
       border-radius: rem-calc(6);
       box-shadow: none;
+
+      &:focus {
+        border: $input-border-focus;
+      }
     }
   }
 
@@ -593,13 +590,6 @@ code {
   p {
     font-size: $small-font-size;
     margin-bottom: 0;
-  }
-}
-
-.admin {
-
-  .investment-projects-list.medium-9 {
-    width: 100%;
   }
 }
 
@@ -978,17 +968,6 @@ table {
     }
   }
 
-  .legislation-draft-version-body {
-    font-family: $font-family-serif;
-    background: #f5f5f5;
-    height: 16em;
-
-    &:focus {
-      border: 1px solid #cacaca;
-      box-shadow: inset 0 1px 2px rgba(34, 34, 34, 0.1);
-    }
-  }
-
   .markdown-preview {
     font-family: $font-family-serif;
     border: 1px solid #cacaca;
@@ -1032,11 +1011,14 @@ table {
 
     .legislation-draft-version-body {
       border-radius: 0;
-      padding: 1rem;
-      border: 0;
 
       @include breakpoint(medium) {
-        padding: 1rem 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      &:focus {
+        box-shadow: inset 0 1px 2px rgba(34, 34, 34, 0.1);
       }
     }
 
@@ -1048,12 +1030,6 @@ table {
         padding: 1rem 2rem;
       }
     }
-  }
-}
-
-.legislation-draft-version-body {
-  &:focus {
-    border: 0;
   }
 }
 

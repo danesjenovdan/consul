@@ -1,12 +1,9 @@
 require "rails_helper"
 
-describe Admin::Budgets::FormComponent, type: :component do
+describe Admin::Budgets::FormComponent do
   describe "#voting_styles_select_options" do
     it "provides vote kinds" do
-      types = [
-        ["Knapsack", "knapsack"],
-        ["Approval", "approval"]
-      ]
+      types = [["Knapsack", "knapsack"], ["Approval", "approval"]]
 
       component = Admin::Budgets::FormComponent.new(double)
 

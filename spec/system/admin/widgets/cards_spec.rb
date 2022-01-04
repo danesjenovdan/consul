@@ -40,19 +40,18 @@ describe "Cards", :admin do
   end
 
   scenario "Index" do
-    3.times { create(:widget_card) }
+    cards = Array.new(3) { create(:widget_card) }
 
     visit admin_homepage_path
 
     expect(page).to have_css(".homepage-card", count: 3)
 
-    cards = Widget::Card.all
     cards.each do |card|
       expect(page).to have_content card.title
       expect(page).to have_content card.description
       expect(page).to have_content card.link_text
       expect(page).to have_content card.link_url
-      expect(page).to have_link("Show image", href: card.image_url(:large))
+      expect(page).to have_link "Show image"
     end
   end
 =begin REWORK CHANGE
@@ -110,8 +109,8 @@ describe "Cards", :admin do
     visit admin_homepage_path
 
     within("#widget_card_#{card.id}") do
-      accept_confirm do
-        click_link "Delete"
+      accept_confirm("Are you sure? This action will delete \"#{card.title}\" and can't be undone.") do
+        click_button "Delete"
       end
     end
 
@@ -238,8 +237,8 @@ describe "Cards", :admin do
 
         expect(page).to have_content("Card title")
 
-        accept_confirm do
-          click_link "Delete"
+        accept_confirm("Are you sure? This action will delete \"Card title\" and can't be undone.") do
+          click_button "Delete"
         end
 
         expect(page).to have_current_path admin_site_customization_page_widget_cards_path(custom_page)

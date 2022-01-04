@@ -5,7 +5,7 @@ class Budget < ApplicationRecord
   include Reportable
   include Imageable
 
-  translates :name, :main_link_text, touch: true
+  translates :name, :main_link_text, :main_link_url, touch: true
   include Globalizable
 
   class Translation
@@ -24,11 +24,11 @@ class Budget < ApplicationRecord
   VOTING_STYLES = %w[knapsack approval].freeze
 
   validates_translation :name, presence: true
+  validates_translation :main_link_url, presence: true, unless: -> { main_link_text.blank? }
   validates :phase, inclusion: { in: Budget::Phase::PHASE_KINDS }
   validates :currency_symbol, presence: true
   validates :slug, presence: true, format: /\A[a-z0-9\-_]+\z/
   validates :voting_style, inclusion: { in: VOTING_STYLES }
-  validates :main_link_url, presence: true, if: -> { main_link_text.present? }
 
   has_many :investments, dependent: :destroy
   has_many :ballots, dependent: :destroy
@@ -154,12 +154,12 @@ class Budget < ApplicationRecord
     current_phase&.publishing_prices_or_later?
   end
 
-  def balloting_process?
-    balloting? || reviewing_ballots?
-  end
-
   def balloting_or_later?
     current_phase&.balloting_or_later?
+  end
+
+  def balloting_finished?
+    balloting_or_later? && !balloting?
   end
 
   def single_group?
@@ -187,15 +187,23 @@ class Budget < ApplicationRecord
 
   def investments_orders
     case phase
-    when "accepting", "reviewing"
+    when "accepting", "reviewing", "finished"
       %w[random]
     when "publishing_prices", "balloting", "reviewing_ballots"
       %w[random price]
-    when "finished"
-      %w[random]
     else
       %w[random confidence_score]
     end
+  end
+
+  def investments_filters
+    [
+      ("winners" if finished?),
+      ("selected" if publishing_prices_or_later? && !finished?),
+      ("unselected" if publishing_prices_or_later?),
+      ("not_unfeasible" if valuating?),
+      ("unfeasible" if valuating_or_later?)
+    ].compact
   end
 
   def email_selected

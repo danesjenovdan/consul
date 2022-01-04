@@ -72,7 +72,7 @@ describe "Topics" do
 
       visit new_community_topic_path(community)
 
-      expect(page).to have_content "You do not have permission to carry out the action 'new' on topic."
+      expect(page).to have_content "You do not have permission to carry out the action 'new' on Topic."
     end
   end
 
@@ -102,7 +102,7 @@ describe "Topics" do
 
       visit edit_community_topic_path(community, topic)
 
-      expect(page).to have_content "You do not have permission to carry out the action 'edit' on topic."
+      expect(page).to have_content "You do not have permission to carry out the action 'edit' on Topic."
     end
   end
 

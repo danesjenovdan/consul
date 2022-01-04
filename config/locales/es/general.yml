@@ -213,7 +213,6 @@ es:
       conditions: Condiciones de uso
       consul: aplicación CONSUL
       consul_url: https://github.com/consul/consul
-      contact_us: Para asistencia técnica entra en
       copyright: CONSUL, %{year}
       description: Este portal usa la %{consul} que es %{open_source}.
       open_source: software de código abierto
@@ -523,7 +522,7 @@ es:
       comments: Comentarios
       latest_comments: Últimos mensajes
     messages:
-      send_notification: Enviar mensaje a los que siguen la propuesta
+      send_notification: Enviar notificación a los que siguen la propuesta
       previous_notifications: Ver notificaciones anteriores
     polls:
       index:
@@ -658,9 +657,9 @@ es:
       voted: "Has votado %{answer}"
   proposal_notifications:
     new:
-      title: "Enviar mensaje"
-      submit_button: "Enviar mensaje"
-      info_about_receivers: "Este mensaje se enviará a <strong>%{count} usuarios</strong> y se publicará en %{proposal_page}.<br> El mensaje no se enviará inmediatamente, los usuarios recibirán periódicamente un email con todas las notificaciones de propuestas."
+      title: "Enviar notificación"
+      submit_button: "Enviar notificación"
+      info_about_receivers: "Esta notificación se enviará a <strong>%{count} usuarios</strong> y se publicará en %{proposal_page}.<br> Las notificaciones no se enviarán inmediatamente, los usuarios recibirán periódicamente un email con todas las notificaciones de propuestas."
       proposal_page: "la página de la propuesta"
     show:
       back: "Volver a mi contenido"
@@ -669,12 +668,10 @@ es:
     filter: "Filtrar"
     save: "Guardar"
     delete: "Borrar"
-    "yes": "Si"
+    "yes": "Sí"
     "no": "No"
     search_results: "Resultados de la búsqueda"
     advanced_search:
-      author_type: "Por categoría de autor"
-      author_type_blank: "Elige una categoría"
       date: "Por fecha"
       date_placeholder: "DD/MM/AAAA"
       date_range_blank: "Elige una fecha"
@@ -685,7 +682,6 @@ es:
       date_5: "Personalizada"
       from: "Desde"
       general: "Con el texto"
-      general_placeholder: "Escribe el texto"
       goal: "Por ODS"
       goal_blank: "Elige un objetivo"
       search: "Filtrar"
@@ -772,8 +768,8 @@ es:
         zero: "0 idiomas en uso"
         one: "1 idioma en uso"
         other: "%{count} idiomas en uso"
-    optional: "Opcional"
-    required: "Obligatorio"
+    optional: "Campos opcionales"
+    required: "Campos obligatorios"
   social:
     facebook: "Facebook de %{org}"
     twitter: "Twitter de %{org}"
@@ -896,11 +892,6 @@ es:
       budget_investments:
         title: Presupuestos recomendados
       slide: "Ver %{title}"
-    verification:
-      i_dont_have_an_account: No tengo cuenta, quiero crear una y verificarla
-      i_have_an_account: Ya tengo una cuenta que quiero verificar
-      question: '¿Tienes ya una cuenta en %{org_name}?'
-      title: Verificación de cuenta
     welcome:
       go_to_index: Ahora no, ir a la página de inicio
       start_using_consul: Ir a la página de inicio
@@ -965,7 +956,11 @@ es:
       enqueue_remote_translation: Se han solicitado correctamente las traducciones.
     button: Traducir página
   tags:
-    filter:
-      more:
-        one: "Una etiqueta más"
-        other: "%{count} etiquetas más"
+    list:
+      filter:
+        more:
+          one: "Una etiqueta más"
+          other: "%{count} etiquetas más"
+  machine_learning:
+    comments_summary: "Resumen de comentarios"
+    info_text: "Contenido generado mediante IA / Machine Learning"

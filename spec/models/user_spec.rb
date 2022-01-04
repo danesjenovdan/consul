@@ -483,19 +483,16 @@ describe User do
     let(:user) { create(:user) }
 
     it "expires cache with becoming a moderator" do
-      expect { create(:moderator, user: user) }
-      .to change { user.updated_at }
+      expect { create(:moderator, user: user) }.to change { user.cache_version }
     end
 
     it "expires cache with becoming an admin" do
-      expect { create(:administrator, user: user) }
-      .to change { user.updated_at }
+      expect { create(:administrator, user: user) }.to change { user.cache_version }
     end
 
     it "expires cache with becoming a veridied organization" do
       create(:organization, user: user)
-      expect { user.organization.verify }
-      .to change { user.reload.updated_at }
+      expect { user.organization.verify }.to change { user.reload.cache_version }
     end
   end
 
@@ -546,9 +543,7 @@ describe User do
     end
 
     it "maintains associated identification document" do
-      user = create(:user,
-                     document_number: "1234",
-                     document_type:   "1")
+      user = create(:user, document_number: "1234", document_type: "1")
       user.erase
       user.reload
 
@@ -711,10 +706,7 @@ describe User do
     end
 
     it "is false for verified users with no email" do
-      user = create(:user,
-                     username: "Lois",
-                     email: "",
-                     verified_at: Time.current)
+      user = create(:user, username: "Lois", email: "", verified_at: Time.current)
 
       expect(user).to be_valid
       expect(user.email_required?).to eq(false)
@@ -747,6 +739,12 @@ describe User do
     end
   end
 
+  describe "#public_interests" do
+    it "is false by default" do
+      expect(User.new.public_interests).to be false
+    end
+  end
+
   describe ".find_by_manager_login" do
     it "works with a low ID" do
       user = create(:user)
@@ -760,6 +758,21 @@ describe User do
     end
   end
 
+  describe "#block" do
+    it "hides legislation proposals created by the user" do
+      user = create(:user)
+      other_user = create(:user)
+
+      proposal = create(:legislation_proposal, author: user)
+      other_proposal = create(:legislation_proposal, author: other_user)
+
+      user.block
+
+      expect(Legislation::Proposal.all).to eq [other_proposal]
+      expect(Legislation::Proposal.with_hidden).to match_array [proposal, other_proposal]
+    end
+  end
+
   describe "#full_restore" do
     it "restore all previous hidden user content" do
       user = create(:user, :hidden)
@@ -770,18 +783,21 @@ describe User do
       investment = create(:budget_investment, :hidden, author: user)
       proposal = create(:proposal, :hidden, author: user)
       proposal_notification = create(:proposal_notification, :hidden, proposal: proposal)
+      legislation_proposal = create(:legislation_proposal, :hidden, author: user)
 
       old_hidden_comment = create(:comment, hidden_at: 3.days.ago, author: user)
       old_hidden_debate = create(:debate, hidden_at: 3.days.ago, author: user)
       old_hidden_investment = create(:budget_investment, hidden_at: 3.days.ago, author: user)
       old_hidden_proposal = create(:proposal, hidden_at: 3.days.ago, author: user)
       old_hidden_proposal_notification = create(:proposal_notification, hidden_at: 3.days.ago, proposal: proposal)
+      old_hidden_legislation_proposal = create(:legislation_proposal, hidden_at: 3.days.ago, author: user)
 
       other_user_comment = create(:comment, :hidden, author: other_user)
       other_user_debate = create(:debate, :hidden, author: other_user)
       other_user_proposal = create(:proposal, :hidden, author: other_user)
       other_user_investment = create(:budget_investment, :hidden, author: other_user)
       other_user_proposal_notification = create(:proposal_notification, :hidden, proposal: other_user_proposal)
+      other_user_legislation_proposal = create(:legislation_proposal, :hidden, author: other_user)
 
       user.full_restore
 
@@ -790,18 +806,21 @@ describe User do
       expect(investment.reload).not_to be_hidden
       expect(proposal.reload).not_to be_hidden
       expect(proposal_notification.reload).not_to be_hidden
+      expect(legislation_proposal.reload).not_to be_hidden
 
       expect(old_hidden_comment.reload).to be_hidden
       expect(old_hidden_debate.reload).to be_hidden
       expect(old_hidden_investment.reload).to be_hidden
       expect(old_hidden_proposal.reload).to be_hidden
       expect(old_hidden_proposal_notification.reload).to be_hidden
+      expect(old_hidden_legislation_proposal.reload).to be_hidden
 
       expect(other_user_comment.reload).to be_hidden
       expect(other_user_debate.reload).to be_hidden
       expect(other_user_investment.reload).to be_hidden
       expect(other_user_proposal.reload).to be_hidden
       expect(other_user_proposal_notification.reload).to be_hidden
+      expect(other_user_legislation_proposal.reload).to be_hidden
     end
   end
 end

@@ -13,7 +13,7 @@ describe "Admin budget phases" do
       uncheck "budget_phase_enabled"
       click_button "Save changes"
 
-      expect(page).to have_current_path(edit_admin_budget_path(budget))
+      expect(page).to have_current_path(admin_budget_path(budget))
       expect(page).to have_content "Changes saved"
 
       expect(budget.current_phase.starts_at.to_date).to eq((Date.current + 1.day).to_date)
@@ -23,7 +23,7 @@ describe "Admin budget phases" do
     end
 
     scenario "Show default phase name or custom if present" do
-      visit edit_admin_budget_path(budget)
+      visit admin_budget_path(budget)
 
       within_table "Phases" do
         expect(page).to have_content "Accepting projects"
@@ -46,10 +46,7 @@ describe "Admin budget phases" do
     scenario "shows successful notice when updating the phase with a valid image" do
       visit edit_admin_budget_budget_phase_path(budget, budget.current_phase)
 
-      imageable_attach_new_file(
-        "budget_phase_image",
-        Rails.root.join("spec/fixtures/files/clippy.jpg")
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/clippy.jpg"))
 
       click_on "Save changes"
 

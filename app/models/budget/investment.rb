@@ -2,7 +2,6 @@ class Budget
   class Investment < ApplicationRecord
     SORTING_OPTIONS = { id: "id", supports: "cached_votes_up" }.freeze
 
-    include Rails.application.routes.url_helpers
     include Measurable
     include Sanitizable
     include Taggable
@@ -50,6 +49,7 @@ class Budget
     has_many :valuator_groups, through: :valuator_group_assignments
 
     has_many :comments, -> { where(valuation: false) }, as: :commentable, inverse_of: :commentable
+    has_one :summary_comment, as: :commentable, class_name: "MlSummaryComment", dependent: :destroy
     has_many :valuations, -> { where(valuation: true) },
       as:         :commentable,
       inverse_of: :commentable,
@@ -104,26 +104,22 @@ class Budget
     scope :for_render, -> { includes(:heading) }
 
     def self.by_valuator(valuator_id)
-      where("budget_valuator_assignments.valuator_id = ?", valuator_id).joins(:valuator_assignments)
+      where(budget_valuator_assignments: { valuator_id: valuator_id }).joins(:valuator_assignments)
     end
 
     def self.by_valuator_group(valuator_group_id)
       joins(:valuator_group_assignments).
-        where("budget_valuator_group_assignments.valuator_group_id = ?", valuator_group_id)
+        where(budget_valuator_group_assignments: { valuator_group_id: valuator_group_id })
     end
 
-    before_create :set_original_heading_id
-    before_save :calculate_confidence_score
-    after_save :recalculate_heading_winners
     before_validation :set_responsible_name
     before_validation :set_denormalized_ids
+    before_save :calculate_confidence_score
+    before_create :set_original_heading_id
+    after_save :recalculate_heading_winners
 
     def comments_count
       comments.count
-    end
-
-    def url
-      budget_investment_path(budget, self)
     end
 
     def self.sort_by_title
@@ -164,10 +160,10 @@ class Budget
       results = results.winners            if params[:advanced_filters].include?("winners")
 
       ids = []
-      ids += results.valuation_finished_feasible.pluck(:id) if params[:advanced_filters].include?("feasible")
-      ids += results.where(selected: true).pluck(:id)       if params[:advanced_filters].include?("selected")
-      ids += results.undecided.pluck(:id)                   if params[:advanced_filters].include?("undecided")
-      ids += results.unfeasible.pluck(:id)                  if params[:advanced_filters].include?("unfeasible")
+      ids += results.valuation_finished_feasible.ids if params[:advanced_filters].include?("feasible")
+      ids += results.where(selected: true).ids       if params[:advanced_filters].include?("selected")
+      ids += results.undecided.ids                   if params[:advanced_filters].include?("undecided")
+      ids += results.unfeasible.ids                  if params[:advanced_filters].include?("unfeasible")
       results = results.where(id: ids) if ids.any?
       results
     end
@@ -191,8 +187,8 @@ class Budget
       return results if max_per_heading <= 0
 
       ids = []
-      budget.headings.pluck(:id).each do |hid|
-        ids += Investment.where(heading_id: hid).order(confidence_score: :desc).limit(max_per_heading).pluck(:id)
+      budget.headings.ids.each do |hid|
+        ids += Investment.where(heading_id: hid).order(confidence_score: :desc).limit(max_per_heading).ids
       end
 
       results.where(id: ids)
@@ -291,8 +287,7 @@ class Budget
     end
 
     def valid_heading?(user)
-      voted_in?(heading, user) ||
-      can_vote_in_another_heading?(user)
+      voted_in?(heading, user) || can_vote_in_another_heading?(user)
     end
 
     def can_vote_in_another_heading?(user)
@@ -363,11 +358,11 @@ class Budget
     end
 
     def assigned_valuators
-      self.valuators.map(&:description_or_name).compact.join(", ").presence
+      valuators.map(&:description_or_name).compact.join(", ").presence
     end
 
     def assigned_valuation_groups
-      self.valuator_groups.map(&:name).compact.join(", ").presence
+      valuator_groups.map(&:name).compact.join(", ").presence
     end
 
     def self.with_milestone_status_id(status_id)

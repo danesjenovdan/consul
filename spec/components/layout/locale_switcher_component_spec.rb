@@ -1,12 +1,10 @@
 require "rails_helper"
 
-describe Layout::LocaleSwitcherComponent, type: :component do
+describe Layout::LocaleSwitcherComponent do
   let(:component) { Layout::LocaleSwitcherComponent.new }
 
-  before do
-    allow(request).to receive(:path_parameters).and_return(
-      Rails.application.routes.recognize_path("/")
-    )
+  around do |example|
+    with_request_url("/") { example.run }
   end
 
   context "with only one language" do
@@ -15,8 +13,7 @@ describe Layout::LocaleSwitcherComponent, type: :component do
     it "doesn't render anything" do
       render_inline component
 
-      expect(page.text).to be_empty
-      expect(page).not_to have_css ".locale"
+      expect(page).not_to be_rendered
     end
   end
 

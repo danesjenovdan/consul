@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Layout::SocialComponent, type: :component do
+describe Layout::SocialComponent do
   describe "#render?" do
     it "renders when a social setting is present" do
       Setting["twitter_handle"] = "myhandle"
@@ -33,7 +33,7 @@ describe Layout::SocialComponent, type: :component do
 
       render_inline Layout::SocialComponent.new
 
-      expect(page).not_to have_css "ul"
+      expect(page).not_to be_rendered
     end
   end
 end

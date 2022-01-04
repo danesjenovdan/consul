@@ -241,15 +241,17 @@ class User < ApplicationRecord
 
     Debate.hide_all debate_ids
     Comment.hide_all comment_ids
+    Legislation::Proposal.hide_all legislation_proposal_ids
     Proposal.hide_all proposal_ids
     Budget::Investment.hide_all budget_investment_ids
-    ProposalNotification.hide_all ProposalNotification.where(author_id: id).pluck(:id)
+    ProposalNotification.hide_all ProposalNotification.where(author_id: id).ids
   end
 
   def full_restore
     ActiveRecord::Base.transaction do
       Debate.restore_all debates.where("hidden_at >= ?", hidden_at)
       Comment.restore_all comments.where("hidden_at >= ?", hidden_at)
+      Legislation::Proposal.restore_all legislation_proposals.only_hidden.where("hidden_at >= ?", hidden_at)
       Proposal.restore_all proposals.where("hidden_at >= ?", hidden_at)
       Budget::Investment.restore_all budget_investments.where("hidden_at >= ?", hidden_at)
       ProposalNotification.restore_all(
@@ -348,7 +350,7 @@ class User < ApplicationRecord
   end
 
   def send_oauth_confirmation_instructions
-    if oauth_email != email
+    if oauth_email != email || confirmed_at.nil?
       update(confirmed_at: nil)
       send_confirmation_instructions
     end

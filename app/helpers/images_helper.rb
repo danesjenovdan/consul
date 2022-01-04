@@ -5,7 +5,7 @@ module ImagesHelper
     if Paperclip::Attachment.default_options[:storage] == :filesystem
       URI(request.url) + image.attachment.url(version)
     else
-      investment.image_url(version)
+      image.attachment.url(version)
     end
   end
 
@@ -15,8 +15,6 @@ module ImagesHelper
 
   def render_image(image, version, show_caption = true)
     version = image.persisted? ? version : :original
-    render "images/image", image: image,
-                           version: version,
-                           show_caption: show_caption
+    render "images/image", image: image, version: version, show_caption: show_caption
   end
 end

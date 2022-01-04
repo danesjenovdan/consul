@@ -26,7 +26,7 @@ describe "Poll budget ballot sheets" do
       end
 
       within("#poll_#{poll.id}") do
-        expect(page).to have_content("#{poll.name}")
+        expect(page).to have_content(poll.name)
         expect(page).to have_content("See ballot sheets list")
         expect(page).to have_content("Add results")
       end
@@ -52,7 +52,7 @@ describe "Poll budget ballot sheets" do
 
       visit officing_poll_ballot_sheets_path(poll)
 
-      expect(page).to have_content "#{poll.name}"
+      expect(page).to have_content poll.name
     end
 
     scenario "Access ballot sheets officing with multiple booth assignments", :with_frozen_time do
@@ -104,7 +104,7 @@ describe "Poll budget ballot sheets" do
     scenario "Ballot sheet is saved" do
       visit new_officing_poll_ballot_sheet_path(poll)
 
-      select "#{booth.name}", from: "officer_assignment_id"
+      select booth.name, from: "officer_assignment_id"
       fill_in "data", with: "1234;5678"
       click_button "Save"
 
@@ -120,7 +120,7 @@ describe "Poll budget ballot sheets" do
     scenario "Ballot sheet is not saved" do
       visit new_officing_poll_ballot_sheet_path(poll)
 
-      select "#{booth.name}", from: "officer_assignment_id"
+      select booth.name, from: "officer_assignment_id"
       click_button "Save"
 
       expect(page).to have_content("CSV data can't be blank")

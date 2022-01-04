@@ -47,10 +47,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       do_login_for user
       visit send(path, arguments)
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/clippy.jpg")
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/clippy.jpg"))
 
       expect_image_has_title("clippy.jpg")
     end
@@ -75,10 +72,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       do_login_for user
       visit send(path, arguments)
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/clippy.jpg")
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/clippy.jpg"))
 
       expect(page).to have_selector ".loading-bar.complete"
     end
@@ -87,11 +81,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       do_login_for user
       visit send(path, arguments)
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/logo_header.png"),
-        false
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/logo_header.png"), false)
 
       expect(page).to have_selector ".loading-bar.errors"
     end
@@ -100,10 +90,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       do_login_for user
       visit send(path, arguments)
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/clippy.jpg")
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/clippy.jpg"))
 
       expect_image_has_cached_attachment(".jpg")
     end
@@ -112,11 +99,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       do_login_for user
       visit send(path, arguments)
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/logo_header.png"),
-        false
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/logo_header.png"), false)
 
       expect_image_has_cached_attachment("")
     end
@@ -141,10 +124,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       do_login_for user
       visit send(path, arguments)
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/clippy.jpg")
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/clippy.jpg"))
 
       within "#nested-image .image" do
         click_link "Remove image"
@@ -171,10 +151,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       visit send(path, arguments)
       send(fill_resource_method_name) if fill_resource_method_name
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/clippy.jpg")
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/clippy.jpg"))
 
       expect(page).to have_selector ".loading-bar.complete"
 
@@ -188,10 +165,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
       visit send(path, arguments)
       send(fill_resource_method_name) if fill_resource_method_name
 
-      imageable_attach_new_file(
-        imageable_factory_name,
-        Rails.root.join("spec/fixtures/files/clippy.jpg")
-      )
+      imageable_attach_new_file(Rails.root.join("spec/fixtures/files/clippy.jpg"))
 
       expect(page).to have_selector ".loading-bar.complete"
 
@@ -207,38 +181,36 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
     end
 
     if path.include? "edit"
-      scenario "Should show persisted image" do
+      scenario "show persisted image" do
         create(:image, imageable: imageable)
         do_login_for user
+
         visit send(path, arguments)
 
         expect(page).to have_css ".image", count: 1
-      end
-
-      scenario "Should not show add image button when image already exists" do
-        create(:image, imageable: imageable)
-        do_login_for user
-        visit send(path, arguments)
-
         expect(page).not_to have_css "a#new_image_link"
       end
 
-      scenario "Should remove nested field after remove image" do
+      scenario "remove nested field after removing the image" do
         create(:image, imageable: imageable)
         do_login_for user
+
         visit send(path, arguments)
-        click_on "Remove image"
+        click_link "Remove image"
 
         expect(page).not_to have_css ".image"
+        expect(page).to have_css "a#new_image_link"
       end
 
-      scenario "Should show add image button after remove image" do
+      scenario "don't duplicate fields after removing and adding an image" do
         create(:image, imageable: imageable)
         do_login_for user
-        visit send(path, arguments)
-        click_on "Remove image"
 
-        expect(page).to have_css "a#new_image_link"
+        visit send(path, arguments)
+        click_link "Remove image"
+        click_link "Add image"
+
+        expect(page).to have_css ".image", count: 1, visible: :all
       end
     end
   end
@@ -256,7 +228,8 @@ def imageable_redirected_to_resource_show_or_navigate_to
     click_on "Not now, go to my proposal" rescue Capybara::ElementNotFound
   end
 end
-def imageable_attach_new_file(_imageable_factory_name, path, success = true)
+
+def imageable_attach_new_file(path, success = true)
   click_link "Add image"
   within "#nested-image" do
     image = find(".image")
@@ -272,7 +245,7 @@ def imageable_attach_new_file(_imageable_factory_name, path, success = true)
 end
 
 def imageable_fill_new_valid_proposal
-  fill_in "Proposal title", with: "Proposal title"
+  fill_in_new_proposal_title with: "Proposal title"
   fill_in "Proposal summary", with: "Proposal summary"
   check :proposal_terms_of_service
 end
@@ -282,7 +255,7 @@ def imageable_fill_new_valid_budget
 end
 
 def imageable_fill_new_valid_budget_investment
-  fill_in "Title", with: "Budget investment title"
+  fill_in_new_investment_title with: "Budget investment title"
   fill_in_ckeditor "Description", with: "Budget investment description"
   check :budget_investment_terms_of_service
 end

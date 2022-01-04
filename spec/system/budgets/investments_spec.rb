@@ -18,12 +18,12 @@ describe "Budget Investments" do
     it_behaves_like "remotely_translatable",
                     :budget_investment,
                     "budget_investments_path",
-                    { "budget_id": "budget_id" }
+                    { budget_id: "budget_id" }
 
     it_behaves_like "remotely_translatable",
                     :budget_investment,
                     "budget_investment_path",
-                    { "budget_id": "budget_id", "id": "id" }
+                    { budget_id: "budget_id", id: "id" }
     it_behaves_like "flaggable", :budget_investment
 =end
   end
@@ -50,6 +50,8 @@ describe "Budget Investments" do
   end
 
   scenario "Index" do
+    budget.update!(phase: "valuating")
+
     investments = [create(:budget_investment, heading: heading),
                    create(:budget_investment, heading: heading),
                    create(:budget_investment, :feasible, heading: heading)]
@@ -134,6 +136,7 @@ describe "Budget Investments" do
   scenario "Index filter by status" do
     budget.update!(phase: "finished")
 
+    create(:budget_investment, heading: heading, title: "Unclassified investment")
     create(:budget_investment, :feasible, heading: heading, title: "Feasible investment")
     create(:budget_investment, :unfeasible, heading: heading, title: "Unfeasible investment")
     create(:budget_investment, :unselected, heading: heading, title: "Unselected investment")
@@ -142,37 +145,23 @@ describe "Budget Investments" do
 
     visit budget_investments_path(budget, heading_id: heading.id)
 
-    expect(page).to have_select "Filtering projects by",
-                                options: ["Not unfeasible", "Unfeasible", "Unselected", "Selected", "Winners"]
+    expect(page).to have_content "FILTERING PROJECTS BY"
 
-    select "Unfeasible", from: "Filtering projects by"
+    click_link "Unfeasible"
 
-    expect(page).to have_css ".budget-investment", count: 1
     expect(page).to have_content "Unfeasible investment"
+    expect(page).to have_css ".budget-investment", count: 1
 
-    select "Unselected", from: "Filtering projects by"
+    click_link "Not selected for the final voting"
 
-    expect(page).to have_css ".budget-investment", count: 2
+    expect(page).to have_css ".budget-investment", count: 3
     expect(page).to have_content "Unselected investment"
+    expect(page).to have_content "Unclassified investment"
     expect(page).to have_content "Feasible investment"
 
-    select "Selected", from: "Filtering projects by"
-
-    expect(page).to have_css ".budget-investment", count: 2
-    expect(page).to have_content "Selected investment"
-    expect(page).to have_content "Winner investment"
-
-    select "Winners", from: "Filtering projects by"
+    click_link "Winners"
 
     expect(page).to have_css ".budget-investment", count: 1
-    expect(page).to have_content "Winner investment"
-
-    select "Not unfeasible", from: "Filtering projects by"
-
-    expect(page).to have_css ".budget-investment", count: 4
-    expect(page).to have_content "Selected investment"
-    expect(page).to have_content "Unselected investment"
-    expect(page).to have_content "Feasible investment"
     expect(page).to have_content "Winner investment"
   end
 =begin REWORK CHANGE
@@ -197,11 +186,45 @@ describe "Budget Investments" do
         expect(page).not_to have_content(investment3.title)
       end
     end
+
+    scenario "Advanced search combined with filter by status" do
+      budget.update!(phase: "valuating")
+
+      create(:budget_investment, :feasible, heading: heading, title: "Feasible environment")
+      create(:budget_investment, :feasible, heading: heading, title: "Feasible health")
+      create(:budget_investment, :unfeasible, heading: heading, title: "Unfeasible environment")
+      create(:budget_investment, :unfeasible, heading: heading, title: "Unfeasible health")
+
+      visit budget_investments_path(budget, heading: heading)
+
+      click_button "Advanced search"
+      fill_in "With the text", with: "environment"
+      select "Last 24 hours", from: "By date"
+      click_button "Filter"
+
+      expect(page).to have_content "There is 1 investment containing the term 'environment'"
+      expect(page).to have_css ".budget-investment", count: 1
+      expect(page).to have_content "Feasible environment"
+      expect(page).not_to have_content "Feasible health"
+      expect(page).not_to have_content "Unfeasible environment"
+      expect(page).not_to have_content "Unfeasible health"
+
+      click_link "Unfeasible"
+
+      expect(page).not_to have_content "Feasible environment"
+      expect(page).to have_content "There is 1 investment containing the term 'environment'"
+      expect(page).to have_css ".budget-investment", count: 1
+      expect(page).to have_content "Unfeasible environment"
+      expect(page).not_to have_content "Feasible health"
+      expect(page).not_to have_content "Unfeasible health"
+    end
   end
 =end
 
   context("Filters") do
     scenario "by unfeasibility" do
+      budget.update!(phase: "valuating")
+
       investment1 = create(:budget_investment, :unfeasible, :finished, heading: heading)
       investment2 = create(:budget_investment, :feasible, heading: heading)
       investment3 = create(:budget_investment, heading: heading)
@@ -301,7 +324,12 @@ describe "Budget Investments" do
       expect(order).not_to be_empty
 
       click_link "highest rated"
+
+      expect(page).to have_css "h2", exact_text: "highest rated"
+
       click_link "random"
+
+      expect(page).to have_css "h2", exact_text: "random"
 
       visit budget_investments_path(budget, heading_id: heading.id)
       new_order = all(".budget-investment h3").map(&:text)
@@ -480,7 +508,7 @@ describe "Budget Investments" do
     end
 
     scenario "Order always is random for unfeasible and unselected investments" do
-      Budget::Phase::PHASE_KINDS.each do |phase|
+      Budget::Phase::kind_or_later("valuating").each do |phase|
         budget.update!(phase: phase)
 
         visit budget_investments_path(budget, heading_id: heading.id, filter: "unfeasible")
@@ -533,9 +561,9 @@ describe "Budget Investments" do
       login_as(author)
       visit new_budget_investment_path(budget)
 
-      fill_in "Title", with: "I am a bot"
+      fill_in_new_investment_title with: "I am a bot"
       fill_in_ckeditor "Description", with: "This is the description"
-      check   "budget_investment_terms_of_service"
+      check "budget_investment_terms_of_service"
 
       click_button "Create Investment"
 
@@ -551,7 +579,7 @@ describe "Budget Investments" do
       expect(page).not_to have_field "budget_investment_heading_id"
       expect(page).to have_content("#{heading.name} (#{budget.formatted_heading_price(heading)})")
 
-      fill_in "Title", with: "Build a skyscraper"
+      fill_in_new_investment_title with: "Build a skyscraper"
       fill_in_ckeditor "Description", with: "I want to live in a high tower over the clouds"
       fill_in "Location additional info", with: "City center"
       fill_in "If you are proposing in the name of a collective/organization, "\
@@ -603,7 +631,7 @@ describe "Budget Investments" do
 
       select "Health: Medical supplies", from: "Heading"
 
-      fill_in "Title", with: "Build a skyscraper"
+      fill_in_new_investment_title with: "Build a skyscraper"
       fill_in_ckeditor "Description", with: "I want to live in a high tower over the clouds"
       fill_in "Location additional info", with: "City center"
       fill_in "If you are proposing in the name of a collective/organization, "\
@@ -661,7 +689,7 @@ describe "Budget Investments" do
     end
 
     scenario "Another User can't edit budget investment", :admin do
-      message_error = "You do not have permission to carry out the action 'edit' on budget/investment"
+      message_error = "You do not have permission to carry out the action 'edit' on Investment"
       daniel = create(:user, :level_two)
       investment = create(:budget_investment, heading: heading, author: daniel)
 
@@ -1038,25 +1066,25 @@ describe "Budget Investments" do
     expect(page).not_to have_content("Local government is not competent in this matter")
   end
 
-  it_behaves_like "followable", "budget_investment", "budget_investment_path", { "budget_id": "budget_id", "id": "id" }
+  it_behaves_like "followable", "budget_investment", "budget_investment_path", { budget_id: "budget_id", id: "id" }
 
-  it_behaves_like "imageable", "budget_investment", "budget_investment_path", { "budget_id": "budget_id", "id": "id" }
+  it_behaves_like "imageable", "budget_investment", "budget_investment_path", { budget_id: "budget_id", id: "id" }
 
   it_behaves_like "nested imageable",
                   "budget_investment",
                   "new_budget_investment_path",
-                  { "budget_id": "budget_id" },
+                  { budget_id: "budget_id" },
                   "imageable_fill_new_valid_budget_investment",
                   "Create Investment",
                   "Budget Investment created successfully."
 
-  it_behaves_like "documentable", "budget_investment", "budget_investment_path", { "budget_id": "budget_id", "id": "id" }
+  it_behaves_like "documentable", "budget_investment", "budget_investment_path", { budget_id: "budget_id", id: "id" }
 
   it_behaves_like "nested documentable",
                   "user",
                   "budget_investment",
                   "new_budget_investment_path",
-                  { "budget_id": "budget_id" },
+                  { budget_id: "budget_id" },
                   "documentable_fill_new_valid_budget_investment",
                   "Create Investment",
                   "Budget Investment created successfully."
@@ -1067,7 +1095,7 @@ describe "Budget Investments" do
                   "new_budget_investment_path",
                   "",
                   "budget_investment_path",
-                  { "budget_id": "budget_id" }
+                  { budget_id: "budget_id" }
 
   context "Destroy" do
     scenario "Admin cannot destroy budget investments", :admin do
@@ -1094,7 +1122,12 @@ describe "Budget Investments" do
         accept_confirm { click_link("Delete") }
       end
 
+      expect(page).to have_content "Investment project deleted succesfully"
+
       visit user_path(user, tab: :budget_investments)
+
+      expect(page).to have_content "User has no public activity"
+      expect(page).not_to have_content investment1.title
     end
   end
 
@@ -1181,6 +1214,7 @@ describe "Budget Investments" do
     end
 
     scenario "Remove a support from show view" do
+      Setting["feature.remove_investments_supports"] = true
       investment = create(:budget_investment, budget: budget)
 
       login_as(author)
@@ -1202,6 +1236,7 @@ describe "Budget Investments" do
     end
 
     scenario "Remove a support from index view" do
+      Setting["feature.remove_investments_supports"] = true
       investment = create(:budget_investment, budget: budget)
 
       login_as(author)
@@ -1307,6 +1342,9 @@ describe "Budget Investments" do
         expect(page).to have_content investment2.title
         expect(page).to have_content "€20,000"
       end
+
+      expect(page).to have_link "Submit my ballot"
+      expect(page).to have_content "STILL AVAILABLE TO YOU €666,666"
     end
 =end
     scenario "Order by cost (only when balloting)" do
@@ -1409,7 +1447,7 @@ describe "Budget Investments" do
       end
     end
 
-    scenario "Highlight voted heading except with unfeasible filter" do
+    scenario "Highlight voted heading" do
       budget.update!(phase: "balloting")
       user = create(:user, :level_two)
 
@@ -1427,14 +1465,6 @@ describe "Budget Investments" do
 
       expect(page).to have_css("#budget_heading_#{heading_1.id}.is-active")
       expect(page).to have_css("#budget_heading_#{heading_2.id}")
-
-      click_link "See unfeasible investments"
-
-      within("#headings") do
-        expect(page).to have_css("#budget_heading_#{heading_1.id}")
-        expect(page).to have_css("#budget_heading_#{heading_2.id}")
-        expect(page).not_to have_css(".is-active")
-      end
     end
 
     scenario "Ballot is visible" do
@@ -1666,7 +1696,7 @@ describe "Budget Investments" do
     scenario "create budget investment with sdg related list" do
       login_as(author)
       visit new_budget_investment_path(budget)
-      fill_in "Title", with: "A title for a budget investment related with SDG related content"
+      fill_in_new_investment_title with: "A title for a budget investment related with SDG related content"
       fill_in_ckeditor "Description", with: "I want to live in a high tower over the clouds"
       click_sdg_goal(1)
       check "budget_investment_terms_of_service"

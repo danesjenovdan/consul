@@ -1,13 +1,12 @@
 require "rails_helper"
 
-describe Admin::BudgetsWizard::Headings::GroupSwitcherComponent, type: :component do
+describe Admin::BudgetsWizard::Headings::GroupSwitcherComponent do
   it "is not rendered for budgets with one group" do
     group = create(:budget_group, budget: create(:budget))
 
     render_inline Admin::BudgetsWizard::Headings::GroupSwitcherComponent.new(group)
 
-    expect(page.text).to be_empty
-    expect(page).not_to have_css ".budget-group-switcher"
+    expect(page).not_to be_rendered
   end
 
   it "renders a link to switch group for budgets with two groups" do
@@ -33,9 +32,9 @@ describe Admin::BudgetsWizard::Headings::GroupSwitcherComponent, type: :componen
     expect(page).to have_content "Showing headings from the Parks group"
     expect(page).to have_button "Manage headings from a different group"
 
-    within "button + ul" do
-      expect(page).to have_link "Recreation"
-      expect(page).to have_link "Entertainment"
+    page.find("button + ul") do |list|
+      expect(list).to have_link "Recreation"
+      expect(list).to have_link "Entertainment"
     end
   end
 end

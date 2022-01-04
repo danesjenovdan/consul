@@ -11,7 +11,7 @@ describe "Budget Investments" do
                   "user",
                   "budget_investment",
                   "new_management_budget_investment_path",
-                  { "budget_id": "budget_id" },
+                  { budget_id: "budget_id" },
                   "documentable_fill_new_valid_budget_investment",
                   "Create Investment",
                   "Investment created successfully.",
@@ -20,7 +20,7 @@ describe "Budget Investments" do
   it_behaves_like "nested imageable",
                   "budget_investment",
                   "new_management_budget_investment_path",
-                  { "budget_id": "budget_id" },
+                  { budget_id: "budget_id" },
                   "imageable_fill_new_valid_budget_investment",
                   "Create Investment",
                   "Investment created successfully.",
@@ -32,7 +32,7 @@ describe "Budget Investments" do
                   "new_management_budget_investment_path",
                   "",
                   "management_budget_investment_path",
-                  { "budget_id": "budget_id" },
+                  { budget_id: "budget_id" },
                   management: true
 
   context "Load" do
@@ -65,7 +65,7 @@ describe "Budget Investments" do
         expect(page).to have_content user.document_number
       end
 
-      fill_in "Title", with: "Build a park in my neighborhood"
+      fill_in_new_investment_title with: "Build a park in my neighborhood"
       fill_in_ckeditor "Description", with: "There is no parks here..."
       fill_in "budget_investment_location", with: "City center"
       fill_in "budget_investment_organization_name", with: "T.I.A."
@@ -334,6 +334,7 @@ describe "Budget Investments" do
     end
 
     scenario "Remove support on behalf of someone else in index view" do
+      Setting["feature.remove_investments_supports"] = true
       create(:budget_investment, heading: heading)
 
       login_managed_user(user)
@@ -354,6 +355,7 @@ describe "Budget Investments" do
     end
 
     scenario "Remove support on behalf of someone else in show view" do
+      Setting["feature.remove_investments_supports"] = true
       create(:budget_investment, heading: heading, title: "Don't support me!")
 
       login_managed_user(user)

@@ -8,6 +8,9 @@
       $("#nested-image").on("cocoon:after-remove", function() {
         $("#new_image_link").removeClass("hide");
       });
+      $("#nested-image").on("cocoon:before-insert", function() {
+        $(".js-image-attachment").closest(".image").remove();
+      });
       $("#nested-image").on("cocoon:after-insert", function(e, nested_image) {
         var input;
         $("#new_image_link").addClass("hide");
@@ -116,7 +119,8 @@
       }
     },
     initializeRemoveCachedImageLinks: function() {
-      $("#nested-image").on("ajax:complete", "a.remove-cached-attachment", function() {
+      $("#nested-image").on("click", "a.remove-cached-attachment", function(event) {
+        event.preventDefault();
         $("#new_image_link").removeClass("hide");
         $(this).closest(".direct-upload").remove();
       });

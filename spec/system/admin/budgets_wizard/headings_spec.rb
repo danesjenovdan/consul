@@ -81,6 +81,11 @@ describe "Budgets wizard, headings step", :admin do
       expect(page).to have_button "Cancel"
       expect(page).not_to have_button "Add new heading"
       expect(page).not_to have_content "Continue to phases"
+
+      within ".budgets-help" do
+        expect(page).to have_content "Headings are meant"
+        expect(page).not_to have_content "{"
+      end
     end
   end
 =begin REWORK CHANGE
@@ -136,10 +141,11 @@ describe "Budgets wizard, headings step", :admin do
 
       expect(page).to have_content "Heading updated successfully"
 
-      visit admin_budget_group_headings_path(budget, group)
+      visit admin_budget_path(budget)
 
-      expect(page).to have_content "There is 1 heading"
-      within("tbody tr") { expect(page).to have_content "Heading without typos" }
+      within "section", text: "Heading groups" do
+        within("tbody tr") { expect(page).to have_content "Heading without typos" }
+      end
     end
   end
   describe "Destroy" do
@@ -147,7 +153,7 @@ describe "Budgets wizard, headings step", :admin do
       create(:budget_heading, group: group, name: "Delete me!")
 
       visit admin_budgets_wizard_budget_group_headings_path(budget, group)
-      within("tr", text: "Delete me!") { accept_confirm { click_link "Delete" } }
+      within("tr", text: "Delete me!") { accept_confirm { click_button "Delete" } }
 
       expect(page).to have_content "Heading deleted successfully"
       expect(page).not_to have_content "Delete me!"
@@ -159,7 +165,7 @@ describe "Budgets wizard, headings step", :admin do
 
       visit admin_budgets_wizard_budget_group_headings_path(budget, group)
 
-      within("tr", text: "Don't delete me!") { accept_confirm { click_link "Delete" } }
+      within("tr", text: "Don't delete me!") { accept_confirm { click_button "Delete" } }
 
       expect(page).to have_content "You cannot delete a Heading that has associated investments"
       expect(page).to have_content "Don't delete me!"

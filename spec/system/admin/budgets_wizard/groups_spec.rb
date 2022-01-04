@@ -112,10 +112,11 @@ describe "Budgets wizard, groups step", :admin do
 
       expect(page).to have_content "Group updated successfully"
 
-      visit admin_budget_groups_path(budget)
+      visit admin_budget_path(budget)
 
-      expect(page).to have_content "There is 1 group"
-      within("tbody tr") { expect(page).to have_content "Group without typos" }
+      within "section", text: "Heading groups" do
+        expect(page).to have_css "h4", exact_text: "Group without typos"
+      end
     end
   end
 
@@ -124,7 +125,7 @@ describe "Budgets wizard, groups step", :admin do
       create(:budget_group, budget: budget, name: "Delete me!")
 
       visit admin_budgets_wizard_budget_groups_path(budget)
-      within("tr", text: "Delete me!") { accept_confirm { click_link "Delete" } }
+      within("tr", text: "Delete me!") { accept_confirm { click_button "Delete" } }
 
       expect(page).to have_content "Group deleted successfully"
       expect(page).not_to have_content "Delete me!"
@@ -137,7 +138,7 @@ describe "Budgets wizard, groups step", :admin do
 
       visit admin_budgets_wizard_budget_groups_path(budget)
 
-      within("tr", text: "Don't delete me!") { accept_confirm { click_link "Delete" } }
+      within("tr", text: "Don't delete me!") { accept_confirm { click_button "Delete" } }
 
       expect(page).to have_content "You cannot delete a Group that has associated headings"
       expect(page).to have_content "Don't delete me!"

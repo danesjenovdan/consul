@@ -232,45 +232,100 @@ describe "Budgets" do
     expect(page).to have_css(".tabs-panel.is-active", count: 1)
   end
 
-  context "Show" do
-    let!(:budget) { create(:budget, :selecting) }
-    let!(:group)  { create(:budget_group, budget: budget) }
+  context "Index map" do
+    let(:heading) { create(:budget_heading, budget: budget) }
 
-    describe "Links to unfeasible and selected" do
-      scenario "are not seen before balloting" do
-        visit budget_group_path(budget, group)
+    before do
+      Setting["feature.map"] = true
+    end
 
-        expect(page).not_to have_link "See unfeasible investments"
-        expect(page).not_to have_link "See investments not selected for balloting phase"
-      end
+    scenario "Display investment's map location markers" do
+      investment1 = create(:budget_investment, heading: heading)
+      investment2 = create(:budget_investment, heading: heading)
+      investment3 = create(:budget_investment, heading: heading)
 
-      scenario "are not seen publishing prices" do
-        budget.update!(phase: :publishing_prices)
+      create(:map_location, longitude: 40.1234, latitude: -3.634, investment: investment1)
+      create(:map_location, longitude: 40.1235, latitude: -3.635, investment: investment2)
+      create(:map_location, longitude: 40.1236, latitude: -3.636, investment: investment3)
 
-        visit budget_group_path(budget, group)
+      visit budgets_path
 
-        expect(page).not_to have_link "See unfeasible investments"
-        expect(page).not_to have_link "See investments not selected for balloting phase"
-      end
-
-      scenario "are seen balloting" do
-        budget.update!(phase: :balloting)
-
-        visit budget_group_path(budget, group)
-
-        expect(page).to have_link "See unfeasible investments"
-        expect(page).to have_link "See investments not selected for balloting phase"
-      end
-
-      scenario "are seen on finished budgets" do
-        budget.update!(phase: :finished)
-
-        visit budget_group_path(budget, group)
-
-        expect(page).to have_link "See unfeasible investments"
-        expect(page).to have_link "See investments not selected for balloting phase"
+      within ".map_location" do
+        expect(page).to have_css(".map-icon", count: 3, visible: :all)
       end
     end
+
+    scenario "Display all investment's map location if there are no selected" do
+      budget.update!(phase: :publishing_prices)
+
+      investment1 = create(:budget_investment, heading: heading)
+      investment2 = create(:budget_investment, heading: heading)
+      investment3 = create(:budget_investment, heading: heading)
+      investment4 = create(:budget_investment, heading: heading)
+
+      investment1.create_map_location(longitude: 40.1234, latitude: 3.1234, zoom: 10)
+      investment2.create_map_location(longitude: 40.1235, latitude: 3.1235, zoom: 10)
+      investment3.create_map_location(longitude: 40.1236, latitude: 3.1236, zoom: 10)
+      investment4.create_map_location(longitude: 40.1240, latitude: 3.1240, zoom: 10)
+
+      visit budgets_path
+
+      within ".map_location" do
+        expect(page).to have_css(".map-icon", count: 4, visible: :all)
+      end
+    end
+
+    scenario "Display only selected investment's map location from publishing prices phase" do
+      budget.update!(phase: :publishing_prices)
+
+      investment1 = create(:budget_investment, :selected, heading: heading)
+      investment2 = create(:budget_investment, :selected, heading: heading)
+      investment3 = create(:budget_investment, heading: heading)
+      investment4 = create(:budget_investment, heading: heading)
+
+      investment1.create_map_location(longitude: 40.1234, latitude: 3.1234, zoom: 10)
+      investment2.create_map_location(longitude: 40.1235, latitude: 3.1235, zoom: 10)
+      investment3.create_map_location(longitude: 40.1236, latitude: 3.1236, zoom: 10)
+      investment4.create_map_location(longitude: 40.1240, latitude: 3.1240, zoom: 10)
+
+      visit budgets_path
+
+      within ".map_location" do
+        expect(page).to have_css(".map-icon", count: 2, visible: :all)
+      end
+    end
+
+    scenario "Skip invalid map markers" do
+      map_locations = []
+
+      investment = create(:budget_investment, heading: heading)
+
+      map_locations << { longitude: 40.123456789, latitude: 3.12345678 }
+      map_locations << { longitude: 40.123456789, latitude: "********" }
+      map_locations << { longitude: "**********", latitude: 3.12345678 }
+
+      coordinates = map_locations.map do |map_location|
+        {
+          lat: map_location[:latitude],
+          long: map_location[:longitude],
+          investment_title: investment.title,
+          investment_id: investment.id,
+          budget_id: budget.id
+        }
+      end
+
+      allow_any_instance_of(Budgets::BudgetComponent).to receive(:coordinates).and_return(coordinates)
+
+      visit budgets_path
+
+      within ".map_location" do
+        expect(page).to have_css(".map-icon", count: 1, visible: :all)
+      end
+    end
+  end
+
+  context "Show" do
+    let!(:budget) { create(:budget, :selecting) }
 
     scenario "Take into account headings with the same name from a different budget" do
       group1 = create(:budget_group, budget: budget, name: "New York")
@@ -301,121 +356,35 @@ describe "Budgets" do
       expect(page).to have_link "See results"
     end
 
-    scenario "Show link to see all investments" do
-      budget = create(:budget)
-      group = create(:budget_group, budget: budget)
-      heading = create(:budget_heading, group: group)
-
-      create_list(:budget_investment, 3, :selected, heading: heading, price: 999)
-
-      budget.update!(phase: "informing")
-
-      visit budget_path(budget)
-      expect(page).not_to have_link "See all investments"
-
-      %w[accepting reviewing selecting valuating].each do |phase_name|
-        budget.update!(phase: phase_name)
-
-        visit budget_path(budget)
-        expect(page).to have_link "See all investments",
-                                  href: budget_investments_path(budget)
-      end
-
-      %w[publishing_prices balloting reviewing_ballots].each do |phase_name|
-        budget.update!(phase: phase_name)
-
-        visit budget_path(budget)
-        expect(page).to have_link "See all investments",
-                                  href: budget_investments_path(budget)
-      end
-
-      budget.update!(phase: "finished")
-
-      visit budget_path(budget)
-      expect(page).to have_link "See all investments",
-                                  href: budget_investments_path(budget)
-    end
-
     scenario "Show investments list" do
-      budget = create(:budget)
+      budget = create(:budget, phase: "balloting")
       group = create(:budget_group, budget: budget)
       heading = create(:budget_heading, group: group)
 
       create_list(:budget_investment, 3, :selected, heading: heading, price: 999)
-
-      %w[informing finished].each do |phase_name|
-        budget.update!(phase: phase_name)
-
-        visit budget_path(budget)
-
-        expect(page).not_to have_content "List of investments"
-        expect(page).not_to have_css ".investments-list"
-        expect(page).not_to have_css ".budget-investment"
-      end
-
-      %w[accepting reviewing selecting].each do |phase_name|
-        budget.update!(phase: phase_name)
-
-        visit budget_path(budget)
-
-        within(".investments-list") do
-          expect(page).to have_content "List of investments"
-          expect(page).not_to have_content "SUPPORTS"
-          expect(page).not_to have_content "PRICE"
-        end
-      end
-
-      budget.update!(phase: "valuating")
 
       visit budget_path(budget)
 
       within(".investments-list") do
         expect(page).to have_content "List of investments"
-        expect(page).to have_content("SUPPORTS", count: 3)
-        expect(page).not_to have_content "PRICE"
+        expect(page).to have_content "PRICE", count: 3
       end
 
-      %w[publishing_prices balloting reviewing_ballots].each do |phase_name|
-        budget.update!(phase: phase_name)
-
-        visit budget_path(budget)
-
-        within(".investments-list") do
-          expect(page).to have_content "List of investments"
-          expect(page).to have_content("PRICE", count: 3)
-        end
-      end
+      expect(page).to have_link "See all investments",
+                                href: budget_investments_path(budget)
     end
 
-    scenario "Do not show investments list when budget has multiple headings" do
-      budget = create(:budget)
+    scenario "Show investments list when budget has multiple headings" do
+      budget = create(:budget, phase: "accepting")
       group = create(:budget_group, budget: budget)
       heading_1 = create(:budget_heading, group: group)
       create(:budget_heading, group: group)
 
       create_list(:budget_investment, 3, :selected, heading: heading_1, price: 999)
 
-      %w[accepting reviewing selecting].each do |phase_name|
-        budget.update!(phase: phase_name)
-
-        visit budget_path(budget)
-
-        expect(page).not_to have_css ".investments-list"
-      end
-
-      budget.update!(phase: "valuating")
-
       visit budget_path(budget)
 
-      expect(page).not_to have_css ".investments-list"
-
-      %w[publishing_prices balloting reviewing_ballots].each do |phase_name|
-        budget.update!(phase: phase_name)
-
-        visit budget_path(budget)
-
-        expect(page).not_to have_css ".investments-list"
-      end
+      expect(page).to have_css ".investments-list"
     end
 
     scenario "Show supports info on selecting phase" do
@@ -434,6 +403,7 @@ describe "Budgets" do
     end
 
     scenario "Show supports only if the support has not been removed" do
+      Setting["feature.remove_investments_supports"] = true
       voter = create(:user, :level_two)
       budget = create(:budget, phase: "selecting")
       investment = create(:budget_investment, :selected, budget: budget)

@@ -17,7 +17,7 @@ describe "Admin poll questions", :admin do
       expect(page).to have_content(question1.title)
       expect(page).to have_link "Edit answers"
       expect(page).to have_link "Edit"
-      expect(page).to have_link "Delete"
+      expect(page).to have_button "Delete"
     end
 
     visit admin_poll_path(poll2)
@@ -27,7 +27,7 @@ describe "Admin poll questions", :admin do
       expect(page).to have_content question2.title
       expect(page).to have_link "Edit answers"
       expect(page).to have_link "Edit"
-      expect(page).to have_link "Delete"
+      expect(page).to have_button "Delete"
     end
 
     visit admin_poll_path(poll3)
@@ -38,7 +38,7 @@ describe "Admin poll questions", :admin do
       expect(page).to have_link "(See proposal)", href: proposal_path(question3.proposal)
       expect(page).to have_link "Edit answers"
       expect(page).to have_link "Edit"
-      expect(page).to have_link "Delete"
+      expect(page).to have_button "Delete"
     end
   end
 
@@ -142,7 +142,9 @@ describe "Admin poll questions", :admin do
     visit admin_poll_path(poll)
 
     within("#poll_question_#{question1.id}") do
-      accept_confirm { click_link "Delete" }
+      accept_confirm("Are you sure? This action will delete \"#{question1.title}\" and can't be undone.") do
+        click_button "Delete"
+      end
     end
 
     expect(page).not_to have_content(question1.title)

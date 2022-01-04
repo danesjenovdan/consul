@@ -52,17 +52,22 @@ module Abilities
       can :comment_as_administrator, [Debate, Comment, Proposal, Poll::Question, Budget::Investment,
                                       Legislation::Question, Legislation::Proposal, Legislation::Annotation, Topic]
 
-      can [:search, :create, :index, :destroy, :edit, :update], ::Administrator
+      can [:search, :create, :index, :destroy, :update], ::Administrator
       can [:search, :create, :index, :destroy], ::Moderator
-      can [:search, :show, :edit, :update, :create, :index, :destroy, :summary], ::Valuator
+      can [:search, :show, :update, :create, :index, :destroy, :summary], ::Valuator
       can [:search, :create, :index, :destroy], ::Manager
       can [:create, :read, :destroy], ::SDG::Manager
       can [:search, :index], ::User
 
       can :manage, Dashboard::Action
 
-      can [:index, :read, :new, :create, :update, :destroy, :calculate_winners], Budget
+      can [:index, :read, :create, :update, :destroy], Budget
       can :publish, Budget, id: Budget.drafting.ids
+      can :calculate_winners, Budget, &:reviewing_ballots?
+      can :read_results, Budget do |budget|
+        budget.balloting_finished? && budget.has_winning_investments?
+      end
+
       can [:read, :create, :update, :destroy], Budget::Group
       can [:read, :create, :update, :destroy], Budget::Heading
       can [:hide, :admin_update, :toggle_selection], Budget::Investment
@@ -74,9 +79,9 @@ module Abilities
 
       can :read_admin_stats, Budget, &:balloting_or_later?
 
-      can [:search, :edit, :update, :create, :index, :destroy], Banner
+      can [:search, :update, :create, :index, :destroy], Banner
 
-      can [:index, :create, :edit, :update, :destroy], Geozone
+      can [:index, :create, :update, :destroy], Geozone
 
       can [:read, :create, :update, :destroy, :add_question, :search_booths, :search_officers, :booth_assignments], Poll
       can [:read, :create, :update, :destroy, :available], Poll::Booth

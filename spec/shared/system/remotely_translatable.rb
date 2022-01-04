@@ -1,8 +1,6 @@
 shared_examples "remotely_translatable" do |factory_name, path_name, path_arguments|
   let(:arguments) do
-    path_arguments.map do |argument_name, path_to_value|
-      [argument_name, resource.send(path_to_value)]
-    end.to_h
+    path_arguments.transform_values { |path_to_value| resource.send(path_to_value) }
   end
   let(:path) { send(path_name, arguments) }
   let!(:resource) { create(factory_name) }
@@ -237,6 +235,6 @@ def commentable?(resource)
 end
 
 def generate_response(resource)
-  field_text = Faker::Lorem.characters(10)
+  field_text = Faker::Lorem.characters(number: 10)
   resource.translated_attribute_names.map { field_text }
 end

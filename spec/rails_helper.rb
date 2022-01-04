@@ -8,10 +8,23 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 
 require "rspec/rails"
 require "spec_helper"
+require "custom_spec_helper"
 require "capybara/rails"
 require "capybara/rspec"
 require "selenium/webdriver"
 require "view_component/test_helpers"
+
+module ViewComponent
+  module TestHelpers
+    def sign_in(user)
+      allow(controller).to receive(:current_user).and_return(user)
+    end
+
+    def within(...)
+      raise "`within` doesn't work in component tests. Use `page.find` instead."
+    end
+  end
+end
 
 RSpec.configure do |config|
   config.include ViewComponent::TestHelpers, type: :component
@@ -30,6 +43,8 @@ RSpec.configure do |config|
     Warden.test_reset!
   end
 end
+
+FactoryBot.use_parent_strategy = false
 
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
