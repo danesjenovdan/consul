@@ -147,21 +147,6 @@ class User < ApplicationRecord
     organization? ? organization.name : username
   end
 
-  def debate_votes(debates)
-    voted = votes.for_debates(Array(debates).map(&:id))
-    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
-  end
-
-  def proposal_votes(proposals)
-    voted = votes.for_proposals(Array(proposals).map(&:id))
-    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
-  end
-
-  def legislation_proposal_votes(proposals)
-    voted = votes.for_legislation_proposals(proposals)
-    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
-  end
-
   def comment_flags(comments)
     comment_flags = flags.for_comments(comments)
     comment_flags.each_with_object({}) { |f, h| h[f.flaggable_id] = true }
@@ -413,6 +398,10 @@ class User < ApplicationRecord
 
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
+  end
+
+  def add_subscriptions_token
+    update!(subscriptions_token: SecureRandom.base58(32)) if subscriptions_token.blank?
   end
 
   private

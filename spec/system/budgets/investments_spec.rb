@@ -602,6 +602,19 @@ describe "Budget Investments" do
       expect(page).to have_content "Build a skyscraper"
     end
 
+    scenario "Create with single heading and hidden money" do
+      budget_hide_money = create(:budget, :hide_money)
+      group = create(:budget_group, budget: budget_hide_money)
+      create(:budget_heading, name: "Heading without money", group: group)
+
+      login_as(author)
+
+      visit new_budget_investment_path(budget_hide_money)
+
+      expect(page).to have_content "Heading without money"
+      expect(page).not_to have_content "€"
+    end
+
     scenario "Create with single group and multiple headings" do
       create(:budget_heading, group: group, name: "Medical supplies")
       create(:budget_heading, group: group, name: "Even more hospitals")
@@ -1378,6 +1391,22 @@ describe "Budget Investments" do
       click_link investment.title
 
       expect(page).to have_content "€10,000"
+    end
+
+    scenario "Show message if user already voted in other heading" do
+      group = create(:budget_group, budget: budget, name: "Global Group")
+      heading = create(:budget_heading, group: group, name: "Heading 1")
+      investment = create(:budget_investment, :selected, heading: heading)
+      heading2 = create(:budget_heading, group: group, name: "Heading 2")
+      investment2 = create(:budget_investment, :selected, heading: heading2)
+      user = create(:user, :level_two, ballot_lines: [investment])
+
+      login_as(user)
+      visit budget_investment_path(budget, investment2)
+
+      expect(page).to have_selector(".participation-not-allowed",
+                                    text: "You have already voted a different heading: Heading 1",
+                                    visible: :hidden)
     end
 
     scenario "Sidebar in show should display vote text" do
