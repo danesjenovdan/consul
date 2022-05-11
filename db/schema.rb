@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
   enable_extension "plpgsql"
   enable_extension "unaccent"
 
-  create_table "active_poll_translations", id: :serial, force: :cascade do |t|
+  create_table "active_poll_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "active_poll_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
-  create_table "admin_notification_translations", id: :serial, force: :cascade do |t|
+  create_table "admin_notification_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "admin_notification_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -81,7 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_admin_notification_translations_on_locale"
   end
 
-  create_table "admin_notifications", id: :serial, force: :cascade do |t|
+  create_table "admin_notifications", id: :integer, default: nil, force: :cascade do |t|
     t.string "link"
     t.string "segment_recipient"
     t.integer "recipients_count"
@@ -90,7 +90,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "administrators", id: :serial, force: :cascade do |t|
+  create_table "administrators", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "description"
     t.index ["user_id"], name: "index_administrators_on_user_id"
@@ -109,7 +109,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["visit_id"], name: "index_ahoy_events_on_visit_id"
   end
 
-  create_table "audits", id: :serial, force: :cascade do |t|
+  create_table "audits", id: :integer, default: nil, force: :cascade do |t|
     t.integer "auditable_id"
     t.string "auditable_type"
     t.integer "associated_id"
@@ -131,14 +131,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id", "user_type"], name: "user_index"
   end
 
-  create_table "banner_sections", id: :serial, force: :cascade do |t|
+  create_table "banner_sections", id: :integer, default: nil, force: :cascade do |t|
     t.integer "banner_id"
     t.integer "web_section_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "banner_translations", id: :serial, force: :cascade do |t|
+  create_table "banner_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "banner_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -151,7 +151,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_banner_translations_on_locale"
   end
 
-  create_table "banners", id: :serial, force: :cascade do |t|
+  create_table "banners", id: :integer, default: nil, force: :cascade do |t|
     t.string "target_url"
     t.date "post_started_at"
     t.date "post_ended_at"
@@ -163,7 +163,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["hidden_at"], name: "index_banners_on_hidden_at"
   end
 
-  create_table "budget_administrators", id: :serial, force: :cascade do |t|
+  create_table "budget_administrators", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_id"
     t.integer "administrator_id"
     t.datetime "created_at", precision: nil, null: false
@@ -172,7 +172,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["budget_id"], name: "index_budget_administrators_on_budget_id"
   end
 
-  create_table "budget_ballot_lines", id: :serial, force: :cascade do |t|
+  create_table "budget_ballot_lines", id: :integer, default: nil, force: :cascade do |t|
     t.integer "ballot_id"
     t.integer "investment_id"
     t.datetime "created_at", precision: nil, null: false
@@ -188,7 +188,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["investment_id"], name: "index_budget_ballot_lines_on_investment_id"
   end
 
-  create_table "budget_ballots", id: :serial, force: :cascade do |t|
+  create_table "budget_ballots", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.integer "budget_id"
     t.datetime "created_at", precision: nil, null: false
@@ -198,7 +198,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.integer "poll_ballot_id"
   end
 
-  create_table "budget_content_blocks", id: :serial, force: :cascade do |t|
+  create_table "budget_content_blocks", id: :integer, default: nil, force: :cascade do |t|
     t.integer "heading_id"
     t.text "body"
     t.string "locale"
@@ -207,7 +207,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["heading_id"], name: "index_budget_content_blocks_on_heading_id"
   end
 
-  create_table "budget_group_translations", id: :serial, force: :cascade do |t|
+  create_table "budget_group_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_group_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -217,7 +217,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_budget_group_translations_on_locale"
   end
 
-  create_table "budget_groups", id: :serial, force: :cascade do |t|
+  create_table "budget_groups", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_id"
     t.string "slug"
     t.integer "max_votable_headings", default: 1
@@ -226,7 +226,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["budget_id"], name: "index_budget_groups_on_budget_id"
   end
 
-  create_table "budget_heading_translations", id: :serial, force: :cascade do |t|
+  create_table "budget_heading_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_heading_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -236,7 +236,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_budget_heading_translations_on_locale"
   end
 
-  create_table "budget_headings", id: :serial, force: :cascade do |t|
+  create_table "budget_headings", id: :integer, default: nil, force: :cascade do |t|
     t.integer "group_id"
     t.bigint "price"
     t.integer "population"
@@ -271,7 +271,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["text"], name: "index_budget_investment_answers_on_text"
   end
 
-  create_table "budget_investment_translations", id: :serial, force: :cascade do |t|
+  create_table "budget_investment_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_investment_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -284,7 +284,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_budget_investment_translations_on_locale"
   end
 
-  create_table "budget_investments", id: :serial, force: :cascade do |t|
+  create_table "budget_investments", id: :integer, default: nil, force: :cascade do |t|
     t.integer "author_id"
     t.integer "administrator_id"
     t.string "external_url"
@@ -323,6 +323,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "ignored_flag_at", precision: nil
     t.integer "flags_count", default: 0
     t.integer "original_heading_id"
+    t.string "status"
+    t.text "q1"
+    t.text "q2"
+    t.text "q3"
+    t.text "q4"
+    t.text "q5"
+    t.text "q6"
+    t.text "q7"
     t.text "answers", default: [], array: true
     t.index ["administrator_id"], name: "index_budget_investments_on_administrator_id"
     t.index ["author_id"], name: "index_budget_investments_on_author_id"
@@ -335,13 +343,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["tsv"], name: "index_budget_investments_on_tsv", using: :gin
   end
 
-  create_table "budget_phase_translations", id: :serial, force: :cascade do |t|
+  create_table "budget_phase_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_phase_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.text "description"
     t.text "summary"
+    t.string "presentation_summary_1"
+    t.string "presentation_summary_2"
+    t.string "presentation_summary_3"
     t.string "name"
     t.string "main_link_text"
     t.string "main_link_url"
@@ -352,13 +363,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_budget_phase_translations_on_locale"
   end
 
-  create_table "budget_phases", id: :serial, force: :cascade do |t|
+  create_table "budget_phases", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_id"
     t.integer "next_phase_id"
     t.string "kind", null: false
     t.datetime "starts_at", precision: nil
     t.datetime "ends_at", precision: nil
     t.boolean "enabled", default: true
+    t.text "presentation_summary_1"
+    t.text "presentation_summary_2"
+    t.text "presentation_summary_3"
     t.text "presentation_summary_accepting"
     t.text "presentation_summary_balloting"
     t.text "presentation_summary_finished"
@@ -382,7 +396,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["budget_id"], name: "index_budget_questions_on_budget_id"
   end
 
-  create_table "budget_reclassified_votes", id: :serial, force: :cascade do |t|
+  create_table "budget_reclassified_votes", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.integer "investment_id"
     t.string "reason"
@@ -390,7 +404,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "budget_translations", id: :serial, force: :cascade do |t|
+  create_table "budget_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -403,7 +417,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_budget_translations_on_locale"
   end
 
-  create_table "budget_valuator_assignments", id: :serial, force: :cascade do |t|
+  create_table "budget_valuator_assignments", id: :integer, default: nil, force: :cascade do |t|
     t.integer "valuator_id"
     t.integer "investment_id"
     t.datetime "created_at", precision: nil, null: false
@@ -411,12 +425,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["investment_id"], name: "index_budget_valuator_assignments_on_investment_id"
   end
 
-  create_table "budget_valuator_group_assignments", id: :serial, force: :cascade do |t|
+  create_table "budget_valuator_group_assignments", id: :integer, default: nil, force: :cascade do |t|
     t.integer "valuator_group_id"
     t.integer "investment_id"
   end
 
-  create_table "budget_valuators", id: :serial, force: :cascade do |t|
+  create_table "budget_valuators", id: :integer, default: nil, force: :cascade do |t|
     t.integer "budget_id"
     t.integer "valuator_id"
     t.datetime "created_at", precision: nil, null: false
@@ -425,7 +439,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["valuator_id"], name: "index_budget_valuators_on_valuator_id"
   end
 
-  create_table "budgets", id: :serial, force: :cascade do |t|
+  create_table "budgets", id: :integer, default: nil, force: :cascade do |t|
     t.string "currency_symbol", limit: 10
     t.string "phase", limit: 40, default: "accepting"
     t.datetime "created_at", precision: nil, null: false
@@ -446,14 +460,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.boolean "hide_money", default: false
   end
 
-  create_table "campaigns", id: :serial, force: :cascade do |t|
+  create_table "campaigns", id: :integer, default: nil, force: :cascade do |t|
     t.string "name"
     t.string "track_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "ckeditor_assets", id: :serial, force: :cascade do |t|
+  create_table "ckeditor_assets", id: :integer, default: nil, force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
     t.integer "data_file_size"
@@ -466,7 +480,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "comment_translations", id: :serial, force: :cascade do |t|
+  create_table "comment_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "comment_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -478,7 +492,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_comment_translations_on_locale"
   end
 
-  create_table "comments", id: :serial, force: :cascade do |t|
+  create_table "comments", id: :integer, default: nil, force: :cascade do |t|
     t.integer "commentable_id"
     t.string "commentable_type"
     t.string "subject"
@@ -515,7 +529,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "dashboard_actions", id: :serial, force: :cascade do |t|
+  create_table "dashboard_actions", id: :integer, default: nil, force: :cascade do |t|
     t.string "title", limit: 80
     t.text "description"
     t.boolean "request_to_administrators", default: false
@@ -531,7 +545,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.boolean "published_proposal", default: false
   end
 
-  create_table "dashboard_administrator_tasks", id: :serial, force: :cascade do |t|
+  create_table "dashboard_administrator_tasks", id: :integer, default: nil, force: :cascade do |t|
     t.string "source_type"
     t.integer "source_id"
     t.integer "user_id"
@@ -542,7 +556,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_dashboard_administrator_tasks_on_user_id"
   end
 
-  create_table "dashboard_executed_actions", id: :serial, force: :cascade do |t|
+  create_table "dashboard_executed_actions", id: :integer, default: nil, force: :cascade do |t|
     t.integer "proposal_id"
     t.integer "action_id"
     t.datetime "executed_at", precision: nil
@@ -552,7 +566,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["proposal_id"], name: "index_dashboard_executed_actions_on_proposal_id"
   end
 
-  create_table "debate_translations", id: :serial, force: :cascade do |t|
+  create_table "debate_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "debate_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -565,7 +579,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_debate_translations_on_locale"
   end
 
-  create_table "debates", id: :serial, force: :cascade do |t|
+  create_table "debates", id: :integer, default: nil, force: :cascade do |t|
     t.integer "author_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
@@ -597,7 +611,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["tsv"], name: "index_debates_on_tsv", using: :gin
   end
 
-  create_table "delayed_jobs", id: :serial, force: :cascade do |t|
+  create_table "delayed_jobs", id: :integer, default: nil, force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
@@ -613,7 +627,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
-  create_table "direct_messages", id: :serial, force: :cascade do |t|
+  create_table "direct_messages", id: :integer, default: nil, force: :cascade do |t|
     t.integer "sender_id"
     t.integer "receiver_id"
     t.string "title"
@@ -622,7 +636,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "documents", id: :serial, force: :cascade do |t|
+  create_table "documents", id: :integer, default: nil, force: :cascade do |t|
     t.string "title"
     t.integer "user_id"
     t.string "documentable_type"
@@ -635,7 +649,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
-  create_table "failed_census_calls", id: :serial, force: :cascade do |t|
+  create_table "failed_census_calls", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "document_number"
     t.string "document_type"
@@ -650,7 +664,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_failed_census_calls_on_user_id"
   end
 
-  create_table "flags", id: :serial, force: :cascade do |t|
+  create_table "flags", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "flaggable_type"
     t.integer "flaggable_id"
@@ -661,7 +675,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_flags_on_user_id"
   end
 
-  create_table "follows", id: :serial, force: :cascade do |t|
+  create_table "follows", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "followable_type"
     t.integer "followable_id"
@@ -672,7 +686,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_follows_on_user_id"
   end
 
-  create_table "geozones", id: :serial, force: :cascade do |t|
+  create_table "geozones", id: :integer, default: nil, force: :cascade do |t|
     t.string "name"
     t.string "html_map_coordinates"
     t.string "external_code"
@@ -683,14 +697,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.string "color"
   end
 
-  create_table "geozones_polls", id: :serial, force: :cascade do |t|
+  create_table "geozones_polls", id: :integer, default: nil, force: :cascade do |t|
     t.integer "geozone_id"
     t.integer "poll_id"
     t.index ["geozone_id"], name: "index_geozones_polls_on_geozone_id"
     t.index ["poll_id"], name: "index_geozones_polls_on_poll_id"
   end
 
-  create_table "i18n_content_translations", id: :serial, force: :cascade do |t|
+  create_table "i18n_content_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "i18n_content_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -700,11 +714,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_i18n_content_translations_on_locale"
   end
 
-  create_table "i18n_contents", id: :serial, force: :cascade do |t|
+  create_table "i18n_contents", id: :integer, default: nil, force: :cascade do |t|
     t.string "key"
   end
 
-  create_table "identities", id: :serial, force: :cascade do |t|
+  create_table "identities", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "provider"
     t.string "uid"
@@ -713,7 +727,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_identities_on_user_id"
   end
 
-  create_table "images", id: :serial, force: :cascade do |t|
+  create_table "images", id: :integer, default: nil, force: :cascade do |t|
     t.string "imageable_type"
     t.integer "imageable_id"
     t.string "title", limit: 80
@@ -724,7 +738,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_images_on_user_id"
   end
 
-  create_table "legislation_annotations", id: :serial, force: :cascade do |t|
+  create_table "legislation_annotations", id: :integer, default: nil, force: :cascade do |t|
     t.string "quote"
     t.text "ranges"
     t.text "text"
@@ -745,7 +759,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["range_start", "range_end"], name: "index_legislation_annotations_on_range_start_and_range_end"
   end
 
-  create_table "legislation_answers", id: :serial, force: :cascade do |t|
+  create_table "legislation_answers", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_question_id"
     t.integer "legislation_question_option_id"
     t.integer "user_id"
@@ -758,7 +772,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_legislation_answers_on_user_id"
   end
 
-  create_table "legislation_draft_version_translations", id: :serial, force: :cascade do |t|
+  create_table "legislation_draft_version_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_draft_version_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -772,7 +786,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_legislation_draft_version_translations_on_locale"
   end
 
-  create_table "legislation_draft_versions", id: :serial, force: :cascade do |t|
+  create_table "legislation_draft_versions", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_process_id"
     t.string "status", default: "draft"
     t.boolean "final_version", default: false
@@ -784,7 +798,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["status"], name: "index_legislation_draft_versions_on_status"
   end
 
-  create_table "legislation_process_translations", id: :serial, force: :cascade do |t|
+  create_table "legislation_process_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_process_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -801,7 +815,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_legislation_process_translations_on_locale"
   end
 
-  create_table "legislation_processes", id: :serial, force: :cascade do |t|
+  create_table "legislation_processes", id: :integer, default: nil, force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
     t.date "debate_start_date"
@@ -842,7 +856,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["start_date"], name: "index_legislation_processes_on_start_date"
   end
 
-  create_table "legislation_proposals", id: :serial, force: :cascade do |t|
+  create_table "legislation_proposals", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_process_id"
     t.string "title", limit: 80
     t.text "description"
@@ -874,7 +888,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["legislation_process_id"], name: "index_legislation_proposals_on_legislation_process_id"
   end
 
-  create_table "legislation_question_option_translations", id: :serial, force: :cascade do |t|
+  create_table "legislation_question_option_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_question_option_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -886,7 +900,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_legislation_question_option_translations_on_locale"
   end
 
-  create_table "legislation_question_options", id: :serial, force: :cascade do |t|
+  create_table "legislation_question_options", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_question_id"
     t.integer "answers_count", default: 0
     t.datetime "hidden_at", precision: nil
@@ -896,7 +910,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["legislation_question_id"], name: "index_legislation_question_options_on_legislation_question_id"
   end
 
-  create_table "legislation_question_translations", id: :serial, force: :cascade do |t|
+  create_table "legislation_question_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_question_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -909,7 +923,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["locale"], name: "index_legislation_question_translations_on_locale"
   end
 
-  create_table "legislation_questions", id: :serial, force: :cascade do |t|
+  create_table "legislation_questions", id: :integer, default: nil, force: :cascade do |t|
     t.integer "legislation_process_id"
     t.integer "answers_count", default: 0
     t.datetime "hidden_at", precision: nil
@@ -921,7 +935,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["legislation_process_id"], name: "index_legislation_questions_on_legislation_process_id"
   end
 
-  create_table "links", id: :serial, force: :cascade do |t|
+  create_table "links", id: :integer, default: nil, force: :cascade do |t|
     t.string "label"
     t.string "url"
     t.string "linkable_type"
@@ -931,7 +945,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["linkable_type", "linkable_id"], name: "index_links_on_linkable_type_and_linkable_id"
   end
 
-  create_table "local_census_records", id: :serial, force: :cascade do |t|
+  create_table "local_census_records", id: :integer, default: nil, force: :cascade do |t|
     t.string "document_number", null: false
     t.string "document_type", null: false
     t.date "date_of_birth", null: false
@@ -942,7 +956,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["document_number"], name: "index_local_census_records_on_document_number"
   end
 
-  create_table "locks", id: :serial, force: :cascade do |t|
+  create_table "locks", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.integer "tries", default: 0
     t.datetime "locked_until", precision: nil, default: "2000-01-01 01:01:01", null: false
@@ -971,12 +985,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_machine_learning_jobs_on_user_id"
   end
 
-  create_table "managers", id: :serial, force: :cascade do |t|
+  create_table "managers", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.index ["user_id"], name: "index_managers_on_user_id"
   end
 
-  create_table "map_locations", id: :serial, force: :cascade do |t|
+  create_table "map_locations", id: :integer, default: nil, force: :cascade do |t|
     t.float "latitude"
     t.float "longitude"
     t.integer "zoom"
@@ -986,7 +1000,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["proposal_id"], name: "index_map_locations_on_proposal_id"
   end
 
-  create_table "milestone_statuses", id: :serial, force: :cascade do |t|
+  create_table "milestone_statuses", id: :integer, default: nil, force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "hidden_at", precision: nil
@@ -995,7 +1009,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["hidden_at"], name: "index_milestone_statuses_on_hidden_at"
   end
 
-  create_table "milestone_translations", id: :serial, force: :cascade do |t|
+  create_table "milestone_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "milestone_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1006,7 +1020,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["milestone_id"], name: "index_milestone_translations_on_milestone_id"
   end
 
-  create_table "milestones", id: :serial, force: :cascade do |t|
+  create_table "milestones", id: :integer, default: nil, force: :cascade do |t|
     t.string "milestoneable_type"
     t.integer "milestoneable_id"
     t.datetime "publication_date", precision: nil
@@ -1024,12 +1038,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "moderators", id: :serial, force: :cascade do |t|
+  create_table "moderators", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.index ["user_id"], name: "index_moderators_on_user_id"
   end
 
-  create_table "newsletters", id: :serial, force: :cascade do |t|
+  create_table "newsletters", id: :integer, default: nil, force: :cascade do |t|
     t.string "subject"
     t.string "segment_recipient", null: false
     t.string "from"
@@ -1040,7 +1054,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "hidden_at", precision: nil
   end
 
-  create_table "notifications", id: :serial, force: :cascade do |t|
+  create_table "notifications", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "notifiable_type"
     t.integer "notifiable_id"
@@ -1050,7 +1064,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
-  create_table "organizations", id: :serial, force: :cascade do |t|
+  create_table "organizations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "name", limit: 60
     t.datetime "verified_at", precision: nil
@@ -1059,7 +1073,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_organizations_on_user_id"
   end
 
-  create_table "poll_answers", id: :serial, force: :cascade do |t|
+  create_table "poll_answers", id: :integer, default: nil, force: :cascade do |t|
     t.integer "question_id"
     t.integer "author_id"
     t.string "answer"
@@ -1073,7 +1087,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["question_id"], name: "index_poll_answers_on_question_id"
   end
 
-  create_table "poll_ballot_sheets", id: :serial, force: :cascade do |t|
+  create_table "poll_ballot_sheets", id: :integer, default: nil, force: :cascade do |t|
     t.text "data"
     t.integer "poll_id"
     t.integer "officer_assignment_id"
@@ -1083,7 +1097,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["poll_id"], name: "index_poll_ballot_sheets_on_poll_id"
   end
 
-  create_table "poll_ballots", id: :serial, force: :cascade do |t|
+  create_table "poll_ballots", id: :integer, default: nil, force: :cascade do |t|
     t.integer "ballot_sheet_id"
     t.text "data"
     t.integer "external_id"
@@ -1091,7 +1105,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "poll_booth_assignments", id: :serial, force: :cascade do |t|
+  create_table "poll_booth_assignments", id: :integer, default: nil, force: :cascade do |t|
     t.integer "booth_id"
     t.integer "poll_id"
     t.datetime "created_at", precision: nil, null: false
@@ -1100,12 +1114,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["poll_id"], name: "index_poll_booth_assignments_on_poll_id"
   end
 
-  create_table "poll_booths", id: :serial, force: :cascade do |t|
+  create_table "poll_booths", id: :integer, default: nil, force: :cascade do |t|
     t.string "name"
     t.string "location"
   end
 
-  create_table "poll_officer_assignments", id: :serial, force: :cascade do |t|
+  create_table "poll_officer_assignments", id: :integer, default: nil, force: :cascade do |t|
     t.integer "booth_assignment_id"
     t.integer "officer_id"
     t.datetime "created_at", precision: nil, null: false
@@ -1117,13 +1131,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["officer_id"], name: "index_poll_officer_assignments_on_officer_id"
   end
 
-  create_table "poll_officers", id: :serial, force: :cascade do |t|
+  create_table "poll_officers", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.integer "failed_census_calls_count", default: 0
     t.index ["user_id"], name: "index_poll_officers_on_user_id"
   end
 
-  create_table "poll_partial_results", id: :serial, force: :cascade do |t|
+  create_table "poll_partial_results", id: :integer, default: nil, force: :cascade do |t|
     t.integer "question_id"
     t.integer "author_id"
     t.string "answer"
@@ -1142,7 +1156,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["question_id"], name: "index_poll_partial_results_on_question_id"
   end
 
-  create_table "poll_question_answer_translations", id: :serial, force: :cascade do |t|
+  create_table "poll_question_answer_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "poll_question_answer_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1153,21 +1167,21 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["poll_question_answer_id"], name: "index_85270fa85f62081a3a227186b4c95fe4f7fa94b9"
   end
 
-  create_table "poll_question_answer_videos", id: :serial, force: :cascade do |t|
+  create_table "poll_question_answer_videos", id: :integer, default: nil, force: :cascade do |t|
     t.string "title"
     t.string "url"
     t.integer "answer_id"
     t.index ["answer_id"], name: "index_poll_question_answer_videos_on_answer_id"
   end
 
-  create_table "poll_question_answers", id: :serial, force: :cascade do |t|
+  create_table "poll_question_answers", id: :integer, default: nil, force: :cascade do |t|
     t.integer "question_id"
     t.integer "given_order", default: 1
     t.boolean "most_voted", default: false
     t.index ["question_id"], name: "index_poll_question_answers_on_question_id"
   end
 
-  create_table "poll_question_translations", id: :serial, force: :cascade do |t|
+  create_table "poll_question_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "poll_question_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1179,7 +1193,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["poll_question_id"], name: "index_poll_question_translations_on_poll_question_id"
   end
 
-  create_table "poll_questions", id: :serial, force: :cascade do |t|
+  create_table "poll_questions", id: :integer, default: nil, force: :cascade do |t|
     t.integer "proposal_id"
     t.integer "poll_id"
     t.integer "author_id"
@@ -1196,7 +1210,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["tsv"], name: "index_poll_questions_on_tsv", using: :gin
   end
 
-  create_table "poll_recounts", id: :serial, force: :cascade do |t|
+  create_table "poll_recounts", id: :integer, default: nil, force: :cascade do |t|
     t.integer "author_id"
     t.string "origin"
     t.date "date"
@@ -1214,7 +1228,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["officer_assignment_id"], name: "index_poll_recounts_on_officer_assignment_id"
   end
 
-  create_table "poll_shifts", id: :serial, force: :cascade do |t|
+  create_table "poll_shifts", id: :integer, default: nil, force: :cascade do |t|
     t.integer "booth_id"
     t.integer "officer_id"
     t.date "date"
@@ -1228,7 +1242,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["officer_id"], name: "index_poll_shifts_on_officer_id"
   end
 
-  create_table "poll_translations", id: :serial, force: :cascade do |t|
+  create_table "poll_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "poll_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1242,7 +1256,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["poll_id"], name: "index_poll_translations_on_poll_id"
   end
 
-  create_table "poll_voters", id: :serial, force: :cascade do |t|
+  create_table "poll_voters", id: :integer, default: nil, force: :cascade do |t|
     t.string "document_number"
     t.string "document_type"
     t.datetime "created_at", precision: nil, null: false
@@ -1285,7 +1299,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["starts_at", "ends_at"], name: "index_polls_on_starts_at_and_ends_at"
   end
 
-  create_table "progress_bar_translations", id: :serial, force: :cascade do |t|
+  create_table "progress_bar_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "progress_bar_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1295,7 +1309,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["progress_bar_id"], name: "index_progress_bar_translations_on_progress_bar_id"
   end
 
-  create_table "progress_bars", id: :serial, force: :cascade do |t|
+  create_table "progress_bars", id: :integer, default: nil, force: :cascade do |t|
     t.integer "kind"
     t.integer "percentage"
     t.string "progressable_type"
@@ -1304,7 +1318,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "proposal_notifications", id: :serial, force: :cascade do |t|
+  create_table "proposal_notifications", id: :integer, default: nil, force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "author_id"
@@ -1319,7 +1333,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["tsv"], name: "index_proposal_notifications_on_tsv", using: :gin
   end
 
-  create_table "proposal_translations", id: :serial, force: :cascade do |t|
+  create_table "proposal_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "proposal_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1334,7 +1348,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["proposal_id"], name: "index_proposal_translations_on_proposal_id"
   end
 
-  create_table "proposals", id: :serial, force: :cascade do |t|
+  create_table "proposals", id: :integer, default: nil, force: :cascade do |t|
     t.integer "author_id"
     t.datetime "hidden_at", precision: nil
     t.integer "flags_count", default: 0
@@ -1367,7 +1381,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["tsv"], name: "index_proposals_on_tsv", using: :gin
   end
 
-  create_table "related_content_scores", id: :serial, force: :cascade do |t|
+  create_table "related_content_scores", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.integer "related_content_id"
     t.integer "value"
@@ -1376,7 +1390,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_related_content_scores_on_user_id"
   end
 
-  create_table "related_contents", id: :serial, force: :cascade do |t|
+  create_table "related_contents", id: :integer, default: nil, force: :cascade do |t|
     t.string "parent_relationable_type"
     t.integer "parent_relationable_id"
     t.string "child_relationable_type"
@@ -1396,7 +1410,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["related_content_id"], name: "opposite_related_content"
   end
 
-  create_table "remote_translations", id: :serial, force: :cascade do |t|
+  create_table "remote_translations", id: :integer, default: nil, force: :cascade do |t|
     t.string "locale"
     t.integer "remote_translatable_id"
     t.string "remote_translatable_type"
@@ -1405,7 +1419,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "reports", id: :serial, force: :cascade do |t|
+  create_table "reports", id: :integer, default: nil, force: :cascade do |t|
     t.boolean "stats"
     t.boolean "results"
     t.string "process_type"
@@ -1488,13 +1502,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["goal_id"], name: "index_sdg_targets_on_goal_id"
   end
 
-  create_table "settings", id: :serial, force: :cascade do |t|
+  create_table "settings", id: :integer, default: nil, force: :cascade do |t|
     t.string "key"
     t.string "value"
     t.index ["key"], name: "index_settings_on_key"
   end
 
-  create_table "signature_sheets", id: :serial, force: :cascade do |t|
+  create_table "signature_sheets", id: :integer, default: nil, force: :cascade do |t|
     t.string "signable_type"
     t.integer "signable_id"
     t.text "required_fields_to_verify"
@@ -1505,7 +1519,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.string "title"
   end
 
-  create_table "signatures", id: :serial, force: :cascade do |t|
+  create_table "signatures", id: :integer, default: nil, force: :cascade do |t|
     t.integer "signature_sheet_id"
     t.integer "user_id"
     t.string "document_number"
@@ -1516,7 +1530,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.string "postal_code"
   end
 
-  create_table "site_customization_content_blocks", id: :serial, force: :cascade do |t|
+  create_table "site_customization_content_blocks", id: :integer, default: nil, force: :cascade do |t|
     t.string "name"
     t.string "locale"
     t.text "body"
@@ -1525,7 +1539,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["name", "locale"], name: "index_site_customization_content_blocks_on_name_and_locale", unique: true
   end
 
-  create_table "site_customization_images", id: :serial, force: :cascade do |t|
+  create_table "site_customization_images", id: :integer, default: nil, force: :cascade do |t|
     t.string "name", null: false
     t.string "image_file_name"
     t.string "image_content_type"
@@ -1536,7 +1550,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["name"], name: "index_site_customization_images_on_name", unique: true
   end
 
-  create_table "site_customization_page_translations", id: :serial, force: :cascade do |t|
+  create_table "site_customization_page_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "site_customization_page_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1548,7 +1562,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["site_customization_page_id"], name: "index_7fa0f9505738cb31a31f11fb2f4c4531fed7178b"
   end
 
-  create_table "site_customization_pages", id: :serial, force: :cascade do |t|
+  create_table "site_customization_pages", id: :integer, default: nil, force: :cascade do |t|
     t.string "slug", null: false
     t.boolean "more_info_flag"
     t.boolean "print_content_flag"
@@ -1577,7 +1591,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  create_table "tags", id: :serial, force: :cascade do |t|
+  create_table "tags", id: :integer, default: nil, force: :cascade do |t|
     t.string "name", limit: 160
     t.integer "taggings_count", default: 0
     t.integer "debates_count", default: 0
@@ -1617,7 +1631,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["hidden_at"], name: "index_topics_on_hidden_at"
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
+  create_table "users", id: :integer, default: nil, force: :cascade do |t|
     t.string "email", default: ""
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -1676,6 +1690,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.boolean "public_interests", default: false
     t.boolean "recommended_debates", default: true
     t.boolean "recommended_proposals", default: true
+    t.text "phone"
+    t.text "address"
+    t.boolean "is_anonymous", default: false, null: false
+    t.boolean "data_consent", default: false, null: false
     t.string "subscriptions_token"
     t.integer "failed_attempts", default: 0, null: false
     t.datetime "locked_at", precision: nil
@@ -1692,12 +1710,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["username"], name: "index_users_on_username"
   end
 
-  create_table "valuator_groups", id: :serial, force: :cascade do |t|
+  create_table "valuator_groups", id: :integer, default: nil, force: :cascade do |t|
     t.string "name"
     t.integer "budget_investments_count", default: 0
   end
 
-  create_table "valuators", id: :serial, force: :cascade do |t|
+  create_table "valuators", id: :integer, default: nil, force: :cascade do |t|
     t.integer "user_id"
     t.string "description"
     t.integer "budget_investments_count", default: 0
@@ -1707,7 +1725,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["user_id"], name: "index_valuators_on_user_id"
   end
 
-  create_table "verified_users", id: :serial, force: :cascade do |t|
+  create_table "verified_users", id: :integer, default: nil, force: :cascade do |t|
     t.string "document_number"
     t.string "document_type"
     t.string "phone"
@@ -1775,13 +1793,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
-  create_table "web_sections", id: :serial, force: :cascade do |t|
+  create_table "web_sections", id: :integer, default: nil, force: :cascade do |t|
     t.text "name"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "widget_card_translations", id: :serial, force: :cascade do |t|
+  create_table "widget_card_translations", id: :integer, default: nil, force: :cascade do |t|
     t.integer "widget_card_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1794,7 +1812,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["widget_card_id"], name: "index_widget_card_translations_on_widget_card_id"
   end
 
-  create_table "widget_cards", id: :serial, force: :cascade do |t|
+  create_table "widget_cards", id: :integer, default: nil, force: :cascade do |t|
     t.string "link_url"
     t.boolean "header", default: false
     t.datetime "created_at", precision: nil, null: false
@@ -1806,7 +1824,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.index ["cardable_id"], name: "index_widget_cards_on_cardable_id"
   end
 
-  create_table "widget_feeds", id: :serial, force: :cascade do |t|
+  create_table "widget_feeds", id: :integer, default: nil, force: :cascade do |t|
     t.string "kind"
     t.integer "limit", default: 3
     t.datetime "created_at", precision: nil, null: false
