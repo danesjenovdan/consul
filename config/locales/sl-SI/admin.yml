@@ -136,7 +136,7 @@ sl-SI:
           title: Naslov
           supports: Glasovi
           valuator: Cenilec
-          geozone: Področje uporabe
+          geozone: Območje
           feasibility: Izvedljivost
           selected: Označeno
           incompatible: Nekompatibilen
@@ -923,7 +923,7 @@ sl-SI:
         back: Nazaj
       new:
         back: Nazaj
-        creating: Ustvari področje
+        creating: Ustvari območje
       delete:
         success: Geocona uspešno izbrisana
         error: Ta geocona ne more biti izbrisana, ker obstajajo elementi, pripeti nanjo
