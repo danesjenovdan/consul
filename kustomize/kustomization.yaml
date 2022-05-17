@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: consul
+namespace: consul-maribor
 resources:
   - database.yaml
   - deployment.yaml
@@ -8,8 +8,8 @@ resources:
   - ingress.yaml
 images:
   - name: consul
-    newName: rg.fr-par.scw.cloud/djnd/consul
-    newTag: 'd6efe2cbfee6a988a77a0d46ca5286d93e9f0ecc'
+    newName: rg.fr-par.scw.cloud/djnd/consul-maribor
+    newTag: 'latest'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
   #   newTag: 'd6efe2cbfee6a988a77a0d46ca5286d93e9f0ecc'

@@ -2,7 +2,7 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - 'djnd-consul'
+      - 'maribor-k8s'
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -28,8 +28,8 @@ jobs:
           context: .
           push: true
           tags: |
-            rg.fr-par.scw.cloud/djnd/consul:${{ github.sha }}
-            rg.fr-par.scw.cloud/djnd/consul:staging
+            rg.fr-par.scw.cloud/djnd/consul-maribor:${{ github.sha }}
+            rg.fr-par.scw.cloud/djnd/consul-maribor:latest
       # -
       #   name: Build and push assets
       #   uses: docker/build-push-action@v2
