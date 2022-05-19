@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-maribor
-    newTag: 'f05093864a305b89235a1f6b3341e5612daae4d0'
+    newTag: '7b058fc58133cb2222ed934733dc61f3c9d64a01'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: 'f05093864a305b89235a1f6b3341e5612daae4d0'
+  #   newTag: '7b058fc58133cb2222ed934733dc61f3c9d64a01'
