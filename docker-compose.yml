@@ -38,8 +38,6 @@ services:
     environment:
       POSTGRES_PASSWORD: postgres
       RAILS_ENV: development
-      CONSUL_AWS_ACCESS_KEY_ID: SCWEMK930CYP86RK442J
-      CONSUL_AWS_SECRET_ACCESS_KEY: c6ae0ee0-a883-4c1d-96d1-fef10455dc90
       # RAILS_LOG_TO_STDOUT: enabled
       # RAILS_SERVE_STATIC_FILES: enabled
 volumes:
