@@ -81,6 +81,8 @@ $( function() {
                  terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
                 ) %>
 
+      <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: t("custom.terms.terms_second_checkbox") %>
+
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>
       </div>

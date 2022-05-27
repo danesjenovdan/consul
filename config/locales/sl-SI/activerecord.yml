@@ -380,6 +380,8 @@ sl-SI:
           attributes:
             email:
               password_already_set: "Ta uporabnik že ima geslo"
+            address:
+              invalid: "Prosim izberi naslov izmed ponujenih možnosti"
         debate:
           attributes:
             tag_list:
