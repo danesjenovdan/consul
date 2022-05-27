@@ -57,8 +57,9 @@
                     <% if @budget.categories.count > 1 && @investments.count > 0 %>
                       <%= render "budgets/investments/tags" %>
                     <% end %>
-                    <% if @budget.headings.count > 1 && @investments.count > 0 %>
-                      <%= render "budgets/investments/statuses" %>
+                    <%# TODO: Izberi status predloga se mora pokazati šele v fazi izvedbe (zakomentirano je zelo zacasna resitev) %>
+                    <%# <% if @budget.headings.count > 1 && @investments.count > 0 
+                      <%= render "budgets/investments/statuses" 
                     <% end %>
                   </div>
                   <% if @budget.phase == "valuating" %>
