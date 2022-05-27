@@ -1,4 +1,47 @@
 <% provide :title do %><%= t("devise_views.users.registrations.new.title") %><% end %>
+<!-- MEDVODE CUSTOM address autocomplete javascript -->
+<script>
+$( function() {
+  console.log('ready');
+  var availableTags = [
+    "Belo",
+    "Brezovica pri Medvodah",
+    "Dol",
+    "Dragočajna",
+    "Golo Brdo",
+    "Goričane",
+    "Hraše",
+    "Ladja",
+    "Medvode",
+    "Moše",
+    "Osolnik",
+    "Rakovnik",
+    "Seničica",
+    "Setnica - del",
+    "Smlednik",
+    "Sora",
+    "Spodnja Senica",
+    "Spodnje Pirniče",
+    "Studenčice",
+    "Tehovec",
+    "Topol pri Medvodah",
+    "Trnovec",
+    "Valburga",
+    "Vaše",
+    "Verje",
+    "Vikrče",
+    "Zavrh pod šmarno goro",
+    "Zbilje",
+    "Zgornja Senica",
+    "Zgornje Pirniče",
+    "Žlebe"
+  ];
+  $( "#address" ).autocomplete({
+    source: availableTags
+  });
+} );
+</script>
+<!-- end MEDVODE CUSTOM address autocomplete javascript -->
 <h1><%= t("devise_views.users.registrations.new.title") %></h1>
 
 <%= render "devise/omniauth_form", action: "sign_up" %>
@@ -17,10 +60,9 @@
       <%= f.hidden_field :document_type, value: "1" %>
       <%= f.text_field :document_number, label: t("custom.terms.emso"), placeholder: t("devise_views.users.registrations.new.document_number") %>
 
-      <%= f.invisible_captcha :address %>
+      <%= f.invisible_captcha :home_address %>
 
-      <%# TODO: dodaj autocomplete polje za naslov %>
-      <%# <%= f.text_field :naslov %>
+      <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true %>
 
       <%= f.email_field :email %>
 

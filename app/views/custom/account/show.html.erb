@@ -1,3 +1,46 @@
+<!-- MEDVODE CUSTOM address autocomplete javascript -->
+<script>
+$( function() {
+  console.log('ready');
+  var availableTags = [
+    "Belo",
+    "Brezovica pri Medvodah",
+    "Dol",
+    "Dragočajna",
+    "Golo Brdo",
+    "Goričane",
+    "Hraše",
+    "Ladja",
+    "Medvode",
+    "Moše",
+    "Osolnik",
+    "Rakovnik",
+    "Seničica",
+    "Setnica - del",
+    "Smlednik",
+    "Sora",
+    "Spodnja Senica",
+    "Spodnje Pirniče",
+    "Studenčice",
+    "Tehovec",
+    "Topol pri Medvodah",
+    "Trnovec",
+    "Valburga",
+    "Vaše",
+    "Verje",
+    "Vikrče",
+    "Zavrh pod šmarno goro",
+    "Zbilje",
+    "Zgornja Senica",
+    "Zgornje Pirniče",
+    "Žlebe"
+  ];
+  $( "#address" ).autocomplete({
+    source: availableTags
+  });
+} );
+</script>
+<!-- end MEDVODE CUSTOM address autocomplete javascript -->
 <main class="account">
   <div class="main-indented-content">
     <div class="row">
@@ -24,9 +67,9 @@
                   <div>
                     <%= f.text_field :username, maxlength: User.username_max_length %>
                   </div>
-                  <%# TODO: add address to form %>
-                  <div class="">
-                    <%= f.text_field :address, label: 'Naslov' %>
+
+                  <div>
+                    <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true %>
                   </div>
                 <% end %>
               </div>

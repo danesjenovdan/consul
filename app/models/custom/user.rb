@@ -5,11 +5,16 @@ class User < ApplicationRecord
 
   validate :emso_number, on: :create
 #   validate :validate_data_consent, on: :create
+  validate :validate_address, on: [:create, :update]
   
   def validate_data_consent
     unless data_consent
       errors.add(:data_consent, I18n.t('custom.errors.data_consent'))
     end
+  end
+
+  def validate_address
+    errors.add(:address, I18n.t('activerecord.errors.models.user.attributes.address.invalid')) unless is_valid_address?
   end
 
   def emso_number
@@ -66,5 +71,45 @@ class User < ApplicationRecord
       end
     end
     false
+  end
+
+  # regex check if address is valid
+  # this list of addresses is for 2022
+  def is_valid_address?
+    valid_address = [
+      "Belo",
+      "Brezovica pri Medvodah",
+      "Dol",
+      "Dragočajna",
+      "Golo Brdo",
+      "Goričane",
+      "Hraše",
+      "Ladja",
+      "Medvode",
+      "Moše",
+      "Osolnik",
+      "Rakovnik",
+      "Seničica",
+      "Setnica - del",
+      "Smlednik",
+      "Sora",
+      "Spodnja Senica",
+      "Spodnje Pirniče",
+      "Studenčice",
+      "Tehovec",
+      "Topol pri Medvodah",
+      "Trnovec",
+      "Valburga",
+      "Vaše",
+      "Verje",
+      "Vikrče",
+      "Zavrh pod šmarno goro",
+      "Zbilje",
+      "Zgornja Senica",
+      "Zgornje Pirniče",
+      "Žlebe",
+    ];
+    r = /#{valid_address.join("|")}/ # assuming there are no special chars
+    return r === address
   end
 end
