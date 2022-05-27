@@ -11,7 +11,7 @@
               data-deep-link-smudge="true"
               data-deep-link-smudge-delay="500"
               data-tabs>
-            <% current_budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
+            <% @budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
               <% if phase.enabled %>
                 <li class="tabs-title <%= "is-active active-phase" if phase.url %>">
                   <%= link_to "#tab-#{phase.kind}" do %>
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <% current_budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
+  <% @budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
     <% if phase.enabled %>
       <div class="tabs-panel <%= "is-active" if phase.url %>" id="tab-<%= phase.kind %>">
         <% if phase.url %>
@@ -39,15 +39,15 @@
                   <%= render "budgets/investments/map" %>
                   <h2 class="phase-title bold">
                     <% if phase.kind == :finished %>
-                      <%= t("custom.titles.finished_proposals") %> (<%= @investments.count %>)
+                      <%= t("custom.titles.finished_proposals") %> (<%= @filtered_investments_count %>)
                     <% elsif phase.kind == :balloting %>
-                      <%= t("custom.titles.selected_proposals") %> (<%= @investments.count %>)
+                      <%= t("custom.titles.selected_proposals") %> (<%= @filtered_investments_count %>)
                     <% elsif @budget.phase == "valuating" %>
-                      <%= t("custom.titles.added_proposals") %> (<%= @investments.count %>)
+                      <%= t("custom.titles.added_proposals") %> (<%= @filtered_investments_count %>)
                     <% elsif @budget.phase == "publishing_prices" %>
-                      <%= t("custom.titles.voted_proposals") %> (<%= @investments.count %>)
+                      <%= t("custom.titles.voted_proposals") %> (<%= @filtered_investments_count %>)
                     <% else %>
-                      <%= t("custom.titles.added_proposals") %> (<%= @investments.count %>)
+                      <%= t("custom.titles.added_proposals") %> (<%= @filtered_investments_count %>)
                     <% end %>
                   </h2>
                   <div class="filters">
