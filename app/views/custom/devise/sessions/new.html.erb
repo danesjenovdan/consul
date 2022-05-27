@@ -1,0 +1,40 @@
+<% provide :title do %><%= t("devise_views.sessions.new.title") %><% end %>
+<h1><%= t("devise_views.sessions.new.title") %></h1>
+
+<%= render "devise/omniauth_form", action: "sign_in" %>
+
+<p>
+  <%= sanitize(t("devise_views.shared.links.signup",
+      signup_link: link_to(t("devise_views.shared.links.signup_link"), new_user_registration_path))) %>
+</p>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+    <div class="small-12 column">
+      <%= f.text_field :login, autofocus: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 column">
+      <%= f.password_field :password, autocomplete: "off" %>
+      <%= link_to t("devise_views.shared.links.new_password"), new_password_path(resource_name), class: "float-right" %>
+    </div>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="row">
+      <div class="small-12 column">
+        <%= f.check_box :remember_me, label: t("devise_views.sessions.new.remember_me") %>
+      </div>
+    </div>
+  <% end -%>
+    
+  <div class="row">
+    <div class="small-12 medium-6 column small-centered">
+      <%= f.submit(t("devise_views.sessions.new.submit"), class: "action-button") %>
+    </div>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

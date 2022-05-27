@@ -1,13 +1,107 @@
+// COMMON FORM STYLES
+
+form {
+  .required-fields {
+    select,
+    input[type='text'] {
+      margin-bottom: 30px;
+    }
+  }
+
+  select {
+    height: 3rem;
+    box-shadow: inset 0 1px 2px rgba(34, 34, 34, 0.1);
+  }
+
+  textarea,
+  fieldset {
+    margin-bottom: 30px;
+  }
+}
+
+form .checkbox-label {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  // checkbox
+  .checkbox::before {
+    content: "";
+    position: absolute;
+    // top: 4px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    border: 1px solid #cacaca;
+    border-radius: 0.1875rem;
+    box-shadow: inset 0 1px 2px rgba(34, 34, 34, 0.1);
+    color: $black;
+  }
+
+  span.checkbox:hover::before {
+    border: 2px solid $black !important;
+  }
+
+  input[type="checkbox"]:checked ~ .checkbox::before {
+    background-color: $black;
+    color: $white;
+  }
+
+  // check mark
+  .checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ .checkbox::after {
+    display: block;
+  }
+
+  .checkbox::after {
+    left: 10px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}
+
+// form styles for specific pages
+
+.new_comment {
+  .checkbox-label {
+    font-size: 16px;
+  }
+}
+
 .budget-investment-form {
   padding-bottom: 2rem;
-  
+
   label {
     margin-bottom: 0.125rem;
   }
 
   input[type="text"] {
     background-color: $white;
-    height: unset;
   }
 
   input[type="submit"] {
@@ -24,13 +118,20 @@
     margin-bottom: 0;
   }
 
-  .button.upload-image, .button.upload-document {
+  .button.upload-image,
+  .button.upload-document {
     margin-bottom: 1rem;
   }
-  
+
   .location-map-remove-marker,
   .delete {
     color: $black;
     border-bottom: 1px solid $black;
+  }
+}
+
+.filters {
+  select {
+    font-size: 0.75rem;
   }
 }

@@ -11,7 +11,7 @@
               data-deep-link-smudge="true"
               data-deep-link-smudge-delay="500"
               data-tabs>
-            <% current_budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
+            <% @budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
               <% if phase.enabled %>
                 <li class="tabs-title <%= "is-active active-phase" if phase.url %>">
                   <%= link_to "#tab-#{phase.kind}" do %>
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <% current_budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
+  <% @budget.custom_phases(current_user, create_url = method(:budget_investments_url)).each do |_, phase| %>
     <% if phase.enabled %>
       <div class="tabs-panel <%= "is-active" if phase.url %>" id="tab-<%= phase.kind %>">
         <% if phase.url %>
@@ -37,28 +37,27 @@
               <div class="row budget-investments">
                 <div class="column">
                   <%= render "budgets/investments/map" %>
-                  <h2 class="phase-title">
+                  <h2 class="phase-title bold">
                     <% if phase.kind == :finished %>
-                      <%= t("custom.titles.finished_proposals") %> (<%= @investments_count %>)
+                      <%= t("custom.titles.finished_proposals") %> (<%= @filtered_investments_count %>)
                     <% elsif phase.kind == :balloting %>
-                      <%= t("custom.titles.selected_proposals") %> (<%= @investments_count %>)
+                      <%= t("custom.titles.selected_proposals") %> (<%= @filtered_investments_count %>)
                     <% elsif @budget.phase == "valuating" %>
-                      <%= t("custom.titles.added_proposals") %> (<%= @all_investments_count %>)
+                      <%= t("custom.titles.added_proposals") %> (<%= @filtered_investments_count %>)
                     <% elsif @budget.phase == "publishing_prices" %>
-                      <%= t("custom.titles.voted_proposals") %> (<%= @investments_count %>)
+                      <%= t("custom.titles.voted_proposals") %> (<%= @filtered_investments_count %>)
                     <% else %>
-                      <%= t("custom.titles.added_proposals") %> (<%= @investments_count %>)
+                      <%= t("custom.titles.added_proposals") %> (<%= @filtered_investments_count %>)
                     <% end %>
                   </h2>
                   <div class="filters">
-                  <%# TODO: uredit selecte, if-e nad njimi itd. %>
-                    <% if @budget.headings.count > 1 && @investments.count > 0%>
+                    <% if @budget.headings.count > 1 && @investments.count > 0 %>
                       <%= render "budgets/investments/districts" %>
                     <% end %>
-                    <% if @budget.categories.count > 1 && @investments.count > 0%>
+                    <% if @budget.categories.count > 1 && @investments.count > 0 %>
                       <%= render "budgets/investments/tags" %>
                     <% end %>
-                    <% if @budget.headings.count > 1 && @investments.count > 0%>
+                    <% if @budget.headings.count > 1 && @investments.count > 0 %>
                       <%= render "budgets/investments/statuses" %>
                     <% end %>
                   </div>
@@ -66,7 +65,7 @@
                     <div class="row small-up-1 medium-up-1 large-up-3">
                       <% @all_investments.each_with_index do |investment, index| %>
                         <% investment_class = "column column-block budget-investment-holder" %>
-                        <% investment_class = investment_class + " last-in-row" if (index != 0 && (index + 1) % 4 == 0) %>
+                        <% investment_class = investment_class %>
                         <div class="<%= investment_class %>">
                           <%= render partial: "/budgets/investments/investment",
                                     locals: {
@@ -81,7 +80,7 @@
                     <div class="row small-up-1 medium-up-1 large-up-3">
                       <% @investments.each_with_index do |investment, index| %>
                         <% investment_class = "column column-block budget-investment-holder" %>
-                        <% investment_class = investment_class + " last-in-row" if (index != 0 && (index + 1) % 4 == 0) %>
+                        <% investment_class = investment_class %>
                         <div class="<%= investment_class %>">
                           <%= render partial: "/budgets/investments/investment",
                                     locals: {
@@ -117,7 +116,7 @@
                   <div class="row small-up-1 medium-up-1 large-up-3">
                     <% @denied_investments.each_with_index do |investment, index| %>
                       <% investment_class = "column column-block budget-investment-holder" %>
-                      <% investment_class = investment_class + " last-in-row" if (index != 0 && (index + 1) % 4 == 0) %>
+                      <% investment_class = investment_class %>
                       <div class="<%= investment_class %>">
                         <%= render partial: "/budgets/investments/investment",
                                   locals: {
@@ -140,7 +139,7 @@
             <% else %>
               <div class="row budget-investments">
                 <div>
-                  <% if @budget.headings.count > 1 && @investments.count > 0%>
+                  <% if @budget.headings.count > 1 && @investments.count > 0 %>
                     <%= render "budgets/investments/districts" %>
                   <% end %>
                 </div>
@@ -168,19 +167,18 @@
 
             <!-- TABS -->
             <% if phase.kind == :accepting %>
-  
               <div class="landings">
                 <div class=" bggray">
                   <div class="main-indented-content">
                     <div class="row">
                       <div class="small-12 medium-9 medium-centered text-center">
-                        <h2><%= t("custom.headings.#{phase.kind}") %>!</h2>
+                        <h1><%= t("custom.headings.#{phase.kind}") %>!</h1>
                         <p><%= raw(phase.summary) %></p>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="">
                   <div class="main-indented-content ">
                     <div class="row qs">
@@ -192,19 +190,19 @@
                       </div>
                       <div class="small-12 medium-6 column">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for('phases/proracun.png')) %>
+                          <%= image_tag(image_path_for("phases/proracun.png")) %>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class=" bggray">
                   <div class="main-indented-content ">
                     <div class="row qs">
                       <div class="small-12 medium-6 column hide-for-small-only">
                         <div class=" medium-centered">
-                          <%= image_tag(image_path_for('phases/predlog.png')) %>
+                          <%= image_tag(image_path_for("phases/predlog.png")) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
@@ -216,7 +214,7 @@
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="">
                   <div class="main-indented-content ">
                     <div class="row qs">
@@ -228,158 +226,158 @@
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for('phases/ilustracije-sprite-notranje-glasuj.png')) %>
+                          <%= image_tag(image_path_for("phases/ilustracije-sprite-notranje-glasuj.png")) %>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-  
+
             <% end %>
-  
+
             <% if phase.kind == :balloting %>
-  
+
               <div class="landings">
                 <div class=" bggray">
                   <div class="main-indented-content">
                     <div class="row">
                       <div class="small-12 medium-9 medium-centered text-center">
-                        <h2><%= t("custom.headings.#{phase.kind}") %>!</h2>
-                        <p><%= raw(phase.summary) %></p>
+                        <h1><%= t("custom.headings.#{phase.kind}") %>!</h1>
+                        <h2><%= raw(phase.summary) %></h2>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="">
                   <div class="main-indented-content ">
                     <div class="row qs">
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h2><%= t("custom.presentation.balloting.title_1") %></h2>
-                          <p><%= raw(phase.presentation_summary_accepting) %></p>
+                          <h1><%= t("custom.presentation.balloting.title_1") %></h1>
+                          <h2><%= raw(phase.presentation_summary_accepting) %></h2>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for('phases/kaj.png')) %>
+                          <%= image_tag(image_path_for("phases/kaj.png")) %>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class=" bggray">
                   <div class="main-indented-content ">
                     <div class="row qs">
                       <div class="small-12 medium-6 column hide-for-small-only">
                         <div class=" medium-centered">
-                          <%= image_tag(image_path_for('phases/kdo.png')) %>
+                          <%= image_tag(image_path_for("phases/kdo.png")) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h2><%= t("custom.presentation.balloting.title_2") %></h2>
-                          <p><%= raw(phase.presentation_summary_balloting) %></p>
+                          <h1><%= t("custom.presentation.balloting.title_2") %></h1>
+                          <h2><%= raw(phase.presentation_summary_balloting) %></h2>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column show-for-small-only">
                         <div class=" medium-centered">
-                          <%= image_tag(image_path_for('phases/kdo.png')) %>
+                          <%= image_tag(image_path_for("phases/kdo.png")) %>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="">
                   <div class="main-indented-content ">
                     <div class="row qs">
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h2><%= t("custom.presentation.balloting.title_3") %></h2>
-                          <p><%= raw(phase.presentation_summary_finished) %></p>
+                          <h1><%= t("custom.presentation.balloting.title_3") %></h1>
+                          <h2><%= raw(phase.presentation_summary_finished) %></h2>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for('phases/kako.png')) %>
+                          <%= image_tag(image_path_for("phases/kako.png")) %>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-  
+
             <% end %>
-  
+
             <% if phase.kind == :finished %>
               <div class="landings">
                 <div class=" bggray">
                   <div class="main-indented-content">
                     <div class="row">
                       <div class="small-12 medium-9 medium-centered text-center">
-                        <h2><%= t("custom.headings.#{phase.kind}") %>!</h2>
-                        <p><%= raw(phase.summary) %></p>
+                        <h1><%= t("custom.headings.#{phase.kind}") %>!</h1>
+                        <h2><%= raw(phase.summary) %></h2>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="">
                   <div class="main-indented-content ">
                     <div class="row qs">
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h2><%= t("custom.presentation.finished.title_1") %></h2>
-                          <p><%= raw(phase.presentation_summary_accepting) %></p>
+                          <h1><%= t("custom.presentation.finished.title_1") %></h1>
+                          <h2><%= raw(phase.presentation_summary_accepting) %></h2>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for('phases/kajpazdaj.png')) %>
+                          <%= image_tag(image_path_for("phases/kajpazdaj.png")) %>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class=" bggray">
                   <div class="main-indented-content ">
                     <div class="row qs">
                       <div class="small-12 medium-6 column hide-for-small-only">
                         <div class=" medium-centered">
-                          <%= image_tag(image_path_for('phases/participacija.png')) %>
+                          <%= image_tag(image_path_for("phases/participacija.png")) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h2><%= t("custom.presentation.finished.title_2") %></h2>
-                          <p><%= raw(phase.presentation_summary_balloting) %></p>
+                          <h1><%= t("custom.presentation.finished.title_2") %></h1>
+                          <h2><%= raw(phase.presentation_summary_balloting) %></h2>
                         </div>
                       </div>
                       <div class="small-12 show-for-small-only">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for('phases/participacija.png')) %>
+                          <%= image_tag(image_path_for("phases/participacija.png")) %>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="">
                   <div class="main-indented-content ">
                     <div class="row qs">
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h2><%= t("custom.presentation.finished.title_3") %></h2>
-                          <p><%= raw(phase.presentation_summary_finished) %></p>
+                          <h1><%= t("custom.presentation.finished.title_3") %></h1>
+                          <h2><%= raw(phase.presentation_summary_finished) %></h2>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for('phases/potem.png')) %>
+                          <%= image_tag(image_path_for("phases/potem.png")) %>
                         </div>
                       </div>
                     </div>
@@ -387,7 +385,7 @@
                 </div>
               </div>
             <% end %>
-  
+
           <% end %>
         </div>
     <% end %>
