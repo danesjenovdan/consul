@@ -30,19 +30,19 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Končan proračun
     index:
-      title: Participatorni proračuni
+      title: Participativni proračuni
       empty_budgets: Ni proračunov.
       section_header:
-        icon_alt: Participatorni proračuni ikona
-        title: Participatorni proračuni
-        help: Pomoč s participatornimi proračuni
+        icon_alt: Participativni proračuni ikona
+        title: Participativni proračuni
+        help: Pomoč s participativni proračuni
       all_phases: Faze proračunskih naložb
       map: Predlogi za proračunske naložbe po geografski lokaciji
-      finished_budgets: Končani participatorni proračuni
+      finished_budgets: Končani participativni proračuni
       see_results: Poglej rezultate
       section_footer:
-        title: Pomoč s participatornimi proračuni
-        description: S participatornimi proračuni se državljani odločijo, kateri projekti, ki jih predstavljajo sosedi, so namenjeni delu občinskega proračuna.
+        title: Pomoč s participativnimi proračuni
+        description: S participativnimi proračuni se državljani odločijo, kateri projekti, ki jih predstavljajo sosedi, so namenjeni delu občinskega proračuna.
       milestones: Mejniki
     investments:
       form:
@@ -56,7 +56,7 @@ sl-SI:
         map_remove_marker: "Odstrani označeno lokacijo"
         submit: "Oddaj predlog"
       index:
-        title: Participatorni proračun
+        title: Participativni proračun
         unfeasible: Neizvedljivi naložbeni projekti
         unfeasible_text: "Investicije morajo izpolnjevati nekatere kriterije (legalnost, konkretnost, da so v pristojnosti občine/mesta, ne presegajo meje proračuna), da se jih označi kot izvedljive in lahko dosežejo fazo končnega glasovanja. Vse investicije, ki ne izpolnjuejo teh kriterijev, so označene kot neizvedljive in objavljene na spodnjem seznamu, skupaj s poročili o neizvedljivosti."
         by_heading: "Investicijski projekti z obsegom: %{heading}"

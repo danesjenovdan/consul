@@ -7,7 +7,7 @@ sl-SI:
       menu:
         debates: "Razprave"
         proposals: "Predlogi"
-        budgets: "Participatorni proračuni"
+        budgets: "Participativni proračuni"
         polls: "Glasovanja"
         other: "Druge relevantne informacije"
         processes: "Procesi"
@@ -26,9 +26,9 @@ sl-SI:
         image_alt: "Gumb za podporo predloga"
         figcaption: 'Gumb "Podpri" predlog.<br>Ko doseže potrebno število podpornikov, gre v glasovanje.'
       budgets:
-        title: "Participatorni proračun"
+        title: "Participativni proračun"
         description: "Sekcija %{link} pomaga ljudem sprejemati direktne odločitve o tem, za kaj se porabi del občinskega proračuna."
-        link: "Participatorni proračuni"
+        link: "Participativni proračuni"
         image_alt: "Različne faze participatornega proračuna"
         figcaption: '"Podpora" and "Glasovanje" fazi participatornega proračuna.'
       polls:
@@ -76,7 +76,7 @@ sl-SI:
             - 
               page_column: Glasovi
             - 
-              page_column: Participatorni proračuni
+              page_column: Participativni proračuni
             - 
     titles:
       help: "Kaj je %{org}? - državljanska participacija"
