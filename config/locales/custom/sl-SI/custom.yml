@@ -229,13 +229,6 @@ sl-SI:
       user:
         login: "e-naslov ali uporabniško ime"
         login_form: "E-naslov ali uporabniško ime"
-      budget/investment:
-        q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
-        q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
-        q3: "Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?"
-        q4: "Naselje izvajanja projekta. Kje konkretno naj bi se projekt izvajal? Navedite parcelne številke. Če gre za parcele v zasebni lasti, priložite soglasje lastnika. Vzorec soglasja lahko najdete <a href="tukaj">https://consul-medvode.s3.fr-par.scw.cloud/SyjQqFpsGMLWuTQVi3N9NiS6?response-content-disposition=inline%3B%20filename%3D%22SodelujGlasuj-SoglasjeLastnikaZemljisca-2022-1.pdf%22%3B%20filename%2A%3DUTF-8%27%27SodelujGlasuj-SoglasjeLastnikaZemljisca-2022-1.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=SCWPQ4J8FM973DYJ4ZKT%2F20220528%2Ffr-par%2Fs3%2Faws4_request&X-Amz-Date=20220528T143541Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ebf34737d932638d0e526b932d564a7df3375b5ff7477a37ab36dd4f06aeb07a</a>"
-        q5: "Časovni okvir: kdaj naj bi se projekt izvedel? Navedite v primeru, da je iz objektivnih razlogov ta podatek pomemben, sicer se bo projekt izvedel enkrat v časovnem obdobju med 1. 1. 2023 in 31. 12. 2024."
-        q6: "Ali ste pridobili tudi dodatne vire financiranja projekta (npr. krajevna ali vaška skupnost, sponzorstva, ipd.), od koga in koliko? V primeru, da predlagatelj pridobi zunanje vire financiranja, skupna vrednost projekta lahko presega finančne omejitve. Prosimo, da v prilogo priložite izjave sofinancerjev. Opišite tudi morebitna dela, ki ste jih vi ali kdo drug v sklopu tega projekta pripravljeni izvesti brezplačno."
   budgets:
       investments:
         show:
