@@ -44,16 +44,16 @@ sl-SI:
           presentation_summary_balloting_help_text: Tekst za drugi odstavek, ko ta faza ni aktivna
           presentation_summary_finished_help_text: Tekst za tretji odstavek, ko ta faza ni aktivna
     meta:
-      pp_name: Maribor sodeluj
-      place_name: Mestna Občina Maribor
+      pp_name: Sodeluj in glasuj!
+      place_name: Občina Medvode
       guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
       tos: "pogoji-uporabe"
     switcher:
       select: "Izberi proračun"
     social:
-      fb_desc: Maribor sodeluj - Participativni proračun Mestne občine Maribor
-      tw_desc: "Maribor sodeluj - Participativni proračun Mestne občine Maribor: "
-      email_desc: Oglej si predlog proračunske naložbe v projektu Maribor sodeluj - Participativni proračun Mestne občine Maribor
+      fb_desc: Sodeluj in glasuj! Participativni proračun Občine Medvode
+      tw_desc: "Sodeluj in glasuj! Participativni proračun Občine Medvode"
+      email_desc: Oglej si predlog projektne predloge v projektu Sodeluj in glasuj! Participativni proračun Občine Medvode
     headings:
       drafting: Osnutek (skrito javnosti)
       informing: Informiranje
@@ -72,7 +72,7 @@ sl-SI:
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Projektni predlog bo upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje kriterije:"
-      instructions_description: "<p> <li>je skladen z zakonodajo in veljavnimi občinskimi akti,</li> <li>je takšen, da je izvedba v pristojnosti Občine Medvode,</li> <li>je namenjen splošni javni uporabi,</li> <li>ni že uvrščen v proračun Občine Medvode oz. načrt razvojnih programov,</li> <li>v zadnjih 5 letih ni bil sofinanciran s strani Občine Medvode,</li> <li>je finančno ovrednoten med 3.000 in 25.000 EUR z vključenim DDV,</li> <li>je umeščen v enega od 11 območij občine, opredeljenih za participativni proračun,</li> <li>je izvedljiv v proračunskem obdobju 2023 ali 2024,</li> <li>je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično).</li></ol>"
+      instructions_description: "<p> <ol><li>je skladen z zakonodajo in veljavnimi občinskimi akti,</li> <li>je takšen, da je izvedba v pristojnosti Občine Medvode,</li> <li>je namenjen splošni javni uporabi,</li> <li>ni že uvrščen v proračun Občine Medvode oz. načrt razvojnih programov,</li> <li>v zadnjih 5 letih ni bil sofinanciran s strani Občine Medvode,</li> <li>je finančno ovrednoten med 3.000 in 25.000 EUR z vključenim DDV,</li> <li>je umeščen v enega od 11 območij občine, opredeljenih za participativni proračun,</li> <li>je izvedljiv v proračunskem obdobju 2023 ali 2024,</li> <li>je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično).</li></ol>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     titles:
       edit: Uredi predlog
@@ -133,6 +133,7 @@ sl-SI:
       date_3: 5. 12. - 11. 12. 2022
       heading_4: Razglasitev rezultatov
       description_4: "Po končanem glasovanju bo Občina Medvode preverila rezultate in razglasila projekte, ki so bili izbrani. Izbrani projekti bodo predlagani v potrditev Občinskemu svetu Občine Medvode za proračunski leti 2023 in 2024."
+      date_5: "December 2022"
       heading_5: Spremljanje izvedbe
       description_5: "Vsi izglasovani projekti bodo vključeni v proračun Občine Medvode in izvedeni v letih 2023 in 2024. V tej fazi cikla participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa."
     privacy:
@@ -210,9 +211,9 @@ sl-SI:
       trying: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
       in_case_first: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je "
       in_case_second: " izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
-      terms_first_checkbox: "Za potrebe izvedbe participativnega proračuna v Mestni občini Maribor dovoljujem, da Mestna občina Maribor, Fundacija Prizma in Zavod PIP obdelujejo moje osebne podatke."
+      terms_first_checkbox: "Za potrebe izvedbe participativnega proračuna Sodeluj in glasuj!dovoljujem, da Občina Medvode obdelujejo moje osebne podatke."
       terms_second_checkbox: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Medvode obdeluje moje osebne podatke za namen izvedbe projekta Sodeluj in glasuj."
-      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Maribor:"
+      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Medvode"
     classes:
       footer_logo: Medvode
     statuses:
