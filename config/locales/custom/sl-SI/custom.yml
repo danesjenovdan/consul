@@ -71,8 +71,8 @@ sl-SI:
       select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
-      instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p><h5>Projektni predlog bo upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje kriterije:</h5> <ol> <li>je skladen z zakonodajo in veljavnimi občinskimi akti,</li> <li>je takšen, da je izvedba v pristojnosti Občine Medvode,</li> <li>je namenjen splošni javni uporabi,</li> <li>ni že uvrščen v proračun Občine Medvode oz. načrt razvojnih programov,</li> <li>v zadnjih 5 letih ni bil sofinanciran s strani Občine Medvode,</li> <li>je finančno ovrednoten med 3.000 in 25.000 EUR z vključenim DDV,</li> <li>je umeščen v enega od 11 območij občine, opredeljenih za participativni proračun,</li> <li>je izvedljiv v proračunskem obdobju 2023 ali 2024,</li> <li>je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično).</li></ol>"
+      instructions: "Projektni predlog bo upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje kriterije:"
+      instructions_description: "<p> <li>je skladen z zakonodajo in veljavnimi občinskimi akti,</li> <li>je takšen, da je izvedba v pristojnosti Občine Medvode,</li> <li>je namenjen splošni javni uporabi,</li> <li>ni že uvrščen v proračun Občine Medvode oz. načrt razvojnih programov,</li> <li>v zadnjih 5 letih ni bil sofinanciran s strani Občine Medvode,</li> <li>je finančno ovrednoten med 3.000 in 25.000 EUR z vključenim DDV,</li> <li>je umeščen v enega od 11 območij občine, opredeljenih za participativni proračun,</li> <li>je izvedljiv v proračunskem obdobju 2023 ali 2024,</li> <li>je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično).</li></ol>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     titles:
       edit: Uredi predlog
