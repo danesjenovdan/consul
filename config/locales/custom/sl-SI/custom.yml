@@ -17,6 +17,15 @@ sl-SI:
       signed_in: "Uspešno si se vpisal_a."
       signed_out: "Uspešno si se izpisal_a."
       already_signed_out: "Uspešno si se izpisal_a."
+    failure:
+      already_authenticated: "Si že vpisan_a."
+      invalid: "Neveljavni %{authentication_keys} ali geslo."
+      not_found_in_database: "Neveljavni %{authentication_keys} ali geslo."
+  devise_views:
+    shared:
+      links:
+        new_confirmation: Nisi prejel_a navodil, kako aktivirati svoj račun?
+        new_unlock: Nisi prejel_a navodil, kako odkleniti svoj račun?
   images:
     form:
       title: Slika
@@ -218,6 +227,9 @@ sl-SI:
       price: "Polje vrednost projekta ne sme biti prazen."
   activerecord:
     attributes:
+      user:
+        login: "e-naslov ali uporabniško ime"
+        login_form: "E-naslov ali uporabniško ime"
       budget/investment:
         q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
         q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
