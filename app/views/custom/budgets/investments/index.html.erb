@@ -33,7 +33,7 @@
         <% if phase.url %>
           <%= render "/budgets/investments/header" %>
           <div class="main-indented-content">
-            <% if @investments.count > 0 || @heading.present? %>
+            <% if @investments.count > 0 %>
               <div class="row budget-investments">
                 <div class="column">
                   <%= render "budgets/investments/map" %>
@@ -139,7 +139,7 @@
             <% else %>
               <div class="row budget-investments">
                 <div>
-                  <% if @budget.headings.count > 1 && @investments.count > 0 %>
+                  <% if @budget.headings.count > 1 %>
                     <%= render "budgets/investments/districts" %>
                   <% end %>
                 </div>
