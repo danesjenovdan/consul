@@ -20,7 +20,7 @@ sl-SI:
       reset_password_instructions:
         change_link: Spremeni moje geslo
         hello: Živjo
-        ignore_text: Če nisi zahteval/-a spremembe gesla, lahko ignoriraš to e-sporočilo.
+        ignore_text: Če nisi zahteval_a spremembe gesla, lahko ignoriraš to e-sporočilo.
         info_text: Tvoje geslo ne bo spremenjeno, v kolikor ne obiščeš spletne povezave in ga spremeniš.
         text: "Prejeli smo zahtevek o spremembi tvojega gesla. To lahko storiš na spodnji povezavi:"
         title: Spremeni svoje geslo
