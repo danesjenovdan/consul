@@ -12,7 +12,7 @@ spec:
         - medvode.lb.djnd.si
         - 2022.sodelujinglasuj.si
         - sodelujinglasuj.si
-        # - www.sodelujinglasuj.si
+        - www.sodelujinglasuj.si
       secretName: consul-medvode-tls
   rules:
     - host: medvode.lb.djnd.si
@@ -45,13 +45,13 @@ spec:
                 name: consul
                 port:
                   number: 3000
-    # - host: www.sodelujinglasuj.si
-    #   http:
-    #     paths:
-    #       - path: /
-    #         pathType: Prefix
-    #         backend:
-    #           service:
-    #             name: consul
-    #             port:
-    #               number: 3000
+    - host: www.sodelujinglasuj.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
