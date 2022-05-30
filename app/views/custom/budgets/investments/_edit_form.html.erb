@@ -30,6 +30,10 @@
     <% end %>
   <% end %>
 
+  <%= f.label :price, "Vrednost predloga (v evrih)" %>
+  <p class="help-text">Za pomoč pri oceni vrednosti projekta smo pripravili tabelo orientacijskih stroškov, ki jo najdete <a href='https://medvode.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0326fcf84d222355d4a1882bba1b672ed97dc993/SodelujGlasuj-Stroskovnik-2022-1.pdf' target='_blank'>tukaj</a>.</p>
+  <%= f.number_field :price, label: false %>
+
   <% if feature?(:allow_images) %>
     <div class="images">
       <%= render "images/nested_image", imageable: @investment, f: f %>
