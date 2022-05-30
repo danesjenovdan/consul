@@ -8,7 +8,7 @@ class Budget
 
     validates_translation :description, presence: false, length: { maximum: Budget::Investment.description_max_length }
 
-    validate :all_answers
+    validate :medvode_answers
 
     def all_answers
       errors.add(:answers, I18n.t('activerecord.errors.models.user.attributes.document_number.invalid')) unless has_all_answers?
@@ -17,6 +17,17 @@ class Budget
     def has_all_answers?
       filtered_answers = answers.select { |answer| answer.text.strip != "" }
       filtered_answers.length == self.budget.questions.count
+    end
+
+    def medvode_answers
+      errors.add(:answers, I18n.t('activerecord.errors.models.user.attributes.document_number.invalid')) unless has_medvode_answers?
+    end
+
+    def has_medvode_answers?
+      filtered_answers = answers.select { |answer| answer.text.strip != "" }
+      enough_answers = filtered_answers.length == self.budget.questions.count - 1
+      correct_answer_missing = answers[5].text.strip == ''
+      enough_answers && correct_answer_missing
     end
 
     # this is quite possibly useless and/or redundant
