@@ -8,8 +8,8 @@ resources:
   - ingress.yaml
 images:
   - name: consul
-    newName: rg.fr-par.scw.cloud/djnd/consul
-    newTag: '70b80503ce87d4437be6dff84800b883147b864f'
+    newName: rg.fr-par.scw.cloud/djnd/consul-koper
+    newTag: 'latest'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
   #   newTag: '70b80503ce87d4437be6dff84800b883147b864f'
