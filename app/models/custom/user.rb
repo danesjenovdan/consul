@@ -77,7 +77,66 @@ class User < ApplicationRecord
   # regex check if address is valid
   # this list of addresses is for 2022
   def is_valid_address?
-    valid_address = [
+    valid_addresses = [
+      # medvode center
+      "Arharjeva ulica",
+      "Barletova cesta 2",
+      "Cesta komandanta Staneta",
+      "Cesta na Senico",
+      "Cesta na Svetje",
+      "Cesta ob Sori",
+      "Cesta talcev",
+      "Čarmanova ulica",
+      "Čelesnikova ulica",
+      "Dimčeva ulica",
+      "Donova cesta",
+      "Finžgarjeva ulica",
+      "Gorenjska cesta",
+      "Grajzerjeva ulica",
+      "Jamnikova ulica",
+      "Kebetova ulica",
+      "Klanska ulica",
+      "Kržišnikova ulica",
+      "Kuraltova ulica",
+      "Ostrovrharjeva ulica",
+      "Medvoška cesta",
+      "Podvizova ulica",
+      "Seškova cesta",
+      "Šetinova ulica",
+      "Šlosarjeva ulica",
+      "Šmalčeva ulica",
+      "Štalčeva ulica",
+      "Tehovnikova ulica",
+      "Trampuževa ulica",
+      "Turkova ulica",
+      "Ulica Ivanke Ovijač",
+      "Ulica k studencu",
+      "Ulica ob gozdu",
+      "Ulica Simona Jenka",
+      "Višnarjeva ulica",
+      "Zbiljska cesta",
+      "Žontarjeva ulica",
+      
+      # Preska
+      "Barletova cesta (vse razen št. 2)",
+      "Bečanova ulica",
+      "Bergantova cesta",
+      "Bernikova ulica",
+      "Bizantova cesta",
+      "Bogatajeva ulica",
+      "Cesta ob železnici",
+      "Cesta v Bonovec",
+      "Cesta v Žlebe",
+      "Dobnikarjeva ulica",
+      "Hrastarjeva ulica",
+      "Iztokova ulica",
+      "Kalanova ulica",
+      "Kurirska cesta",
+      "Na Čerenu",
+      "Preška cesta",
+      "Škofjeloška cesta",
+      "Trilerjeva ulica",
+
       "Belo",
       "Brezovica pri Medvodah",
       "Dol",
@@ -86,12 +145,11 @@ class User < ApplicationRecord
       "Goričane",
       "Hraše",
       "Ladja",
-      "Medvode",
       "Moše",
       "Osolnik",
       "Rakovnik",
       "Seničica",
-      "Setnica - del",
+      "Setnica",
       "Smlednik",
       "Sora",
       "Spodnja Senica",
@@ -110,7 +168,8 @@ class User < ApplicationRecord
       "Zgornje Pirniče",
       "Žlebe",
     ];
-    r = /#{valid_address.join("|")}/ # assuming there are no special chars
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     return r === address
   end
 end
