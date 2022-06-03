@@ -87,7 +87,7 @@
       <div class="bggray">
         <div class="small-12 medium-10 medium-centered">
           <% @budget.questions.each do |question| %>
-            <h4><%= question.text %></h4>
+            <h4><%= question.text.html_safe %></h4>
             <p>
               <% investment.answers.where(budget_question_id: question.id).each do |answer| %>
                 <%= auto_link_already_sanitized_html wysiwyg(answer.text) %>
@@ -102,6 +102,8 @@
           <%= render_map(@investment.map_location, "budget_investment", false, nil) %>
         </div>
       <% end %>
+
+      <hr />
 
       <% if investment.location.present? %>
         <p>
@@ -128,16 +130,13 @@
       <% end %>
 
       <% if investment.should_show_price? %>
-        <h2><%= t("budgets.investments.show.price") %></h2>
-        <div class="no-overflow supports text-center">
-          <p class="investment-project-amount">
-            <%= investment.price %> €
-            <!-- <%= investment.formatted_price %> -->
-          </p>
+        <div class="investment-price">
+          <h4><%= t("budgets.investments.show.price") %>: <span><%= investment.price %> €</span></h4>
           <% if investment.should_show_price_explanation? %>
             <p class="investment-price-explanation"><%= investment.price_explanation %></p>
           <% end %>
         </div>
+        <hr />
       <% end %>
       <% if investment.should_show_aside? %>
         <% if investment.should_show_votes? %>
