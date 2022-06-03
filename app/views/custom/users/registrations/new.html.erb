@@ -105,7 +105,18 @@ $( function() {
 <%= render "devise/omniauth_form", action: "sign_up" %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "shared/errors", resource: resource %>
+  <%# show custom error %>
+  <% if resource.errors.any? %>
+    <div id="error_explanation" data-alert class="callout alert" data-closable>
+      <button class="close-button" aria-label="<%= t("application.close") %>" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <strong>
+        <%= t("custom.errors.registration") %>
+      </strong>
+    </div>
+  <% end %>
 
   <div class="row">
     <div class="small-12 column">
@@ -133,11 +144,14 @@ $( function() {
         <%= f.text_field :redeemable_code %>
       <% end %>
 
-      <%= f.check_box :terms_of_service,
-        title: t("devise_views.users.registrations.new.terms_title"),
-        label: t("devise_views.users.registrations.new.terms",
-                 terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
-                ) %>
+      <label class="checkbox-label" for="user_terms_of_service">
+        <span class="checkbox">
+          <%= t("devise_views.users.registrations.new.terms",
+            terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
+          ).html_safe %>
+        </span>
+        <%= f.check_box :terms_of_service, title: t("devise_views.users.registrations.new.terms_title"), label: false %>
+      </label>
 
       <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: t("custom.terms.terms_second_checkbox") %>
 

@@ -155,11 +155,6 @@ only screen and (min-resolution: 240dpi) {
       }
     }
   }
-
-  hr {
-    border-bottom: 1px solid $black;
-    max-width: none;
-  }
 }
 
 .welcome-columns {
@@ -224,8 +219,28 @@ only screen and (min-resolution: 240dpi) {
   }
 }
 
+.landings {
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
 .callout {
   z-index: 1000;
+  border-radius: 0;
 }
 
 .bgblack {
@@ -267,6 +282,12 @@ span:hover::before {
 
 
 // **************** PREDLOGI ********************
+#budget-investments-main {
+  .expanded {
+    margin: 40px 0 20px;
+  }
+}
+
 .budget-investments {
   .phase-title {
     margin: rem-calc(30) 0 rem-calc(20);
@@ -306,9 +327,22 @@ span:hover::before {
     }
   }
 
+  .investment-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   .budget-investment-content {
     min-height: unset;
     padding: rem-calc(15);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .investment-project-text {
+      flex-grow: 1;
+    }
 
     a {
       color: $rhino;
@@ -348,6 +382,7 @@ span:hover::before {
 
     .total-supports {
       margin-right: 40px;
+      color: $text;
     }
   }
 
@@ -389,6 +424,14 @@ span:hover::before {
   font-size: rem-calc(20);
 }
 
+.budget-investment .supports {
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .budget-investment-show {
   .bggray {
     padding: 1rem;
@@ -396,12 +439,6 @@ span:hover::before {
     @media (min-width: 768px) {
       padding: 3rem 0;
     }
-  }
-
-  h2 {
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    text-align: center;
   }
 
   .social-box {
@@ -541,6 +578,19 @@ span:hover::before {
   }
 }
 
+.investment-price {
+  padding: 1.5rem 0;
+
+  h4 span {
+    color: #222222;
+    font-weight: 600;
+  }
+
+  .investment-price-explanation {
+    margin-bottom: 0;
+  }
+}
+
 .custombackbutton {
   position: relative;
   margin: auto;
@@ -570,6 +620,12 @@ span:hover::before {
   h1 {
     margin-bottom: 1rem;
     line-height: 1.25;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
   }
 
   p {
