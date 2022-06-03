@@ -288,12 +288,6 @@ input[type="submit"].action-button {
   }
 }
 
-.large-description,
-.large-description p {
-  font-size: 24px;
-  line-height: 1.25;
-}
-
 .ordering {
   clear: both;
   margin-bottom: $line-height / 2;
@@ -386,7 +380,11 @@ input[type="submit"].action-button {
   padding-top: 3rem;
   padding-bottom: 3rem;
 
-  a {
+  .default-button {
+    font-size: $base-font-size;
+  }
+
+  a:not(.default-button) {
     font-weight: 500;
   }
 
@@ -395,6 +393,22 @@ input[type="submit"].action-button {
     margin: 15px 0;
     width: 100%;
   }
+}
+
+.comments {
+  .callout a {
+    text-decoration: underline !important;
+    color: $text !important;
+  }
+
+  .comment-body .comment-user {
+    padding: 0.375rem;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $black;
+  max-width: none;
 }
 
 
@@ -793,7 +807,7 @@ body > header,
   padding: 0;
 
   .expanded {
-    margin: 40px 0 20px;
+    // margin: 40px 0 20px;
 
     .phase-description {
 
@@ -801,6 +815,15 @@ body > header,
       h2 {
         margin-bottom: 1rem;
         line-height: 1.25;
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+
+      span a {
+        text-decoration: underline !important;
       }
 
       .phase-enrichment-holder {
