@@ -25,9 +25,10 @@ class Budget
 
     def has_medvode_answers?
       filtered_answers = answers.select { |answer| answer.text.strip != "" }
+      all_answers = filtered_answers.length == self.budget.questions.count
       enough_answers = filtered_answers.length == self.budget.questions.count - 1
       correct_answer_missing = answers[5].text.strip == ''
-      enough_answers && correct_answer_missing
+      all_answers || (enough_answers && correct_answer_missing)
     end
 
     # this is quite possibly useless and/or redundant
