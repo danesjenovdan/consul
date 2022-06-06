@@ -144,14 +144,11 @@ $( function() {
         <%= f.text_field :redeemable_code %>
       <% end %>
 
-      <label class="checkbox-label" for="user_terms_of_service">
-        <span class="checkbox">
-          <%= t("devise_views.users.registrations.new.terms",
-            terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
-          ).html_safe %>
-        </span>
-        <%= f.check_box :terms_of_service, title: t("devise_views.users.registrations.new.terms_title"), label: false %>
-      </label>
+      <%= f.check_box :terms_of_service,
+        title: t("devise_views.users.registrations.new.terms_title"),
+        label: t("devise_views.users.registrations.new.terms",
+                 terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
+                ) %>
 
       <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: t("custom.terms.terms_second_checkbox") %>
 
