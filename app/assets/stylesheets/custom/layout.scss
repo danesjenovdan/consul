@@ -321,6 +321,13 @@ input[type="submit"].action-button {
   }
 }
 
+.help-text {
+  a {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
+
 // ---------
 
 .clear {

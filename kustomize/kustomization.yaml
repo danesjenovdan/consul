@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: consul
+namespace: consul-medvode
 resources:
   - database.yaml
   - deployment.yaml
@@ -8,8 +8,8 @@ resources:
   - ingress.yaml
 images:
   - name: consul
-    newName: rg.fr-par.scw.cloud/djnd/consul
-    newTag: '70b80503ce87d4437be6dff84800b883147b864f'
+    newName: rg.fr-par.scw.cloud/djnd/consul-medvode
+    newTag: '7e82b104fac0e7df55bd31312bd8728974ae941d'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: '70b80503ce87d4437be6dff84800b883147b864f'
+  #   newTag: '7e82b104fac0e7df55bd31312bd8728974ae941d'

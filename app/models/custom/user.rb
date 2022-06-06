@@ -4,13 +4,18 @@ require_dependency Rails.root.join('app', 'models', 'user').to_s
 class User < ApplicationRecord
 
   validate :emso_number, on: :create
-#   validate :validate_data_consent, on: :create
+  validate :validate_data_consent, on: :create
+  validate :validate_address, on: [:create, :update]
   validates :email, on: :create, presence: true
   
   def validate_data_consent
     unless data_consent
       errors.add(:data_consent, I18n.t('custom.errors.data_consent'))
     end
+  end
+
+  def validate_address
+    errors.add(:address, I18n.t('activerecord.errors.models.user.attributes.address.invalid')) unless is_valid_address?
   end
 
   def emso_number
@@ -67,5 +72,104 @@ class User < ApplicationRecord
       end
     end
     false
+  end
+
+  # regex check if address is valid
+  # this list of addresses is for 2022
+  def is_valid_address?
+    valid_addresses = [
+      # medvode center
+      "Arharjeva ulica",
+      "Barletova cesta 2",
+      "Cesta komandanta Staneta",
+      "Cesta na Senico",
+      "Cesta na Svetje",
+      "Cesta ob Sori",
+      "Cesta talcev",
+      "Čarmanova ulica",
+      "Čelesnikova ulica",
+      "Dimčeva ulica",
+      "Donova cesta",
+      "Finžgarjeva ulica",
+      "Gorenjska cesta",
+      "Grajzerjeva ulica",
+      "Jamnikova ulica",
+      "Kebetova ulica",
+      "Klanska ulica",
+      "Kržišnikova ulica",
+      "Kuraltova ulica",
+      "Ostrovrharjeva ulica",
+      "Medvoška cesta",
+      "Podvizova ulica",
+      "Seškova cesta",
+      "Šetinova ulica",
+      "Šlosarjeva ulica",
+      "Šmalčeva ulica",
+      "Štalčeva ulica",
+      "Tehovnikova ulica",
+      "Trampuževa ulica",
+      "Turkova ulica",
+      "Ulica Ivanke Ovijač",
+      "Ulica k studencu",
+      "Ulica ob gozdu",
+      "Ulica Simona Jenka",
+      "Višnarjeva ulica",
+      "Zbiljska cesta",
+      "Žontarjeva ulica",
+      
+      # Preska
+      "Barletova cesta (vse razen št. 2)",
+      "Bečanova ulica",
+      "Bergantova cesta",
+      "Bernikova ulica",
+      "Bizantova cesta",
+      "Bogatajeva ulica",
+      "Cesta ob železnici",
+      "Cesta v Bonovec",
+      "Cesta v Žlebe",
+      "Dobnikarjeva ulica",
+      "Hrastarjeva ulica",
+      "Iztokova ulica",
+      "Kalanova ulica",
+      "Kurirska cesta",
+      "Na Čerenu",
+      "Preška cesta",
+      "Škofjeloška cesta",
+      "Trilerjeva ulica",
+
+      "Belo",
+      "Brezovica pri Medvodah",
+      "Dol",
+      "Dragočajna",
+      "Golo Brdo",
+      "Goričane",
+      "Hraše",
+      "Ladja",
+      "Moše",
+      "Osolnik",
+      "Rakovnik",
+      "Seničica",
+      "Setnica",
+      "Smlednik",
+      "Sora",
+      "Spodnja Senica",
+      "Spodnje Pirniče",
+      "Studenčice",
+      "Tehovec",
+      "Topol pri Medvodah",
+      "Trnovec",
+      "Valburga",
+      "Vaše",
+      "Verje",
+      "Vikrče",
+      "Zavrh pod šmarno goro",
+      "Zbilje",
+      "Zgornja Senica",
+      "Zgornje Pirniče",
+      "Žlebe",
+    ];
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    return r === address
   end
 end

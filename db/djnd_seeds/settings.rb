@@ -42,7 +42,7 @@ section "Creating Settings" do
       "feature.user.skip_verification": true,
       "feature.help_page": true,
   
-      "meta_title": "Participatorni proračun",
+      "meta_title": "Participativni proračun",
       "meta_description": "",
       "meta_keywords": "citizen participation, open government",
       "verification_offices_url": "",

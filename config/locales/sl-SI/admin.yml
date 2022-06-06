@@ -28,7 +28,7 @@ sl-SI:
           homepage: Domača stran
           debates: Razprave
           proposals: Predlogi
-          budgets: Participatorni proračun
+          budgets: Participativni proračun
       edit:
         editing: Uredi pasico
         form:
@@ -59,7 +59,7 @@ sl-SI:
         edit: "Uredi proračun"
         preview: "Predogled"
       index:
-        title: Participatorni proračuni
+        title: Participativni proračuni
         new_link: Ustvari nov proračun
         filter: Filtriraj
         filters:
@@ -73,11 +73,11 @@ sl-SI:
         table_phase: Faza
         no_budgets: "Ni proračunov."
       create:
-        notice: Nov participatorni proračun uspešno ustvarjen!
+        notice: Nov participativni proračun uspešno ustvarjen!
       update:
-        notice: Participatorni proračun uspešno urejen
+        notice: Participativni proračun uspešno urejen
       edit:
-        title: Uredi participatorni proračun
+        title: Uredi participativni proračun
         delete: Izbriši proračun
         phase: Faza
         enabled: Omogočeno
@@ -438,7 +438,7 @@ sl-SI:
       banner: Upravljanje pasic
       proposals: Predlogi
       proposals_topics: Teme predlogov
-      budgets: Participatorni proračuni
+      budgets: Participativni proračuni
       geozones: Upravljanje geocone
       hidden_comments: Skriti komentarji
       hidden_debates: Skrite razprave
@@ -979,8 +979,8 @@ sl-SI:
           verified_users_who_didnt_vote_proposals: Preverjeni uporabniki, ki niso glasovali o predlogih
           visits: Obiski
           votes: Skupaj glasov
-        budgets_title: Participatorni proračun
-        participatory_budgets: Participatorni proračuni
+        budgets_title: Participativni proračun
+        participatory_budgets: Participativni proračuni
         direct_messages: Direktna sporočila
         proposal_notifications: Obvestila predlogov
         incomplete_verifications: Nedokončane verifikacije
