@@ -399,8 +399,7 @@ span:hover::before {
   }
 
   .no-budget-investment {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-top: rem-calc(60);
 
     p {
       margin-top: rem-calc(30);

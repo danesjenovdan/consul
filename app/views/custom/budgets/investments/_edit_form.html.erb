@@ -1,4 +1,4 @@
-<%= translatable_form_for(@investment, url: form_url, method: :put, html: { multipart: true, class: "budget-investment-form" }) do |f| %>
+<%= form_for(@investment, url: form_url, method: :put, html: { multipart: true, class: "budget-investment-form" }) do |f| %>
   <%= render "shared/errors", resource: @investment %>
 
   <fieldset class="required-fields">
@@ -13,97 +13,82 @@
       </div>
     <% end %>
 
-    <%= f.translatable_fields do |translations_form| %>
-      <div>
-        <%= translations_form.text_field :title,
-              maxlength: Budget::Investment.title_max_length,
-              data: suggest_data(@investment) %>
-      </div>
-      <div class="js-suggest" data-locale="<%= translations_form.locale %>"></div>
-
-      <div>
-        <%= translations_form.hidden_field :description,
-              value: "Description replaced by questions",
-              maxlength: Budget::Investment.description_max_length,
-              class: "html-area" %>
-      </div>
-    <% end %>
+    <div>
+      <%= f.text_field :title, maxlength: Budget::Investment.title_max_length %>
+    </div>
+    <div class="js-suggest"></div>
 
   </fieldset>
 
   <%= f.invisible_captcha :subtitle %>
 
-  <fieldset>
-
-    <% if @budget.questions.any? %>
-      <%= f.fields_for :answers do |builder| %>
-        <p>
-          <%= builder.text_area :text, label: @budget.questions.order(:id)[builder.index].text, rows: 5 %>
-        </p>
-      <% end %>
+  <% if @budget.questions.any? %>
+    <%= f.fields_for :answers do |builder| %>
+      <p>
+        <%= builder.text_area :text, label: @budget.questions.order(:id)[builder.index].text, rows: 5 %>
+      </p>
     <% end %>
+  <% end %>
 
-    <%= f.label :price, "Vrednost predloga (v evrih)" %>
-    <p class="help-text">Za pomoč pri oceni vrednosti projekta smo pripravili tabelo orientacijskih stroškov, ki jo najdete <a href='https://medvode.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0326fcf84d222355d4a1882bba1b672ed97dc993/SodelujGlasuj-Stroskovnik-2022-1.pdf' target='_blank'>tukaj</a>.</p>
-    <%= f.number_field :price, label: false %>
+  <%= f.label :price, "Vrednost predloga (v evrih)" %>
+  <p class="help-text">Za pomoč pri oceni vrednosti projekta smo pripravili tabelo orientacijskih stroškov, ki jo najdete <a href='https://medvode.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0326fcf84d222355d4a1882bba1b672ed97dc993/SodelujGlasuj-Stroskovnik-2022-1.pdf' target='_blank'>tukaj</a>.</p>
+  <%= f.number_field :price, label: false %>
 
-    <% if feature?(:allow_images) %>
-      <div class="images">
-        <%= render "images/nested_image", f: f, version: "large" %>
-      </div>
-    <% end %>
-
-    <% if feature?(:allow_attached_documents) %>
-      <div class="documents">
-        <%= render "documents/nested_documents", documentable: @investment, f: f %>
-      </div>
-    <% end %>
-
-    <% if feature?(:map) %>
-      <div>
-        <%= render "map_locations/form_fields",
-                    form: f,
-                    map_location: @investment.map_location || MapLocation.new,
-                    label: t("budgets.investments.form.map_location"),
-                    help: t("budgets.investments.form.map_location_instructions"),
-                    remove_marker_label: t("budgets.investments.form.map_remove_marker"),
-                    parent_class: "budget_investment",
-                    i18n_namespace: "budgets.investments" %>
-      </div>
-    <% end %>
-
-    <div class="small-12 column hide">
-      <%= f.label :location, t("budgets.investments.form.location") %>
-      <%= f.text_field :location, label: false %>
+  <% if feature?(:allow_images) %>
+    <div class="images">
+      <%= render "images/nested_image", imageable: @investment, f: f %>
     </div>
+  <% end %>
 
-    <div class="small-12 column hide">
-      <%= f.text_field :organization_name %>
+  <% if feature?(:allow_attached_documents) %>
+    <div class="documents">
+      <%= render "documents/nested_documents", documentable: @investment, f: f %>
     </div>
+  <% end %>
 
-    <% if @categories.count > 0 %>
-      <div>
-        <%= f.label :tag_list, t("budgets.investments.form.tags_label") %>
-        <p class="help-text" id="tags-list-help-text"><%= t("budgets.investments.form.tags_instructions") %></p>
+  <% if feature?(:map) %>
+    <div>
+      <%= render "map_locations/form_fields",
+                  form: f,
+                  map_location: @investment.map_location || MapLocation.new,
+                  label: t("budgets.investments.form.map_location"),
+                  help: t("budgets.investments.form.map_location_instructions"),
+                  remove_marker_label: t("budgets.investments.form.map_remove_marker"),
+                  parent_class: "budget_investment",
+                  i18n_namespace: "budgets.investments" %>
+    </div>
+  <% end %>
 
-        <div id="category_tags" class="tags">
-          <% @categories.each do |tag| %>
-            <a class="js-add-tag-link"><%= tag.name %></a>
-          <% end %>
-        </div>
+  <div class="small-12 column hide">
+    <%= f.label :location, t("budgets.investments.form.location") %>
+    <%= f.text_field :location, label: false %>
+  </div>
 
-        <br>
-        <%= f.text_field :tag_list, value: @investment.tag_list.to_s,
-                          label: false,
-                          placeholder: t("budgets.investments.form.tags_placeholder"),
-                          aria: { describedby: "tags-list-help-text" },
-                          class: "js-tag-list tag-autocomplete",
-                          data: { js_url: suggest_tags_path },
-                          disabled: true %>
+  <div class="small-12 column hide">
+    <%= f.text_field :organization_name %>
+  </div>
+
+  <% if categories.count > 0 %>
+    <div>
+      <%= f.label :tag_list, t("budgets.investments.form.tags_label") %>
+      <p class="help-text" id="tags-list-help-text"><%= t("budgets.investments.form.tags_instructions") %></p>
+
+      <div id="category_tags" class="tags">
+        <% @categories.each do |tag| %>
+          <a class="js-add-tag-link"><%= tag.name %></a>
+        <% end %>
       </div>
-    <% end %>
 
-  </fieldset>
+      <br>
+      <%= f.text_field :tag_list, value: @investment.tag_list.to_s,
+                        label: false,
+                        placeholder: t("budgets.investments.form.tags_placeholder"),
+                        aria: { describedby: "tags-list-help-text" },
+                        class: "js-tag-list tag-autocomplete",
+                        data: { js_url: suggest_tags_path },
+                        disabled: true %>
+    </div>
+  <% end %>
 
   <% unless current_user.manager? %>
     <div class="small-12 column hide">
