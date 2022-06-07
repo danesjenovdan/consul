@@ -181,6 +181,8 @@ sl-SI:
       title: Participativni proračun 2023-2024!
       introduction_text: Občina Medvode nadaljuje s procesom participativnega razdeljevanja proračunskih sredstev tudi v letih 2023 in 2024. V novem ciklu je na voljo kar 400.000 EUR za projekte v vrednosti do 25.000 EUR. Podaljšali smo čas zbiranja predlogov, da boste občanke in občani lahko predlagali še boljše projekte. Na dnu strani pa lahko dostopate do projektov, ki ste jih predlagali in izglasovali za leti 2021 in 2022. Vabljeni k sodelovanju in soustvarjanju naše skupnosti!
       title_past: Pretekli participativni proračuni
+      past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
+      past_list_more: Več
     about:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
       main_title: Kako deluje?
@@ -273,11 +275,9 @@ sl-SI:
       trying: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
       in_case_first: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je "
       in_case_second: " izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
-      terms_first_checkbox: "Za potrebe izvedbe participativnega proračuna Sodeluj in glasuj!dovoljujem, da Občina Medvode obdelujejo moje osebne podatke."
+      terms_first_checkbox: "Za potrebe izvedbe participativnega proračuna Sodeluj in glasuj! dovoljujem, da Občina Medvode obdelujejo moje osebne podatke."
       terms_second_checkbox: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Medvode obdeluje moje osebne podatke za namen izvedbe projekta Sodeluj in glasuj."
       terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Medvode"
-    classes:
-      footer_logo: Medvode
     statuses:
       title: 'Izberi status predloga'
       waiting: 'Čaka na izvedbo'
@@ -288,24 +288,5 @@ sl-SI:
       data_consent: "Za nadaljevanje se moraš strinjati z obdelavo podatkov."
       price: "Polje vrednost projekta ne sme biti prazen."
       registration: "Zaradi napak obrazca nismo mogli shraniti."
-  activerecord:
-    attributes:
-      user:
-        login: "e-naslov ali uporabniško ime"
-        login_form: "E-naslov ali uporabniško ime"
-  budgets:
-      investments:
-        show:
-          share_title: "Povej naprej!"
-          share: "Deli!"
-          copy: "Skopiraj povezavo!"
-          price: "Vrednost projekta"
-        edit:
-          submit: "Shrani spremembe"
-  milestones:
-    index:
-      no_milestones: Nima definiranih mejnikov
-      progress: Napredek
-    show:
-      publication_date: "Datum objave %{publication_date}"
-      status_changed: Status spremenjen v
+    footer:
+      djnd: Za platformo skrbi
