@@ -113,16 +113,15 @@
       </a>
       <% if @past_budgets.present? %>
         <% @past_budgets.each do |budget| %>
-          <a class="list-element" href="budgets/<%= budget.id %>/investments">
-            <div>
-              <h3><%= budget.name %></h3>
-              <p>Preveri izbrane projekte in spremljaj izvedbo!</p>
-            </div>
-            <div class="more">
-              <span>Več</span> <i class="custom-icon arrow-small-right"></i>
-            </div>
-          </a>
-        <% end %>
+        <a class="list-element" href="budgets/<%= budget.id %>/investments">
+          <div>
+            <h3><%= budget.name %></h3>
+            <p><%= t("custom.landing.past_list_description") %></p>
+          </div>
+          <div class="more">
+            <span><%= t("custom.landing.past_list_more") %></span> <i class="custom-icon arrow-small-right"></i>
+          </div>
+        </a>
       <% end %>
     </div>
   </div>
