@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-koper
-    newTag: '302150b596ecc5ec2772b983809a31c9ea407d6f'
+    newTag: 'c0c5e1b6236d59f455b07e96e770e8c71329e4de'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: '302150b596ecc5ec2772b983809a31c9ea407d6f'
+  #   newTag: 'c0c5e1b6236d59f455b07e96e770e8c71329e4de'
