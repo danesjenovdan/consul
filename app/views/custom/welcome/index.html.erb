@@ -93,22 +93,22 @@
   <div class="landing">
     <div class="list">
       <h2><%= t("custom.landing.title_past") %></h2>
-      <a class="list-element" href="https://2019.predlagam-odlocam.koper.si/" target="_blank">
-        <div>
-          <h3>Mestna občina Koper 2019</h3>
-          <p>Preveri izbrane projekte in spremljaj izvedbo!</p>
-        </div>
-        <div class="more">
-          <span>Več</span> <i class="custom-icon arrow-small-right"></i>
-        </div>
-      </a>
       <a class="list-element" href="https://2020.predlagam-odlocam.koper.si/" target="_blank">
         <div>
-          <h3>Mestna občina Koper 2020</h3>
-          <p>Preveri izbrane projekte in spremljaj izvedbo!</p>
+          <h3><%= t("custom.meta.place_name") %> 2020</h3>
+          <p><%= t("custom.landing.past_list_description") %></p>
         </div>
         <div class="more">
-          <span>Več</span> <i class="custom-icon arrow-small-right"></i>
+          <span><%= t("custom.landing.past_list_more") %></span> <i class="custom-icon arrow-small-right"></i>
+        </div>
+      </a>
+      <a class="list-element" href="https://2019.predlagam-odlocam.koper.si/" target="_blank">
+        <div>
+          <h3><%= t("custom.meta.place_name") %> 2019</h3>
+          <p><%= t("custom.landing.past_list_description") %></p>
+        </div>
+        <div class="more">
+          <span><%= t("custom.landing.past_list_more") %></span> <i class="custom-icon arrow-small-right"></i>
         </div>
       </a>
       <% if @past_budgets.present? %>
