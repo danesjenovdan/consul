@@ -125,7 +125,7 @@ it:
       reviewing_ballots: Esito della votazione
       finished: Segui
       headings: Le aree
-      headings_sidebar: "<li><h6>Zona 1:</h6><div>Comunità locali: Capodistria - centro, Olmo - Prisoje, Semedella, Giusterna, Al Castelletto</div></li><li><h6>Zona 2:</h6><div>Comunità locali: San Canziano, Šmarje, Vanganel</div></li><li><h6>Zona 3:</h6><div>Comunità locali: Dekani, Crevatini, Škofije</div></li><li><h6>Zona 4:</h6><div>Comunità locali: Bertocchi, Pobeghi, - Čežarji, Sv. Anton</div></li><li><h6>Zona 5:</h6><div>Comunità locali: Boršt, Gračišče, Gradin, Marezige</div></li><li><h6>Zona 6:</h6><div>Comunità locali: Črni Kal, Podgorje, Rakitovec, Zazid</div></li>"
+      headings_sidebar: "<li><h6>Area 1:</h6><div>Comunità locali: Capodistria - centro, Olmo - Prisoje, Semedella, Giusterna, Al Castelletto</div></li><li><h6>Area 2:</h6><div>Comunità locali: San Canziano, Šmarje, Vanganel</div></li><li><h6>Area 3:</h6><div>Comunità locali: Dekani, Crevatini, Škofije</div></li><li><h6>Area 4:</h6><div>Comunità locali: Bertocchi, Pobeghi, - Čežarji, Sv. Anton</div></li><li><h6>Area 5:</h6><div>Comunità locali: Boršt, Gračišče, Gradin, Marezige</div></li><li><h6>Area 6:</h6><div>Comunità locali: Črni Kal, Podgorje, Rakitovec, Zazid</div></li>"
       select_heading: Seleziona l'area
       select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
