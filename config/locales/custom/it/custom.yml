@@ -23,12 +23,7 @@ it:
       image:
         attachment: "Immagine"
       budget/investment:
-        q1: "Indicare la motivazione della proposta. Qual è il tema, la problematica ossia la sfida che il progetto affronta?"
-        q2: "Quali proposte concrete proponete? Qual è il senso principale della vostra proposta?"
-        q3: "In che maniera il progetto dovrebbe venir realizzato? Quali attività sono previste?"
-        q4: "Dove nel concreto verrebbe realizzato il progetto?"
-        q5: "La tempistica: quando dovrebbe venir realizzato il progetto?"
-        q6: "Quali sono le migliorie apportate dal progetto?"
+        price: "Qual è il valore (costo) previsto per la proposta progettuale?"
     errors:
       models:
         image:
@@ -94,6 +89,10 @@ it:
       publication_date: "Datum objave %{publication_date}"
       status_changed: Status spremenjen v
   custom:
+    price_description: |
+      Svojemu predlogu dodaj razrez predvidenih stroškov. Obrazec za pripravo prenesi
+      na svoj računalnik (dostopen je s klikom na povezavo <a style="text-decoration: underline !important;" href='https://koper.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--639877d61c04f22b6945f69789f8b75bda41f74f/Predvideni%20stros%CC%8Cki_Previsione%20delle%20spese.xlsx' target='_blank'>tukaj</a>)
+      , ga izpolni in priloži predlogu.
     admin:
       budget_phases:
         edit:

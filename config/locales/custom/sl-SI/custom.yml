@@ -23,12 +23,7 @@ sl-SI:
       image:
         attachment: "Slika"
       budget/investment:
-        q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
-        q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
-        q3: "Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?"
-        q4: "Naselje izvajanja projekta. Kje konkretno naj bi se projekt izvajal? Navedite parcelne številke. Če gre za parcele v zasebni lasti, priložite soglasje lastnika."
-        q5: "Časovni okvir: kdaj naj bi se projekt izvedel? Navedite v primeru, da je iz objektivnih razlogov ta podatek pomemben, sicer se bo projekt izvedel enkrat v časovnem obdobju med 1. 7. 2021 in 31. 12. 2022."
-        q6: "Ali ste pridobili tudi dodatne vire financiranja projekta (npr. krajevna ali vaška skupnost, sponzorstva, ipd.), od koga in koliko? V primeru, da predlagatelj pridobi zunanje vire financiranja, skupna vrednost projekta lahko presega finančne omejitve. Prosimo, da v prilogo priložite izjave sofinancerjev. Opišite tudi morebitna dela, ki ste jih vi ali kdo drug v sklopu tega projekta pripravljeni izvesti brezplačno."
+        price: "Vrednost predloga (v evrih)"
     errors:
       models:
         image:
@@ -102,6 +97,10 @@ sl-SI:
       budget_investment:
         found: Našli smo podoben predlog.
   custom:
+    price_description: |
+      Svojemu predlogu dodaj razrez predvidenih stroškov. Obrazec za pripravo prenesi
+      na svoj računalnik (dostopen je s klikom na povezavo <a style="text-decoration: underline !important;" href='https://koper.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--639877d61c04f22b6945f69789f8b75bda41f74f/Predvideni%20stros%CC%8Cki_Previsione%20delle%20spese.xlsx' target='_blank'>tukaj</a>)
+      , ga izpolni in priloži predlogu.
     admin:
       budget_phases:
         edit:
