@@ -45,7 +45,7 @@ sl-SI:
     budget_investment_created:
       subject: "Oddan predlog na Sodeluj in glasuj!"
       title: "Hvala, za ustvarjen predlog za Sodeluj in glasuj! Participativni proračun Občine Medvode!"
-      intro: "Hej <strong>%{author}</strong>,"
+      intro: "Hej, <strong>%{author}</strong>,"
       text: "zahvaljujemo se ti za ustvarjen predlog <strong>%{investment}</strong> za <strong>%{budget}</strong>."
       follow: "O tem, kako proces napreduje, te bomo sproti obveščali."
       follow_link: "Participativni proračuni"
