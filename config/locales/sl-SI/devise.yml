@@ -23,7 +23,7 @@ sl-SI:
       unconfirmed: "Če želiš nadaljevati, klikni na potrditveno povezavo, ki smo ti jo poslali po e-pošti."
     mailer:
       confirmation_instructions:
-        subject: "Navodila za potrditev"
+        subject: "Potrditev registracije na platformi Predlagam – odločam"
       reset_password_instructions:
         subject: "Navodila za ponastavljanje tvojega gesla"
       unlock_instructions:
