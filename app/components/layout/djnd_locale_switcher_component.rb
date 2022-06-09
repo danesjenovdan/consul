@@ -12,7 +12,8 @@ class Layout::DjndLocaleSwitcherComponent < ApplicationComponent
     end
 
     def locales
-      I18n.available_locales
+      english = [:en]
+      I18n.available_locales - english
     end
 
     def label
