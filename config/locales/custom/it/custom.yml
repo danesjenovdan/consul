@@ -23,12 +23,12 @@ it:
       image:
         attachment: "Immagine"
       budget/investment:
-        q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
-        q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
-        q3: "Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?"
-        q4: "Naselje izvajanja projekta. Kje konkretno naj bi se projekt izvajal? Navedite parcelne številke. Če gre za parcele v zasebni lasti, priložite soglasje lastnika."
-        q5: "Časovni okvir: kdaj naj bi se projekt izvedel? Navedite v primeru, da je iz objektivnih razlogov ta podatek pomemben, sicer se bo projekt izvedel enkrat v časovnem obdobju med 1. 7. 2021 in 31. 12. 2022."
-        q6: "Ali ste pridobili tudi dodatne vire financiranja projekta (npr. krajevna ali vaška skupnost, sponzorstva, ipd.), od koga in koliko? V primeru, da predlagatelj pridobi zunanje vire financiranja, skupna vrednost projekta lahko presega finančne omejitve. Prosimo, da v prilogo priložite izjave sofinancerjev. Opišite tudi morebitna dela, ki ste jih vi ali kdo drug v sklopu tega projekta pripravljeni izvesti brezplačno."
+        q1: "Indicare la motivazione della proposta. Qual è il tema, la problematica ossia la sfida che il progetto affronta?"
+        q2: "Quali proposte concrete proponete? Qual è il senso principale della vostra proposta?"
+        q3: "In che maniera il progetto dovrebbe venir realizzato? Quali attività sono previste?"
+        q4: "Dove nel concreto verrebbe realizzato il progetto?"
+        q5: "La tempistica: quando dovrebbe venir realizzato il progetto?"
+        q6: "Quali sono le migliorie apportate dal progetto?"
     errors:
       models:
         image:
@@ -175,8 +175,8 @@ it:
         title_2: E il mio ruolo?
         title_3: E dopo?
     landing:
-      title: Participativni proračun 2023-2024!
-      introduction_text: "Mestna občina Koper s projektom Predlagam – odločam/Propongo – decido uresničuje participativni proračun, tokrat za leti 2023 in 2024. Mestna občina Koper je k projektu participativnega proračuna tudi tokrat pristopila v želji občanke in občane čim bolj vključiti v proces odločanja o razporejanju proračunskega dela denarja, s tem pa izboljšati učinkovitost porabe skupnih sredstev in kakovost življenja v občini."
+      title: Con il progetto Propongo – decido il Comune città di Capodistria realizza il bilancio partecipativo per gli anni 2023 e 2024.
+      introduction_text: "Il Comune città di Capodistria ha intrapreso il progetto del bilancio partecipativo nel desiderio di includere le cittadine e i cittadini nel procedimento decisionale sull'allocazione di una parte dei mezzi di bilancio e quindi migliorare l'efficienza del consumo dei fondi comuni e la qualità di vita nel comune."
       title_past: Pretekli participativni proračuni
     about:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
