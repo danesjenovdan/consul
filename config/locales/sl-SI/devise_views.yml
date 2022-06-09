@@ -102,7 +102,7 @@ sl-SI:
           password_confirmation_label: Potrdi geslo
           submit: Registriraj se
           terms: Z registracijo sprejemaš %{terms}
-          terms_link: Pogoji uporabe
+          terms_link: pogoje uporabe
           terms_title: Z registracijo sprejemaš pogoje uporabe
           title: Registriraj se
           username_is_available: Uporabniško ime na voljo

@@ -6,6 +6,9 @@ class User < ApplicationRecord
   validate :emso_number, on: :create
 #   validate :validate_data_consent, on: :create
   validates :email, on: :create, presence: true
+  validates :address, on: :create, presence: true
+  validates :phone_number, on: :create, presence: true
+  validates :data_consent, on: :create, presence: true
   
   def validate_data_consent
     unless data_consent
