@@ -5,6 +5,7 @@
     data-deep-link-smudge="true"
     data-deep-link-smudge-delay="500"
     data-tabs>
+  <!-- REMOVED COMMENTS
   <li class="tabs-title is-active">
     <%= link_to "#tab-comments" do %>
       <h3>
@@ -13,8 +14,9 @@
       </h3>
     <% end %>
   </li>
+  -->
   <% if @investment.budget.phase == 'finished' && @investment.winner %>
-    <li class="tabs-title">
+    <li class="tabs-title is-active">
         <%= link_to "#tab-milestones" do %>
         <h3>
             <%= t("budgets.investments.show.milestones_tab") %>
