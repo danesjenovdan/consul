@@ -72,6 +72,9 @@ it:
           instructions_2: Ko potrdiš račun, lahko začneš sodelovati.
           thank_you: Hvala za registracijo na spletnem portalu. Zdaj moraš <b>potrditi svoj e-naslov</b>.
           title: Registracija
+    mailer:
+      reset_password_instructions:
+        ignore_text: Če nisi zahteval_a spremembe gesla, lahko ignoriraš to e-sporočilo.
   documents:
     max_documents_allowed_reached: Dosegel_a si največje dovoljeno število dokumentov! <strong>Preden lahko naložiš novega, moraš vsaj enega izbrisati.</strong>
     buttons:
@@ -81,6 +84,10 @@ it:
   images:
     form:
       title: Immagine
+  mailers:
+    budget_investment_created:
+      intro: "Hej, <strong>%{author}</strong>,"
+      share: Oglej si svoj projekt
   milestones:
     index:
       no_milestones: Nima definiranih mejnikov
@@ -88,6 +95,10 @@ it:
     show:
       publication_date: "Datum objave %{publication_date}"
       status_changed: Status spremenjen v
+  shared:
+    suggest:
+      budget_investment:
+        found: Našli smo podoben predlog.
   custom:
     price_description: |
       Svojemu predlogu dodaj razrez predvidenih stroškov. Obrazec za pripravo prenesi
@@ -107,11 +118,14 @@ it:
     meta:
       pp_name: Propongo - decido
       place_name: Comune città di Capodistria
+      guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
+      tos: "pogoji-uporabe"
     switcher:
       select: "Izberi proračun"
     social:
       fb_desc: Propongo - decido, Bilancio partecipativo del Comune città di Capodistria
       tw_desc: "Propongo - decido, Bilancio partecipativo  del Comune città di Capodistria: "
+      email_desc: Oglej si predlog proračunske naložbe v projektu Predlagam — odločam - Participativni proračun Mestne občine Koper
     headings:
       drafting: Bozza (nascosta al pubblico)
       informing: Informazione
@@ -177,6 +191,8 @@ it:
       title: Con il progetto Propongo – decido il Comune città di Capodistria realizza il bilancio partecipativo per gli anni 2023 e 2024.
       introduction_text: "Il Comune città di Capodistria ha intrapreso il progetto del bilancio partecipativo nel desiderio di includere le cittadine e i cittadini nel procedimento decisionale sull'allocazione di una parte dei mezzi di bilancio e quindi migliorare l'efficienza del consumo dei fondi comuni e la qualità di vita nel comune."
       title_past: Pretekli participativni proračuni
+      past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
+      past_list_more: Več
     about:
       intro: "Il bilancio partecipativo è un sistema di assegnazione di una quota del bilancio alla gestione dei cittadini. Questi sono chiamati a presentare le proprie proposte e, in seguito, a decidere quali tra esse possono contribuire maggiormente al miglioramento della qualità della vita della comunità."
       main_title: Come funziona?
@@ -215,63 +231,62 @@ it:
       other_contact: 'Contatta i rappresentanti del Comune città di Capodistria: <a href="mailto:predlagam-odlocam@koper.si" target="_blank">predlagam-odlocam@koper.si</a>.'
     terms:
       main_title: "Termini d'uso"
-      active_use: "L'uso attivo dello strumento web è regolato dai termini di utilizzo presentati di seguito, perciò chiunque desideri partecipare attivamente deve registrarsi, accettando i presenti termini d’uso. Il Comune città di Capodistria si riserva il diritto di modificare le presenti condizioni d'uso. L'ultima versione sarà pubblicata su questo sito."
-      changes: "si pridržuje pravico, da te pogoje uporabe spremeni, najnovejša različica pa bo objavljena na tej spletni strani."
-      about_title: "O orodju"
-      about_intro: "Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
-      registration_title: "Registracija"
-      registration_intro_first: "Le registrirani uporabniki lahko oddajo predloge projektov, komentirajo in glasujejo za oddane projekte."
-      registration_intro_second: "Neregistrirani uporabniki lahko prosto spremljajo objavljene vsebine, ne morejo pa oddajati predlogov projektov, o njih glasovati ali sodelovati v debatah."
-      registration_requirements: "Uporabnik/-ca mora ob registraciji navesti:"
-      email: "elektronski naslov"
-      username: "uporabniško ime"
-      emso: "EMŠO"
-      registration_activation: "Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnik prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani enega uporabnika je prepovedano."
-      registration_failure: "Če uporabnik/-ca katerega izmed navedenih podatkov ne posreduje, mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati spletne platforme."
-      registration_cancel: 'Uporabnik/-ca lahko kadarkoli prekliče svojo registracijo tako, da moderatorju orodja na e-poštni naslov consul@djnd.si pošlje zahtevo za izbris profila iz evidence uporabnikov. Po potrditvi preklica registracije bo upravljalec orodja Danes je nov dan iz evidence uporabnikov izbrisal vse osebne podatke. Kljub izbrisu osebnih podatkov uporabnika se predlogi, komentarji in podatki o glasovanjih hranijo, a so pripisani "izbrisanemu uporabniku".'
-      rules_title: "Sprejem pravil"
-      rules_intro: "Ob registraciji mora uporabnik/-ca sprejeti pravila sodelovanja in uporabe spletnega orodja."
-      rules_promise: "S sprejemom pravil se uporabnik/-ca najprej zaveže, da bo ob podajanju in komentiranju predlogov spoštoval ustavo in zakone Republike Slovenije, kar zlasti pomeni, da:"
-      rules_promise_first: "ne bo objavljal vsebin, ki bi spodbujale k spolni, rasni, narodnostni ali verski nestrpnosti ali h kakršnikoli obliki diskriminacije na podlagi osebnih okoliščin posameznikov;"
-      rules_promise_second: "ne bo objavljal vsebin, ki bi kršile ali posegale v osebnostne pravice tretjih oseb;"
-      rules_promise_third: "ne bo objavljal slik ali fotografij, ki so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem dobil ustrezno soglasje lastnikov in tretjih oseb;"
-      rules_promise_fourth: "ne bo objavljal groženj, ne bo se izražal slabšalno, prostaško, poniževalno ali žaljivo;"
-      rules_promise_fifth: "ne bo objavljal avtorskih del, za katere nima avtorskih pravic, in orodja ne bo uporabil za distribuiranje avtorsko zaščitenih vsebin ali vsebin, ki so v lasti druge pravne ali fizične osebe."
-      punishment: "Kršitev zgoraj omenjenih pravil se kaznuje z začasno omejitvijo delovanja uporabnika/-ce, prekinitvijo uporabniškega računa in / ali izbrisom vsebine."
-      use_title: "Raba portala"
-      use_intro: "Aplikacija omogoča direktno soodločanje o delu občinskega proračuna. Uporabniki in uporabnice lahko oddajajo, podpirajo in glasujejo o predlogih za projekte, jih komentirajo in spremljajo njihov razvoj. Sodeluje lahko vsak prebivalec ali prebivalka občine, ki je star/-a vsaj 14 let in se je registriral/-a na spletnem orodju, za aktivnosti mladoletnikov so odgovorni starši ali skrbniki. Ni omejitev glede števila oddanih predlogov ali komentarjev, število glasov pa je omejeno z višino participativnega proračuna."
-      use_list: "Uporabniku/-ci portal omogoča:"
-      use_list_first: "Oddajo predlogov"
-      use_submit: "Za oddajo predloga mora uporabnik/-ca obvezno določiti naslov predloga projekta, opis, doda pa lahko še sliko predloga, lokacijo predloga, dokumente. Po oddaji predloga je ta avtomatsko sprejet in se prikaže na portalu. Uporabnik/-ca lahko predlog deli z drugimi na socialnih omrežjih, preko emaila ali s skrajšano povezavo."
-      voting_title: "Glasovanje za predloge"
-      voting_intro: "Uporabnik/-ca lahko glasuje za predloge projektov drugih uporabnikov. Za en predlog lahko glasuje le enkrat. Za glasovanje ima na voljo 40.000 eurov za območje, za katero glasuje, z vsakim glasom pa se znesek manjša. Na vsakem območju bodo izvedeni izglasovani projekti v skupni višini 120.000 eurov. Uporabnik/-ca lahko posameznemu predlogu v fazi zbiranja glasov tudi odvzame glas."
-      commenting_title: "Komentiranje predlogov"
-      commenting_intro: "Vsak predlog je lahko komentiran s strani registriranih uporabnikov."
-      following_title: "Spremljanje izbranih predlogov"
-      following_intro: "V zadnji fazi orodje omogoča spremljanje rezultatov izvedbe."
-      data_protection_title: "Varstvo osebnih podatkov"
-      data_protection_intro: "Vaš elektronski naslov in EMšO uporabljamo le za potrebe izvedbe participativnega proračuna v občini "
-      data_protection_second: 'Osebnih podatkov, pridobljenih preko registracijskega formularja na spletni platformi URL bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in ga ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon. Pri upravljanju spletnega orodja sodelujemo z  </span><a href="https://danesjenovdan.si/">Danes je nov dan, Inštitutom za druga vprašanja</a>, ki nastopa v vlogi t. i. »pogodbenega obdelovalca« oziroma »obdelovalca« teh podatkov. Pogodbeno je zavezan, da vaše osebne podatke uporablja izključno v imenu občine, ter da zagotavlja njegovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili.'
-      data_protection_edit: "Svoje podatke, vnesene ob registraciji, lahko preverite, spreminjate oziroma dopolnite v svojem profilu, v katerega lahko vstopite po uspešno izvedeni prijavi. V svojem profilu lahko tudi izberete, ali želite na svoj elektronski naslov prejemati različna obvestila."
-      cookies_title: "Piškotki"
-      cookies_intro: "Uporabljamo samo piškotke, ki so nujni za delovanje spletnega mesta."
-      ip_title: "Intelektualna lastnina"
-      ip_intro: 'Vsa koda potrebna za delovanje spletne strani je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt">AGPLv3</a>.'
-      responsibilities_title: "Omejitev odgovornosti"
-      responsibilities_intro: "Uporabniki/-ce spletnega orodja uporabljajo spletno orodje, njene dele in vsebine izključno na lastno odgovornost."
-      responsibilities_long: " ne prevzema odgovornosti za kakršnokoli direktno ali indirektno vrsto polemike, spora in / ali pravdnega postopka, ki bi lahko nastal zaradi objave ali razširjanja vsebine, za katero ni bilo pridobljeno dovoljenje s strani zakonitih lastnikov. Prav tako ne odgovarja za škodo, ki bi nastala zaradi uporabe spletnega orodja, kot tudi ne jamči za uspešnost uporabe spletnega orodja. V nobenem primeru ne odgovarja za kakršnokoli škodo, ki bi izvirala iz uporabe oziroma nezmožnosti uporabe spletnega orodja, vključno s škodo zaradi izgubljenega prihodka ali pričakovanega dobička, izgube ali okrnitve dobrega imena, izgube poslov ali izgube podatkov."
-      responsibilities_short: "Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki je zagotovila vsebino."
-      responsibilities_also: " prav tako ni odgovorna za vsebine:"
-      responsibilities_also_first: "ki spodbujajo k spolni, rasni, narodnostni ali verski nestrpnosti ali h kakršnikoli obliki diskriminacije na podlagi osebnih okoliščin posameznikov;"
-      responsibilities_also_second: "ki kršijo ali posegajo v osebnostne pravice tretjih oseb, so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem obstajalo ustrezno soglasje lastnikov in tretjih oseb;"
-      responsibilities_also_third: "ki so grožnje, slabšalne, prostaške, poniževalne ali žaljive;"
-      responsibilities_also_fourth: "ki so avtorska dela, za katere uporabnik/-ca nima avtorskih pravic. Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki zagotavlja vsebino."
-      trying: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
-      in_case_first: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je "
-      in_case_second: " izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
-      terms_first_checkbox: "Za potrebe izvedbe participativnega proračuna v Mestni občini Maribor dovoljujem, da Mestna občina Maribor, Fundacija Prizma in Zavod PIP obdelujejo moje osebne podatke."
+      active_use: "L'uso attivo dello strumento web è regolato dai termini di utilizzo presentati di seguito, perciò chiunque desideri partecipare attivamente deve registrarsi, accettando i presenti termini d’uso."
+      changes: " si riserva il diritto di modificare le presenti condizioni d'uso. L'ultima versione sarà pubblicata su questo sito."
+      data_protection_title: "Protezione dei dati personali"
+      data_protection_first: "Registrandosi, l'utente conferma di aver compiuto 15 anni e di essere consapevole dei propri diritti e doveri stabiliti nell'avviso sul trattamento dei dati personali in conformità al Regolamento generale sulla protezione dei dati personali (GDPR) e autorizza il Comune città di Capodistria a verificare l'autenticità dei dati personali (nome e cognome, indirizzo permanente e data di nascita) ai fini del progetto PROPONGO - DECIDO nei registri ufficiali e nelle banche dati dei gestori del sistema di archiviazione dei dati personali."
+      data_protection_second: "OI dati personali ottenuti attraverso il modulo di registrazione sulla piattaforma online URL saranno utilizzati esclusivamente allo scopo di implementare il bilancio partecipativo nel Comune città di Capodistria e non saranno condivisi con terzi, tranne se ciò verrà richiesto dalla legge. La gestione dello strumento web avviene in collaborazione con l’Istituto Danes je nov dan, Inštitut za druga vprašanja, il quale funge da “responsabile contrattuale” ossia “responsabile” dei dati. L’istituto è tenuto, da contratto, ad utilizzare i dati personali esclusivamente per conto del Comune città di Capodistria e a garantire la protezione di essi in conformità alle normative applicabili e alle nostre istruzioni."
+      data_protection_third: "I dati forniti alla registrazione possono essere controllati, modificati oppure integrati nel singolo profilo, al quale si accede online. Sullo stesso profilo, si può scegliere l’opzione di ricevere notifiche di vario genere via posta elettronica."
+      data_use_title: "Informativa sul trattamento dei dati personali"
+      data_use_first: "Il titolare del trattamento dei dati personali (nome e cognome, indirizzo di residenza, e-mail e numero di telefono) è il COMUNE CITTÀ DI CAPODISTRIA, Via Giuseppe Verdi 10, Koper-Capodistria. La persona autorizzata per la protezione dei dati personali può essere contattata tramite posta elettronica varstvopodatkov@koper.si. L'autorizzazione al trattamento dei vostri dati personali rappresenta la base giuridica per il trattamento. I vostri dati personali verranno trattati solamente allo scopo per il quale sono stati raccolti (realizzazione del progetto), ovvero fino alla revoca, i dati sul sito web (in caso di consenso) saranno pubblicati fino alla realizzazione del progetto. L'accesso ai vostri dati personali è riservato esclusivamente al personale autorizzato del Comune città di Capodistria e ai responsabili per il trattamento dei dati personali a contratto. Ciascun individuo ha il diritto alla rettifica del consenso al trattamento o ad accedere ai propri dati personali, modificarli o cancellarli, limitare il loro trattamento o al ricorso, nonché al loro trasferimento. Per esercitare i vostri diritti scrivendo all'indirizzo di posta elettronica: varstvopodatkov@koper.si. Nel caso in cui riteniate che nel processo del trattamento dei vostri dati personali siano stati lesi i vostri diritti, è possibile presentare ricorso presso il Garante per la protezione dei dati personali - Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana."
+      about_title: "Lo strumento web"
+      about_first: "Lo strumento web promuove la partecipazione civica e consente una governance aperta, trasparente e democratica a livello comunale e nazionale. L'App si basa sulla piattaforma open source Consul, creata con l’appoggio del Comune di Madrid e adattata alle esigenze dei Comuni sloveni dall'Istituto Danes je nov dan."
+      registration_title: "Registrazione"
+      registration_intro: "Solamente gli utenti registrati possono presentare le proposte e votare i progetti nell’App. Gli utenti non registrati possono seguire i contenuti pubblicati, ma non possono né presentare proposte né votare."
+      registration_requirements: "Al momento della registrazione, ciascun utente deve indicare:"
+      name: "nome e cognome"
+      email: "indirizzo di posta elettronica"
+      address: "indirizzo"
+      phone: "numero di telefono"
+      emso: "Codice anagrafico unitario del cittadino (CAUC)"
+      registration_first: "L’account dell’utente viene attivato con la conferma dell'e-mail di attivazione ricevuta dall'utente al suo indirizzo di posta elettronica. La creazione di più account da parte di un utente è vietata."
+      registration_second: "Nel caso in cui l'utente non fornisce alcuna delle informazioni di cui sopra, non sarà possibile completare con successo la registrazione e di conseguenza l’utilizzo dell’App non sarà possibile."
+      registration_third: "Gli utenti possono revocare la propria registrazione in qualsiasi momento inviando una richiesta di eliminazione del profilo al moderatore dello strumento all’indirizzo email consul@djnd.si. Dopo aver confermato l'annullamento della registrazione, il gestore dello strumento eliminerà tutti i dati personali dell'utente. Nonostante la cancellazione delle informazioni personali dell’utente, le proposte e le votazioni saranno conservate, sebbene attribuite ad un utente eliminato."
+      rules_title: "Accettazione del regolamento"
+      rules_first: "Al momento della registrazione gli utenti devono accettare le regole di partecipazione e di utilizzo dello strumento web."
+      rules_promise: "Accettando tali regole, l'utente dichiara che durante il processo di consegna delle proposte rispetterà la Costituzione e le leggi della Repubblica di Slovenia, il che significa in particolare che:"
+      rules_promise_first: "non pubblicherà contenuti che incitano all'intolleranza sessuale, raziale, etnica o religiosa o qualsiasi altra forma di discriminazione basata su circostanze individuali;"
+      rules_promise_second: "non pubblicherà contenuti che potrebbero violare o interferire con i diritti personali di terzi;"
+      rules_promise_third: "non pubblicherà immagini o foto di proprietà di terzi o che utilizzino dati di terzi senza il consenso appropriato dei proprietari e di terzi;"
+      rules_promise_fourth: "non pubblicherà minacce, non userà un linguaggio dispregiativo, volgare, degradante o offensivo;"
+      rules_promise_fifth: "non pubblicherà opere di cui non detiene i diritti d'autore e non utilizzerà lo strumento web per la distribuzione di contenuti protetti da copyright o contenuti di proprietà di altre persone fisiche o giuridiche."
+      rules_second: "La violazione delle suddette regole è punibile con la limitazione temporanea dell'attività dell'utente, la chiusura dell'account dell'utente e/o la cancellazione del contenuto."
+      use_title: "Utilizzo del portale"
+      use_intro: "L’App consente la co-decisione diretta su una parte del bilancio comunale. Gli utenti possono inviare, sostenere e votare le proposte di progetto e monitorare il loro sviluppo. Può partecipare qualsiasi cittadino del Comune città di Capodistria, che ha almeno 15 anni, previa registrazione nello strumento web. Per le attività dei minorenni sono responsabili i genitori ovvero i loro tutori."
+      use_list: "L’utente ha la possibilità di:"
+      use_list_first: "Presentare proposte"
+      use_list_first_desc: "Per la corretta presentazione di una proposta, l’utente deve obbligatoriamente fornire il titolo del progetto, la descrizione, può fornire anche una foto della proposta, l’ubicazione e altri documenti. Al momento dell’invio, il progetto viene accettato ed è visibile sul portale. L’utente può condividerlo sui social media, tramite e-mail oppure inoltrandone il link."
+      use_list_second: "Votazione delle proposte"
+      use_list_second_desc: "Gli utenti possono votare le proposte progettuali degli altri utenti. Ciascuna proposta può essere votata una sola volta. Per la votazione si ha a disposizione l’intero budget per l’area interessata, con ogni votazione però i fondi a disposizione diminuiscono. Inoltre, durante il processo di votazione, l’utente può sottrarre il voto ad una proposta."
+      use_list_third: "Monitoraggio delle proposte"
+      use_list_third_desc: "Durante l’ultima fase, lo strumento web acconsente il monitoraggio del processo."
+      cookies_title: "Cookie"
+      cookies_intro: "Vengono utilizzati solamente i cookie tecnici necessari per il funzionamento del sito."
+      ip_title: "Proprietà intellettuale"
+      ip_intro: 'Il codice sorgente dello strumento web si trova sull’indirizzo: http://pp-koper.djnd.si ed è aperto e accessibile a tutti. Il codice può essere usato gratuitamente da chiunque secondo le condizioni della licenza <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
+      responsibilities_title: "Limitazioni della responsabilità"
+      responsibilities_first: "Gli utenti del portale utilizzano lo strumento web, le sue parti e i suoi contenuti esclusivamente su propria responsabilità."
+      responsibilities_second: " non si assume alcuna responsabilità per qualsiasi tipo di polemica diretta o indiretta, controversia e/o contenzioso che potrebbe derivare dalla pubblicazione o dalla distribuzione dei contenuti non autorizzati dai legittimi proprietari. Inoltre, non è responsabile per i danni derivanti dall'uso dello strumento web e non garantisce l'efficacia dello strumento online. In nessun caso sarà ritenuto responsabile per eventuali danni derivanti dall'uso o dall'impossibilità di utilizzo dello strumento web, inclusi danni derivanti dalla perdita di guadagno o profitto previsto, lesione o perdita di avviamento, perdita di affari o perdita di dati."
+      responsibilities_third: "Qualsiasi violazione dei diritti di proprietà intellettuale o industriale è responsabilità della persona che ha fornito il contenuto. Il Comune città di Capodistria non è inoltre responsabile per i contenuti che:"
+      responsibilities_list_first: "incitano all'intolleranza sessuale, razziale, etnica o religiosa e qualsiasi altra forma di discriminazione basata su circostanze personali;"
+      responsibilities_list_second: "violano o interferiscono con i diritti di terzi, oppure sono di proprietà di terzi o che utilizzano dati di terzi senza il consenso dei detentori dei diritti e di terzi."
+      responsibilities_list_third: "contengono minacce, linguaggio dispregiativo, volgare, degradante o offensivo;"
+      responsibilities_list_fourth: "sono opere protette da diritto d’autore per le quali l’utente non ne detiene i diritti. Ogni violazione della proprietà intellettuale o industriale è responsabilità della persona che presenta i contenuti."
+      responsibilities_fourth: " si impegnerà a rimuovere tali contenuti dallo strumento web il più presto possibile e ad imporre sanzioni adeguate agli utenti."
+      responsibilities_fifth: "In caso di controversie tra gli utenti dello strumento web e/o una terza parte, il Comune di Capodistria sarà esonerato da qualsiasi responsabilità per rivendicazioni civili, richieste di risarcimento danni o di qualsiasi natura relative al contenuto dello strumento web e/o derivanti da procedimenti giudiziari."
+      terms_first_checkbox: "obdeluje moje osebne podatke (ime in priimek, naslov stalnega prebivališča, e-naslov, telefonska številka) za namen izvedbe projekta Predlagam - odločam v dokumentarni zbirki MOK."
       terms_second_checkbox: "objavi osebne podatke (ime in priimek) na spletni strani MOK z namenom javne objave pobud Predlagam - Odločam. (Opomba: če tega polja ne odkljuš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani občine)."
-      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Maribor:"
+      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Koper:"
     statuses:
       title: 'Scegli lo stato della proposta'
       waiting: 'In attesa di realizzazione'
@@ -282,3 +297,5 @@ it:
       data_consent: "Per procedere, è necessario accettare il trattamento dei dati."
       price: "Polje vrednost projekta ne sme biti prazen."
       registration: "Zaradi napak obrazca nismo mogli shraniti."
+    footer:
+      djnd: Za platformo skrbi
