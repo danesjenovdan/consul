@@ -10,9 +10,20 @@ spec:
   tls:
     - hosts:
         - koper.lb.djnd.si
+        - predlagam-odlocam.koper.si
       secretName: consul-koper-tls
   rules:
     - host: koper.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: predlagam-odlocam.koper.si
       http:
         paths:
           - path: /
