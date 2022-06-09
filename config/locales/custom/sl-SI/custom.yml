@@ -197,36 +197,43 @@ sl-SI:
       heading_1: Zbiranje predlogov
       description_1: "Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši."
       date_1: 19. 5.-27. 6. 2022
+      description_1: "Občanke in občani predloge projektov oddajo med 10. 6. in 11. 7. 2022. Posamezni predlog projekta mora biti v skladu s predpisanimi pogoji, njegova vrednost pa ne sme biti nižja od 10.000 in višja od 40.000 €. Predlog projekta lahko oddajo prek spleta, elektronske pošte ali na obrazcu v vložišču MOK ali na sedežih krajevnih skupnosti."
+      date_1: 10. 6.–11. 7. 2022
       heading_2: Pregled predlogov
       description_2: "Strokovna komisija bo pregledala vse oddane predloge in na seznam za glasovanje uvrstila le tiste, ki ustrezajo pogojem (merilom). Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanov, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes."
       date_2: 28. 6.-30. 9. 2022
+      description_2: "Vse oddane predloge projektov pregleda komisija, jih finančno ovrednoti in preveri, ali so izvedljivi, skladni z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna ter v skladu s pravili o vrednosti predlogov in drugimi predpisanimi pogoji. Komisija lahko podobne predloge združi."
+      date_2: 12. 7.-22. 8. 2022
       heading_3: Glasovanje
       description_3: "Med 1. in 16. oktobrom, 2022 boš odločal/-a o porabi 1 milijona evrov proračunskih sredstev Mestne občine Maribor. Glasoval/-a boš lahko za oddane predloge, ki so izvedljivi, zakoniti, v občinski pristojnosti in ne presegajo višine sredstev, namenjenih za posamezno območje v okviru participativnega proračuna. Glasuje lahko vsakdo s stalnim prebivališčem v Mestni občini Maribor, star/-a vsaj 15 let. Vsakdo lahko glasuje samo enkrat."
       date_3: 1. 10.-16. 10. 2022
+      description_3: "Glasovanje bo potekalo med 12. in 19. 9. 2022 prek spleta ali v prostorih Mestne občine Koper in na sedežih krajevnih skupnosti. Sodeluje lahko vsaka občanka ali občan s stalnim bivališčem v Mestni občini Koper, ki je dopolnil/-a 15 let. Glasuje se tako, da občan/-ka v izbranem območju razdeli predvidenih 80.000 € sredstev, namenjenih območju, med projekte, za katere si želi, da bi bili izvedeni."
+      date_3: 12. 9.-19. 9. 2022
       heading_4: Razglasitev rezultatov
       description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Maribor za leti 2023 in 2024."
       date_4: "2023"
+      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Koper za leti 2023 in 2024."
+      date_4: " September 2022"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
-    privacy:
+      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."    privacy:
       title: "Pogoji uporabe"
     help:
       main_title: "Pogosta vprašanja"
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
       description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ telefonsko številko, e-naslov in internetno povezavo, vse funkcionalnosti lahko opraviš tudi na občini in sedežih krajevnih skupnosti."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
-      description_2: "Račun ustvariš tako, da v nogi spletnega mesta klikneš na gumb Registracija, klik na kateri koli gumb za akcijo te prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, telefonsko, EMŠO in geslo. Po kreiranju računa ga moraš potrditi s klikom na povezavo v e-pošti, ki jo bomo poslali na tvoj e-naslov."
+      description_2: "Račun ustvariš tako, da v glavi spletnega mesta klikneš na gumb Vpiši se, klik na kateri koli gumb za akcijo te prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, telefonsko, EMŠO in geslo. Po kreiranju računa ga moraš potrditi s klikom na povezavo v e-pošti, ki jo bomo poslali na tvoj e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Poleg spletnega je mogoče predlog oddati tudi v fizični obliki, in sicer: po pošti, na naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor,  osebno na navedem naslovu, v sprejemni pisarni št. 14 (do 13. ure), ali v kateri koli mestni četrti/krajevni skupnosti v času uradnih ur (tam bodo na voljo tudi tiskani obrazci). Za pomoč pri pripravi predlogov projektov se lahko udeležiš interaktivne in praktičnih delavnic, ki bodo vsak četrtek, ob 18. uri od 19. maja do 23. junija."
+      description_3: "Predlog projekta ustvariš v okviru spletnega orodja, oddaš ga lahko tudi na fizičnem obrazcu osebno v vložišču Mestne občine Koper ali sedežih krajevnih skupnosti v času uradnih ur ali izpolnjenega pošlješ na elektronski naslov obcina@koper.si."
       heading_4: "Pozabil/-a sem svoje geslo. Kaj lahko storim?"
-      description_4: "Klikni na gumb Prijava, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel/-a navodila, kako ustvariti novo geslo."
+      description_4: "Klikni na gumb Vpiši se, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel/-a navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
-      description_5: "V nogi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
+      description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
       technical_issues: "Imaš tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnike Mestne občine Maribor na <a href="mailto:sodeluj@maribor.si" target="_blank">sodeluj@maribor.si</a>.'
+      other_contact: 'Kontaktiraj predstavnike Mestne občine Koper na <a href="mailto:predlagam-odlocam@koper.si" target="_blank">predlagam-odlocam@koper.si</a>.'
     terms:
       main_title: "Pogoji uporabe"
       active_use: "Aktivna uporaba spletnega orodja se ureja s spodnjimi pogoji za uporabo, zato se morajo vsi, ki želijo aktivno sodelovati, registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe."
