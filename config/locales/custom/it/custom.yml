@@ -44,6 +44,9 @@ it:
         price: "Vrednost projekta"
       edit:
         submit: "Shrani spremembe"
+      form:
+        tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
+        submit: "Inoltra la proposta"
   comments:
     actions:
       confirm_delete: Potrdi izbris
@@ -282,9 +285,9 @@ it:
       responsibilities_list_fourth: "sono opere protette da diritto d’autore per le quali l’utente non ne detiene i diritti. Ogni violazione della proprietà intellettuale o industriale è responsabilità della persona che presenta i contenuti."
       responsibilities_fourth: " si impegnerà a rimuovere tali contenuti dallo strumento web il più presto possibile e ad imporre sanzioni adeguate agli utenti."
       responsibilities_fifth: "In caso di controversie tra gli utenti dello strumento web e/o una terza parte, il Comune di Capodistria sarà esonerato da qualsiasi responsabilità per rivendicazioni civili, richieste di risarcimento danni o di qualsiasi natura relative al contenuto dello strumento web e/o derivanti da procedimenti giudiziari."
-      terms_first_checkbox: "obdeluje moje osebne podatke (ime in priimek, naslov stalnega prebivališča, e-naslov, telefonska številka) za namen izvedbe projekta Predlagam - odločam v dokumentarni zbirki MOK."
-      terms_second_checkbox: "objavi osebne podatke (ime in priimek) na spletni strani MOK z namenom javne objave pobud Predlagam - Odločam. (Opomba: če tega polja ne odkljuš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani občine)."
-      terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Koper:"
+      terms_first_checkbox: "trattare i miei dati personali (nome e cognome, indirizzo di residenza, indirizzo di posta elettronica, numero di telefono) ai fini della realizzazione del progetto Propongo – decido nella base dati del CCC."
+      terms_second_checkbox: "pubblicare dati personali (nome e cognome) sul sito web del CCC assieme alla proposta per il progetto Propongo – Decido. (Nota: se non selezioni questo campo, la tua proposta rimarrà anonima. Questo significa che il tuo nome ed il tuo cognome non appariranno sotto la proposta che sarà pubblicata sul sito web del comune)."
+      terms_checkboxes_text: "Fino all’eventuale revoca, autorizzo espressamente, volontariamente, incondizionatamente e chiaramente il Comune città di Capodistria a:"
     statuses:
       title: 'Scegli lo stato della proposta'
       waiting: 'In attesa di realizzazione'
@@ -296,5 +299,6 @@ it:
       price: "Polje vrednost projekta ne sme biti prazen."
       registration: "Il modulo non è stato salvato a causa di errori."
       submit_investment: "Il modulo non è stato salvato a causa di errori."
+      no_answer: "Prosim izpolni vprašanje."
     footer:
       djnd: La piattaforma è a cura di
