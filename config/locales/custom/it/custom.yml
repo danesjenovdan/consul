@@ -14,12 +14,12 @@ it:
     edit: uredi
   account:
     show:
-      change_credentials_link: Spremeni elektronski naslov ali geslo
+      change_credentials_link: Modifica l’indirizzo elettronico o la password
   activerecord:
     attributes:
       user:
-        login: "e-naslov ali uporabniško ime"
-        login_form: "E-naslov ali uporabniško ime"
+        login: "indirizzo elettronico o nome utente"
+        login_form: "Indirizzo elettronico o nome utente"
       image:
         attachment: "Immagine"
       budget/investment:
@@ -50,27 +50,27 @@ it:
       delete: Izbriši
   devise:
     sessions:
-      signed_in: "Uspešno si se vpisal_a."
+      signed_in: "Iscrizione avvenuta con successo."
       signed_out: "Uspešno si se izpisal_a."
       already_signed_out: "Uspešno si se izpisal_a."
     failure:
       already_authenticated: "Si že vpisan_a."
-      invalid: "Neveljavni %{authentication_keys} ali geslo."
-      not_found_in_database: "Neveljavni %{authentication_keys} ali geslo."
+      invalid: "Indirizzo %{authentication_keys} utente o password non validi."
+      not_found_in_database: "Indirizzo %{authentication_keys} utente o password non validi."
     registrations:
       signed_up_but_unconfirmed: "Poslali smo ti e-pošto za potrditev registracije. Prosimo, klikni na povezavo v elektronskem sporočilu, da aktiviraš svoj račun."
   devise_views:
     shared:
       links:
-        new_confirmation: Nisi prejel_a navodil, kako aktivirati svoj račun?
+        new_confirmation: Non hai ricevuto le istruzioni su come attivare il conto?
         new_unlock: Nisi prejel_a navodil, kako odkleniti svoj račun?
     users:
       registrations:
         success:
-          back_to_index: Velja, vrni me na začetno stran
-          instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
-          instructions_2: Ko potrdiš račun, lahko začneš sodelovati.
-          thank_you: Hvala za registracijo na spletnem portalu. Zdaj moraš <b>potrditi svoj e-naslov</b>.
+          back_to_index: Ok, ritorna alla pagina iniziale
+          instructions_1: Per favore, <b>controllare l’e-mail</b> –  è stato inviato il collegamento per la <b>convalida del conto</b>.
+          instructions_2: Avvenuta la convalida, potrai partecipare.
+          thank_you: Grazie per la registrazione sul portale web. <b>Convalidare l’indirizzo e-mail</b>.
           title: Registracija
     mailer:
       reset_password_instructions:
@@ -80,7 +80,7 @@ it:
     buttons:
       destroy_document: Odstrani dokument
     form:
-      note: "Naložiš lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
+      note: "Puoi caricare al massimo %{max_documents_allowed} documenti dei seguenti formati: %{accepted_content_types}, dimensioni massime %{max_file_size} MB per file."
   images:
     form:
       title: Immagine
@@ -101,9 +101,7 @@ it:
         found: Našli smo podoben predlog.
   custom:
     price_description: |
-      Svojemu predlogu dodaj razrez predvidenih stroškov. Obrazec za pripravo prenesi
-      na svoj računalnik (dostopen je s klikom na povezavo <a style="text-decoration: underline !important;" href='https://koper.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--639877d61c04f22b6945f69789f8b75bda41f74f/Predvideni%20stros%CC%8Cki_Previsione%20delle%20spese.xlsx' target='_blank'>tukaj</a>)
-      , ga izpolni in priloži predlogu.
+      Allega la suddivisione delle spese previste. Esporta <a style="text-decoration: underline !important;" href='https://koper.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--639877d61c04f22b6945f69789f8b75bda41f74f/Predvideni%20stros%CC%8Cki_Previsione%20delle%20spese.xlsx' target='_blank'>il modulo</a> al tuo computer, compilalo e allegalo al presente modulo. 
     admin:
       budget_phases:
         edit:
@@ -190,9 +188,9 @@ it:
     landing:
       title: Con il progetto Propongo – decido il Comune città di Capodistria realizza il bilancio partecipativo per gli anni 2023 e 2024.
       introduction_text: "Il Comune città di Capodistria ha intrapreso il progetto del bilancio partecipativo nel desiderio di includere le cittadine e i cittadini nel procedimento decisionale sull'allocazione di una parte dei mezzi di bilancio e quindi migliorare l'efficienza del consumo dei fondi comuni e la qualità di vita nel comune."
-      title_past: Pretekli participativni proračuni
+      title_past: Bilanci partecipativi passati
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
-      past_list_more: Več
+      past_list_more: Ulteriori informazioni
     about:
       intro: "Il bilancio partecipativo è un sistema di assegnazione di una quota del bilancio alla gestione dei cittadini. Questi sono chiamati a presentare le proprie proposte e, in seguito, a decidere quali tra esse possono contribuire maggiormente al miglioramento della qualità della vita della comunità."
       main_title: Come funziona?
@@ -296,6 +294,7 @@ it:
     errors:
       data_consent: "Per procedere, è necessario accettare il trattamento dei dati."
       price: "Polje vrednost projekta ne sme biti prazen."
-      registration: "Zaradi napak obrazca nismo mogli shraniti."
+      registration: "Il modulo non è stato salvato a causa di errori."
+      submit_investment: "Il modulo non è stato salvato a causa di errori."
     footer:
-      djnd: Za platformo skrbi
+      djnd: La piattaforma è a cura di
