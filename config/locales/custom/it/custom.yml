@@ -61,7 +61,7 @@ it:
       invalid: "Indirizzo %{authentication_keys} utente o password non validi."
       not_found_in_database: "Indirizzo %{authentication_keys} utente o password non validi."
     registrations:
-      signed_up_but_unconfirmed: "Poslali smo ti e-pošto za potrditev registracije. Prosimo, klikni na povezavo v elektronskem sporočilu, da aktiviraš svoj račun."
+      signed_up_but_unconfirmed: "Per favore, controllare l’e-mail - è stato inviato il collegamento per la convalida del conto."
   devise_views:
     shared:
       links:
