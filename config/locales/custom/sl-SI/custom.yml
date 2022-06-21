@@ -72,6 +72,7 @@ sl-SI:
   devise_views:
     shared:
       links:
+        login: Vpiši se
         new_confirmation: Nisi prejel_a navodil, kako aktivirati svoj račun?
         new_unlock: Nisi prejel_a navodil, kako odkleniti svoj račun?
     users:
@@ -307,3 +308,5 @@ sl-SI:
       no_answer: "Prosim izpolni vprašanje."
     footer:
       djnd: Za platformo skrbi
+    registration:
+      already_has_account: "Že imaš račun?"
