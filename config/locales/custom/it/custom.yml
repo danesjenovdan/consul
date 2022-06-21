@@ -302,3 +302,5 @@ it:
       no_answer: "Si prega di rispondere alla domanda."
     footer:
       djnd: La piattaforma è a cura di
+    registration:
+      already_has_account: "Hai già un account?"
