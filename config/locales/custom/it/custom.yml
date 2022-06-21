@@ -38,12 +38,12 @@ it:
   budgets:
     investments:
       show:
-        share_title: "Povej naprej!"
-        share: "Deli!"
-        copy: "Skopiraj povezavo!"
+        share_title: "Passa parola!"
+        share: "Condividi!"
+        copy: "Copia il collegamento!"
         price: "Vrednost projekta"
       edit:
-        submit: "Shrani spremembe"
+        submit: "Salva le modifiche"
       form:
         tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
         submit: "Inoltra la proposta"
@@ -192,7 +192,7 @@ it:
       title: Con il progetto Propongo – decido il Comune città di Capodistria realizza il bilancio partecipativo per gli anni 2023 e 2024.
       introduction_text: "Il Comune città di Capodistria ha intrapreso il progetto del bilancio partecipativo nel desiderio di includere le cittadine e i cittadini nel procedimento decisionale sull'allocazione di una parte dei mezzi di bilancio e quindi migliorare l'efficienza del consumo dei fondi comuni e la qualità di vita nel comune."
       title_past: Bilanci partecipativi passati
-      past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
+      past_list_description: Controlla i progetti selezionati e segui la loro realizzazione!
       past_list_more: Ulteriori informazioni
     about:
       intro: "Il bilancio partecipativo è un sistema di assegnazione di una quota del bilancio alla gestione dei cittadini. Questi sono chiamati a presentare le proprie proposte e, in seguito, a decidere quali tra esse possono contribuire maggiormente al miglioramento della qualità della vita della comunità."
