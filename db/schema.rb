@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_10_123526) do
+ActiveRecord::Schema.define(version: 2022_05_30_121000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["visit_id"], name: "index_ahoy_events_on_visit_id"
   end
 
-  create_table "audits", id: :integer, default: nil, force: :cascade do |t|
+  create_table "audits", id: :serial, force: :cascade do |t|
     t.integer "auditable_id"
     t.string "auditable_type"
     t.integer "associated_id"
@@ -201,7 +201,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["heading_id"], name: "index_budget_content_blocks_on_heading_id"
   end
 
-  create_table "budget_group_translations", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_group_translations", id: :serial, force: :cascade do |t|
     t.integer "budget_group_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -211,7 +211,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["locale"], name: "index_budget_group_translations_on_locale"
   end
 
-  create_table "budget_groups", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_groups", id: :serial, force: :cascade do |t|
     t.integer "budget_id"
     t.string "slug"
     t.integer "max_votable_headings", default: 1
@@ -220,7 +220,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["budget_id"], name: "index_budget_groups_on_budget_id"
   end
 
-  create_table "budget_heading_translations", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_heading_translations", id: :serial, force: :cascade do |t|
     t.integer "budget_heading_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -230,7 +230,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["locale"], name: "index_budget_heading_translations_on_locale"
   end
 
-  create_table "budget_headings", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_headings", id: :serial, force: :cascade do |t|
     t.integer "group_id"
     t.bigint "price"
     t.integer "population"
@@ -260,10 +260,9 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["budget_id"], name: "index_budget_investment_answers_on_budget_id"
     t.index ["budget_question_id"], name: "index_budget_investment_answers_on_budget_question_id"
     t.index ["investment_id"], name: "index_budget_investment_answers_on_investment_id"
-    t.index ["text"], name: "index_budget_investment_answers_on_text"
   end
 
-  create_table "budget_investment_translations", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_investment_translations", id: :serial, force: :cascade do |t|
     t.integer "budget_investment_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -276,7 +275,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["locale"], name: "index_budget_investment_translations_on_locale"
   end
 
-  create_table "budget_investments", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_investments", id: :serial, force: :cascade do |t|
     t.integer "author_id"
     t.integer "administrator_id"
     t.string "external_url"
@@ -335,7 +334,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["tsv"], name: "index_budget_investments_on_tsv", using: :gin
   end
 
-  create_table "budget_phase_translations", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_phase_translations", id: :serial, force: :cascade do |t|
     t.integer "budget_phase_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -355,7 +354,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["locale"], name: "index_budget_phase_translations_on_locale"
   end
 
-  create_table "budget_phases", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_phases", id: :serial, force: :cascade do |t|
     t.integer "budget_id"
     t.integer "next_phase_id"
     t.string "kind", null: false
@@ -396,7 +395,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "budget_translations", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budget_translations", id: :serial, force: :cascade do |t|
     t.integer "budget_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -431,11 +430,11 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["valuator_id"], name: "index_budget_valuators_on_valuator_id"
   end
 
-  create_table "budgets", id: :integer, default: nil, force: :cascade do |t|
+  create_table "budgets", id: :serial, force: :cascade do |t|
     t.string "currency_symbol", limit: 10
     t.string "phase", limit: 40, default: "accepting"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.text "description_accepting"
     t.text "description_reviewing"
     t.text "description_selecting"
@@ -514,7 +513,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["valuation"], name: "index_comments_on_valuation"
   end
 
-  create_table "communities", id: :integer, default: nil, force: :cascade do |t|
+  create_table "communities", id: :serial, force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -602,7 +601,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["tsv"], name: "index_debates_on_tsv", using: :gin
   end
 
-  create_table "delayed_jobs", id: :integer, default: nil, force: :cascade do |t|
+  create_table "delayed_jobs", id: :serial, force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
@@ -626,7 +625,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "documents", id: :integer, default: nil, force: :cascade do |t|
+  create_table "documents", id: :serial, force: :cascade do |t|
     t.string "title"
     t.string "attachment_file_name"
     t.string "attachment_content_type"
@@ -719,7 +718,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["user_id"], name: "index_identities_on_user_id"
   end
 
-  create_table "images", id: :integer, default: nil, force: :cascade do |t|
+  create_table "images", id: :serial, force: :cascade do |t|
     t.string "imageable_type"
     t.integer "imageable_id"
     t.string "title", limit: 80
@@ -985,7 +984,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["user_id"], name: "index_managers_on_user_id"
   end
 
-  create_table "map_locations", id: :integer, default: nil, force: :cascade do |t|
+  create_table "map_locations", id: :serial, force: :cascade do |t|
     t.float "latitude"
     t.float "longitude"
     t.integer "zoom"
@@ -1620,7 +1619,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_123526) do
     t.index ["hidden_at"], name: "index_topics_on_hidden_at"
   end
 
-  create_table "users", id: :integer, default: nil, force: :cascade do |t|
+  create_table "users", id: :serial, force: :cascade do |t|
     t.string "email", default: ""
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
