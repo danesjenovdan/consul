@@ -1,5 +1,6 @@
 .locale {
-  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   .locale-form {
     &::after {
@@ -14,7 +15,8 @@
       height: unset;
       font-size: 16px;
       font-weight: 600;
-      padding: 4px 28px 4px 16px;
+      padding: 6px 28px 8px 16px;
+      line-height: 1;
       margin-bottom: 0;
       outline: none;
       width: auto;

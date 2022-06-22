@@ -169,31 +169,6 @@ a {
   max-width: 100%;
 }
 
-// todo: overwrite this once $brand color isn't used for .button anywhere anymore
-.button {
-  background: $brand;
-  font-size: $base-font-size;
-
-  &.warning,
-  &.warning:hover {
-    color: #000;
-  }
-
-  &.medium {
-    font-size: $small-font-size;
-  }
-}
-
-.button.hollow {
-  border: 1px solid $link;
-  color: $link;
-}
-
-.button.hollow.error {
-  border-color: $alert-border;
-  color: $color-alert;
-}
-
 .default-button,
 .upload-image,
 .upload-document,
@@ -205,7 +180,8 @@ a {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   font-size: 16px;
   font-weight: 600;
-  padding: 4px 16px;
+  line-height: 1;
+  padding: 6px 16px 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -233,6 +209,8 @@ a {
   }
 }
 
+.button,
+.button.expanded,
 .action-button,
 input[type="submit"].action-button {
   background-color: $theme-color;
@@ -240,7 +218,7 @@ input[type="submit"].action-button {
   border-radius: 50px;
   border: 3px solid $theme-color;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,6 +228,7 @@ input[type="submit"].action-button {
   text-align: center;
   margin-top: 30px;
   text-decoration: none;
+  padding: 12px 10px 14px;
 
   .custom-icon.arrow-small-right,
   .custom-icon.arrow-large-right {
@@ -294,8 +273,6 @@ input[type="submit"].action-button {
   }
 
   &.large {
-    padding: 12px;
-
     @media screen and (min-width: 768px) {
       width: 350px;
     }
@@ -411,6 +388,12 @@ input[type="submit"].action-button {
   padding-top: 3rem;
   padding-bottom: 3rem;
 
+  h2 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+
   .default-button {
     font-size: $base-font-size;
   }
@@ -420,8 +403,7 @@ input[type="submit"].action-button {
   }
 
   input.action-button[type="submit"] {
-    padding: 10px 0;
-    margin: 15px 0;
+    margin: 30px 0 15px;
     width: 100%;
   }
 }
@@ -465,9 +447,15 @@ header {
 
   .header-links {
     margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    >div {
+      margin-bottom: 10px;
+    }
 
     .default-button {
-      margin-left: 10px;
+      margin-right: 10px;
     }
 
     .is-active {
@@ -478,9 +466,11 @@ header {
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
       font-size: 16px;
       font-weight: 600;
-      padding: 4px 16px;
+      line-height: 1;
+      padding: 6px 16px 8px;
       display: inline-block;
       text-decoration: none;
+      margin-right: 10px;
     }
   }
 
@@ -683,6 +673,7 @@ body > header,
 }
 .budget-investment-show p.unfeasibility-explanation {
   padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 // Share buttons
@@ -837,7 +828,7 @@ body > header,
 
   .tabs a h3 i {
     height: 20px;
-    display: block;
+    display: none;
     line-height: 20px;
     float: left;
   }
@@ -865,6 +856,12 @@ body > header,
   .tabs .tabs-title > a:hover {
     background: none;
     border-bottom: 0;
+  }
+
+  @media (min-width: 576px) {
+    .tabs a h3 i {
+      display: block;
+    }
   }
 
   @media (min-width: 768px) {
