@@ -6,12 +6,10 @@
           <a href="/" class="header-logo">
             <%= image_tag(image_path_for("logo-header.png")) %>
           </a>
-          <div>
-            <ul class="no-bullet inline-block header-links">
-              <%= render "devise/menu/login_items" %>
-            </ul>
+          <ul class="no-bullet inline-block header-links">
+            <%= render "devise/menu/login_items" %>
             <%= render "shared/locale_switcher" %>
-          </div>
+          </ul>
         </div>
       </div>
     </div>
