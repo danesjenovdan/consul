@@ -5,14 +5,10 @@
   </span>
 <% elsif !resource.author.consent_to_publish_name %>
   <%= avatar_image(resource.author, seed: resource.author_id, size: 32, class: "author-photo") %>
-  <span class="author">
-      <%= t('custom.titles.anonymous_proposal') %>
-  </span>
+  <span class="author"><%= t('custom.titles.anonymous_proposal') %></span>
 <% else %>
   <%= avatar_image(resource.author, seed: resource.author_id, size: 32, class: "author-photo") %>
-  <span class="author">
-      <%= link_to resource.author.name, user_path(resource.author) %>
-  </span>
+  <span class="author"><%= resource.author.name %></span>
 
   <% if resource.respond_to?(:association_name) && resource.association_name.present? %>
     <span>
