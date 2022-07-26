@@ -1,3 +1,7 @@
+<!-- because comments were removed the whole thing should only
+show up when milestones show up, that is when budgeting is finished
+and only for winning investments -->
+<% if @investment.budget.phase == 'finished' && @investment.winner %>
 <ul class="tabs"
     id="investments_tabs"
     data-deep-link="true"
@@ -5,6 +9,7 @@
     data-deep-link-smudge="true"
     data-deep-link-smudge-delay="500"
     data-tabs>
+  <!-- REMOVED COMMENTS
   <li class="tabs-title is-active">
     <%= link_to "#tab-comments" do %>
       <h3>
@@ -13,8 +18,9 @@
       </h3>
     <% end %>
   </li>
+  -->
   <% if @investment.budget.phase == 'finished' && @investment.winner %>
-    <li class="tabs-title">
+    <li class="tabs-title is-active">
         <%= link_to "#tab-milestones" do %>
         <h3>
             <%= t("budgets.investments.show.milestones_tab") %>
@@ -24,3 +30,4 @@
     </li>
   <% end %>
 </ul>
+<% end %>
