@@ -1,5 +1,11 @@
 <div id="<%= dom_id(proposal) %>" class="proposal-featured clear">
-  <div class="small-12 medium-9 column">
+
+  <% if proposal.image.present? %>
+    <div class="small-4 medium-4 large-2 column text-center proposal-image-container-featured">
+      <%= image_tag proposal.image_url(:medium),
+                    alt: proposal.image.title.unicode_normalize %>
+    </div>
+    <div class="small-8 medium-4  large-6 column">
     <h3><%= link_to proposal.title, proposal %></h3>
     <div class="info">
       <% if proposal.author.hidden? || proposal.author.erased? %>
@@ -21,7 +27,39 @@
     </div>
   </div>
 
-  <div id="<%= dom_id(proposal) %>_votes" class="small-12 medium-3 column">
+  <div id="<%= dom_id(proposal) %>_votes" class="small-12 medium-4 large-4 column">
     <%= render "featured_votes", proposal: proposal %>
   </div>
+  <% else %>
+    <div class="small-4 medium-4 large-2 column text-center">
+    &nbsp
+    </div>
+    <div class="small-8 medium-4 large-6 column">
+    <h3><%= link_to proposal.title, proposal %></h3>
+    <div class="info">
+      <% if proposal.author.hidden? || proposal.author.erased? %>
+        <%= t("proposals.show.author_deleted") %>
+      <% else %>
+        <%= proposal.author.name %>
+      <% end %>
+
+      &nbsp;&bull;&nbsp;
+
+      <% if proposal.author.display_official_position_badge? %>
+        <span class="label round level-<%= proposal.author.official_level %>">
+          <%= proposal.author.official_position %>
+        </span>
+        &nbsp;&bull;&nbsp;
+    <% end %>
+
+        <strong><%= t("proposals.proposal.supports", count: proposal.total_votes) %></strong>
+      </div>
+    </div>
+
+    <div id="<%= dom_id(proposal) %>_votes" class="small-12 medium-4 large-4 column">
+      <%= render "featured_votes", proposal: proposal %>
+    </div>
+  <% end %>
+
+
 </div>
