@@ -2,7 +2,7 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - 'djnd-consul-staging'
+      - 'hrpelje-kozina-k8s'
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -22,14 +22,14 @@ jobs:
           username: nologin
           password: ${{ secrets.SCW_SECRET_TOKEN }}
       -
-        name: Build and push consul
+        name: Build and push consul-hrpelje-kozina
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
           tags: |
-            rg.fr-par.scw.cloud/djnd/consul:${{ github.sha }}
-            rg.fr-par.scw.cloud/djnd/consul:staging
+            rg.fr-par.scw.cloud/djnd/consul-hrpelje-kozina:${{ github.sha }}
+            rg.fr-par.scw.cloud/djnd/consul-hrpelje-kozina:staging
       # -
       #   name: Build and push assets
       #   uses: docker/build-push-action@v2
