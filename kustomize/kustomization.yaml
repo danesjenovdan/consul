@@ -9,4 +9,4 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-hrpelje-kozina
-    newTag: 'latest'
+    newTag: '65e0aba0d56196f9c7fc0a1c134a90813486ecf0'
