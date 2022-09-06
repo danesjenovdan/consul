@@ -158,6 +158,10 @@ sl-SI:
       instructions: "Projektni predlog bo upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje kriterije:"
       instructions_description: "<p> <ol><li>je skladen z zakonodajo in veljavnimi občinskimi akti,</li> <li>je takšen, da je izvedba v pristojnosti Občine Medvode,</li> <li>je namenjen splošni javni uporabi,</li> <li>ni že uvrščen v proračun Občine Medvode oz. načrt razvojnih programov,</li> <li>v zadnjih 5 letih ni bil sofinanciran s strani Občine Medvode,</li> <li>je finančno ovrednoten med 3.000 in 25.000 EUR z vključenim DDV (V primeru, da je za posamezno območje na voljo manj kot 25.000 EUR, vrednost projekta na tem območju ne sme presegati dodeljenih sredstev za to območje.),</li> <li>je umeščen v enega od 11 območij občine, opredeljenih za participativni proračun,</li> <li>je izvedljiv v proračunskem obdobju 2023 ali 2024,</li> <li>je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično),</li> <li>je načrtovan na zemljišču v javni lasti oziroma na zasebnem zemljišču s soglasjem lastnika.</li></ol>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
+    feasibility:
+      select_feasibility: Filtriraj (ne)izbrane predloge
+      feasible: Izbrani predlogi
+      unfeasible: Neizbrani predlogi
     titles:
       edit: Uredi predlog
       investment_updated: Predlog uspešno posodobljen
