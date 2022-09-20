@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-medvode
-    newTag: '31c38a403fceb34d39d2bad7d85034b590b76001'
+    newTag: 'd5a69c69a9d59d9cbd7cd50dafe32e70f82905de'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: '31c38a403fceb34d39d2bad7d85034b590b76001'
+  #   newTag: 'd5a69c69a9d59d9cbd7cd50dafe32e70f82905de'
