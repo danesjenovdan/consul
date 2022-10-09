@@ -5,7 +5,7 @@
         <!-- this is a horrible hack, it is here to make voting on the listing work -->
         <!-- everything is duplicated except for the link_to wrapper which we don't -->
         <!-- want on the listing page when people want to vote -->
-        <% unless @heading and investment.should_show_ballots? %>
+        <% unless investment.should_show_ballots? %>
           <%= link_to namespaced_budget_investment_path(investment), class: "" do %>
             <div class="image-holder">
                 <% if investment.image.present? %>
@@ -111,7 +111,7 @@
               <% end %>
 
               <% unless investment.unfeasible? %>
-                <% if @heading and investment.should_show_ballots? %>
+                <% if investment.should_show_ballots? %>
                   <div id="<%= dom_id(investment) %>_ballot"
                       class="small-12 medium-12 text-right"
                       <%= "data-equalizer-watch" if feature?(:allow_images) && investment.image.present? %>>
@@ -121,17 +121,10 @@
                       ballot: ballot
                     } %>
                   </div>
-                <% elsif investment.should_show_ballots? %>
-                  <div class="small-12 medium-12 callout warning margin-top">
-                    <strong><%= t("custom.headings.select_heading_to_vote") %></strong>
-                  </div>
-                  <div <%= "data-equalizer-watch" if feature?(:allow_images) && investment.image.present? %>></div>
                 <% else %>
                   <div <%= "data-equalizer-watch" if feature?(:allow_images) && investment.image.present? %>></div>
                 <% end %>
-
               <% end %>
-
             <% end %>
           </div>
         <% end %>
