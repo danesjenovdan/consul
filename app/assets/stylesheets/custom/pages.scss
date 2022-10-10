@@ -385,6 +385,11 @@ span:hover::before {
 
     .investment-project-text {
       flex-grow: 1;
+      color: #222;
+
+      h3 {
+        margin-top: 0;
+      }
     }
 
     a {
@@ -460,7 +465,7 @@ span:hover::before {
 
   .social-box {
     // background: #fff !important;
-    padding: 2rem 0;
+    // padding: 2rem 0;
 
     h5 {
       font-weight: 500;
@@ -596,7 +601,6 @@ span:hover::before {
 }
 
 .investment-price {
-  padding: 1.5rem 0;
 
   h4 span {
     color: #222222;
