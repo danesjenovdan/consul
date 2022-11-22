@@ -3,7 +3,7 @@ require_dependency Rails.root.join("app", "controllers", "budgets", "investments
 module Budgets
   class InvestmentsController < ApplicationController
     PER_PAGE = 12
-    SHOW_TOP_INVESTMENTS = false
+    SHOW_TOP_INVESTMENTS = true
     NUMBER_OF_TOP_PROJECTS = 3
     MISSING_A_LITTLE_TO_TOP = 10
 
