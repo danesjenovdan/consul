@@ -43,12 +43,17 @@ sl-SI:
               invalid: EMŠO ni pravilne oblike.
   budgets:
     investments:
+      investment:
+        add: Glasuj za ta predlog
       show:
         share_title: "Povej naprej!"
         share: "Deli!"
         copy: "Skopiraj povezavo!"
         price: "Vrednost projekta"
         votes: "Želiš podpreti ta projekt?"
+        top_investment: "Ta predlog je trenutno eden izmed top 3 predlogov po številu glasov na tem območju!"
+        top_investment_close: "Temu predlogu manjka samo nekaj glasov, da bo v top 3 na tem območju!"
+        top_investment_far: "Temu predlogu manjka veliko glasov, da bo v top 3 na tem območju!"
       edit:
         submit: "Shrani spremembe"
       form:
