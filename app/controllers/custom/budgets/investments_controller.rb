@@ -3,9 +3,15 @@ require_dependency Rails.root.join("app", "controllers", "budgets", "investments
 module Budgets
   class InvestmentsController < ApplicationController
     PER_PAGE = 12
-    SHOW_TOP_INVESTMENTS = false
-    NUMBER_OF_TOP_PROJECTS = 3
-    MISSING_A_LITTLE_TO_TOP = 10
+
+    # SETTINGS FOR SOFT VOTING INDICATOR (made originally for Medvode Participativni proracun 2023-2024)
+    # soft voting indicator is shown in the balloting phase next to VOTE button on individual project page
+    # is has 3 states: project is top X, project is close to top X, project is far away from top X
+    # the state is decided by the number of votes the project receives in the given area
+    SHOW_TOP_INVESTMENTS = false # set true if you want to show the soft voting indicator at all
+    NUMBER_OF_TOP_PROJECTS = 3 # set how many projects can be top
+    MISSING_A_LITTLE_TO_TOP = 10 # set number of votes difference between "close to top" and "far from top"
+    ### 
 
     before_action :load_categories, only: [:index, :new, :create, :edit, :update]
     # before_action :load_budgets,  only: [:index, :new, :create, :edit, :update]
@@ -30,13 +36,15 @@ module Budgets
 
       @show_top_investments = SHOW_TOP_INVESTMENTS
 
+      # if the "show top investments" setting is on and phase is balloting -> calculate top investments
       if (SHOW_TOP_INVESTMENTS && @budget.phase == "balloting")
-        @top_investments = @budget.investments.where("selected = ? AND feasibility = ?", true, "feasible").order(ballot_lines_count: :desc).limit(NUMBER_OF_TOP_PROJECTS)
+        # get top investments from selected investments in the same obmocje (heading)
+        @top_investments = @budget.investments.where("selected = ? AND feasibility = ?", true, "feasible").where(heading_id: @investment.heading_id).order(ballot_lines_count: :desc).limit(NUMBER_OF_TOP_PROJECTS)
         
         unless (@top_investments.empty?)
           @top_investments_ids = @top_investments.ids
 
-          if @top_investments_ids.include?(@investment.id)
+          if @investment.ballot_lines_count >= @top_investments.last.ballot_lines_count
             @is_top_investment = true
           else
             @is_top_investment = false
