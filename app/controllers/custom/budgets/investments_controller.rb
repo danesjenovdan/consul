@@ -207,5 +207,13 @@ module Budgets
         params.require(:budget_investment).permit(attributes, translation_params(Budget::Investment))
       end
 
+      def load_heading
+        if params[:heading_id].present?
+          @heading = @budget.headings.find_by_slug_or_id! params[:heading_id]
+          @assigned_heading = @budget.headings.find_by_slug_or_id! @ballot.user.heading_id
+        elsif @budget.single_heading?
+          @heading = @budget.headings.first
+        end
+      end
   end
 end

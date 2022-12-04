@@ -24,6 +24,193 @@ class User < ApplicationRecord
     end
   end
 
+  def heading_id
+    # check medvode center
+    valid_addresses = [
+      # medvode center
+      "Arharjeva ulica",
+      "Barletova cesta 2",
+      "Cesta komandanta Staneta",
+      "Cesta na Senico",
+      "Cesta na Svetje",
+      "Cesta ob Sori",
+      "Cesta talcev",
+      "Čarmanova ulica",
+      "Čelesnikova ulica",
+      "Dimčeva ulica",
+      "Donova cesta",
+      "Finžgarjeva ulica",
+      "Gorenjska cesta",
+      "Grajzerjeva ulica",
+      "Jamnikova ulica",
+      "Kebetova ulica",
+      "Klanska ulica",
+      "Kržišnikova ulica",
+      "Kuraltova ulica",
+      "Ostrovrharjeva ulica",
+      "Medvoška cesta",
+      "Podvizova ulica",
+      "Seškova cesta",
+      "Šetinova ulica",
+      "Šlosarjeva ulica",
+      "Šmalčeva ulica",
+      "Štalčeva ulica",
+      "Tehovnikova ulica",
+      "Trampuževa ulica",
+      "Turkova ulica",
+      "Ulica Ivanke Ovijač",
+      "Ulica k studencu",
+      "Ulica ob gozdu",
+      "Ulica Simona Jenka",
+      "Višnarjeva ulica",
+      "Zbiljska cesta",
+      "Žontarjeva ulica",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 19
+    end
+
+    # check preska
+    valid_addresses = [
+      "Barletova cesta (vse razen št. 2)",
+      "Bečanova ulica",
+      "Bergantova cesta",
+      "Bernikova ulica",
+      "Bizantova cesta",
+      "Bogatajeva ulica",
+      "Cesta ob železnici",
+      "Cesta v Bonovec",
+      "Cesta v Žlebe",
+      "Dobnikarjeva ulica",
+      "Hrastarjeva ulica",
+      "Iztokova ulica",
+      "Kalanova ulica",
+      "Kurirska cesta",
+      "Na Čerenu",
+      "Preška cesta",
+      "Škofjeloška cesta",
+      "Trilerjeva ulica",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 21
+    end
+
+    # check polhograjci 1
+    valid_addresses = [
+      "Belo",
+      "Brezovica pri Medvodah",
+      "Topol pri Medvodah",
+      "Tehovec",
+      "Trnovec",
+      "Setnica",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 18
+    end
+
+    # check pirniče
+    valid_addresses = [
+      "Verje",
+      "Vikrče",
+      "Zgornje Pirniče",
+      "Spodnje Pirniče",
+      "Zavrh pod šmarno goro",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 20
+    end
+
+    # check senica
+    valid_addresses = [
+      "Ladja",
+      "Spodnja Senica",
+      "Zgornja Senica",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 22
+    end
+
+    # check seničica
+    valid_addresses = [
+      "Golo Brdo",
+      "Seničica",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 23
+    end
+
+    # check smlednik
+    valid_addresses = [
+      "Valburga",
+      "Smlednik",
+      "Dragočajna",
+      "Hraše",
+      "Moše",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 17
+    end
+
+    # check sora
+    valid_addresses = [
+      "Sora",
+      "Osolnik",
+      "Rakovnik",
+      "Dol",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 24
+    end
+
+    # check vaše goričane
+    valid_addresses = [
+      "Goričane",
+      "Vaše",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 25
+    end
+
+    # check zbilje
+    valid_addresses = [
+      "Zbilje",  
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 26
+    end
+
+    # check polhograjci 2
+    valid_addresses = [
+      "Studenčice",
+      "Žlebe",
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 26
+    end
+  end
+
   private
 
   def date_from_emso(emso)

@@ -126,8 +126,13 @@ $( function() {
                     <%= f.text_field :username, maxlength: User.username_max_length %>
                   </div>
 
+                  <!-- TODO address hidden but should be automatically
+                  hidden once voting begins
                   <div>
                     <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true %>
+                  </div> -->
+                  <div>
+                    <p><strong>Naslov:</strong> <%= @account.address %></p>
                   </div>
                 <% end %>
               </div>
