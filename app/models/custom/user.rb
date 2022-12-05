@@ -74,7 +74,7 @@ class User < ApplicationRecord
 
     # check preska
     valid_addresses = [
-      "Barletova cesta (vse razen št. 2)",
+      "Barletova cesta",
       "Bečanova ulica",
       "Bergantova cesta",
       "Bernikova ulica",
