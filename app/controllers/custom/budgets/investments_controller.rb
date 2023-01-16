@@ -209,12 +209,12 @@ module Budgets
 
       def load_heading
         if params[:heading_id].present?
-          unless @ballot.user.nil?
-            @heading = @budget.headings.find_by_slug_or_id! params[:heading_id]
+          @heading = @budget.headings.find_by_slug_or_id! params[:heading_id]
+
+          if @budget.phase == "balloting" && !@ballot.user.nil
             @assigned_heading = @budget.headings.find_by_slug_or_id! @ballot.user.heading_id
-          else
-            @heading = @budget.headings.find_by_slug_or_id! params[:heading_id]
           end
+
         elsif @budget.single_heading?
           @heading = @budget.headings.first
         end

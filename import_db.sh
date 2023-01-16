@@ -8,7 +8,7 @@ DATABASE_PASSWORD=$(kubectl get secret postgresql -n shared -o jsonpath="{.data.
 
 echo
 echo "PORT FORWARDING"
-nohup kubectl port-forward pod/postgresql-0 54321:5432 --namespace=shared &>/dev/null &
+nohup kubectl port-forward pod/postgresql-11-postgresql-0 54321:5432 --namespace=shared &>/dev/null &
 
 # store the kubectl pid for later
 KUBECTL_PID=$!
