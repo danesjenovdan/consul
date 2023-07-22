@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - djnd-consul
+      - trebnje-k8s
 
 jobs:
   pull-requests:
