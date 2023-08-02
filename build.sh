@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=maribor
+TAG=trebnje
 
 sudo docker login rg.fr-par.scw.cloud/djnd -u nologin -p $SCW_SECRET_TOKEN
 

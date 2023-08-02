@@ -178,16 +178,16 @@ sl-SI:
           presentation_summary_balloting_help_text: Tekst za drugi odstavek, ko ta faza ni aktivna
           presentation_summary_finished_help_text: Tekst za tretji odstavek, ko ta faza ni aktivna
     meta:
-      pp_name: Maribor sodeluj
-      place_name: Mestna Občina Maribor
+      pp_name: Predlagam, odločam!
+      place_name: Občina Trebnje
       guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
       tos: "pogoji-uporabe"
     switcher:
       select: "Izberi proračun"
     social:
-      fb_desc: Maribor sodeluj - Participativni proračun Mestne občine Maribor
-      tw_desc: "Maribor sodeluj - Participativni proračun Mestne občine Maribor: "
-      email_desc: Oglej si predlog proračunske naložbe v projektu Maribor sodeluj - Participativni proračun Mestne občine Maribor
+      fb_desc: Predlagam, odločam! - Participativni proračun Občine Trebnje
+      tw_desc: "Predlagam, odločam! - Participativni proračun Občine Trebnje"
+      email_desc: Oglej si predlog proračunske naložbe v projektu Predlagam, odločam! - Participativni proračun Občine Trebnje
     headings:
       drafting: Osnutek (skrito javnosti)
       informing: Informiranje
@@ -206,7 +206,7 @@ sl-SI:
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h4>Formalni kriteriji - način oddaje projektnih predlogov</h4> <p>Projektni predlog mora biti oddan preko spletne aplikacije Čuj, sodeluj!, ali na obrazcu v fizični obliki, ki ga lahko občani dobijo preko spletne strani ali v fizični obliki na sedežih mestnih četrti in krajevnih skupnosti ter na MO Maribor.</p> <p>Projektni predlogi morajo biti oddani na predpisnem obrazcu, najkasneje do:</p> <ul> <li>27. junija, 2022, po pošti (naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor) ali</li> <li>27. junija, 2022, do 13.00 ure, osebno na sedežu občine v sprejemno pisarno št. 14 ali na sedežu katerekoli MČ ali KS v času uradnih ur.</li> </ul> <h4>Kriteriji za predlagatelje</h4> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni občan/občanka ali skupine občanov/občank s stalnim bivališčem v Mestni občini Maribor, ki je do oddaje projektnega predloga ali glasovanja dopolnila 15 let.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h4>Merila/kriteriji za uvrstitev predlogov v glasovanje</h4> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h5>Splošna merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor.</li> <li>Je finančno ovrednoten med 3.000,00 EUR in 30.000,00 EUR z DDV.</li> <li>Izveden bo na območju Mestne občine Maribor in/ali na nepremičninah v lasti MO Maribor.</li> <li>Ni uvrščen v proračun MO Maribor oz. načrt razvojnih programov občinskih vlaganj.</li> <li>Ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov s strani MO Maribor?</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskih letih 2023 in 2024</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> </ol> <h5>Vsebinska merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor (MOM).</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost občanov, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki, krožnim gospodarstvom, ponovno uporabo,…).</li> <li>Ustvarja pogoje za gospodarski razvoj občine (gostinstvo in turizem, kmetijstvo, samooskrba, vinogradništvo, podjetništvo,…).</li> <li>Ustvarja pogoje za izobraževanje odraslih, pospeševanje raziskovalne, kulturne, mladinske in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in olepševanju mesta, urejanju trgov, zelenic, parkov ter drugih javnih površin.</li> </ol>"
+      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h4>Formalni kriteriji - način oddaje projektnih predlogov</h4>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
@@ -272,19 +272,19 @@ sl-SI:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši."
-      date_1: 19. 5.-27. 6. 2022
+      description_1: "Občanke in občani oddajo predloge projektov med 19. 4. 2023 in 19. 5. 2023. Posamezen predlog projekta mora biti pripravljen v skladu z navodili, njegova vrednost pa ne sme biti višja od 5.000,00 EUR z DDV. Predlog lahko oddate preko spleta ali z obrazcem v sprejemni pisarni Občine, po pošti ali na elektronski naslov občine."
+      date_1: 19. 4.-19. 5. 2023
       heading_2: Pregled predlogov
-      description_2: "Strokovna komisija bo pregledala vse oddane predloge in na seznam za glasovanje uvrstila le tiste, ki ustrezajo pogojem (merilom). Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanov, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes."
-      date_2: 28. 6.-30. 9. 2022
+      description_2: "Vse oddane predloge pregleda strokovna komisija. Projektni predlogi, ki izpolnjujejo pogoje, se uvrstijo v postopek preverjanja izvedljivosti projektnih predlogov. Občinska uprava preveri časovni, ekonomski oziroma finančni, zakonodajni in zemljiško-knjižni vidik, kakor tudi vidik vzdržnosti izvedenega projekta. Za končno presojo in potrditev projektnih predlogov, primernih za glasovanje, je pristojna strokovna komisija. Strokovna komisija, skladno z javnim pozivom, pripravi končni seznam projektnih predlogov za glasovanje."
+      date_2: 20. 5.-15. 8. 2023
       heading_3: Glasovanje
-      description_3: "Med 1. in 16. oktobrom, 2022 boš odločal/-a o porabi 1 milijona evrov proračunskih sredstev Mestne občine Maribor. Glasoval/-a boš lahko za oddane predloge, ki so izvedljivi, zakoniti, v občinski pristojnosti in ne presegajo višine sredstev, namenjenih za posamezno območje v okviru participativnega proračuna. Glasuje lahko vsakdo s stalnim prebivališčem v Mestni občini Maribor, star/-a vsaj 15 let. Vsakdo lahko glasuje samo enkrat."
-      date_3: 1. 10.-16. 10. 2022
+      description_3: "Glasovanje bo izvedeno med 6. 9. 2023 in 20. 9. 2023 preko spleta ali v prostorih Občine Trebnje. Sodeluje lahko vsak prebivalec ali prebivalka s stalnim bivališčem v občini Trebnje, ki je dopolnil/-a 15 let. Vsak občan bo lahko glasoval za en projektni predlog, v katerem koli območju."
+      date_3: 6. 9.-20. 9. 2023
       heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Maribor za leti 2023 in 2024."
-      date_4: "2023"
+      description_4: "Po izvedbi glasovanja in pridobitvi uradnih rezultatov glasovanja strokovna komisija razvrsti izglasovane projektne predloge glede na število prejetih glasov ter jih potrdi kot izbrane glede na razpoložljiva sredstva. Strokovna komisija pripravi predlog projektov za uvrstitev v naslednji predlog Odloka o spremembah in dopolnitvah Odloka o proračunu Občine Trebnje za leto 2023 najkasneje v 30-ih dneh po preteku glasovanja. Županja na spletni strani Občine Trebnje objavi končni izbor projektov, ki se bodo izvedli."
+      date_4: "oktober 2023"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
+      description_5: "Vsi zmagovalni projekti bodo vključeni v proračun oz. rebalans proračuna Občine Trebnje in izvedeni v letu 2023 oz. preneseni v leto 2024. V tej fazi cikla participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa."
     privacy:
       title: "Pogoji uporabe"
     help:
@@ -292,9 +292,9 @@ sl-SI:
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
       description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ telefonsko številko, e-naslov in internetno povezavo, vse funkcionalnosti lahko opraviš tudi na občini in sedežih krajevnih skupnosti."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
-      description_2: "Račun ustvariš tako, da v nogi spletnega mesta klikneš na gumb Registracija, klik na kateri koli gumb za akcijo te prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, telefonsko, EMŠO in geslo. Po kreiranju računa ga moraš potrditi s klikom na povezavo v e-pošti, ki jo bomo poslali na tvoj e-naslov."
+      description_2: "Račun ustvariš tako, da v nogi spletnega mesta klikneš na gumb Registracija, klik na kateri koli gumb za akcijo te prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, EMŠO in geslo. Po kreiranju računa ga moraš potrditi s klikom na povezavo v e-pošti, ki jo bomo poslali na tvoj e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Poleg spletnega je mogoče predlog oddati tudi v fizični obliki, in sicer: po pošti, na naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor,  osebno na navedem naslovu, v sprejemni pisarni št. 14 (do 13. ure), ali v kateri koli mestni četrti/krajevni skupnosti v času uradnih ur (tam bodo na voljo tudi tiskani obrazci). Za pomoč pri pripravi predlogov projektov se lahko udeležiš interaktivne in praktičnih delavnic, ki bodo vsak četrtek, ob 18. uri od 19. maja do 23. junija."
+      description_3: "Predlog ustvariš v okviru spletnega orodja, lahko pa ga oddaš tudi na fizičnem obrazcu osebno v sprejemni pisarni Občine Trebnje ter po navadni ali elektronski pošti."
       heading_4: "Pozabil/-a sem svoje geslo. Kaj lahko storim?"
       description_4: "Klikni na gumb Prijava, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel/-a navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
@@ -303,17 +303,16 @@ sl-SI:
       technical_issues: "Imaš tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnike Mestne občine Maribor na <a href="mailto:sodeluj@maribor.si" target="_blank">sodeluj@maribor.si</a>.'
+      other_contact: "Kontaktiraj predstavnike Občine Trebnje na 07/3481100.""
     terms:
       main_title: "Pogoji uporabe"
       active_use: "Aktivna uporaba spletnega orodja se ureja s spodnjimi pogoji za uporabo, zato se morajo vsi, ki želijo aktivno sodelovati, registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe."
-      changes: " si pridržuje pravico, da te pogoje uporabe spremeni, najnovejša različica pa bo objavljena na tej spletni strani."
+      changes: "Občina Trebnje si pridržuje pravico, da te pogoje uporabe spremeni, najnovejša različica pa bo objavljena na tej spletni strani."
       data_protection_title: "Varstvo osebnih podatkov"
-      data_protection_first: "Uporabnik z registracijo potrjuje, da je dopolnil/a 15 let in je seznanjen/a s svojimi pravicami in obveznostmi, ki so določeni v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov (GDPR), ter pooblašča Mestno občino Maribor, da preveri verodostojnosti osebnih podatkov (ime in priimek, stalni naslov in rojstni datum) za potrebe projekta Čuj, glasuj! iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
-      data_protection_second: "Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi, bomo uporabljali izključno v namene izvedbe participativnega proračuna v Mestni občini Maribor in ga ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon. Pri upravljanju spletnega orodja sodelujemo z Danes je nov dan, Inštitutom za druga vprašanja, ki nastopa v vlogi t. i. »pogodbenega obdelovalca« oziroma »obdelovalca« teh podatkov. Pogodbeno je zavezan, da vaše osebne podatke uporablja izključno v imenu Mestne občine Maribor in da zagotavlja njegovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
-      data_protection_third: "Svoje podatke, vnesene ob registraciji, lahko preverite, spreminjate oziroma dopolnite v svojem profilu, v katerega lahko vstopite po uspešno izvedeni prijavi. V svojem profilu lahko tudi izberete, ali želite na svoj elektronski naslov prejemati različna obvestila."
+      data_protection_first: "Uporabnik z registracijo potrjuje, da je dopolnil/a 15 let in je seznanjen/a s svojimi pravicami in obveznostmi, ki so določeni v  obvestilu o obdelavi osebnih podatkov v skladu Splošno uredbo o varstvu osebnih podatkov (GDPR) ter pooblašča Občino Trebnje, da preveri verodostojnosti osebnih podatkov (ime in priimek, stalni naslov in EMŠO) za potrebe projekta »Predlagam, odločam!« iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
+      data_protection_third: "Osebnih podatkov, pridobljenih preko registracijskega formularja na spletni platformi Predlagam, odločam! bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in ga ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon. Pri upravljanju spletnega orodja sodelujemo z  Danes je nov dan, Inštitutom za druga vprašanja, ki nastopa v vlogi t. i. »pogodbenega obdelovalca« oziroma »obdelovalca« teh podatkov. Pogodbeno je zavezan, da vaše osebne podatke uporablja izključno v imenu občine Občine Trebnje ter da zagotavlja njegovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili. Svoje podatke, vnesene ob registraciji, lahko preverite, spreminjate oziroma dopolnite v svojem profilu, v katerega lahko vstopite po uspešno izvedeni prijavi. V svojem profilu lahko tudi izberete, ali želite na svoj elektronski naslov prejemati različna obvestila."
       data_use_title: "Obvestilo o obdelavi osebnih podatkov"
-      data_use_first: "Upravljavec osebnih podatkov (ime in priimek, stalno prebivališče, e-naslov in tel. št.) je Mestna občina Maribor, Ulica heroja Staneta 1, Maribor. Pooblaščena oseba za varstvo osebnih podatkov je dosegljiva na kontaktnem naslovu mestna.obcina@maribor.si. Pravna podlaga za obdelavo vaših osebnih podatkov je vaša privolitev. Osebni podatki se bodo obdelovali le za namen/e, za katerega/katere ste se strinjali. Podatki se bodo obdelovali do izpolnitve namena (izvedba projekta) oziroma do vašega preklica, podatki na spletni strani (če ste se strinjali) bodo na spletni strani objavljeni za čas izvajanja projekta. Vaše osebne podatke bodo obdelovali le zaposleni na občini in pogodbeni obdelovalci Mestne občine Maribor. Imate pravico do preklica privolitve in pravico do dostopa do osebnih podatkov, popravka, ugovora, izbrisa ali prenosljivosti, pravice uveljavljate prek kontaktnega naslova mestna.obcina@maribor.si. Če menite, da je Mestna občina Maribor kršila vašo pravico do zasebnosti, se lahko pritožite na naslov: Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana."
+      data_use_first: "Upravljavec osebnih podatkov (ime in priimek, e-naslov in EMŠO) je Občina Trebnje, Goliev trg 5, 8210 Trebnje. Pooblaščena oseba za varstvo osebnih podatkov je dosegljiva preko kontaktnega naslova obcina.trebnje@trebnje.si. Pravna podlaga za obdelavo vaših osebnih podatkov je vaša privolitev. Osebni podatki se bodo obdelovali le za namen/e za katerega ste se strinjali. Podatki se bodo obdelovali do izpolnitve namena (izvedba projekta) oziroma do vašega preklica, podatki na spletni strani (če ste se strinjali) bodo na spletni strani objavljeni za čas izvajanja projekta. Vaše osebne podatke bodo obdelovali le zaposleni na občini in pogodbeni obdelovalci Občine Trebnje. Imate pravico do preklica privolitve in pravico do dostopa do osebnih podatkov, popravka, ugovora, izbrisa ali prenosljivosti, pravice uveljavljate preko kontaktnega naslova obcina.trebnje@trebnje.si, če menite, da je Občina Trebnje kršila vašo pravico do zasebnosti se lahko pritožite na naslov: Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana."
       about_title: "O orodju"
       about_first: "Spletno orodje spodbuja državljansko participacijo in omogoča odprto, transparentno in demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
       registration_title: "Registracija"
@@ -321,8 +320,6 @@ sl-SI:
       registration_requirements: "Uporabnik/-ca mora ob registraciji navesti:"
       name: "ime in priimek"
       email: "elektronski naslov"
-      address: "naslov stalnega prebivališča"
-      phone: "telefonsko številko"
       emso: "EMŠO"
       registration_first: "Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnik prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani enega uporabnika je prepovedano."
       registration_second: "Če uporabnik/-ca katerega izmed navedenih podatkov ne posreduje, mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati namenske aplikacije. Uporabnik/-ca lahko kadar koli prekliče svojo registracijo, in sicer tako, da moderatorju orodja na e-poštni naslov consul@djnd.si pošlje zahtevo za izbris profila iz evidence uporabnikov. Po potrditvi preklica registracije bo upravljavec orodja Danes je nov dan iz evidence uporabnikov izbrisal vse osebne podatke. Kljub izbrisu osebnih podatkov uporabnika se predlogi in podatki o glasovanjih hranijo, a so pripisani izbrisanemu uporabniku."
@@ -348,7 +345,7 @@ sl-SI:
       cookies_title: "Piškotki"
       cookies_intro: "Uporabljamo samo piškotke, ki so nujni za delovanje spletnega mesta."
       ip_title: "Intelektualna lastnina"
-      ip_intro: 'Vsa koda potrebna za delovanje spletne strani <a href="https://mariborsodeluj.si/">https://mariborsodeluj.si/</a> je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
+      ip_intro: 'Vsa koda potrebna za delovanje te spletne strani je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
       responsibilities_title: "Omejitev odgovornosti"
       responsibilities_first: "Uporabniki/-ce spletnega orodja uporabljajo spletno orodje, njene dele in vsebine izključno na lastno odgovornost."
       responsibilities_second: " ne prevzema odgovornosti za kakršnokoli direktno ali indirektno vrsto polemike, spora in / ali pravdnega postopka, ki bi lahko nastal zaradi objave ali razširjanja vsebine, za katero ni bilo pridobljeno dovoljenje s strani zakonitih lastnikov. Prav tako ne odgovarja za škodo, ki bi nastala zaradi uporabe spletnega orodja, kot tudi ne jamči za uspešnost uporabe spletnega orodja. V nobenem primeru ne odgovarja za kakršnokoli škodo, ki bi izvirala iz uporabe oziroma nezmožnosti uporabe spletnega orodja, vključno s škodo zaradi izgubljenega prihodka ali pričakovanega dobička, izgube ali okrnitve dobrega imena, izgube poslov ali izgube podatkov."
@@ -357,8 +354,8 @@ sl-SI:
       responsibilities_list_second: "ki kršijo ali posegajo v osebnostne pravice tretjih oseb, so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem obstajalo ustrezno soglasje lastnikov in tretjih oseb;"
       responsibilities_list_third: "ki so grožnje, slabšalne, prostaške, poniževalne ali žaljive;"
       responsibilities_list_fourth: "ki so avtorska dela, za katere uporabnik/-ca nima avtorskih pravic. Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki zagotavlja vsebino."
-      responsibilities_fourth: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
-      responsibilities_fifth: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je Mestna Občina Maribor izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
+      responsibilities_fourth: "Občina Trebnje se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
+      responsibilities_fifth: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je Občina Trebnje izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
     statuses:
       title: 'Izberi status predloga'
       waiting: 'Čaka na izvedbo'
