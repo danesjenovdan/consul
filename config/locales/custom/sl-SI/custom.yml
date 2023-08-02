@@ -120,7 +120,14 @@ sl-SI:
     users:
       registrations:
         new:
-          terms: Z registracijo sprejemaš %{terms}.
+          terms: |
+            Dovoljujem, da za potrebe projekta participativnega proračuna občinski organi Občine Trebnje preverijo verodostojnost
+            osebnih podatkov (ime, priimek, naslov stalnega prebivališča, EMŠO) iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov, tudi
+            podatkov, ki štejejo za davčno tajnost ter občutljivih osebnih podatkov skladno z določbami zakona, ki ureja varstvo osebnih
+            podatkov, zakona, ki ureja splošni upravni postopek in zakona, ki ureja davčni postopek.
+            Občini Trebnje dovoljujem obdelavo osebnih podatkov za potrebe projekta participativnega proračuna. Občina Trebnje se zavezuje, da bo
+            uporabljala posredovane podatke le za namen predmetnega projekta ter v skladu z vsakokratnim veljavnim Zakonom o varovanju
+            osebnih podatkov ter Uredbe GDPR.
         success:
           back_to_index: Velja, vrni me na začetno stran
           instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
@@ -251,8 +258,13 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun 2023-2024!
-      introduction_text: Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši.
+      title: Občina Trebnje je v letu 2023 prvič v zgodovini uvedla Participativni proračun »Predlagam, odločam!«
+      introduction_text: |
+        S projektom participativnega proračuna želi Občina Trebnje občanke in občane vključiti v proces soodločanja pri razporejanju dela proračunskega denarja, pridobiti projektne predloge po meri občanov in občank ter hkrati izboljšati učinkovitost porabe skupnih sredstev, krepiti participacijo v domačem okolju in izboljšati kakovost življenja v občini.
+        Občanom in občankam je na ta način omogočeno, da sami predlagajo in odločajo, kateri projekti so zanje pomembni in bi lahko prispevali k izboljšanju kakovosti bivanja v občini.
+        Predlagatelji projektnih predlogov so lahko posamezni občani/občanke ali skupine občanov/občank s stalnim bivališčem v občini Trebnje, ki so do oddaje projektnega predloga ali glasovanja dopolnili 15 let.
+        Predlagatelji ne morejo nastopati kot izvajalci predlaganih projektov, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.
+        V proračunu Občine Trebnje za leto 2023 je za participativni proračun namenjenih 50.000,00 EUR z DDV; z namenom čim bolj enakomerne porazdelitve projektov so oblikovana tri območja, po mejah volilnih enot.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
