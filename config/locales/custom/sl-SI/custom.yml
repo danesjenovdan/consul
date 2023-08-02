@@ -303,7 +303,7 @@ sl-SI:
       technical_issues: "Imaš tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: "Kontaktiraj predstavnike Občine Trebnje na 07/3481100.""
+      other_contact: "Kontaktiraj predstavnike Občine Trebnje na 07/3481100."
     terms:
       main_title: "Pogoji uporabe"
       active_use: "Aktivna uporaba spletnega orodja se ureja s spodnjimi pogoji za uporabo, zato se morajo vsi, ki želijo aktivno sodelovati, registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe."
