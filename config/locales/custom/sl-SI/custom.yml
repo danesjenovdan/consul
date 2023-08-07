@@ -304,7 +304,7 @@ sl-SI:
     terms:
       main_title: "Pogoji uporabe"
       active_use: "Aktivna uporaba spletnega orodja se ureja s spodnjimi pogoji za uporabo, zato se morajo vsi, ki želijo aktivno sodelovati, registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe."
-      changes: "Občina Trebnje si pridržuje pravico, da te pogoje uporabe spremeni, najnovejša različica pa bo objavljena na tej spletni strani."
+      changes: " si pridržuje pravico, da te pogoje uporabe spremeni, najnovejša različica pa bo objavljena na tej spletni strani."
       data_protection_title: "Varstvo osebnih podatkov"
       data_protection_first: "Uporabnik z registracijo potrjuje, da je dopolnil/a 15 let in je seznanjen/a s svojimi pravicami in obveznostmi, ki so določeni v  obvestilu o obdelavi osebnih podatkov v skladu Splošno uredbo o varstvu osebnih podatkov (GDPR) ter pooblašča Občino Trebnje, da preveri verodostojnosti osebnih podatkov (ime in priimek, stalni naslov in EMŠO) za potrebe projekta »Predlagam, odločam!« iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
       data_protection_third: "Osebnih podatkov, pridobljenih preko registracijskega formularja na spletni platformi Predlagam, odločam! bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in ga ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon. Pri upravljanju spletnega orodja sodelujemo z  Danes je nov dan, Inštitutom za druga vprašanja, ki nastopa v vlogi t. i. »pogodbenega obdelovalca« oziroma »obdelovalca« teh podatkov. Pogodbeno je zavezan, da vaše osebne podatke uporablja izključno v imenu občine Občine Trebnje ter da zagotavlja njegovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili. Svoje podatke, vnesene ob registraciji, lahko preverite, spreminjate oziroma dopolnite v svojem profilu, v katerega lahko vstopite po uspešno izvedeni prijavi. V svojem profilu lahko tudi izberete, ali želite na svoj elektronski naslov prejemati različna obvestila."
@@ -351,7 +351,7 @@ sl-SI:
       responsibilities_list_second: "ki kršijo ali posegajo v osebnostne pravice tretjih oseb, so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem obstajalo ustrezno soglasje lastnikov in tretjih oseb;"
       responsibilities_list_third: "ki so grožnje, slabšalne, prostaške, poniževalne ali žaljive;"
       responsibilities_list_fourth: "ki so avtorska dela, za katere uporabnik/-ca nima avtorskih pravic. Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki zagotavlja vsebino."
-      responsibilities_fourth: "Občina Trebnje se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
+      responsibilities_fourth: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
       responsibilities_fifth: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je Občina Trebnje izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
     statuses:
       title: 'Izberi status predloga'
