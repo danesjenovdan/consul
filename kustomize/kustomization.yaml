@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-trebnje
-    newTag: 'df2dddcb7181f60fc0d4f51669cd7b7fc722d351'
+    newTag: '7a532c0f657fb14c9c34ca3ab034f261f769b06c'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: 'df2dddcb7181f60fc0d4f51669cd7b7fc722d351'
+  #   newTag: '7a532c0f657fb14c9c34ca3ab034f261f769b06c'
