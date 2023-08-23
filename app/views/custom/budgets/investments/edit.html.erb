@@ -13,15 +13,15 @@
             <%= render "/budgets/investments/edit_form", form_url: budget_investments_path(@budget) + "/" + @investment.id.to_s %>
           </div>
           <div class="small-12 medium-5 column">
-            <div class="sidebar">
-              <h3><%= t("custom.headings.instructions") %></h3>
-              <%= raw t("custom.headings.instructions_description") %>
-              <hr />
-              <h3><%= t("custom.headings.headings") %></h3>
-              <ul class="custom-list recommendations">
-                <%= raw t("custom.headings.headings_sidebar") %>
-              </ul>
-            </div>
+            <!-- <div class="sidebar">
+            <h3><%= t("custom.headings.instructions") %></h3>
+            <%= raw t("custom.headings.instructions_description") %>
+            <hr />
+            <h3><%= t("custom.headings.headings") %></h3>
+            <ul class="custom-list recommendations">
+              <%= raw t("custom.headings.headings_sidebar") %>
+            </ul>
+          </div> -->
           </div>
         </div>
       </div>
