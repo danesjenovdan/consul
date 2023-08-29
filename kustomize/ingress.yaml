@@ -10,9 +10,20 @@ spec:
   tls:
     - hosts:
         - consul-trebnje.lb.djnd.si
+        - predlagam-odlocam.trebnje.si
       secretName: consul-trebnje-tls
   rules:
     - host: consul-trebnje.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: predlagam-odlocam.trebnje.si
       http:
         paths:
           - path: /
