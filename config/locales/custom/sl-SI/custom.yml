@@ -214,7 +214,7 @@ sl-SI:
       select_heading: Izberi območje
       select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
-      select_heading_to_vote: Na voljo nimaš več nobenega glasu. Če želiš glasovati za ta predlog, odstrani svoj glas z drugega predloga.
+      select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
       instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h4>Formalni kriteriji - način oddaje projektnih predlogov</h4>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
