@@ -313,7 +313,7 @@ sl-SI:
       other_contact: "Kontaktiraj predstavnike Občine Trebnje na 07/3481100."
     terms:
       main_title: "Pogoji uporabe"
-      active_use: "Aktivna uporaba spletnega orodja se ureja s pogoji uporabe, ki jih najdeš <a href="https://consul-trebnje.s3.fr-par.scw.cloud/fWfcFNpSeo8RZCqXXRdrJVjR?response-content-disposition=inline%3B%20filename%3D%22Pogoji%20uporabe%20in%20varstvo%20osebnih%20podatkov%20CONSUL%20Trebnje.pdf%22%3B%20filename%2A%3DUTF-8%27%27Pogoji%2520uporabe%2520in%2520varstvo%2520osebnih%2520podatkov%2520CONSUL%2520Trebnje.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=SCW9KCFA9T0BF6XD1CMW%2F20230906%2Ffr-par%2Fs3%2Faws4_request&X-Amz-Date=20230906T072126Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=51b0d27ac2339c175116edc9738fdae1a699765bcde2c32836b4d4f33ac97182">TUKAJ</a>."
+      active_use: 'Aktivna uporaba spletnega orodja se ureja s pogoji uporabe, ki jih najdeš <a href="https://consul-trebnje.s3.fr-par.scw.cloud/fWfcFNpSeo8RZCqXXRdrJVjR?response-content-disposition=inline%3B%20filename%3D%22Pogoji%20uporabe%20in%20varstvo%20osebnih%20podatkov%20CONSUL%20Trebnje.pdf%22%3B%20filename%2A%3DUTF-8%27%27Pogoji%2520uporabe%2520in%2520varstvo%2520osebnih%2520podatkov%2520CONSUL%2520Trebnje.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=SCW9KCFA9T0BF6XD1CMW%2F20230906%2Ffr-par%2Fs3%2Faws4_request&X-Amz-Date=20230906T072126Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=51b0d27ac2339c175116edc9738fdae1a699765bcde2c32836b4d4f33ac97182">TUKAJ</a>.'
     statuses:
       title: 'Izberi status predloga'
       waiting: 'Čaka na izvedbo'
