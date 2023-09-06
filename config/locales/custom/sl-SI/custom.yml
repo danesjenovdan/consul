@@ -104,7 +104,7 @@ sl-SI:
         not_selected: Neizbranih investicij ni mogoče podpreti
         not_enough_money: "Žal na voljo nimaš več dovolj proračuna."
         no_ballots_allowed: Faza izbiranja je končana
-        different_heading_assigned: "<strong>Glasuješ lahko samo za predloge v enakem območju.</strong>"
+        different_heading_assigned: "<strong>Na voljo nimaš več nobenega glasu. Če želiš glasovati za ta predlog, odstrani svoj glas z drugega predloga.</strong>"
         change_ballot: spremeniš svoje glasove
   comments:
     actions:
