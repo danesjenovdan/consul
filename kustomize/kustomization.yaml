@@ -1,15 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: consul
+namespace: consul-novo-mesto
 resources:
   - database.yaml
   - deployment.yaml
   - service.yaml
   - ingress.yaml
 images:
-  - name: consul
-    newName: rg.fr-par.scw.cloud/djnd/consul
-    newTag: '70b80503ce87d4437be6dff84800b883147b864f'
+  - name: consul-novo-mesto
+    newName: rg.fr-par.scw.cloud/djnd/consul-novo-mesto
+    newTag: 'latest'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
   #   newTag: '70b80503ce87d4437be6dff84800b883147b864f'

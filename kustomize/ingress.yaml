@@ -9,12 +9,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - 2022.mariborsodeluj.si
-        - mariborsodeluj.si
-        - www.mariborsodeluj.si
-      secretName: consul-maribor-tls
+        - consul-novo-mesto.lb.djnd.si
+      secretName: consul-novo-mesto-tls
   rules:
-    - host: 2022.mariborsodeluj.si
+    - host: consul-novo-mesto.lb.djnd.si
       http:
         paths:
           - path: /
@@ -24,23 +22,4 @@ spec:
                 name: consul
                 port:
                   number: 3000
-    - host: mariborsodeluj.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: consul
-                port:
-                  number: 3000
-    - host: www.mariborsodeluj.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: consul
-                port:
-                  number: 3000
+
