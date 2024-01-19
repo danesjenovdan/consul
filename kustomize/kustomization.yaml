@@ -7,7 +7,7 @@ resources:
   - service.yaml
   - ingress.yaml
 images:
-  - name: consul-novo-mesto
+  - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-novo-mesto
     newTag: '006c05c2f49c516d10d56bb0c4f42f827c169274'
   # - name: consul-assets
