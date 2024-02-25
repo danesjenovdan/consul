@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-novo-mesto
-    newTag: 'fd6551114de31548885279c8e00a9a513844595f'
+    newTag: 'aa1a58cb241c1d9ad18645e7c98d93e1fbc3b777'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: 'fd6551114de31548885279c8e00a9a513844595f'
+  #   newTag: 'aa1a58cb241c1d9ad18645e7c98d93e1fbc3b777'
