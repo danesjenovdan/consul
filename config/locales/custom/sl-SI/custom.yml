@@ -137,7 +137,7 @@ sl-SI:
           instructions_2: Ko potrdiš račun, lahko začneš sodelovati.
           thank_you: Hvala za registracijo na spletnem portalu. Zdaj moraš <b>potrditi svoj e-naslov</b>.
           title: Registracija
-          account_confirmed: 'Hvala za registracijo! Za nadaljevanje se moraš <b>vpisati</b>.'
+          account_confirmed: "Hvala za registracijo! Za nadaljevanje se moraš <b>vpisati</b>."
     mailer:
       reset_password_instructions:
         ignore_text: Če nisi zahteval_a spremembe gesla, lahko ignoriraš to e-sporočilo.
@@ -183,7 +183,7 @@ sl-SI:
     meta:
       pp_name: Maribor sodeluj
       place_name: Mestna Občina Maribor
-      guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
+      guiding_questions: "<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>"
       tos: "pogoji-uporabe"
     switcher:
       select: "Izberi proračun"
@@ -263,7 +263,7 @@ sl-SI:
     landing:
       title: Participativni proračun Mestne občine Novo mesto 2024–2025!
       heading_1: Imate tudi vi ideje za Novo mesto?
-      introduction_text: "<p>Vabimo vas, da neposredno predlagate svoje ideje in predloge za izvedbo projektov v Mestni občini Novo mesto, soobčanke in soobčani pa bodo z glasovanjem odločili, ali je vaša ideja dobra in ali naj jo Mestna občina Novo mesto realizira.</p><p>Mestna občina Novo mesto bo v prvi izvedbi participativnega proračuna za uresničitev izbranih projektov v letih 2024 in 2025 namenila 100.000 EUR, ki bodo umeščene v proračunu Mestne občine Novo mesto 2025 in jih bo z glasovanjem sprejel Občinski svet.</p><p>Vabimo vas, da najkasneje do 23. aprila 2024 svoje predloge oddate prek spletnega mesta <a href="https://idejezanovomesto.si/">https://idejezanovomesto.si/</a> ali oddate izpolnjen obrazec na sedežu Mestne občine Novo mesto.</p>"
+      introduction_text: "<p>Vabimo vas, da neposredno predlagate svoje ideje in predloge za izvedbo projektov v Mestni občini Novo mesto, soobčanke in soobčani pa bodo z glasovanjem odločili, ali je vaša ideja dobra in ali naj jo Mestna občina Novo mesto realizira.</p><p>Mestna občina Novo mesto bo v prvi izvedbi participativnega proračuna za uresničitev izbranih projektov v letih 2024 in 2025 namenila 100.000 EUR, ki bodo umeščene v proračunu Mestne občine Novo mesto 2025 in jih bo z glasovanjem sprejel Občinski svet.</p><p>Vabimo vas, da najkasneje do 23. aprila 2024 svoje predloge oddate prek spletnega mesta <a href='https://idejezanovomesto.si/'>https://idejezanovomesto.si/</a> ali oddate izpolnjen obrazec na sedežu Mestne občine Novo mesto.</p>"
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
@@ -271,21 +271,13 @@ sl-SI:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločate vi, občanke in občani. Vi namreč predlagate projekte in vi odločite, kateri naj bodo uresničeni – kateri so najnujnejši in bodo najbolj prispevali h kakovosti bivanja v novomeški občini."
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Občanke in občani boste svoje predloge projektov lahko oddali med 21. marcem in 23. aprilom 2024. 
-
-Predlog projekta mora biti usklajen z navodili in merili za izbor, njegova ocenjena vrednost pa ne sme biti nižja od 3.000 EUR in višja od 15.000 EUR. 
-
-Projekt lahko predlagate vsi, ki imate stalno ali začasno prebivališče v Mestni občini Novo mesto in ste ali boste v letu 2024 dopolnili 15 let. 
-
-Obrazec s predlogom lahko občani oddate na tej spletni strani ali v sprejemni pisarni Mestne občine Novo mesto (Seidlova cesta1, 8000 Novo mesto), kjer so na voljo natisnjeni obrazci. Izpolnjene obrazce lahko pošljete tudi na elektronski naslov ideje@novomesto.si."
+      description_1: "<p>Občanke in občani boste svoje predloge projektov lahko oddali med 21. marcem in 23. aprilom 2024.</p><p>Predlog projekta mora biti usklajen z navodili in merili za izbor, njegova ocenjena vrednost pa ne sme biti nižja od 3.000 EUR in višja od 15.000 EUR.</p><p>Projekt lahko predlagate vsi, ki imate stalno ali začasno prebivališče v Mestni občini Novo mesto in ste ali boste v letu 2024 dopolnili 15 let.</p><p>Obrazec s predlogom lahko občani oddate na tej spletni strani ali v sprejemni pisarni Mestne občine Novo mesto (Seidlova cesta1, 8000 Novo mesto), kjer so na voljo natisnjeni obrazci. Izpolnjene obrazce lahko pošljete tudi na elektronski naslov ideje@novomesto.si.</p>"
       date_1: 21. 3.-23. 4. 2024
       heading_2: Pregled predlogov
       description_2: "Vse oddane predloge bo pregledala komisija in ocenila, ali posamezni predlog ustreza pogojem,  objavljenim na tej spletni strani. Komisija bo vsak predlog finančno ovrednotila in preverila, ali je izvedljiv, skladen z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna. Komisija lahko podobne predloge združi."
       date_2: 6. 5.-27. 5. 2024
       heading_3: Glasovanje
-      description_3: "Glasovanje bo potekalo med 5. in 19. junijem 2024, in sicer prek spletnega mesta <a href="https://idejezanovomesto.si/">https://idejezanovomesto.si/</a> ali v prostorih Mestne občine Novo mesto na Seidlovi cesti 1 v Novem mestu.
-
-Glasuje lahko vsak posameznik s stalnim ali začasnih prebivališčem v Mestni občini Novo mesto, ki je ali bo v letu 2024 dopolnil 15 let."
+      description_3: "<p>Glasovanje bo potekalo med 5. in 19. junijem 2024, in sicer prek spletnega mesta <a href='https://idejezanovomesto.si/'>https://idejezanovomesto.si/</a> ali v prostorih Mestne občine Novo mesto na Seidlovi cesti 1 v Novem mestu.</p><p>Glasuje lahko vsak posameznik s stalnim ali začasnih prebivališčem v Mestni občini Novo mesto, ki je ali bo v letu 2024 dopolnil 15 let.</p>"
       date_3: 5. 6.-19. 6. 2022
       heading_4: Potrditev rezultatov
       description_4: "Po končanem glasovanju bo komisija preverila rezultate in razglasila, kateri projekti so bili izbrani. Z izbranimi projekti bo seznanjen občinski svet Mestne občine Novo mesto."
@@ -367,11 +359,11 @@ Glasuje lahko vsak posameznik s stalnim ali začasnih prebivališčem v Mestni o
       responsibilities_fourth: " se bo trudila, da bi tovrstne vsebine kar najhitreje umaknila s spletnega orodja in proti uporabnikom uvedla ustrezne sankcije."
       responsibilities_fifth: "V primeru kakršnega koli spora med uporabniki spletnega orodja in / ali tretjo osebo je Mestna Občina Maribor izvzeta iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in / ali nastalimi v sodnem postopku."
     statuses:
-      title: 'Izberi status predloga'
-      waiting: 'Čaka na izvedbo'
-      doing: 'Se izvaja'
-      done: 'Izveden'
-      nil: 'Ni statusa'
+      title: "Izberi status predloga"
+      waiting: "Čaka na izvedbo"
+      doing: "Se izvaja"
+      done: "Izveden"
+      nil: "Ni statusa"
     errors:
       data_consent: "Za nadaljevanje se moraš strinjati z obdelavo podatkov."
       price: "Polje vrednost projekta ne sme biti prazno."
