@@ -23,10 +23,9 @@
 
       <%= f.invisible_captcha :address %>
 
-      <%# TODO: dodaj autocomplete polje za naslov %>
-      <%# <%= f.text_field :naslov %>
-
       <%= f.email_field :email %>
+
+      <%= f.phone_field :phone_number %>
 
       <%= f.password_field :password, autocomplete: "off" %>
 
