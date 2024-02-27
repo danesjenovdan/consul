@@ -289,20 +289,20 @@ sl-SI:
     help:
       main_title: "Pogosta vprašanja"
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
-      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ telefonsko številko, e-naslov in internetno povezavo, vse funkcionalnosti lahko opraviš tudi na občini in sedežih krajevnih skupnosti."
+      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebujete telefonsko številko, e-naslov in internetno povezavo."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
-      description_2: "Račun ustvariš tako, da v nogi spletnega mesta klikneš na gumb Registracija, klik na kateri koli gumb za akcijo te prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, telefonsko, EMŠO in geslo. Po kreiranju računa ga moraš potrditi s klikom na povezavo v e-pošti, ki jo bomo poslali na tvoj e-naslov."
+      description_2: "Račun ustvarite tako, da v nogi spletnega mesta kliknete na gumb Registracija, klik na katerikoli gumb za akcijo pa vas prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa je treba vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, telefonsko številko, EMŠO in geslo. Po kreiranju računa je treba tega potrditi še s klikom na povezavo v e-pošti, ki vam jo bomo poslali na vaš e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Poleg spletnega je mogoče predlog oddati tudi v fizični obliki, in sicer: po pošti, na naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor,  osebno na navedem naslovu, v sprejemni pisarni št. 14 (do 13. ure), ali v kateri koli mestni četrti/krajevni skupnosti v času uradnih ur (tam bodo na voljo tudi tiskani obrazci). Za pomoč pri pripravi predlogov projektov se lahko udeležiš interaktivne in praktičnih delavnic, ki bodo vsak četrtek, ob 18. uri od 19. maja do 23. junija."
+      description_3: "Predlog ustvarite v okviru spletnega orodja, lahko pa ga oddate tudi na fizičnem obrazcu osebno v sprejemni pisarni Mestne občine Novo mesto, na Seidlovi cesti 1 v Novem mestu, v času uradnih ur."
       heading_4: "Pozabil/-a sem svoje geslo. Kaj lahko storim?"
-      description_4: "Klikni na gumb Prijava, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel/-a navodila, kako ustvariti novo geslo."
+      description_4: "Kliknite na gumb Prijava, potem pa izberite povezavo Pozabljeno geslo. Na svoj elektronski naslov boste prejeli navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
-      description_5: "V nogi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
+      description_5: "V nogi spletnega mesta kliknite na gumb Moj račun, kjer lahko spremenite vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
       technical_issues: "Imaš tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnike Mestne občine Maribor na <a href="mailto:sodeluj@maribor.si" target="_blank">sodeluj@maribor.si</a>.'
+      other_contact: 'Pišite nam na <a href="mailto:ideje@novomesto.si" target="_blank">ideje@novomesto.si</a>.'
     terms:
       main_title: "Pogoji uporabe"
       active_use: "Aktivna uporaba spletnega orodja se ureja s spodnjimi pogoji za uporabo, zato se morajo vsi, ki želijo aktivno sodelovati, registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe."
