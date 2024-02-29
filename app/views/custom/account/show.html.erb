@@ -146,7 +146,7 @@ $( function() {
               </div>
 
               <% if @account.email.present? %>
-                <h2 class="margin-top"><%= t("account.show.notifications") %></h2>
+                <h2 class="margin-top hide"><%= t("account.show.notifications") %></h2>
 
                 <div class="hide">
                   <%= f.check_box :email_on_comment %>
@@ -156,7 +156,7 @@ $( function() {
                   <%= f.check_box :email_on_comment_reply %>
                 </div>
 
-                <div>
+                <div class="hide">
                   <%= f.check_box :newsletter %>
                 </div>
 
