@@ -130,7 +130,10 @@ sl-SI:
     users:
       registrations:
         new:
-          terms: Z registracijo sprejemaš %{terms}.
+          terms: "Občinski upravni organ Mestne občine Nova Gorica pooblaščam in mu dovoljujem preverjanje verodostojnosti mojih osebnih podatkov: ime in priimek, naslov in EMŠO, za potrebe projekta »Participativni proračun« iz uradnih evidenc in zbirk osebnih podatkov pri upravljalcih zbirk osebnih podatkov. Dovoljujem tudi obdelavo osebnih podatkov za namen izbire projektnih predlogov za potrebe projekta »Participativni proračun 2024-2026«. Več informacij o varstvu osebnih podatkov v Mestni občini Nova Gorica najdete na naslednji povezavi: %{terms}."
+          terms_link: "https://www.nova-gorica.si/za-obcane/varstvo-osebnih-podatkov/"
+          confirm_truth: "S podpisom izjavljam, da so vsi navedeni podatki resnični."
+          consent_to_publish_name: "Mestni občini Nova Gorica dovoljujem, da objavi moje uporabniško ime ob oddanem predlogu. (Opomba: če tega polja ne odkljukaš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na platformi ali spletni strani občine)."
         success:
           back_to_index: Velja, vrni me na začetno stran
           instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.

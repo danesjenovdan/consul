@@ -37,7 +37,7 @@ class Management::UsersController < Management::BaseController
   private
 
     def user_params
-      params.require(:user).permit(:document_type, :document_number, :username, :email, :phone_number, :date_of_birth)
+      params.require(:user).permit(:document_type, :document_number, :username, :email, :date_of_birth)
     end
 
     def destroy_session
