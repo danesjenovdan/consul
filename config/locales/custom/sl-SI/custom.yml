@@ -210,7 +210,7 @@ sl-SI:
       headings: Območja
       headings_sidebar: "<li>  <h6>Območje 1 (196.000 EUR)</h6>  <div>Levi breg: KS Kamnica, KS Bresternica-Gaj, MČ Koroška vrata</div></li><li>  <h6>Območje 2 (196.000 EUR)</h6>  <div>Levi breg: MČ Ivan Cankar, MČ Center, KS Malečnik-Ruperče</div></li><li>  <h6>Območje 3 (196.000 EUR)</h6>  <div>Desni breg: KS Limbuš, KS Pekre, MČ Radvanjem, KS Razvanje</div></li><li>  <h6>Območje 4 (196.000 EUR)</h6>  <div>Desni breg: MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova</div></li><li>  <h6>Območje 5 (196.000 EUR)</h6>  <div>Desni breg: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno</div></li>"
       select_heading: Izberi območje
-      select_tag: Izberi mestno četrt
+      select_tag: Izberi krajevno skupnost
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Merila za oddajo predloga projekta in uvrstitev na glasovanje"
