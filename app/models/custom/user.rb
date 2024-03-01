@@ -4,8 +4,9 @@ require_dependency Rails.root.join('app', 'models', 'user').to_s
 class User < ApplicationRecord
 
   validate :emso_number, on: :create
-#   validate :validate_data_consent, on: :create
+  validate :validate_data_consent, on: :create
   validates :email, on: :create, presence: true
+  validates :confirm_age, acceptance: { allow_nil: false }, on: :create
   
   def validate_data_consent
     unless data_consent

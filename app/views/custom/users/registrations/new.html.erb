@@ -21,12 +21,35 @@
       <%= f.hidden_field :document_type, value: "1" %>
       <%= f.text_field :document_number, label: t("custom.terms.emso"), placeholder: t("devise_views.users.registrations.new.document_number") %>
 
-      <%= f.invisible_captcha :address %>
+      <%= f.invisible_captcha :home_address %>
 
-      <%# TODO: dodaj autocomplete polje za naslov %>
-      <%# <%= f.text_field :naslov %>
+      <%= f.select :address, [
+        'Bršljin',
+        'Center',
+        'Drska',
+        'Gotna vas',
+        'Kandija - Grm',
+        'Ločna - Mačkovec',
+        'Majde Šilc',
+        'Mestne njive',
+        'Regrča vas in Šmihel',
+        'Birčna vas',
+        'Brusnice',
+        'Bučna vas',
+        'Dolž',
+        'Gabrje',
+        'Karteljevo',
+        'Mali Slatnik',
+        'Otočec',
+        'Podgrad',
+        'Prečna',
+        'Stopiče',
+        'Uršna sela'
+      ], id: "address", label: t('custom.form.address'), :include_blank => true %>
 
       <%= f.email_field :email %>
+
+      <%= f.phone_field :phone_number, label: t("custom.form.phone_number") %>
 
       <%= f.password_field :password, autocomplete: "off" %>
 
@@ -37,11 +60,21 @@
         <%= f.text_field :redeemable_code %>
       <% end %>
 
+      <%= f.check_box :data_consent,
+        title: t("devise_views.users.registrations.new.data_consent"),
+        label: t("devise_views.users.registrations.new.data_consent") %>
+
+      <%= f.check_box :confirm_age,
+        title: t("devise_views.users.registrations.new.confirm_age"),
+        label: t("devise_views.users.registrations.new.confirm_age") %>
+
       <%= f.check_box :terms_of_service,
         title: t("devise_views.users.registrations.new.terms_title"),
         label: t("devise_views.users.registrations.new.terms",
-                 terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
-                ) %>
+          terms: link_to(t("devise_views.users.registrations.new.terms_link_title"), t("devise_views.users.registrations.new.terms_link"))
+          ) %>
+      
+      <%= f.check_box :consent_to_publish_name, title: t('devise_views.users.registrations.new.consent_to_publish_name'), label: t("devise_views.users.registrations.new.consent_to_publish_name") %>
 
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>

@@ -130,7 +130,12 @@ sl-SI:
     users:
       registrations:
         new:
-          terms: Z registracijo sprejemaš %{terms}.
+          terms: "Z registracijo sprejemaš %{terms}."
+          terms_link: "/pogoji-uporabe"
+          terms_link_title: "pogoje uporabe"
+          data_consent: "Soglašam z obravnavo podanega predloga v sklopu izbire predlogov projektov IDEJE ZA NOVO MESTO, Participativni proračun Mestne občine Novo mesto 2024–2025, in s tem, da me Mestna občina Novo mesto lahko kontaktira zaradi obdelave predloga."
+          confirm_age: "Predlagateljica/predlagatelj izjavljam, da sem v letu 2024 dopolnil(a) najmanj 15. leto starosti."
+          consent_to_publish_name: "Soglašam, da se moje ime in priimek pojavita ob objavi predloga."
         success:
           back_to_index: Velja, vrni me na začetno stran
           instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
@@ -240,8 +245,8 @@ sl-SI:
     form:
       submit_anonymously: Oddaj anonimno
       submit_anonymously_explanation: S potrditvijo te zahteve se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani.
-      phone: Telefonska številka
-      address: Naslov stalnega prebivališča
+      phone_number: Telefonska številka (neobvezno)
+      address: Krajevna skupnost iz katere prihajate (neobvezno)
       name_and_last_name: Ime in priimek (uporabniško ime)
       accept_terms: Strinjam se s %{conditions}
       table_content: Vsebina
