@@ -208,7 +208,7 @@ sl-SI:
       headings: Območja
       headings_sidebar: "<li>  <h6>Območje 1</h6>  <div>    Krajevne skupnosti Nova Gorica Kromberk – Loke, Rožna Dolina, Solkan  </div></li><li>  <h6>Območje 2</h6>  <div>Krajevne skupnosti Čepovan, Lokve - Lazna, Ravnica, Trnovo</div></li><li>  <h6>Območje 3</h6>  <div>Krajevne skupnosti Banjšice, Grgar, Grgarske Ravne – Bate, Lokovec</div></li><li>  <h6>Območje 4</h6>  <div>    Krajevne skupnosti Branik, Dornberk, Gradišče nad Prvačino, Prvačina  </div></li><li>  <h6>Območje 5</h6>  <div>Krajevne skupnosti Osek – Vitovlje, Ozeljan – Šmihel, Šempas</div></li>"
       select_heading: Izberi območje
-      select_tag: Izberi mestno četrt
+      select_tag: Izberi mladinske projekte
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Kriteriji za oddajo projektnih predlogov"
