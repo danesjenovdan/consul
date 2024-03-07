@@ -115,7 +115,7 @@ sl-SI:
         valuator_ids: "Skupine"
         valuation_tag_list: "Oznake"
       budget/investment/translation:
-        title: "Naslov predloga"
+        title: "Naziv - ime projektnega predloga"
         description: "Opis predloga"
       geozone:
         name: Ime

@@ -4,8 +4,10 @@ require_dependency Rails.root.join('app', 'models', 'user').to_s
 class User < ApplicationRecord
 
   validate :emso_number, on: :create
-#   validate :validate_data_consent, on: :create
   validates :email, on: :create, presence: true
+  # validates :data_consent, on: :create
+  validates :phone_number, on: :create, presence: true
+  validates :confirm_truth, acceptance: { allow_nil: false }, on: :create
   
   def validate_data_consent
     unless data_consent
@@ -30,7 +32,7 @@ class User < ApplicationRecord
   end
 
   def is_old_enough(birthday)
-    date_limit = Date.parse('2005-12-13')
+    date_limit = Date.parse('2009-06-15')
     if date_limit < birthday
       return false
     end
