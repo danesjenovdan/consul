@@ -10,9 +10,20 @@ spec:
   tls:
     - hosts:
         - consul-nova-gorica.lb.djnd.si
+        - participativni-proracun.nova-gorica.si
       secretName: consul-nova-gorica-tls
   rules:
     - host: consul-nova-gorica.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: participativni-proracun.nova-gorica.si
       http:
         paths:
           - path: /
