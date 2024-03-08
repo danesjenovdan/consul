@@ -61,7 +61,7 @@ sl-SI:
         submit: "Oddaj predlog"
       index:
         title: Participativni proračun
-        by_heading: "Investicijski projekti na območju: %{heading}"
+        by_heading: "Vaša košarica"
         sidebar:
           different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
       header:
