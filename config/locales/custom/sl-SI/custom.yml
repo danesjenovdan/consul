@@ -264,7 +264,7 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun 2023-2024!
+      title: Participativni proračun 2024-2026!
       introduction_text: S projektom participativnega proračuna lahko občani Mestne občine Nova Gorica soodločate pri razporejanju dela proračunskega denarja. Projektni predlogi, ki so po meri občanov, bodo izboljšali učinkovitost porabe skupnih sredstev, krepili participacijo v lokalnem okolju in izboljšali kakovost življenja v občini.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
@@ -340,6 +340,7 @@ sl-SI:
       name: "uporabniško ime"
       email: "elektronski naslov"
       emso: "EMŠO"
+      phone: "telefonsko številko"
       registration_first: "Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon."
       registration_second: "Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnica_k prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani ene_ga uporabnice_ka je prepovedano."
       registration_third: "Če uporabnica_k katerega izmed navedenih podatkov ne posreduje, ji_mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati spletnega orodja."
@@ -388,7 +389,8 @@ sl-SI:
       data_store_list: "Shranjujemo podatke o:"
       data_store_list_li1: "uporabniško ime,"
       data_store_list_li2: "elektronskem naslovu uporabnice_ka,"
-      data_store_list_li3: "EMŠO uporabnice_ka."
+      data_store_list_li3: "EMŠO uporabnice_ka,"
+      data_store_list_li4: "telefonska številka uporabnice_ka."
       data_store_first: "Drugih osebnih podatkov obdelovalec podatkov ne shranjuje."
       data_store_second: "Osebni podatki se ne prenašajo v tretje države ali mednarodne organizacije."
       data_process_title: "Na kakšen način obdelujemo osebne podatke"
