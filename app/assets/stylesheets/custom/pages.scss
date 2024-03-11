@@ -1,9 +1,10 @@
 .phase-enrichment {
   height: 260px;
   width: 300px;
-
+  
   &.accepting {
-    background: image-url("predlagaj-MB.svg") no-repeat;
+    background: image-url("predlagaj.png") no-repeat;
+    background-size: contain;
   }
 
   &.selecting {
@@ -12,11 +13,13 @@
   }
 
   &.balloting {
-    background: image-url("glasuj-MB.svg") no-repeat;
+    background: image-url("glasuj.png") no-repeat;
+    background-size: contain;
   }
 
   &.finished {
-    background: image-url("izvedi-MB.svg") no-repeat;
+    background: image-url("spremljaj.png") no-repeat;
+    background-size: contain;
   }
 
   &.reviewing,
