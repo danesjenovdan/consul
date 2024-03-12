@@ -296,7 +296,7 @@ sl-SI:
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
       description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebujete telefonsko številko, e-naslov in internetno povezavo."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
-      description_2: "Račun ustvarite tako, da v nogi spletnega mesta kliknete na gumb Registracija, klik na katerikoli gumb za akcijo pa vas prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa je treba vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, telefonsko številko, EMŠO in geslo. Po kreiranju računa je treba tega potrditi še s klikom na povezavo v e-pošti, ki vam jo bomo poslali na vaš e-naslov."
+      description_2: "Račun ustvarite tako, da v glavi spletnega mesta kliknete na gumb Vpiši se, ter nato na povezavo Registriraj se. Za kreiranje uporabniškega računa morate vpisati uporabniško ime, e-naslov, EMŠO in geslo. Po kreiranju računa ga morate potrditi še s klikom na povezavo v e-pošti, ki ti jo bomo poslali na vaš e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
       description_3: "Predlog ustvarite v okviru spletnega orodja, lahko pa ga oddate tudi na fizičnem obrazcu osebno v sprejemni pisarni Mestne občine Novo mesto, na Seidlovi cesti 1 v Novem mestu, v času uradnih ur."
       heading_4: "Pozabil/-a sem svoje geslo. Kaj lahko storim?"
@@ -304,9 +304,9 @@ sl-SI:
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
       description_5: "V nogi spletnega mesta kliknite na gumb Moj račun, kjer lahko spremenite vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
-      technical_issues: "Imaš tehnične težave?"
+      technical_issues: "Imate tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
-      other_questions: "Imaš kakršno koli drugo vprašanje?"
+      other_questions: "Imate kakršno koli drugo vprašanje?"
       other_contact: 'Pišite nam na <a href="mailto:ideje@novomesto.si" target="_blank">ideje@novomesto.si</a>.'
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
