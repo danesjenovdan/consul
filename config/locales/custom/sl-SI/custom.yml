@@ -317,7 +317,7 @@ sl-SI:
       help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
       contact1:
         mail: "mestna.obcina@novomesto.si"
-        note1: "Telefon: v času uradnih ur občinske uprave na 07/  7 39 39 202"
+        note1: "Telefon: v času uradnih ur občinske uprave na 07 39 39 202"
         note2: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
       contact2:
         mail: "consul@djnd.si"
@@ -376,10 +376,10 @@ sl-SI:
       data_protection_title: "Varovanje osebnih podatkov"
       data_protection_first: "Upravljalec osebnih podatkov je:"
       data_protection_first_note1: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
-      data_protection_first_note2: "Matična številka:  5883288000"
+      data_protection_first_note2: "Matična številka: 5883288000"
       data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: xyxyxyxyxyxyx"
       data_protection_first_note4: "E-naslov: mestna.obcina@novomesto.si"
-      data_protection_first_note5: "telefon: 07/ 7 39 39 202"
+      data_protection_first_note5: "telefon: 07 39 39 202"
       data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodeluj in glasuj! je:"
       data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
       data_protection_second_note2: "Matična številka: 6468594000"
