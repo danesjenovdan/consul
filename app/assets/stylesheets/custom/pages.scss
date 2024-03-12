@@ -5,6 +5,7 @@
   &.accepting {
     background: image-url("predlagaj.png") no-repeat;
     background-size: contain;
+    background-position: center;
   }
 
   &.selecting {
@@ -15,11 +16,13 @@
   &.balloting {
     background: image-url("glasuj.png") no-repeat;
     background-size: contain;
+    background-position: center;
   }
 
   &.finished {
     background: image-url("spremljaj.png") no-repeat;
     background-size: contain;
+    background-position: center;
   }
 
   &.reviewing,
