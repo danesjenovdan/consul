@@ -2,7 +2,7 @@ require_dependency Rails.root.join('app', 'models', 'budget', 'voting_styles', '
 
 class Budget::VotingStyles::Knapsack < Budget::VotingStyles::Base
     def amount_limit(heading)
-      100000
+      30000
     end
   end
   
