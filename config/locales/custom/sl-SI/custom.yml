@@ -301,8 +301,6 @@ sl-SI:
       description_3: "Predlog ustvarite v okviru spletnega orodja, lahko pa ga oddate tudi na fizičnem obrazcu osebno v sprejemni pisarni Mestne občine Novo mesto, na Seidlovi cesti 1 v Novem mestu, v času uradnih ur."
       heading_4: "Pozabil/-a sem svoje geslo. Kaj lahko storim?"
       description_4: "Kliknite na gumb Vpiši se, potem pa izberite povezavo Pozabljeno geslo. Na svoj elektronski naslov boste prejeli navodila, kako ustvariti novo geslo."
-      heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
-      description_5: "V nogi spletnega mesta kliknite na gumb Moj račun, kjer lahko spremenite vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
       technical_issues: "Imate tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
