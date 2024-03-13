@@ -10,9 +10,31 @@ spec:
   tls:
     - hosts:
         - consul-novo-mesto.lb.djnd.si
+        - idejezanovomesto.si
+        - www.idejezanovomesto.si
       secretName: consul-novo-mesto-tls
   rules:
     - host: consul-novo-mesto.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: idejezanovomesto.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: www.idejezanovomesto.si
       http:
         paths:
           - path: /
