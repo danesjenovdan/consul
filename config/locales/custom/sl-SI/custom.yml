@@ -294,7 +294,7 @@ sl-SI:
     help:
       main_title: "Pogosta vprašanja"
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
-      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebujete telefonsko številko, e-naslov in internetno povezavo."
+      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebujete e-naslov in internetno povezavo."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
       description_2: "Račun ustvarite tako, da v glavi spletnega mesta kliknete na gumb Vpiši se, ter nato na povezavo Registriraj se. Za kreiranje uporabniškega računa morate vpisati uporabniško ime, e-naslov, EMŠO in geslo. Po kreiranju računa ga morate potrditi še s klikom na povezavo v e-pošti, ki ti jo bomo poslali na vaš e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
