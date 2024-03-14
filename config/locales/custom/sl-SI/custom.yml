@@ -57,7 +57,8 @@ sl-SI:
       edit:
         submit: "Shrani spremembe"
       form:
-        tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
+        tags_label: "Krajevna skupnost"
+        tags_instructions: "Označi del občine, v katerem bo projekt izveden."
         submit: "Oddaj predlog"
       index:
         title: Participativni proračun
