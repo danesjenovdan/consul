@@ -135,7 +135,7 @@ sl-SI:
           terms_link: "/pogoji-uporabe"
           terms_link_title: "pogoje uporabe"
           data_consent: "Soglašam z obravnavo podanega predloga v sklopu izbire predlogov projektov IDEJE ZA NOVO MESTO, Participativni proračun Mestne občine Novo mesto 2024–2025, in s tem, da me Mestna občina Novo mesto lahko kontaktira zaradi obdelave predloga."
-          confirm_age: "Predlagateljica/predlagatelj izjavljam, da sem v letu 2024 dopolnil(a) najmanj 15. leto starosti."
+          confirm_age: "Predlagateljica/predlagatelj izjavljam, da sem ali bom v letu 2024 dopolnil_a najmanj 15. leto starosti."
           consent_to_publish_name: "Soglašam, da se moje ime in priimek pojavita ob objavi predloga."
         success:
           back_to_index: Velja, vrni me na začetno stran
