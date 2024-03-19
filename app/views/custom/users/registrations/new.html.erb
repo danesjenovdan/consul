@@ -1,4 +1,20 @@
 <% provide :title do %><%= t("devise_views.users.registrations.new.title") %><% end %>
+
+<!-- TRŽIČ CUSTOM address autocomplete javascript -->
+<script>
+$( function() {
+  console.log('ready');
+  var availableTags = [
+    "Arharjeva ulica",
+    // ...
+  ];
+  $( "#address" ).autocomplete({
+    source: availableTags
+  });
+} );
+</script>
+<!-- end TRŽIČ CUSTOM address autocomplete javascript -->
+
 <h1><%= t("devise_views.users.registrations.new.title") %></h1>
 
 <%= render "devise/omniauth_form", action: "sign_up" %>
@@ -21,10 +37,9 @@
       <%= f.hidden_field :document_type, value: "1" %>
       <%= f.text_field :document_number, label: t("custom.terms.emso"), placeholder: t("devise_views.users.registrations.new.document_number") %>
 
-      <%= f.invisible_captcha :address %>
+      <%= f.invisible_captcha :home_address %>
 
-      <%# TODO: dodaj autocomplete polje za naslov %>
-      <%# <%= f.text_field :naslov %>
+      <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true %>
 
       <%= f.email_field :email %>
 
@@ -42,6 +57,8 @@
         label: t("devise_views.users.registrations.new.terms",
                  terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
                 ) %>
+      
+      <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: t("custom.terms.terms_second_checkbox") %>
 
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>
