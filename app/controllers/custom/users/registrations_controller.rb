@@ -1,6 +1,8 @@
 require_dependency Rails.root.join('app', 'controllers', 'users', 'registrations_controller').to_s
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  invisible_captcha only: [:create], honeypot: :home_address, scope: :user
+
   def sign_up_params
     params[:user].delete(:redeemable_code) if params[:user].present? && params[:user][:redeemable_code].blank?
     params.require(:user).permit(:username, :email, :password,

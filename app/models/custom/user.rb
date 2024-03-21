@@ -14,6 +14,10 @@ class User < ApplicationRecord
     end
   end
 
+  def validate_address
+    errors.add(:address, I18n.t('activerecord.errors.models.user.attributes.address.invalid')) unless is_valid_address?
+  end
+
   def emso_number
     unless organization
       errors.add(:document_number, I18n.t('activerecord.errors.models.user.attributes.document_number.invalid')) unless valid_emso_number?
