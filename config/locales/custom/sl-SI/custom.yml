@@ -436,7 +436,7 @@ sl-SI:
       cookies_why_intro: "So temeljnega pomena za zagotavljanje uporabnici_ku prijaznih spletnih storitev. Interakcija med spletno_im uporabnico_kom in spletno storitvijo je s pomočjo piškotkov hitrejša in enostavnejša. Z njihovo pomočjo si spletna storitve zapomni vaše želje, zanimanja in izkušnje, s tem je prihranjen čas, uporaba spletnih storitev pa je bolj učinkovita in prijazna."
       cookies_min_title: "Nujno potrebni piškotki"
       cookies_min_intro: "To so piškotki, ki so nujni za pravilno delovanje spletnih storitev in brez njih prenos sporočila v komunikacijskem omrežju ne bi bilo mogoče. Ti piškotki omogočajo uporabnici_ku delovanje prijaznih spletnih storitev, boljšo uporabniško izkušnjo in za njih ni potrebno pridobiti soglasja."
-      cookies_list: "Spletno orodje Consul, ki poganja Sodeluj in glasuj!, uporablja zgolj dva nujno potrebna piškotka:"
+      cookies_list: "Spletno orodje Consul, ki poganja Projekt več za Tržič, uporablja zgolj dva nujno potrebna piškotka:"
       cookies_list_li1: "_consul_session"
       cookies_list_li1_desc: "Se uporablja, da je uporabnic_ka lahko vpisan_a v spletno orodje in lahko glasuje."
       cookies_list_li2: "ahoy_visit in ahoy_visitor"
