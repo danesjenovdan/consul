@@ -46,7 +46,7 @@ sl-SI:
       subject: "Hvala, ker si ustvaril_a projektni predlog!"
       title: "Hvala, ker si ustvaril_a projektni predlog!"
       intro: "Hej, <strong>%{author}</strong>,"
-      text: "zahvaljujemo se ti za ustvarjen predlog <strong>%{investment}</strong> za participatorni proračun <strong>%{budget}</strong>."
+      text: "zahvaljujemo se ti za ustvarjen predlog <strong>%{investment}</strong> za participativni proračun <strong>%{budget}</strong>."
       follow: "O tem, kako proces napreduje, te bomo sproti obveščali."
       follow_link: "Participativni proračuni"
       sincerely: "Z lepimi pozdravi,"
