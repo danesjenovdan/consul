@@ -132,6 +132,7 @@ sl-SI:
         new:
           terms: Z registracijo sprejemaš %{terms}.
           terms_second: Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Tržič obdeluje moje osebne podatke za namen izvedbe projekta Več za Tržič.
+          password_hint: Geslo mora imeti najmanj 8 znakov.
         success:
           back_to_index: Velja, vrni me na začetno stran
           instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
