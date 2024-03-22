@@ -6,7 +6,7 @@
 
     <% unless budget.single_heading? %>
       <div>
-        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true } %>
+        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, hint: "Projekt lahko oddate samo v območju, kjer imate stalno bivališče." } %>
       </div>
     <% end %>
 
