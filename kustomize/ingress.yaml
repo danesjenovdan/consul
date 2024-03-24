@@ -10,9 +10,20 @@ spec:
   tls:
     - hosts:
         - consul-trzic.lb.djnd.si
+        - projektveczatrzic.djnd.si
       secretName: consul-trzic-tls
   rules:
     - host: consul-trzic.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: projektveczatrzic.djnd.si
       http:
         paths:
           - path: /
