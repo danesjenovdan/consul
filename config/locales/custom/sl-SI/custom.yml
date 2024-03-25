@@ -134,6 +134,7 @@ sl-SI:
           terms_link: "https://www.nova-gorica.si/za-obcane/varstvo-osebnih-podatkov/"
           confirm_truth: "S podpisom izjavljam, da so vsi navedeni podatki resnični."
           consent_to_publish_name: "Mestni občini Nova Gorica dovoljujem, da objavi moje uporabniško ime ob oddanem predlogu. (Opomba: če tega polja ne odkljukaš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na platformi ali spletni strani občine)."
+          password_hint: Geslo mora imeti najmanj 8 znakov.
         success:
           back_to_index: Velja, vrni me na začetno stran
           instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
