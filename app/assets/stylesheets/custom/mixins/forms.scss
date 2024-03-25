@@ -137,6 +137,21 @@ form .checkbox-label {
   }
 }
 
-.form-error {
-  margin-top: -24px;
+#new_budget_investment {
+  .form-error {
+    margin-top: -24px;
+  }
+
+  .images, .documents {
+    .attachment-actions {
+      .form-error {
+        margin-top: 0;
+      }
+    }
+    .column.title {
+      .form-error {
+          margin-top: -12px;
+        }
+    }
+  }
 }
