@@ -248,7 +248,7 @@ sl-SI:
       submit_anonymously: Oddaj anonimno
       submit_anonymously_explanation: S potrditvijo te zahteve se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani.
       phone_number: Telefonska številka (neobvezno)
-      address: Krajevna skupnost iz katere prihajate (neobvezno)
+      address: Krajevna skupnost, iz katere prihajate (neobvezno)
       name_and_last_name: Ime in priimek (uporabniško ime)
       accept_terms: Strinjam se s %{conditions}
       table_content: Vsebina
@@ -432,7 +432,7 @@ sl-SI:
       data_insight_fourth: "Prav tako ima vsak_a posameznica_k, na katero se nanašajo osebni podatki, pravico, da vloži pritožbo neposredno pri Informacijskem pooblaščencu, če meni, da obdelava osebnih podatkov v zvezi z njo krši veljavno zakonodajo. Kontakt Informacijskega pooblaščenca:"
       data_insight_fourth_note1: "Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana"
       data_insight_fourth_note2: "Telefon: 01 230 97 30"
-      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si'"
+      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si"
       cookies_title: "Piškotki"
       cookies_intro: "Zakon o elektronskih komunikacijah (Uradni list št. 109/2012) ZEKom-1 je v pravni red prinesel pravila glede uporabe piškotkov in podobnih tehnologij za shranjevanje informacij ali dostop do informacij, shranjenih na računalnikih, tablicah ali mobilnih napravah uporabnikov. Naše orodje lahko v brskalnik vašega računalnika odloži tako imenovani »piškotek«."
       cookies_what_title: "Kaj so piškotki?"
