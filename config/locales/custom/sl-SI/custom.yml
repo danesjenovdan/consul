@@ -41,6 +41,8 @@ sl-SI:
           attributes:
             document_number:
               invalid: EMŠO ni pravilne oblike.
+        tags:
+          minimum: Izbrati morate vsaj eno krajevno skupnost.
   budgets:
     investments:
       investment:
