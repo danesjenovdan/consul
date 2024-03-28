@@ -347,6 +347,7 @@ sl-SI:
       registration_intro2: "Uporabnica_k z registracijo potrjuje, da bo leta 2024 dopolnil_a najmanj 15 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Mestno občino Novo mesto, da preveri verodostojnost osebnih podatkov za potrebe projekta Ideje za Novo mesto iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
       registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
       name: "uporabniško ime"
+      telefon: "telefonsko številko"
       email: "elektronski naslov"
       emso: "EMŠO"
       registration_first: "Uporabnica_k lahko ob registraciji navede tudi telefonsko številko in krajevno skupnost, iz katere prihaja. Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon."
