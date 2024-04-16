@@ -248,7 +248,7 @@ sl-SI:
     form:
       submit_anonymously: Oddaj anonimno
       submit_anonymously_explanation: S potrditvijo te zahteve se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani.
-      phone: Telefonska številka
+      phone_number: Telefonska številka
       address: Naslov stalnega prebivališča
       name_and_last_name: Ime in priimek (uporabniško ime)
       accept_terms: Strinjam se s %{conditions}
