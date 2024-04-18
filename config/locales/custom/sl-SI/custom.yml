@@ -347,6 +347,7 @@ sl-SI:
       registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
       name: "uporabniško ime"
       email: "elektronski naslov"
+      telefon: "telefonsko številko"
       emso: "EMŠO"
       address: "Stalni naslov"
       registration_first: "Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon."
