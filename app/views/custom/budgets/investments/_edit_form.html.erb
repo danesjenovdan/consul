@@ -37,11 +37,20 @@
 
     <% if @budget.questions.any? %>
       <%= f.fields_for :answers, f.object.answers.order(:id) do |builder| %>
-        <p>
-          <%= builder.text_area :text, label: @budget.questions.order(:id)[builder.index].text, rows: 5 %>
-        </p>
+        <div>
+          <%= f.label :text, @budget.questions.order(:id)[builder.index].text %>
+          <p class="help-text">Opis projektnega predloga naj čim bolj jasno opredeli: Zakaj je predlagani projekt potreben? Katere aktivnosti se bo izvedlo in na kakšen način? Kje naj bi se projektni predlog izvedel?</p>
+          <%= builder.text_area :text, label: false, rows: 5 %>
+        </div>
       <% end %>
     <% end %>
+
+    <br />
+
+    <label>Priloge</label>
+    <p class="help-text">Priložite morebitne fotografije, načrte, skice, predračune ali drugo gradivo v povezavi s projektom, ki lahko jasneje prikažejo vaš projektni predlog.</p>
+    
+    <br/>
 
     <% if feature?(:allow_images) %>
       <div class="images">
@@ -55,6 +64,7 @@
       </div>
     <% end %>
 
+    <!--
     <% if feature?(:map) %>
       <div>
         <%= render "map_locations/form_fields",
@@ -67,6 +77,7 @@
                     i18n_namespace: "budgets.investments" %>
       </div>
     <% end %>
+    -->
 
     <div class="small-12 column hide">
       <%= f.label :location, t("budgets.investments.form.location") %>
