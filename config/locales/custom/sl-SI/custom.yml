@@ -154,7 +154,7 @@ sl-SI:
     buttons:
       destroy_document: Odstrani dokument
     form:
-      note: "Naložiš lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
+      note: "Naložiš lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko. Tu lahko oddate skice, idejne zasnove in pridobljene predračune."
   images:
     form:
       title: Slika

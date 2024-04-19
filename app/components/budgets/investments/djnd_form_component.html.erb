@@ -37,7 +37,6 @@
     <%= f.fields_for :answers do |builder| %>
       <div>
         <%= f.label :text, budget.questions.order(:id)[builder.index].text %>
-        <p class="help-text">Opis projektnega predloga naj čim bolj jasno opredeli: Zakaj je predlagani projekt potreben? Katere aktivnosti se bo izvedlo in na kakšen način? Kje naj bi se projektni predlog izvedel?</p>
         <%= builder.text_area :text, label: false, rows: 5 %>
         <%= builder.hidden_field :budget_id %>
         <%= builder.hidden_field :budget_question_id %>
