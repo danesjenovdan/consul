@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
         - koper.lb.djnd.si
-        - predlagam-odlocam.koper.si
+        - 2022predlagam-odlocam.koper.si
       secretName: consul-koper-tls
   rules:
     - host: koper.lb.djnd.si
@@ -23,7 +23,7 @@ spec:
                 name: consul
                 port:
                   number: 3000
-    - host: predlagam-odlocam.koper.si
+    - host: 2022predlagam-odlocam.koper.si
       http:
         paths:
           - path: /
