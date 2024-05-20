@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_09_132200) do
+ActiveRecord::Schema.define(version: 2022_05_30_121000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -419,8 +419,8 @@ ActiveRecord::Schema.define(version: 2022_06_09_132200) do
   create_table "budgets", id: :serial, force: :cascade do |t|
     t.string "currency_symbol", limit: 10
     t.string "phase", limit: 40, default: "accepting"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.text "description_accepting"
     t.text "description_reviewing"
     t.text "description_selecting"
