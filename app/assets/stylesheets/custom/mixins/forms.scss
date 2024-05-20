@@ -137,6 +137,10 @@ form .checkbox-label {
   }
 }
 
+.budget-investments .filters {
+  display: flex;
+}
+
 #new_budget_investment {
   .form-error {
     margin-top: -24px;

@@ -3,7 +3,7 @@
   width: 300px;
 
   &.accepting {
-    background: image-url("predlagaj-MB.svg") no-repeat;
+    background: image-url("predlagaj-MONG.svg") no-repeat;
   }
 
   &.selecting {
@@ -12,11 +12,11 @@
   }
 
   &.balloting {
-    background: image-url("glasuj-MB.svg") no-repeat;
+    background: image-url("glasuj-MONG.svg") no-repeat;
   }
 
   &.finished {
-    background: image-url("izvedi-MB.svg") no-repeat;
+    background: image-url("izvedi-MONG.svg") no-repeat;
   }
 
   &.reviewing,
@@ -1102,6 +1102,11 @@ span:hover::before {
     font-size: 14rem;
     font-weight: 900;
     line-height: 10rem;
+  }
+
+  .embed-responsive-item {
+    width: 100%;
+    height: 540px;
   }
 }
 

@@ -1,11 +1,15 @@
 <div class="districts-container">
-  <select onchange="if (this.value) location = this.value;" class="on-view">
-    <option value="<%= budget_investments_url(@budget, request.query_parameters.except(:tag_name)) %>"><%= t("custom.headings.select_tag").mb_chars.upcase %></option>
+  <% if params[:tag_name] %>
+  <a href="<%= budget_investments_url(@budget, request.query_parameters.except(:tag_name)) %>" class="tag">
+    Prikaži vse predloge
+  </a>
+  <% else %>
     <% @budget.categories.order("id ASC").each do |tag| %>
-    <%= selected = " selected" if params[:tag_name] == tag.name %>
-    <option value="<%= budget_investments_url(@budget, { heading_id: params[:heading_id], status_id: params[:status_id], tag_name: tag.name, unfeasible: params[:unfeasible], chosen: params[:chosen] }) %>" <%= selected %>><%= tag.name %></option>
+      <a href="<%= budget_investments_url(@budget, { heading_id: params[:heading_id], status_id: params[:status_id], tag_name: tag.name, unfeasible: params[:unfeasible], chosen: params[:chosen] }) %>" class="tag">
+        Prikaži samo mladinske predloge
+      </a>
     <% end %>
-  </select>
+  <% end %>
 </div>
 
 <style>
@@ -13,5 +17,17 @@
   position: relative;
   display: inline-block;
   margin-right: 0.5rem;
+}
+
+.districts-container a.tag {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  height: 2.4375rem;
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  border: 1px solid #cacaca;
+  border-radius: 0.1875rem;
+  text-decoration: none;
 }
 </style>
