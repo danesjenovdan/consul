@@ -8,8 +8,5 @@ resources:
   - ingress.yaml
 images:
   - name: consul
-    newName: rg.fr-par.scw.cloud/djnd/consul-nova-gorica
-    newTag: '4a3e0f3aeea4dc67ca3e7801dd7d8a45905cfcd6'
-  # - name: consul-assets
-  #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: '4a3e0f3aeea4dc67ca3e7801dd7d8a45905cfcd6'
+    newName: rg.fr-par.scw.cloud/djnd/consul-staging
+    newTag: '697080c0a5268d40d2df41b922286083e3ea2a91'
