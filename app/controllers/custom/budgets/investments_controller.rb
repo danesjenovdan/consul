@@ -8,7 +8,7 @@ module Budgets
     # soft voting indicator is shown in the balloting phase next to VOTE button on individual project page
     # is has 3 states: project is top X, project is close to top X, project is far away from top X
     # the state is decided by the number of votes the project receives in the given area
-    SHOW_TOP_INVESTMENTS = false # set true if you want to show the soft voting indicator at all
+    SHOW_TOP_INVESTMENTS = true # set true if you want to show the soft voting indicator at all
     NUMBER_OF_TOP_PROJECTS = 3 # set how many projects can be top
     MISSING_A_LITTLE_TO_TOP = 10 # set number of votes difference between "close to top" and "far from top"
     ### 

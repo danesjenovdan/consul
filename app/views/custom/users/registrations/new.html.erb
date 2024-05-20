@@ -23,12 +23,11 @@
 
       <%= f.invisible_captcha :address %>
 
-      <%# TODO: dodaj autocomplete polje za naslov %>
-      <%# <%= f.text_field :naslov %>
-
       <%= f.email_field :email %>
 
-      <%= f.password_field :password, autocomplete: "off", hint: t("devise_views.users.registrations.new.password_hint") %>
+      <%= f.phone_field :phone_number %>
+
+      <%= f.password_field :password, autocomplete: "off" %>
 
       <%= f.password_field :password_confirmation, autocomplete: "off",
                            label: t("devise_views.users.registrations.new.password_confirmation_label") %>
@@ -37,11 +36,17 @@
         <%= f.text_field :redeemable_code %>
       <% end %>
 
+      <%= f.check_box :confirm_truth,
+        title: t("devise_views.users.registrations.new.confirm_truth"),
+        label: t("devise_views.users.registrations.new.confirm_truth") %>
+
       <%= f.check_box :terms_of_service,
-        title: t("devise_views.users.registrations.new.terms_title"),
+        title: t("devise_views.users.registrations.new.terms"),
         label: t("devise_views.users.registrations.new.terms",
-                 terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
+                 terms: link_to(t("devise_views.users.registrations.new.terms_link"), t("devise_views.users.registrations.new.terms_link"))
                 ) %>
+
+      <%= f.check_box :consent_to_publish_name, title: t('devise_views.users.registrations.new.consent_to_publish_name'), label: t("devise_views.users.registrations.new.consent_to_publish_name") %>
 
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>
