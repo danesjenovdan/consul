@@ -298,7 +298,7 @@ sl-SI:
       heading_4: "Pozabil_a sem svoje geslo. Kaj lahko storim?"
       description_4: "Klikni na gumb Vpiši se, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel_a navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
-      description_5: "V nogi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
+      description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
       technical_issues: "Imaš tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
