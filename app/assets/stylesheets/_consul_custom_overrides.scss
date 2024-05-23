@@ -106,9 +106,10 @@ $color-alert: #79302F;
 $black: #222;
 $white: #fff;
 
-$body-font-family: 'Barlow', sans-serif !important;
+$body-font-family: 'ROGEdition-70', sans-serif !important;
+$body-font-family-bold: 'ROGEdition-100', sans-serif !important;
 
-$header-font-family: $body-font-family;
+$header-font-family: $body-font-family-bold;
 
 $global-radius: rem-calc(3);
 

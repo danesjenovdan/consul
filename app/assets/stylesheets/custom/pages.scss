@@ -3,7 +3,8 @@
   width: 300px;
 
   &.accepting {
-    background: image-url("predlagaj-MB.svg") no-repeat;
+    background: image-url("predlagaj.jpg") no-repeat;
+    background-size: contain;
   }
 
   &.selecting {
@@ -12,11 +13,13 @@
   }
 
   &.balloting {
-    background: image-url("glasuj-MB.svg") no-repeat;
+    background: image-url("glasuj.jpg") no-repeat;
+    background-size: contain;
   }
 
   &.finished {
-    background: image-url("izvedi-MB.svg") no-repeat;
+    background: image-url("spremljaj.jpg") no-repeat;
+    background-size: contain;
   }
 
   &.reviewing,
@@ -171,10 +174,10 @@ only screen and (min-resolution: 240dpi) {
     position: relative;
 
     .column-content {
-      padding: 50px 40px;
+      padding: 20px 40px;
 
       @media screen and (max-width: 87.9375em) {
-        padding: 50px 0;
+        padding: 20px 0;
       }
 
       h2 {

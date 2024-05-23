@@ -125,3 +125,28 @@
   font-weight: 500;
   font-style: normal;
 }
+
+// 4. ROG
+@font-face {
+    font-family: 'ROGEdition-70';
+    src:    url('rog/ROGEdition-70.woff2') format('woff2'), /* Super Modern Browsers */
+            url('rog/ROGEdition-70.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: 'ROGEditionItalic-70';
+    src:    url('rog/ROGEditionItalic-70.woff2') format('woff2'), /* Super Modern Browsers */
+            url('rog/ROGEditionItalic-70.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: 'ROGEdition-100';
+    src:    url('rog/ROGEdition-100.woff2') format('woff2'), /* Super Modern Browsers */
+            url('rog/ROGEdition-100.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: 'ROGEditionItalic-100';
+    src:    url('rog/ROGEditionItalic-100.woff2') format('woff2'), /* Super Modern Browsers */
+            url('rog/ROGEditionItalic-100.woff') format('woff'), /* Pretty Modern Browsers */
+}
