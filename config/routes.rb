@@ -45,4 +45,7 @@ Rails.application.routes.draw do
 
   # Static pages
   resources :pages, path: "/", only: [:show]
+
+  # Center Rog login
+  get "rog_login/:document_number", to: "rog#log_in_with_document_number"
 end
