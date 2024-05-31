@@ -62,6 +62,7 @@ sl-SI:
       index:
         title: Participativni proračun
         by_heading: "Investicijski projekti na območju: %{heading}"
+        by_heading_single: ""
         sidebar:
           different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
       header:
