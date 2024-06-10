@@ -100,6 +100,32 @@ class User < ApplicationRecord
       return 17
     end
 
+    # check Ravne
+    valid_addresses = [
+      'Koroška cesta 27a',
+      'Koroška cesta 31',
+      'Koroška cesta 33a',
+      'Koroška cesta 68',
+      'Koroška cesta 84',
+      'Koroška cesta 86',
+      'Koroška cesta 88',
+      'Koroška cesta 90',
+      'Koroška cesta 92',
+      'Koroška cesta 94',
+      'Koroška cesta 96',
+      'Koroška cesta 98',
+      'Muzejska ulica',
+      'Pot na Zali Rovt',
+      'Ravne',
+      'Za jezom',
+    ]
+
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/i # assuming there are no special chars
+    if r === address      
+      return 7
+    end
+
     # check Tržič – mesto
     valid_addresses = [
       'Čadovlje pri Tržiču',
@@ -226,20 +252,6 @@ class User < ApplicationRecord
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
       return 11
-    end
-
-    # check Ravne
-    valid_addresses = [
-      'Koroška cesta',
-      'Muzejska ulica',
-      'Pot na Zali Rovt',
-      'Ravne',
-      'Za jezom',
-    ]
-    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
-    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
-    if r === address
-      return 7
     end
   end
 
