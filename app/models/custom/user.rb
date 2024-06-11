@@ -30,7 +30,9 @@ class User < ApplicationRecord
       'Begunjska cesta',
       'Bistrica',
       'Cesta na Loko',
-      'Cesta Ste Marie aux Mines',
+      'Cesta Ste Marie aux Mines 26',
+      'Cesta Ste Marie aux Mines 30',
+      'Cesta Ste Marie aux Mines 32',
       'Deteljica',
       'Kovorska cesta',
       'Na Logu',
@@ -77,12 +79,52 @@ class User < ApplicationRecord
     # check Sebenje
     valid_addresses = [
       'Breg ob Bistrici',
-      'Retnje',
+      'Retnje 12',
+      'Retnje 12a',
+      'Retnje 12b',
+      'Retnje 13',
+      'Retnje 14',
+      'Retnje 15',
+      'Retnje 15a',
+      'Retnje 16',
+      'Retnje 17',
+      'Retnje 17a',
+      'Retnje 17b',
+      'Retnje 18a',
+      'Retnje 19',
+      'Retnje 20',
+      'Retnje 22',
+      'Retnje 23a',
+      'Retnje 24',
+      'Retnje 25',
+      'Retnje 26',
+      'Retnje 28a',
+      'Retnje 30',
+      'Retnje 39',
+      'Retnje 40',
+      'Retnje 41',
+      'Retnje 41a',
+      'Retnje 43',
+      'Retnje 44',
+      'Retnje 44a',
+      'Retnje 45',
+      'Retnje 45b',
+      'Retnje 45d',
+      'Retnje 46',
+      'Retnje 47',
+      'Retnje 48',
+      'Retnje 52',
+      'Retnje 53',
+      'Retnje 54',
+      'Retnje 56',
+      'Retnje 58',
+      'Retnje 59',
       'Sebenje',
       'Žiganja vas',
     ]
+
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
-    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    r = /#{escaped_addresses.join("|")}/i # assuming there are no special chars
     if r === address
       return 14
     end
@@ -362,7 +404,6 @@ class User < ApplicationRecord
       'Blejska cesta',
       'Cankarjeva cesta',
       'Cerkvena ulica',
-      'Cesta Ste Marie aux Mines',
       'Čevljarska ulica',
       'Fužinska ulica',
       'Koroška cesta',
@@ -398,7 +439,6 @@ class User < ApplicationRecord
       'Pot na Močila',
       'Snakovška cesta',
       'Vrtna ulica',
-      'Retnje',
 
       # Lom pod Storžičem
       'Grahovše',
@@ -428,8 +468,6 @@ class User < ApplicationRecord
       'Purgarjeva ulica',
 
       # Ravne
-      'Koroška cesta',
-      'Muzejska ulica',
       'Pot na Zali Rovt',
       'Ravne',
       'Za jezom',
