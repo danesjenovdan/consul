@@ -114,7 +114,7 @@ class User < ApplicationRecord
       'Koroška cesta 94',
       'Koroška cesta 96',
       'Koroška cesta 98',
-      'Muzejska ulica',
+      'Muzejska ulica 12',
       'Pot na Zali Rovt',
       'Ravne',
       'Za jezom',
