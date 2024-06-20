@@ -330,7 +330,7 @@ sl-SI:
       about_title: "O orodju"
       about_first: "Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
       about_second: "Spletno orodje omogoča direktno soodločanje o delu občinskega proračuna. Uporabnice_ki lahko oddajajo, podpirajo in glasujejo o predlogih za projekte ter spremljajo njihov razvoj."
-      about_third: "Sodeluje lahko vsak_a občan_ka občine, ki bo leta 2024 star_a vsaj 15 let in se je registriral_a na spletnem orodju, za aktivnosti mladoletnikov so odgovorni starši ali skrbniki. Ni omejitev glede števila oddanih predlogov ali komentarjev, med glasovanjem pa lahko vsak uporabnik glasuje za en projekt."
+      about_third: "Sodeluje lahko vsak_a občan_ka občine, ki bo leta 2024 star_a vsaj 15 let in se je registriral_a na spletnem orodju, za aktivnosti mladoletnikov so odgovorni starši ali skrbniki. Ni omejitev glede števila oddanih predlogov ali komentarjev, med glasovanjem pa lahko vsak uporabnik glasuje le enkrat."
       about_list:
         title: "Uporabnici_ku orodje omogoča:"
         li1:
