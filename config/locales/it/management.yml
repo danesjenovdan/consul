@@ -35,7 +35,7 @@ it:
     document_verifications:
       already_verified: Questo account utente è già verificato.
       has_no_account: Per poter creare un profilo, vai su %{link} e clicca su <b>"Registrati"</b> nella parte superiore sinistra dello schermo.
-      link: CONSUL
+      link: CONSUL DEMOCRACY
       in_census_has_following_permissions: "Questo utente può partecipare con le seguenti autorizzazioni:"
       not_in_census: Questo documento non è registrato.
       not_in_census_info: "I cittadini non residenti possono partecipare con le seguenti autorizzazioni:"
@@ -64,11 +64,6 @@ it:
       users: Gestione degli utenti
       user_invites: Manda inviti
       select_user: Seleziona utente
-    permissions:
-      create_proposals: Creare proposte
-      debates: Partecipare nei dibattiti
-      support_proposals: Appoggiare le proposte
-      vote_proposals: Partecipare alle votazioni finali
     print:
       proposals_info: Crea la tua proposta su http://url.consul
       proposals_title: "Proposte:"

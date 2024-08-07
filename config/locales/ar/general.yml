@@ -11,14 +11,9 @@ ar:
       save_changes_submit: حفظ التغييرات
       recommendations: التوصيات
       title: حسابي
-      user_permission_debates: المشاركة بالحوارات
       user_permission_info: من خلال حسابك يمكنك...
-      user_permission_proposal: انشاء مقترحات جديدة
-      user_permission_support_proposal: دعم مقترحات
       user_permission_title: المشاركة
       user_permission_verify: لتنفيذ كافة الإجراءات يرجى التحقق من الحساب الخاص بك.
-      user_permission_verify_info: "* فقط للمستخدمين في التعداد."
-      user_permission_votes: المشاركة في التصويت النهائي
       verified_account: تم التحقق من الحساب
       verify_my_account: التحقق من حسابي
   application:
@@ -33,7 +28,6 @@ ar:
       deleted: تم حذف هذا التعليق
       moderator: المشرف
       responses:
-        zero: لا توجد ردود
         zero: "%{count} ردود"
         one: ردّ واحد
         two: "ردّان %{count}"
@@ -41,7 +35,6 @@ ar:
         many: "%{count} ردود"
         other: "%{count} ردود"
       responses_show:
-        zero: لا توجد ردود
         zero: "%{count} ردود (عرض)"
         one: "رد ّ 1 (عرض)"
         two: "%{count} ردود (عرض)"
@@ -49,7 +42,6 @@ ar:
         many: "%{count} ردود (عرض)"
         other: "%{count} ردود (عرض)"
       responses_collapse:
-        zero: لا توجد ردود
         zero: "%{count} إجابة (إخفاء)"
         one: "إجابة واحدة (إخفاء)"
         two: "%{count} إجابة (إخفاء)"
@@ -58,7 +50,6 @@ ar:
         other: "%{count} إجابة (إخفاء)"
       user_deleted: حذف المستخدم
       votes:
-        zero: لا توجد أصوات
         zero: "%{count} أصوات"
         one: صوت واحد
         two: "صوتان %{count}"
@@ -87,16 +78,7 @@ ar:
       form:
         submit_button: بدء مناقشة
     debate:
-      comments:
-        zero: لا توجد تعليقات
-        zero: "%{count} تعليقات"
-        one: '%{count} تعليق'
-        two: "%{count} تعليقات"
-        few: "%{count} تعليقات"
-        many: "%{count} تعليقات"
-        other: "%{count} تعليقات"
       votes:
-        zero: لا توجد أصوات
         zero: "%{count} أصوات"
         one: صوت واحد
         two: "%{count} أصوات"
@@ -131,13 +113,6 @@ ar:
         button: بحث
         placeholder: البحث عن مناقشات...
         title: بحث
-      search_results:
-        zero: " تحتوي على المصطلح <strong>'%{search_term}'</strong>"
-        one: " تحتوي على المصطلح <strong>'%{search_term}'</strong>"
-        two: " تحتوي على المصطلح <strong>'%{search_term}'</strong>"
-        few: " تحتوي على المصطلح <strong>'%{search_term}'</strong>"
-        many: " تحتوي على المصطلح <strong>'%{search_term}'</strong>"
-        other: " تحتوي على المصطلح <strong>'%{search_term}'</strong>"
       start_debate: بدء مناقشة
       title: النقاشات
       section_header:
@@ -161,14 +136,6 @@ ar:
       start_new: بدء مناقشة
     show:
       author_deleted: تم حذف المستخدم
-      comments:
-        zero: لا توجد تعليقات
-        zero: "%{count} تعليق"
-        one: تعليق واحد
-        two: "%{count} تعليق"
-        few: "%{count} تعليق"
-        many: "%{count} تعليق"
-        other: "%{count} تعليق"
       comments_title: تعليقات
       edit_debate_link: تعديل
       flag: تم التبليغ على أنّ هذا النقاش غير لائق من قبل العديد من المستخدمين.
@@ -183,7 +150,6 @@ ar:
       invalid_date_range: "نطاق التاريخ غير صالح"
   form:
     accept_terms: أوافق على %{policy} و%{conditions}
-    accept_terms_title: أوافق على سياسة الخصوصية وشروط وأحكام الاستخدام
     conditions: قوانين وشروط الاستخدام
     debate: الحوارات
     direct_message: رسالة خاصة
@@ -197,7 +163,6 @@ ar:
     budget/group: مجموعة الميزانية
     budget/heading: عنوان الميزانية
     poll/shift: المناوبة
-    poll/question/answer: الإجابة
     user: الحساب
     verification/sms: الهاتف
     signature_sheet: ورقة التوقيع
@@ -207,11 +172,6 @@ ar:
   geozones:
     none: جميع المدن
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: فايرفوكس
-      ie: لقد اكتشفنا أنك تتصفح باستخدام Internet Explorer. للحصول على أفضل تجربة، ننصحك بإستخدام %{firefox} أو %{chrome}.
-      ie_title: هذا الموقع لا يتناسب مع متصفحك
     dashboard:
       proposal_header:
         published: منشورة
@@ -224,7 +184,6 @@ ar:
         preview_proposal: معاينة المقترح
         current_goal: الهدف الحالي
         supports:
-          zero: لا يوجد دعم
           zero: "دعم"
           one: 1 دعم
           two: "دعم"
@@ -234,10 +193,9 @@ ar:
     footer:
       accessibility: إمكانية الوصول
       conditions: قوانين وشروط الاستخدام
-      consul: تطبيق CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: للحصول على المساعدة الفنية، قم بزيارة
-      copyright: CONSUL, %{year}
+      consul: تطبيق CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: تستخدم هذه البوابة %{consul} والذي هو%{open_source}.
       open_source: برنامج مفتوح المصدر
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -263,7 +221,6 @@ ar:
       budgets: الميزانية التشاركية
       notification_item:
         new_notifications:
-          zero: "لا يوجد إشعارات جديدة"
           zero: لديك %{count} إشعارات الجديدة
           one: لديك إشعار جديد
           two: لديك %{count} إشعارات الجديدة
@@ -415,7 +372,6 @@ ar:
       select_order_long: "أنت تشاهد المقترحات وفقًا لـ:"
       start_proposal: إنشاء مقترح
       title: إقتراحات
-      top: الأعلى أسبوعيا
       top_link_proposals: المقترحات الأكثر تأييدا حسب الفئة
       section_header:
         icon_alt: إيقونة المقترحات
@@ -443,18 +399,9 @@ ar:
         edit: "ستتمكن من تغيير النص كما تريد قبل أن يتم مشاركته."
         view_proposal: ليس الآن، انتقل إلى مقترحي
       already_supported: لقد قمت بالفعل بدعم هذا المقترح. شاركه!
-      comments:
-        zero: لا توجد تعليقات
-        zero: "%{count} تعليق"
-        one: تعليق واحد
-        two: "%{count} تعليق"
-        few: "%{count} تعليق"
-        many: "%{count} تعليق"
-        other: "%{count} تعليق"
       support: دعم
       support_title: دعم هذا المقترح
       supports:
-        zero: لا يوجد دعم
         zero: "%{count} يدعم"
         one: 1 دعم
         two: "%{count} يدعم"
@@ -462,7 +409,6 @@ ar:
         many: "%{count} يدعم"
         other: "%{count} يدعم"
       votes:
-        zero: لا توجد أصوات
         zero: "%{count} أصوات"
         one: صوت واحد
         two: "%{count} أصوات"
@@ -477,14 +423,6 @@ ar:
     show:
       author_deleted: تم حذف المستخدم
       code: "رمز المقترح:"
-      comments:
-        zero: لا توجد تعليقات
-        zero: "%{count} تعليق"
-        one: تعليق واحد
-        two: "%{count} تعليق"
-        few: "%{count} تعليق"
-        many: "%{count} تعليق"
-        other: "%{count} تعليق"
       comments_tab: تعليقات
       dashboard_proposal_link: لوحة القيادة
       flag: تم التبليغ على أنّ هذا المقترح غير لائق من قبل العديد من المستخدمين.
@@ -660,7 +598,6 @@ ar:
         share: "وإذا ساعدتني في مشاركة مقترحي مع الأصدقاء والعائلة وجهات الاتصال ، فسيكون ذلك مثاليًا!"
   polls:
     all: "الكل"
-    no_dates: "التاريخ غير محدد"
     dates: "من %{open_at} إلى %{closed_at}"
     final_date: "التنائج النهائية"
     index:
@@ -756,7 +693,6 @@ ar:
       author_deleted: تم حذف المستخدم
       email_deleted: تم حذف البريد الإلكتروني
     back: عودة
-    check: حدّد
     check_all: الكل
     check_none: لا شيء
     collective: جماعي
@@ -834,18 +770,6 @@ ar:
     youtube: "%{org} YouTube"
     telegram: "%{org} Telegram"
     instagram: "%{org} Instagram"
-  stats:
-    index:
-      visits: الزيارات
-      debates: النقاشات
-      proposals: إقتراحات
-      comments: تعليقات
-      proposal_votes: التصويت على المقترحات
-      debate_votes: الأصوات على المناقشات
-      comment_votes: الأصوات على التعليقات
-      votes: مجموع الأصوات
-      verified_users: مستخدمين تم التحقق منهم
-      unverified_users: مستخدمين غير متحقق منهم
   unauthorized:
     default: ليس لديك الصلاحية لدخول هذه الصفحة.
     manage:
@@ -926,15 +850,12 @@ ar:
   votes:
     agree: أنا أوافق
     anonymous: لا يمكن قبول التصويت لأنّ هناك عدد كبير جدًا من الأصوات المجهولة %{verify_account}.
-    comment_unauthenticated: تحتاج الى %{signin} او %{signup} كي تصبح قدرا على التصويت.
     disagree: أنا لا أوافق
     organizations: المنظمات لا يسمح لها بالتصويت
     supports: دعم
     verified_only: يمكن للمستخدمين الذين تم التحقق منهم فقط التصويت على المقترحات؛ %{verify_account}.
     budget_investments:
-      not_logged_in: تحتاج الى %{signin} او %{signup} للمتابعة.
       not_verified: يمكن للمستخدمين الذين تم التحقق منهم فقط التصويت على مشاريع الاستثمارات; %{verify_account}.
-      organization: المنظمات لا يسمح لها بالتصويت
       unfeasible: لا يمكن دعم المشاريع الإستثمارية الغير مجدية
       not_voting_allowed: مرحلة التصويت مغلقة
       different_heading_assigned:
@@ -970,23 +891,13 @@ ar:
       budget_investments:
         title: الاستثمارات الموصى بها
       slide: "انظر %{title}"
-    verification:
-      i_dont_have_an_account: لا يوجد لدي حساب
-      i_have_an_account: لدي حساب بالفعل
-      question: هل لديك بالفعل حساب في %{org_name}؟
-      title: التحقق من الحساب
     welcome:
       go_to_index: ليس الآن، انتقل إلى صفحة الفهرس
       start_using_consul: انتقل إلى صفحة الفهرس
       title: المشاركة
-      user_permission_debates: المشاركة بالحوارات
       user_permission_info: من خلال حسابك يمكنك...
-      user_permission_proposal: انشاء مقترحات جديدة
-      user_permission_support_proposal: دعم مقترحات *
       user_permission_verify: "لتنفيذ كافة الإجراءات يرجى التحقق من الحساب الخاص بك."
-      user_permission_verify_info: "* فقط للمستخدمين في التعداد."
       user_permission_verify_my_account: التحقق من حسابي
-      user_permission_votes: المشاركة في التصويت النهائي
   invisible_captcha:
     sentence_for_humans: "إذا كنت إنسانا، فتجاهل هذا الحقل"
     timestamp_error_message: "آسف ، كان ذلك سريعًا جدًا! يرجى إعادة التقديم."
