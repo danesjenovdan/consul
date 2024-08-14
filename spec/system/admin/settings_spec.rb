@@ -2,24 +2,18 @@ require "rails_helper"
 
 describe "Admin settings", :admin do
   scenario "Index" do
-    create(:setting, key: "super.users.first")
-    create(:setting, key: "super.users.second")
-    create(:setting, key: "super.users.third")
-
     visit admin_settings_path
 
-    expect(page).to have_content "First"
-    expect(page).to have_content "Second"
-    expect(page).to have_content "Third"
+    expect(page).to have_content "Level 1 public official"
+    expect(page).to have_content "Maximum ratio of anonymous votes per Debate"
+    expect(page).to have_content "Comments body max length"
   end
 
   scenario "Update" do
-    create(:setting, key: "super.users.first")
-
     visit admin_settings_path
 
-    within "tr", text: "First" do
-      fill_in "First", with: "Super Users of level 1"
+    within "tr", text: "Level 1 public official" do
+      fill_in "Level 1 public official", with: "Super Users of level 1"
       click_button "Update"
     end
 
@@ -78,10 +72,10 @@ describe "Admin settings", :admin do
       click_link "Map configuration"
 
       within "#map-form" do
-        click_on "Update"
+        click_button "Update"
       end
 
-      expect(page).to have_content "Map configuration updated succesfully"
+      expect(page).to have_content "Map configuration updated successfully"
     end
 
     scenario "Should display marker by default" do
@@ -100,11 +94,11 @@ describe "Admin settings", :admin do
       click_link "Map configuration"
       find("#admin-map").click
       within "#map-form" do
-        click_on "Update"
+        click_button "Update"
       end
 
       expect(find("#latitude", visible: :hidden).value).not_to eq "51.48"
-      expect(page).to have_content "Map configuration updated succesfully"
+      expect(page).to have_content "Map configuration updated successfully"
     end
   end
 
@@ -173,13 +167,11 @@ describe "Admin settings", :admin do
       end
 
       scenario "On #tab-remote-census-configuration" do
-        create(:setting, key: "remote_census.general.whatever")
-
         visit admin_settings_path
         find("#remote-census-tab").click
 
-        within "tr", text: "Whatever" do
-          fill_in "Whatever", with: "New value"
+        within "tr", text: "Endpoint" do
+          fill_in "Endpoint", with: "example.org/webservice"
           click_button "Update"
         end
 
@@ -189,13 +181,10 @@ describe "Admin settings", :admin do
     end
 
     scenario "On #tab-configuration" do
-      Setting.create!(key: "whatever")
-
       visit admin_settings_path
-      find("#tab-configuration").click
 
-      within "tr", text: "Whatever" do
-        fill_in "Whatever", with: "New value"
+      within "tr", text: "Level 1 public official" do
+        fill_in "Level 1 public official", with: "Super Users of level 1"
         click_button "Update"
       end
 
@@ -209,29 +198,36 @@ describe "Admin settings", :admin do
       end
 
       scenario "On #tab-map-configuration" do
-        Setting.create!(key: "map.whatever")
-
         visit admin_settings_path
         click_link "Map configuration"
 
-        within "tr", text: "Whatever" do
-          fill_in "Whatever", with: "New value"
+        within "tr", text: "Latitude" do
+          fill_in "Latitude", with: "-3.636"
           click_button "Update"
         end
 
         expect(page).to have_current_path(admin_settings_path)
         expect(page).to have_css("div#tab-map-configuration.is-active")
       end
+
+      scenario "On #tab-map-configuration when using the interactive map" do
+        visit admin_settings_path(anchor: "tab-map-configuration")
+        within "#map-form" do
+          click_button "Update"
+        end
+
+        expect(page).to have_content("Map configuration updated successfully.")
+        expect(page).to have_current_path(admin_settings_path)
+        expect(page).to have_css("div#tab-map-configuration.is-active")
+      end
     end
 
     scenario "On #tab-proposals" do
-      Setting.create!(key: "proposals.whatever")
-
       visit admin_settings_path
       find("#proposals-tab").click
 
-      within "tr", text: "Whatever" do
-        fill_in "Whatever", with: "New value"
+      within "tr", text: "Polls description" do
+        fill_in "Polls description", with: "Polls description"
         click_button "Update"
       end
 
@@ -240,22 +236,18 @@ describe "Admin settings", :admin do
     end
 
     scenario "On #tab-participation-processes" do
-      Setting.create!(key: "process.whatever")
-
       visit admin_settings_path
       find("#participation-processes-tab").click
-      within("tr", text: "Whatever") { click_button "No" }
+      within("tr", text: "Debates") { click_button "Yes" }
 
       expect(page).to have_current_path(admin_settings_path)
       expect(page).to have_css("div#tab-participation-processes.is-active")
     end
 
     scenario "On #tab-feature-flags" do
-      Setting.create!(key: "feature.whatever")
-
       visit admin_settings_path
       find("#features-tab").click
-      within("tr", text: "Whatever") { click_button "No" }
+      within("tr", text: "Featured proposals") { click_button "No" }
 
       expect(page).to have_current_path(admin_settings_path)
       expect(page).to have_css("div#tab-feature-flags.is-active")
@@ -263,20 +255,29 @@ describe "Admin settings", :admin do
 
     scenario "On #tab-sdg-configuration" do
       Setting["feature.sdg"] = true
-      Setting.create!(key: "sdg.whatever")
-      login_as(create(:administrator).user)
-
       visit admin_settings_path
       click_link "SDG configuration"
 
-      within("tr", text: "Whatever") do
-        click_button "No"
+      within("tr", text: "Related SDG in debates") do
+        click_button "Yes"
 
-        expect(page).to have_button "Yes"
+        expect(page).to have_button "No"
       end
 
       expect(page).to have_current_path(admin_settings_path)
       expect(page).to have_css("h2", exact_text: "SDG configuration")
+    end
+
+    scenario "On #tab-images-and-documents" do
+      Setting["feature.sdg"] = true
+      visit admin_settings_path(anchor: "tab-images-and-documents")
+      within("tr", text: "Maximum number of documents") do
+        fill_in "Maximum number of documents", with: 5
+        click_button "Update"
+      end
+
+      expect(page).to have_current_path(admin_settings_path)
+      expect(page).to have_field("Maximum number of documents", with: 5)
     end
   end
 
@@ -311,7 +312,6 @@ describe "Admin settings", :admin do
   describe "SDG configuration tab" do
     scenario "is enabled when the sdg feature is enabled" do
       Setting["feature.sdg"] = true
-      login_as(create(:administrator).user)
 
       visit admin_settings_path
       click_link "SDG configuration"
@@ -321,7 +321,6 @@ describe "Admin settings", :admin do
 
     scenario "is disabled when the sdg feature is disabled" do
       Setting["feature.sdg"] = false
-      login_as(create(:administrator).user)
 
       visit admin_settings_path
       click_link "SDG configuration"
@@ -333,7 +332,6 @@ describe "Admin settings", :admin do
 
     scenario "is enabled right after enabling the feature" do
       Setting["feature.sdg"] = false
-      login_as(create(:administrator).user)
 
       visit admin_settings_path
 
@@ -348,6 +346,28 @@ describe "Admin settings", :admin do
       click_link "SDG configuration"
 
       expect(page).to have_css "h2", exact_text: "SDG configuration"
+    end
+  end
+
+  describe "Machine learning settings" do
+    scenario "show the machine learning feature but not its settings" do
+      Setting["feature.machine_learning"] = true
+
+      visit admin_settings_path
+
+      expect(page).not_to have_content "Machine Learning"
+      expect(page).not_to have_content "Comments Summary"
+      expect(page).not_to have_content "Related Content"
+      expect(page).not_to have_content "Tags"
+      expect(page).not_to have_css ".translation_missing"
+
+      click_link "Features"
+
+      expect(page).to have_content "Machine Learning"
+      expect(page).not_to have_content "Comments Summary"
+      expect(page).not_to have_content "Related Content"
+      expect(page).not_to have_content "Tags"
+      expect(page).not_to have_css ".translation_missing"
     end
   end
 end

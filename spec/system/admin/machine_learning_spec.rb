@@ -40,7 +40,7 @@ describe "Machine learning" do
 
     visit admin_machine_learning_path
 
-    expect(page).to have_content "This feature is disabled. To use Machine Learning you can enable it from "\
+    expect(page).to have_content "This feature is disabled. To use Machine Learning you can enable it from " \
                                  "the settings page"
     expect(page).to have_link "settings page", href: admin_settings_path(anchor: "tab-feature-flags")
   end
@@ -56,7 +56,7 @@ describe "Machine learning" do
     click_button "Execute script"
 
     expect(page).to have_content "The last script has been executed successfully."
-    expect(page).to have_content "You will receive an email in #{admin.email} when the script "\
+    expect(page).to have_content "You will receive an email in #{admin.email} when the script " \
                                  "finishes running."
 
     expect(page).to have_field "Select python script to execute"
@@ -71,11 +71,11 @@ describe "Machine learning" do
     end
 
     expect(page).to have_content "Related content"
-    expect(page).to have_content "Adds automatically generated related content to proposals and "\
+    expect(page).to have_content "Adds automatically generated related content to proposals and " \
                                  "participatory budget projects"
 
     expect(page).to have_content "Comments summary"
-    expect(page).to have_content "Displays an automatically generated comment summary on all items that "\
+    expect(page).to have_content "Displays an automatically generated comment summary on all items that " \
                                  "can be commented on."
 
     expect(page).to have_content "Tags"
@@ -94,7 +94,7 @@ describe "Machine learning" do
     select "proposals_related_content_and_tags_nmf.py", from: "Select python script to execute"
     click_button "Execute script"
 
-    expect(page).to have_content "The script is running. The administrator who executed it will receive "\
+    expect(page).to have_content "The script is running. The administrator who executed it will receive " \
                                  "an email when it is finished."
 
     expect(page).to have_content "Executed by: #{admin.name}"
@@ -139,7 +139,7 @@ describe "Machine learning" do
     expect(page).to have_content "Script name: proposals_related_content_and_tags_nmf.py"
     expect(page).to have_content "Error: Error description"
 
-    expect(page).to have_content "You will receive an email in #{admin.email} when the script "\
+    expect(page).to have_content "You will receive an email in #{admin.email} when the script " \
                                  "finishes running."
 
     expect(page).to have_field "Select python script to execute"
@@ -207,19 +207,20 @@ describe "Machine learning" do
   end
 
   scenario "Show output files info on settins page" do
-    require "fileutils"
-    FileUtils.mkdir_p Rails.root.join("public", "machine_learning", "data")
+    FileUtils.mkdir_p MachineLearning.data_folder
 
     allow_any_instance_of(MachineLearning).to receive(:run) do
-      MachineLearningJob.first.update!(finished_at: Time.current + 2.minutes)
+      MachineLearningJob.first.update!(finished_at: 2.minutes.from_now)
       create(:machine_learning_info,
              script: "proposals_summary_comments_textrank.py",
              kind: "comments_summary",
-             updated_at: Time.current + 2.minutes)
-      comments_file = MachineLearning::DATA_FOLDER.join(MachineLearning.comments_filename)
-      File.open(comments_file, "w") { |file| file.write([].to_json) }
-      proposals_comments_summary_file = MachineLearning::DATA_FOLDER.join(MachineLearning.proposals_comments_summary_filename)
-      File.open(proposals_comments_summary_file, "w") { |file| file.write([].to_json) }
+             updated_at: 2.minutes.from_now)
+      comments_file = MachineLearning.data_folder.join(MachineLearning.comments_filename)
+      File.write(comments_file, [].to_json)
+      proposals_comments_summary_file = MachineLearning
+                                        .data_folder
+                                        .join(MachineLearning.proposals_comments_summary_filename)
+      File.write(proposals_comments_summary_file, [].to_json)
     end
 
     visit admin_machine_learning_path
