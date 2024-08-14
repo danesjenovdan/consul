@@ -303,16 +303,13 @@ describe MachineLearning do
 
   describe "#export_proposals_to_json" do
     it "creates a JSON file with all proposals" do
-      require "fileutils"
-      FileUtils.mkdir_p Rails.root.join("public", "machine_learning", "data")
-
       first_proposal = create(:proposal)
       last_proposal = create(:proposal)
 
       machine_learning = MachineLearning.new(job)
       machine_learning.send(:export_proposals_to_json)
 
-      json_file = MachineLearning::DATA_FOLDER.join("proposals.json")
+      json_file = MachineLearning.data_folder.join("proposals.json")
       json = JSON.parse(File.read(json_file))
 
       expect(json).to be_an Array
@@ -332,16 +329,13 @@ describe MachineLearning do
 
   describe "#export_budget_investments_to_json" do
     it "creates a JSON file with all budget investments" do
-      require "fileutils"
-      FileUtils.mkdir_p Rails.root.join("public", "machine_learning", "data")
-
       first_budget_investment = create(:budget_investment)
       last_budget_investment = create(:budget_investment)
 
       machine_learning = MachineLearning.new(job)
       machine_learning.send(:export_budget_investments_to_json)
 
-      json_file = MachineLearning::DATA_FOLDER.join("budget_investments.json")
+      json_file = MachineLearning.data_folder.join("budget_investments.json")
       json = JSON.parse(File.read(json_file))
 
       expect(json).to be_an Array
@@ -359,16 +353,13 @@ describe MachineLearning do
 
   describe "#export_comments_to_json" do
     it "creates a JSON file with all comments" do
-      require "fileutils"
-      FileUtils.mkdir_p Rails.root.join("public", "machine_learning", "data")
-
       first_comment = create(:comment)
       last_comment = create(:comment)
 
       machine_learning = MachineLearning.new(job)
       machine_learning.send(:export_comments_to_json)
 
-      json_file = MachineLearning::DATA_FOLDER.join("comments.json")
+      json_file = MachineLearning.data_folder.join("comments.json")
       json = JSON.parse(File.read(json_file))
 
       expect(json).to be_an Array
@@ -387,6 +378,10 @@ describe MachineLearning do
   end
 
   describe "#run_machine_learning_scripts" do
+    let!(:original_fork_mode) { DEBUGGER__::CONFIG[:fork_mode] }
+    before { DEBUGGER__::CONFIG[:fork_mode] = "parent" }
+    after { DEBUGGER__::CONFIG[:fork_mode] = original_fork_mode }
+
     it "returns true if python script executed correctly" do
       machine_learning = MachineLearning.new(job)
 
@@ -437,7 +432,7 @@ describe MachineLearning do
       ]
 
       filename = "ml_comments_summaries_proposals.json"
-      json_file = MachineLearning::DATA_FOLDER.join(filename)
+      json_file = MachineLearning.data_folder.join(filename)
       expect(File).to receive(:read).with(json_file).and_return data.to_json
 
       machine_learning.send(:import_ml_proposals_comments_summary)
@@ -459,7 +454,7 @@ describe MachineLearning do
       ]
 
       filename = "ml_comments_summaries_budgets.json"
-      json_file = MachineLearning::DATA_FOLDER.join(filename)
+      json_file = MachineLearning.data_folder.join(filename)
       expect(File).to receive(:read).with(json_file).and_return data.to_json
 
       machine_learning.send(:import_ml_investments_comments_summary)
@@ -485,7 +480,7 @@ describe MachineLearning do
       ]
 
       filename = "ml_related_content_proposals.json"
-      json_file = MachineLearning::DATA_FOLDER.join(filename)
+      json_file = MachineLearning.data_folder.join(filename)
       expect(File).to receive(:read).with(json_file).and_return data.to_json
 
       machine_learning.send(:import_proposals_related_content)
@@ -513,7 +508,7 @@ describe MachineLearning do
       ]
 
       filename = "ml_related_content_budgets.json"
-      json_file = MachineLearning::DATA_FOLDER.join(filename)
+      json_file = MachineLearning.data_folder.join(filename)
       expect(File).to receive(:read).with(json_file).and_return data.to_json
 
       machine_learning.send(:import_budget_investments_related_content)
@@ -531,27 +526,33 @@ describe MachineLearning do
       machine_learning = MachineLearning.new(job)
 
       tags_data = [
-        { id: 0,
-          name: "Existing tag" },
-        { id: 1,
-          name: "Machine learning tag" }
+        {
+          id: 0,
+          name: "Existing tag"
+        },
+        {
+          id: 1,
+          name: "Machine learning tag"
+        }
       ]
 
       taggings_data = [
-        { tag_id: 0,
+        {
+          tag_id: 0,
           taggable_id: proposal.id
         },
-        { tag_id: 1,
+        {
+          tag_id: 1,
           taggable_id: proposal.id
         }
       ]
 
       tags_filename = "ml_tags_proposals.json"
-      tags_json_file = MachineLearning::DATA_FOLDER.join(tags_filename)
+      tags_json_file = MachineLearning.data_folder.join(tags_filename)
       expect(File).to receive(:read).with(tags_json_file).and_return tags_data.to_json
 
       taggings_filename = "ml_taggings_proposals.json"
-      taggings_json_file = MachineLearning::DATA_FOLDER.join(taggings_filename)
+      taggings_json_file = MachineLearning.data_folder.join(taggings_filename)
       expect(File).to receive(:read).with(taggings_json_file).and_return taggings_data.to_json
 
       machine_learning.send(:import_ml_proposals_tags)
@@ -573,27 +574,33 @@ describe MachineLearning do
       machine_learning = MachineLearning.new(job)
 
       tags_data = [
-        { id: 0,
-          name: "Existing tag" },
-        { id: 1,
-          name: "Machine learning tag" }
+        {
+          id: 0,
+          name: "Existing tag"
+        },
+        {
+          id: 1,
+          name: "Machine learning tag"
+        }
       ]
 
       taggings_data = [
-        { tag_id: 0,
+        {
+          tag_id: 0,
           taggable_id: investment.id
         },
-        { tag_id: 1,
+        {
+          tag_id: 1,
           taggable_id: investment.id
         }
       ]
 
       tags_filename = "ml_tags_budgets.json"
-      tags_json_file = MachineLearning::DATA_FOLDER.join(tags_filename)
+      tags_json_file = MachineLearning.data_folder.join(tags_filename)
       expect(File).to receive(:read).with(tags_json_file).and_return tags_data.to_json
 
       taggings_filename = "ml_taggings_budgets.json"
-      taggings_json_file = MachineLearning::DATA_FOLDER.join(taggings_filename)
+      taggings_json_file = MachineLearning.data_folder.join(taggings_filename)
       expect(File).to receive(:read).with(taggings_json_file).and_return taggings_data.to_json
 
       machine_learning.send(:import_ml_investments_tags)

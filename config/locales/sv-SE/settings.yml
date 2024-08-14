@@ -40,8 +40,6 @@ sv:
     telegram_handle_description: "Om ifyllt visas det i sidfoten"
     instagram_handle: "Användarnamn på Instagram"
     instagram_handle_description: "Om ifyllt visas det i sidfoten"
-    url: "Huvudsaklig webbadress"
-    url_description: "Huvud-URL till webbplatsen"
     org_name: "Organisation"
     org_name_description: "Detta visas i ämnesrad i e-brev, på hjälpsidor..."
     related_content_score_threshold: "Nivå för överensstämmelse med relaterat innehåll"
@@ -60,6 +58,8 @@ sv:
     meta_keywords_description: 'Nyckelord <meta name="keywords">, används för SEO'
     min_age_to_participate: Minimiålder för deltagande
     min_age_to_participate_description: "Användare av minst denna ålder kan delta i alla processer där en verifierat användarkonto behövs"
+    postal_codes: "Postnummer"
+    postal_codes_description: "En kommaseparerad lista över giltiga postnummer. Du kan också ange områden separerade med ett kolon. Till exempel tillåts med 00001:00010,00024,AB3 45FG,00031:00035 postnummer mellan 00001 och 00010, postnumret 00024, postnumret AB3 45FG och postnummer mellan 00031 och 00035. Om du lämnar detta tomt blir alla postnummer giltiga."
     proposals:
       successful_proposal_id: Framgångsrikt förslag
       successful_proposal_id_description: Detta förslag används som en riktlinje för ett lyckat förslag i antal stöd och visas i diagrammet i dashboard.
@@ -116,8 +116,6 @@ sv:
       allow_attached_documents_description: "Tillåter användare att skicka in dokument när de skapar förslag och investeringsprojekt i medborgarbudgetar"
       guides: "Instruktioner för att skapa förslag och investeringsprojekt"
       guides_description: "Visar en guide över skillnaderna mellan förslag och investeringsprojekt om det finns en aktiv medborgarbudget"
-      public_stats: "Offentlig statistik"
-      public_stats_description: "Visar offentlig statistik i administratörspanelen"
       help_page: "Hjälpsida"
       help_page_description: 'Visar en hjälpmeny som innehåller en sida med ett infoavsnitt om varje aktiverad funktion. Även anpassade sidor och menyer kan skapas under avsnitten "Anpassade sidor" och "Anpassade innehållsblock"'
       remote_translations: "Fjärröversättning"
@@ -169,6 +167,9 @@ sv:
         valid: "Villkor för ett giltigt svar"
         valid_description: "Vilka sökvägar i svaret som krävs för att det ska vara ett giltigt svar som verifierar användaren"
     map:
+      feature:
+        marker_clustering: "Markörklustring"
+        marker_clustering_description: "Aktiverar kartmarkörsklustring. Användbart när det finns många markörer som ska visas."
       latitude: "Latitud"
       latitude_description: "Latitud för kartpositionen"
       longitude: "Longitud"

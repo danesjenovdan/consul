@@ -11,14 +11,9 @@ mk:
       save_changes_submit: Зачувај промени
       recommendations: Препораки
       title: Мој профил
-      user_permission_debates: Учествувај во дебати
       user_permission_info: Со својот профил можеш...
-      user_permission_proposal: Направи нови предлози
-      user_permission_support_proposal: Поддржи предлози
       user_permission_title: Партиципација
       user_permission_verify: За да ги извршиш сите акции верифицирај го твојот профил.
-      user_permission_verify_info: "* Само за корисници на Цензус."
-      user_permission_votes: Учествувај во конечно гласање
       verified_account: Верификуван профил
       verify_my_account: Потврди го мојот профил
   application:
@@ -66,10 +61,6 @@ mk:
     comments_title: Коментари
   debates:
     debate:
-      comments:
-        zero: Нема коментари
-        one: 1 коментар
-        other: "%{count} коментари"
       votes:
         zero: Нема гласови
         one: 1 глас
@@ -85,10 +76,6 @@ mk:
         title: Дебати
     show:
       author_deleted: Избришан корисник
-      comments:
-        zero: Нема коментари
-        one: 1 коментар
-        other: "%{count} коментари"
       comments_title: Коментари
       edit_debate_link: Измени
       flag: Оваа дебата беше посочена како несоодветна од повеќе корисници.
@@ -106,13 +93,10 @@ mk:
     policy: Политика за Приватност
     proposal: Предлог
     budget/investment: Инвестиции
-    poll/question/answer: Одговор
     document: Документ
     topic: Тема
     image: Слика
   layouts:
-    application:
-      firefox: Firefox
     dashboard:
       proposal_header:
         published: Објавено
@@ -197,20 +181,12 @@ mk:
       created: "Направи нов предлог!"
       share:
         view_proposal: Не сега, однеси ме до мојот предлог
-      comments:
-        zero: Нема коментари
-        one: 1 коментар
-        other: "%{count} коментари"
       votes:
         zero: Нема гласови
         one: 1 глас
         other: "%{count} гласови"
     show:
       author_deleted: Избришан корисник
-      comments:
-        zero: Нема коментари
-        one: 1 коментар
-        other: "%{count} коментари"
       comments_tab: Коментари
       notifications_tab: Нотификации
       share: Сподели
@@ -279,11 +255,6 @@ mk:
     documentation: Дополнителна документација
     recommended_index:
       title: Препораки
-  stats:
-    index:
-      debates: Дебати
-      proposals: Предлози
-      comments: Коментари
   users:
     show:
       proposals: Предлози
@@ -303,13 +274,8 @@ mk:
       process_label: Процес
     welcome:
       title: Учествувај
-      user_permission_debates: Учествувај во дебати
       user_permission_info: Со својот профил можеш...
-      user_permission_proposal: Направи нови предлози
-      user_permission_support_proposal: Поддржи предлози*
-      user_permission_verify_info: "* Само за корисници на Цензус."
       user_permission_verify_my_account: Потврди го мојот профил
-      user_permission_votes: Учествувај во конечно гласање
   related_content:
     content_title:
       proposal: "Предлог"

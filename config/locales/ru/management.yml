@@ -34,7 +34,7 @@ ru:
         info: Здесь вы можете управлять пользователями через все действия, перечисленные в левом меню.
     document_verifications:
       already_verified: Аккаунт этого пользователя уже верифицирован.
-      link: CONSUL
+      link: CONSUL DEMOCRACY
       in_census_has_following_permissions: "Этот пользователь может участвовать на вебсайте со следующими разрешениями:"
       not_in_census: Этот документ не зарегистрирован.
       not_in_census_info: "Граждане не в Цензусе могут участвовать на вебсайте со следующими разрешениями:"
@@ -63,11 +63,6 @@ ru:
       users: Управление пользователями
       user_invites: Отправить приглашения
       select_user: Выбрать пользователя
-    permissions:
-      create_proposals: Создавать предложения
-      debates: Включаться в дебаты
-      support_proposals: Поддерживать предложения
-      vote_proposals: Голосовать за предложения
     print:
       proposals_info: Создать ваше предложение на http://url.consul
       proposals_title: "Предложения:"

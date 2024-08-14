@@ -10,9 +10,7 @@ so:
           other: "Waxaad adigu u codsatay <span> %{count}</ span> maalgashiga."
         zero: Uma codeynin wax mashruuc maalgashi.
       reasons_for_not_balloting:
-        not_logged_in: Waa inad igu %{signin} ama%{signup} si wada.
         not_verified: Kaliya dadka isticmaala hubinta ayaa codayn kara maalgashiga; %{verify_account}.
-        organization: Ururada loma fasixin iney codeyaan
         not_selected: Mashariicda Malagashiga e an la dooran lana tageeri karin
         not_enough_money: "Waxaad horay u qoondeeysay miisaaniyadda la heli karo. <br> <yari> Xusuusnow inaad awoodi karto %{change_ballot} wakhti kasta </small>"
         no_ballots_allowed: Xulashada wajiga waa la xidhay
@@ -56,7 +54,6 @@ so:
         tags_placeholder: "Geli taagyada ad jeceshahay inaad isticmasho, kana kaxay qooyska(', ')"
         map_location: "Goobta Khariirada"
         map_location_instructions: "Ku dhaji khariidada meesha ay ku taallan tahay kuna calaamadee sumadeeyaha."
-        map_remove_marker: "Ka saar sumadaha khariidada"
       index:
         title: Misaaniyada kaqayb qadashada
         unfeasible: Mashaariicda maalgashiga aan macquulka ahayn
@@ -66,9 +63,6 @@ so:
           button: Raadin
           placeholder: Raadi mashriicda malgelinta...
           title: Raadin
-        search_results:
-          one: " an ku jirin ereyga<strong>%{search_term}</strong>"
-          other: " an ku jirin ereyga<strong>%{search_term}</strong>"
         sidebar:
           my_ballot: Codkayga
           voted_info:

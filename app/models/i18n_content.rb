@@ -113,13 +113,13 @@ class I18nContent < ApplicationRecord
 
   def self.translations_hash(locale)
     Rails.cache.fetch(translation_class.where(locale: locale)) do
-      all.map do |content|
+      all.to_h do |content|
         [content.key, translation_class.find_by(i18n_content_id: content, locale: locale)&.value]
-      end.to_h
+      end
     end
   end
 
-  def self.update(contents, enabled_translations = I18n.available_locales)
+  def self.update(contents, enabled_translations = Setting.enabled_locales)
     contents.each do |content|
       values = content[:values].slice(*translation_params(enabled_translations))
 

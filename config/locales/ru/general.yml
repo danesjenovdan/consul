@@ -11,14 +11,9 @@ ru:
       save_changes_submit: Сохранить изменения
       recommendations: Рекомендации
       title: Мой аккаунт
-      user_permission_debates: Участвовать в дебатах
       user_permission_info: При помощи вашего аккаунта вы можете...
-      user_permission_proposal: Создавать новый предложения
-      user_permission_support_proposal: Поддерживать предложения
       user_permission_title: Участие
       user_permission_verify: Чтобы выполнить все действия, верифицируйте ваш аккаунт.
-      user_permission_verify_info: "* Только для пользователей на Цензусе."
-      user_permission_votes: Участвовать в финальном голосовании
       verified_account: Аккаунт верифицирован
       verify_my_account: Верифицировать мой аккаунт
   application:
@@ -71,12 +66,6 @@ ru:
       form:
         submit_button: Начать дебаты
     debate:
-      comments:
-        zero: Нет комментариев
-        one: 1 комментарий
-        few: "%{count} комментария(иев)"
-        many: "%{count} комментария(иев)"
-        other: "%{count} комментария(иев)"
       votes:
         zero: Нет голосов
         one: 1 голос
@@ -111,11 +100,6 @@ ru:
         button: Поиск
         placeholder: Искать дебаты...
         title: Поиск
-      search_results:
-        one: " содержащие термин <strong>'%{search_term}'</strong>"
-        few: " содержащие термин <strong>'%{search_term}'</strong>"
-        many: " содержащие термин <strong>'%{search_term}'</strong>"
-        other: " содержащие термин <strong>'%{search_term}'</strong>"
       start_debate: Начать дебаты
       title: Обсуждения проблем
       section_header:
@@ -139,12 +123,6 @@ ru:
       start_new: Начать дебаты
     show:
       author_deleted: Пользователь удален
-      comments:
-        zero: Нет комментариев
-        one: 1 комментарий
-        few: "%{count} комментария(иев)"
-        many: "%{count} комментария(иев)"
-        other: "%{count} комментария(иев)"
       comments_title: Комментарии
       edit_debate_link: Редактировать
       flag: Эти дебаты были отмечены несколькими пользователями как неуместная.
@@ -159,7 +137,6 @@ ru:
       invalid_date_range: "Неверный диапазон дат"
   form:
     accept_terms: Я согласен с %{policy} и %{conditions}
-    accept_terms_title: Я согласен с Политикой конфиденциальности и Положениями и условиями пользования
     conditions: Положения и условия пользования
     debate: Обсуждение
     direct_message: личное сообщение
@@ -175,7 +152,6 @@ ru:
     legislation/process: процесс
     legislation/question: вопрос
     poll/shift: Смена
-    poll/question/answer: Ответ
     user: Аккаунт
     verification/sms: телефон
     signature_sheet: Подписной лист
@@ -187,11 +163,6 @@ ru:
   geozones:
     none: Весь город
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Мы обнаружили, что вы используете Internet Explorer. Для лучшей работы с сайтом, мы рекомендуем вам использовать %{firefox} или %{chrome}.
-      ie_title: Этот сайт не оптимизирован для вашего браузера
     dashboard:
       proposal_header:
         published: Опубликовано
@@ -212,10 +183,9 @@ ru:
     footer:
       accessibility: Доступность
       conditions: Положения и условия пользования
-      consul: Приложение CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: Для технической поддержки используйте
-      copyright: CONSUL, %{year}
+      consul: Приложение CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: Этот портал использует %{consul}, являющийся %{open_source}.
       open_source: открытым программным обеспечением
       participation_text: Решайте каким сделать город, в котором вы хотите жить.
@@ -382,7 +352,6 @@ ru:
       select_order_long: "Вы просматриваете предложения в соответствии с:"
       start_proposal: Создать предложение
       title: Заявки
-      top: Лучшие за неделю
       top_link_proposals: Самые поддерживаемые предложения по категориям
       section_header:
         icon_alt: Иконка предложений
@@ -410,12 +379,6 @@ ru:
         edit: "Прежде чем им поделятся, вы сможете изменить текст так, как пожелаете."
         view_proposal: Не сейчас, перейти к моему предложению
       already_supported: Вы уже поддержали это предложение. Поделитесь им!
-      comments:
-        zero: Нет комментариев
-        one: 1 комментарий
-        few: "%{count} комментария(иев)"
-        many: "%{count} комментария(иев)"
-        other: "%{count} комментария(иев)"
       support: Поддержка
       support_title: Поддержать это предложение
       supports:
@@ -438,12 +401,6 @@ ru:
     show:
       author_deleted: Пользователь удален
       code: "Код предложения:"
-      comments:
-        zero: Нет комментариев
-        one: 1 комментарий
-        few: "%{count} комментария(иев)"
-        many: "%{count} комментария(иев)"
-        other: "%{count} комментария(иев)"
       comments_tab: Комментарии
       dashboard_proposal_link: Рабочий стол
       flag: Это предложение было помечено несколькими пользователями как неуместное.
@@ -611,7 +568,6 @@ ru:
         share: "А также будет великолепно, если вы сделаете мне огромное одолжение и поделитесь моим предложением с друзьями, родственниками и контактами!"
   polls:
     all: "Все"
-    no_dates: "дата не назначена"
     dates: "С %{open_at} по %{closed_at}"
     final_date: "Последние пересчеты/Результаты"
     index:
@@ -707,7 +663,6 @@ ru:
       author_deleted: Пользователь удален
       email_deleted: E-mail удален
     back: Вернуться
-    check: Выбрать
     check_all: Все
     check_none: Ни одного
     collective: Коллектив
@@ -779,18 +734,6 @@ ru:
     youtube: "%{org} YouTube"
     telegram: "%{org} Telegram"
     instagram: "%{org} Instagram"
-  stats:
-    index:
-      visits: посещения
-      debates: Обсуждения проблем
-      proposals: Заявки
-      comments: Комментарии
-      proposal_votes: Голоса по предложениям
-      debate_votes: Голоса по дебатам
-      comment_votes: Голоса по комментариям
-      votes: Всего голосов
-      verified_users: Верифицированные пользователи
-      unverified_users: Неверифицированные пользователи
   unauthorized:
     default: У вас нет разрешения, чтобы видеть эту страницу.
     manage:
@@ -861,15 +804,12 @@ ru:
   votes:
     agree: Я согласен
     anonymous: Слишком много анонимных голосов, чтобы признать голос %{verify_account}.
-    comment_unauthenticated: Вы должны %{signin} или %{signup}, чтобы голосовать.
     disagree: Я не согласен
     organizations: Организациям не разрешается голосовать
     supports: Поддержки
     verified_only: Только верифицированные пользователи могут голосовать по предложениям; %{verify_account}.
     budget_investments:
-      not_logged_in: Чтобы продолжить, %{signin} или %{signup}.
       not_verified: Только верифицированные пользователи могут голосовать по проектам инвестирования; %{verify_account}.
-      organization: Организациям не разрешается голосовать
       unfeasible: Невыполнимые проекты инвестирования нельзя поддерживать
       not_voting_allowed: Фаза голосования закрыта
   welcome:
@@ -898,23 +838,13 @@ ru:
       budget_investments:
         title: Рекомендуемые инвестиции
       slide: "Смотрите %{title}"
-    verification:
-      i_dont_have_an_account: У меня нет аккаунта
-      i_have_an_account: У меня уже есть аккаунт
-      question: У вас уже есть аккаунт в %{org_name}?
-      title: Верификация аккаунта
     welcome:
       go_to_index: Просмотреть предложения и дебаты
       start_using_consul: Перейти на страницу индекса
       title: Участвовать
-      user_permission_debates: Участвовать в дебатах
       user_permission_info: При помощи вашего аккаунта вы можете...
-      user_permission_proposal: Создавать новые предложения
-      user_permission_support_proposal: Поддерживать предложения*
       user_permission_verify: "Выполнять все действия верифицировать ваш аккаунт."
-      user_permission_verify_info: "* Только для пользователей на Цензусе."
       user_permission_verify_my_account: Верифицировать мой аккаунт
-      user_permission_votes: Участвовать в финальном голосовании
   invisible_captcha:
     sentence_for_humans: "Если вы человек, игнорируйте это поле"
     timestamp_error_message: "Извините, это было слишком быстро! Пожалуйста повторите отправку."

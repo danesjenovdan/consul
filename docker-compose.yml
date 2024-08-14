@@ -36,7 +36,7 @@ services:
     # map our application source code, in full, to the application root of our container
     volumes:
       - .:/var/www/consul
-      - bundle:/usr/local/bundle
+      # - bundle:/usr/local/bundle
     environment:
       POSTGRES_PASSWORD: postgres
       RAILS_ENV: development

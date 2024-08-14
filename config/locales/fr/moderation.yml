@@ -1,9 +1,10 @@
 fr:
   moderation:
+    actions:
+      confirm_action: "Etes vous sur? %{action}"
     comments:
       index:
         block_authors: Bloquer un auteur
-        confirm: Êtes-vous sûr(e) ?
         filter: Filtre
         filters:
           all: Toutes
@@ -24,7 +25,6 @@ fr:
     debates:
       index:
         block_authors: Bloquer un auteur
-        confirm: Êtes-vous sûr(e) ?
         filter: Filtre
         filters:
           all: Toutes
@@ -51,7 +51,6 @@ fr:
     proposals:
       index:
         block_authors: Bloquer un auteur
-        confirm: Êtes-vous sûr(e) ?
         filter: Filtre
         filters:
           all: Toutes
@@ -69,7 +68,6 @@ fr:
     budget_investments:
       index:
         block_authors: Bloquer un auteur
-        confirm: Êtes-vous sûr(e) ?
         filter: Filtre
         filters:
           all: Toutes
@@ -87,7 +85,6 @@ fr:
     proposal_notifications:
       index:
         block_authors: Bloquer un auteur
-        confirm: Êtes-vous sûr(e) ?
         filter: Filtre
         filters:
           all: Toutes
@@ -104,8 +101,11 @@ fr:
         title: Notifications des propositions
     users:
       index:
-        hidden: Bloqué
-        hide: Bloquer
+        block: Bloqué
+        confirm_block: "Êtes-vous sûr ? Cela masquera \"%{name}\" ainsi que tout son contenu."
+        confirm_hide: "Êtes-vous sûr ? Cela masquera \"%{name}\" sans masquer son contenu."
+        hide: masquer
         search_placeholder: courriel ou nom de l'utilisateur
         title: Bloquer les utilisateurs
+      notice_block: utilisateur bloqué. Tout son contenu et ses commentaires ont été masqués.
       notice_hide: Utilisateur bloqué. Tous les débats et les propositions de cet utilisateur ont été masqués.
