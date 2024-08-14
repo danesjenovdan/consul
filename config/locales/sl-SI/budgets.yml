@@ -107,7 +107,7 @@ sl-SI:
       header:
         check_ballot: "Preveri moja glasovanja"
         different_heading_assigned: "Imaš aktivna glasovanja v drugem naslovu: %{heading_link}"
-        change_ballot: "Če si premisliš, lahko odstraniš svoje glasove v %{check_ballot} and start again."
+        change_ballot: "Če si premisliš, lahko odstraniš svoje glasove v %{check_ballot} in začneš znova."
         check_ballot_link: "preveri moja glasovanja"
         price: "Ta naslov ima proračun v višini"
       votes:

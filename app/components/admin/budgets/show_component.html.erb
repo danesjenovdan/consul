@@ -12,16 +12,15 @@
   <%= render Admin::Budgets::GroupsAndHeadingsComponent.new(budget) %>
 </section>
 
-  <section aria-labelledby="actions_header">
-    <h3 id="actions_header"><%= t("admin.budgets.edit.actions") %></h3>
-    <%= render Admin::Budgets::ActionsComponent.new(budget) %>
-  </section>
+<section class="phases" aria-labelledby="phases_header">
+  <h3 id="phases_header"><%= t("admin.budgets.edit.phases_caption") %></h3>
+  <%= render Admin::BudgetPhases::PhasesComponent.new(budget) %>
+</section>
 
-  <section aria-labelledby="questions_header">
-    <h3 id="questions_header"><%= t("admin.budgets.edit.questions") %></h3>
-    <%= render Admin::BudgetQuestions::QuestionsComponent.new(budget) %>
-  </section>
-</main>
+<section aria-labelledby="questions_header">
+  <h3 id="questions_header"><%= t("admin.budgets.edit.questions") %></h3>
+  <%= render Admin::BudgetQuestions::QuestionsComponent.new(budget) %>
+</section>
 
 <section aria-labelledby="actions_header">
   <h3 id="actions_header"><%= t("admin.budgets.edit.actions") %></h3>
