@@ -4,7 +4,7 @@
       <%= t("shared.author_info.author_deleted") %>
   </span>
 <% elsif !resource.author.consent_to_publish_name %>
-  <%= avatar_image(resource.author, seed: resource.author_id, size: 32, class: "author-photo") %>
+  <%= render Shared::AvatarComponent.new(resource.author, size: 32, class: "author-photo") %>
   <span class="author"><%= t('custom.titles.anonymous_proposal') %></span>
 <% else %>
   <%= render Shared::AvatarComponent.new(resource.author, size: 32, class: "author-photo") %>
