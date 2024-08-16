@@ -9,4 +9,4 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-staging
-    newTag: '53e63423cdadf316a08dd75777db284426697d56'
+    newTag: 'a59a783e9691c94d9440fb271838d4e39e73ea44'
