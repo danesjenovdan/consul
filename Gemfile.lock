@@ -242,6 +242,7 @@ GEM
       logger
     faraday-net_http (3.1.1)
       net-http
+    ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-x86_64-linux-gnu)
     file_validators (3.0.0)
       activemodel (>= 3.2)
@@ -264,6 +265,9 @@ GEM
       request_store (~> 1.0)
     globalize-accessors (0.3.0)
       globalize (>= 5.0.0)
+    google-protobuf (4.27.3-aarch64-linux)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.27.3-x86_64-linux)
       bigdecimal
       rake (>= 13)
@@ -395,6 +399,8 @@ GEM
     net-ssh (7.2.3)
     nio4r (2.7.3)
     nkf (0.2.0)
+    nokogiri (1.16.7-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     nori (2.7.1)
@@ -604,6 +610,8 @@ GEM
       capistrano (~> 3.0)
       sshkit (>= 1.2)
     safely_block (0.4.0)
+    sass-embedded (1.77.8-aarch64-linux-gnu)
+      google-protobuf (~> 4.26)
     sass-embedded (1.77.8-x86_64-linux-gnu)
       google-protobuf (~> 4.26)
     sassc (2.4.0)
@@ -720,6 +728,7 @@ GEM
     zeitwerk (2.6.17)
 
 PLATFORMS
+  aarch64-linux
   x86_64-linux
 
 DEPENDENCIES
