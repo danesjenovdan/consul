@@ -1,5 +1,5 @@
 require 'date'
-require_dependency Rails.root.join('app', 'models', 'user').to_s
+load Rails.root.join('app', 'models', 'user.rb')
 
 class User < ApplicationRecord
 
