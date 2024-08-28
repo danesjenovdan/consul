@@ -47,7 +47,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 16
+      return 29
     end
 
     # check Kovor
@@ -73,7 +73,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 15
+      return 28
     end
 
     # check Sebenje
@@ -126,7 +126,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/i # assuming there are no special chars
     if r === address
-      return 14
+      return 27
     end
 
     # check Brezje
@@ -139,7 +139,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 17
+      return 30
     end
 
     # check Ravne
@@ -165,7 +165,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/i # assuming there are no special chars
     if r === address      
-      return 7
+      return 20
     end
 
     # check Tržič – mesto
@@ -201,7 +201,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 6
+      return 19
     end
 
     # check Jelendol
@@ -212,7 +212,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 10
+      return 23
     end
 
     # check Križe
@@ -231,7 +231,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 12
+      return 25
     end
 
     # check Lom pod Storžičem
@@ -243,7 +243,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 9
+      return 22
     end
 
     # check Leše
@@ -256,7 +256,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 18
+      return 31
     end
 
     # check Senično
@@ -269,7 +269,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 13
+      return 26
     end
 
     # check Podljubelj
@@ -279,7 +279,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 8
+      return 21
     end
 
     # check Pristava
@@ -293,7 +293,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 11
+      return 24
     end
   end
 
