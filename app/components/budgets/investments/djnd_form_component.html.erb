@@ -18,7 +18,8 @@
       <div>
         <%= translations_form.text_field :title,
               maxlength: Budget::Investment.title_max_length,
-              data: suggest_data(investment) %>
+              data: suggest_data(investment),
+              hint: "Ime naj bo kratko in naj odraža bistvo pobude" %>
       </div>
       <div class="js-suggest" data-locale="<%= translations_form.locale %>"></div>
 
@@ -29,6 +30,10 @@
               class: "html-area" %>
       </div>
     <% end %>
+  </fieldset>
+  
+  <fieldset>
+    <p><em>Odgovori na spodaj navedena vprašanja naj obsegajo do 700 besed s presledki (komisija si pridržuje pravico, da besedilo spremeni z namenom boljše razumljivosti predloga za občanke in občane).</em></p>
   </fieldset>
 
   <%= f.invisible_captcha :subtitle %>
@@ -45,9 +50,9 @@
       </p>
     <% end %>
 
-    <%= f.label :price, "Ocena stroškov projektnega predloga (skupaj z DDV-jem)", class: "inline-block" %>
+    <%= f.label :price, "Ocena stroškov projektnega predloga (skupaj z DDV-jem) - med 2000 in 20000 EUR", class: "inline-block" %>
     <p class="help-text">Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.</p>
-    <%= f.number_field :price, label: false, :required => true %>
+    <%= f.number_field :price, label: false, min: 2000, max: 20000, :required => true %>
 
     <% if feature?(:allow_images) %>
       <div class="images">
