@@ -2,6 +2,8 @@ load Rails.root.join("app", "controllers", "budgets", "investments_controller.rb
 
 module Budgets
   class InvestmentsController < ApplicationController
+    attr_reader :budget
+
     PER_PAGE = 12
 
     # SETTINGS FOR SOFT VOTING INDICATOR (made originally for Medvode Participativni proracun 2023-2024)
@@ -132,6 +134,7 @@ module Budgets
       # map
       @investment_ids = @investments.ids
       @investments_map_coordinates = MapLocation.where(investment: shuffled_investments).map(&:json_data)
+      @geozones_data = geozones_data
 
       # ?
       @tag_cloud = tag_cloud
@@ -156,6 +159,18 @@ module Budgets
                       documents_attributes: document_attributes,
                       map_location_attributes: map_location_attributes]
         params.require(:budget_investment).permit(attributes, translation_params(Budget::Investment))
+      end
+
+      def geozones_data
+        budget.geozones.map do |geozone|
+          {
+            outline_points: geozone.outline_points,
+            color: geozone.color,
+            headings: budget.headings.where(geozone: geozone).map do |heading|
+              ActionController::Base.helpers.link_to heading.name, budget_investments_path(budget, heading_id: heading.id)
+            end
+          }
+        end
       end
 
   end
