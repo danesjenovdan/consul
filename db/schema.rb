@@ -244,10 +244,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.boolean "allow_custom_content", default: false
     t.text "latitude"
     t.text "longitude"
+    t.integer "geozone_id"
     t.integer "max_ballot_lines", default: 1
     t.datetime "created_at", precision: nil
     t.datetime "updated_at", precision: nil
-    t.integer "geozone_id"
     t.index ["geozone_id"], name: "index_budget_headings_on_geozone_id"
     t.index ["group_id"], name: "index_budget_headings_on_group_id"
   end
@@ -1678,6 +1678,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.string "subscriptions_token"
     t.boolean "data_consent", default: false
     t.text "address"
+    t.boolean "consent_to_publish_name"
     t.integer "failed_attempts", default: 0, null: false
     t.datetime "locked_at", precision: nil
     t.string "unlock_token"
