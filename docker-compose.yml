@@ -18,7 +18,8 @@ services:
 
   # service configuration for our dockerized Rails app
   app:
-
+    # to run on mac
+    # platform: linux/x86_64
     # use the Dockerfile next to this file
     build: .
 
@@ -36,7 +37,7 @@ services:
     # map our application source code, in full, to the application root of our container
     volumes:
       - .:/var/www/consul
-      - bundle:/usr/local/bundle
+      # - bundle:/usr/local/bundle
     environment:
       POSTGRES_PASSWORD: postgres
       RAILS_ENV: development

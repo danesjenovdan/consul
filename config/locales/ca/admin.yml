@@ -4,11 +4,9 @@ ca:
       title: Administrar
     actions:
       actions: Accions
-      confirm: '¿Estás segur?'
       confirm_hide: Confirmeu la moderació
       delete: "Borrar"
       hide: Ocultar
-      hide_author: Bloquejar l'autor
       restore: Tornar a mostrar
       mark_featured: Destacades
       unmark_featured: treure destacat
@@ -132,7 +130,6 @@ ca:
       index:
         new_button: "Afegeix nou grup"
     budget_headings:
-      no_headings: "No hi ha cap títol."
       create:
         notice: "L'encapçalament creat correctament!"
       update:
@@ -210,7 +207,6 @@ ca:
           incompatible: Incompatible
           price: Preu
           author: Autor
-        cannot_calculate_winners: El pressupost ha de romandre en fase "Projectes de votació", "Revisar les paperetes" o "Pressupost acabat" per calcular els projectes guanyadors
         see_results: "veure resultats"
         milestone_tags_filter_all: "Totes les etiquetes de fita"
       show:
@@ -428,7 +424,6 @@ ca:
         title: "Documents"
         format: "Format"
         size: "Mida"
-        url: "URL"
       create:
         success_notice: "S'ha carregat document correctament"
         unable_notice: "Document no vàlid"
@@ -554,7 +549,6 @@ ca:
         index:
           title: Versions de l'esborrany
           create: crear versió
-          delete: Borrar
           preview: Previsualitzar
         new:
           back: Tornar
@@ -587,7 +581,6 @@ ca:
           back: Tornar
           title: Preguntes associades a aquest procés
           create: Crear pregunta per a votació
-          delete: Borrar
         new:
           back: Tornar
           title: Crear nova pregunta
@@ -1001,9 +994,6 @@ ca:
         table_title: "Títol"
         edit_answers: Edita les respostes
         see_proposal: "(Veure proposta)"
-      flash:
-        question_added: "Pregunta añadida a esta votación"
-        error_on_question_added: "No se pudo asignar la pregunta"
       destroy:
         alert: "Aquesta acció eliminarà l'enquesta i totes les seves preguntes associades."
         success_notice: "L'enquesta s'ha suprimit correctament"
@@ -1053,12 +1043,6 @@ ca:
     answers:
       new:
         title: Nova resposta
-      show:
-        title: Títol
-        description: Descripció detallada
-        images: Imatges
-        images_list: Llista d’imatges
-        edit: Edita la resposta
       edit:
         title: Edita la resposta
       videos:
@@ -1334,7 +1318,6 @@ ca:
           verified_users_who_didnt_vote_proposals: Usuaris verificats que no han votat propostes
           visits: Visites
           votes: Vots
-        budgets_title: Pressupostos ciutadans
         participatory_budgets: Pressupostos participatius
         direct_messages: missatges directes
         proposal_notifications: Notificacions de propostes
@@ -1342,8 +1325,6 @@ ca:
         polls: votacions
       graph:
         debate_created: Debats
-        visit: Visites
-        level_2_user: Usuaris de nivell 2
         proposal_created: Propostes ciutadanes
       budgets:
         no_data_before_balloting_phase: "No hi ha dades que es mostrin abans de la fase de votacions."
@@ -1450,7 +1431,6 @@ ca:
         index:
           title: Imatges
           update: Actualitzar
-          delete: Borrar
           image: imatge
         update:
           notice: Imatge actualitzada correctament
@@ -1478,7 +1458,7 @@ ca:
           see_page: Veure pàgina
         new:
           title: Nova pàgina
-          slug_help: "Text per identificar aquesta pàgina a l’URL, per exemple <code>https://consulproject.org/page-slug</code>"
+          slug_help: "Text per identificar aquesta pàgina a l’URL, per exemple <code>https://consuldemocracy.org/page-slug</code>"
         page:
           created_at: creat
           status: Estat

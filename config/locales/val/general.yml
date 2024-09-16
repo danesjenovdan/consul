@@ -11,14 +11,9 @@ val:
       save_changes_submit: Guardar canvis
       recommendations: Recomanacions
       title: El meu compte
-      user_permission_debates: Participar en debats
       user_permission_info: Amb el teu compte ja pots...
-      user_permission_proposal: Crear noves propostes
-      user_permission_support_proposal: Avalar propostes
       user_permission_title: Participació
       user_permission_verify: Per a poder realitzar totes les accions verifica el teu compte.
-      user_permission_verify_info: "* Sols usuaris empadronats."
-      user_permission_votes: Participar en les votacions finals
       verified_account: Compte verificat
       verify_my_account: Verificar el meu compte
   application:
@@ -67,10 +62,6 @@ val:
       form:
         submit_button: Iniciar un debat
     debate:
-      comments:
-        zero: Sense comentaris
-        one: 1 Comentari
-        other: "%{count} comentaris"
       votes:
         zero: Sense vots
         one: 1 vot
@@ -103,9 +94,6 @@ val:
         button: Cercar
         placeholder: Cercar debats...
         title: Cercar
-      search_results:
-        one: " que conté <strong>'%{search_term}'</strong>"
-        other: " que conté <strong>'%{search_term}'</strong>"
       start_debate: Iniciar un debat
       title: Debats
       section_header:
@@ -129,10 +117,6 @@ val:
       start_new: Iniciar un debat
     show:
       author_deleted: Usuari eliminat
-      comments:
-        zero: Sense comentaris
-        one: 1 Comentari
-        other: "%{count} Comentaris"
       comments_title: Comentaris
       edit_debate_link: Editar
       flag: Este debat ha sigut marcat com a inapropiat per alguns usuaris.
@@ -147,7 +131,6 @@ val:
       invalid_date_range: "El rang de dates no es vàlid"
   form:
     accept_terms: Accepte la %{policy} i les %{conditions}
-    accept_terms_title: Accepte la Política de privacitat i les Condicions d'us
     conditions: Termes i condicions d'us
     debate: Debat
     direct_message: el missatge privat
@@ -160,35 +143,31 @@ val:
     budget/investment: Proposta d'inversió
     budget/heading: Partida pressupostaria
     poll/shift: Torn
-    poll/question/answer: Resposta
     user: Compte
     verification/sms: telèfon
     signature_sheet: Full de signatures
     document: Document
     topic: Tema
     image: Imatge
+    site_customization/page: pàgina
+    sdg/local_target: objectiu local
   geozones:
     none: Tota la ciutat
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Hem detectat que estàs navegant desde Internet Explorer. Per a una millor experiència et recomanem utilitzar %{firefox} o %{chrome}.
-      ie_title: Esta web no està optimitzada per al teu navegador
     dashboard:
       proposal_header:
         published: Publicada
         draft: Esborrany
+        retired: Retras
       proposal_totals:
         supports:
           zero: Sense avals
     footer:
       accessibility: Accessibilitat
       conditions: Termes i condicions d'us
-      consul: Aplicació CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: Per a assistencia técnica entra en
-      copyright: CONSUL, %{year}
+      consul: Aplicació CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: Este portal utilitza la %{consul} que es %{open_source}.
       open_source: software de codi obert
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -255,6 +234,8 @@ val:
       sign_in: Entra amb Google
       sign_up: Regístrat amb Google
       name: Google
+    wordpress_oauth2:
+      name: Wordpress
     twitter:
       sign_in: Entra amb Twitter
       sign_up: Regístrat amb Twitter
@@ -334,7 +315,6 @@ val:
       select_order_long: "Estas veient les propostes en funció de:"
       start_proposal: Crear una proposta
       title: Propostes
-      top: Top semanal
       top_link_proposals: Propostes més avalades per categoria
       section_header:
         icon_alt: Icona de Propostes
@@ -361,10 +341,6 @@ val:
         edit: "Abans de publicar-se podràs modificar el text al teu gust."
         view_proposal: Ara no, anar a la meua proposta
       already_supported: Ja has avalat aquesta proposta. Comparteixla!
-      comments:
-        zero: Sense comentaris
-        one: 1 Comentari
-        other: "%{count} Comentaris"
       support: Avalar
       support_title: Avalar aquesta proposta
       supports:
@@ -382,11 +358,8 @@ val:
     show:
       author_deleted: Usuari eliminat
       code: "Codi de la proposta:"
-      comments:
-        zero: Sense comentaris
-        one: 1 Comentari
-        other: "%{count} Comentaris"
       comments_tab: Comentaris
+      dashboard_proposal_link: Panell
       flag: Esta proposta ha sigut marcada com inapropiada per diversos usuaris.
       notifications_tab: Notificacions
       milestones_tab: Seguiments
@@ -405,6 +378,8 @@ val:
     menu:
       community: Comunitat
       polls: Votacions
+      mailing: Correu electrònic
+      poster: Pòster
       related_content: Contingut relacionat
     progress:
       supports: Avals
@@ -414,6 +389,8 @@ val:
     recommended_actions:
       pending_title: Pendents
       done_title: Realitzada
+    next_goal:
+      title: Objectiu
     community:
       access_community: Accedir a la comunitat
       participants: Participants
@@ -432,10 +409,12 @@ val:
       form:
         add_question: Escriu un títol a la pregunta
       question_fields:
+        remove_question: Eliminar pregunta
         add_answer: Afegir resposta
     poster:
       options:
         preview: Vista previa
+        download: Descarrega
     mailing:
       mailing_options:
         preview: Vista previa
@@ -444,7 +423,6 @@ val:
         support_button: Avalar aquesta proposta
   polls:
     all: "Totes"
-    no_dates: "sense data asignada"
     dates: "Des del %{open_at} fins el %{closed_at}"
     final_date: "Recompte final/Resultats"
     index:
@@ -530,13 +508,13 @@ val:
       date_5: "Personalitzada"
       from: "De"
       general: "Amb el text"
+      goal: "Per SDG"
       search: "Filtre"
       title: "Cerca avançada"
       to: "Fins"
     author_info:
       author_deleted: Usuari eliminat
     back: Tornar
-    check: Seleccionar
     check_all: Totes
     check_none: Cap
     collective: Col·lectiu
@@ -595,24 +573,15 @@ val:
     translations:
       remove_language: Eliminar idioma
       add_language: Afegir idioma
+    required: "Camps obligatoris"
+    comments:
+      zero: "Sense comentaris"
   social:
     facebook: "Facebook de %{org}"
     twitter: "Twitter de %{org}"
     youtube: "YouTube de %{org}"
     telegram: "Telegram de %{org}"
     instagram: "Instagram de %{org}"
-  stats:
-    index:
-      visits: Visites
-      debates: Debats
-      proposals: Propostes
-      comments: Comentaris
-      proposal_votes: Vots en propostes
-      debate_votes: Vots en debats
-      comment_votes: Vots en comentaris
-      votes: Vots totals
-      verified_users: Usuaris verificats
-      unverified_users: Usuaris sense verificar
   unauthorized:
     default: No tens permís per a accedir a aquesta pàgina.
     manage:
@@ -672,15 +641,12 @@ val:
   votes:
     agree: Estic d'acord
     anonymous: Massa vots anònims, per a poder votar %{verify_account}.
-    comment_unauthenticated: Necessites %{signin} o %{signup} per a votar.
     disagree: No estic d'acord
     organizations: Les organitzacions no poden votar
     supports: Avals
     verified_only: Les propostes d'inversió només poden ser votades per usuaris verificats, %{verify_account}.
     budget_investments:
-      not_logged_in: Necessites %{signin} o %{signup}.
       not_verified: El projectes d'inversió només poden ser avalades per usuaris verificats, %{verify_account}.
-      organization: Les organitzacions no poden votar
       unfeasible: No es poden votar propostes inviables
       not_voting_allowed: El període de votació està tancat
   welcome:
@@ -709,22 +675,12 @@ val:
       budget_investments:
         title: Pressupostos recomanats
       slide: "Veure %{title}"
-    verification:
-      i_dont_have_an_account: No tinc compte, vull crear-ne un i verificar-lo
-      i_have_an_account: Ja tinc un compte que vull verificar
-      question: Tens ja un compte en %{org_name}?
-      title: Verificació de compte
     welcome:
       go_to_index: Vore propostes i debats
       title: Participa
-      user_permission_debates: Participar en debats
       user_permission_info: Amb el teu compte ja pots...
-      user_permission_proposal: Crear noves propostes
-      user_permission_support_proposal: Avalar propostes
       user_permission_verify: "Per a poder realitzar totes les accions verifica el teu compte."
-      user_permission_verify_info: "* Sols usuaris empadronats."
       user_permission_verify_my_account: Verificar el meu compte
-      user_permission_votes: Participar en les votacions finals
   invisible_captcha:
     sentence_for_humans: "Si eres humà, si us plau ignora este camp"
     timestamp_error_message: "Açò ha sigut massa ràpid. Si us plau, reenvia el formulari."
@@ -757,3 +713,13 @@ val:
     form:
       delete_button: Eliminar
       cancel_button: Cancel·lar
+    nested_links:
+      title: Enllaços
+      note: Afegeix els enllaços d'interes
+  communities:
+    show:
+      surveys: Enquestes
+    subnav:
+      surveys: Enquestes
+  remote_translations:
+    button: Traduir pàgina

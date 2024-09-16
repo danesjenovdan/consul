@@ -3,9 +3,10 @@ default: &default
   encoding: unicode
   host: database
   pool: 5
+  schema_search_path: "public,shared_extensions"
+  username:
+  password:
   port: 5432
-  username: postgres
-  password: postgres
 
 development: &development
   <<: *default

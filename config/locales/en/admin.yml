@@ -38,6 +38,8 @@ en:
           sdg: SDG
       create:
         notice: "Banner created successfully"
+      destroy:
+        notice: "Banner deleted successfully"
       edit:
         editing: Edit banner
         form:
@@ -113,6 +115,7 @@ en:
         delete: Delete budget
         phase: Phase
         phases_caption: "Phases"
+        phases_table_help_text: "The configuration of these phases is used for information purposes only. Its function is to define the phases information displayed on the public page of the participatory budget."
         duration: "Duration"
         enabled: Enabled
         actions: Actions
@@ -153,7 +156,7 @@ en:
         headings:
           multiple: "Headings are meant to divide the money of the participatory budget. Here you can add headings for this group and assign the amount of money that will be used for each heading."
           single: "Headings are meant to divide the money of the participatory budget. Since this budget will only contain one heading, this is the place where you stablish the money that will be spent in this participaroty budget."
-        phases: "Participatory budgets have different phases. Here you can enable or disable phases and also customize each individual phase."
+        phases: "Participatory budgets have different phases. Here you can enable or disable phases and also customize each individual phase. The configuration of these phases is used for information purposes only and will be displayed on the public page of the participatory budget."
       show:
         add_group: "Add group"
         add_heading: "Add heading"
@@ -163,6 +166,8 @@ en:
         calculate: Calculate Winner Investments
         calculated: Winners being calculated, it may take a minute.
         recalculate: Recalculate Winner Investments
+      ballots:
+        feature_disabled: 'The feature <strong>Polls</strong> must be enabled to create booths. You can enable it from the <a href="%{link}">settings configuration</a> page.'
     budget_groups:
       name: "Name"
       headings_name: "Headings"
@@ -195,10 +200,11 @@ en:
         success_notice: "Heading deleted successfully"
         unable_notice: "You cannot delete a Heading that has associated investments"
       form:
+        geozone_info: "When a heading is associated with a geozone, the geozone will appear on this budget's map if the geozone includes GeoJSON data."
         max_ballot_lines_info: 'Maximum number of projects a user can vote on this heading during the "Voting projects" phase. Only for budgets using approval voting.'
         population_info: "Budget Heading population field is used for Statistic purposes at the end of the Budget to show for each Heading that represents an area with population what percentage voted. The field is optional so you can leave it empty if it doesn't apply."
         coordinates_info: "If latitude and longitude are provided, the investments page for this heading will include a map. This map will be centered using those coordinates."
-        content_blocks_info: "If allow content block is checked, you will be able to create custom content related to this heading from the section Settings > Custom content blocks. This content will appear on the investments page for this heading."
+        content_blocks_info: "If allow content block is checked, you will be able to create custom content related to this heading from the section Site content > Custom content blocks. This content will appear on the investments page for this heading."
         create: "Create new heading"
         edit: "Edit heading"
         submit: "Save heading"
@@ -213,10 +219,11 @@ en:
     budget_phases:
       edit:
         title: "Edit phase"
+        dates_help_text: "For information purposes only"
         description_help_text: This text will appear in the header when the phase is active
         duration: "Phase's duration"
-        duration_description: "The period of time this phase will be active."
-        enabled_help_text: This phase will be public in the budget's phases timeline, as well as active for any other purpose
+        duration_description: "These fields are used for information purposes only and <strong>do not trigger an automatic update of the active phase.</strong> In order to update it, edit the budget and select the active phase."
+        enabled_help_text: This phase will be public in the budget's phases timeline.
         image_description: "If an image is uploaded it will be displayed next to the description of this phase."
         main_call_to_action: "Main call to action (optional)"
         main_call_to_action_description: "This link will appear on main banner of this participatory budget when this phase is enabled and encourages your user to perform a specific action like creating a proposal, voting for existing ones, or learn more about the process."
@@ -444,6 +451,16 @@ en:
         back: Go back to %{org}
         title: Administration
         description: Welcome to the %{org} admin panel.
+        info: |-
+          <p>This is the place where you, as an administrator, implement and oversee the citizen participation process in your city or region.</p>
+
+          <p>You are now one of hundreds of governments and municipalities worldwide that are using the CONSUL DEMOCRACY platform to put citizen participation into practice. Congratulations!</p>
+
+          <p>The CONSUL DEMOCRACY Foundation is at the heart of the global user community. We'd like to ask you to get in touch so we get a grasp of who's using the software and see how we might assist with implementation or use. We can't wait to welcome you to the community.</p>
+
+          <p>Happy administrating!</p>
+
+          <p>Greetings from the CONSUL DEMOCRACY Foundation team.</p>
       actions:
         index:
           description: "When users create proposals they can access a dashboard of their proposal, where you can propose resources and recommendations to get support for their idea."
@@ -522,12 +539,11 @@ en:
         title: "Documents"
         format: "Format"
         size: "Size"
-        url: "URL"
       create:
-        success_notice: "Document uploaded succesfully"
+        success_notice: "Document uploaded successfully"
         unable_notice: "Invalid document"
       destroy:
-        success_notice: "Document deleted succesfully"
+        success_notice: "Document deleted successfully"
     hidden_users:
       index:
         filter: Filter
@@ -615,7 +631,6 @@ en:
           title: Proposals
           back: Back
           id: Id
-          title: Title
           supports: Total supports
         form:
           custom_categories: Categories
@@ -649,7 +664,6 @@ en:
         index:
           title: Draft versions
           create: Create version
-          delete: Delete
           preview: Preview
         new:
           back: Back
@@ -682,7 +696,6 @@ en:
           back: Back
           title: Questions associated to this process
           create: Create question
-          delete: Delete
         new:
           back: Back
           title: Create new question
@@ -697,6 +710,11 @@ en:
       milestones:
         index:
           title: Following
+    locales:
+      default_help_text: "This is the default language of the application, and changing it will <strong>affect every user</strong> visiting the website for the first time."
+      enabled_help_text: The default language, selected above, will be included automatically.
+      update:
+        notice: Languages updated successfully
     managers:
       index:
         title: Managers
@@ -714,11 +732,12 @@ en:
     menu:
       activity: Moderator activity
       admin: Admin menu
-      banner: Manage banners
+      banner: Banners
       proposals: Proposals
       proposals_topics: Proposals topics
       budgets: Participatory budgets
-      geozones: Manage geozones
+      geozones: Geozones
+      locales: Languages
       hidden_comments: Hidden comments
       hidden_debates: Hidden debates
       hidden_proposals: Hidden proposals
@@ -739,7 +758,7 @@ en:
       polls: Polls
       poll_booths: Booths location
       poll_booth_assignments: Booths Assignments
-      poll_shifts: Manage shifts
+      poll_shifts: Shifts Assignments
       officials: Officials
       organizations: Organisations
       settings: Global settings
@@ -758,6 +777,8 @@ en:
           community: "Community"
           proposals: "Proposals"
           polls: "Polls"
+          legislation: "Collaborative legislation"
+          budgets: "Budgets"
           layouts: "Layouts"
           machine_learning: "AI / Machine Learning"
           mailers: "Emails"
@@ -779,8 +800,9 @@ en:
       dashboard_actions: Resources and actions
       debates: "Debates"
       comments: "Comments"
-      local_census_records: Manage local census
+      local_census_records: Local census
       machine_learning: "AI / Machine learning"
+      multitenancy: Multitenancy
     administrators:
       index:
         title: Administrators
@@ -805,7 +827,7 @@ en:
     segment_recipient:
       all_users: All users
       administrators: Administrators
-      all_proposal_authors: Proposal authors (including archived and retired)
+      all_proposal_authors: Proposal authors (including archived and withdrawn)
       proposal_authors: Proposal authors
       investment_authors: Investment authors in the current budget
       feasible_and_undecided_investment_authors: "Authors of some investment in the current budget that does not comply with: [valuation finished unfesasible]"
@@ -890,7 +912,7 @@ en:
         pending_to_be_sent: This is the content pending to be sent
         moderate_pending: Moderate notification send
         send_pending: Send pending
-        send_pending_notification: Pending notifications sent succesfully
+        send_pending_notification: Pending notifications sent successfully
       proposal_notification_digest:
         title: "Proposal notification digest"
         description: "Gathers all proposal notifications for an user in a single message, to avoid too much emails."
@@ -1099,13 +1121,14 @@ en:
         table_title: "Title"
         edit_answers: Edit answers
         see_proposal: "(See proposal)"
-      flash:
-        question_added: "Question added to this poll"
-        error_on_question_added: "Question could not be assigned to this poll"
       destroy:
         alert: "This action will remove the poll and all its associated questions."
         success_notice: "Poll deleted successfully"
         unable_notice: "You cannot delete a poll that has votes"
+      votation_type:
+        title: "Votation type"
+        unique_description: "It's only possible to answer one time to the question."
+        multiple_description: "Allows to choose multiple answers. It's possible to set the maximum number of answers."
     questions:
       index:
         title: "Questions"
@@ -1122,9 +1145,13 @@ en:
         poll_not_assigned: "Poll not assigned"
       edit:
         title: "Edit Question"
+      form:
+        poll_help: "You can only select polls that have not started yet"
       new:
         title: "Create question to poll %{poll}"
         title_proposal: "Create question"
+      destroy:
+        notice: "Question deleted successfully"
       answers:
         images:
           add_image: "Add image"
@@ -1148,17 +1175,17 @@ en:
           documents_list: Documents list
           document_title: Title
           document_actions: Actions
+      no_edit: "Once the poll has started it will not be possible to create, edit or delete questions, answers or any content associated with the poll."
     answers:
       new:
         title: New answer
-      show:
-        title: Title
-        description: Description
-        images: Images
-        images_list: Images list
-        edit: Edit answer
       edit:
         title: Edit answer
+      destroy:
+        success_notice: "Answer deleted successfully"
+      images:
+        index:
+          title: Images
       videos:
         index:
           title: Videos
@@ -1211,7 +1238,7 @@ en:
       show:
         location: "Location"
       booth:
-        shifts: "Manage shifts"
+        shifts: "Shifts Assignments"
     officials:
       edit:
         destroy: Remove "Official" status
@@ -1311,7 +1338,7 @@ en:
           title: Map configuration
           help: Here you can customize the way the map is displayed to users. Drag map marker or click anywhere over the map, set desired zoom and click button "Update".
           flash:
-            update: Map configuration updated succesfully.
+            update: Map configuration updated successfully.
           form:
             submit: Update
           how_to_enable: 'To show the map to users you must enable "Proposals and budget investments geolocation" on "Features" tab.'
@@ -1342,6 +1369,7 @@ en:
         label:
           booths: "Search booth by name or location"
           budget_investments: "Search investments by title, description or heading"
+          comments: "Search comments"
           debates: "Search debates by title or description"
           legislation_processes: "Search processes by title or description"
           legislation_proposals: "Search proposals by title or description"
@@ -1351,6 +1379,7 @@ en:
           poll_questions: "Search poll questions"
           polls: "Search polls by name or description"
           proposals: "Search proposals by title, code, description or question"
+          proposal_notifications: "Search notifications by title or description"
           users: "Search user by name or email"
         search: "Search"
       search_results: "Search results"
@@ -1370,18 +1399,25 @@ en:
       show_results_and_stats: "Show results and stats"
       results_and_stats_reminder: "Marking these checkboxes the results and/or stats will be publicly available and every user will see them."
       close_modal: Close modal
-      example_url: "For example, https://consulproject.org or /help"
+      example_url: "For example, https://consuldemocracy.org or /help"
     geozones:
       index:
         title: Geozone
         create: Create geozone
+        geojson_map: GeoJSON Map
+        geojson_map_help: "If GeoJSON coordinates are available they will be displayed on the map below"
       geozone:
         name: Name
         external_code: External code
         census_code: Census code
         code_help: Response code for this geozone on the census API
-        coordinates: Coordinates
+        color_help: "Color of the zone in a budget's map. %{format_help}"
+        coordinates: Coordinates available
         coordinates_help: Coordinates that will generate a clickable area on an HTML image map
+        geojson: GeoJSON available
+        geojson_help: "Must follow the \"Polygon\" or \"MultiPolygon\" type format; on a budget's map, a polygon based on this data will appear when a heading is associated to this geozone"
+      create:
+        notice: "Geozone created successfully"
       edit:
         form:
           submit_button: Save changes
@@ -1393,6 +1429,8 @@ en:
       delete:
         success: Geozone successfully deleted
         error: This geozone can't be deleted since there are elements attached to it
+      update:
+        notice: "Geozone updated successfully"
     signature_sheets:
       author: Author
       created_at: Creation date
@@ -1448,7 +1486,6 @@ en:
           verified_users_who_didnt_vote_proposals: Verified users who didn't votes proposals
           visits: Visits
           votes: Total votes
-        budgets_title: Participatory budgeting
         participatory_budgets: Participatory Budgets
         direct_messages: Direct messages
         proposal_notifications: Proposal notifications
@@ -1456,10 +1493,15 @@ en:
         polls: Polls
         sdg: SDG
       graph:
-        debate_created: Debates
-        visit: Visits
-        level_2_user: Level 2 users
-        proposal_created: Citizen proposals
+        budget_investment_created: Budget investments created
+        budget_investment_supported: Budget investments supported
+        debate_created: Debates created
+        legislation_annotation_created: Legislation annotations created
+        legislation_answer_created: Legislation answers created
+        level_3_user: Level 3 users verified
+        proposal_created: Citizen proposals created
+        title: Graphs
+        visits: Visits
       budgets:
         no_data_before_balloting_phase: "There isn't any data to show before the balloting phase."
         title: "Participatory Budgets - Participation stats"
@@ -1522,6 +1564,10 @@ en:
         document_number: Document number
         roles: Roles
         verification_level: Verification level
+        activation_status: Activation Status
+      account:
+        active_status: Account activated
+        inactive_status: Account not activated
       index:
         title: User
         no_users: There are no users.
@@ -1563,14 +1609,14 @@ en:
           name: Name
           names:
             top_links: Top Links
-            footer: Footer
+            footer: Footer (social media)
+            footer_legal: Footer (legal terms)
             subnavigation_left: Main Navigation Left
             subnavigation_right: Main Navigation Right
       images:
         index:
           title: Custom images
           update: Update
-          delete: Delete
           image: Image
         update:
           notice: Image updated successfully
@@ -1598,7 +1644,7 @@ en:
           see_page: View
         new:
           title: Create new custom page
-          slug_help: "Text to identify this page on URL, for example <code>https://consulproject.org/page-slug</code>"
+          slug_help: "Text to identify this page on URL, for example <code>https://consuldemocracy.org/page-slug</code>"
         page:
           created_at: Created at
           status: Status
@@ -1611,12 +1657,32 @@ en:
           create_card: Create card
           no_cards: There are no cards.
           columns_help: "Width of the card in number of columns. On mobile screens it's always a width of 100%."
+          order_help: "You can enter the position where this card will be shown."
           create:
             notice: "Card created successfully!"
           update:
             notice: "Card updated successfully"
           destroy:
             notice: "Card removed successfully"
+    tenants:
+      create:
+        notice: Tenant created successfully
+      form:
+        use_subdomain: "Use a subdomain in the %{domain} domain to access this tenant"
+        use_domain: "Use a different domain to access this tenant"
+      hide:
+        notice: Tenant disabled successfully
+      index:
+        create: Create tenant
+        enable: "Enable tenant %{tenant}"
+        enabled: Enabled
+      new:
+        admin_information: "When you create a tenant, your current user <strong>\"%{username}\"</strong> with the email <strong>\"%{email}\"</strong> and your password will be copied into the new tenant's database and will be automatically granted administration permissions. Note that these user accounts are stored in completely separate databases, so if you change the password of your user in one tenant, your accounts in other tenants will remain intact."
+        title: New tenant
+      restore:
+        notice: Tenant enabled successfully
+      update:
+        notice: Tenant updated successfully
     homepage:
       title: Homepage
       description: The active modules appear in the homepage in the same order as here.
@@ -1653,7 +1719,7 @@ en:
       empty: "There are no changes logged"
     local_census_records:
       index:
-        title: Manage local census
+        title: Local census
         create: Create new local census record
         no_local_census_records: There are no local census records.
         document_type: Document type
@@ -1678,7 +1744,7 @@ en:
         create:
           notice: Local census records import process executed successfully!
         show:
-          title: Manage local census
+          title: Local census
           subtitle: Import process results
           import: Import again
           errored: Errored rows
@@ -1700,10 +1766,10 @@ en:
       help:
         title_1: "What is AI / Machine Learning?"
         description_1: "Traditionally, computer programs are designed by establishing precise rules about what the program should do in each situation, and how to process the available information at each moment. What is commonly known as AI/Machine Learning is a type of programs for which what is precisely established is what the task to be performed is and how it is assessed whether the task is better or worse performed. But unlike the former, the system discovers or learns what would be the most suitable method to perform the task."
-        title_2: "What does the AI / Machine Learning module in CONSUL?"
-        description_2: "This module allows any type of AI/Machine Learning programs to be implemented in CONSUL. The programs can process the information available in CONSUL and produce results that help both users and administrators to carry out more effective and intelligent citizen participation. The module has been developed to make it easy to implement and run new programs, keeping the general code of CONSUL and the code of these new programs independent from each other."
+        title_2: "What does the AI / Machine Learning module in CONSUL DEMOCRACY?"
+        description_2: "This module allows any type of AI/Machine Learning programs to be implemented in CONSUL DEMOCRACY. The programs can process the information available in CONSUL DEMOCRACY and produce results that help both users and administrators to carry out more effective and intelligent citizen participation. The module has been developed to make it easy to implement and run new programs, keeping the general code of CONSUL DEMOCRACY and the code of these new programs independent from each other."
         title_3: "How to use this module"
-        description_3: "To use it for the first time it is necessary to follow the instructions available in the CONSUL documentation to properly activate this module. Once the module is correctly activated, the programs are executed from the \"Execute scripts\" tab. Before executing it, we can see in the same tab an estimation of the execution time and other relevant information. At the end of the execution, we can activate the content that will be shown in CONSUL from the \"Settings\" tab, as well as download other generated files that may be useful to us."
+        description_3: "To use it for the first time it is necessary to follow the instructions available in the CONSUL DEMOCRACY documentation to properly activate this module. Once the module is correctly activated, the programs are executed from the \"Execute scripts\" tab. Before executing it, we can see in the same tab an estimation of the execution time and other relevant information. At the end of the execution, we can activate the content that will be shown in CONSUL DEMOCRACY from the \"Settings\" tab, as well as download other generated files that may be useful to us."
         title_4: "How to implement new AI / Machine Learning scripts"
         description_4: "Please use previous scripts as examples."
         description_4b: "The new scripts should be located in the folder <code>public/machine_learning/scripts</code>"

@@ -27,16 +27,24 @@ describe "Admin shifts", :admin do
 
   scenario "Create Vote Collection Shift and Recount & Scrutiny Shift on same date" do
     create(:poll)
-    poll = create(:poll, :current)
+    poll = create(:poll)
     booth = create(:poll_booth, polls: [poll, create(:poll, :expired)])
     officer = create(:poll_officer)
-    vote_collection_dates = (Date.current..poll.ends_at.to_date).to_a.map { |date| I18n.l(date, format: :long) }
-    recount_scrutiny_dates = (poll.ends_at.to_date..poll.ends_at.to_date + 1.week).to_a.map { |date| I18n.l(date, format: :long) }
+    vote_collection_dates = (Date.current..poll.ends_at.to_date)
+                            .to_a
+                            .map do |date|
+                              I18n.l(date, format: :long)
+                            end
+    recount_scrutiny_dates = (poll.ends_at.to_date..poll.ends_at.to_date + 1.week)
+                             .to_a
+                             .map do |date|
+                               I18n.l(date, format: :long)
+                             end
 
     visit available_admin_booths_path
 
     within("#booth_#{booth.id}") do
-      click_link "Manage shifts"
+      click_link "Shifts Assignments"
     end
 
     expect(page).to have_content "This booth has no shifts"
@@ -45,7 +53,8 @@ describe "Admin shifts", :admin do
     click_button "Search"
     click_link "Edit shifts"
 
-    expect(page).to have_select("shift_date_vote_collection_date", options: ["Select day", *vote_collection_dates])
+    expect(page).to have_select("shift_date_vote_collection_date",
+                                options: ["Select day", *vote_collection_dates])
     expect(page).not_to have_select("shift_date_recount_scrutiny_date")
     select I18n.l(Date.current, format: :long), from: "shift_date_vote_collection_date"
     click_button "Add shift"
@@ -62,7 +71,7 @@ describe "Admin shifts", :admin do
     visit available_admin_booths_path
 
     within("#booth_#{booth.id}") do
-      click_link "Manage shifts"
+      click_link "Shifts Assignments"
     end
 
     expect(page).to have_css(".shift", count: 1)
@@ -73,7 +82,8 @@ describe "Admin shifts", :admin do
 
     select "Recount & Scrutiny", from: "shift_task"
 
-    expect(page).to have_select("shift_date_recount_scrutiny_date", options: ["Select day", *recount_scrutiny_dates])
+    expect(page).to have_select("shift_date_recount_scrutiny_date",
+                                options: ["Select day", *recount_scrutiny_dates])
     expect(page).not_to have_select("shift_date_vote_collection_date")
     select I18n.l(poll.ends_at.to_date + 4.days, format: :long), from: "shift_date_recount_scrutiny_date"
     click_button "Add shift"
@@ -88,25 +98,26 @@ describe "Admin shifts", :admin do
     end
   end
 
-  scenario "Vote Collection Shift and Recount & Scrutiny Shift don't include already assigned dates to officer" do
-    poll = create(:poll, :current)
+  scenario "Vote Collection Shift and Recount & Scrutiny Shift don't include already assigned dates" do
+    poll = create(:poll)
     booth = create(:poll_booth, polls: [poll])
     officer = create(:poll_officer)
 
     create(:poll_shift, :vote_collection_task, officer: officer, booth: booth, date: Date.current)
     create(:poll_shift, :recount_scrutiny_task, officer: officer, booth: booth, date: Time.zone.tomorrow)
 
-    vote_collection_dates = (Date.current..poll.ends_at.to_date).to_a
-                                                                .reject { |date| date == Date.current }
+    vote_collection_dates = (Date.current..poll.ends_at.to_date).excluding(Date.current)
                                                                 .map { |date| I18n.l(date, format: :long) }
-    recount_scrutiny_dates = (poll.ends_at.to_date..poll.ends_at.to_date + 1.week).to_a
-                                                                                  .reject { |date| date == Time.zone.tomorrow }
-                                                                                  .map { |date| I18n.l(date, format: :long) }
+    recount_scrutiny_dates = (poll.ends_at.to_date..poll.ends_at.to_date + 1.week)
+                             .excluding(Time.zone.tomorrow)
+                             .map do |date|
+                               I18n.l(date, format: :long)
+                             end
 
     visit available_admin_booths_path
 
     within("#booth_#{booth.id}") do
-      click_link "Manage shifts"
+      click_link "Shifts Assignments"
     end
 
     expect(page).to have_css(".shift", count: 2)
@@ -115,9 +126,11 @@ describe "Admin shifts", :admin do
     click_button "Search"
     click_link "Edit shifts"
 
-    expect(page).to have_select("shift_date_vote_collection_date", options: ["Select day", *vote_collection_dates])
+    expect(page).to have_select("shift_date_vote_collection_date",
+                                options: ["Select day", *vote_collection_dates])
     select "Recount & Scrutiny", from: "shift_task"
-    expect(page).to have_select("shift_date_recount_scrutiny_date", options: ["Select day", *recount_scrutiny_dates])
+    expect(page).to have_select("shift_date_recount_scrutiny_date",
+                                options: ["Select day", *recount_scrutiny_dates])
   end
 
   scenario "Change option from Recount & Scrutinity to Collect Votes" do
@@ -139,14 +152,14 @@ describe "Admin shifts", :admin do
   end
 
   scenario "Error on create" do
-    poll = create(:poll, :current)
+    poll = create(:poll)
     booth = create(:poll_booth, polls: [poll])
     officer = create(:poll_officer)
 
     visit available_admin_booths_path
 
     within("#booth_#{booth.id}") do
-      click_link "Manage shifts"
+      click_link "Shifts Assignments"
     end
 
     expect(page).to have_content "This booth has no shifts"
@@ -160,7 +173,7 @@ describe "Admin shifts", :admin do
   end
 
   scenario "Destroy" do
-    poll = create(:poll, :current)
+    poll = create(:poll)
     booth = create(:poll_booth, polls: [poll])
     officer = create(:poll_officer)
 
@@ -169,7 +182,7 @@ describe "Admin shifts", :admin do
     visit available_admin_booths_path
 
     within("#booth_#{booth.id}") do
-      click_link "Manage shifts"
+      click_link "Shifts Assignments"
     end
 
     expect(page).to have_css(".shift", count: 1)
@@ -195,7 +208,7 @@ describe "Admin shifts", :admin do
     visit available_admin_booths_path
 
     within("#booth_#{booth.id}") do
-      click_link "Manage shifts"
+      click_link "Shifts Assignments"
     end
 
     expect(page).to have_css(".shift", count: 1)
@@ -224,7 +237,7 @@ describe "Admin shifts", :admin do
     visit available_admin_booths_path
 
     within("#booth_#{booth.id}") do
-      click_link "Manage shifts"
+      click_link "Shifts Assignments"
     end
 
     expect(page).to have_css(".shift", count: 1)

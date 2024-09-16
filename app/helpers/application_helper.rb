@@ -6,30 +6,12 @@ module ApplicationHelper
     url_for(request.query_parameters.merge(query_parameters).merge(only_path: true))
   end
 
-  def rtl?
-    %i[ar fa he].include?(I18n.locale)
+  def rtl?(locale = I18n.locale)
+    %i[ar fa he].include?(locale)
   end
 
-  def markdown(text)
-    return text if text.blank?
-
-    # See https://github.com/vmg/redcarpet for options
-    render_options = {
-      filter_html:     false,
-      hard_wrap:       true,
-      link_attributes: {  target: "_blank" }
-    }
-    renderer = Redcarpet::Render::HTML.new(render_options)
-    extensions = {
-      autolink:           true,
-      fenced_code_blocks: true,
-      lax_spacing:        true,
-      no_intra_emphasis:  true,
-      strikethrough:      true,
-      superscript:        true
-    }
-
-    AdminLegislationSanitizer.new.sanitize(Redcarpet::Markdown.new(renderer, extensions).render(text))
+  def markdown(...)
+    MarkdownConverter.new(...).render
   end
 
   def wysiwyg(text)
@@ -48,23 +30,29 @@ module ApplicationHelper
     end
   end
 
+  def new_window_link_to(text, path, **options)
+    link_to text, path, { target: "_blank", title: t("shared.target_blank") }.merge(options)
+  end
+
   def image_path_for(filename)
     image = SiteCustomization::Image.image_for(filename)
 
     if image
       polymorphic_path(image)
+    elsif AssetFinder.find_asset(File.join(Tenant.subfolder_path, filename))
+      File.join(Tenant.subfolder_path, filename)
     else
       filename
     end
   end
 
-  def content_block(name, locale = I18n.locale)
-    SiteCustomization::ContentBlock.block_for(name, locale)
+  def content_block(...)
+    SiteCustomization::ContentBlock.block_for(...)
   end
 
   def self.asset_data_base64(path)
     asset = (Rails.application.assets || ::Sprockets::Railtie.build_environment(Rails.application))
-                                                             .find_asset(path)
+            .find_asset(path)
     throw "Could not find asset '#{path}'" if asset.nil?
     base64 = Base64.encode64(asset.to_s).gsub(/\s+/, "")
     "data:#{asset.content_type};base64,#{Rack::Utils.escape(base64)}"

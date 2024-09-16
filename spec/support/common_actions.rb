@@ -19,7 +19,11 @@ module CommonActions
   include Verifications
 
   def app_host
-    "#{Capybara.app_host}:#{Capybara::Server.ports.values.last}"
+    "#{Capybara.app_host}:#{app_port}"
+  end
+
+  def app_port
+    Capybara::Server.ports.values.last
   end
 
   def fill_in_signup_form(email = "manuela@consul.dev", password = "judgementday")
@@ -31,8 +35,8 @@ module CommonActions
   end
 
   def validate_officer
-    allow_any_instance_of(Officing::BaseController).
-    to receive(:verify_officer_assignment).and_return(true)
+    allow_any_instance_of(Officing::BaseController)
+      .to receive(:verify_officer_assignment).and_return(true)
   end
 
   def fill_in_proposal
@@ -65,8 +69,8 @@ module CommonActions
   def set_officing_booth(booth = nil)
     booth = create(:poll_booth) if booth.blank?
 
-    allow_any_instance_of(Officing::BaseController).
-    to receive(:current_booth).and_return(booth)
+    allow_any_instance_of(Officing::BaseController)
+      .to receive(:current_booth).and_return(booth)
   end
 
   def click_sdg_goal(code)

@@ -7,6 +7,11 @@ describe "Admin budget phases" do
     scenario "Update phase" do
       visit edit_admin_budget_budget_phase_path(budget, budget.current_phase)
 
+      expect(page).to have_content "These fields are used for information purposes only and do not trigger " \
+                                   "an automatic update of the active phase. In order to update it, edit " \
+                                   "the budget and select the active phase."
+      expect(page).to have_content "For information purposes only"
+
       fill_in "start_date", with: Date.current + 1.day
       fill_in "end_date", with: Date.current + 12.days
       fill_in_ckeditor "Description", with: "New description of the phase."
@@ -19,7 +24,7 @@ describe "Admin budget phases" do
       expect(budget.current_phase.starts_at.to_date).to eq((Date.current + 1.day).to_date)
       expect(budget.current_phase.ends_at.to_date).to eq((Date.current + 12.days).to_date)
       expect(budget.current_phase.description).to include("New description of the phase.")
-      expect(budget.current_phase.enabled).to be(false)
+      expect(budget.current_phase.enabled).to be false
     end
 
     scenario "Show default phase name or custom if present" do
@@ -32,7 +37,7 @@ describe "Admin budget phases" do
         within("tr", text: "Accepting projects") { click_link "Edit" }
       end
 
-      expect(page).to have_css "h2", exact_text: "Edit phase - Accepting projects"
+      expect(page).to have_css "h3", exact_text: "Edit phase - Accepting projects"
 
       fill_in "Name", with: "My phase custom name"
       click_button "Save changes"
@@ -48,7 +53,7 @@ describe "Admin budget phases" do
 
       imageable_attach_new_file(file_fixture("clippy.jpg"))
 
-      click_on "Save changes"
+      click_button "Save changes"
 
       expect(page).to have_content "Changes saved"
     end
@@ -59,14 +64,14 @@ describe "Admin budget phases" do
       expect(page).to have_content "Main call to action (optional)"
 
       fill_in "Text on the link", with: "Link on the phase"
-      fill_in "The link takes you to (add a link)", with: "https://consulproject.org"
+      fill_in "The link takes you to (add a link)", with: "https://consuldemocracy.org"
       click_button "Save changes"
 
       expect(page).to have_content("Changes saved")
 
       visit budgets_path
 
-      expect(page).to have_link("Link on the phase", href: "https://consulproject.org")
+      expect(page).to have_link("Link on the phase", href: "https://consuldemocracy.org")
     end
   end
 end

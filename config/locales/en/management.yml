@@ -35,7 +35,7 @@ en:
     document_verifications:
       already_verified: This user account is already verified.
       has_no_account: In order to create an account, go to %{link} and click in <b>"Register"</b> in the upper-left part of the screen.
-      link: CONSUL
+      link: CONSUL DEMOCRACY
       in_census_has_following_permissions: "This user can participate in the website with the following permissions:"
       not_in_census: This document is not registered.
       not_in_census_info: "Citizens not in the Census can participate in the website with the following permissions:"
@@ -64,11 +64,6 @@ en:
       users: Users management
       user_invites: Send invitations
       select_user: Select user
-    permissions:
-      create_proposals: Create proposals
-      debates: Engage in debates
-      support_proposals: Support proposals
-      vote_proposals: Vote proposals
     print:
       proposals_info: Create your proposal on http://url.consul
       proposals_title: "Proposals:"

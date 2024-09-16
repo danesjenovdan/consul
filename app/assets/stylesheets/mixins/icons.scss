@@ -5,7 +5,7 @@
 }
 
 %svg-icon {
-  @supports (mask-image: url()) and (--custom-property-name: custom-property-value) {
+  @supports (mask-image: url("")) and (--custom-property-name: custom-property-value) {
     background: currentcolor;
     content: "" !important;
     height: 1em;
@@ -1516,7 +1516,7 @@ $font-awesome-icons: (
 
   &:hover,
   &:focus {
-    color: $link-hover;
+    @include anchor-color-hover;
     text-decoration: none;
   }
 
@@ -1597,7 +1597,7 @@ $font-awesome-icons: (
   }
 
   .configure-link,
-  .answers-link {
+  .options-link {
     @include has-fa-icon(tools, solid);
   }
 
@@ -1620,7 +1620,6 @@ $font-awesome-icons: (
 
   .manage-link {
     @include has-fa-icon(archive, solid);
-    color: $link;
   }
 
   .cards-link {
