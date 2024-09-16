@@ -4,11 +4,9 @@ pt-BR:
       title: Administração
     actions:
       actions: Ações
-      confirm: Tem certeza?
       confirm_hide: Confirmar a moderação
       delete: "Apagar"
       hide: Ocultar
-      hide_author: Esconder o autor
       restore: Restaurar
       mark_featured: Destacado
       unmark_featured: Desmarcar destaques
@@ -136,7 +134,6 @@ pt-BR:
       index:
         new_button: "Adicionar novo grupo"
     budget_headings:
-      no_headings: "Não há títulos."
       create:
         notice: "Título criado com sucesso!"
       update:
@@ -214,7 +211,6 @@ pt-BR:
           incompatible: Incompatível
           price: Preço
           author: Autor
-        cannot_calculate_winners: O orçamento tem que ficar na fase "Projetos de votação", "Revendo votos" ou "Orçamento concluído" em ordem para calcular os projetos vencedores
         see_results: "Exibir resultados"
         milestone_tags_filter_all: "Todos os status de andamento"
       show:
@@ -432,7 +428,6 @@ pt-BR:
         title: "Documentos"
         format: "Formato"
         size: "Tamanho"
-        url: "URL"
       create:
         success_notice: "Documento carregado com sucesso"
         unable_notice: "Documento inválido"
@@ -558,7 +553,6 @@ pt-BR:
         index:
           title: Versões preliminares
           create: Criar versão
-          delete: Apagar
           preview: Prévia
         new:
           back: Voltar
@@ -591,7 +585,6 @@ pt-BR:
           back: Voltar
           title: Perguntas associadas a esse processo
           create: Criar questão
-          delete: Apagar
         new:
           back: Voltar
           title: Criar nova pergunta
@@ -1006,9 +999,6 @@ pt-BR:
         table_title: "Título"
         edit_answers: Editar respostas
         see_proposal: "(Ver proposta)"
-      flash:
-        question_added: "Perguntas adicionadas a essa votação"
-        error_on_question_added: "Pergunta não pode ser atribuída a essa votação"
       destroy:
         alert: "Esta ação excluirá a votação e todas as perguntas associadas a ela."
         success_notice: "Votação excluída com sucesso"
@@ -1058,12 +1048,6 @@ pt-BR:
     answers:
       new:
         title: Nova resposta
-      show:
-        title: Título
-        description: Descrição
-        images: Imagens
-        images_list: Lista de imagens
-        edit: Editar resposta
       edit:
         title: Editar resposta
       videos:
@@ -1352,7 +1336,6 @@ pt-BR:
           verified_users_who_didnt_vote_proposals: Usuários verificados que não votaram em propostas
           visits: Visitas
           votes: Total de votos
-        budgets_title: Orçamento participativo
         participatory_budgets: Orçamentos Participativos
         direct_messages: Mensagens diretas
         proposal_notifications: Notificações de proposta
@@ -1361,8 +1344,6 @@ pt-BR:
         sdg: ODS (SDG)
       graph:
         debate_created: Debates
-        visit: Visitas
-        level_2_user: Usuários de nível 2
         proposal_created: Propostas dos cidadãos
       budgets:
         no_data_before_balloting_phase: "Não há dados a mostrar antes da fase de votação."
@@ -1474,7 +1455,6 @@ pt-BR:
         index:
           title: Imagens personalizadas
           update: Atualizar
-          delete: Apagar
           image: Imagem
         update:
           notice: Imagem atualizada com sucesso
@@ -1502,7 +1482,7 @@ pt-BR:
           see_page: Exibir página
         new:
           title: Criar nova página personalizada
-          slug_help: "Texto que identifica esta página no URL, por exemplo <code>https://consulproject.org/page-slug</code>"
+          slug_help: "Texto que identifica esta página no URL, por exemplo <code>https://consuldemocracy.org/page-slug</code>"
         page:
           created_at: Criado em
           status: Status

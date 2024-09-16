@@ -11,14 +11,9 @@ bs:
       save_changes_submit: Spasi izmjene
       recommendations: Preporuke
       title: Moj nalog
-      user_permission_debates: Učestvuj u debatama
       user_permission_info: Sa svojim nalogom, možeš...
-      user_permission_proposal: Formulisati nove prijedloge
-      user_permission_support_proposal: Iskazati podršku za prijedloge
       user_permission_title: Učešće
       user_permission_verify: Potvrdi nalog za obavljanje svih radnji.
-      user_permission_verify_info: "* Samo za korisnike popisa."
-      user_permission_votes: Učestvujte u finalnom glasanju
       verified_account: Nalog potvrđen
       verify_my_account: Potvrdi moj nalog
   application:
@@ -69,11 +64,6 @@ bs:
       form:
         submit_button: Pokreni debatu
     debate:
-      comments:
-        zero: Nema komentara
-        one: 1 komentar
-        few: "%{count} komentara"
-        other: "%{count} komentara"
       votes:
         zero: Nema glasova
         one: 1 glas
@@ -107,10 +97,6 @@ bs:
         button: Traži
         placeholder: Pretraga po debatama...
         title: Traži
-      search_results:
-        one: " sadrži pojam <strong>'%{search_term}'</strong>"
-        few: " sadrži pojam <strong>'%{search_term}'</strong>"
-        other: " sadrži pojam <strong>'%{search_term}'</strong>"
       start_debate: Pokreni debatu
       title: Debate
       section_header:
@@ -134,11 +120,6 @@ bs:
       start_new: Pokreni debatu
     show:
       author_deleted: Korisnik obrisan
-      comments:
-        zero: Nema komentara
-        one: 1 komentar
-        few: "%{count} komentara"
-        other: "%{count} komentara"
       comments_title: Komentari
       edit_debate_link: Edituj
       flag: Nekoliko korisnika je označilo debatu neprikladnom.
@@ -153,7 +134,6 @@ bs:
       invalid_date_range: "Neispravan raspon datuma"
   form:
     accept_terms: Prihvatam %{policy} i %{conditions}
-    accept_terms_title: Prihvatam politiku privatnosti i uvjete korištenja
     conditions: Uvjeti korištenja
     debate: Debata
     direct_message: privatna poruka
@@ -167,7 +147,6 @@ bs:
     budget/group: Budžetska grupa
     budget/heading: Budžetsko poglavlje
     poll/shift: Smjena
-    poll/question/answer: Odgovor
     user: Nalog
     verification/sms: telefon
     signature_sheet: Potpisni list
@@ -177,11 +156,6 @@ bs:
   geozones:
     none: Cijelo mjesto
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Pretražujete sa Internet Explorer-om. Zbog kvalitetnijeg korištenja, preporučujemo upotrebu %{firefox} ili %{chrome}.
-      ie_title: Web-stranica nije optimizirana za vaš preglednik
     dashboard:
       proposal_header:
         published: Objavljeno
@@ -201,10 +175,9 @@ bs:
     footer:
       accessibility: Pristupačnost
       conditions: Uvjeti korištenja
-      consul: Aplikacija CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: Posjeti za tehničku podršku
-      copyright: CONSUL, (godina) %{year}
+      consul: Aplikacija CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, (godina) %{year}
       description: Ovaj portal koristi %{consul}, koji je %{open_source} aplikacija.
       open_source: softver otvorenog koda
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -363,7 +336,6 @@ bs:
       select_order_long: "Gledate prijedloge poredane po:"
       start_proposal: Formuliši prijedlog
       title: Prijedlozi
-      top: Najpopularnije na kraju sedmice
       top_link_proposals: Prijedlozi s najvećom podrškom, poredani po kategorijama
       section_header:
         icon_alt: Ikonica za prijedloge
@@ -391,11 +363,6 @@ bs:
         edit: "Prije nego ga podijelite, možete izmjeniti tekst kako želite."
         view_proposal: Ne sada, idi na moj prijedlog
       already_supported: Već ste podržali ovaj prijedlog. Podijelite ga!
-      comments:
-        zero: Nema komentara
-        one: 1 komentar
-        few: "%{count} komentara"
-        other: "%{count} komentara"
       support: Podrška
       support_title: Podrži prijedlog
       supports:
@@ -415,11 +382,6 @@ bs:
     show:
       author_deleted: Korisnik obrisan
       code: "Šifra prijedloga:"
-      comments:
-        zero: Nema komentara
-        one: 1 komentar
-        few: "%{count} komentara"
-        other: "%{count} komentara"
       comments_tab: Komentari
       dashboard_proposal_link: Kontrolna ploča
       flag: Nekoliko korisnika je označilo prijedlog neprikladnim.
@@ -574,7 +536,6 @@ bs:
         share: "Bilo bi super kad bi mi učinili veliku uslugu i podijelili moj prijedlog sa prijateljima, porodicom i poznanicima!"
   polls:
     all: "Sve"
-    no_dates: "nije određen datum"
     dates: "Od %{open_at} do %{closed_at}"
     final_date: "Konačno ponovno brojanje/Rezultati"
     index:
@@ -669,7 +630,6 @@ bs:
     author_info:
       author_deleted: Korisnik obrisan
     back: Idi nazad
-    check: Odaberi
     check_all: Sve
     check_none: Ništa
     collective: Zajednica
@@ -737,18 +697,6 @@ bs:
     youtube: "%{org} YouTube"
     telegram: "%{org} Telegram"
     instagram: "%{org} Instagram"
-  stats:
-    index:
-      visits: Posjete
-      debates: Debate
-      proposals: Prijedlozi
-      comments: Komentari
-      proposal_votes: Glasovi za prijedloge
-      debate_votes: Glasovi za debate
-      comment_votes: Glasovi za komentare
-      votes: Ukupno glasova
-      verified_users: Potvrđeni korisnici
-      unverified_users: Nepotvrđeni korisnici
   unauthorized:
     default: Nemate dozvolu da pristupite ovoj stranici.
     manage:
@@ -814,15 +762,12 @@ bs:
   votes:
     agree: Slažem se
     anonymous: Previše anonimnih glasova da bi se priznalo glasanje (potvrdi nalog) %{verify_account}.
-    comment_unauthenticated: Morate se prijaviti %{signin} ili otvoriti nalog %{signup} da bi glasali.
     disagree: Ne slažem se
     organizations: Organizacije ne mogu glasati
     supports: Glasovi podrške
     verified_only: Samo korisnici sa potvrđenim nalogom mogu glasati za prijedloge; %{verify_account}.
     budget_investments:
-      not_logged_in: Morate se prijaviti %{signin} ili otvoriti nalog %{signup} kako bi nastavili.
       not_verified: Samo korisnici sa potvrđenim nalogom mogu glasati za investicione projekte; %{verify_account}.
-      organization: Organizacije ne mogu glasati
       unfeasible: Neizvodivi investicioni projekti ne mogu dobiti podršku
       not_voting_allowed: Faza glasanja je završena
       different_heading_assigned:
@@ -855,23 +800,13 @@ bs:
       budget_investments:
         title: Preporučene investicije
       slide: "Vidi %{title}"
-    verification:
-      i_dont_have_an_account: Nemam nalog
-      i_have_an_account: Imam nalog
-      question: Imate nalog u %{org_name}?
-      title: Potvrda naloga
     welcome:
       go_to_index: Ne sada, idi na indeksnu stranicu
       start_using_consul: Idi na indeksnu stranicu
       title: Učestvuj
-      user_permission_debates: Učestvuj u debatama
       user_permission_info: Sa svojim nalogom, možeš...
-      user_permission_proposal: Formulisati nove prijedloge
-      user_permission_support_proposal: Dati podršku prijedlozima*
       user_permission_verify: "Potvrdi nalog za obavljanje sljedećih radnji."
-      user_permission_verify_info: "* Samo za korisnike popisa."
       user_permission_verify_my_account: Potvrdi moj nalog
-      user_permission_votes: Učestvuj u finalnom glasanju
   invisible_captcha:
     sentence_for_humans: "Ako ste ljudsko biće, zanemarite ovo polje"
     timestamp_error_message: "To je bilo prebrzo! Podnesi ponovo."

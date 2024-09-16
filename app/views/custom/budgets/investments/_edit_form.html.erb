@@ -49,13 +49,13 @@
 
     <% if feature?(:allow_images) %>
       <div class="images">
-        <%= render "images/nested_image", f: f, version: "large" %>
+        <%= render Images::NestedComponent.new(f) %>
       </div>
     <% end %>
 
     <% if feature?(:allow_attached_documents) %>
       <div class="documents">
-        <%= render "documents/nested_documents", documentable: @investment, f: f %>
+        <%= render Documents::NestedComponent.new(f) %>
       </div>
     <% end %>
 

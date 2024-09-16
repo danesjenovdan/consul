@@ -4,11 +4,9 @@ sl-SI:
       title: Administracija
     actions:
       actions: Dejanja
-      confirm: Si prepričan?
       confirm_hide: Potrdi
       delete: "Izbriši"
       hide: Skrij
-      hide_author: Skrij avtorja
       restore: Obnovi
       mark_featured: Izpostavljeno
       unmark_featured: Odznači izpostavljeno
@@ -144,7 +142,6 @@ sl-SI:
           incompatible: Nekompatibilen
           price: Cena
           author: Avtor
-        cannot_calculate_winners: Proračun mora ostati v fazi "Projekti za glasovanje", "Pregled glasov", ali "Dokončan proračun", da se izračuna zmagovalni projekt
         see_results: "Poglej rezultate"
       show:
         assigned_admin: Dodeljeni skrbnik
@@ -372,7 +369,6 @@ sl-SI:
         index:
           title: Verzije osnutka
           create: Ustvari verzijo
-          delete: Izbriši
           preview: Predogled
         new:
           back: Nazaj
@@ -403,7 +399,6 @@ sl-SI:
           back: Nazaj
           title: Vprašanja, povezana s tem procesom
           create: Ustvari vprašanje
-          delete: Izbriši
         new:
           back: Nazaj
           title: Ustvari novo vprašanje
@@ -707,9 +702,6 @@ sl-SI:
         no_questions: "Ni vprašanj, dodeljenih temu glasovanju."
         questions_title: "Seznam vprašanj"
         table_title: "Naslov"
-      flash:
-        question_added: "Vprašanje dodano glasovanju"
-        error_on_question_added: "Vprašanja ni bilo mogoče dodeliti temu glasovanju"
     questions:
       index:
         title: "Vprašanja"
@@ -754,12 +746,6 @@ sl-SI:
     answers:
       new:
         title: Nov odgovor
-      show:
-        title: Naslov
-        description: Opis
-        images: Slike
-        images_list: Seznam slik
-        edit: Uredi odgovor
       edit:
         title: Uredi odgovor
       videos:
@@ -987,7 +973,6 @@ sl-SI:
         polls: Glasovanja
       graph:
         debate_created: Razprave
-        visit: Obiski
       budget_balloting:
         vote_count: Glasovi
       budget_supporting:
@@ -1067,7 +1052,6 @@ sl-SI:
         index:
           title: Slike po meri
           update: Posodobi
-          delete: Izbriši
           image: Slika
         update:
           notice: Slika uspešno posodobljena

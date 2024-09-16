@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # EDIT DATABASE NAME TO CHOOSE WHICH ONE YOU WANT
-DATABASE_NAME="consul_maribor"
+DATABASE_NAME="consul_medvode"
 
 # DATABASE PASSWORD IS DYNAMICALLY RETRIEVED FROM THE CLUSTER
-DATABASE_PASSWORD=$(kubectl get secret postgresql -n shared -o jsonpath="{.data.postgresql-password}" | base64 --decode)
+DATABASE_PASSWORD=$(kubectl get secret postgresql-11 -n shared -o jsonpath="{.data.postgresql-password}" | base64 --decode)
 
 echo
 echo "PORT FORWARDING"
-nohup kubectl port-forward pod/postgresql-11-postgresql-0 54321:5432 --namespace=shared &>/dev/null &
+nohup kubectl port-forward pod/postgresql-11 54321:5432 --namespace=shared &>/dev/null &
 
 # store the kubectl pid for later
 KUBECTL_PID=$!

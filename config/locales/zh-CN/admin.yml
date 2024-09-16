@@ -4,11 +4,9 @@ zh-CN:
       title: 管理
     actions:
       actions: 行动
-      confirm: 您确定吗？
       confirm_hide: 确认审核
       delete: "删除"
       hide: 隐藏
-      hide_author: 隐藏作者
       restore: 恢复
       mark_featured: 特色
       unmark_featured: 取消特色标记
@@ -165,7 +163,6 @@ zh-CN:
           incompatible: 不兼容
           price: 价格
           author: 作者
-        cannot_calculate_winners: 预算必须留在“投票项目”，“审查选票”或者“完成预算”阶段以便计算优胜者项目
         see_results: "查看结果"
       show:
         assigned_admin: 指定的管理员
@@ -431,7 +428,6 @@ zh-CN:
         index:
           title: 草稿版本
           create: 创建版本
-          delete: 删除
           preview: 预览
         new:
           back: 返回
@@ -464,7 +460,6 @@ zh-CN:
           back: 返回
           title: 与此过程相关的问题
           create: 创建问题
-          delete: 删除
         new:
           back: 返回
           title: 创建新问题
@@ -813,9 +808,6 @@ zh-CN:
         no_questions: "没有分配给此投票项的问题。"
         questions_title: "问题列表"
         table_title: "标题"
-      flash:
-        question_added: "已添加到此投票项的问题"
-        error_on_question_added: "无法被指定到此投票项的问题"
     questions:
       index:
         title: "问题"
@@ -859,12 +851,6 @@ zh-CN:
     answers:
       new:
         title: 新答案
-      show:
-        title: 标题
-        description: 说明
-        images: 图片
-        images_list: 图像列表
-        edit: 编辑答案
       edit:
         title: 编辑答案
       videos:
@@ -1100,7 +1086,6 @@ zh-CN:
           verified_users_who_didnt_vote_proposals: 没有投票提议的已验证用户
           visits: 访问
           votes: 总投票数
-        budgets_title: 参与性预算
         participatory_budgets: 参与性预算
         direct_messages: 直接信息
         proposal_notifications: 提议通知
@@ -1108,7 +1093,6 @@ zh-CN:
         polls: 投票
       graph:
         debate_created: 辩论
-        visit: 访问
         proposal_created: 公民提议
       budget_balloting:
         vote_count: 投票
@@ -1201,7 +1185,6 @@ zh-CN:
         index:
           title: 自定义图片
           update: 更新
-          delete: 删除
           image: 图像
         update:
           notice: 图像已成功更新
