@@ -6,10 +6,6 @@ describe "Poll Officing" do
 
   scenario "Access as regular user is not authorized" do
     login_as(user)
-    visit root_path
-
-    expect(page).not_to have_content "Menu"
-    expect(page).not_to have_link "Polling officers"
 
     visit officing_root_path
 
@@ -20,13 +16,7 @@ describe "Poll Officing" do
 
   scenario "Access as moderator is not authorized" do
     create(:moderator, user: user)
-
     login_as(user)
-    visit root_path
-    click_link "Menu"
-
-    expect(page).to have_link "Moderation"
-    expect(page).not_to have_link "Polling officers"
 
     visit officing_root_path
 
@@ -37,13 +27,7 @@ describe "Poll Officing" do
 
   scenario "Access as manager is not authorized" do
     create(:manager, user: user)
-
     login_as(user)
-    visit root_path
-    click_link "Menu"
-
-    expect(page).to have_link "Management"
-    expect(page).not_to have_link "Polling officers"
 
     visit officing_root_path
 
@@ -55,13 +39,7 @@ describe "Poll Officing" do
   scenario "Access as SDG manager is not authorized" do
     Setting["feature.sdg"] = true
     create(:sdg_manager, user: user)
-
     login_as(user)
-    visit root_path
-    click_link "Menu"
-
-    expect(page).to have_link "SDG content"
-    expect(page).not_to have_link "Polling officers"
 
     visit officing_root_path
 
@@ -72,13 +50,7 @@ describe "Poll Officing" do
 
   scenario "Access as a valuator is not authorized" do
     create(:valuator, user: user)
-
     login_as(user)
-    visit root_path
-    click_link "Menu"
-
-    expect(page).to have_link "Valuation"
-    expect(page).not_to have_link "Polling officers"
 
     visit officing_root_path
 
@@ -89,15 +61,7 @@ describe "Poll Officing" do
 
   scenario "Access as an administrator is not authorized" do
     create(:administrator, user: user)
-    create(:poll)
-
     login_as(user)
-    visit root_path
-
-    click_link "Menu"
-
-    expect(page).to have_link "Administration"
-    expect(page).not_to have_link "Polling officers"
 
     visit officing_root_path
 
@@ -109,7 +73,6 @@ describe "Poll Officing" do
   scenario "Access as an administrator with poll officer role is authorized" do
     create(:administrator, user: user)
     create(:poll_officer, user: user)
-    create(:poll)
     login_as(user)
     visit root_path
 
@@ -120,9 +83,8 @@ describe "Poll Officing" do
     expect(page).not_to have_content "You do not have permission to access this page"
   end
 
-  scenario "Access as an poll officer is authorized" do
+  scenario "Access as a poll officer is authorized" do
     create(:poll_officer, user: user)
-    create(:poll)
     login_as(user)
     visit root_path
 
@@ -130,38 +92,12 @@ describe "Poll Officing" do
     click_link "Polling officers"
 
     expect(page).to have_current_path(officing_root_path)
+    expect(page).to have_css "#officing_menu"
+    expect(page).not_to have_link "Polling officers"
+    expect(page).not_to have_css "#valuation_menu"
+    expect(page).not_to have_css "#admin_menu"
+    expect(page).not_to have_css "#moderation_menu"
     expect(page).not_to have_content "You do not have permission to access this page"
-  end
-
-  scenario "Poll officer access links" do
-    create(:poll)
-    create(:poll_officer, user: user)
-    login_as(user)
-    visit root_path
-
-    click_link "Menu"
-
-    expect(page).to have_link("Polling officers")
-    expect(page).not_to have_link("Valuation")
-    expect(page).not_to have_link("Administration")
-    expect(page).not_to have_link("Moderation")
-  end
-
-  scenario "Officing dashboard" do
-    create(:poll_officer, user: user)
-    create(:poll)
-    login_as(user)
-    visit root_path
-
-    click_link "Menu"
-    click_link "Polling officers"
-
-    expect(page).to have_current_path(officing_root_path)
-    expect(page).to have_css("#officing_menu")
-    expect(page).not_to have_link("Polling officers")
-    expect(page).not_to have_css("#valuation_menu")
-    expect(page).not_to have_css("#admin_menu")
-    expect(page).not_to have_css("#moderation_menu")
   end
 
   scenario "Officing dashboard available for multiple sessions", :with_frozen_time do
@@ -192,7 +128,7 @@ describe "Poll Officing" do
       expect(page).to have_content("Here you can validate user documents and store voting results")
 
       visit new_officing_residence_path
-      expect(page).to have_selector("#residence_document_type")
+      expect(page).to have_css "#residence_document_type"
 
       select "DNI", from: "residence_document_type"
       fill_in "residence_document_number", with: "12345678Z"
@@ -201,7 +137,11 @@ describe "Poll Officing" do
       expect(page).to have_content "Document verified with Census"
       click_button "Confirm vote"
       expect(page).to have_content "Vote introduced!"
-      expect(Poll::Voter.where(document_number: "12345678Z", poll_id: poll, origin: "booth", officer_id: officer1).count).to be(1)
+      expect(Poll::Voter.where(document_number: "12345678Z",
+                               poll_id: poll,
+                               origin: "booth",
+                               officer_id: officer1)
+                        .count).to be(1)
 
       visit final_officing_polls_path
       expect(page).to have_content("Polls ready for final recounting")
@@ -211,7 +151,7 @@ describe "Poll Officing" do
       expect(page).to have_content("Here you can validate user documents and store voting results")
 
       visit new_officing_residence_path
-      expect(page).to have_selector("#residence_document_type")
+      expect(page).to have_css "#residence_document_type"
 
       select "DNI", from: "residence_document_type"
       fill_in "residence_document_number", with: "12345678Y"
@@ -220,7 +160,11 @@ describe "Poll Officing" do
       expect(page).to have_content "Document verified with Census"
       click_button "Confirm vote"
       expect(page).to have_content "Vote introduced!"
-      expect(Poll::Voter.where(document_number: "12345678Y", poll_id: poll, origin: "booth", officer_id: officer2).count).to be(1)
+      expect(Poll::Voter.where(document_number: "12345678Y",
+                               poll_id: poll,
+                               origin: "booth",
+                               officer_id: officer2)
+                        .count).to be(1)
 
       visit final_officing_polls_path
       expect(page).to have_content("Polls ready for final recounting")

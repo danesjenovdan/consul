@@ -74,4 +74,44 @@ describe Layout::LocaleSwitcherComponent do
       expect(page).to have_css "[aria-current]", exact_text: "English"
     end
   end
+
+  context "when the target language has a different text direction than the current language" do
+    let!(:default_locales) { I18n.available_locales }
+
+    before do
+      I18n.available_locales = %i[ar en]
+      I18n.reload!
+    end
+
+    after do
+      I18n.available_locales = default_locales
+      I18n.reload!
+    end
+
+    it "disables Turbolinks for language links" do
+      render_inline component
+
+      expect(page).to have_link "عربى", href: "/?locale=ar"
+      expect(page).to have_css "[href='/?locale=ar'][data-turbolinks=false]"
+      expect(page).to have_link "English", href: "/?locale=en"
+      expect(page).to have_css "[href='/?locale=en'][data-turbolinks=true]"
+    end
+  end
+
+  context "when not all available locales are enabled" do
+    before do
+      allow(I18n).to receive(:available_locales).and_return(%i[en es fr])
+      Setting["locales.default"] = "es"
+      Setting["locales.enabled"] = "es fr"
+    end
+
+    it "displays the enabled locales" do
+      render_inline component
+
+      expect(page).to have_link count: 2
+      expect(page).to have_link "Español"
+      expect(page).to have_link "Français"
+      expect(page).not_to have_link "English"
+    end
+  end
 end

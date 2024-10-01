@@ -11,14 +11,9 @@ ro:
       save_changes_submit: Salvează modificări
       recommendations: Recomandări
       title: Contul meu
-      user_permission_debates: Participă la dezbateri
       user_permission_info: Cu contul dumneavoastră puteți...
-      user_permission_proposal: Crează noi propuneri
-      user_permission_support_proposal: Sprijină propuneri
       user_permission_title: Participare
       user_permission_verify: Pentru a efectua toate acțiunile, verificați contul.
-      user_permission_verify_info: "* Numai pentru utilizatorii aflați pe recensământ."
-      user_permission_votes: Participă la votarea finală
       verified_account: Cont verificat
       verify_my_account: Verifică-mi contul
   application:
@@ -78,11 +73,6 @@ ro:
       form:
         submit_button: Începe o dezbatere
     debate:
-      comments:
-        zero: Nu există comentarii
-        one: 1 comentariu
-        few: "%{count} comentarii"
-        other: "%{count} comentarii"
       votes:
         zero: Nu există voturi
         one: 1 vot
@@ -116,10 +106,6 @@ ro:
         button: Caută
         placeholder: Caută dezbateri...
         title: Caută
-      search_results:
-        one: " conține termenul <strong>'%{search_term}'</strong>"
-        few: " conține termenul <strong>'%{search_term}'</strong>"
-        other: " conține termenul <strong>'%{search_term}'</strong>"
       start_debate: Începe o dezbatere
       title: Dezbateri
       section_header:
@@ -143,11 +129,6 @@ ro:
       start_new: Începe o dezbatere
     show:
       author_deleted: Utilizator șters
-      comments:
-        zero: Nu există comentarii
-        one: 1 comentariu
-        few: "%{count} comentarii"
-        other: "%{count} comentarii"
       comments_title: Comentarii
       edit_debate_link: Editează
       flag: Această dezbatere a fost semnalizată ca fiind inadecvată de mai mulți utilizatori.
@@ -162,7 +143,6 @@ ro:
       invalid_date_range: "Interval de timp invalid"
   form:
     accept_terms: Sunt de acord cu %{policy} și cu %{conditions}
-    accept_terms_title: Sunt de acord cu Politica de confidențialitate și cu Termenii și condițiile de utilizare
     conditions: Termeni și condiții de utilizare
     debate: Dezbate
     direct_message: mesaj privat
@@ -181,7 +161,6 @@ ro:
     legislation/process: proces
     legislation/question: întrebare
     poll/shift: Schimb
-    poll/question/answer: Răspuns
     user: Cont
     verification/sms: telefon
     signature_sheet: Foaie de semnături
@@ -196,11 +175,6 @@ ro:
   geozones:
     none: Tot orașul
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Am detectat că utilizați Internet Explorer. Pentru o experiență îmbunătățită, vă recomandăm să folosiți %{firefox} sau %{chrome}.
-      ie_title: Acest site web nu este optimizat pentru browserul dumnevoastră
     dashboard:
       proposal_header:
         published: Publicat
@@ -220,10 +194,9 @@ ro:
     footer:
       accessibility: Accesibilitate
       conditions: Termeni și condiții de utilizare
-      consul: Cerere CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: Pentru ajutor tehnic mergeți la
-      copyright: CONSUL, %{year}
+      consul: Cerere CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: Acest portal folosește %{consul} care este %{open_source}.
       open_source: software open-source
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -391,7 +364,6 @@ ro:
       select_order_long: "Vizionați propuneri conform:"
       start_proposal: Crează propunere
       title: Propuneri
-      top: Top săptămânal
       top_link_proposals: Cea mai susținută propunere după categorie
       section_header:
         icon_alt: Pictograma propunerilor
@@ -419,11 +391,6 @@ ro:
         edit: "Înainte de a fi distribuit, veți putea modifica textul după cum doriți."
         view_proposal: Nu acum, mergeți la propunerea mea
       already_supported: Ați susținut deja această propunere. Distribuiți-o!
-      comments:
-        zero: Nu există comentarii
-        one: 1 comentariu
-        few: "%{count} comentarii"
-        other: "%{count} comentarii"
       support: Sprijină
       support_title: Sprijină această propunere
       supports:
@@ -444,11 +411,6 @@ ro:
     show:
       author_deleted: Utilizator șters
       code: "Codul propunerii:"
-      comments:
-        zero: Nu există comentarii
-        one: 1 comentariu
-        few: "%{count} comentarii"
-        other: "%{count} comentarii"
       comments_tab: Comentarii
       dashboard_proposal_link: Tablou de bord
       flag: Această propunere a fost semnalată ca fiind inadecvată de mai mulți utilizatori.
@@ -614,7 +576,6 @@ ro:
         share: "Și dacă, de asemenea, îmi faci o mare favoare a-mi distribui propunerea cu prietenii, familia și persoanele de contact, ar fi perfect!"
   polls:
     all: "Tot"
-    no_dates: "nu există date atribuite"
     dates: "De la %{open_at} către %{closed_at}"
     final_date: "Renumărări/ Rezultate finale"
     index:
@@ -715,7 +676,6 @@ ro:
       author_deleted: Utilizator șters
       email_deleted: Email șters
     back: Mergi înapoi
-    check: Selectează
     check_all: Tot
     check_none: Nici unul
     collective: Colectiv
@@ -800,18 +760,6 @@ ro:
     youtube: "%{org} YouTube"
     telegram: "%{org} Telegram"
     instagram: "%{org} Instagram"
-  stats:
-    index:
-      visits: Vizite
-      debates: Dezbateri
-      proposals: Propuneri
-      comments: Comentarii
-      proposal_votes: Votează propuneri
-      debate_votes: Votează dezbateri
-      comment_votes: Votează pe comentarii
-      votes: Voturi totale
-      verified_users: Utilizatori verificați
-      unverified_users: Utilizatori neverificați
   unauthorized:
     default: Nu aveți permisiune să accesați această pagină.
     manage:
@@ -877,15 +825,12 @@ ro:
   votes:
     agree: Sunt de acord
     anonymous: Prea multe voturi anonime pentru a aproba votul %{verify_account}.
-    comment_unauthenticated: Trebuie %{signin} sau %{signup} pentru a vota.
     disagree: Nu sunt de acord
     organizations: Organizațiile nu au voie să voteze
     supports: Susținători
     verified_only: Doar utilizatorii verificați pot vota propunerile; %{verify_account}.
     budget_investments:
-      not_logged_in: Trebuie %{signin} sau %{signup} pentru a continua.
       not_verified: Doar utilizatorii verificați pot vota investițiile; %{verify_account}.
-      organization: Organizațiile nu au voie să voteze
       unfeasible: Proiectele de investiții nerealizabile nu pot fi susținute
       not_voting_allowed: Etapa de votare este închisă
       different_heading_assigned:
@@ -922,23 +867,13 @@ ro:
       budget_investments:
         title: Investiții recomandate
       slide: "Vezi %{title}"
-    verification:
-      i_dont_have_an_account: Nu am un cont
-      i_have_an_account: Am deja un cont
-      question: Aveți deja un cont în %{org_name}?
-      title: Verificarea contului
     welcome:
       go_to_index: Nu acum, mergeți la pagina index
       start_using_consul: Mergeți la pagina index
       title: Participă
-      user_permission_debates: Participă la dezbateri
       user_permission_info: Cu contul dumneavoastră puteți...
-      user_permission_proposal: Crează noi propuneri
-      user_permission_support_proposal: Sprijină propunerile*
       user_permission_verify: "Pentru a efectua toate acțiunile, verificați-vă contul."
-      user_permission_verify_info: "* Numai pentru utilizatorii aflați pe recensământ."
       user_permission_verify_my_account: Verifică-mi contul
-      user_permission_votes: Participă la votarea finală
   invisible_captcha:
     sentence_for_humans: "Dacă sunteți om, ignorați acest câmp"
     timestamp_error_message: "Ne cerem scuze, a fost prea rapid! Vă rugăm să retrimiteți."

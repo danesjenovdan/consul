@@ -1,4 +1,4 @@
-<% provide :title do %><%= @investment.title %><% end %>
+<% provide :title, @investment.title %>
 <% content_for :canonical do %>
   <%= render "shared/canonical", href: budget_investment_url %>
 <% end %>
@@ -20,14 +20,7 @@
   <div class="row">
     <div class="small-12 column">
       <div class="tabs-content" data-tabs-content="investments_tabs">
-        <!-- REMOVED COMMENTS
-        <div class="tabs-panel is-active" id="tab-comments">
-          <%= render MachineLearning::CommentsSummaryComponent.new(@investment) %>
-
-          <%= render "/comments/comment_tree", comment_tree: @comment_tree,
-                                              display_comments_count: false %>
-        </div>
-        -->
+        <!-- REMOVED COMMENTS -->
         <%= render "milestones/milestones", milestoneable: @investment %>
       </div>
     </div>

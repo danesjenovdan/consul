@@ -7,9 +7,7 @@ sl-SI:
         remove: Odstrani glas
         zero: Nisi glasoval za noben naložbeni projekt.
       reasons_for_not_balloting:
-        not_logged_in: Za nadaljevanje se moraš %{signin} ali %{signup}.
         not_verified: Le verificirani uporabniki lahko glasujejo o naložbah; %{verify_account}.
-        organization: Organizacijam ni dovoljeno glasovati
         not_selected: Neizbraneih investicij ni mogoče podpreti
         not_enough_money: "Ves razpoložljiv proračun si že porabil.<br><small>Lahko pa kadarkoli %{change_ballot}</small>"
         no_ballots_allowed: Faza izbiranja je končana
@@ -109,7 +107,7 @@ sl-SI:
       header:
         check_ballot: "Preveri moja glasovanja"
         different_heading_assigned: "Imaš aktivna glasovanja v drugem naslovu: %{heading_link}"
-        change_ballot: "Če si premisliš, lahko odstraniš svoje glasove v %{check_ballot} and start again."
+        change_ballot: "Če si premisliš, lahko odstraniš svoje glasove v %{check_ballot} in začneš znova."
         check_ballot_link: "preveri moja glasovanja"
         price: "Ta naslov ima proračun v višini"
       votes:
