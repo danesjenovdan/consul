@@ -4,11 +4,9 @@ ka:
       title: ადმინისტრაცია
     actions:
       actions: მოქმედებები
-      confirm: დარწმუნებული ხართ?
       confirm_hide: მოდერაციის დადასტურება
       delete: "წაშლა"
       hide: დამალვა
-      hide_author: ავტორის დამალვა
       restore: აღდგენა
       mark_featured: გამორჩეული
       unmark_featured: გამორჩეულებიდან წაშლა
@@ -129,7 +127,6 @@ ka:
         max_votable_headings_info: "მიესადაგება მხოლოდ პროექტების შერჩევის ფაზას. ხმის მიცემის ფაზაში მომხმარებლებს ჯგუფიდან მხოლოდ ერთი რუბრიკისთვის შეუძლიათ ხმის მიცემა."
         submit: "ჯგუფის შენახვა"
     budget_headings:
-      no_headings: "სათაურები არ მოიძებნა."
       create:
         notice: "სათაური წარმატებით შეიქმნა!"
       update:
@@ -207,7 +204,6 @@ ka:
           incompatible: შეუთავსებელია
           price: ფასი
           author: ავტორი
-        cannot_calculate_winners: გამარჯვებულთა პროექტების გამოსათვლელად ბიუჯეტი უნდა დარჩეს "კენჭისყრის პროექტები", "ბიულეტენების განხილვა" ან "დასრულებული ბიუჯეტის" ფაზაზე
         see_results: "შედეგების ნახვა"
         milestone_tags_filter_all: "ყველა ეტაპის აღმნიშვნელი ტეგები"
       show:
@@ -425,7 +421,6 @@ ka:
         title: "დოკუმენტები"
         format: "ფორმატი"
         size: "ზომა"
-        url: "ბმული (URL)"
       create:
         success_notice: "დოკუმენტი წარმატებით აიტვირთა"
         unable_notice: "შეცდომა დოკუმენტის ატვირთვისას"
@@ -550,7 +545,6 @@ ka:
         index:
           title: კანონპროექტები
           create: ვერსიის შექმნა
-          delete: წაშლა
           preview: ესკიზი
         new:
           back: უკან
@@ -583,7 +577,6 @@ ka:
           back: უკან
           title: ამ პროცესთან დაკავშირებული კითხვები
           create: შეკითხვის შექმნა
-          delete: წაშლა
         new:
           back: უკან
           title: ახალი შეკითხვის შექმნა
@@ -997,9 +990,6 @@ ka:
         table_title: "სათაური"
         edit_answers: პასუხების რედაქტირება
         see_proposal: "(ინიციატივის ნახვა)"
-      flash:
-        question_added: "შეკითხვა დაემატა კენჭისყრას"
-        error_on_question_added: "შეკითხვის დამატება მოცემულ კენჭისყრაზე ვერ მოხერხდა"
       destroy:
         alert: "ამ მოქმედებით წაიშლება კენჭისყრა და მასთან დაკავშირებული შეკითხვები."
         success_notice: "კენჭისყრა წარმატებით წაიშალა"
@@ -1049,12 +1039,6 @@ ka:
     answers:
       new:
         title: ახალი პასუხი
-      show:
-        title: სათაური
-        description: აღწერა
-        images: ფოტოსურათები
-        images_list: ფოტოსურათების სია
-        edit: პასუხის რედაქტირება
       edit:
         title: პასუხის რედაქტირება
       videos:
@@ -1330,7 +1314,6 @@ ka:
           verified_users_who_didnt_vote_proposals: გადამოწმებული მომხმარებლები, რომლებმაც ხმა არ მისცეს ინიციატივებს
           visits: ვიზიტები
           votes: ხმების საერთო რაოდენობა
-        budgets_title: მონაწილეობითი ბიუჯეტირება
         participatory_budgets: მონაწილეობითი ბიუჯეტები
         direct_messages: პირდაპირი გზავნილები
         proposal_notifications: შეტყობინებები ინიციატივის თაობაზე
@@ -1338,8 +1321,6 @@ ka:
         polls: ხმის მიცემის პროცესები
       graph:
         debate_created: დებატი
-        visit: ვიზიტები
-        level_2_user: მე-2 დონის მომხმარებლები
         proposal_created: მოქალაქის წინადადება
       budgets:
         no_data_before_balloting_phase: "კენჭისყრის ფაზამდე საჩვენებელი მონაცემები არ მოიძებნა."
@@ -1446,7 +1427,6 @@ ka:
         index:
           title: პერსონალური სურათები
           update: განახლება
-          delete: წაშლა
           image: ფოტოსურათი
         update:
           notice: ფოტოსურათი წარმატებით შეიცვალა
@@ -1474,7 +1454,7 @@ ka:
           see_page: გვერდის ნახვა
         new:
           title: ახალი ინდივიდუალური გვერდის შექმნა
-          slug_help: "ტექსტი, რომელიც ამ გვერდის ბმულის (URL) იდენტიფიკაციისთვის გამოიყენება, მაგალითად <code>https://consulproject.org/page-slug</code>"
+          slug_help: "ტექსტი, რომელიც ამ გვერდის ბმულის (URL) იდენტიფიკაციისთვის გამოიყენება, მაგალითად <code>https://consuldemocracy.org/page-slug</code>"
         page:
           created_at: შექმნის თარიღი
           status: სტატუსი

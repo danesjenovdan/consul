@@ -14,9 +14,7 @@ he:
         voted_info_2: "אבל אתה יכול לשנות את ההצבעה שלך בכל עת עד שלב זה יסגר."
         zero: טרם הצבעת לפרויקט כלשהו.
       reasons_for_not_balloting:
-        not_logged_in: עליך ל- %{signin} או %{signup} בכדי להמשיך.
         not_verified: רק משתמשים שרישומם אומת יכולים להצביע על ההצעות; %{verify_account}.
-        organization: ארגונים אינם רשאים להצביע
         not_selected: לא ניתן לתמוך/להשקיע בפרויקטים שלא נבחרו
         not_enough_money: "כבר הקצית את התקציב הזמין.<br><small>זכור כי %{change_ballot} בכל עת</small>"
         no_ballots_allowed: שלב הבחירה נסגר
@@ -61,7 +59,6 @@ he:
         tags_placeholder: "נא לרשום את כל התגיות שברצונך להשתמש בהן, עם פסיק (',') מפריד ביניהן"
         map_location: "מיקום מפה"
         map_location_instructions: "נווט במפה למיקום ומקם את הסמן."
-        map_remove_marker: "הסר סמן מפה"
       index:
         title: מימון השתתפותי
         unfeasible: פרויקטים להשקעה שאינם ברי ביצוע
@@ -71,11 +68,6 @@ he:
           button: חיפוש
           placeholder: חיפוש פרויקטים להשקעה...
           title: חיפוש
-        search_results:
-          one: " המכיל את המונחים <strong>'%{search_term}'</strong>"
-          two: " המכיל את המונחים <strong>'%{search_term}'</strong>"
-          many: " המכיל את המונחים <strong>'%{search_term}'</strong>"
-          other: " המכיל את המונחים <strong>'%{search_term}'</strong>"
         sidebar:
           my_ballot: ההצבעה שלי
           voted_info:

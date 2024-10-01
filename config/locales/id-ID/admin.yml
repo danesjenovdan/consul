@@ -4,11 +4,9 @@ id:
       title: Administrasi
     actions:
       actions: Tindakan
-      confirm: Apakah kamu yakin?
       confirm_hide: Konfirmasi
       delete: "Hapus"
       hide: Sembunyikan
-      hide_author: Sembunyikan penulis
       restore: Mengembalikan
       mark_featured: Unggulan
       unmark_featured: Hapus tanda pada yang ditampilkan
@@ -121,7 +119,6 @@ id:
       index:
         new_button: "Tambahkan grup baru"
     budget_headings:
-      no_headings: "Tidak ada judul."
       create:
         notice: "Tajuk berhasil dibuat!"
       update:
@@ -428,7 +425,6 @@ id:
         index:
           title: Rancangan versi
           create: Membuat versi
-          delete: Hapus
           preview: Tinjauan
         new:
           back: Kembali
@@ -460,7 +456,6 @@ id:
           back: Kembali
           title: Pertanyaan yang terkait dengan proses ini
           create: Membuat pertanyaan
-          delete: Hapus
         new:
           back: Kembali
           title: Membuat pertanyaan baru
@@ -715,9 +710,6 @@ id:
         no_questions: "Tidak ada pertanyaan yang ditugaskan untuk jajak pendapat ini."
         questions_title: "Daftar pertanyaan"
         table_title: "Judul"
-      flash:
-        question_added: "Pertanyaan menambahkan untuk jajak pendapat ini"
-        error_on_question_added: "Pertanyaan tidak bisa ditugaskan untuk jajak pendapat ini"
     questions:
       index:
         title: "Pertanyaan"
@@ -758,12 +750,6 @@ id:
     answers:
       new:
         title: Jawaban baru
-      show:
-        title: Judul
-        description: Deskripsi
-        images: Gambar
-        images_list: Daftar gambar
-        edit: Sunting jawaban
       edit:
         title: Sunting jawaban
       videos:
@@ -989,7 +975,6 @@ id:
           verified_users_who_didnt_vote_proposals: Pengguna terverifikasi yang tidak votes proposal
           visits: Mengunjungi
           votes: Total suara
-        budgets_title: Penganggaran partisipatif
         participatory_budgets: Anggaran Partisipatif
         direct_messages: Pesan langsung
         proposal_notifications: Proposal pemberitahuan
@@ -997,7 +982,6 @@ id:
         polls: Jajak pendapat
       graph:
         debate_created: Perdebatan
-        visit: Mengunjungi
         proposal_created: Usulan warga
       budget_balloting:
         vote_count: Suara
@@ -1076,7 +1060,6 @@ id:
         index:
           title: Gambar Khusus
           update: Perbarui
-          delete: Hapus
           image: Gambar
         update:
           notice: Gambar berhasil diperbarui

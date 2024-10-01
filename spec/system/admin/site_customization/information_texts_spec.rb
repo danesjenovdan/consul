@@ -5,10 +5,10 @@ describe "Admin custom information texts", :admin do
     visit admin_site_customization_information_texts_path
 
     click_link "Basic customization"
-    expect(page).to have_content "Help about debates"
-    expect(page).to have_content "Help about proposals"
-    expect(page).to have_content "Help about voting"
-    expect(page).to have_content "Help about collaborative legislation"
+    expect(page).to have_content "Help with debates"
+    expect(page).to have_content "Help with proposals"
+    expect(page).to have_content "Help with voting"
+    expect(page).to have_content "Help with collaborative legislation"
     expect(page).to have_content "Help with participatory budgets"
 
     within("#information-texts-tabs") { click_link "Debates" }
@@ -26,6 +26,14 @@ describe "Admin custom information texts", :admin do
     end
 
     expect(page).to have_content "Results"
+
+    within("#information-texts-tabs") { click_link "Collaborative legislation" }
+
+    expect(page).to have_content "Help with collaborative legislation"
+
+    within("#information-texts-tabs") { click_link "Budgets" }
+
+    expect(page).to have_content "You have not voted any investment project."
 
     click_link "Layouts"
     expect(page).to have_content "Accessibility"
@@ -47,8 +55,10 @@ describe "Admin custom information texts", :admin do
     visit admin_site_customization_information_texts_path
 
     within("#information-texts-tabs") { click_link "Proposals" }
-    expect(find("a[href=\"/admin/site_customization/information_texts?tab=proposals\"].is-active"))
-          .to have_content "Proposals"
+
+    expect(page).to have_link "Proposals",
+                              href: "/admin/site_customization/information_texts?tab=proposals",
+                              class: "is-active"
   end
 
   context "Globalization" do
@@ -96,8 +106,8 @@ describe "Admin custom information texts", :admin do
                                        value_es: "Destacar personalizado")
 
       page_title = create(:i18n_content, key: "debates.new.start_new",
-                                          value_en: "Start a new debate",
-                                          value_es: "Empezar un debate")
+                                         value_en: "Start a new debate",
+                                         value_es: "Empezar un debate")
 
       visit admin_site_customization_information_texts_path(tab: "debates")
 

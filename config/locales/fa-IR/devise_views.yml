@@ -2,8 +2,8 @@ fa:
   devise_views:
     confirmations:
       new:
-        submit: ارسال مجدد دستورالعمل 
-        title: ارسال دوباره دستورالعمل تایید 
+        submit: ارسال مجدد دستورالعمل
+        title: ارسال دوباره دستورالعمل تایید
       show:
         instructions: تایید حساب با ایمیل %{email}
         new_password_confirmation_label: تکرار رمز عبور دسترسی
@@ -15,8 +15,8 @@ fa:
       confirmation_instructions:
         confirm_link: تایید حساب
         text: "شما می توانید حساب ایمیل خود را در لینک زیر تأیید کنید:"
-        title: خوش آمدید 
-        welcome: خوش آمدید 
+        title: خوش آمدید
+        welcome: خوش آمدید
       reset_password_instructions:
         change_link: تغییر کلمه عبور
         hello: سلام
@@ -103,7 +103,6 @@ fa:
           submit: ثبت
           terms: با ثبت نام شما قبول می کندکه %{terms}
           terms_link: شرایط و ضوابط مورد استفاده
-          terms_title: با ثبت نام شما  شرایط و ضوابط مورد استفاده را قبول میکنید
           title: ثبت
           username_is_available: نام کاربری موجود
           username_is_not_available: نام کاربری در حال حاضر در حال استفاده است

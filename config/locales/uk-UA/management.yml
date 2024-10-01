@@ -35,7 +35,7 @@ uk-UA:
     document_verifications:
       already_verified: Обліковий запис цього користувача вже підтверджено.
       has_no_account: Для створення облікового запису перейдіть до %{link} та натисніть <b> «Зареєструватись» </b> у верхній лівій частині екрана.
-      link: CONSUL
+      link: CONSUL DEMOCRACY
       in_census_has_following_permissions: "Цей користувач може користуватися веб-сайтом з такими правами доступу:"
       not_in_census: Цей документ не зареєстровано.
       not_in_census_info: "Громадяни, які не перебувають у Census, можуть користуватися веб-сайтом з такими правами доступу:"
@@ -64,11 +64,6 @@ uk-UA:
       users: Управління користувачами
       user_invites: Надіслати запрошення
       select_user: Обрати користувача
-    permissions:
-      create_proposals: Подати пропозиції
-      debates: Взяти участь в обговоренні
-      support_proposals: Підтримати пропозиції
-      vote_proposals: Проголосувати за пропозиції
     print:
       proposals_info: Створити пропозицію на http://url.consul
       proposals_title: "Пропозиції:"
