@@ -1,6 +1,6 @@
-require_dependency Rails.root.join("app", "controllers", "concerns", "translatable").to_s
+load Rails.root.join("app", "controllers", "concerns", "translatable.rb")
 
-module Translatable
+module Concerns::Translatable
   extend ActiveSupport::Concern
 
   private

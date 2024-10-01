@@ -97,7 +97,7 @@
               </div>
             </div>
 
-            <div class="user-permissions small-12 large-5 column">
+            <div class="user-permissions hide small-12 large-5 column">
               <h2><%= t("account.show.user_permission_title") %></h2>
 
               <p><%= t("account.show.user_permission_info") %></p>
@@ -135,7 +135,6 @@
                   <span class="verify-account">
                     <% if current_user.level_three_verified? %>
                       <p class="already-verified">
-                        <span class="icon-check"></span>
                         <%= t("account.show.verified_account") %>
                       </p>
                     <% elsif current_user.level_two_verified? %>

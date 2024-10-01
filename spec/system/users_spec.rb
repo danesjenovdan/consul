@@ -349,7 +349,7 @@ describe "Users" do
           expect(page).to have_content proposal.title
         end
 
-        scenario "Retired proposals do not have a link to the dashboard" do
+        scenario "Withdrawn proposals do not have a link to the dashboard" do
           proposal = create(:proposal, :retired, author: user)
           login_as user
 
@@ -357,7 +357,7 @@ describe "Users" do
 
           expect(page).to have_content proposal.title
           expect(page).not_to have_link "Dashboard"
-          expect(page).to have_content("Dashboard not available for retired proposals")
+          expect(page).to have_content "Dashboard not available for withdrawn proposals"
         end
 
         scenario "Published proposals have a link to the dashboard" do
@@ -483,20 +483,6 @@ describe "Users" do
 
       visit user_path(user)
       expect(page).not_to have_content("Sport")
-    end
-  end
-
-  describe "Initials" do
-    scenario "display SVG avatars when loaded into the DOM" do
-      login_as(create(:user))
-      visit debate_path(create(:debate))
-
-      fill_in "Leave your comment", with: "I'm awesome"
-      click_button "Publish comment"
-
-      within ".comment", text: "I'm awesome" do
-        expect(page).to have_css "img.initialjs-avatar[src^='data:image/svg']"
-      end
     end
   end
 end

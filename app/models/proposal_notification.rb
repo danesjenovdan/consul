@@ -1,6 +1,7 @@
 class ProposalNotification < ApplicationRecord
   include Graphqlable
   include Notifiable
+  include Searchable
 
   belongs_to :author, class_name: "User"
   belongs_to :proposal
@@ -10,12 +11,12 @@ class ProposalNotification < ApplicationRecord
   validates :proposal, presence: true
   validate :minimum_interval
 
-  scope :public_for_api,     -> { where(proposal_id: Proposal.public_for_api.pluck(:id)) }
+  scope :public_for_api,     -> { where(proposal: Proposal.public_for_api) }
   scope :sort_by_created_at, -> { reorder(created_at: :desc) }
   scope :sort_by_moderated,  -> { reorder(moderated: :desc) }
 
   scope :moderated, -> { where(moderated: true) }
-  scope :not_moderated, -> { where(moderated: false) }
+  scope :not_moderated, -> { excluding(moderated) }
   scope :pending_review, -> { moderated.where(ignored_at: nil) }
   scope :ignored, -> { moderated.where.not(ignored_at: nil) }
 
@@ -30,7 +31,11 @@ class ProposalNotification < ApplicationRecord
     interval = Setting[:proposal_notification_minimum_interval_in_days]
     minimum_interval = (Time.current - interval.to_i.days).to_datetime
     if proposal.notifications.last.created_at > minimum_interval
-      errors.add(:title, I18n.t("activerecord.errors.models.proposal_notification.attributes.minimum_interval.invalid", interval: interval))
+      errors.add(
+        :title,
+        I18n.t("activerecord.errors.models.proposal_notification.attributes.minimum_interval.invalid",
+               interval: interval)
+      )
     end
   end
 
@@ -53,6 +58,17 @@ class ProposalNotification < ApplicationRecord
 
   def after_restore
     update(moderated: false)
+  end
+
+  def searchable_values
+    {
+      title => "A",
+      body => "B"
+    }
+  end
+
+  def self.search(terms)
+    pg_search(terms)
   end
 
   private

@@ -124,6 +124,9 @@ sv:
       images:
         one: "Bild"
         other: "Bilder"
+      tenant:
+        one: "hyresgäst"
+        other: "hyresgäster"
       topic:
         one: "Ämne"
         other: "Ämnen"
@@ -145,6 +148,9 @@ sv:
       local_census_record:
         one: Post i lokalt adressregister
         other: Poster i lokalt adressregister
+      votation_type:
+        one: Omröstningstyp
+        other: Omröstningstyper
     attributes:
       budget:
         name: "Namn"
@@ -160,6 +166,7 @@ sv:
         voting_style: "Slutgiltigt omröstningsformat"
         voting_style_knapsack: "Ryggsäck"
         voting_style_approval: "Godkännande"
+        hide_money: "Dölj belopp för denna budget"
       budget/translation:
         main_link_text: "Text på länken"
         main_link_url: "Länken leder till (lägg till en länk)"
@@ -194,7 +201,9 @@ sv:
       geozone:
         name: Namn
         external_code: "Extern kod (valfri)"
+        color: "Färg (valfritt)"
         census_code: "Adressregisterkod (valfri)"
+        geojson: "GeoJSON-data (valfritt)"
         html_map_coordinates: "HTML-<map>koordinater (valfritt)"
       milestone:
         status_id: "Nuvarande status (valfritt)"
@@ -374,6 +383,11 @@ sv:
         body: Innehåll
       tag:
         name: "Skriv namnet på ämnet"
+      tenant:
+        domain: "Domän"
+        schema: "Underdomän"
+        subdomain: "Underdomän"
+        url: "URL"
       topic:
         title: "Titel"
         description: "Inledande text"
@@ -445,13 +459,13 @@ sv:
       image:
         title: Titel
         attachment: "Välj bild"
-      poll/question/answer:
+      poll/question/option:
         title: Svar
         description: Beskrivning
-      poll/question/answer/translation:
+      poll/question/option/translation:
         title: Svar
-        description: Beskrivning
-      poll/question/answer/video:
+        description: "Beskrivning (valfritt)"
+      poll/question/option/video:
         title: Titel
         url: Extern video
       newsletter:
@@ -513,6 +527,12 @@ sv:
         document_number: Dokumentnummer
         date_of_birth: Födelsedatum
         postal_code: Postnummer
+      votation_type:
+        max_votes: Högsta antalet röster
+        vote_type: Omröstningstyp
+      votation_type/vote_type:
+        unique: Unikt svar
+        multiple: Flera svar
     errors:
       models:
         user:
@@ -527,6 +547,10 @@ sv:
           attributes:
             max_per_day:
               invalid: "Du har skickat det högsta antalet tillåtna privata meddelanden per dag"
+        geozone:
+          attributes:
+            geojson:
+              invalid: "Angiven GeoJSON följer inte korrekt format. Den måste följa ett format av typen \"Polygon\" eller \"MultiPolygon\"."
         image:
           attributes:
             attachment:

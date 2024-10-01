@@ -3,10 +3,14 @@ shared_examples "relationable" do |relationable_model_name|
   let(:related1) { create([:proposal, :debate, :budget_investment].sample) }
   let(:related2) { create([:proposal, :debate, :budget_investment].sample) }
   let(:user) { create(:user) }
-  before { Setting["url"] = Capybara.app_host }
+
+  before { integration_session.host = Capybara.app_host }
 
   scenario "related contents are listed" do
-    create(:related_content, parent_relationable: relationable, child_relationable: related1, author: build(:user))
+    create(:related_content,
+           parent_relationable: relationable,
+           child_relationable: related1,
+           author: build(:user))
 
     visit polymorphic_path(relationable)
     within("#related-content-list") do
@@ -36,7 +40,7 @@ shared_examples "relationable" do |relationable_model_name|
     expect(page).to have_css ".add-related-content[aria-expanded='true']"
 
     within("#related_content") do
-      fill_in "Link to related content", with: polymorphic_url(related1)
+      fill_in "Link to related content", with: polymorphic_url(related1, port: app_port)
       click_button "Add"
     end
 
@@ -53,7 +57,7 @@ shared_examples "relationable" do |relationable_model_name|
     click_button "Add related content"
 
     within("#related_content") do
-      fill_in "Link to related content", with: polymorphic_url(related2)
+      fill_in "Link to related content", with: polymorphic_url(related2, port: app_port)
       click_button "Add"
     end
 
@@ -73,7 +77,7 @@ shared_examples "relationable" do |relationable_model_name|
       click_button "Add"
     end
 
-    expect(page).to have_content "Link not valid. Remember to start with #{Capybara.app_host}."
+    expect(page).to have_content "Link not valid. Remember to start with #{app_host}/."
   end
 
   scenario "returns error when relating content URL to itself" do
@@ -83,7 +87,7 @@ shared_examples "relationable" do |relationable_model_name|
     click_button "Add related content"
 
     within("#related_content") do
-      fill_in "Link to related content", with: polymorphic_url(relationable)
+      fill_in "Link to related content", with: polymorphic_url(relationable, port: app_port)
       click_button "Add"
     end
 
@@ -107,7 +111,7 @@ shared_examples "relationable" do |relationable_model_name|
       click_button "Add related content"
 
       within("#related_content") do
-        fill_in "Link to related content", with: "#{Capybara.app_host}/mypath/#{related.id}"
+        fill_in "Link to related content", with: "#{app_host}/mypath/#{related.id}"
         click_button "Add"
       end
 
@@ -125,7 +129,7 @@ shared_examples "relationable" do |relationable_model_name|
     click_button "Add related content"
 
     within("#related_content") do
-      fill_in "url", with: polymorphic_url(related1)
+      fill_in "url", with: polymorphic_url(related1, port: app_port)
       click_button "Add"
     end
 
@@ -133,7 +137,10 @@ shared_examples "relationable" do |relationable_model_name|
   end
 
   scenario "related content can be scored positively" do
-    related_content = create(:related_content, parent_relationable: relationable, child_relationable: related1, author: build(:user))
+    create(:related_content,
+           parent_relationable: relationable,
+           child_relationable: related1,
+           author: build(:user))
 
     login_as(user)
     visit polymorphic_path(relationable)
@@ -144,13 +151,13 @@ shared_examples "relationable" do |relationable_model_name|
       expect(page).not_to have_link "Yes"
       expect(page).not_to have_link "No"
     end
-
-    expect(related_content.related_content_scores.find_by(user_id: user.id, related_content_id: related_content.id).value).to eq(1)
-    expect(related_content.opposite_related_content.related_content_scores.find_by(user_id: user.id, related_content_id: related_content.opposite_related_content.id).value).to eq(1)
   end
 
   scenario "related content can be scored negatively" do
-    related_content = create(:related_content, parent_relationable: relationable, child_relationable: related1, author: build(:user))
+    create(:related_content,
+           parent_relationable: relationable,
+           child_relationable: related1,
+           author: build(:user))
 
     login_as(user)
     visit polymorphic_path(relationable)
@@ -161,20 +168,20 @@ shared_examples "relationable" do |relationable_model_name|
       expect(page).not_to have_link "Yes"
       expect(page).not_to have_link "No"
     end
-
-    expect(related_content.related_content_scores.find_by(user_id: user.id, related_content_id: related_content.id).value).to eq(-1)
-    expect(related_content.opposite_related_content.related_content_scores.find_by(user_id: user.id, related_content_id: related_content.opposite_related_content.id).value).to eq(-1)
   end
 
   scenario "if related content has negative score it will be hidden" do
-    related_content = create(:related_content, parent_relationable: relationable, child_relationable: related1, author: build(:user))
+    related_content = create(:related_content,
+                             parent_relationable: relationable,
+                             child_relationable: related1,
+                             author: build(:user))
 
     2.times do
-      related_content.send("score_positive", build(:user))
+      related_content.send(:score_positive, build(:user))
     end
 
     6.times do
-      related_content.send("score_negative", build(:user))
+      related_content.send(:score_negative, build(:user))
     end
 
     login_as(user)
