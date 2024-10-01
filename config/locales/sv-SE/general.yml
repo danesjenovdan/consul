@@ -1,7 +1,8 @@
 sv:
   account:
     show:
-      change_credentials_link: Ändra mina uppgifter
+      last_sign_in: "Senaste inloggningen: %{last_sign_in_at} från IP %{last_sign_in_ip}"
+      change_credentials_link: Ändra mina inloggningsuppgifter
       erase_account_link: Radera mitt konto
       finish_verification: Slutför verifiering
       notifications: Aviseringar
@@ -11,14 +12,9 @@ sv:
       save_changes_submit: Spara ändringar
       recommendations: Rekommendationer
       title: Mitt konto
-      user_permission_debates: Delta i debatter
       user_permission_info: Med ditt konto kan du...
-      user_permission_proposal: Skapa nya förslag
-      user_permission_support_proposal: Stöd förslag
       user_permission_title: Deltagande
       user_permission_verify: Verifiera ditt konto för att få tillgång till alla funktioner.
-      user_permission_verify_info: "* Endast för användare skrivna i staden."
-      user_permission_votes: Delta i slutomröstningen
       verified_account: Kontot är verifierat
       verify_my_account: Verifiera mitt konto
   application:
@@ -74,10 +70,6 @@ sv:
       form:
         submit_button: Starta en debatt
     debate:
-      comments:
-        zero: Inga kommentarer
-        one: 1 kommentar
-        other: "%{count} kommentarer"
       votes:
         zero: Inga röster
         one: 1 röst
@@ -110,9 +102,6 @@ sv:
         button: Sök
         placeholder: Sök debatter...
         title: Sök
-      search_results:
-        one: " som innehåller <strong>'%{search_term}'</strong>"
-        other: " som innehåller <strong>'%{search_term}'</strong>"
       start_debate: Starta en debatt
       title: Debatter
       section_header:
@@ -136,10 +125,6 @@ sv:
       start_new: Starta en debatt
     show:
       author_deleted: Användaren är borttagen
-      comments:
-        zero: Inga kommentarer
-        one: 1 kommentar
-        other: "%{count} kommentarer"
       comments_title: Kommentarer
       edit_debate_link: Redigera
       flag: Denna debatt har flaggats som olämplig av flera användare.
@@ -150,11 +135,15 @@ sv:
         submit_button: Spara ändringar
   errors:
     messages:
+      allowed_file_content_types: "innehållstypen måste vara en av %{types}"
       user_not_found: Användaren hittades inte
       invalid_date_range: "Felaktig datumföljd"
+      past_date: "Får inte vara ett tidigare datum"
+      cannot_change_date:
+        poll_started: "Kan inte ändras om omröstningen redan har inletts"
+        poll_ended: "Kan inte ändras om omröstningen redan har avslutats"
   form:
     accept_terms: Jag godkänner %{policy} och %{conditions}
-    accept_terms_title: Jag godkänner integritetspolicyn och användarvillkoren
     conditions: Användarvillkor
     debate: Diskussion
     direct_message: privat meddelande
@@ -173,7 +162,7 @@ sv:
     legislation/process: process
     legislation/question: fråga
     poll/shift: Arbetspass
-    poll/question/answer: Svar
+    poll/question/option: Svar
     user: Konto
     verification/sms: telefon
     signature_sheet: Namninsamling
@@ -188,11 +177,6 @@ sv:
   geozones:
     none: Hela staden
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Vi har upptäckt att du använder Internet Explorer. För en förbättrad upplevelse rekommenderar vi %{firefox} eller %{chrome}.
-      ie_title: Webbplatsen är inte optimerad för din webbläsare
     dashboard:
       proposal_header:
         published: Publicerad
@@ -211,10 +195,9 @@ sv:
     footer:
       accessibility: Tillgänglighet
       conditions: användarvillkoren
-      consul: Programvaran CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: För teknisk support gå till
-      copyright: CONSUL, %{year}
+      consul: Programvaran CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: Den här webbplatsen använder %{consul} som är %{open_source}.
       open_source: en plattform med öppen källkod
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -245,6 +228,7 @@ sv:
           other: Du har %{count} nya aviseringar
         notifications: Aviseringar
       sdg: "Globala målen"
+    skip_to_main_content: "Hoppa över och gå till huvudinnehåll"
   notifications:
     index:
       empty_notifications: Du har inga nya aviseringar.
@@ -377,7 +361,6 @@ sv:
       select_order_long: "Du visar förslag enligt:"
       start_proposal: Skapa ett förslag
       title: Förslag
-      top: Veckans populäraste förslag
       top_link_proposals: Populäraste förslagen från varje kategori
       section_header:
         icon_alt: Förslagsikonen
@@ -405,11 +388,8 @@ sv:
         edit: "Du kan ändra texten fram tills att förslaget har delats."
         view_proposal: Inte nu, gå till mitt förslag
       already_supported: Du stöder redan det här förslaget. Dela det!
-      comments:
-        zero: Inga kommentarer
-        one: 1 kommentar
-        other: "%{count} kommentarer"
       support: Stöd
+      support_label: "Stöd %{proposal}"
       support_title: Stöd förslaget
       supports:
         zero: Inget stöd
@@ -427,10 +407,6 @@ sv:
     show:
       author_deleted: Användaren är borttagen
       code: "Förslagskod:"
-      comments:
-        zero: Inga kommentarer
-        one: 1 kommentar
-        other: "%{count} kommentarer"
       comments_tab: Kommentarer
       dashboard_proposal_link: Dashboard
       flag: Förslaget har markerats som olämpligt av flera användare.
@@ -592,7 +568,6 @@ sv:
         share: "Och om du kunde dela förslaget med dina vänner, din familj och dina kontakter skulle det vara perfekt!"
   polls:
     all: "Alla"
-    no_dates: "inget datum har valts"
     dates: "Från %{open_at} till %{closed_at}"
     final_date: "Slutresultat"
     index:
@@ -655,6 +630,10 @@ sv:
     show:
       vote_answer: "Rösta på %{answer}"
       voted: "Du har röstat på %{answer}"
+    description:
+      unique: "Du kan välja maximalt 1 svar."
+      multiple: "Du kan välja maximalt %{maximum} svar."
+    read_more_about: "Läs mer om:"
   proposal_notifications:
     new:
       title: "Skicka meddelande"
@@ -693,7 +672,6 @@ sv:
       author_deleted: Användaren är borttagen
       email_deleted: E-postadress raderad
     back: Gå tillbaka
-    check: Välj
     check_all: Alla
     check_none: Ingen
     collective: Grupp
@@ -740,7 +718,7 @@ sv:
       districts: "Distrikt"
       districts_list: "Lista över distrikt"
       categories: "Kategorier"
-    target_blank: " (länken öppnas i ett nytt fönster)"
+    target_blank: "Länken öppnas i ett nytt fönster"
     you_are_in: "Du är på"
     unflag: Ta bort flagga
     unfollow_entity: "Sluta följa %{entity}"
@@ -770,24 +748,16 @@ sv:
         other: "%{count} språk används"
     optional: "Valfritt"
     required: "Obligatoriskt"
+    comments:
+      zero: "Inga kommentarer"
+      one: "1 kommentar"
+      other: "%{count} kommentarer"
   social:
     facebook: "%{org} på Facebook"
     twitter: "%{org} på Twitter"
     youtube: "%{org} på YouTube"
     telegram: "%{org} på Telegram"
     instagram: "%{org} på Instagram"
-  stats:
-    index:
-      visits: Visningar
-      debates: Debatter
-      proposals: Förslag
-      comments: Kommentarer
-      proposal_votes: Röster på förslag
-      debate_votes: Röster på debatter
-      comment_votes: Röster på kommentarer
-      votes: Totalt antal röster
-      verified_users: Verifierade användare
-      unverified_users: Ej verifierade användare
   unauthorized:
     default: Du har inte behörighet att komma åt sidan.
     manage:
@@ -844,19 +814,18 @@ sv:
       published: Publicerat
       see: "Visa förslag"
       actions: Åtgärder
-      retired_help_text: Dashboard är inte tillgängligt för tillbakadragna förslag
+      retired_help_text: Dashboard är inte tillgänglig för tillbakadragna förslag
   votes:
     agree: Jag håller med
+    agree_label: "Jag säger ja till %{title}"
     anonymous: För många anonyma röster för att godkänna omröstningen %{verify_account}.
-    comment_unauthenticated: Du behöver %{signin} eller %{signup} för att rösta.
     disagree: Jag håller inte med
+    disagree_label: "Jag säger nej till %{title}"
     organizations: Organisationer kan inte rösta
     supports: Stöd
     verified_only: Endast verifierade användare kan rösta på förslag; %{verify_account}.
     budget_investments:
-      not_logged_in: Du behöver %{signin} eller %{signup} för att fortsätta.
       not_verified: Endast verifierade användare kan rösta på budgetförslag; %{verify_account}.
-      organization: Organisationer kan inte rösta
       unfeasible: Det går inte att stödja investeringsprojekt som inte är genomförbara
       not_voting_allowed: Omröstningsfasen är avslutad
       different_heading_assigned:
@@ -892,23 +861,13 @@ sv:
       budget_investments:
         title: Rekommenderade budgetförslag
       slide: "Visa %{title}"
-    verification:
-      i_dont_have_an_account: Jag har inget konto
-      i_have_an_account: Jag har redan ett konto
-      question: Har du redan ett konto på %{org_name}?
-      title: Kontoverifiering
     welcome:
       go_to_index: Inte nu, gå till indexsidan
       start_using_consul: Gå till indexsidan
       title: Delta
-      user_permission_debates: Delta i debatter
       user_permission_info: Med ditt konto kan du...
-      user_permission_proposal: Skapa nya förslag
-      user_permission_support_proposal: Stödja förslag
       user_permission_verify: "Verifiera ditt konto för att få tillgång till alla funktioner."
-      user_permission_verify_info: "* Endast för användare skrivna i staden."
       user_permission_verify_my_account: Verifiera mitt konto
-      user_permission_votes: Delta i slutomröstningar
   invisible_captcha:
     sentence_for_humans: "Ignorera det här fältet om du är en människa"
     timestamp_error_message: "Oj, där gick det lite för snabbt! Var vänlig skicka in igen."

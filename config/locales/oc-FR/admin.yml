@@ -4,11 +4,9 @@ oc:
       title: Administrar
     actions:
       actions: d'Accions
-      confirm: '¿Estás segur?'
       confirm_hide: Confirmatz la moderacion
       delete: "Borrar"
       hide: Amagar
-      hide_author: Bloquejar l'autor
       restore: Tornar a mostrar
       mark_featured: Destacadas
       unmark_featured: traire destacat
@@ -128,7 +126,6 @@ oc:
         edit: "Edita lo grop"
         submit: "Plega lo grop"
     budget_headings:
-      no_headings: "I a pas cap de títol."
       create:
         notice: "Lo encapçalament creat corrèctament!"
       update:
@@ -205,7 +202,6 @@ oc:
           incompatible: Incompatible
           price: Prètz
           author: Autor
-        cannot_calculate_winners: Lo budgèt li cal demorar en fasa "de Projèctes de votacion", "Revisar las bilhetas" o "Budgèt acabat" per calcular los projèctes ganhants
         see_results: "veire de resultats"
         milestone_tags_filter_all: "Totas las etiquetas de hita"
       show:
@@ -423,7 +419,6 @@ oc:
         title: "Documents"
         format: "Format"
         size: "Mida"
-        url: "URL"
       create:
         success_notice: "S'ha carregat document correctament"
         unable_notice: "Document no vàlid"
@@ -548,7 +543,6 @@ oc:
         index:
           title: de Versions del borrolhon
           create: crear version
-          delete: Borrar
           preview: Previsualitzar
         new:
           back: Tornar
@@ -581,7 +575,6 @@ oc:
           back: Tornar
           title: de Questions associadas a aquel procès
           create: Crear question per votacion
-          delete: Borrar
         new:
           back: Tornar
           title: Crear nòva question
@@ -995,9 +988,6 @@ oc:
         table_title: "Títol"
         edit_answers: Edita las responsas
         see_proposal: "(Veire proposicion)"
-      flash:
-        question_added: "Question añadida a aquela votación"
-        error_on_question_added: "Se pudi pas asignar la question"
       destroy:
         alert: "Aquesta acció eliminarà l'enquesta i totes les seves preguntes associades."
         success_notice: "L'enquesta s'ha suprimit correctament"
@@ -1047,12 +1037,6 @@ oc:
     answers:
       new:
         title: Nòva responsa
-      show:
-        title: Títol
-        description: Descripcion detalhada
-        images: d'Images
-        images_list: Lista d’images
-        edit: Edita la responsa
       edit:
         title: Edita la responsa
       videos:
@@ -1326,7 +1310,6 @@ oc:
           verified_users_who_didnt_vote_proposals: d'Usatgièrs verificats qu'an pas votat de proposicions
           visits: de Visitas
           votes: de Vòts
-        budgets_title: de Budgèts ciutadans
         participatory_budgets: Pressupostos participatius
         direct_messages: de messatges dirèctes
         proposal_notifications: de Notificacions de proposicions
@@ -1334,8 +1317,6 @@ oc:
         polls: de votacions
       graph:
         debate_created: Debats
-        visit: Visites
-        level_2_user: Usuaris de nivell 2
         proposal_created: Propostes ciutadanes
       budgets:
         no_data_before_balloting_phase: "No hi ha dades que es mostrin abans de la fase de votacions."
@@ -1440,7 +1421,6 @@ oc:
         index:
           title: d'Images
           update: Actualizar
-          delete: Borrar
           image: image
         update:
           notice: Image actualizada corrèctament
@@ -1468,7 +1448,7 @@ oc:
           see_page: Veire pagina
         new:
           title: Nòva pagina
-          slug_help: "Text per identificar aquesta pàgina a l’URL, per exemple <code>https://consulproject.org/page-slug</code>"
+          slug_help: "Text per identificar aquesta pàgina a l’URL, per exemple <code>https://consuldemocracy.org/page-slug</code>"
         page:
           created_at: creat
           status: Estat

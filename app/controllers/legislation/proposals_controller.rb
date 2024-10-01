@@ -3,10 +3,10 @@ class Legislation::ProposalsController < Legislation::BaseController
   include FlagActions
   include ImageAttributes
 
-  before_action :load_categories, only: [:new, :create, :edit, :map, :summary]
-  before_action :load_geozones, only: [:edit, :map, :summary]
+  before_action :load_categories, only: [:new, :create, :edit, :summary]
+  before_action :load_geozones, only: [:edit, :summary]
 
-  before_action :authenticate_user!, except: [:show, :map, :summary]
+  before_action :authenticate_user!, except: [:show, :summary]
   load_and_authorize_resource :process, class: "Legislation::Process"
   load_and_authorize_resource :proposal, class: "Legislation::Proposal", through: :process
 
@@ -30,24 +30,27 @@ class Legislation::ProposalsController < Legislation::BaseController
     @proposal = Legislation::Proposal.new(proposal_params.merge(author: current_user))
 
     if @proposal.save
-      redirect_to legislation_process_proposal_path(params[:process_id], @proposal), notice: I18n.t("flash.actions.create.proposal")
+      redirect_to legislation_process_proposal_path(params[:process_id], @proposal),
+                  notice: I18n.t("flash.actions.create.proposal")
     else
       render :new
     end
   end
 
-  def vote
-    @proposal.register_vote(current_user, params[:value])
-  end
-
   private
 
     def proposal_params
-      params.require(:legislation_proposal).permit(:legislation_process_id, :title,
-                    :summary, :description, :video_url, :tag_list,
-                    :terms_of_service, :geozone_id,
-                    image_attributes: image_attributes,
-                    documents_attributes: [:id, :title, :attachment, :cached_attachment, :user_id])
+      params.require(:legislation_proposal).permit(allowed_params)
+    end
+
+    def allowed_params
+      [
+        :legislation_process_id, :title,
+        :summary, :description, :video_url, :tag_list,
+        :terms_of_service, :geozone_id,
+        image_attributes: image_attributes,
+        documents_attributes: [:id, :title, :attachment, :cached_attachment, :user_id]
+      ]
     end
 
     def resource_model

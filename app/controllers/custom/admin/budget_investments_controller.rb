@@ -1,4 +1,4 @@
-require_dependency Rails.root.join("app", "controllers", "admin", "budget_investments_controller").to_s
+load Rails.root.join("app", "controllers", "admin", "budget_investments_controller.rb")
 
 class Admin::BudgetInvestmentsController < Admin::BaseController
   include ImageAttributes

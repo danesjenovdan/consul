@@ -4,13 +4,12 @@ cs:
       title: Administrace
     actions:
       actions: Akce
-      confirm: Jste si jisti?
+      block_author: "Blokovat autora"
       confirm_action: "Jste si jist? %{action} \"%{name}\""
       confirm_delete: "Jste si jistý? Tato akce odstraní \"%{name}\" a nelze ji vrátit zpět."
       confirm_hide: Potvrdit moderování
       delete: "Smazat"
       hide: Skrýt
-      hide_author: Skrýt autora
       label: "%{action} %{name}"
       restore: Obnovit
       mark_featured: Označené
@@ -39,6 +38,8 @@ cs:
           sdg: SDG
       create:
         notice: "Reklamní proužek byl úspěšně vytvořen"
+      destroy:
+        notice: "Obrázek byl úspěšně smazán"
       edit:
         editing: Upravit banner
         form:
@@ -114,6 +115,7 @@ cs:
         delete: Odstranit rozpočet
         phase: Fáze
         phases_caption: "Fáze"
+        phases_table_help_text: "Konfigurace těchto fází slouží pouze pro informační účely. Její funkcí je definovat informace o fázích zobrazené na veřejné stránce participativního rozpočtu."
         duration: "Trvání"
         enabled: Povolit
         actions: Akce
@@ -141,6 +143,8 @@ cs:
         info:
           budget_settings: "Obecné nastavení participativního rozpočtu"
           staff_settings: "Správci a hodnotitelé přiřazení k rozpočtu"
+        hide_money: "Skrýt částku"
+        hide_money_help_text: "Pokud je tato možnost zaškrtnuta, všechna pole zobrazující částku budou v průběhu procesu skryta."
       destroy:
         success_notice: Rozpočet byl smazán
         unable_notice: Nemůžete odstranit rozpočet, který je propojený s investicemi
@@ -171,6 +175,11 @@ cs:
       headings_name: "Kapitoly"
       headings_manage: "Spravovat kapitoly"
       no_groups: "Neexistují žádné skupiny."
+      amount:
+        one: "Je tu 1 skupina"
+        few: "Jsou tu %{count} skupiny"
+        many: "Je tu %{count} skupin"
+        other: "Je zde %{count} skupin"
       create:
         notice: "Skupina byla úspěšně vytvořena!"
       update:
@@ -186,7 +195,7 @@ cs:
       index:
         new_button: "Přidat novou skupinu"
     budget_headings:
-      no_headings: "Neexistují žádné kapitoly."
+      no_headings: "Ve skupině <strong>%{group}</strong> nejsou žádné nadpisy."
       create:
         notice: "Kapitola byla úspěšně vytvořena!"
       update:
@@ -195,6 +204,7 @@ cs:
         success_notice: "Kapitola byla smazána"
         unable_notice: "Nemůžete odstranit nadpis, který spojený s investicí"
       form:
+        geozone_info: "Pokud je záhlaví přiřazeno ke geozóně, zobrazí se tato geozóna na mapě tohoto rozpočtu, pokud geozóna obsahuje data GeoJSON."
         max_ballot_lines_info: 'Maximální počet projektů, pro které může uživatel hlasovat v této rozpočtové položce ve fázi "Hlasování projektů". Pouze pro rozpočty využívající schvalovací hlasování.'
         population_info: "Položka Populace se používá ke statistickým účelům na konci rozpočtu a ukáže pro každou kapitolu, která představuje oblast s populací, jaké procento hlasovalo. Pole je volitelně, takže jej můžete nechat prázdné, pak se nepoužije."
         coordinates_info: "Je-li k dispozici zeměpisná šířka a délka, stránka investic pro tuto kapitolu bude obsahovat mapu. Tato mapa bude vycentrována pomocí těchto souřadnic."
@@ -213,13 +223,14 @@ cs:
     budget_phases:
       edit:
         title: "Upravit fázi"
+        dates_help_text: "Pouze pro informační účely"
         description_help_text: Tento text bude zobrazen v záhlaví, když je fáze aktivní
         duration: "Trvání fáze"
-        duration_description: "Doba, po kterou bude tato fáze aktivní."
-        enabled_help_text: Fáze bude zveřejněna v časovém rozvrhu participativního rozpočtu a bude aktivní pro jakýkoli jiný účel
+        duration_description: "Tato pole slouží pouze pro informační účely a <strong>nevyvolávají automatickou aktualizaci aktivní fáze.</strong> Chcete-li ji aktualizovat, upravte rozpočet a vyberte aktivní fázi."
+        enabled_help_text: Fáze bude zveřejněna v časovém rozvrhu participativního rozpočtu a bude aktivní pro jakýkoli jiný účel.
         image_description: "Pokud je obrázek nahrán, zobrazí se vedle popisu této fáze."
         main_call_to_action: "Hlavní výzva k akci (nepovinné)"
-        main_call_to_action_description: "Tento odkaz se zobrazí na hlavním banneru tohoto participativního rozpočtu, pokud je tato fáze povolena, a vybízí uživatele k provedení konkrétní akce, jako je vytvoření návrhu, hlasování pro stávající návrhy nebo získání dalších informací o procesu."
+        main_call_to_action_description: "Tento odkaz se zobrazí na hlavním obrázku tohoto participativního rozpočtu, pokud je tato fáze povolena, a vybízí uživatele k provedení konkrétní akce, jako je vytvoření návrhu, hlasování pro stávající návrhy nebo získání dalších informací o procesu."
         name_help_text: "Toto je název fáze, který si uživatelé přečtou v záhlaví, kdykoli je tato fáze aktivní."
         save_changes: Uložit změny
       index:
@@ -278,7 +289,7 @@ cs:
           incompatible: Nekompatibilní
           price: Cena
           author: Autor
-        cannot_calculate_winners: Rozpočet musí zůstat na fázi "Hlasování o projektech", "Přezkoumání hlasování" nebo "Ukončený rozpočet" za účelem výpočtu vítězných projektů
+        cannot_calculate_winners: Rozpočet musí zůstat ve fázi "%{phase}", aby bylo možné vypočítat vítězné projekty
         see_results: "Zobrazit výsledky"
         milestone_tags_filter_all: "Všechny značky milníků"
       show:
@@ -522,7 +533,6 @@ cs:
         title: "Dokumenty"
         format: "Formát"
         size: "Velikost"
-        url: "URL"
       create:
         success_notice: "Dokument byl úspěšně nahrán"
         unable_notice: "Neplatný dokument"
@@ -648,7 +658,6 @@ cs:
         index:
           title: Pracovní verze
           create: Vytvořit verzi
-          delete: Smazat
           preview: Náhled
         new:
           back: Zpět
@@ -681,7 +690,6 @@ cs:
           back: Zpět
           title: Otázky spojené s tímto procesem
           create: Vytvořit otázku
-          delete: Smazat
         new:
           back: Zpět
           title: Vytvořit otázku
@@ -757,6 +765,8 @@ cs:
           community: "Připojte se ke komunitě"
           proposals: "Návrhy"
           polls: "Průzkum"
+          legislation: "Participativní legislativa"
+          budgets: "Rozpočty"
           layouts: "Rozložení"
           machine_learning: "AI / strojové učení"
           mailers: "E-maily"
@@ -780,6 +790,7 @@ cs:
       comments: "Komentáře"
       local_census_records: Správa místního registru občanů
       machine_learning: "AI / strojové učení"
+      multitenancy: Víceuživatelské služby
     administrators:
       index:
         title: Administrátoři
@@ -837,6 +848,11 @@ cs:
         title: Náhled informačního bulletinu
         send: Odeslat
         affected_users: (%{n} postižených uživatelů)
+        sent_emails:
+          one: 1 odeslaný e-mail
+          few: "%{count} e-maily odeslány"
+          many: "%{count} e-mailů odesláno"
+          other: "Odesláno %{count} emailů"
         sent_at: Odesláno v čase
         subject: Subject
         segment_recipient: Recipients
@@ -930,8 +946,8 @@ cs:
       alert:
         no_investments: "Nejsou vytvořeny žádné rozpočtové investice. K náhledu e-mailu je zapotřebí několik údajů o příkladu."
         no_comments: "Nejsou vytvořeny žádné komentáře. K náhledu e-mailu je zapotřebí několik údajů o příkladu."
-        no_replies: "Nebyly vytvořeny žádné odpovědi. K náhledu e-mailu je zapotřebí několik údajů o příkladu."
-        no_evaluation_comments: "Nejsou vytvořeny žádné hodnotící komentáře. K náhledu e-mailu je zapotřebí několik údajů o příkladu."
+        no_replies: "Nebyly vytvořeny žádné odpovědi. K náhledu e-mailu je zapotřebí některých příkladů údajů."
+        no_evaluation_comments: "Nejsou vytvořeny žádné hodnotící komentáře. K náhledu e-mailu je zapotřebí nějakých příkladů údajů."
     emails_download:
       index:
         title: Stahování e-mailů
@@ -1095,13 +1111,14 @@ cs:
         table_title: "Předmět"
         edit_answers: Upravit odpovědi
         see_proposal: "(Zobrazit návrh)"
-      flash:
-        question_added: "Otázka přidána k této anketě"
-        error_on_question_added: "Otázku nelze přiřadit k této anketě"
       destroy:
         alert: "Tato akce odstraní průzkum a všechny související otázky."
         success_notice: "Průzkum byl úspěšně smazán"
         unable_notice: "Nelze smazat průzkum, který má hlasy"
+      votation_type:
+        title: "Typ hlasování"
+        unique_description: "Na otázku je možné odpovědět pouze jednou."
+        multiple_description: "Umožňuje vybrat více odpovědí. Je možné nastavit maximální počet odpovědí."
     questions:
       index:
         title: "Otázky"
@@ -1118,9 +1135,13 @@ cs:
         poll_not_assigned: "Anketa není přiřazena"
       edit:
         title: "Upravit dotaz"
+      form:
+        poll_help: "Můžete vybrat pouze ankety, které ještě nebyly zahájeny"
       new:
         title: "Vytvořit otázku do průzkumu %{poll}"
         title_proposal: "Vytvořit otázku"
+      destroy:
+        notice: "Otázka byla úspěšně smazána"
       answers:
         images:
           add_image: "Přidat obrázek"
@@ -1144,17 +1165,17 @@ cs:
           documents_list: Seznam dokumentů
           document_title: Předmět
           document_actions: Akce
+      no_edit: "Po spuštění ankety nebude možné vytvářet, upravovat ani mazat otázky, odpovědi nebo jakýkoli obsah související s anketou."
     answers:
       new:
         title: Nová odpověď
-      show:
-        title: Předmět
-        description: Description
-        images: Obrázky
-        images_list: Seznam obrázků
-        edit: Upravit odpověď
       edit:
         title: Upravit odpověď
+      destroy:
+        success_notice: "Odpověď úspěšně smazána"
+      images:
+        index:
+          title: Obrázky
       videos:
         index:
           title: Videa
@@ -1340,6 +1361,7 @@ cs:
         label:
           booths: "Vyhledat informační stánek podle jména"
           budget_investments: "Vyhledávání investic podle názvu, popisu nebo rozpočtové položky"
+          comments: "Vyhledat komentáře"
           debates: "Vyhledávání debat podle názvu nebo popisu"
           legislation_processes: "Vyhledávání procesů podle názvu nebo popisu"
           legislation_proposals: "Vyhledávání návrhů podle názvu nebo popisu"
@@ -1349,6 +1371,7 @@ cs:
           poll_questions: "Vyhledat otázky ankety"
           polls: "Vyhledávání průzkumů podle názvu nebo popisu"
           proposals: "Vyhledat návrhy podle názvu, kódu, popisu nebo otázky"
+          proposal_notifications: "Hledat oznámení podle názvu nebo popisu"
           users: "Vyhledat uživatele podle jména nebo e-mailu"
         search: "Hledat"
       search_results: "Výsledky vyhledávání"
@@ -1368,18 +1391,25 @@ cs:
       show_results_and_stats: "Zobrazit výsledky a statistiky"
       results_and_stats_reminder: "Zaškrtnutím těchto políček budou výsledky a statistiky tohoto průzkumu veřejně dostupné a kterýkoliv uživatel je uvidí."
       close_modal: Zavřít modální okno
-      example_url: "https://consulproject.org"
+      example_url: "Například https://consuldemocracy.org nebo /help"
     geozones:
       index:
         title: Geozóna
         create: Vytvořit geozónu
+        geojson_map: GeoJSON Mapa
+        geojson_map_help: "Pokud jsou k dispozici souřadnice GeoJSON, zobrazí se na mapě níže"
       geozone:
         name: Název
         external_code: Externí kód
         census_code: Kód statistického úřadu
         code_help: Kód odpovědi pro tuto geozónu v rozhraní API registru osob
+        color_help: "Barva zóny na mapě rozpočtu. %{format_help}"
         coordinates: Souřadnice
         coordinates_help: Souřadnice, které vygenerují klikatelnou oblast na obrázkové mapě HTML
+        geojson: GeoJSON k dispozici
+        geojson_help: "Musí odpovídat formátu typu \"Polygon\" nebo \"MultiPolygon\"; na mapě rozpočtu se polygon založený na těchto údajích zobrazí, když je k této geozóně přiřazen záhlaví"
+      create:
+        notice: "Geozóna úspěšně vytvořena"
       edit:
         form:
           submit_button: Uložit změny
@@ -1391,6 +1421,8 @@ cs:
       delete:
         success: Geozóna byla odstraněna
         error: Tato geozóna nemohla být odstraněna, protože jsou k ní připojeny některé prvky
+      update:
+        notice: "Geozóna úspěšně aktualizována"
     signature_sheets:
       author: Autor
       created_at: Datum vytvoření
@@ -1414,6 +1446,16 @@ cs:
         author: Autor
         users: Uživatelé
         signature_count: "Počet podpisů:"
+        verified:
+          one: "Je tu %{count} platný podpis"
+          few: "Jsou tu %{count} platné podpisy"
+          many: "Je tu %{count} platných podpisů"
+          other: "Je tu %{count} platných podpisů"
+        unverified:
+          one: "Je tu %{count} neplatný podpis"
+          few: "Jsou tu %{count} neplatné podpisy"
+          many: "Je tu %{count} neplatných podpisů"
+          other: "Je tu %{count} neplatných podpisů"
         unverified_error: (Není ověřeno statistickým úřadem)
         voted:
           zero: "Z ověřených podpisů se nevytvářejí žádné hlasy."
@@ -1442,7 +1484,6 @@ cs:
           verified_users_who_didnt_vote_proposals: Počet ověřených uživatelů, kteří nehlasovali o návrzích
           visits: Návštěvy
           votes: Hlasů celkem
-        budgets_title: Participativní rozpočtování
         participatory_budgets: Participativní rozpočty
         direct_messages: Soukromé zprávy
         proposal_notifications: Upozornění k návrhům
@@ -1451,8 +1492,6 @@ cs:
         sdg: SDG
       graph:
         debate_created: Debaty
-        visit: Návštěvy
-        level_2_user: Počet uživatelů druhé úrovně
         proposal_created: Návrhy občanů
       budgets:
         no_data_before_balloting_phase: "Před fází hlasování nejsou k dispozici žádné údaje."
@@ -1516,6 +1555,10 @@ cs:
         document_number: Číslo dokladu
         roles: Role
         verification_level: Úroveň ověření
+        activation_status: Stav aktivace
+      account:
+        active_status: Účet aktivován
+        inactive_status: Účet není aktivován
       index:
         title: User
         no_users: Nemáte žádné uživatele.
@@ -1558,13 +1601,13 @@ cs:
           names:
             top_links: Hlavní odkazy
             footer: Zápatí
+            footer_legal: Zápatí (právní podmínky)
             subnavigation_left: Hlavní navigace vlevo
             subnavigation_right: Hlavní navigace vpravo
       images:
         index:
           title: Vlastní obrázky
           update: Aktualizovat
-          delete: Smazat
           image: Image
         update:
           notice: Obrázek byl úspěšně aktualizován
@@ -1592,7 +1635,7 @@ cs:
           see_page: Zobrazit stránku
         new:
           title: Vytvořit novou vlastní stránku
-          slug_help: "Text pro identifikaci této stránky na URL, například <code>https://consulproject.org/page-slug</code>"
+          slug_help: "Text pro identifikaci této stránky na URL, například <code>https://consuldemocracy.org/page-slug</code>"
         page:
           created_at: Vytvořeno v
           status: Status
@@ -1605,12 +1648,26 @@ cs:
           create_card: Vytvořit kartu
           no_cards: Nemáte žádnou kartu.
           columns_help: "Šířka karty v počtu sloupců. Na mobilních obrazovkách je vždy šířka 100 %."
+          order_help: "Můžete zadat pozici, na které bude tato karta zobrazena."
           create:
             notice: "Karta úspěšně vytvořena!"
           update:
             notice: "Karta úspěšně aktualizována"
           destroy:
             notice: "Karta úspěšně smazána"
+    tenants:
+      create:
+        notice: Uživatel byl úspěšně vytvořen
+      form:
+        use_subdomain: "Pro přístup k tomuto uživateli použijte subdoménu v doméně %{domain}"
+        use_domain: "Použití jiné domény pro přístup k tomuto uživateli v nájmu"
+      index:
+        create: Vytvořit uživatele
+        enabled: Povoleno
+      new:
+        title: Nový uživatel
+      update:
+        notice: Uživatel byl úspěšně aktualizován
     homepage:
       title: Úvodní strana
       description: Aktivní moduly se objeví na úvodní stránce ve stejném pořadí jako zde.
@@ -1694,10 +1751,10 @@ cs:
       help:
         title_1: "Co je AI / strojové učení?"
         description_1: "Počítačové programy se tradičně navrhují tak, že se stanoví přesná pravidla, co má program v každé situaci dělat a jak má v každém okamžiku zpracovávat dostupné informace. To, co se běžně označuje jako umělá inteligence/strojové učení, je typ programů, u nichž je přesně stanoveno, jaký úkol má být proveden a jak se vyhodnocuje, zda je úkol proveden lépe nebo hůře. Na rozdíl od prvně jmenovaného však systém objevuje nebo se učí, jaká by byla nejvhodnější metoda k provedení úkolu."
-        title_2: "Co dělá modul AI / strojového učení v systému CONSUL?"
-        description_2: "Tento modul umožňuje implementovat v CONSULu libovolný typ programů AI/Machine Learning. Tyto programy mohou zpracovávat informace dostupné v systému CONSUL a vytvářet výsledky, které pomáhají uživatelům i správcům provádět efektivnější a inteligentnější zapojení občanů. Modul byl vyvinut tak, aby bylo možné snadno implementovat a spouštět nové programy, přičemž obecný kód CONSULu a kód těchto nových programů jsou na sobě nezávislé."
+        title_2: "Co dělá modul AI / strojového učení v systému CONSUL DEMOCRACY?"
+        description_2: "Tento modul umožňuje implementovat v CONSULu libovolný typ programů AI/Machine Learning. Tyto programy mohou zpracovávat informace dostupné v systému CONSUL DEMOCRACY a vytvářet výsledky, které pomáhají uživatelům i správcům provádět efektivnější a inteligentnější zapojení občanů. Modul byl vyvinut tak, aby bylo možné snadno implementovat a spouštět nové programy, přičemž obecný kód CONSULu a kód těchto nových programů jsou na sobě nezávislé."
         title_3: "Jak používat tento modul"
-        description_3: "Při prvním použití je nutné postupovat podle pokynů uvedených v dokumentaci CONSUL a modul správně aktivovat. Po správné aktivaci modulu se programy spouštějí na kartě \"Spustit skripty\". Před spuštěním se nám na téže kartě zobrazí odhad doby spuštění a další důležité informace. Na konci provádění můžeme na kartě \"Nastavení\" aktivovat obsah, který se bude v CONSULu zobrazovat, a také stáhnout další vygenerované soubory, které se nám mohou hodit."
+        description_3: "Při prvním použití je nutné postupovat podle pokynů uvedených v dokumentaci CONSUL DEMOCRACY a modul správně aktivovat. Po správné aktivaci modulu se programy spouštějí na kartě \"Spustit skripty\". Před spuštěním se nám na téže kartě zobrazí odhad doby spuštění a další důležité informace. Na konci provádění můžeme na kartě \"Nastavení\" aktivovat obsah, který se bude v CONSUL DEMOCRACY zobrazovat, a také stáhnout další vygenerované soubory, které se nám mohou hodit."
         title_4: "Jak implementovat nové skripty AI / strojového učení"
         description_4: "Jako příklady použijte předchozí skripty."
         description_4b: "Nové skripty by měly být umístěny ve složce <code>public/machine_learning/scripts</code>"
@@ -1721,7 +1778,7 @@ cs:
       related_content_description: "Přidává automaticky generovaný související obsah do návrhů a projektů participativního rozpočtu."
       script_info: "Po dokončení skriptu obdržíte e-mail na %{email}."
       script_name: "Název skriptu:"
-      select_script: "Vyberte skript pythonu, který chcete spustit"
+      select_script: "Vyberte python skript, který chcete spustit"
       started_at: "Začíná na:"
       tab_help: "Nápověda"
       tab_scripts: "Spustit skript"

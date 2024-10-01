@@ -34,7 +34,7 @@ zh-TW:
         info: 您可以在此處通過左側菜單中列出的所有操作來管理用戶。
     document_verifications:
       already_verified: 此用戶帳戶已被核實。
-      link: CONSUL
+      link: CONSUL DEMOCRACY
       in_census_has_following_permissions: "此用戶可以使用以下權限參與網站："
       not_in_census: 此文檔尚未註冊。
       not_in_census_info: "不在人口普查中的公民可以使用以下權限參與網站："
@@ -63,11 +63,6 @@ zh-TW:
       users: 用戶管理
       user_invites: 發送邀請
       select_user: 選擇用戶
-    permissions:
-      create_proposals: 創建建議
-      debates: 參與辯論
-      support_proposals: 支持建議
-      vote_proposals: 投票建議
     print:
       proposals_info: 在http://url.consul 上創建您的建議
       proposals_title: "建議："

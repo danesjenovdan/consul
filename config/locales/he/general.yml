@@ -11,14 +11,9 @@ he:
       save_changes_submit: שמירת שינויים
       recommendations: המלצות
       title: החשבון שלי
-      user_permission_debates: להשתתף בדיונים
       user_permission_info: עם חשבונך תוכל/י ...
-      user_permission_proposal: ליצור הצעות חדשות
-      user_permission_support_proposal: לתמוך בהצעות
       user_permission_title: השתתפות
       user_permission_verify: כדי לבצע את כל הפעולות, עליך לאמת את חשבונך
-      user_permission_verify_info: "* רק עבור משתמשים/ות במפקד אוכלוסין."
-      user_permission_votes: השתתפות בהצבעה הסופית
       verified_account: החשבון אומת בהצלחה
       verify_my_account: אמת את החשבון שלי
   application:
@@ -79,12 +74,6 @@ he:
       form:
         submit_button: פתיחת דיון
     debate:
-      comments:
-        zero: אין תגובות
-        one: תגובה אחת
-        two: "%{count} תגובות"
-        many: "%{count} תגובות"
-        other: "%{count} תגובות"
       votes:
         zero: אין הצבעות
         one: הצבעה אחת
@@ -119,11 +108,6 @@ he:
         button: חיפוש
         placeholder: חיפוש דיונים...
         title: חיפוש
-      search_results:
-        one: " המכיל את המונחים <strong>'%{search_term}'</strong>"
-        two: " המכיל את המונחים <strong>'%{search_term}'</strong>"
-        many: " המכיל את המונחים <strong>'%{search_term}'</strong>"
-        other: " המכיל את המונחים <strong>'%{search_term}'</strong>"
       start_debate: פתח דיון
       title: דיונים
       section_header:
@@ -147,12 +131,6 @@ he:
       start_new: פתיחת דיון חדש
     show:
       author_deleted: משתמש/ת זה/ו נמחק/ה
-      comments:
-        zero: אין תגובות
-        one: תגובה אחת
-        two: "%{count} תגובות"
-        many: "%{count} תגובות"
-        other: "%{count} תגובות"
       comments_title: הערות
       edit_debate_link: ערוך
       flag: דיון זה סומן כבלתי-ראוי על ידי מספר משתמשים
@@ -167,7 +145,6 @@ he:
       invalid_date_range: "טווח תאריכים לא חוקי"
   form:
     accept_terms: אני מאשר/ת את %{policy} ואת %{conditions}
-    accept_terms_title: אני מאשר/ת שקראתי והסכמתי למדיניות הפרטיות, לכללים ותנאי השימוש
     conditions: כללים ותנאי שימוש
     debate: דיון
     direct_message: פנייה פרטית
@@ -181,7 +158,6 @@ he:
     budget/group: תקציב הקבוצה
     budget/heading: כותרת התקציב
     poll/shift: משמרת
-    poll/question/answer: תשובה
     user: חשבון משתמש/ת
     verification/sms: מספר טלפון
     signature_sheet: גיליון חתימה
@@ -191,11 +167,6 @@ he:
   geozones:
     none: בכל העיר
   layouts:
-    application:
-      chrome: גוגל כרום
-      firefox: פיירפוקס
-      ie: שמנו לב שהדפדפן שלך הוא אינטרנט אקפלורר. למען חוויה טובה יותר, אנו ממליצים להשתמש בגוגל כרום -%{chrome} או בפיירפוקס %{firefox}
-      ie_title: אתר זה אינו מותאם לדפדפן שלך
     dashboard:
       proposal_header:
         published: פורסם
@@ -216,10 +187,9 @@ he:
     footer:
       accessibility: נגישות
       conditions: כללים ותנאי שימוש
-      consul: מערכת ההצבעות לשיתוף תושבים
-      consul_url: https://github.com/consul/consul
-      contact_us: תמיכה טכנית באתר הפרויקט
-      copyright: Consul, %{year}
+      consul: מערכת ההצבעות של קול העם
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: פורטל זה משתמש בפלטפורמת %{consul} שהיא %{open_source}.
       open_source: תוכנת קוד פתוח
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -323,7 +293,7 @@ he:
         submit_button: שמירת שינויים
       show_link: צפייה בהצעה
     retire_form:
-      title: הסרת הצעה
+      title: להסרת ההצעה
       warning: "“הסרת ההצעה שלך היא לא מחיקה. ההצעה עדיין תוכל לצבור תמיכה, אך היא תוסר מהרשימה הראשית ולכל המשתמשים שצופים בה תוצג ההודעה שלדעת מציע/ת ההצעה, לא כדאי לתמוך בהצעה הזו יותר.\""
       retired_reason_blank: בחר/י אפשרות
       retired_explanation_placeholder: הסבר/י בקיצור מדוע לדעתך לא כדאי לתמוך בהצעה זו כבר
@@ -387,7 +357,6 @@ he:
       select_order_long: "ההצעות מוצגות לך על-פי סדר:"
       start_proposal: העל/י הצעה חדשה
       title: הצעות
-      top: בראש סדר היום השבוע
       top_link_proposals: ההצעות שצברו הכי הרבה תמיכה, לפי נושא
       section_header:
         icon_alt: סמל הצעה
@@ -415,12 +384,6 @@ he:
         edit: "לפני שאתה משתף תוכל לשנות את הטקסט כרצונך."
         view_proposal: לא עכשיו, גש אל ההצעה שלי
       already_supported: כבר תמכת בהצעה זו. שתף אותה!
-      comments:
-        zero: אין תגובות
-        one: תגובה אחת
-        two: "%{count} תגובות"
-        many: "%{count} תגובות"
-        other: "%{count} תגובות"
       support: בעד
       support_title: לתמיכה בהצעה זו
       supports:
@@ -443,12 +406,6 @@ he:
     show:
       author_deleted: משתמש/ת זה/ו נמחק/ה
       code: "קוד ההצעה:"
-      comments:
-        zero: אין תגובות
-        one: תגובה אחת
-        two: "%{count} תגובות"
-        many: "%{count} תגובות"
-        other: "%{count} תגובות"
       comments_tab: הערות
       dashboard_proposal_link: לוח ניהול
       flag: הצעה זו סומנה כבלתי-ראויה בידי מספר משתמשים
@@ -616,7 +573,6 @@ he:
         share: "ואם תסייע לי לשתף את ההצעה שלי עם חברים, משפחה ואנשי קשר, זה יהיה מושלם!"
   polls:
     all: "כולם"
-    no_dates: "לא הוקצה תאריך"
     dates: "מ %{open_at} עד %{closed_at}"
     final_date: "סיכום תוצאות סופיות"
     index:
@@ -712,8 +668,7 @@ he:
       author_deleted: משתמש/ת זה/ו נמחק/ה
       email_deleted: האימייל נמחק
     back: חזרה
-    check: בחר
-    check_all: כולם
+    check_all: הכל
     check_none: כלום
     collective: קבוצתי
     flag: סמן כתוכן לא ראוי
@@ -783,18 +738,6 @@ he:
     youtube: "%{org} יוטיוב YouTube"
     telegram: "%{org} טלגרם Telegram"
     instagram: "%{org} אינסטגרם Instagram"
-  stats:
-    index:
-      visits: ביקורים
-      debates: דיונים
-      proposals: הצעות
-      comments: הערות
-      proposal_votes: הצבעות על הצעות
-      debate_votes: הצבעות על דיונים
-      comment_votes: הצבעות על תגובות
-      votes: סך הכל הצבעות
-      verified_users: משתמשים מאושרים
-      unverified_users: משתמשים שלא נבדקו
   unauthorized:
     default: אין לך הרשאה להיכנס לדף זה.
     manage:
@@ -865,15 +808,12 @@ he:
   votes:
     agree: מסכים
     anonymous: יותר מדי קולות אנונימיים לאמת את ההצבעה %{verify_account}.
-    comment_unauthenticated: נדרשת %{signin} או %{signup} בכדי להצביע
     disagree: אני מסתייג
     organizations: ארגונים אינם רשאים להצביע
     supports: לחיצה לתמיכה
     verified_only: רק משתמשים מאומתים יכולים להצביע על הצעות; %{verify_account}.
     budget_investments:
-      not_logged_in: נדרשת %{signin} או %{signup} בכדי להמשיך
       not_verified: רק משתמשים שאומת חשבונם יכולים להצביע על ההצעות; %{verify_account}.
-      organization: ארגונים אינם רשאים להצביע
       unfeasible: לא ניתן לתמוך בפרויקטים שאינם ברי ביצוע
       not_voting_allowed: שלב ההצבעות נסגר
       different_heading_assigned:
@@ -907,23 +847,13 @@ he:
       budget_investments:
         title: השקעות מומלצות
       slide: "ראה %{title}"
-    verification:
-      i_dont_have_an_account: אין לי חשבון
-      i_have_an_account: כבר יש לי חשבון
-      question: האם כבר יש לך חשבון ב %{org_name}?
-      title: אימות החשבון
     welcome:
       go_to_index: לצפייה בהצעות ובדיונים
       start_using_consul: גש לדף הבית
       title: רוצה להשתתף בזה
-      user_permission_debates: להשתתף בדיונים
       user_permission_info: עם חשבונך תוכל/י ...
-      user_permission_proposal: ליצור הצעות חדשות
-      user_permission_support_proposal: לתמוך בהצעות*
       user_permission_verify: "כדי לבצע את כל הפעולות, עליך לאמת את חשבונך"
-      user_permission_verify_info: "* רק עבור משתמשים/ות במפקד אוכלוסין."
       user_permission_verify_my_account: אמת את החשבון שלי
-      user_permission_votes: השתתפות בהצבעה הסופית
   invisible_captcha:
     sentence_for_humans: "אם אינך רובוט, נא התעלם משדה זה"
     timestamp_error_message: "מצטערים, זה היה מהיר מדי, נא לשלוח שוב"

@@ -1,7 +1,7 @@
 pl:
   account:
     show:
-      change_credentials_link: Zmień moje dane logowania
+      change_credentials_link: Zmień moje referencje
       erase_account_link: Usuń moje konto
       finish_verification: Zakończ weryfikację
       notifications: 'Informuj mnie drogą mailową:'
@@ -11,14 +11,9 @@ pl:
       save_changes_submit: Zapisz zmiany
       recommendations: Rekomendacje
       title: Moje konto
-      user_permission_debates: Uczestnicz w debatach
       user_permission_info: Z Twoim kontem możesz...
-      user_permission_proposal: Stwórz nowy pomysł
-      user_permission_support_proposal: Poprzyj wnioski
       user_permission_title: Partycypacja
       user_permission_verify: Aby wykonać wszystkie czynności, zweryfikuj swoje konto.
-      user_permission_verify_info: "* Tylko dla użytkowników Census."
-      user_permission_votes: Weź udział w głosowaniu ostatecznym
       verified_account: Konto zweryfikowane
       verify_my_account: Zweryfikuj moje konto
   application:
@@ -71,12 +66,6 @@ pl:
       form:
         submit_button: Rozpocznij debatę
     debate:
-      comments:
-        zero: Brak komentarzy
-        one: 1 komentarz
-        few: "%{count} komentarze"
-        many: "%{count} komentarze"
-        other: "%{count} komentarze"
       votes:
         zero: Brak głosów
         one: 1 głos
@@ -111,11 +100,6 @@ pl:
         button: Szukaj
         placeholder: Szukaj debat...
         title: Szukaj
-      search_results:
-        one: " zawierające termin <strong>%{search_term}</strong>"
-        few: " zawierające termin <strong>%{search_term}</strong>"
-        many: " zawierające termin <strong>%{search_term}</strong>"
-        other: " zawierające termin <strong>%{search_term}</strong>"
       start_debate: Rozpocznij debatę
       title: Debaty
       section_header:
@@ -139,12 +123,6 @@ pl:
       start_new: Rozpocznij debatę
     show:
       author_deleted: Użytkownik usunięty
-      comments:
-        zero: Brak komentarzy
-        one: 1 komentarz
-        few: "%{count} komentarzy"
-        many: "%{count} komentarzy"
-        other: "%{count} komentarzy"
       comments_title: Komentarze
       edit_debate_link: Edytuj
       flag: Ta debata została oznaczona jako nieodpowiednia przez kilku użytkowników.
@@ -159,7 +137,6 @@ pl:
       invalid_date_range: "Nieprawidłowy zakres dat"
   form:
     accept_terms: Zgadzam się z %{policy} i %{conditions}
-    accept_terms_title: Wyrażam zgodę na Politykę Prywatności i Warunki użytkowania
     conditions: Regulamin
     debate: Debata
     direct_message: prywatna wiadomość
@@ -167,27 +144,24 @@ pl:
     errors: błędy
     not_saved: "uniemożliwił zapisanie tego %{resource}. <br>Sprawdź zaznaczone pola, aby dowiedzieć się, jak je poprawić:"
     policy: Polityka prywatności
+    banner: baner
     proposal: Wniosek
     proposal_notification: "Powiadomienie"
     budget/investment: Inwestycja
     budget/group: Grupa budżetowa
     budget/heading: Nagłówek budżetu
+    legislation/draft_version: szkic
     poll/shift: Zmiana
-    poll/question/answer: Odpowiedź
     user: Konto
     verification/sms: telefon
     signature_sheet: Arkusz podpisu
     document: Dokument
     topic: Temat
     image: Obraz
+    site_customization/page: strona
   geozones:
     none: Cała dzielnica
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Wykryliśmy, że przeglądasz za pomocą Internet Explorera. Aby uzyskać lepsze wrażenia, zalecamy użycie% %{firefox} lub %{chrome}.
-      ie_title: Ta strona internetowa nie jest zoptymalizowana pod kątem Twojej przeglądarki
     dashboard:
       proposal_header:
         published: Opublikowany
@@ -198,10 +172,9 @@ pl:
     footer:
       accessibility: Ułatwienia dostępu
       conditions: Regulamin
-      consul: Aplikacja CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: Do centrów pomocy technicznej
-      copyright: CONSUL, %{year}
+      consul: Aplikacja CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: Ten portal używa %{consul}, który jest %{open_source}.
       open_source: oprogramowanie open-source
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -233,6 +206,7 @@ pl:
           many: Masz %{count} nowe powiadomienia
           other: Masz %{count} nowe powiadomienia
         notifications: Powiadomienia
+      sdg: "SDG"
   notifications:
     index:
       empty_notifications: Nie masz nowych powiadomień.
@@ -357,7 +331,6 @@ pl:
       select_order_long: "Przeglądasz wnioski według:"
       start_proposal: Zaproponuj swój pomysł
       title: Zrealizowane projekty
-      top: TOP w tym tygodniu
       top_link_proposals: Najbardziej popularne propozycje według kategorii
       section_header:
         icon_alt: Ikona wniosków
@@ -384,12 +357,6 @@ pl:
         edit: "Zanim zostanie udostępniony, będziesz mógł zmieniać tekst według własnego uznania."
         view_proposal: Nie teraz, idź do mojego wniosku
       already_supported: Już poparłeś ten wniosek. Udostępnij go!
-      comments:
-        zero: Brak komentarzy
-        one: 1 komentarz
-        few: "%{count} komentarzy"
-        many: "%{count} komentarzy"
-        other: "%{count} komentarzy"
       support: Wsparcie
       support_title: Poprzyj ten wniosek
       supports:
@@ -411,12 +378,6 @@ pl:
     show:
       author_deleted: Użytkownik usunięty
       code: "Kod wniosku:"
-      comments:
-        zero: Brak komentarzy
-        one: 1 komentarz
-        few: "%{count} komentarzy"
-        many: "%{count} komentarzy"
-        other: "%{count} komentarzy"
       comments_tab: Komentarze
       flag: Ten wniosek został oznaczona jako nieodpowiedni przez kilku użytkowników.
       notifications_tab: Powiadomienia
@@ -437,15 +398,25 @@ pl:
       progress: Postęp
       community: Społeczność
       polls: Ankiety
+      mailing: E-mail
       related_content: Powiązana zawartość
     progress:
+      group_by_week: Tygodniowo
+      group_by_date: Dziennie
       supports: Wsparcie
+      new_action: Nowe
     index:
       edit_proposal_link: Edytuj wniosek
       retire: Wycofaj wniosek
+    new_request:
+      links: Linki
+    resource:
+      and: i
     recommended_actions:
       pending_title: Oczekujące
       done_title: Gotowe
+    next_goal:
+      title: Cel
     community:
       access_community: Uzyskaj dostęp do społeczności
       participants: Uczestnicy
@@ -455,6 +426,7 @@ pl:
       index:
         title: Ankiety
         create: Utwórz sondaż
+        links: Linki
         additiontal_information: Dodatkowe informacje
       new:
         title: Nowy sondaż
@@ -474,9 +446,9 @@ pl:
     mailer:
       forward:
         support_button: Poprzyj ten wniosek
+        hi: "Witaj!"
   polls:
     all: "Wszystkie"
-    no_dates: "brak przypisanej daty"
     dates: "Od %{open_at} do %{closed_at}"
     final_date: "Ostateczne przeliczenia/wyniki"
     index:
@@ -568,7 +540,6 @@ pl:
     author_info:
       author_deleted: Użytkownik usunięty
     back: Wróć
-    check: Wybierz
     check_all: Wszystkie
     check_none: Żaden
     collective: Zbiorowy
@@ -639,18 +610,6 @@ pl:
     youtube: "%{org} YouTube"
     telegram: "%{org} Telegram"
     instagram: "%{org} Instagram"
-  stats:
-    index:
-      visits: Odwiedziny
-      debates: Debaty
-      proposals: Zrealizowane projekty
-      comments: Komentarze
-      proposal_votes: Głosy na propozycje
-      debate_votes: Głosy na debaty
-      comment_votes: Głosy na komentarze
-      votes: Liczba głosów
-      verified_users: Zweryfikowani użytkownicy
-      unverified_users: Niezweryfikowani użytkownicy
   unauthorized:
     default: Nie masz uprawnień dostępu do tej strony.
     manage:
@@ -720,15 +679,12 @@ pl:
   votes:
     agree: Zgadzam się
     anonymous: Zbyt wiele anonimowych głosów, by móc głosować %{verify_account}.
-    comment_unauthenticated: Aby zagłosować, musisz %{signin} lub %{signup}.
     disagree: Nie zgadzam się
     organizations: Organizacje nie mogą głosować
     supports: Wspiera
     verified_only: Tylko zweryfikowani użytkownicy mogą głosować na propozycje; %{verify_account}.
     budget_investments:
-      not_logged_in: Aby kontynuować, musisz %{signin} lub %{signup}.
       not_verified: Tylko zweryfikowani użytkownicy mogą głosować na projekty inwestycyjne; %{verify_account}.
-      organization: Organizacje nie mogą głosować
       unfeasible: Nie można zrealizować niemożliwych do zrealizowania projektów inwestycyjnych
       not_voting_allowed: Faza głosowania jest zamknięta
   welcome:
@@ -757,23 +713,13 @@ pl:
       budget_investments:
         title: Rekomendowane inwestycje
       slide: "Zobacz %{title}"
-    verification:
-      i_dont_have_an_account: Nie mam konta
-      i_have_an_account: Mam już konto
-      question: Czy masz już konto w %{org_name}?
-      title: Weryfikacja konta
     welcome:
       go_to_index: Zobacz propozycje i debaty
       start_using_consul: Przejdź do strony indeksu
       title: Twoje konto zostało poprawnie zweryfikowane
-      user_permission_debates: ' '
       user_permission_info: Z Twoim kontem możesz...
-      user_permission_proposal: Twórz i dołączaj do pomysłów
-      user_permission_support_proposal: Popieraj propozycje*
       user_permission_verify: "Aby wykonać wszystkie czynności, zweryfikuj swoje konto."
-      user_permission_verify_info: "* Tylko dla użytkowników Census."
       user_permission_verify_my_account: Zweryfikuj swoje konto
-      user_permission_votes: ' '
   invisible_captcha:
     sentence_for_humans: "Jeśli jesteś człowiekiem, zignoruj to pole"
     timestamp_error_message: "Wybacz, to było zbyt szybkie! Prześlij ponownie."
@@ -806,3 +752,5 @@ pl:
     form:
       delete_button: Usuń
       cancel_button: Anuluj
+    nested_links:
+      title: Linki

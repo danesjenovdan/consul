@@ -8,14 +8,9 @@ ast:
       personal: Datos personales
       save_changes_submit: Guardar Cambeos
       title: La mio cuenta
-      user_permission_debates: Participar n'alderiques
       user_permission_info: Cola to cuenta yá pues...
-      user_permission_proposal: Crear nueves propuestes
-      user_permission_support_proposal: Sofitar propuestes
       user_permission_title: Participación
       user_permission_verify: Pa poder realizar toles acciones, verifica la to cuenta.
-      user_permission_verify_info: "* Namás usuarios empadronaos."
-      user_permission_votes: Participar nes votaciones finales
       verified_account: Cuenta verificada
       verify_my_account: Verificar mi cuenta
   application:
@@ -57,9 +52,6 @@ ast:
       form:
         submit_button: Empezar un debate
     debate:
-      comments:
-        one: 1 Comentario
-        other: "%{count} comentarios"
       votes:
         one: 1 voto
         other: "%{count} votos"
@@ -83,9 +75,6 @@ ast:
         button: Atopar
         placeholder: Buscar debates...
         title: Atopar
-      search_results:
-        one: " que contien <strong>'%{search_term}'</strong>"
-        other: " que contien <strong>'%{search_term}'</strong>"
       start_debate: Empezar un debate
       title: Alderique
       section_header:
@@ -102,9 +91,6 @@ ast:
       start_new: Empezar un debate
     show:
       author_deleted: Usuariu esaniciáu
-      comments:
-        one: 1 Comentario
-        other: "%{count} comentarios"
       comments_title: Comentarios
       edit_debate_link: Editar propuesta
       flag: Este debate ha sido marcado como inapropiado por varios usuarios.
@@ -119,7 +105,6 @@ ast:
       invalid_date_range: "El rango de fechas no es válido"
   form:
     accept_terms: Acepto la %{policy} y las %{conditions}
-    accept_terms_title: Acepto la Política de privacidad y las Condiciones de uso
     conditions: Condiciones de uso
     debate: Alderique
     direct_message: el mensaje privado
@@ -129,7 +114,6 @@ ast:
     proposal: la propuesta
     proposal_notification: "la notificación"
     budget/investment: Proyectu de inversión
-    poll/question/answer: Respuesta
     user: la cuenta
     verification/sms: el teléfono
     signature_sheet: la hoja de firmas
@@ -137,11 +121,6 @@ ast:
   geozones:
     none: Toda la ciudad
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Hemos detectado que estás navegando desde Internet Explorer. Para una mejor experiencia te recomendamos utilizar %{firefox} o %{chrome}.
-      ie_title: Esta web no está optimizada para tu navegador
     dashboard:
       proposal_header:
         published: Publicáu
@@ -150,7 +129,7 @@ ast:
     footer:
       accessibility: Accesibilidad
       conditions: Condiciones de uso
-      consul_url: https://github.com/consul/consul
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
       description: Este portal usa la %{consul} que es %{open_source}.
       open_source: software libre
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -278,7 +257,6 @@ ast:
       select_order_long: "Estas viendo las propuestas"
       start_proposal: Crea una propuesta
       title: Propuestes
-      top: Top semanal
       top_link_proposals: Propuestas más apoyadas por categoría
       section_header:
         title: Propuestes
@@ -300,9 +278,6 @@ ast:
         edit: "Antes de que se publique podrás modificar el texto a tu gusto."
         view_proposal: Ahora no, ir a mi propuesta
       already_supported: '¡Ya has apoyado esta propuesta, compártela!'
-      comments:
-        one: 1 Comentario
-        other: "%{count} comentarios"
       support: Sofitar
       support_title: Apoyar esta propuesta
       supports:
@@ -317,9 +292,6 @@ ast:
     show:
       author_deleted: Usuariu esaniciáu
       code: "Código de la propuesta:"
-      comments:
-        one: 1 Comentario
-        other: "%{count} comentarios"
       comments_tab: Comentarios
       flag: Esta propuesta ha sido marcada como inapropiada por varios usuarios.
       notifications_tab: Notificaciones
@@ -367,7 +339,6 @@ ast:
         support_button: Apoyar esta propuesta
   polls:
     all: "Toes"
-    no_dates: "sin fecha asignada"
     dates: "Desde el %{open_at} hasta el %{closed_at}"
     final_date: "Recuento final/Resultados"
     index:
@@ -433,7 +404,6 @@ ast:
     author_info:
       author_deleted: Usuariu esaniciáu
     back: Volver
-    check: Escoyer
     check_all: Toes
     check_none: Ninguno
     collective: Colectivo
@@ -479,18 +449,6 @@ ast:
     youtube: "YouTube de %{org}"
     telegram: "Telegram de %{org}"
     instagram: "Instagram de %{org}"
-  stats:
-    index:
-      visits: Visitas
-      debates: Alderique
-      proposals: Propuestes
-      comments: Comentarios
-      proposal_votes: Votos en propuestas
-      debate_votes: Votos en debates
-      comment_votes: Votos en comentarios
-      votes: Votos
-      verified_users: Usuarios verificados
-      unverified_users: Usuarios sin verificar
   unauthorized:
     default: No tienes permiso para acceder a esta página.
     manage:
@@ -541,14 +499,11 @@ ast:
   votes:
     agree: Estoy de acuerdo
     anonymous: Demasiados votos anónimos, para poder votar %{verify_account}.
-    comment_unauthenticated: Necesitas %{signin} o %{signup} para poder votar.
     disagree: No estoy de acuerdo
     organizations: Les organizaciones nun puen votar
     supports: Sofitos
     verified_only: Las propuestas de inversión sólo pueden ser apoyadas por usuarios verificados, %{verify_account}.
     budget_investments:
-      not_logged_in: Precises %{signin} o %{signup} pa siguir.
-      organization: Les organizaciones nun puen votar
       unfeasible: No se pueden votar propuestas inviables.
       not_voting_allowed: El periodo de votación está cerrado.
   welcome:
@@ -558,22 +513,12 @@ ast:
       process_label: Procesu
     cards:
       title: Destacadas
-    verification:
-      i_dont_have_an_account: No tengo cuenta, quiero crear una y verificarla
-      i_have_an_account: Ya tengo una cuenta que quiero verificar
-      question: '¿Tienes ya una cuenta en %{org_name}?'
-      title: Verificación de cuenta
     welcome:
       go_to_index: Ahora no, ver propuestas
       title: Colabora en la elaboración de la normativa sobre
-      user_permission_debates: Participar n'alderiques
       user_permission_info: Cola to cuenta yá pues...
-      user_permission_proposal: Crear nueves propuestes
-      user_permission_support_proposal: Apoyar propuestas
       user_permission_verify: "Pa poder realizar toles acciones, verifica la to cuenta."
-      user_permission_verify_info: "* Namás usuarios empadronaos."
       user_permission_verify_my_account: Verificar mi cuenta
-      user_permission_votes: Participar nes votaciones finales
   invisible_captcha:
     sentence_for_humans: "Si eres humano, por favor ignora este campo"
     timestamp_error_message: "Eso ha sido demasiado rápido. Por favor, reenvía el formulario."

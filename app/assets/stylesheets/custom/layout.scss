@@ -267,7 +267,7 @@ a {
   &:focus {
     color: $white;
     background-color: $black;
-    outline: 3px solid $outline-focus;
+    outline: $focus-middle-width;
   }
   
   &:focus:hover {
@@ -788,14 +788,14 @@ body > header,
       padding: 0;
 
       &:hover {
-        @include brand-text;
+        @include brand-color;
         background: none;
         text-decoration: none;
       }
 
       &[aria-selected="true"],
       &.is-active {
-        @include brand-text;  
+        @include brand-color;  
         &::after {
           border-bottom: 0;
         }

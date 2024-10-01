@@ -13,7 +13,10 @@ section "Creating Users" do
         gender:                 ["Male", "Female"].sample,
         date_of_birth:          rand((Time.current - 80.years)..(Time.current - 16.years)),
         public_activity:        (rand(1..100) > 30),
-        document_number:        unique_document_number
+        document_number:        unique_document_number,
+        phone_number:           "123123123",
+        data_consent:           true,
+        confirm_age:            true
       )
     end
   

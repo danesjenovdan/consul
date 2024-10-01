@@ -1,7 +1,7 @@
 it:
   account:
     show:
-      change_credentials_link: Modificare le mie credenziali
+      change_credentials_link: Modifica le mie credenziali
       erase_account_link: Cancella il mio account
       finish_verification: Completa la verifica
       notifications: Notifiche
@@ -11,14 +11,9 @@ it:
       save_changes_submit: Salvare le modifiche
       recommendations: Raccomandazioni
       title: Il mio account
-      user_permission_debates: Partecipare ai dibattiti
       user_permission_info: Con il tuo account puoi...
-      user_permission_proposal: Creare nuove proposte
-      user_permission_support_proposal: Appoggiare le proposte
       user_permission_title: Partecipazione
       user_permission_verify: Per eseguire poter eseguire tutte le azioni occorre verificare la tua utenza.
-      user_permission_verify_info: "* Solo per gli utenti in Anagrafe."
-      user_permission_votes: Partecipare al voto finale
       verified_account: Utenza verificata
       verify_my_account: Verificare la mia utenza
   application:
@@ -74,10 +69,6 @@ it:
       form:
         submit_button: Avviare un dibattito
     debate:
-      comments:
-        zero: Nessun commento
-        one: 1 commento
-        other: "%{count} commenti"
       votes:
         zero: Nessun voto
         one: 1 voto
@@ -110,9 +101,6 @@ it:
         button: Ricercare
         placeholder: Ricerca dibattiti...
         title: Ricercare
-      search_results:
-        one: " contenente il termine <strong>'%{search_term}'</strong>"
-        other: " contenente il termine <strong>'%{search_term}'</strong>"
       start_debate: Avvia un dibattito
       title: Dibattiti
       section_header:
@@ -136,10 +124,6 @@ it:
       start_new: Avvia un dibattito
     show:
       author_deleted: Utente cancellato
-      comments:
-        zero: Non ci sono commenti
-        one: 1 commento
-        other: "%{count} commenti"
       comments_title: Commenti
       edit_debate_link: Modificare
       flag: Questo dibattito è stato contrassegnato come inappropriato da diversi utenti.
@@ -150,11 +134,15 @@ it:
         submit_button: Salva modifiche
   errors:
     messages:
+      allowed_file_content_types: "il tipo di contenuto dev'essere uno di %{types}"
       user_not_found: Utente non trovato
       invalid_date_range: "Intervallo di date non valido"
+      past_date: "Non deve essere una data passata"
+      cannot_change_date:
+        poll_started: "Impossibile modificare se il voto è già iniziato"
+        poll_ended: "Impossibile modificare se il voto è già terminato"
   form:
     accept_terms: Acconsento alle %{policy} e alle %{conditions}
-    accept_terms_title: Acconsento all’Informativa sulla Privacy e ai Termini e condizioni d’uso
     conditions: Termini e condizioni d'uso
     debate: Dibattito
     direct_message: messaggio privato
@@ -173,7 +161,6 @@ it:
     legislation/process: processo
     legislation/question: questione
     poll/shift: Turno
-    poll/question/answer: Risposta
     user: Account
     verification/sms: telefono
     signature_sheet: Foglio firme
@@ -188,11 +175,6 @@ it:
   geozones:
     none: Tutta la città
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Firefox
-      ie: Abbiamo rilevato che stai navigando con Internet Explorer. Per una migliore esperienza, raccomandiamo di usare %{firefox} o %{chrome}.
-      ie_title: Questo sito non è ottimizzato per il tuo browser
     dashboard:
       proposal_header:
         published: Pubblicato
@@ -211,10 +193,9 @@ it:
     footer:
       accessibility: Accessibilità
       conditions: Termini e condizioni d'uso
-      consul: app CONSUL
-      consul_url: https://github.com/consul/consul
-      contact_us: Per assistenza tecnica entra
-      copyright: CONSOLE, %{year}
+      consul: app CONSUL DEMOCRACY
+      consul_url: https://github.com/consuldemocracy/consuldemocracy
+      copyright: CONSUL DEMOCRACY, %{year}
       description: Questo portale utilizza %{consul} che è %{open_source}.
       open_source: software open-source
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -377,7 +358,6 @@ it:
       select_order_long: "Stai visualizzando le proposte in base a:"
       start_proposal: Crea una proposta
       title: Proposte
-      top: Top settimanale
       top_link_proposals: Le proposte più sostenute per categoria
       section_header:
         icon_alt: Icona di proposte
@@ -405,11 +385,8 @@ it:
         edit: "Prima che venga condiviso, potrai modificare il testo come preferisci."
         view_proposal: Non ora, vai alla mia proposta
       already_supported: Hai già sostenuto questa proposta. Condividila!
-      comments:
-        zero: Non ci sono commenti
-        one: 1 commento
-        other: "%{count} commenti"
       support: Sostenere
+      support_label: "Supporta %{proposal}"
       support_title: Sostieni questa proposta
       supports:
         zero: Nessun sostegno
@@ -427,10 +404,6 @@ it:
     show:
       author_deleted: Utente cancellato
       code: "Codice proposta:"
-      comments:
-        zero: Non ci sono commenti
-        one: 1 commento
-        other: "%{count} commenti"
       comments_tab: Commenti
       dashboard_proposal_link: Pannello di Controllo
       flag: Questa proposta è stata contrassegnata come inappropriata da diversi utenti.
@@ -592,7 +565,6 @@ it:
         share: "E se mi facessi anche il grande favore di condividere la mia proposta coi tuoi amici, la tua famiglia e i tuoi contatti, sarebbe perfetto!"
   polls:
     all: "Tutti"
-    no_dates: "nessuna data assegnata"
     dates: "Dal %{open_at} al %{closed_at}"
     final_date: "Scrutinio finale/Risultati"
     index:
@@ -655,6 +627,10 @@ it:
     show:
       vote_answer: "Voto %{answer}"
       voted: "Hai votato %{answer}"
+    description:
+      unique: "Puoi selezionare un massimo di 1 risposta."
+      multiple: "Puoi selezionare un massimo di %{maximum} risposte."
+    read_more_about: "Leggi di più su:"
   proposal_notifications:
     new:
       title: "Invia messaggio"
@@ -693,7 +669,6 @@ it:
       author_deleted: Utente cancellato
       email_deleted: Email eliminata
     back: Indietro
-    check: Selezionare
     check_all: Tutti
     check_none: Nessuno
     collective: Associazione
@@ -770,24 +745,16 @@ it:
         other: "%{count} lingue in uso"
     optional: "Opzionale"
     required: "Obbligatorio"
+    comments:
+      zero: "Nessun commento"
+      one: "1 commento"
+      other: "%{count} commenti"
   social:
     facebook: "Facebook di %{org}"
     twitter: "Twitter di %{org}"
     youtube: "YouTube di %{org}"
     telegram: "Telegram di %{org}"
     instagram: "Instagram di %{org}"
-  stats:
-    index:
-      visits: Visite
-      debates: Dibattiti
-      proposals: Proposte
-      comments: Commenti
-      proposal_votes: Voti su proposte
-      debate_votes: Voti su dibattiti
-      comment_votes: Voti su commenti
-      votes: Voti totali
-      verified_users: Utenti verificati
-      unverified_users: Utenti non verificati
   unauthorized:
     default: Non hai l’autorizzazione per accedere a questa pagina.
     manage:
@@ -847,16 +814,15 @@ it:
       retired_help_text: Pannello di controllo non disponibile per le proposte ritirate
   votes:
     agree: Sono d'accordo
+    agree_label: "Acconsento con %{title}"
     anonymous: Troppi voti anonimi per ammettere il voto %{verify_account}.
-    comment_unauthenticated: È necessario %{signin} o %{signup} per votare.
     disagree: Non sono d'accordo
+    disagree_label: "Non acconsento con %{title}"
     organizations: Le organizzazioni non sono ammesse a votare
     supports: Supporti
     verified_only: Solo gli utenti verificati possono votare le proposte; %{verify_account}.
     budget_investments:
-      not_logged_in: È necessario %{signin} o %{signup} per continuare.
       not_verified: Solo gli utenti verificati possono votare i progetti di investimento; %{verify_account}.
-      organization: Alle organizzazioni non è permesso votare
       unfeasible: I progetti di investimento irrealizzabili non possono essere sostenuti
       not_voting_allowed: La fase di votazione è chiusa
       different_heading_assigned:
@@ -892,23 +858,13 @@ it:
       budget_investments:
         title: Investimenti consigliati
       slide: "Vedi %{title}"
-    verification:
-      i_dont_have_an_account: Non ho un account
-      i_have_an_account: Ho già un account
-      question: Hai già un account su %{org_name}?
-      title: Verifica dell'account
     welcome:
       go_to_index: Vedi proposte e dibattiti
       start_using_consul: Vai alla pagina dell'indice
       title: Partecipa
-      user_permission_debates: Partecipare ai dibattiti
       user_permission_info: Con il tuo account puoi...
-      user_permission_proposal: Creare nuove proposte
-      user_permission_support_proposal: Appoggiare le proposte
       user_permission_verify: "Per eseguire poter eseguire tutte le azioni occorre verificare la tua utenza."
-      user_permission_verify_info: "* Solo per gli utenti in Anagrafe."
       user_permission_verify_my_account: Verifica il tuo account
-      user_permission_votes: Partecipare al voto finale
   invisible_captcha:
     sentence_for_humans: "Se sei una persona fisica, ignora questo campo"
     timestamp_error_message: "Siamo spiacenti, troppo veloce! Si prega di inviare nuovamente."
