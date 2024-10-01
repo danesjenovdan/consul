@@ -4,11 +4,9 @@ sq:
       title: Administrim
     actions:
       actions: Veprimet
-      confirm: A je i sigurt?
       confirm_hide: Konfirmo moderimin
       delete: "Fshi"
       hide: Fshih
-      hide_author: Fshih autorin
       restore: Kthej
       mark_featured: Karakteristika
       unmark_featured: Çaktivizo karakteristikat
@@ -165,7 +163,6 @@ sq:
           incompatible: I papajtueshëm
           price: Çmim
           author: Autor
-        cannot_calculate_winners: Buxheti duhet të qëndrojë në fazën "Projektet e votimit", "Rishikimi i fletëve të votimit" ose "Buxheti i përfunduar" me qëllim të llogaritjes së projekteve të fituesve
         see_results: "Shiko rezultatet"
       show:
         assigned_admin: Administrator i caktuar
@@ -432,7 +429,6 @@ sq:
         index:
           title: Version drafti
           create: Krijo versionin
-          delete: Fshi
           preview: Parapamje
         new:
           back: Pas
@@ -465,7 +461,6 @@ sq:
           back: Pas
           title: Pyetje të lidhura me këtë proces
           create: Krijo pyetje
-          delete: Fshi
         new:
           back: Pas
           title: Krijo pyetje të re
@@ -813,9 +808,6 @@ sq:
         no_questions: "Nuk ka pyetje për këtë sondazh."
         questions_title: "Lista e pyetjeve"
         table_title: "Titull"
-      flash:
-        question_added: "Pyetje shtuar në këtë sondazh"
-        error_on_question_added: "Pyetja nuk mund të caktohet në këtë sondazh"
     questions:
       index:
         title: "Pyetjet"
@@ -859,12 +851,6 @@ sq:
     answers:
       new:
         title: Përgjigje e re
-      show:
-        title: Titull
-        description: Përshkrimi
-        images: Imazh
-        images_list: Lista e imazheve
-        edit: Ndrysho përgjigjet
       edit:
         title: Ndrysho përgjigjet
       videos:
@@ -1102,7 +1088,6 @@ sq:
           verified_users_who_didnt_vote_proposals: Përdoruesit e verifikuar që nuk votuan propozime
           visits: Vizitat
           votes: Totali i votimeve
-        budgets_title: Buxhetet  pjesëmarrës
         participatory_budgets: Buxhetet  pjesëmarrës
         direct_messages: Mesazhe direkte
         proposal_notifications: Notifikimi i propozimeve
@@ -1110,7 +1095,6 @@ sq:
         polls: Sondazhet
       graph:
         debate_created: Debate
-        visit: Vizitat
         proposal_created: Propozimi qytetar
       budget_balloting:
         vote_count: Votim
@@ -1203,7 +1187,6 @@ sq:
         index:
           title: Imazhe personalizuara
           update: Përditëso
-          delete: Fshi
           image: Imazh
         update:
           notice: Imazhi u përditësua me sukses

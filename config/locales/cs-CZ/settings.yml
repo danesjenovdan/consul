@@ -40,8 +40,6 @@ cs:
     telegram_handle_description: "Je-li vyplněno, zobrazí se v zápatí"
     instagram_handle: "Instagram propojení"
     instagram_handle_description: "Je-li vyplněno, zobrazí se v zápatí"
-    url: "Hlavní URL"
-    url_description: "Hlavní URL vašeho webu"
     org_name: "Organizace"
     org_name_description: "Název vaší organizace"
     related_content_score_threshold: "Prahová hodnota pro související obsah"
@@ -60,6 +58,8 @@ cs:
     meta_keywords_description: 'Klíčová slova <meta name="keywords">, použitá ke zlepšení SEO'
     min_age_to_participate: Minimální věk potřebný k účasti
     min_age_to_participate_description: "Uživatelé od tohoto věku se mohou účastnit všech procesů"
+    postal_codes: "PSČ"
+    postal_codes_description: "Seznam platných poštovních směrovacích čísel oddělených čárkou; můžete také uvést rozsahy oddělené dvojtečkou. Příklad: 00001:00010,00024,AB3 45FG,00031:00035 povolí poštovní směrovací čísla mezi 00001 a 00010, poštovní směrovací číslo 00024, poštovní směrovací číslo AB3 45FG a poštovní směrovací čísla mezi 00031 a 00035. Pokud jej necháte prázdný, budou platná všechna poštovní směrovací čísla."
     proposals:
       successful_proposal_id: Úspěšný návrh
       successful_proposal_id_description: Tento návrh slouží jako reference pro úspěšný návrh v množství podpory a zobrazí se v grafu ovládacího panelu.
@@ -116,8 +116,6 @@ cs:
       allow_attached_documents_description: "Umožnit uživatelům nahrát dokumenty v sekci participativní rozpočet při vytváření návrhů a investičních projektů"
       guides: "Zobrazit návod pro vytváření návrhů nebo investičních projektů"
       guides_description: "Zobrazit průvodce rozdílů mezi návrhy a investičními projekty, pokud je aktivní participativní rozpočet"
-      public_stats: "Veřejné statistiky"
-      public_stats_description: "Zobrazit veřejné statistiky v panelu Administrace"
       help_page: "Stránka nápovědy"
       help_page_description: 'Zobrazí nabídku Nápověda obsahující stránku s informacemi o každé povolené funkci'
       remote_translations: "Vzdálený překlad"
@@ -169,6 +167,9 @@ cs:
         valid: "Podmínka pro zjištění platné odpovědi"
         valid_description: "Jaká cesta odpovědi musí být oznámena, aby byla považována za platnou odpověď a ověřena uživatelem"
     map:
+      feature:
+        marker_clustering: "Shlukování značek"
+        marker_clustering_description: "Povolí shlukování mapových značek. Užitečné, pokud je třeba zobrazit velké množství značek."
       latitude: "Zeměpisná šířka"
       latitude_description: "Zeměpisná šířka pro zobrazení pozice na mapě"
       longitude: "Zeměpisná délka"

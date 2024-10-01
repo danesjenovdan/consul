@@ -11,14 +11,9 @@ so:
       save_changes_submit: Badbaadi beddelka
       recommendations: Talloyin
       title: Xisaabteyda
-      user_permission_debates: Kaqayb qadashada dooda
       user_permission_info: Akoonkaga waad karta...
-      user_permission_proposal: Samee soo jeedino cusub
-      user_permission_support_proposal: Tageer so jedinta
       user_permission_title: Kaqaybgalka
       user_permission_verify: Si aad u fuliso dhammaan ficilada hubi xisaabtaada.
-      user_permission_verify_info: "* Kaliya dadka isticmaala tirakoobka."
-      user_permission_votes: Kayb galka codaynta ugu danbaysa
       verified_account: Xisaabi la xaqiijiyay
       verify_my_account: Hubi xisaabtayda
   application:
@@ -67,13 +62,9 @@ so:
       form:
         submit_button: Biloow dooda
     debate:
-      comments:
-        zero: Falooyin majiraan
-        one: hal faalo
-        other: "hal faalo%{count} Talooyin ku saabsan abuurista dood"
       votes:
         zero: Looma baahna codad
-        one: 1 Cod 
+        one: 1 Cod
         other: "%{count} codadka"
     edit:
       editing: Beddel dood
@@ -103,9 +94,6 @@ so:
         button: Raadin
         placeholder: Doodaha raadinta...
         title: Raadin
-      search_results:
-        one: " an ku jirin ereyga<strong>%{search_term}</strong>"
-        other: " an ku jirin ereyga<strong>%{search_term}</strong>"
       start_debate: Biloow dooda
       title: Doodo
       section_header:
@@ -129,10 +117,6 @@ so:
       start_new: Biloow dooda
     show:
       author_deleted: Isticmalaha la tirtiray
-      comments:
-        zero: Falooyin majiraan
-        one: 1 faalo
-        other: "%{count} falooyinka"
       comments_title: Faalo
       edit_debate_link: Isbedel
       flag: Dooddani waxaa loo calaamadiyay iyada oo aan ku habboonayn dad badan oo isticmaala.
@@ -147,7 +131,6 @@ so:
       invalid_date_range: "Taariikhda ku-meel-gaadhka ah"
   form:
     accept_terms: Wan ogolahay%{policy} iyo%{conditions}
-    accept_terms_title: Waxaan ku raacsanahay Siyaasadda Khaaska ah iyo shuruudaha isticmaalka
     conditions: Shuruudaha iyo xaaladaha isticmaalka
     debate: Dood
     direct_message: fariin Garaa
@@ -160,7 +143,6 @@ so:
     budget/investment: Maalgashi
     budget/heading: Ciwaanka misaniyada
     poll/shift: Wareeg
-    poll/question/answer: Jawaab
     user: Kontada
     verification/sms: taleefan
     signature_sheet: Warqada Saxixyada
@@ -170,11 +152,6 @@ so:
   geozones:
     none: Dhaman magaloyinka
   layouts:
-    application:
-      chrome: Google Chrome
-      firefox: Dab-demiska
-      ie: Waxaanu ogaanay inaad adigu internetka kula socoto. Wixii khibrad dheeraad ah, waxaan ku talineynaa isticmaalka% %{firefox} ama%{chrome}.
-      ie_title: Websaydaan laguma soo koobi karo barta internetka
     dashboard:
       proposal_header:
         published: Sobandhigaay
@@ -187,7 +164,6 @@ so:
       conditions: Shuruudaha iyo xaaladaha isticmaalka
       consul: Codsiga Qunsulka
       consul_url: https://github.com/consul/qonsul
-      contact_us: Booqashada gargaar farsamo
       copyright: Qonsul%{year}
       description: Qeybtaani waxay isticmaashaa%{consul} kaas oo ah%{open_source}.
       open_source: ilo Softiweer oo furan
@@ -334,7 +310,6 @@ so:
       select_order_long: "Waxaad daawaneysaa soo jeedinada sida:"
       start_proposal: Abuur soo jeedin
       title: Sojeedino
-      top: Usbuuca ugu sarreeya
       top_link_proposals: Soo jeedinta ugu taageerada badan ee qaybta
       section_header:
         icon_alt: Icon soo jedinada
@@ -361,10 +336,6 @@ so:
         edit: "Ka hor inta aan la wadaagin waxaad awoodi doontaa inaad bedesho qoraalka sida aad jeceshahay."
         view_proposal: Hadda ma ahan, u gudbi dalabkayga
       already_supported: Waxaad hore u taageertay qorshahaan. La wadaag!
-      comments:
-        zero: Falooyin majiraan
-        one: 1 faalo
-        other: "%{count} falooyinka"
       support: Tageero
       support_title: Taageeraan hindisahan
       supports:
@@ -373,7 +344,7 @@ so:
         other: "%{count} tageereyal"
       votes:
         zero: Looma baahna codad
-        one: 1 Cod 
+        one: 1 Cod
         other: "%{count} codadka"
       supports_necessary: "%{number} taageerada loo baahan yahay"
       total_percent: 100%
@@ -382,10 +353,6 @@ so:
     show:
       author_deleted: Isticmalaha la tirtiray
       code: "Talo soo jeedin:"
-      comments:
-        zero: Falooyin majiraan
-        one: 1 faalo
-        other: "%{count} falooyinka"
       comments_tab: Faalo
       flag: Soo jeedintaas waxaa loo calaamadeeyay sida aan haboonayn dadka isticmaala.
       notifications_tab: Ogaysiisyo
@@ -444,7 +411,6 @@ so:
         support_button: Taageeraan hindisahan
   polls:
     all: "Dhamaan"
-    no_dates: "tirada taariikhda la magacaabay"
     dates: "Kadimid%{open_at} ila%{closed_at}"
     final_date: "Soo-celinta ugu dambeysa / Natiijooyinka"
     index:
@@ -536,7 +502,6 @@ so:
     author_info:
       author_deleted: Isticmalaha la tirtiray
     back: Dib ulaabo
-    check: Dorasho
     check_all: Dhamaan
     check_none: Midna
     collective: Wadijir
@@ -601,18 +566,6 @@ so:
     youtube: "%{org} yotuyuub"
     telegram: "%{org} telegaraam"
     instagram: "%{org} istigraam"
-  stats:
-    index:
-      visits: Boqashooyinka
-      debates: Doodo
-      proposals: Sojeedino
-      comments: Faalo
-      proposal_votes: Codbixin ku saabsan soo jeedinta
-      debate_votes: Codadka doodda
-      comment_votes: Falloyinka codbixinta
-      votes: Wadarka codadka
-      verified_users: Isticmalayaasha la aqonsan yahay
-      unverified_users: Isticmalayaasha an la aqonsaneyn
   unauthorized:
     default: Uma haysid fasax aad ku heli kartid boggan.
     manage:
@@ -672,15 +625,12 @@ so:
   votes:
     agree: Wan aqbalay
     anonymous: Codad qarsoodi ah oo badan si ay u qirto codka%{verify_account}.
-    comment_unauthenticated: Waa inaad%{signin} ama%{signup} codka.
     disagree: Ma aqbalin
     organizations: Ururada loma fasixin iney codeyaan
     supports: Tageerayaal
     verified_only: Kaliya dadka isticmaala xaqiijiyay ayaa ku codayn kara soo jeedimaha%{verify_account}.
     budget_investments:
-      not_logged_in: Waa inad igu %{signin} ama%{signup} si wada.
       not_verified: Kaliya dadka isticmaala hubinta ayaa codayn kara Mashariicdamaalgashiga; %{verify_account}.
-      organization: Ururada loma fasixin iney codeyaan
       unfeasible: Mashaariicda maal-gashiga aan macquul ahayn lama taageeri karo
       not_voting_allowed: Heerka codbixinta waa la xiray
   welcome:
@@ -709,22 +659,12 @@ so:
       budget_investments:
         title: Malgashiyada lugu taliyey
       slide: "Arag%{title}"
-    verification:
-      i_dont_have_an_account: Ma haysto xisaab
-      i_have_an_account: Hore ayaan haystay xisaab
-      question: Ma horey ayaad xisaab ugu leedahay%{org_name}?
-      title: Cadeynta xisaabta
     welcome:
       go_to_index: Eeg soojeedinta iyo doodaha
       title: Kaqayb gal
-      user_permission_debates: Kaqayb qadashada dooda
       user_permission_info: Akoonkaga waad karta...
-      user_permission_proposal: Samee soo jeedino cusub
-      user_permission_support_proposal: Tageer so jedinada*
       user_permission_verify: "Si aad u fuliso dhammaan ficilada hubi xisaabtaada."
-      user_permission_verify_info: "* Kaliya dadka isticmaala tirakoobka."
       user_permission_verify_my_account: Hubi xisaabtayda
-      user_permission_votes: Kayb galka codaynta ugu danbaysa
   invisible_captcha:
     sentence_for_humans: "Haddii aad tahay aadane, iska indha tirtan arimahan"
     timestamp_error_message: "Waan ka xumahay, taas oo ahayd mid deg deg ah! Fadlan soo gudbi."

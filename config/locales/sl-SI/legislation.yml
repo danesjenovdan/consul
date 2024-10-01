@@ -44,7 +44,6 @@ sl-SI:
           winners: Označeno
       debate:
         empty_questions: Ni vprašanj
-        participate: Sodeluj v razpravi
       index:
         filter: Filtriraj
         filters:
@@ -83,8 +82,6 @@ sl-SI:
         form:
           leave_comment: Prispevaj svoj komentar
       question:
-        comments:
-          zero: Ni komentarjev
         debate: Razprava
       show:
         answer_question: Dodaj odgovor
@@ -111,7 +108,5 @@ sl-SI:
       debate_phase: "Faza debate"
       proposals_phase: "Faza predlogov"
       allegations_phase: "Faza obtožb"
-      comments:
-        zero: "Brez komentarjev"
       top_comments:
         zero: "Brez komentarjev"

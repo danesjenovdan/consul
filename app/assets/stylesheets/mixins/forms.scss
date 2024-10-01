@@ -1,6 +1,16 @@
 @import "mixins/icons";
 @import "mixins/layouts";
 
+@mixin public-form-header-background($color, $final-color-width) {
+  background-image: linear-gradient(
+    to right,
+    #{$color} 0,
+    #{$color} calc(100% - #{$final-color-width} - 1px),
+    #{$body-background} calc(100% - #{$final-color-width}),
+    #{$body-background} 100%
+  );
+}
+
 @mixin public-form-header {
   $border-width: 4px;
 
@@ -12,10 +22,11 @@
     $icon-size: $line-height * 4;
     $padding-right: rem-calc(20);
     $icon-size-with-padding: $icon-size + $padding-right;
-    $polygon-size: $icon-size / 2;
+    $polygon-size: $icon-size * 0.5;
     @include background-till-left-of-screen;
-    @include brand-background($brand-secondary);
+    @include brand-secondary-background;
     border: $border-width solid $brand-secondary;
+    border: $border-width solid var(--brand-secondary, $brand-secondary);
     border-bottom-right-radius: rem-calc(12);
     border-top-right-radius: rem-calc(12);
     margin-top: $line-height * 2;
@@ -30,31 +41,26 @@
 
     @include breakpoint(large) {
       $rounding-error: 6px;
+      @include public-form-header-background($brand-secondary, $icon-size-with-padding);
+      @include public-form-header-background(var(--brand-secondary, $brand-secondary), $icon-size-with-padding);
       padding-right: $icon-size-with-padding;
-      background-image: linear-gradient(
-        to right,
-        #{$brand-secondary} 0,
-        #{$brand-secondary} calc(100% - #{$icon-size-with-padding} - 1px),
-        #{$body-background} calc(100% - #{$icon-size-with-padding}),
-        #{$body-background} 100%
-      );
 
       &::after {
         background: $body-background;
-        content: "";
         clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% calc(100% + 1px), 0 50%);
+        content: "";
         display: block;
+        height: 100%;
         position: absolute;
         right: calc(#{$icon-size-with-padding} - #{$rounding-error});
         top: 0;
-        height: 100%;
         width: $polygon-size;
       }
     }
 
     &::before {
-      top: -$border-width;
       height: calc(100% + #{$border-width * 2});
+      top: -$border-width;
     }
 
     h1 {
@@ -86,11 +92,11 @@
         font-size: rem-calc(44);
 
         &::after {
-          right: $icon-size-with-padding + $polygon-size + $heading-icon-size / 2;
+          right: calc(#{$icon-size-with-padding + $polygon-size + $heading-icon-size} / 2);
         }
 
         &::before {
-          color: $brand-secondary;
+          @include brand-secondary-color;
           display: block;
           font-size: $icon-size;
           right: $padding-right;
@@ -100,7 +106,7 @@
       span {
         display: block;
         font-size: 0.75em;
-        margin-top: $line-height / 2;
+        margin-top: calc(#{$line-height} / 2);
       }
     }
 
@@ -180,4 +186,16 @@
 
 %public-form {
   @include public-form;
+}
+
+@mixin admin-fieldset-separator {
+  border-top: 4px solid $admin-border-color;
+
+  > legend {
+    color: $admin-text;
+    font-size: $small-font-size;
+    font-weight: bold;
+    padding-right: calc(#{$line-height} / 2);
+    text-transform: uppercase;
+  }
 }

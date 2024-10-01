@@ -13,10 +13,15 @@ Airbrake.configure do |config|
   end
 
   config.performance_stats = false
+  config.job_stats = false
+  config.query_stats = false
+  config.remote_config = false
+
+  config.blocklist_keys = Rails.application.config.filter_parameters
 end
 
 Airbrake.add_filter do |notice|
-  ignorables = %w[ActiveRecord::RecordNotFound]
+  ignorables = %w[ActiveRecord::RecordNotFound Apartment::TenantNotFound]
   notice.ignore! if ignorables.include? notice[:errors].first[:type]
 end
 
