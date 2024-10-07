@@ -4,10 +4,8 @@ es-PE:
       title: Administración
     actions:
       actions: Acciones
-      confirm: '¿Estás seguro?'
       delete: "Borrar"
       hide: Ocultar
-      hide_author: Bloquear al autor
       restore: Volver a mostrar
       mark_featured: Destacar
       unmark_featured: Quitar destacado
@@ -365,7 +363,6 @@ es-PE:
         index:
           title: Versiones del borrador
           create: Crear versión
-          delete: Borrar
           preview: Previsualizar
         new:
           back: Volver
@@ -397,7 +394,6 @@ es-PE:
           back: Volver
           title: Preguntas asociadas a este proceso
           create: Crear pregunta para votación
-          delete: Borrar
         new:
           back: Volver
           title: Crear nueva pregunta
@@ -646,9 +642,6 @@ es-PE:
         no_questions: "No hay preguntas asignadas a esta votación."
         questions_title: "Listado de preguntas asignadas"
         table_title: "Título"
-      flash:
-        question_added: "Pregunta añadida a esta votación"
-        error_on_question_added: "No se pudo asignar la pregunta"
     questions:
       index:
         title: "Preguntas ciudadanas"
@@ -693,12 +686,6 @@ es-PE:
     answers:
       new:
         title: Nueva respuesta
-      show:
-        title: Título
-        description: Descripción detallada
-        images: Imágenes
-        images_list: Lista de imágenes
-        edit: Editar respuesta
       edit:
         title: Editar respuesta
       videos:
@@ -928,7 +915,6 @@ es-PE:
           verified_users_who_didnt_vote_proposals: Usuarios verificados que no han votado propuestas
           visits: Visitas
           votes: Votos
-        budgets_title: Presupuestos participativos
         participatory_budgets: Presupuestos participativos
         direct_messages: Mensajes directos
         proposal_notifications: Notificaciones de propuestas
@@ -936,7 +922,6 @@ es-PE:
         polls: Votaciones
       graph:
         debate_created: Discusiones
-        visit: Visitas
         proposal_created: Propuestas ciudadanas
       budget_balloting:
         vote_count: Votos
@@ -1017,7 +1002,6 @@ es-PE:
         index:
           title: Personalizar imágenes
           update: Actualizar
-          delete: Borrar
           image: Imagen
         update:
           notice: Imagen actualizada correctamente

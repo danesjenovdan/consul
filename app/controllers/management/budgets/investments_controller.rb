@@ -37,17 +37,25 @@ class Management::Budgets::InvestmentsController < Management::BaseController
   end
 
   def print
-    @investments = @investments.apply_filters_and_search(@budget, params).order(cached_votes_up: :desc).for_render.limit(15)
+    @investments = @investments.apply_filters_and_search(@budget, params)
+                               .order(cached_votes_up: :desc)
+                               .for_render
+                               .limit(15)
   end
 
   private
 
     def investment_params
+      params.require(:budget_investment).permit(allowed_params)
+    end
+
+    def allowed_params
       attributes = [:external_url, :heading_id, :tag_list, :organization_name, :location,
                     image_attributes: image_attributes,
                     documents_attributes: document_attributes,
                     map_location_attributes: map_location_attributes]
-      params.require(:budget_investment).permit(attributes, translation_params(Budget::Investment))
+
+      [*attributes, translation_params(Budget::Investment)]
     end
 
     def only_verified_users

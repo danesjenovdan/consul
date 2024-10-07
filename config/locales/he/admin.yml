@@ -4,11 +4,9 @@ he:
       title: ניהול
     actions:
       actions: פעולות
-      confirm: האם את/ה בטוח/ה?
       confirm_hide: אשר מנחה
       delete: "מחיקה"
       hide: הסתר
-      hide_author: הסתר את יוצר התוכן
       restore: שחזר
       mark_featured: מוצע
       unmark_featured: לא מקודם
@@ -140,7 +138,6 @@ he:
       index:
         new_button: "Add new group"
     budget_headings:
-      no_headings: "אין כותרות."
       create:
         notice: "כותרת נוצרו בהצלחה!"
       update:
@@ -216,7 +213,6 @@ he:
           incompatible: אינו תואם
           price: מחיר
           author: מחבר/ת
-        cannot_calculate_winners: התקציב צריך להישאר על שלב "הצבעה לפרויקטים", "סקירת הצבעות" או "סיים תקציב" על מנת לחשב את הפרויקטים הזוכים
         see_results: "ראו תוצאות"
         milestone_tags_filter_all: "כל תגיות אבני הדרך"
       show:
@@ -434,7 +430,6 @@ he:
         title: "מסמכים"
         format: "תצורה"
         size: "גודל"
-        url: "קישור"
       create:
         success_notice: "המסמך הועלה בהצלחה"
         unable_notice: "מסמך לא תקין"
@@ -559,7 +554,6 @@ he:
         index:
           title: גירסת הטיוטה
           create: יצירת גירסה
-          delete: מחיקה
           preview: תצוגה מקדימה
         new:
           back: חזרה
@@ -592,7 +586,6 @@ he:
           back: חזרה
           title: שאלות הקשורות לתהליך זה
           create: יצירת שאלה
-          delete: מחיקה
         new:
           back: חזרה
           title: יצירת שאלה חדשה
@@ -1007,9 +1000,6 @@ he:
         table_title: "כותרת"
         edit_answers: ערוך תשובה
         see_proposal: "ראה/י הצעות"
-      flash:
-        question_added: "שאלות שנוספו לסקר זה"
-        error_on_question_added: "לא ניתן לשייך שאלות לסקר זה"
       destroy:
         alert: "פעולה זו תסיר את הסקר ואת כל השאלות הקשורות אליו."
         success_notice: "הסקר נמחק בהצלחה"
@@ -1059,12 +1049,6 @@ he:
     answers:
       new:
         title: תשובה חדשה
-      show:
-        title: כותרת
-        description: תיאור
-        images: תמונות
-        images_list: רשימת תמונות
-        edit: ערוך תשובה
       edit:
         title: ערוך תשובה
       videos:
@@ -1334,7 +1318,6 @@ he:
           verified_users_who_didnt_vote_proposals: משתמשים מאומתים שלא הצביעו על הצעות
           visits: ביקורים
           votes: סך הכל הצבעות
-        budgets_title: מימון השתתפותי
         participatory_budgets: תקציבים שיתופיים
         direct_messages: הודעות ישירות
         proposal_notifications: התראות להצעות
@@ -1342,8 +1325,6 @@ he:
         polls: סקרים
       graph:
         debate_created: דיונים
-        visit: ביקורים
-        level_2_user: משתמשים ברמה 2
         proposal_created: הצעות תושבים
       budgets:
         no_data_before_balloting_phase: "אין נתונים להצגה לפני שלב ההצבעה."
@@ -1448,7 +1429,6 @@ he:
         index:
           title: תמונות מותאמות אישית
           update: עדכן
-          delete: מחיקה
           image: תמונה
         update:
           notice: התמונה עודכנה בהצלחה
@@ -1476,7 +1456,7 @@ he:
           see_page: תצוגה מקדימה של הדף
         new:
           title: יצירת דף מותאם אישית חדש
-          slug_help: "טקסט כדי לזהות את הדף הזה בכתובת האתר, לדוגמה <code>https://consulproject.org/page-slug</code>"
+          slug_help: "טקסט כדי לזהות את הדף הזה בכתובת האתר, לדוגמה <code>https://consuldemocracy.org/page-slug</code>"
         page:
           created_at: נוצר ב
           status: סטטוס
