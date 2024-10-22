@@ -1,11 +1,10 @@
-version: "3"
 services:
   # service configuration for our database
   database:
 
     # use the preferred version of the official Postgres image
     # see https://hub.docker.com/_/postgres/
-    image: postgres:9.6.21
+    image: postgres:15
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -18,8 +17,6 @@ services:
 
   # service configuration for our dockerized Rails app
   app:
-    # to run on mac
-    # platform: linux/x86_64
     # use the Dockerfile next to this file
     build: .
 
