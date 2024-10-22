@@ -12,7 +12,7 @@
                   <%= image_tag investment.image.variant(:large), alt: investment.image.title.unicode_normalize %>
                 <% else %>
                   <div class="investment-default-image">
-                    <%= image_tag "default-investment.svg" %>
+                    <%= image_tag "default-investment.svg", alt: t("custom.budgets.investments.investment.no_image") %>
                   </div>
                 <% end %>
             </div>

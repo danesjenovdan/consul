@@ -804,7 +804,8 @@ body > header,
   }
   
   .tabs h2,
-  .tabs h3 {
+  .tabs h3,
+  .tabs p {
     // color: $white;
     font-size: 14px;
     line-height: 20px;
@@ -812,6 +813,10 @@ body > header,
     text-transform: uppercase;
     padding: 7px 0;
     white-space: nowrap;
+  }
+
+  .tabs p {
+    margin-bottom: 0.5rem;
   }
 
   .tabs span {
@@ -823,26 +828,27 @@ body > header,
     display: block;
   }
 
-  .tabs a h3 i {
+  .tabs a p i {
     height: 20px;
     display: none;
     line-height: 20px;
     float: left;
   }
 
-  .tabs .active-phase a h3 {
+  .tabs .active-phase a p {
     font-weight: 700;
     text-transform: uppercase;
     display: inline-block;
     padding: 4px 8px;
+    margin-bottom: 0.5rem;
   }
 
-  .active-phase a h3 i {
+  .active-phase a p i {
     background: image-url("check.svg") left no-repeat;
     width: 24px;
   }
 
-  .active-phase a h3:hover i {
+  .active-phase a p:hover i {
     background: image-url("check-black.svg") left no-repeat;
   }
 
@@ -856,7 +862,7 @@ body > header,
   }
 
   @media screen and (min-width: 40em) {
-    .tabs a h3 i {
+    .tabs a p i {
       display: block;
     }
   }
@@ -870,7 +876,8 @@ body > header,
       border-left: 1px solid $black;
 
       h2,
-      h3 {
+      h3,
+      p {
         font-size: 16px;
       }
 
@@ -883,7 +890,7 @@ body > header,
       }
     }
 
-    .active-phase a h3 i {
+    .active-phase a p i {
       width: 30px;
     }
   }

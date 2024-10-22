@@ -1,4 +1,4 @@
-<% provide :title do %><%= t("pages.titles.help", org: setting["org_name"]) %>
+<% provide :title do %><%= t("custom.help.main_title") %>
     <% end %>
     <% content_for :canonical do %>
       <%= render "shared/canonical", href: help_url %>
@@ -16,11 +16,11 @@
               <div class="row">
                 <div class="column large-12">
                   <div class="brderundr accordion-collapsed">
-                    <div class="title" onclick="toggleAkkordion(this)">
+                    <button class="title" onclick="toggleAkkordion(this)">
                       <%= t("custom.help.heading_1") %>
                       <i class="custom-icon arrow-small-right">
                       </i>
-                    </div>
+                    </button>
                     <p>
                       <%= t("custom.help.description_1") %>
                     </p>
@@ -31,11 +31,11 @@
               <div class="row">
                 <div class="column large-12">
                   <div class="brderundr accordion-collapsed">
-                    <div class="title" onclick="toggleAkkordion(this)">
+                    <button class="title" onclick="toggleAkkordion(this)">
                       <%= t("custom.help.heading_2") %>
                       <i class="custom-icon arrow-small-right">
                       </i>
-                    </div>
+                    </button>
                     <p>
                       <%= t("custom.help.description_2") %>
                     </p>
@@ -46,11 +46,11 @@
               <div class="row">
                 <div class="column large-12">
                   <div class="brderundr accordion-collapsed">
-                    <div class="title" onclick="toggleAkkordion(this)">
+                    <button class="title" onclick="toggleAkkordion(this)">
                       <%= t("custom.help.heading_3") %>
                       <i class="custom-icon arrow-small-right">
                       </i>
-                    </div>
+                    </button>
                     <p>
                       <%= t("custom.help.description_3") %>
                     </p>
@@ -61,11 +61,11 @@
               <div class="row">
                 <div class="column large-12">
                   <div class="brderundr accordion-collapsed">
-                    <div class="title" onclick="toggleAkkordion(this)">
+                    <button class="title" onclick="toggleAkkordion(this)">
                       <%= t("custom.help.heading_4") %>
                       <i class="custom-icon arrow-small-right">
                       </i>
-                    </div>
+                    </button>
                     <p>
                       <%= t("custom.help.description_4") %>
                     </p>
@@ -76,11 +76,11 @@
               <div class="row">
                 <div class="column large-12">
                   <div class="brderundr accordion-collapsed">
-                    <div class="title" onclick="toggleAkkordion(this)">
+                    <button class="title" onclick="toggleAkkordion(this)">
                       <%= t("custom.help.heading_5") %>
                       <i class="custom-icon arrow-small-right">
                       </i>
-                    </div>
+                    </button>
                     <p>
                       <%= t("custom.help.description_5") %>
                     </p>
