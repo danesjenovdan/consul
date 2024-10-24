@@ -25,7 +25,7 @@
     <div class="row expanded">
       <div class="small-12 column">
         <div class="images">
-          <%= render "images/nested_image", f: f %>
+          <%= render Images::NestedComponent.new(f) %>
         </div>
       </div>
     </div>

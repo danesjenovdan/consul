@@ -182,6 +182,10 @@ sl-SI:
           presentation_summary_accepting_help_text: Tekst za prvi odstavek, ko ta faza ni aktivna
           presentation_summary_balloting_help_text: Tekst za drugi odstavek, ko ta faza ni aktivna
           presentation_summary_finished_help_text: Tekst za tretji odstavek, ko ta faza ni aktivna
+    budgets:
+      investments:
+        investment:
+          no_image: Predlog nima slike.
     meta:
       pp_name: Maribor sodeluj
       place_name: Mestna Občina Maribor
