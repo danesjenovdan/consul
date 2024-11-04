@@ -162,7 +162,7 @@ $( function() {
 
       <%= f.invisible_captcha :home_address %>
 
-      <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true %>
+      <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true, placeholder: t("devise_views.users.registrations.new.address") %>
 
       <%= f.email_field :email %>
 
