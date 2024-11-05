@@ -19,6 +19,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: consul-ankaran
+                name: consul
                 port:
                   number: 3000
