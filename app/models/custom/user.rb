@@ -4,7 +4,8 @@ load Rails.root.join('app', 'models', 'user.rb')
 class User < ApplicationRecord
 
   validate :emso_number, on: :create
-#   validate :validate_data_consent, on: :create
+  validate :validate_data_consent, on: :create
+  validate :validate_address, on: [:create, :update]
   validates :email, on: :create, presence: true
   
   def validate_data_consent
@@ -13,9 +14,71 @@ class User < ApplicationRecord
     end
   end
 
+  def validate_address
+    errors.add(:address, I18n.t('activerecord.errors.models.user.attributes.address.invalid')) unless is_valid_address?
+  end
+
   def emso_number
     unless organization
       errors.add(:document_number, I18n.t('activerecord.errors.models.user.attributes.document_number.invalid')) unless valid_emso_number?
+    end
+  end
+
+  def heading_id
+    # Ankaran vzhod
+    valid_addresses = [
+      'Na Logu',
+      'Železniška cesta',
+      'Rožnik',
+      'Ivančičeva cesta',
+      'Cesta na Prisojo',
+      'Pod Vrhom',
+      'Oljčna pot',
+      'Jadranska cesta' # ta se ponovi, tako da pazi z naslovi
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 29
+    end
+
+    # Ankaran center
+    valid_addresses = [
+      'Oljčna pot',
+      'Pervanjeva ulica',
+      'Bertokova ulica',
+      'Pot na Brido',
+      'Srebrničeva ulica',
+      'Regentova ulica',
+      'Hrvatinova ulica',
+      'Vlahovičeva ulica',
+      'Bevkova ulica',
+      'Kocjančičeva ulica',
+      'Cahova ulica',
+      'Ulica Rudija Mahniča',
+      'Tomažičeva ulica',
+      'Larisova ulica',
+      'Frenkova ulica',
+      'Razgledna pot',
+      'Jadranska cestače',
+    ]
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    if r === address
+      return 28
+    end
+
+    # Ankaran zahod
+    valid_addresses = [
+      'Vinogradniška pot',
+      'Lazaret',
+      'Jadranska cesta',
+    ]
+
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/i # assuming there are no special chars
+    if r === address
+      return 27
     end
   end
 
@@ -73,5 +136,47 @@ class User < ApplicationRecord
       return true
     end
     User.valid_emso?(document_number)
+  end
+
+  # regex check if address is valid
+  def is_valid_address?
+    valid_addresses = [
+      # Ankaran vzhod
+      'Na Logu',
+      'Železniška cesta',
+      'Rožnik',
+      'Ivančičeva cesta',
+      'Cesta na Prisojo',
+      'Pod Vrhom',
+      'Oljčna pot',
+      'Jadranska cesta', # ta se ponovi, tako da pazi z naslovi
+
+      # Ankaran center
+      'Oljčna pot',
+      'Pervanjeva ulica',
+      'Bertokova ulica',
+      'Pot na Brido',
+      'Srebrničeva ulica',
+      'Regentova ulica',
+      'Hrvatinova ulica',
+      'Vlahovičeva ulica',
+      'Bevkova ulica',
+      'Kocjančičeva ulica',
+      'Cahova ulica',
+      'Ulica Rudija Mahniča',
+      'Tomažičeva ulica',
+      'Larisova ulica',
+      'Frenkova ulica',
+      'Razgledna pot',
+      'Jadranska cestače',
+
+      # Ankaran zahod
+      'Vinogradniška pot',
+      'Lazaret',
+      'Jadranska cesta',
+    ];
+    escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
+    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    return r === address
   end
 end
