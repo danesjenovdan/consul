@@ -39,7 +39,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 29
+      return 4
     end
 
     # Ankaran center
@@ -65,7 +65,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
     if r === address
-      return 28
+      return 5
     end
 
     # Ankaran zahod
@@ -78,7 +78,7 @@ class User < ApplicationRecord
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/i # assuming there are no special chars
     if r === address
-      return 27
+      return 3
     end
   end
 
