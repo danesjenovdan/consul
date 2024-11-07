@@ -4,12 +4,6 @@
 
   <fieldset class="required-fields">
 
-    <% unless budget.single_heading? %>
-      <div>
-        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true } %>
-      </div>
-    <% end %>
-
     <div>
       <%= render "shared/globalize_locales", resource: investment %>
     </div>

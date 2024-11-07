@@ -186,6 +186,7 @@ sl-SI:
           presentation_summary_finished_help_text: Tekst za tretji odstavek, ko ta faza ni aktivna
     budgets:
       investments:
+        not_allowed_to_add_investment: Hvala za oddane 3 predloge!
         investment:
           no_image: Predlog nima slike.
     meta:

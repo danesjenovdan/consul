@@ -61,6 +61,19 @@ module Budgets
       end
     end
 
+    def create
+      @investment.author = current_user
+      @investment.heading = @budget.headings.find(current_user.heading_id)
+
+      if @investment.save
+        Mailer.budget_investment_created(@investment).deliver_later
+        redirect_to budget_investment_path(@budget, @investment),
+                    notice: t("flash.actions.create.budget_investment")
+      else
+        render :new
+      end
+    end
+
     def index
 
       # FILTERING
@@ -140,10 +153,15 @@ module Budgets
       @tag_cloud = tag_cloud
       @remote_translations = detect_remote_translations(@investments)
 
+      # allowed to add new investment
+      @allowed_to_add_investment = true
+      if @budget.investments.where(author: current_user).count >= 3
+        @allowed_to_add_investment = false
+      end
     end
-
-    # this is so we get fields for questions on the new investment form
+    
     def new
+      # this is so we get fields for questions on the new investment form
       @investment.budget.questions.order(:id).each do |question|
         answer = @investment.answers.build({budget_id: @investment.budget.id, budget_question_id: question.id})
       end
@@ -152,7 +170,7 @@ module Budgets
     private
 
       def investment_params
-        attributes = [:heading_id, :tag_list, :organization_name, :location,
+        attributes = [:tag_list, :organization_name, :location,
                       :terms_of_service, :related_sdg_list, :price,
                       answers_attributes: [:id, :text, :budget_id, :investment_id, :budget_question_id],
                       image_attributes: image_attributes,
