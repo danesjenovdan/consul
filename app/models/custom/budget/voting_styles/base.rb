@@ -74,7 +74,7 @@ class Budget::VotingStyles::Base
     #   ballot.budget
     # end
 
-    def investments
+    def investments(heading)
       ballot.investments
     end
 

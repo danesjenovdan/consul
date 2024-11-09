@@ -14,7 +14,7 @@ class Budget::VotingStyles::Approval < Budget::VotingStyles::Base
 #   end
 
   def amount_spent(heading)
-    investments.count
+    investments(heading).count
   end
 
   def amount_limit(heading)
