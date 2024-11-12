@@ -28,11 +28,26 @@ class User < ApplicationRecord
   end
 
   def self.is_old_enough(birthday)
-    date_limit = Date.parse('2005-12-13') # TODO make this a constant
+    date_limit = Date.parse('2010-06-30')
     if date_limit < birthday
       return false
     end
     true
+  end
+
+  def is_young_person
+    birthday = User.date_from_emso(document_number)
+    date_limit = Date.parse('1995-06-30')
+
+    age = date_limit.year - birthday.year
+    age -= 1 if date_limit < birthday + age.years
+
+    if age < 30
+      return true
+    else
+      return false
+    end
+    
   end
 
   def self.valid_emso?(emso)
