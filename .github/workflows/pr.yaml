@@ -74,6 +74,13 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_title: "Pulling ${{ github.ref }} into ankaran-k8s"
 
+      - name: pull-request-celje
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "celje-k8s"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Pulling ${{ github.ref }} into celje-k8s"
+
       - name: pull-request-staging
         uses: repo-sync/pull-request@v2
         with:
