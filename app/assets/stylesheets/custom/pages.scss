@@ -45,10 +45,6 @@ only screen and (min-resolution: 240dpi) {
   .introduction-text {
     display: flex;
 
-    @media screen and (max-width: 87.9375em) {
-      flex-direction: column;
-    }
-
     &>div {
       flex: 1;
       border: 1px solid black;
@@ -63,10 +59,19 @@ only screen and (min-resolution: 240dpi) {
       }
     }
 
+    @media screen and (max-width: 87.9375em) {
+      flex-direction: column;
+
+      &>div {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
     padding-top: 80px;
     padding-bottom: 60px;
     
-
     h1 {
       font-size: 44px;
       line-height: 54px;
@@ -77,6 +82,10 @@ only screen and (min-resolution: 240dpi) {
       font-size: 30px;
       line-height: 40px;
       font-weight: 500;
+    }
+
+    .header-logo {
+      margin-bottom: 20px;
     }
 
     .action-button {
@@ -202,6 +211,15 @@ only screen and (min-resolution: 240dpi) {
         font-size: 36px;
         line-height: 54px;
         font-weight: 700;
+        margin-top: 28px;
+      }
+
+      .datum {
+        margin-top: 0;
+      }
+
+      .datum + h2 {
+        margin-top: 0;
       }
 
       h4 {
