@@ -16,16 +16,19 @@
       <div class="column">
         <div class="landing">
           <div class="introduction-text">
-            <h1><%= t("custom.landing.title") %></h1>
-            <p><%= t("custom.landing.introduction_text") %></p>
             <% @budgets.each do |budget| %>
-              <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
-                <% if phase.enabled && phase.active %>
-                  <a class="action-button large" href="<%= phase.url %>">
-                    <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
-                  </a>
+              <div>
+                <%= image_tag(image_path_for("logo-header.png")) %>
+                <h1><%= t("custom.landing.title") %></h1>
+                <p><%= t("custom.landing.introduction_text") %></p>
+                <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
+                  <% if phase.enabled && phase.active %>
+                    <a class="action-button large" href="<%= phase.url %>">
+                      <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
+                    </a>
+                  <% end %>
                 <% end %>
-              <% end %>
+              </div>
             <% end %>
           </div>
           <hr />
@@ -38,11 +41,11 @@
                     <div class="phase-enrichment <%= phase.kind %>"></div>
                   </div>
                   <div class="column-content">
+                    <% if phase.active %>
+                      <span class="datum"><%= t("custom.landing.current_phase") %></span>
+                    <% end %>
                     <h2><%= t("custom.headings.#{phase.kind}") %></h2>
                     <h4><%= strip_tags(phase.summary) %></h4>
-                    <% if phase.active %>
-                      <p>TRENUTNO AKTIVNA FAZA</p>
-                    <% end %>
                   </div>
                 </section>
               <% end %>
