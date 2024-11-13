@@ -133,7 +133,7 @@ module Budgets
 
       # map
       @investment_ids = @investments.ids
-      @investments_map_coordinates = MapLocation.where(investment: shuffled_investments).map(&:json_data)
+      @investments_map_coordinates = MapLocation.investments_json_data(filtered_investments)
       @geozones_data = geozones_data
 
       # ?

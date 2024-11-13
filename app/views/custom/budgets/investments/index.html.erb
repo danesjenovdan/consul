@@ -15,7 +15,7 @@
               <% if phase.enabled %>
                 <li class="tabs-title <%= "is-active active-phase" if phase.active %>">
                   <%= link_to "#tab-#{phase.kind}" do %>
-                    <h3 class="<%= "default-button" if phase.active %>"><i></i><%= t("custom.headings.#{phase.kind}") %></h3>
+                    <p class="<%= "default-button" if phase.active %>"><i></i><%= t("custom.headings.#{phase.kind}") %></p>
                     <span><%= phase.starts_at.to_date.strftime("%d.%m.%Y") %>–<%= phase.ends_at.to_date.strftime("%d.%m.%Y") %></span>
                   <% end %>
                 </li>
@@ -150,7 +150,7 @@
                     <% end %>
                   </p>
                   <div class="medium-centered">
-                    <%= image_tag(image_path_for("phases/ni-predlogov.png")) %>
+                    <%= image_tag(image_path_for("phases/ni-predlogov.png"), alt: "Ni predlogov.") %>
                   </div>
                   <p class="show-pc">
                     <%= t("custom.messages.no_investments") %><br>
@@ -189,7 +189,7 @@
                       </div>
                       <div class="small-12 medium-6 column">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/proracun.png")) %>
+                          <%= image_tag(image_path_for("phases/proracun.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>
@@ -201,7 +201,7 @@
                     <div class="row qs">
                       <div class="small-12 medium-6 column hide-for-small-only">
                         <div class=" medium-centered">
-                          <%= image_tag(image_path_for("phases/predlog.png")) %>
+                          <%= image_tag(image_path_for("phases/predlog.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
@@ -225,7 +225,7 @@
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/ilustracije-sprite-notranje-glasuj.png")) %>
+                          <%= image_tag(image_path_for("phases/ilustracije-sprite-notranje-glasuj.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>
@@ -254,13 +254,13 @@
                     <div class="row qs">
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h1><%= t("custom.presentation.balloting.title_1") %></h1>
+                          <h2><%= t("custom.presentation.balloting.title_1") %></h2>
                           <%= raw(phase.presentation_summary_accepting) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/kaj.png")) %>
+                          <%= image_tag(image_path_for("phases/kaj.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>
@@ -272,18 +272,18 @@
                     <div class="row qs">
                       <div class="small-12 medium-6 column hide-for-small-only">
                         <div class=" medium-centered">
-                          <%= image_tag(image_path_for("phases/kdo.png")) %>
+                          <%= image_tag(image_path_for("phases/kdo.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h1><%= t("custom.presentation.balloting.title_2") %></h1>
+                          <h2><%= t("custom.presentation.balloting.title_2") %></h2>
                           <%= raw(phase.presentation_summary_balloting) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column show-for-small-only">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/kdo.png")) %>
+                          <%= image_tag(image_path_for("phases/kdo.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>
@@ -295,13 +295,13 @@
                     <div class="row qs">
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h1><%= t("custom.presentation.balloting.title_3") %></h1>
+                          <h2><%= t("custom.presentation.balloting.title_3") %></h2>
                           <%= raw(phase.presentation_summary_finished) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/kako.png")) %>
+                          <%= image_tag(image_path_for("phases/kako.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>
@@ -327,15 +327,15 @@
                 <div>
                   <div class="main-indented-content ">
                     <div class="row qs">
-                      <div class="small-12 medium-6 column ">
+                      <div class="small-12 medium-6 column">
                         <div class="medium-8 medium-centered js-padt">
-                          <h1><%= t("custom.presentation.finished.title_1") %></h1>
+                          <h2><%= t("custom.presentation.finished.title_1") %></h2>
                           <%= raw(phase.presentation_summary_accepting) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/kajpazdaj.png")) %>
+                          <%= image_tag(image_path_for("phases/kajpazdaj.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>
@@ -347,18 +347,18 @@
                     <div class="row qs">
                       <div class="small-12 medium-6 column hide-for-small-only">
                         <div class=" medium-centered">
-                          <%= image_tag(image_path_for("phases/participacija.png")) %>
+                          <%= image_tag(image_path_for("phases/participacija.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h1><%= t("custom.presentation.finished.title_2") %></h1>
+                          <h2><%= t("custom.presentation.finished.title_2") %></h2>
                           <%= raw(phase.presentation_summary_balloting) %>
                         </div>
                       </div>
                       <div class="small-12 show-for-small-only">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/participacija.png")) %>
+                          <%= image_tag(image_path_for("phases/participacija.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>
@@ -370,13 +370,13 @@
                     <div class="row qs">
                       <div class="small-12 medium-6 column ">
                         <div class="medium-8 medium-centered js-padt">
-                          <h1><%= t("custom.presentation.finished.title_3") %></h1>
+                          <h2><%= t("custom.presentation.finished.title_3") %></h2>
                           <%= raw(phase.presentation_summary_finished) %>
                         </div>
                       </div>
                       <div class="small-12 medium-6 column">
                         <div class="medium-centered">
-                          <%= image_tag(image_path_for("phases/potem.png")) %>
+                          <%= image_tag(image_path_for("phases/potem.png"), alt: "", "aria-hidden" => true) %>
                         </div>
                       </div>
                     </div>

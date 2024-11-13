@@ -227,8 +227,8 @@ only screen and (min-resolution: 240dpi) {
   }
 
   h2 {
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 44px;
+    font-weight: 700;
     line-height: 1.25;
   }
 
@@ -1134,6 +1134,7 @@ span:hover::before {
       border-bottom: 0;
       margin: 1rem 0;
       padding-right: 50px;
+      text-align: left;
 
       .custom-icon.arrow-small-right {
         width: 39px;
