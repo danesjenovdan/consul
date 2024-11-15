@@ -18,7 +18,7 @@
           <div class="introduction-text">
             <% @budgets.each do |budget| %>
               <div>
-                <%= image_tag(image_path_for("logo-header.png"), class="header-logo") %>
+                <%= image_tag(image_path_for("logo-header.png"), class: "header-logo") %>
                 <h1><%= t("custom.landing.title") %></h1>
                 <p><%= t("custom.landing.introduction_text") %></p>
                 <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
