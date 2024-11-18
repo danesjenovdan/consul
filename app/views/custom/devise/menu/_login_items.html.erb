@@ -7,6 +7,18 @@
                             title: t("shared.go_to_page") +
                               t("layouts.header.my_account_link"),
                             class: "default-button" %> -->
+    <% if !@budget.nil? %>
+      <% if @budget.id == 1 %>
+        <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 2) %>">
+          <%= t("budgets.investments.header.go_to_young_budget") %>
+        </a>
+      <% end %>
+      <% if @budget.id == 2 %>
+        <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 1) %>">
+          <%= t("budgets.investments.header.go_to_regular_budget") %>
+        </a>
+      <% end %>
+    <% end %>
   </div>
   <div>
     <%= link_to t("devise_views.menu.login_items.logout"),

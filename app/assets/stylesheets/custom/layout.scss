@@ -254,10 +254,17 @@ a {
   cursor: pointer;
   text-decoration: none;
 
+  &.action-color {
+    background-color: $theme-color;
+    color: $white;
+    border-color: $theme-color;
+  }
+
   &:hover {
     background-color: transparent;
     color: $black;
     text-decoration: none;
+    border-color: $black;
   }
 
   &:active {

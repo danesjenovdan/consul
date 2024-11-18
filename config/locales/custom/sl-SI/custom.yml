@@ -67,6 +67,8 @@ sl-SI:
       header:
         different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
         change_ballot: "Če si premisliš, lahko odstraniš svoje glasove iz tega območja in začneš znova."
+        go_to_regular_budget: "Pojdi na Celje po mojem"
+        go_to_young_budget: "Pojdi na Celje po mojem za mlade"
     ballots:
       show:
         amount_progress: "%{amount_spent} / %{amount_limit}"
