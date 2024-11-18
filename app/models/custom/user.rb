@@ -39,14 +39,7 @@ class User < ApplicationRecord
     birthday = User.date_from_emso(document_number)
     date_limit = Date.parse('1995-06-30')
 
-    age = date_limit.year - birthday.year
-    age -= 1 if date_limit < birthday + age.years
-
-    if age < 30
-      return true
-    else
-      return false
-    end
+    return birthday > date_limit
     
   end
 
