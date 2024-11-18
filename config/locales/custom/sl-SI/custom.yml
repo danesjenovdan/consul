@@ -458,7 +458,7 @@ sl-SI:
       registration: "Zaradi napak obrazca nismo mogli shraniti."
       submit_investment: "Zaradi napak obrazca nismo mogli shraniti."
       no_answer: "Prosim izpolni vprašanje."
-      new_investment_not_allowed: "V tem proračunu lahko glasujejo samo mladi pod 30 let."
+      new_investment_not_allowed: "V tem proračunu lahko glasujejo samo mlajši od 30 let."
     footer:
       djnd: Za platformo skrbi
     registration:
