@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-ankaran
-    newTag: '5d87d81dc777fb92f6456c93b50a137cf6395a70'
+    newTag: '622568d6aa8244574562e6bfd91aebe04f4962f9'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: '5d87d81dc777fb92f6456c93b50a137cf6395a70'
+  #   newTag: '622568d6aa8244574562e6bfd91aebe04f4962f9'
