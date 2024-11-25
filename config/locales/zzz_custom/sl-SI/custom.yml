@@ -41,6 +41,8 @@ sl-SI:
           attributes:
             document_number:
               invalid: EMŠO ni pravilne oblike.
+            address:
+              invalid: Ta naslov ni veljaven. Prosimo preverite črkovanje ali vpišite drug naslov.
   budgets:
     investments:
       investment:
@@ -63,10 +65,10 @@ sl-SI:
         title: Participativni proračun
         by_heading: "Investicijski projekti na območju: %{heading}"
         sidebar:
-          different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
+          different_heading_assigned: "Glasuješ lahko samo na območju: %{heading_link}."
       header:
-        different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
-        change_ballot: "Če si premisliš, lahko odstraniš svoje glasove iz tega območja in začneš znova."
+        different_heading_assigned: "Glasuješ lahko samo na območju: %{heading_link}."
+        change_ballot: ""
     ballots:
       show:
         amount_progress: "%{amount_spent} / %{amount_limit}"
@@ -104,7 +106,7 @@ sl-SI:
         not_selected: Neizbranih investicij ni mogoče podpreti
         not_enough_money: "Žal na voljo nimaš več dovolj proračuna."
         no_ballots_allowed: Faza izbiranja je končana
-        different_heading_assigned: "<strong>Glasuješ lahko samo za predloge v enakem območju.</strong>"
+        different_heading_assigned: "<strong>Glasuješ lahko samo za predloge v svojem območju.</strong>"
         change_ballot: spremeniš svoje glasove
   comments:
     actions:
@@ -131,7 +133,9 @@ sl-SI:
       registrations:
         new:
           terms: Z registracijo sprejemaš %{terms}.
+          terms_second: Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Tržič obdeluje moje osebne podatke za namen izvedbe projekta Več za Tržič.
           password_hint: Geslo mora imeti najmanj 8 znakov.
+          address: Vpišite ulico stalnega prebivališča
         success:
           back_to_index: Velja, vrni me na začetno stran
           instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
@@ -214,7 +218,7 @@ sl-SI:
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h4>Formalni kriteriji - način oddaje projektnih predlogov</h4> <p>Projektni predlog mora biti oddan preko spletne aplikacije Čuj, sodeluj!, ali na obrazcu v fizični obliki, ki ga lahko občani dobijo preko spletne strani ali v fizični obliki na sedežih mestnih četrti in krajevnih skupnosti ter na MO Maribor.</p> <p>Projektni predlogi morajo biti oddani na predpisnem obrazcu, najkasneje do:</p> <ul> <li>27. junija, 2022, po pošti (naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor) ali</li> <li>27. junija, 2022, do 13.00 ure, osebno na sedežu občine v sprejemno pisarno št. 14 ali na sedežu katerekoli MČ ali KS v času uradnih ur.</li> </ul> <h4>Kriteriji za predlagatelje</h4> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni občan/občanka ali skupine občanov/občank s stalnim bivališčem v Mestni občini Maribor, ki je do oddaje projektnega predloga ali glasovanja dopolnila 15 let.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h4>Merila/kriteriji za uvrstitev predlogov v glasovanje</h4> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h5>Splošna merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor.</li> <li>Je finančno ovrednoten med 3.000,00 EUR in 30.000,00 EUR z DDV.</li> <li>Izveden bo na območju Mestne občine Maribor in/ali na nepremičninah v lasti MO Maribor.</li> <li>Ni uvrščen v proračun MO Maribor oz. načrt razvojnih programov občinskih vlaganj.</li> <li>Ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov s strani MO Maribor?</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskih letih 2023 in 2024</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> </ol> <h5>Vsebinska merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor (MOM).</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost občanov, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki, krožnim gospodarstvom, ponovno uporabo,…).</li> <li>Ustvarja pogoje za gospodarski razvoj občine (gostinstvo in turizem, kmetijstvo, samooskrba, vinogradništvo, podjetništvo,…).</li> <li>Ustvarja pogoje za izobraževanje odraslih, pospeševanje raziskovalne, kulturne, mladinske in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in olepševanju mesta, urejanju trgov, zelenic, parkov ter drugih javnih površin.</li> </ol>"
+      instructions_description: "<p>Projektni predlog mora ustrezati naslednjim pogojem:</p><ul><li>prispeva k uresničevanju javnega interesa na območju Občine Tržič in je namenjen splošni javni uporabi,</li><li>dviguje kakovost bivanja na območju, na katerega se nanaša,</li><li>je skladen z zakonodajo in veljavnimi občinskimi akti,</li><li>je takšne narave, da bo nosilec projekta lahko Občina Tržič,</li><li>je skladen z razvojnimi usmeritvami občine, opredeljenimi z veljavnimi razvojnimi programi, s strategijami in programi razvoja posameznih področij,</li><li>bo izveden na območju občine,</li><li>v kolikor zemljišče ni v občinski lasti je potrebno predložiti podpisan obrazec <a href='https://projektveczatrzic.djnd.si/SOGLASJE_ZA_BREZPLAČNO_SLUŽNOST_PP.docx' target='_blank'>»Soglasje za brezplačno služnost«</a>,</li><li>ni uvrščen v proračun občine in ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo na razpisih Občine Tržič,</li><li>ne predlaga izvedbe in financiranja že obstoječe in financirane redne dejavnosti,</li><li>je finančno ovrednoten med 2.000 EUR in največ 20.000 EUR z DDV,</li><li>izvedljiv v proračunskem obdobju 2025 – 2026.</li></ul>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
@@ -266,8 +270,8 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun 2023-2024!
-      introduction_text: Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši.
+      title: Participativni proračun 2025/26!
+      introduction_text: "<p>Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da pri odločanju o njegovi porabi sodelujejo neposredno občanke in občani občine. Občankam in občanom je na ta način omogočeno, da sami predlagajo in odločajo, kateri projekti v njihovem območju so zanje pomembni in bi lahko prispevali k izboljšanju življenjskega okolja v občini. V proračunu Občine Tržič za leto 2025 in 2026 je za participativni proračun namenjenih 260.000 EUR z DDV.</p><p>Vabimo vas, da se priključite ideji Projekt za Tržič in prispevate svoj delež k oblikovanju in razvoju območja, iz katerega izhajate in v katerem živite.</p>"
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
@@ -275,29 +279,29 @@ sl-SI:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši."
-      date_1: 19. 5.-27. 6. 2022
+      description_1: "Občanke in občani oddajo predloge projektov med 2. 9. in 6. 10. 2024. Posamezen predlog projekta mora biti v skladu z navodili, njegova vrednost pa ne sme biti nižja od 2 000 ter višja od 20 000 € z DDV - jem. Občani projektne predloge oddajo na spletni strani Občine Tržič, po pošti ali osebno v glavni pisarni Občine Tržič v roku, določenem v javnem pozivu."
+      date_1: 2. 9.–6. 10. 2024
       heading_2: Pregled predlogov
-      description_2: "Strokovna komisija bo pregledala vse oddane predloge in na seznam za glasovanje uvrstila le tiste, ki ustrezajo pogojem (merilom). Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanov, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes."
-      date_2: 28. 6.-30. 9. 2022
+      description_2: "Vse oddane predloge pregleda komisija, ki vsak oddan predlog finančno ovrednoti in preveri, če je izvedljiv, skladen z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna ter v skladu z pravili glede vrednosti predlogov. Komisija lahko podobne predloge združi."
+      date_2: 6. 10.–15. 10. 2024
       heading_3: Glasovanje
-      description_3: "Med 1. in 16. oktobrom, 2022 boš odločal/-a o porabi 1 milijona evrov proračunskih sredstev Mestne občine Maribor. Glasoval/-a boš lahko za oddane predloge, ki so izvedljivi, zakoniti, v občinski pristojnosti in ne presegajo višine sredstev, namenjenih za posamezno območje v okviru participativnega proračuna. Glasuje lahko vsakdo s stalnim prebivališčem v Mestni občini Maribor, star/-a vsaj 15 let. Vsakdo lahko glasuje samo enkrat."
-      date_3: 1. 10.-16. 10. 2022
+      description_3: "Glasovanje bo izvedeno med 4. in 11. 11. 2024 preko spleta ali v prostorih Občine Tržič. Sodeluje lahko vsak prebivalec ali prebivalka s stalnim bivališčem v Občini Tržič, ki je dopolnil/-a 15 let.  Vsak občan bo lahko glasoval za en projekt znotraj območja v katerem ima prijavljeno stalno prebivališče."
+      date_3: 4. 11.–11. 11. 2024
       heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Maribor za leti 2023 in 2024."
-      date_4: "2023"
+      description_4: "Po končanem glasovanju bo strokovna komisija preverila rezultate in razglasila projekte, ki so bili izbrani. Izbrani projekti bodo podani na glasovanje."
+      date_4: "November 2024"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
+      description_5: "Vsi zmagovalni projekti bodo izvedeni v letih 2025 in 2026. V tej fazi cikla participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa."
     privacy:
       title: "Pogoji uporabe"
     help:
       main_title: "Pogosta vprašanja"
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
-      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ e-naslov in internetno povezavo, vse funkcionalnosti lahko opraviš tudi na občini in sedežih krajevnih skupnosti."
+      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ e-naslov in internetno povezavo, lahko pa vse funkcionalnosti opraviš tudi na občini."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
-      description_2: "Račun ustvariš tako, da v glavi spletnega mesta klikneš na gumb Vpiši se, ter nato na povezavo Registriraj se. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, EMŠO in geslo. Po kreiranju računa ga moraš potrditi še s klikom na povezavo v e-pošti, ki ti jo bomo poslali na tvoj e-naslov."
+      description_2: "Račun ustvariš tako, da v glavi spletnega mesta klikneš na gumb Vpiši se, ter nato na povezavo Registriraj. Klik na kateri koli gumb za akcijo te prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, naslov stalnega prebivališča, EMŠO in geslo. Po kreiranju računa ga moraš potrditi s klikom na povezavo v e-pošti, ki jo bomo poslali na tvoj e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Poleg spletnega je mogoče predlog oddati tudi v fizični obliki, in sicer: po pošti, na naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor,  osebno na navedem naslovu, v sprejemni pisarni št. 14 (do 13. ure), ali v kateri koli mestni četrti/krajevni skupnosti v času uradnih ur (tam bodo na voljo tudi tiskani obrazci). Za pomoč pri pripravi predlogov projektov se lahko udeležiš interaktivne in praktičnih delavnic, ki bodo vsak četrtek, ob 18. uri od 19. maja do 23. junija."
+      description_3: "Predlog ustvariš v okviru spletnega orodja, lahko pa ga oddaš tudi na fizičnem obrazcu osebno v sprejemni pisarni Občine Tržič, Trg svobode 18, 4290 Tržič ter po navadni ali elektronski pošti projektvecza@trzic.si "
       heading_4: "Pozabil_a sem svoje geslo. Kaj lahko storim?"
       description_4: "Klikni na gumb Vpiši se, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel_a navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
@@ -306,22 +310,22 @@ sl-SI:
       technical_issues: "Imaš tehnične težave?"
       technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnike Mestne občine Maribor na <a href="mailto:sodeluj@maribor.si" target="_blank">sodeluj@maribor.si</a>.'
+      other_contact: 'Kontaktiraj predstavnike Občine Tržič na <a href="mailto:projektvecza@trzic.si" target="_blank">projektvecza@trzic.si</a>.'
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
-      date: "1. 2. 2024"
-      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Ideje za Novo mesto ter politike varovanja osebnih podatkov."
+      date: "17. 3. 2024"
+      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Projekt več za Tržič ter politike varovanja osebnih podatkov."
       active_use: "Aktivno uporabo spletnega orodja štejemo kot soglasje uporabnice_ka, da se strinja s temi splošnimi pogoji uporabe. Vsi, ki želijo aktivno sodelovati, se morajo registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe. V kolikor se kot uporabnica_k ne strinjate s temi splošnimi pogoji, vas prosimo, da spletnega mesta ne uporabljate."
       changes: "Pridružujemo si pravico, da splošne pogoje kadarkoli in brez predhodne najave spremenimo, tako da novo različico objavimo na tej spletni strani. Različica splošnih pogojev je razvidna iz datuma njihove zadnje spremembe, ki je zabeležena na vrhu teh pogojev."
       help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
       contact1:
-        mail: "mestna.obcina@novomesto.si"
-        note1: "Telefon: v času uradnih ur občinske uprave na 07/  7 39 39 202"
-        note2: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
+        mail: "projektvecza@trzic.si"
+        note1: 'Telefon: v času uradnih ur občinske uprave na 04 5971 510 ali <a href="https://www.trzic.si/kontakti/">https://www.trzic.si/kontakti/</a>'
+        note2: "Občina Tržič, Trg svobode 18, 4290 Tržič"
       contact2:
         mail: "consul@djnd.si"
         note1: "Tehnična pomoč"
-        note2: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+        note2: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       about_title: "O orodju"
       about_first: "Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
       about_second: "Spletno orodje omogoča direktno soodločanje o delu občinskega proračuna. Uporabnice_ki lahko oddajajo, podpirajo in glasujejo o predlogih za projekte ter spremljajo njihov razvoj."
@@ -339,11 +343,12 @@ sl-SI:
           desc: "V zadnji fazi orodje omogoča spremljanje rezultatov izvedbe."
       registration_title: "Registracija"
       registration_intro1: "Le registrirane_i uporabnice_ki lahko oddajo predloge projektov, komentirajo in glasujejo za oddane projekte. Neregistrirane_i uporabnice_ki lahko prosto spremljajo objavljene vsebine, ne morejo pa oddajati predlogov projektov, o njih glasovati ali sodelovati v debatah."
-      registration_intro2: "Uporabnica_k z registracijo potrjuje, da je dopolnil_a 15 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Mestno občino Novo mesto, da preveri verodostojnost osebnih podatkov za potrebe projekta Predlagam, odločam! iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
+      registration_intro2: "Uporabnica_k z registracijo potrjuje, da je dopolnil_a 15 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Občino Tržič, da preveri verodostojnost osebnih podatkov za potrebe orodja Projekt več za Tržič iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
       registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
       name: "uporabniško ime"
       email: "elektronski naslov"
       emso: "EMŠO"
+      address: "Stalni naslov"
       registration_first: "Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon."
       registration_second: "Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnica_k prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani ene_ga uporabnice_ka je prepovedano."
       registration_third: "Če uporabnica_k katerega izmed navedenih podatkov ne posreduje, ji_mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati spletnega orodja."
@@ -374,25 +379,26 @@ sl-SI:
       responsibilities_eighth: "V primeru kakršnega koli spora med uporabnicami_ki spletnega orodja in/ali tretjo osebo smo izvzeti iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in/ali nastalimi v sodnem postopku."
       data_protection_title: "Varovanje osebnih podatkov"
       data_protection_first: "Upravljalec osebnih podatkov je:"
-      data_protection_first_note1: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
-      data_protection_first_note2: "Matična številka:  5883288000"
-      data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: xyxyxyxyxyxyx"
-      data_protection_first_note4: "E-naslov: mestna.obcina@novomesto.si"
-      data_protection_first_note5: "telefon: 07/ 7 39 39 202"
-      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodeluj in glasuj! je:"
-      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+      data_protection_first_note1: "Občina Tržič, Trg svobode 18, 4290 Tržič"
+      data_protection_first_note2: "Matična številka: 5883547000"
+      data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: Denis Balažič"
+      data_protection_first_note4: "E-naslov: dpo@trzic.si "
+      data_protection_first_note5: "Telefon: 04 5971 510"
+      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Projekt več za Tržič je:"
+      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       data_protection_second_note2: "Matična številka: 6468594000"
       data_protection_second_note3: "E-naslov: vsi@danesjenovdan.si"
-      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Mestne občine Novo mesto in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
+      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Občine Tržič in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
       data_protection_fourth: "Inštitut Danes je nov dan je predan varovanju osebnih podatkov in transparentni rabi podatkov, da lahko uporabniki ter podporniki kar se da brez skrbi spremljajo ter podpirajo naše delo. Spoštujemo vaše zaupanje in vam zagotavljamo, da bomo z vašimi osebnimi podatki ravnali skrbno in jih obdelovali v skladu z veljavno zakonodajo na področju varovanja osebnih podatkov (GDPR in ZVOP-2). V nadaljevanju vam podrobneje opisujemo namene in podlago obdelav vaših osebnih podatkov in vas seznanjamo z vašimi pravicami."
       data_use_title: "Na kateri pravni podlagi obdelujemo osebne podatke"
       data_use_list: "Razlogi za obdelavo osebnih podatkov:"
-      data_use_list_li1: "posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Ideje za Novo mesto."
+      data_use_list_li1: "posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Projekt več za Tržič."
       data_store_title: "Katere osebne podatke shranjujemo"
       data_store_list: "Shranjujemo podatke o:"
       data_store_list_li1: "uporabniško ime,"
       data_store_list_li2: "elektronskem naslovu uporabnice_ka,"
-      data_store_list_li3: "EMŠO uporabnice_ka."
+      data_store_list_li3: "EMŠO uporabnice_ka,"
+      data_store_list_li4: "Stalni naslov uporabnice_ka."
       data_store_first: "Drugih osebnih podatkov obdelovalec podatkov ne shranjuje."
       data_store_second: "Osebni podatki se ne prenašajo v tretje države ali mednarodne organizacije."
       data_process_title: "Na kakšen način obdelujemo osebne podatke"
@@ -429,7 +435,7 @@ sl-SI:
       data_insight_fourth: "Prav tako ima vsak_a posameznica_k, na katero se nanašajo osebni podatki, pravico, da vloži pritožbo neposredno pri Informacijskem pooblaščencu, če meni, da obdelava osebnih podatkov v zvezi z njo krši veljavno zakonodajo. Kontakt Informacijskega pooblaščenca:"
       data_insight_fourth_note1: "Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana"
       data_insight_fourth_note2: "Telefon: 01 230 97 30"
-      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si'"
+      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si"
       cookies_title: "Piškotki"
       cookies_intro: "Zakon o elektronskih komunikacijah (Uradni list št. 109/2012) ZEKom-1 je v pravni red prinesel pravila glede uporabe piškotkov in podobnih tehnologij za shranjevanje informacij ali dostop do informacij, shranjenih na računalnikih, tablicah ali mobilnih napravah uporabnikov. Naše orodje lahko v brskalnik vašega računalnika odloži tako imenovani »piškotek«."
       cookies_what_title: "Kaj so piškotki?"
@@ -438,7 +444,7 @@ sl-SI:
       cookies_why_intro: "So temeljnega pomena za zagotavljanje uporabnici_ku prijaznih spletnih storitev. Interakcija med spletno_im uporabnico_kom in spletno storitvijo je s pomočjo piškotkov hitrejša in enostavnejša. Z njihovo pomočjo si spletna storitve zapomni vaše želje, zanimanja in izkušnje, s tem je prihranjen čas, uporaba spletnih storitev pa je bolj učinkovita in prijazna."
       cookies_min_title: "Nujno potrebni piškotki"
       cookies_min_intro: "To so piškotki, ki so nujni za pravilno delovanje spletnih storitev in brez njih prenos sporočila v komunikacijskem omrežju ne bi bilo mogoče. Ti piškotki omogočajo uporabnici_ku delovanje prijaznih spletnih storitev, boljšo uporabniško izkušnjo in za njih ni potrebno pridobiti soglasja."
-      cookies_list: "Spletno orodje Consul, ki poganja Sodeluj in glasuj!, uporablja zgolj dva nujno potrebna piškotka:"
+      cookies_list: "Spletno orodje Consul, ki poganja Projekt več za Tržič, uporablja zgolj dva nujno potrebna piškotka:"
       cookies_list_li1: "_consul_session"
       cookies_list_li1_desc: "Se uporablja, da je uporabnic_ka lahko vpisan_a v spletno orodje in lahko glasuje."
       cookies_list_li2: "ahoy_visit in ahoy_visitor"
