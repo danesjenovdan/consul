@@ -133,7 +133,7 @@ sl-SI:
           instructions_2: Ko potrdiš račun, lahko začneš sodelovati.
           thank_you: Hvala za registracijo na spletnem portalu. Zdaj moraš <b>potrditi svoj e-naslov</b>.
           title: Registracija
-          account_confirmed: 'Hvala za registracijo! Za nadaljevanje se moraš <b>vpisati</b>.'
+          account_confirmed: "Hvala za registracijo! Za nadaljevanje se moraš <b>vpisati</b>."
     mailer:
       reset_password_instructions:
         ignore_text: Če nisi zahteval_a spremembe gesla, lahko ignoriraš to e-sporočilo.
@@ -186,7 +186,7 @@ sl-SI:
     meta:
       pp_name: Predlagam — odločam
       place_name: Mestna občina Koper
-      guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
+      guiding_questions: "<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>"
       tos: "pogoji-uporabe"
     switcher:
       select: "Izberi proračun"
@@ -364,11 +364,11 @@ sl-SI:
       terms_second_checkbox: "objavi osebne podatke (ime in priimek) na spletni strani MOK z namenom javne objave pobud Predlagam - Odločam. (Opomba: če tega polja ne odkljuš, bo tvoj predlog anonimen. To pomeni, da se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani občine)."
       terms_checkboxes_text: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Koper:"
     statuses:
-      title: 'Izberi status predloga'
-      waiting: 'Čaka na izvedbo'
-      doing: 'Se izvaja'
-      done: 'Izveden'
-      nil: 'Ni statusa'
+      title: "Izberi status predloga"
+      waiting: "Čaka na izvedbo"
+      doing: "Se izvaja"
+      done: "Izveden"
+      nil: "Ni statusa"
     errors:
       data_consent: "Za nadaljevanje se moraš strinjati z obdelavo podatkov."
       price: "Polje vrednost projekta ne sme biti prazno."
