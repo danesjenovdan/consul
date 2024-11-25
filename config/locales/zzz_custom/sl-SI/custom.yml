@@ -41,6 +41,8 @@ sl-SI:
           attributes:
             document_number:
               invalid: EMŠO ni pravilne oblike.
+            address:
+              invalid: Ta naslov ni veljaven. Prosimo preverite črkovanje ali vpišite drug naslov.
   budgets:
     investments:
       investment:
@@ -132,6 +134,7 @@ sl-SI:
         new:
           terms: Z registracijo sprejemaš %{terms}.
           password_hint: Geslo mora imeti najmanj 8 znakov.
+          address: Vpišite ulico stalnega prebivališča
         success:
           back_to_index: Velja, vrni me na začetno stran
           instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
@@ -183,6 +186,7 @@ sl-SI:
           presentation_summary_finished_help_text: Tekst za tretji odstavek, ko ta faza ni aktivna
     budgets:
       investments:
+        not_allowed_to_add_investment: Hvala za oddane 3 predloge!
         investment:
           no_image: Predlog nima slike.
     meta:
@@ -208,13 +212,13 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li>  <h6>Območje 1 (196.000 EUR)</h6>  <div>Levi breg: KS Kamnica, KS Bresternica-Gaj, MČ Koroška vrata</div></li><li>  <h6>Območje 2 (196.000 EUR)</h6>  <div>Levi breg: MČ Ivan Cankar, MČ Center, KS Malečnik-Ruperče</div></li><li>  <h6>Območje 3 (196.000 EUR)</h6>  <div>Desni breg: KS Limbuš, KS Pekre, MČ Radvanjem, KS Razvanje</div></li><li>  <h6>Območje 4 (196.000 EUR)</h6>  <div>Desni breg: MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova</div></li><li>  <h6>Območje 5 (196.000 EUR)</h6>  <div>Desni breg: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno</div></li>"
+      headings_sidebar: "<li>  <h6>Območje 1 - Ankaran vzhod</h6>  <div>Na Logu, Železniška cesta, Rožnik, Ivančičeva cesta, Cesta na Prisojo, Pod Vrhom, Oljčna pot, Jadranska cesta</div></li><li>  <h6>Območje 2 - Ankaran center</h6>  <div>Oljčna pot, Pervanjeva ulica, Bertokova ulica, Pot na Brido, Srebrničeva ulica, Regentova ulica, Hrvatinova ulica, Vlahovičeva ulica, Bevkova ulica, Kocjančičeva ulica, Cahova ulica, Ulica Rudija Mahniča, Tomažičeva ulica, Larisova ulica, Frenkova ulica, Razgledna pot, Jadranska cesta</div></li><li>  <h6>Območje 3 - Ankaran zahod</h6>  <div>območje krajinskega parka Debeli rtič: Vinogradniška pot, Lazaret, Jadranska cesta</div></li>"
       select_heading: Izberi območje
       select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h4>Formalni kriteriji - način oddaje projektnih predlogov</h4> <p>Projektni predlog mora biti oddan preko spletne aplikacije Čuj, sodeluj!, ali na obrazcu v fizični obliki, ki ga lahko občani dobijo preko spletne strani ali v fizični obliki na sedežih mestnih četrti in krajevnih skupnosti ter na MO Maribor.</p> <p>Projektni predlogi morajo biti oddani na predpisnem obrazcu, najkasneje do:</p> <ul> <li>27. junija, 2022, po pošti (naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor) ali</li> <li>27. junija, 2022, do 13.00 ure, osebno na sedežu občine v sprejemno pisarno št. 14 ali na sedežu katerekoli MČ ali KS v času uradnih ur.</li> </ul> <h4>Kriteriji za predlagatelje</h4> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni občan/občanka ali skupine občanov/občank s stalnim bivališčem v Mestni občini Maribor, ki je do oddaje projektnega predloga ali glasovanja dopolnila 15 let.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h4>Merila/kriteriji za uvrstitev predlogov v glasovanje</h4> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h5>Splošna merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor.</li> <li>Je finančno ovrednoten med 3.000,00 EUR in 30.000,00 EUR z DDV.</li> <li>Izveden bo na območju Mestne občine Maribor in/ali na nepremičninah v lasti MO Maribor.</li> <li>Ni uvrščen v proračun MO Maribor oz. načrt razvojnih programov občinskih vlaganj.</li> <li>Ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov s strani MO Maribor?</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskih letih 2023 in 2024</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> </ol> <h5>Vsebinska merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor (MOM).</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost občanov, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki, krožnim gospodarstvom, ponovno uporabo,…).</li> <li>Ustvarja pogoje za gospodarski razvoj občine (gostinstvo in turizem, kmetijstvo, samooskrba, vinogradništvo, podjetništvo,…).</li> <li>Ustvarja pogoje za izobraževanje odraslih, pospeševanje raziskovalne, kulturne, mladinske in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in olepševanju mesta, urejanju trgov, zelenic, parkov ter drugih javnih površin.</li> </ol>"
+      instructions_description: "<p>Predlagatelj projektnih predlogov je lahko občanka/občan s stalnim prebivališčem v OA, ki je na dan oddaje predloga dopolnil 15 let. Predlagatelj ne sme nastopati kot izvajalec projektnega predloga. To velja za fizične osebe, lastnike pravne osebe ali člane poslovodstva pravne osebe.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje pogoje:</p> <ol> <li>Prispeva k uresničevanju javnega interesa in se izvaja na območju občine Ankaran.</li> <li>Prispeva k namenom poziva — spodbuja aktivno participacijo in vključenost občanov, dviga kakovost bivanja v lokalnem okolju, gradi skupnostni pristop in je namenjen splošni javni uporabi.</li> <li>Je takšne narave, da ga bo občina Ankaran lahko izpeljala v okviru občinskih zmogljivosti in zakonskih pristojnosti.</li> <li>Ni uvrščen v proračun oz. načrt razvojnih programov občine in ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov občine Ankaran.</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> <li>Je načrtovan na zemljišču v javni lasti oziroma na zasebnem zemljišču s soglasjem lastnika</li> <li>V preteklih petih letih ni bil financiran/sofinanciran iz proračuna občine Ankaran.</li> <li>Je finančno ovrednoten do največ 30.000 eur z vključenim DDV-jem.</li><li>Je realno izvedljiv v proračunskem letu 2025.</li><li>Je umeščen v enega od treh območij občine, opredeljenih za participativni proračun.</li><li>Je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično)</li> </ol> <h5>VSEBINA PROJEKTOV:</h5> <ul> <li>gradnja ali obnova otroških igrišč,</li> <li>gradnja ali obnova športnih površin,</li> <li>ureditve/preplastitve krajših cest, manjkajočih pločnikov</li> <li>ureditev javnih površin</li> <li>urbane ureditve (urbana oprema: klopi, koši za smeti, stojala za kolesa, javna razsvetljava,…),</li> <li>izobraževalne, turistične, kulturne vsebine,</li> <li>inovativni projekti za boljšo kakovost bivanja</li> </ul>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
@@ -266,28 +270,28 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun 2023-2024!
+      title: Participativni proračun 2025-2026!
       introduction_text: Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
     about:
-      intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
+      intro: "Participativni proračun je proces demokratičnega soodločanja, pri katerem o porabi dela proračunskih sredstev neposredno odločajo občanke in občani. Sami prepoznajo probleme in možnosti izboljšav, tako predlagajo projekte, ki so najnujnejši, njihova izvedba pa bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti. <p>V Občini Ankaran bodo za proračunski leti 2025 in 2026 lahko občanke in občani predlagali projekte in o njih glasovali, v skupni vrednosti do 100.000,00 EUR, od tega za območje participativnega proračuna Ankaran vzhod za projekte v skupni vrednosti do 35.000,00 EUR, Ankaran center za projekte v skupni vrednosti do 30.000,00 EUR ter Ankaran zahod za projekte v skupni vrednosti do 35.000,00 EUR.</p>"
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši."
-      date_1: 19. 5.-27. 6. 2022
+      description_1: "Občanke in občani lahko oddajo predloge projektov od 15.01.2025 do 15.02.2025. Posamezen predlog projekta mora biti oddan na za to določenem obrazcu, njegova vrednost mora biti med 1.000,00 in 30.000,00 EUR z vključenim DDV-jem ter ustrezati drugim predpisanim pogojem za uvrstitev v participativni proračun – na glasovanje.</p><p>Projektni predlog mora biti oddan na obrazcu, ki ga  lahko izpolnite na tem spletnem mestu, ga prenesete na tej povezavi ali prevzamete v sprejemni pisarni Občine Ankaran v času uradnih ur.</p><p>Predlagatelj mora na obrazcu navesti zahtevane osebne podatke, anonimi predlogi ne bodo obravnavani. Vsak predlagatelj lahko predlaga največ 3 projektne predloge in sicer za projekte, ki se nanašajo na območje participativnega proračuna v katerem ima stalno prebivališče (območja participativnega proračuna so Ankaran vzhod, Ankaran center in Ankaran zahod ter so razvidna na zemljevidu na tej povezavi).</p><p>Obrazec za oddajo projektnega predloga lahko oddate: <ul><li>na tem spletnem mestu, po registraciji in vpisu v spletno aplikacijo ali</li><li>po elektronski pošti na naslov predlagam@obcina-ankaran.si.  ali</li><li>osebno v sprejemni pisarni (vložišču) Občine Ankaran, na naslovu Regentova ulica 2, Ankaran, v času uradnih ur.</li></ul></p>"
+      date_1: 15. 1.-15. 2. 2025
       heading_2: Pregled predlogov
-      description_2: "Strokovna komisija bo pregledala vse oddane predloge in na seznam za glasovanje uvrstila le tiste, ki ustrezajo pogojem (merilom). Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanov, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes."
-      date_2: 28. 6.-30. 9. 2022
+      description_2: "Vse oddane predloge pregleda strokovna komisija, ki vsak oddan predlog finančno ovrednoti, preveri njegovo izvedljivost ter skladnost s predpisanimi pogoji (v pristojnostmi občine, skladen z zakonodajo, skladen s prostorskimi in razvojnimi akti, prispeva k uresničevanju javnega interesa,….). Komisija lahko enake ali podobne projektne predloge združi v en projektni predlog oziroma posamezni projektni predlog delno prilagodi.<p>Tiste predloge, ki ne bodo ustrezali predpisanim pogojem, bo komisija izločila z obrazložitvijo, kateremu pogoju ali pogojem predlog projekta ni ustrezal.</p><p>Vsi projektni predlogi, ki bodo ustrezali vsem razpisnim pogojem, se uvrstijo naprej na glasovanje</p>"
+      date_2: 15. 2.-15. 3. 2025
       heading_3: Glasovanje
-      description_3: "Med 1. in 16. oktobrom, 2022 boš odločal/-a o porabi 1 milijona evrov proračunskih sredstev Mestne občine Maribor. Glasoval/-a boš lahko za oddane predloge, ki so izvedljivi, zakoniti, v občinski pristojnosti in ne presegajo višine sredstev, namenjenih za posamezno območje v okviru participativnega proračuna. Glasuje lahko vsakdo s stalnim prebivališčem v Mestni občini Maribor, star/-a vsaj 15 let. Vsakdo lahko glasuje samo enkrat."
-      date_3: 1. 10.-16. 10. 2022
+      description_3: "Med 01. in 15. aprilom 2025 boste občani in občanke imeli priložnost glasovanja, katerim projektom v OA bomo namenili sredstva.<p>Glasujejo lahko občanke in občani Občine Ankaran, ki so imeli na dan 01.01.2025: <ul><li>stalno prebivališče na območju Občine Ankaran ter</li><li>dopolnjenih 15 let starosti oz. boste v letu 2025 dopolnili 15 let starosti (rojeni najkasneje leta 2010).</li></ul></p><p>Vsak upravičenec lahko glasuje za največ 3 projektne predloge na območju celotne občine, ne glede na območje participativnega proračuna v katerem ima stalno prebivališče. Za posamezen projektni predlog lahko vsak upravičenec glasuje samo enkrat.</p><p>Svoj glas lahko oddate med 01.04.2025 do 15.04.2025 na tem spletnem mestu, po registraciji in vpisu v spletno aplikacijo. Svoj glas v spletni aplikaciji lahko oddate tudi s pomočjo asistenta v sprejemni pisarni (vložišču) Občine Ankaran, na naslovu Regentova ulica 2, Ankaran, v času uradnih ur in sicer v <ul><li>ponedeljek, 07. in 14.04.2025, med 8.00 in 12.00 uro,</li><li>sredo, 02. in 09.04.2025, med 8.00 in 12.00 ter 14.00 in 17.00 uro,</li><li>petek, 04. in 11.04.2025, med 8.00 in 12.00 uro.</li></ul></p>"
+      date_3: 1. 4.-15. 4. 2025
       heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Maribor za leti 2023 in 2024."
-      date_4: "2023"
+      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila projekte, ki so bili izbrani. Za vnos v proračun OA za leti 2025 in 2026 ter njihovo izvedbo bodo, glede na izzid glasovanja, izbrani projekti za vsako posamezno območje participativnega proračuna OA do skupne višine določenih sredstev za posamezno območje (Ankaran vzhod skupno 35.000,00 EUR, Ankaran center skupno 30.000,00 EUR in Ankaran zahod 35.000,00 EUR).<p>Rezultati glasovanja bodo objavljeni na spletni strani občine po 25. aprilu 2025.</p>"
+      date_4: "25. 4. 2025"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
+      description_5: "Vsi zmagovalni projekti na posameznem območju participativnega proračuna OA (Ankaran vzhod, center in zahod) bodo vključeni v proračun Občine Ankaran in izvedeni v letih 2025 in 2026. Stanje izvajanja projektov boste lahko spremljali na tem spletnem mestu."
     privacy:
       title: "Pogoji uporabe"
     help:
@@ -445,6 +449,7 @@ sl-SI:
       cookies_list_li2_desc: "Se uporabljata za preprečevanje zlorab uporabniške seje."
       ip_title: "Intelektualna lastnina"
       ip_intro: 'Vsa koda potrebna za delovanje te spletne strani je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
+      terms_second_checkbox: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Ankaran obdeluje moje osebne podatke za namen izvedbe projekta Sodeluj in glasuj."
     statuses:
       title: "Izberi status predloga"
       waiting: "Čaka na izvedbo"
@@ -457,6 +462,7 @@ sl-SI:
       registration: "Zaradi napak obrazca nismo mogli shraniti."
       submit_investment: "Zaradi napak obrazca nismo mogli shraniti."
       no_answer: "Prosim izpolni vprašanje."
+      new_investment_not_allowed: "Oddate lahko samo 3 predloge."
     footer:
       djnd: Za platformo skrbi
     registration:
