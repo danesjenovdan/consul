@@ -217,8 +217,26 @@ sl-SI:
       select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
-      instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Predlagatelj projektnih predlogov je lahko občanka/občan s stalnim prebivališčem v OA, ki je na dan oddaje predloga dopolnil 15 let. Predlagatelj ne sme nastopati kot izvajalec projektnega predloga. To velja za fizične osebe, lastnike pravne osebe ali člane poslovodstva pravne osebe.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje pogoje:</p> <ol> <li>Prispeva k uresničevanju javnega interesa in se izvaja na območju občine Ankaran.</li> <li>Prispeva k namenom poziva — spodbuja aktivno participacijo in vključenost občanov, dviga kakovost bivanja v lokalnem okolju, gradi skupnostni pristop in je namenjen splošni javni uporabi.</li> <li>Je takšne narave, da ga bo občina Ankaran lahko izpeljala v okviru občinskih zmogljivosti in zakonskih pristojnosti.</li> <li>Ni uvrščen v proračun oz. načrt razvojnih programov občine in ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov občine Ankaran.</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> <li>Je načrtovan na zemljišču v javni lasti oziroma na zasebnem zemljišču s soglasjem lastnika</li> <li>V preteklih petih letih ni bil financiran/sofinanciran iz proračuna občine Ankaran.</li> <li>Je finančno ovrednoten do največ 30.000 eur z vključenim DDV-jem.</li><li>Je realno izvedljiv v proračunskem letu 2025.</li><li>Je umeščen v enega od treh območij občine, opredeljenih za participativni proračun.</li><li>Je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično)</li> </ol> <h5>VSEBINA PROJEKTOV:</h5> <ul> <li>gradnja ali obnova otroških igrišč,</li> <li>gradnja ali obnova športnih površin,</li> <li>ureditve/preplastitve krajših cest, manjkajočih pločnikov</li> <li>ureditev javnih površin</li> <li>urbane ureditve (urbana oprema: klopi, koši za smeti, stojala za kolesa, javna razsvetljava,…),</li> <li>izobraževalne, turistične, kulturne vsebine,</li> <li>inovativni projekti za boljšo kakovost bivanja</li> </ul>"
+      instructions: "Predlagatelj projekta"
+      instructions_description: |
+        <ol>
+          <li>ima pravico podati projektni predlog (je imel na dan 01.01.2025 stalno prebivališče v OA ter dopolnjenih 15 let starosti oz. bo v letu 2025 dopolnili 15 let starosti (rojeni najkasneje leta 2010)</li>
+          <li>ne sme nastopati kot izvajalec projektnega predloga – ne kot fizična oseba oziroma lastnik ali poslovodna oseba pravne osebe izvajalca</li>
+          <li>je podal predlog za območje participativnega proračuna občine v katerem ima stalno bivališče</li>
+        </ol>
+        <h3>Predlagan projekt</h3>
+        <ol>
+          <li>je v pristojnosti občine,</li>
+          <li>bo izveden na območju Občine Ankaran,</li>
+          <li>ni v nasprotju z zakonodajo ali občinski predpisi,</li>
+          <li>je skladen s prostorskimi akti občine, razvojnimi akti občine, strategijami razvoja občine in drugimi razvojnimi programi občine,</li>
+          <li>prispeva k uresničevanju javnega interesa na območju občine,</li>
+          <li>je takšne narave, da bo njegova izvajalka lahko občina ter ga je mogoče izpeljati v okviru občinskih zmogljivosti in obdobja participativnega proračuna za leto 2025 in 2026</li>
+          <li>spodbuja aktivno participacijo in vključenost občanov oziroma dviga kakovost bivanja v lokalnem okolju oziroma gradi skupnostni pristop in je namenjen splošni javni uporabi,</li>
+          <li>je načrtovan na zemljišču v lasti Občine Ankaran oziroma na zemljišču v lasti druge osebe za katerega je predlagatelj pridobil soglasje za uporabo ali drugo stvarno pravico, ki omogoča izvedbo projekta</li>
+          <li>je njegova realna ocenjena vrednost med 1.000,00 in 30.000,00 EUR z vključenim DDV</li>
+          <li>je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično)</li>
+        </ol>
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
