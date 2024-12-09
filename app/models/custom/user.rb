@@ -921,7 +921,7 @@ class User < ApplicationRecord
         'Vinogradniška pot 9',
     ];
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
-    r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
+    r = /^#{escaped_addresses.join("$|^")}$/i # assuming there are no special chars
     return r === address
   end
 end
