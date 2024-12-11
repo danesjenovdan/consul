@@ -142,3 +142,12 @@
   padding-top: 80px;
   padding-bottom: 60px;
 }
+
+.djnd-radio {
+  display: flex;
+
+  input {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+}

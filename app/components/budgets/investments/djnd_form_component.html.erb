@@ -29,18 +29,79 @@
 
   <fieldset>
     <%= f.fields_for :answers do |builder| %>
-      <p>
-        <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+      <% if budget.questions.order(:id)[builder.index].text.start_with?('A1') %>
+        <%= builder.label :A1, "Točna lokacija projekta", class: "inline-block" %>
+        <p class="help-text">
+          Navedite parcelno številko (skupaj s katastrsko občino) ali naslov lokacije
+          kjer naj bi se projekt izvedel. Podatke o parcelnih številkah in naslovih lahko
+          dobite na prostorskem portalu Občine Ankaran na spletni strani občine oz. na
+          povezavi <a href="https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz">https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz</a>.</p>
+        <%= builder.text_field :text, label: false, :required => true %>
         <%= builder.hidden_field :budget_id %>
         <%= builder.hidden_field :budget_question_id %>
-        <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
-          <span class="form-error is-visible"><%= t("custom.errors.no_answer") %></span>
-        <% end %>
-      </p>
+        <br />
+
+      <% elsif budget.questions.order(:id)[builder.index].text.start_with?('A2') %>
+        <%= builder.label :A2, "Lastništvo nepremičnine", class: "inline-block" %>
+        <p class="help-text">
+          Kdo je lastnik nepremičnine (parcele, stavbe,…) kjer naj bi se izvedel projekt in ste jo navedli v prejšnji točki?
+        </p>
+        <div class="djnd-radio">
+          <%= builder.radio_button :text, "lastnik je občina Ankaran", :label => "lastnik je občina Ankaran" %>
+        </div>
+        <div class="djnd-radio">
+          <%= builder.radio_button :text, "lastnik je druga pravna ali fizična oseba", :label => "lastnik je druga pravna ali fizična oseba" %>
+        </div>
+        <%= builder.hidden_field :budget_id %>
+        <%= builder.hidden_field :budget_question_id %>
+        <br />
+
+      <% elsif budget.questions.order(:id)[builder.index].text.start_with?('A3') %>
+        <%= builder.label :A3, "Pravica uporabe oz. gradnje na nepremičnini" %>
+        <p class="help-text">
+          Izpolnite le, če je lastnik nepremičnine druga pravna ali fizična oseba in ne Občina Ankaran.
+          Označite ali je pridobljeno soglasje za uporabo nepremičnine oziroma druga pravica, ki omogoča
+          gradnjo ali uporabo nepremičnine (stavbna pravica, služnost). V kolikor je soglasje pridobljeno,
+          obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča
+          uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost, ...).
+        </p>
+        <div class="djnd-radio">
+          <%=
+            builder.radio_button :text,
+            "ni soglasja",
+            :label => "ni soglasja oz. druge pravice za uporabo nepremičnine"
+          %>
+        </div>
+        <div class="djnd-radio">
+          <%=
+            builder.radio_button :text,
+            "je soglasje",
+            :label => "je soglasje oz. druga pravica uporabe nepremičnine – obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost,..)"
+          %>
+        </div>
+        <%= builder.hidden_field :budget_id %>
+        <%= builder.hidden_field :budget_question_id %>
+        <br />
+
+      <% else %>
+        <p>
+          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+          <%= builder.hidden_field :budget_id %>
+          <%= builder.hidden_field :budget_question_id %>
+          <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+            <span class="form-error is-visible"><%= t("custom.errors.no_answer") %></span>
+          <% end %>
+        </p>
+      <% end %>
     <% end %>
 
     <%= f.label :price, "Ocena stroškov projektnega predloga (skupaj z DDV-jem)", class: "inline-block" %>
-    <p class="help-text">Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.</p>
+    <p class="help-text">
+      Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.
+      <br />
+      Navedite oz. po lastni presoji podajte ocenjeno vrednost projekta. Vrednost projektnega predloga je je lahko najmanj 1.000,00 EUR in največ 35.000,00 EUR, z vključenim DDV.
+      <br />
+      Zgolj za orientacijo so na <a href="#">povezavi  [blank link, še čakamo dokument]</a> navedene vrednosti vzorčnih projektov.</p>
     <%= f.number_field :price, label: false, :required => true %>
 
     <% if feature?(:allow_images) %>

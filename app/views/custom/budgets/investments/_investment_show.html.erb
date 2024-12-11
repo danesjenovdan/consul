@@ -95,12 +95,15 @@
       <div class="bggray">
         <div class="small-12 medium-10 medium-centered">
           <% @budget.questions.order(:id).each do |question| %>
-            <h4><%= question.text.html_safe %></h4>
-            <p>
-              <% investment.answers.where(budget_question_id: question.id).each do |answer| %>
-                <%= auto_link_already_sanitized_html wysiwyg(answer.text) %>
-              <% end %>
-            </p>
+            <%# this if is to hide extra questions %>
+            <% if !question.text.start_with?('A1') and !question.text.start_with?('A2') and !question.text.start_with?('A3') %>
+              <h4><%= question.text.html_safe %></h4>
+              <p>
+                <% investment.answers.where(budget_question_id: question.id).each do |answer| %>
+                  <%= auto_link_already_sanitized_html wysiwyg(answer.text) %>
+                <% end %>
+              </p>
+            <% end %>
           <% end %>
         </div>
       </div>
