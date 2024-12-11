@@ -16,19 +16,34 @@
       <div class="column">
         <div class="landing">
           <div class="introduction-text">
-            <% @budgets.each do |budget| %>
-              <div>
-                <%= image_tag(image_path_for("logo-header.png"), class: "double-header-logo") %>
-                <h1><%= t("custom.landing.title") %></h1>
-                <p><%= t("custom.landing.introduction_text") %></p>
-                <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
-                  <% if phase.enabled && phase.active %>
-                    <a class="action-button large" href="<%= phase.url %>">
-                      <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
-                    </a>
+            <% @budgets.each_with_index do |budget, i| %>
+              <% if i == 0 %>
+                <div>
+                  <%= image_tag(image_path_for("logo-header.png"), class: "double-header-logo") %>
+                  <h1><%= t("custom.landing.title") %></h1>
+                  <p><%= t("custom.landing.introduction_text") %></p>
+                  <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
+                    <% if phase.enabled && phase.active %>
+                      <a class="action-button large" href="<%= phase.url %>">
+                        <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
+                      </a>
+                    <% end %>
                   <% end %>
-                <% end %>
-              </div>
+                </div>
+              <% elsif %>
+                <div>
+                  <%= image_tag(image_path_for("logo-header2.png"), class: "double-header-logo") %>
+                  <h1><%= t("custom.landing.title2") %></h1>
+                  <p><%= t("custom.landing.introduction_text2") %></p>
+                  <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
+                    <% if phase.enabled && phase.active %>
+                      <a class="action-button large" href="<%= phase.url %>">
+                        <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
+                      </a>
+                    <% end %>
+                  <% end %>
+                </div>
+              <% end %>
             <% end %>
           </div>
           <hr />
