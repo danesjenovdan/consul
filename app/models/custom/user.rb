@@ -888,7 +888,7 @@ class User < ApplicationRecord
 
   # regex check if address is valid
   def is_valid_address?
-    valid_addesses = @@valid_addresses_vzhod + @@valid_addresses_zahod + @@valid_addresses_center
+    valid_addresses = @@valid_addresses_vzhod + @@valid_addresses_zahod + @@valid_addresses_center
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /^#{escaped_addresses.join("$|^")}$/i # assuming there are no special chars
     return r === address
