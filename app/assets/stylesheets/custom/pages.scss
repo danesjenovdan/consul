@@ -3,7 +3,8 @@
   width: 300px;
 
   &.accepting {
-    background: image-url("predlagaj-MB.svg") no-repeat;
+    background: image-url("ilustracija1.png") no-repeat;
+    background-size: contain;
   }
 
   &.selecting {
@@ -12,11 +13,13 @@
   }
 
   &.balloting {
-    background: image-url("glasuj-MB.svg") no-repeat;
+    background: image-url("ilustracija2.png") no-repeat;
+    background-size: contain;
   }
 
   &.finished {
-    background: image-url("izvedi-MB.svg") no-repeat;
+    background: image-url("ilustracija3.png") no-repeat;
+    background-size: contain;
   }
 
   &.reviewing,
