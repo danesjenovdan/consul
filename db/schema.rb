@@ -1678,7 +1678,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_13_135357) do
     t.string "subscriptions_token"
     t.boolean "data_consent", default: false
     t.text "address"
-    t.boolean "consent_to_publish_name"
     t.integer "failed_attempts", default: 0, null: false
     t.datetime "locked_at", precision: nil
     t.string "unlock_token"
