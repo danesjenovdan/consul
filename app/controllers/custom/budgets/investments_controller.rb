@@ -139,11 +139,15 @@ module Budgets
       # ?
       @tag_cloud = tag_cloud
       @remote_translations = detect_remote_translations(@investments)
-
     end
 
     # this is so we get fields for questions on the new investment form
     def new
+      if @budget.id == 2 && !current_user.is_young_person
+        flash[:alert] =  t "custom.errors.new_investment_not_allowed"
+        redirect_to budget_investments_path(@budget)
+      end
+
       @investment.budget.questions.order(:id).each do |question|
         answer = @investment.answers.build({budget_id: @investment.budget.id, budget_question_id: question.id})
       end
