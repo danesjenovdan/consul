@@ -1,0 +1,471 @@
+it:
+  routes:
+    budgets: pp
+    investments: suggerimenti
+    account: account
+    help: aiuto
+    sign_in: accedi
+    organizations: organizzazioni
+    users: utenti
+    sign_up: registrazione
+    confirmation: conferma
+    new: nuovamente
+    password: password
+    edit: modifica
+  account:
+    show:
+      change_credentials_link: Modificare l’indirizzo elettronico o la password
+      verified_account: " L’account è confermato."
+  activerecord:
+    attributes:
+      user:
+        login: "indirizzo elettronico o nome utente"
+        login_form: "Indirizzo elettronico o nome utente"
+      image:
+        attachment: "Immagine"
+      budget/investment:
+        q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
+        q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
+        q3: "Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?"
+        q4: "Naselje izvajanja projekta. Kje konkretno naj bi se projekt izvajal? Navedite parcelne številke. Če gre za parcele v zasebni lasti, priložite soglasje lastnika."
+        q5: "Časovni okvir: kdaj naj bi se projekt izvedel? Navedite v primeru, da je iz objektivnih razlogov ta podatek pomemben, sicer se bo projekt izvedel enkrat v časovnem obdobju med 1. 7. 2021 in 31. 12. 2022."
+        q6: "Ali ste pridobili tudi dodatne vire financiranja projekta (npr. krajevna ali vaška skupnost, sponzorstva, ipd.), od koga in koliko? V primeru, da predlagatelj pridobi zunanje vire financiranja, skupna vrednost projekta lahko presega finančne omejitve. Prosimo, da v prilogo priložite izjave sofinancerjev. Opišite tudi morebitna dela, ki ste jih vi ali kdo drug v sklopu tega projekta pripravljeni izvesti brezplačno."
+    errors:
+      models:
+        image:
+          attributes:
+            attachment:
+              min_image_width: " deve essere larga almeno %{required_min_width}px"
+              min_image_height: " deve essere alta almeno %{required_min_height}px"
+        user:
+          attributes:
+            document_number:
+              invalid: il CAUC non è nel formato corretto.
+            address:
+              invalid: Questo indirizzo non è valido. Controllare l'ortografia o inserire un altro indirizzo.
+  budgets:
+    investments:
+      investment:
+        add: Voti a favore di questa proposta
+      show:
+        share_title: "Passa parola!"
+        share: "Condividi!"
+        copy: "Copia il collegamento!"
+        price: " Valore del progetto "
+        votes: " Vuole sostenere questo progetto?"
+        top_investment: " Questa proposta è attualmente fra le prime 3 per numero di voti in questa zona!"
+        top_investment_close: " A questa proposta mancano solo pochi voti per classificarsi tra le prime 3 di questa zona!"
+        top_investment_far: " A questa proposta mancano molti voti per classificarsi tra le prime 3 in questa zona!"
+      edit:
+        submit: "Salva le modifiche"
+      form:
+        tags_instructions: " Contrassegnare questa proposta. É possibile scegliere tra le categorie proposte"
+        submit: "Inoltra la proposta"
+      index:
+        title: Participativni proračun
+        by_heading: " Progetti d’investimento nella zona: %{heading}"
+        sidebar:
+          different_heading_assigned: " Ci sono voti attivi per un'altra zona: %{heading_link}."
+      header:
+        different_heading_assigned: " Ci sono voti attivi per un'altra zona: %{heading_link}."
+        change_ballot: " Se si cambia idea, è possibile cancellare i voti da questa zona e ricominciare da capo"
+    ballots:
+      show:
+        amount_progress: "%{amount_spent} / %{amount_limit}"
+        amount_available:
+          knapsack: " È ancora disponibile <span>%{count}</span>."
+          approval:
+            zero: " Sono stati usati tutti i voti disponibili (<span>%{count}</span>)."
+            one: "É possibile consegnare ancora <span>%{count}</span> voto."
+            two: " É possibile consegnare ancora <span>%{count}</span> voti."
+            three: " È possibile consegnare ancora <span>%{count}</span> voti."
+            four: " È possibile consegnare ancora <span>%{count}</span> voti."
+            other: " È possibile consegnare ancora <span>%{count}</span> voti."
+        amount_spent:
+          knapsack: "Usato: <span>%{count}</span>"
+          approval:
+            zero: "Voti consegnati: <span>%{count}</span>"
+            one: "Voto consegnato: <span>%{count}</span>"
+            two: " Voti consegnati: <span>%{count}</span>"
+            three: "Voti consegnati: <span>%{count}</span>"
+            four: "Voti consegnati: <span>%{count}</span>"
+            other: "Voti consegnati: <span>%{count}</span>"
+        amount_limit:
+          knapsack: "Il suo budget: <span>%{count}</span>"
+          approval:
+            one: "É possibile votare per <span>1</span> proposta"
+            two: "É possibile votare per <span>2</span> proposte"
+            three: "É possibile votare per <span>3</span> proposte"
+            four: "É possibile votare per <span>4</span> proposte"
+            other: "É possibile votare per <span>%{count}</span> proposte"
+      reasons_for_not_balloting:
+        not_logged_in: "<strong> Per continuare è necessario iscriversi o registrarsi.</strong>"
+        not_verified: Solo gli utenti verificati possono votare per gli investimenti; %{verify_account}.
+        not_enough_available_votes: Non ci sono più voti disponibili. Per votare per questa proposta, è necessario togliere il voto da un'altra proposta.
+        organization: Le organizzazioni non sono autorizzate a votare
+        not_selected: Gli investimenti non selezionati non possono essere supportati
+        not_enough_money: " Il budget a disposizione non è sufficiente."
+        no_ballots_allowed: La fase di selezione è terminata
+        different_heading_assigned: "<strong> È possibile votare solo per proposte della stessa zona.</strong>"
+        change_ballot: modifica dei voti
+  comments:
+    actions:
+      confirm_delete: Confermare la cancellazione
+      delete: Cancellare
+  devise:
+    sessions:
+      signed_in: " L'accesso è stato effettuato correttamente."
+      signed_out: " L'utente si è disconnesso correttamente."
+      already_signed_out: " L'utente si è disconnesso correttamente."
+    failure:
+      already_authenticated: " L'utente ha già effettuato l'accesso"
+      invalid: " %{chiave_di_autenticazione} o password non valida."
+      not_found_in_database: "%{chiave_di_autenticazione} o password non valida."
+    registrations:
+      signed_up_but_unconfirmed: " È stata inviata un'e-mail per confermare la registrazione. Cliccare sul link contenuto nell'e-mail per attivare l'account."
+  devise_views:
+    shared:
+      links:
+        login: Iscrizione
+        new_confirmation: Non ha ricevuto istruzioni su come attivare il suo account?
+        new_unlock: Non ha ricevuto istruzioni su come sbloccare il suo account?
+    users:
+      registrations:
+        new:
+          terms: Con la registrazione l’utente accetta i %{terms}.
+          password_hint: La password deve avere almeno 8 caratteri.
+          address: Inserire la via di residenza permanente
+        success:
+          back_to_index: Ripartire dalla pagina iniziale
+          instructions_1: Si prega di, <b>controllare l’e-mail</b> – è stato inviato un <b>collegamento per confermare l’account</b>.
+          instructions_2: Una volta confermato l’account, è possibile partecipare.
+          thank_you: Ringraziamo per la registrazione sul portale online. Ora è necessario <b>confermare l’indirizzo e-mail</b>.
+          title: Registrazione
+          account_confirmed: "Ringraziamo per la registrazione! Per continuare è necessario <b>iscriversi</b>"
+    mailer:
+      reset_password_instructions:
+        ignore_text: Se non è stata richiesta la modifica della password, ignorare questa e-mail.
+  documents:
+    max_documents_allowed_reached: È stato raggiunto il numero massimo di documenti consentiti! <strong> Prima di poter caricare un nuovo documento, è necessario cancellarne almeno uno. </strong>
+    buttons:
+      destroy_document: Eliminare documento
+    form:
+      note: " “È possibile caricare un massimo di %{max_documents_allowed} documenti dei seguenti tipi: %{accepted_content_types}, con una dimensione massima di %{max_file_size} MB per file."
+  images:
+    form:
+      title: Slika
+  mailers:
+    budget_investment_created:
+      intro: "Hej, <strong>%{author}</strong>,"
+      share: Visualizzare progetto
+  milestones:
+    index:
+      no_milestones: Non ha limiti definiti
+      progress: Progressi
+    show:
+      publication_date: "Data di pubblicazione %{publication_date}"
+      status_changed: Status modificato in
+  shared:
+    suggest:
+      budget_investment:
+        found: Abbiamo trovato una proposta simile.
+  views:
+    pagination:
+      truncate: "&hellip;"
+  custom:
+    admin:
+      budget_phases:
+        edit:
+          summary_help_text: Sottotitolo
+          description_help_text: Paragrafo descrittivo
+          presentation_summary_accepting: Primo paragrafo quando la fase non è attiva
+          presentation_summary_balloting: Secondo paragrafo quando la fase non è attiva
+          presentation_summary_finished: Terzo paragrafo quando la fase non è attiva
+          presentation_summary_accepting_help_text: Testo per il primo paragrafo quando la fase non è attiva.
+          presentation_summary_balloting_help_text: Testo per il secondo paragrafo quando la fase non è attiva.
+          presentation_summary_finished_help_text: Testo per il terzo paragrafo quando la fase non è attiva
+    budgets:
+      investments:
+        not_allowed_to_add_investment: Ringraziamo per le 3 proposte inviate!
+        investment:
+          no_image: La proposta non ha fotografie.
+    meta:
+      pp_name: Maribor collabora
+      place_name: Comune città di Maribor
+      guiding_questions: "<p><em>Perché questa proposta? Quale argomento, problema o sfida affronta la proposta progettuale? </em></p><p>&nbsp;</p><p><em>Cosa proponete nello specifico? Qual è il senso della sua proposta? Cosa accadrà? </em></p><p>&nbsp;</p><p><em>Come dovrebbe essere attuato il progetto? Quali attività dovrebbero essere svolte? </em></p><p>&nbsp;</p><p><em>Dove dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p></p><p><em>Tempistica: quando dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p><em>Cosa cambierebbe, migliorerebbe dopo l'implementazione del progetto? </em></p><p>&nbsp;</p><p></p><p><em>Qual è il valore previsto (costo) del progetto proposto? </em></p>"
+
+      tos: " Condizioni d’utilizzo"
+    switcher:
+      select: " Selezionare il budget"
+    social:
+      fb_desc: Maribor sodeluj - Participativni proračun Mestne občine Maribor
+      tw_desc: "Maribor sodeluj - Participativni proračun Mestne občine Maribor: "
+      email_desc: Visualizzare la proposta d’investimento di bilancio nel progetto Maribor sodeluj - Bilancio partecipativo Mestne občine Maribor
+    headings:
+      drafting: Bozza (nascosta al pubblico)
+      informing: Informazioni
+      accepting: Propost
+      reviewing: Revisione dei progetti
+      selecting: Selezione
+      valuating: Valutazione di progetti
+      publishing_prices: Pubblicazione delle proposte sottoposte a votazione
+      balloting: Votazioni
+      reviewing_ballots: Verifica delle votazioni
+      finished: Seguire
+      headings: Zone
+      headings_sidebar: "<li>  <h6>Območje 1 - Ankaran vzhod</h6>  <div>Na Logu, Železniška cesta, Rožnik, Ivančičeva cesta, Cesta na Prisojo, Pod Vrhom, Oljčna pot, Jadranska cesta</div></li><li>  <h6>Območje 2 - Ankaran center</h6>  <div>Oljčna pot, Pervanjeva ulica, Bertokova ulica, Pot na Brido, Srebrničeva ulica, Regentova ulica, Hrvatinova ulica, Vlahovičeva ulica, Bevkova ulica, Kocjančičeva ulica, Cahova ulica, Ulica Rudija Mahniča, Tomažičeva ulica, Larisova ulica, Frenkova ulica, Razgledna pot, Jadranska cesta</div></li><li>  <h6>Območje 3 - Ankaran zahod</h6>  <div>območje krajinskega parka Debeli rtič: Vinogradniška pot, Lazaret, Jadranska cesta</div></li>"
+      select_heading: Selezionare zona
+
+      select_tag: Selezionare quartiere
+      select_status: Selezionare lo status della proposta
+      select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
+      instructions: "Condizioni e criteri per la presentazione delle proposte progettuali"
+      instructions_description: "<p>Predlagatelj projektnih predlogov je lahko občanka/občan s stalnim prebivališčem v OA, ki je na dan oddaje predloga dopolnil 15 let. Predlagatelj ne sme nastopati kot izvajalec projektnega predloga. To velja za fizične osebe, lastnike pravne osebe ali člane poslovodstva pravne osebe.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje pogoje:</p> <ol> <li>Prispeva k uresničevanju javnega interesa in se izvaja na območju občine Ankaran.</li> <li>Prispeva k namenom poziva — spodbuja aktivno participacijo in vključenost občanov, dviga kakovost bivanja v lokalnem okolju, gradi skupnostni pristop in je namenjen splošni javni uporabi.</li> <li>Je takšne narave, da ga bo občina Ankaran lahko izpeljala v okviru občinskih zmogljivosti in zakonskih pristojnosti.</li> <li>Ni uvrščen v proračun oz. načrt razvojnih programov občine in ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov občine Ankaran.</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> <li>Je načrtovan na zemljišču v javni lasti oziroma na zasebnem zemljišču s soglasjem lastnika</li> <li>V preteklih petih letih ni bil financiran/sofinanciran iz proračuna občine Ankaran.</li> <li>Je finančno ovrednoten do največ 30.000 eur z vključenim DDV-jem.</li><li>Je realno izvedljiv v proračunskem letu 2025.</li><li>Je umeščen v enega od treh območij občine, opredeljenih za participativni proračun.</li><li>Je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično)</li> </ol> <h5>VSEBINA PROJEKTOV:</h5> <ul> <li>gradnja ali obnova otroških igrišč,</li> <li>gradnja ali obnova športnih površin,</li> <li>ureditve/preplastitve krajših cest, manjkajočih pločnikov</li> <li>ureditev javnih površin</li> <li>urbane ureditve (urbana oprema: klopi, koši za smeti, stojala za kolesa, javna razsvetljava,…),</li> <li>izobraževalne, turistične, kulturne vsebine,</li> <li>inovativni projekti za boljšo kakovost bivanja</li> </ul>"
+      back_to_all_proposals: "Tornare all'elenco delle proposte"
+    feasibility:
+      select_feasibility: Filtrare le proposte non votate
+      feasible: Proposte votate
+      unfeasible: Proposte non votate
+    chosen_for_voting:
+      chosen: PROPOSTE SELEZIONATE
+      not_chosen: PROPOSTE NON SELEZIONATE
+    titles:
+      edit: Modificare proposta
+      investment_updated: Proposta modificata correttamente
+      proposals: Proposte
+      added_proposals: Proposte presentate
+      voted_proposals: Proposte sottoposte a votazione
+      selected_proposals: Proposte selezionate
+      finished_proposals: Proposte votate
+      denied_proposals: Proposte non selezionate
+      register_with: Per registrarsi, compilare questo modulo
+      sign_in_with: Per iscriversi, compilare questo modulo
+      about: Informazioni sul bilancio partecipativo
+      anonymous_proposal: Proposta anonima
+    messages:
+      finished_accepting: I progetti non possono più essere presentati. Sono in fase di revisione.
+      finished_voting: Le votazioni sono chiuse. I progetti votati sono attualmente in fase di revisione.
+      no_investments: Qui non ci sono ancora proposte.
+      add_first_investment: Scrivi il primo!
+      loser: Questo progetto non è stato votato.
+    form:
+      submit_anonymously: Inviare in forma anonima
+      submit_anonymously_explanation: Accettando questa richiesta, il suo nome non verrà visualizzato quando la proposta verrà pubblicata sul sito web.
+      phone: Numero di telefono
+      address: Indirizzo di residenza permanente
+      name_and_last_name: Nome e cognome (nome utente)
+      accept_terms: L’utente accetta le %{conditions}
+      table_content: Contenuto
+      table_price: Importo IVA inclusa
+      table_total: Totale
+    presentation:
+      accepting:
+        title_1: A quanto ammonta il budget?
+        title_2: Come dovrebbe essere la proposta?
+        title_3: E se tutto è a posto?
+      balloting:
+        title_1: Cosa?
+        title_2: Chi?
+        title_3: Come?
+      finished:
+        title_1: E poi?
+        title_2: E la mia domanda?
+        title_3: E dopo di che?
+    landing:
+      title: Participativni proračun 2023-2024!
+      introduction_text: Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši.
+      title_past: Bilanci partecipativi precedenti
+      past_list_description: Controllare i progetti selezionati e seguire l'attuazione!
+      past_list_more: Per saperne di più
+    about:
+      intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
+      main_title: Kako deluje?
+      heading_1: Zbiranje predlogov
+      description_1: "Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši."
+      date_1: 19. 5.-27. 6. 2022
+      heading_2: Pregled predlogov
+      description_2: "Strokovna komisija bo pregledala vse oddane predloge in na seznam za glasovanje uvrstila le tiste, ki ustrezajo pogojem (merilom). Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanov, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes."
+      date_2: 28. 6.-30. 9. 2022
+      heading_3: Glasovanje
+      description_3: "Med 1. in 16. oktobrom, 2022 boš odločal/-a o porabi 1 milijona evrov proračunskih sredstev Mestne občine Maribor. Glasoval/-a boš lahko za oddane predloge, ki so izvedljivi, zakoniti, v občinski pristojnosti in ne presegajo višine sredstev, namenjenih za posamezno območje v okviru participativnega proračuna. Glasuje lahko vsakdo s stalnim prebivališčem v Mestni občini Maribor, star/-a vsaj 15 let. Vsakdo lahko glasuje samo enkrat."
+      date_3: 1. 10.-16. 10. 2022
+      heading_4: Razglasitev rezultatov
+      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Maribor za leti 2023 in 2024."
+      date_4: "2023"
+      heading_5: Spremljanje izvedbe
+      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
+    privacy:
+      title: "Pogoji uporabe"
+    help:
+      main_title: "Pogosta vprašanja"
+      heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
+      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ e-naslov in internetno povezavo, vse funkcionalnosti lahko opraviš tudi na občini in sedežih krajevnih skupnosti."
+      heading_2: "Kako ustvarim in potrdim svoj račun?"
+      description_2: "Račun ustvariš tako, da v glavi spletnega mesta klikneš na gumb Vpiši se, ter nato na povezavo Registriraj se. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, EMŠO in geslo. Po kreiranju računa ga moraš potrditi še s klikom na povezavo v e-pošti, ki ti jo bomo poslali na tvoj e-naslov."
+      heading_3: "Kako lahko ustvarim nov predlog?"
+      description_3: "Poleg spletnega je mogoče predlog oddati tudi v fizični obliki, in sicer: po pošti, na naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor,  osebno na navedem naslovu, v sprejemni pisarni št. 14 (do 13. ure), ali v kateri koli mestni četrti/krajevni skupnosti v času uradnih ur (tam bodo na voljo tudi tiskani obrazci). Za pomoč pri pripravi predlogov projektov se lahko udeležiš interaktivne in praktičnih delavnic, ki bodo vsak četrtek, ob 18. uri od 19. maja do 23. junija."
+      heading_4: "Pozabil_a sem svoje geslo. Kaj lahko storim?"
+      description_4: "Klikni na gumb Vpiši se, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel_a navodila, kako ustvariti novo geslo."
+      heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
+      description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
+      help_title: "Potrebuješ pomoč?"
+      technical_issues: "Imaš tehnične težave?"
+      technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
+      other_questions: "Imaš kakršno koli drugo vprašanje?"
+      other_contact: 'Kontaktiraj predstavnike Mestne občine Maribor na <a href="mailto:sodeluj@maribor.si" target="_blank">sodeluj@maribor.si</a>.'
+    terms:
+      main_title: "Pogoji uporabe in varstvo osebnih podatkov"
+      date: "1. 2. 2024"
+      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Ideje za Novo mesto ter politike varovanja osebnih podatkov."
+      active_use: "Aktivno uporabo spletnega orodja štejemo kot soglasje uporabnice_ka, da se strinja s temi splošnimi pogoji uporabe. Vsi, ki želijo aktivno sodelovati, se morajo registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe. V kolikor se kot uporabnica_k ne strinjate s temi splošnimi pogoji, vas prosimo, da spletnega mesta ne uporabljate."
+      changes: "Pridružujemo si pravico, da splošne pogoje kadarkoli in brez predhodne najave spremenimo, tako da novo različico objavimo na tej spletni strani. Različica splošnih pogojev je razvidna iz datuma njihove zadnje spremembe, ki je zabeležena na vrhu teh pogojev."
+      help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
+      contact1:
+        mail: "mestna.obcina@novomesto.si"
+        note1: "Telefon: v času uradnih ur občinske uprave na 07/  7 39 39 202"
+        note2: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
+      contact2:
+        mail: "consul@djnd.si"
+        note1: "Tehnična pomoč"
+        note2: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+      about_title: "O orodju"
+      about_first: "Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
+      about_second: "Spletno orodje omogoča direktno soodločanje o delu občinskega proračuna. Uporabnice_ki lahko oddajajo, podpirajo in glasujejo o predlogih za projekte ter spremljajo njihov razvoj."
+      about_third: "Sodeluje lahko vsak_a občan_ka občine, ki je star_a vsaj 15 let in se je registriral_a na spletnem orodju, za aktivnosti mladoletnikov so odgovorni starši ali skrbniki. Ni omejitev glede števila oddanih predlogov ali komentarjev, med glasovanjem pa lahko vsak uporabnik glasuje za en projekt."
+      about_list:
+        title: "Uporabnici_ku orodje omogoča:"
+        li1:
+          title: "Oddajo predlogov"
+          desc: "Za oddajo predloga mora uporabnica_k obvezno določiti naslov predloga projekta, opis, doda lahko še sliko predloga, lokacijo predloga, druge dokumente. Po oddaji predloga projekta je ta samodejno sprejet in se prikaže na spletnem orodju. Uporabnica_k lahko predlog deli z drugimi na družbenih omrežjih, po e-pošti ali s skrajšano povezavo."
+        li2:
+          title: "Glasovanje za predloge"
+          desc: "Uporabnica_k lahko glasuje za predloge projektov drugih uporabnic_kov. Za en predlog lahko glasuje le enkrat. Vsak uprabnik_ca lahko glasuje za en oddan projekt. Uporabnica_k lahko posameznemu predlogu v fazi zbiranja glasov tudi odvzame glas."
+        li3:
+          title: "Spremljanje izbranih predlogov"
+          desc: "V zadnji fazi orodje omogoča spremljanje rezultatov izvedbe."
+      registration_title: "Registracija"
+      registration_intro1: "Le registrirane_i uporabnice_ki lahko oddajo predloge projektov, komentirajo in glasujejo za oddane projekte. Neregistrirane_i uporabnice_ki lahko prosto spremljajo objavljene vsebine, ne morejo pa oddajati predlogov projektov, o njih glasovati ali sodelovati v debatah."
+      registration_intro2: "Uporabnica_k z registracijo potrjuje, da je dopolnil_a 15 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Mestno občino Novo mesto, da preveri verodostojnost osebnih podatkov za potrebe projekta Predlagam, odločam! iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
+      registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
+      name: "uporabniško ime"
+      email: "elektronski naslov"
+      emso: "EMŠO"
+      registration_first: "Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon."
+      registration_second: "Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnica_k prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani ene_ga uporabnice_ka je prepovedano."
+      registration_third: "Če uporabnica_k katerega izmed navedenih podatkov ne posreduje, ji_mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati spletnega orodja."
+      registration_fourth: "Svoje podatke, vnesene ob registraciji, lahko preverite, spreminjate oziroma dopolnite v svojem profilu, v katerega lahko vstopite po uspešno izvedeni prijavi. V svojem profilu lahko tudi izberete, ali želite na svoj elektronski naslov prejemati različna obvestila."
+      registration_fifth: "Z uporabo spletnega orodja se uporabnica_k strinja, da se njeno uporabniško ime in/ali ime in priimek kaže javnosti na spletnem orodju pri oddanih predlogih in komentarjih."
+      rules_title: "Sprejem pravil"
+      rules_first: "Ob registraciji mora uporabnica_k sprejeti pravila uporabe spletnega orodja."
+      rules_promise: "S sprejemom pravil se uporabnica_k najprej zaveže, da bo ob podajanju predlogov spoštoval_a ustavo in zakone Republike Slovenije, kar zlasti pomeni, da:"
+      rules_promise_first: "ne bo objavljal_a vsebin, ki bi spodbujale k spolni, rasni, narodnostni ali verski nestrpnosti ali h kakršni koli obliki diskriminacije na podlagi osebnih okoliščin posameznic_kov;"
+      rules_promise_second: "ne bo objavljal_a vsebin, ki bi kršile ali posegale v osebnostne pravice tretjih oseb;"
+      rules_promise_third: "ne bo objavljal_a slik ali fotografij, ki so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem dobil_a ustrezno soglasje lastnikov in tretjih oseb;"
+      rules_promise_fourth: "ne bo objavljal_a groženj, ne bo se izražal_a slabšalno, prostaško, poniževalno ali žaljivo;"
+      rules_promise_fifth: "ne bo objavljal_a avtorskih del, za katere nima avtorskih pravic, in orodja ne bo uporabil/-a za distribuiranje avtorsko zaščitenih vsebin ali vsebin, ki so v lasti druge pravne ali fizične osebe."
+      rules_second: "Kršitev omenjenih pravil se kaznuje z začasno omejitvijo delovanja uporabnice_ka, prekinitvijo uporabniškega računa in/ali izbrisom vsebine."
+      responsibilities_title: "Vsebine in omejitev odgovornosti pri uporabi spletnega orodja"
+      responsibilities_first: "Pridržujemo si pravico do spreminjanja, dodajanja ali odstranitve vsebin brez predhodnega opozorila in ne prevzemamo odgovornosti za kakršne koli posledice takšnih sprememb."
+      responsibilities_second: "Obiskovalci spletnega orodja uporabljajo spletno orodje, njene dele in vsebine izključno na lastno odgovornost. Ne prevzemamo nikakršne odgovornosti o točnosti in pravilnosti objavljenih informacij in vsebin na spletnem orodju, odgovornosti zaradi spremembe že objavljenih informacij ali vsebin in odgovornosti za morebitno nastalo škodo, ki bi obiskovalcu spletnega orodja nastala zaradi uporabe tam objavljenih informacij ali vsebin."
+      responsibilities_third: "Ne prevzemamo odgovornosti za kakršno koli direktno ali indirektno vrsto polemike, spora in/ali pravdnega postopka, ki bi lahko nastal zaradi objave ali razširjanja vsebine, za katero s strani zakonitih lastnic_kov ni bilo pridobljeno dovoljenje. Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki je zagotovila vsebino."
+      responsibilities_fourth: "Prav tako ne odgovarjamo za škodo, ki bi nastala zaradi uporabe spletnega orodja, in ne jamčimo za uspešnost uporabe spletnega orodja. V nobenem primeru ne odgovarjamo za kakršnokoli škodo, ki bi izvirala iz uporabe oziroma nezmožnosti uporabe spletnega orodja, vključno s škodo zaradi izgubljenega prihodka ali pričakovanega dobička, izgube ali okrnitve dobrega imena, izgube poslov ali izgube podatkov. Ne odgovarjamo za nadomestilo morebitne neposredne, posredne, naključne, posebne, kaznovalne, posledične škode, ali druge kakršne koli druge oblike škode, ki posredno, neposredno ali na kakršenkoli drug način izhaja iz napak, pomot ali netočnosti vsebine spletnega orodja, ali iz kakršnih koli drugih dejstev povezanih s spletnim orodjem ali njegovo uporabo."
+      responsibilities_fifth: "Prav tako nismo odgovorni za nadomestilo kakršnekoli škode, ki nastane zaradi nepooblaščenega dostopa do, ali uporabe, naših strežnikov in/ali katerihkoli in vseh v njih shranjenih podatkov."
+      responsibilities_sixth: "Na spletnem mestu so objavljene tudi povezave, ki kažejo na spletna mesta drugih oseb. Na delovanje teh spletnih mest in na njihovo vsebino ne moremo vplivati in zato ne sprejemamo nikakršne odgovornosti za točnost tam objavljenih informacij in vsebin."
+      responsibilities_list: "Prav tako nismo odgovorni za vsebine:"
+      responsibilities_list_first: "ki spodbujajo k spolni, rasni, narodnostni ali verski nestrpnosti ali h kakršnikoli obliki diskriminacije na podlagi osebnih okoliščin posameznic_kov;"
+      responsibilities_list_second: "ki kršijo ali posegajo v osebnostne pravice tretjih oseb, so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem obstajalo ustrezno soglasje lastnic_kov in tretjih oseb;"
+      responsibilities_list_third: "ki so grožnje, slabšalne, prostaške, poniževalne ali žaljive;"
+      responsibilities_list_fourth: "ki so avtorska dela, za katere uporabnica_k nima avtorskih pravic. Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki zagotavlja vsebino."
+      responsibilities_seventh: "Trudili se bomo, da tovrstne vsebine kar najhitreje umaknemo s spletnega orodja in proti uporabnicam_kom uvedemo ustrezne sankcije."
+      responsibilities_eighth: "V primeru kakršnega koli spora med uporabnicami_ki spletnega orodja in/ali tretjo osebo smo izvzeti iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in/ali nastalimi v sodnem postopku."
+      data_protection_title: "Varovanje osebnih podatkov"
+      data_protection_first: "Upravljalec osebnih podatkov je:"
+      data_protection_first_note1: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
+      data_protection_first_note2: "Matična številka:  5883288000"
+      data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: xyxyxyxyxyxyx"
+      data_protection_first_note4: "E-naslov: mestna.obcina@novomesto.si"
+      data_protection_first_note5: "telefon: 07/ 7 39 39 202"
+      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodeluj in glasuj! je:"
+      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+      data_protection_second_note2: "Matična številka: 6468594000"
+      data_protection_second_note3: "E-naslov: vsi@danesjenovdan.si"
+      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Mestne občine Novo mesto in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
+      data_protection_fourth: "Inštitut Danes je nov dan je predan varovanju osebnih podatkov in transparentni rabi podatkov, da lahko uporabniki ter podporniki kar se da brez skrbi spremljajo ter podpirajo naše delo. Spoštujemo vaše zaupanje in vam zagotavljamo, da bomo z vašimi osebnimi podatki ravnali skrbno in jih obdelovali v skladu z veljavno zakonodajo na področju varovanja osebnih podatkov (GDPR in ZVOP-2). V nadaljevanju vam podrobneje opisujemo namene in podlago obdelav vaših osebnih podatkov in vas seznanjamo z vašimi pravicami."
+      data_use_title: "Na kateri pravni podlagi obdelujemo osebne podatke"
+      data_use_list: "Razlogi za obdelavo osebnih podatkov:"
+      data_use_list_li1: "posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Ideje za Novo mesto."
+      data_store_title: "Katere osebne podatke shranjujemo"
+      data_store_list: "Shranjujemo podatke o:"
+      data_store_list_li1: "uporabniško ime,"
+      data_store_list_li2: "elektronskem naslovu uporabnice_ka,"
+      data_store_list_li3: "EMŠO uporabnice_ka."
+      data_store_first: "Drugih osebnih podatkov obdelovalec podatkov ne shranjuje."
+      data_store_second: "Osebni podatki se ne prenašajo v tretje države ali mednarodne organizacije."
+      data_process_title: "Na kakšen način obdelujemo osebne podatke"
+      data_process_first: "Upravljalec hrani osebne podatke o uporabnici_ku zgolj za namene pravilnega delovanja spletnega orodja, omogočanju zgoraj navedenih funkcionalnosti orodja ter obveznega in/ali dovoljenega komuniciranja z uporabnico_kom (posodobitve, motnje v delovanju, druge aktivnosti povezane z delovanjem in uporabo aplikacije ali kakršne koli druge na aplikacijo navezane aktivnosti)."
+      data_time_title: "Trajanje hrambe osebnih podatkov"
+      data_time_first: 'Podatke hranimo do izpolnitve namena, za katerega se ti podatki zbirajo, tj. do prekinitve uporabe orodja s strani uporabnice_ka. Uporabnica_k lahko kadarkoli prekinitev uporabe spletnega orodja in zahtevo za izbris iz evidence uporabnikov javi na e-naslov consul@djnd.si. Po prejetem emailu, ki prekinja uporabo spletnega orodja, bo obdelovalec podatkov vse podatke v naslednjem 1 mesecu izbrisal. Kljub izbrisu osebnih podatkov uporabnice_ka se predlogi, komentarji in podatki o glasovanjih hranijo, a so pripisani "izbrisanemu uporabniku".'
+      data_insight_title: "Vpogled v podatke in pravice posameznic_kov"
+      data_insight_first: "Posameznica_k ima v zvezi z osebnimi podatki vrsto pravic, ki jih navajamo spodaj. Posameznica_k lahko zahteva izvoz in vpogled do osebnih podatkov, ki jih DJND hrani o uporabnici_ku, s posredovanjem pisne zahteve na e-naslov consul@djnd.si. Osebni podatki so shranjeni v posebni aplikaciji, ki spoštuje zahteve zasebnosti ter si za najvišjo varnost hranjenih podatkov prizadeva z različnimi fizičnimi, tehničnimi in organizacijskimi ukrepi."
+      data_insight_second: "DJND pred izvrševanjem pravice preveri identiteto posameznice_ka, ki sprašuje o svojih pravicah."
+      data_insight_third: "Izpolnitev upravičene zahteve DJND izpolni v roku 1 meseca, pri čemer se ta rok lahko v primeru kompleksnosti zahtev oziroma večjega števila zahtev podaljša še največ za 2 meseca. V tem primer DJND o podaljšanju in razlogih zanj obvesti posameznico_ka."
+      data_insight_list: "Vrste pravic:"
+      data_insight_list_li1: "Pravica dostopa do podatkov: posameznico_ka na njegovo zahtevo seznanimo, ali se v zvezi z njo obdelujejo osebni podatki in kadar to drži, posredujemo naslednje informacije:"
+      data_insight_list_li1_subli1: "vrste osebnih podatkov;"
+      data_insight_list_li1_subli2: "kategorije uporabnice_ka, ki so jim bili, ali jim bodo razkriti osebni podatki;"
+      data_insight_list_li1_subli3: "roki hrambe;"
+      data_insight_list_li1_subli4: "obstoj pravice, da se od DJND zahteva popravek ali izbris osebnih podatkov ali omejitev obdelave osebnih podatkov v zvezi s posameznico_kom, na katero se nanašajo osebni podatki, ali obstoj pravice do ugovora k taki obdelavi;"
+      data_insight_list_li1_subli5: "pravica do vložitve pritožbe pri informacijskem pooblaščencu;"
+      data_insight_list_li1_subli6: "kadar osebni podatki niso zbrani od posameznice_ka, vse razpoložljive informacije v zvezi z njihovim virom;"
+      data_insight_list_li1_subli7: "obstoj avtomatiziranega sprejemanja odločitev, vključno z oblikovanjem profilov;"
+      data_insight_list_li1_subli8: "na podlagi zahteve DJND izdela kopijo osebnih podatkov, ki se obdelujejo in jih posreduje posameznici_ku."
+      data_insight_list_li2: "Pravica do popravka: Posameznica_k lahko kadarkoli zahteva, da DJND popravi netočne podatke ali dopolni nepopolne podatke, ki se nanašajo nanjo."
+      data_insight_list_li3: "Pravica do izbrisa podatkov (pravica do pozabe): Posameznica_k lahko zahteva, da se njeni osebni podatki izbrišejo v naslednjih primerih:"
+      data_insight_list_li3_subli1: "osebni podatki niso več potrebni v namene, za katere so bili zbrani, ali kako drugače obdelani;"
+      data_insight_list_li3_subli2: "posameznica_k prekliče privolitev, na podlagi katere poteka obdelava, in kadar za obdelavo ne obstaja nobena druga pravna podlaga;"
+      data_insight_list_li3_subli3: "posameznica_k obdelavi osebnih podatkov ugovarja, za njihovo obdelavo pa ne obstajajo nobeni prevladujoči zakoniti razlogi."
+      data_insight_list_li4: "Pravica do omejitve obdelave: Posameznica_k lahko zahteva, da se obdelava podatkov, ki se nanašajo nanjo omeji v naslednjih primerih:"
+      data_insight_list_li4_subli1: "podatki niso točni;"
+      data_insight_list_li4_subli2: "je obdelava nezakonita in posameznica_k ne želi, da podatke izbrišemo;"
+      data_insight_list_li4_subli3: "DJND podatkov ne potrebuje več za namene obdelav, vendar jih potrebuje posameznica_k za uveljavljanje, izvajanje ali nasprotovanje pravnim zahtevkom;"
+      data_insight_list_li4_subli4: "je posameznica_k vložil ugovor v zvezi z obdelavo."
+      data_insight_list_li5: "Pravica do prenosljivosti podatkov: Posameznica_k lahko zahteva izpis podatkov, ki jih je posredoval_a DJND, pri čemer obdelava teh podatkov temelji na podlagi pogodbe ali privolitve in se obdelava izvaja z avtomatiziranimi sredstvi."
+      data_insight_list_li6: "Pravica do ugovora: Posameznica_k lahko ugovarja obdelavi osebnih podatkov. Ta pravica se nanaša le na obdelavo osebnih podatkov, ki jo izvajamo na podlagi legitimnega interesa, ki prevlada nad interesi posameznice_ka."
+      data_insight_list_li7: "Pravica do vložitve pritožbe v zvezi z obdelovanjem osebnih podatkov: Posameznica_k lahko morebitno pritožbo v zvezi z obdelovanjem osebnih podatkov pošlje na naslove upravljavca iz prvega člena te politike."
+      data_insight_fourth: "Prav tako ima vsak_a posameznica_k, na katero se nanašajo osebni podatki, pravico, da vloži pritožbo neposredno pri Informacijskem pooblaščencu, če meni, da obdelava osebnih podatkov v zvezi z njo krši veljavno zakonodajo. Kontakt Informacijskega pooblaščenca:"
+      data_insight_fourth_note1: "Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana"
+      data_insight_fourth_note2: "Telefon: 01 230 97 30"
+      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si'"
+      cookies_title: "Piškotki"
+      cookies_intro: "Zakon o elektronskih komunikacijah (Uradni list št. 109/2012) ZEKom-1 je v pravni red prinesel pravila glede uporabe piškotkov in podobnih tehnologij za shranjevanje informacij ali dostop do informacij, shranjenih na računalnikih, tablicah ali mobilnih napravah uporabnikov. Naše orodje lahko v brskalnik vašega računalnika odloži tako imenovani »piškotek«."
+      cookies_what_title: "Kaj so piškotki?"
+      cookies_what_intro: "Piškotki so majhne besedilne datoteke, ki nam dajejo podatke o tem, kolikokrat oseba obišče našo stran in katere vsebine si uporabnik ogleduje. Piškotki niso škodljivi in so vedno časovno omejeni. Piškotki sami ne vsebujejo nobenih podatkov, ki bi omogočali identifikacijo osebe. Vedno imate možnost, da piškotke sprejmete ali zavrnete. Večina spletnih brskalnikov samodejno sprejme piškotke, kar lahko spremenite v nastavitvah tako, da računalnik piškotke zavrne ali pa da prejmete opozorilo, preden se piškotek shrani."
+      cookies_why_title: "Zakaj so potrebni?"
+      cookies_why_intro: "So temeljnega pomena za zagotavljanje uporabnici_ku prijaznih spletnih storitev. Interakcija med spletno_im uporabnico_kom in spletno storitvijo je s pomočjo piškotkov hitrejša in enostavnejša. Z njihovo pomočjo si spletna storitve zapomni vaše želje, zanimanja in izkušnje, s tem je prihranjen čas, uporaba spletnih storitev pa je bolj učinkovita in prijazna."
+      cookies_min_title: "Nujno potrebni piškotki"
+      cookies_min_intro: "To so piškotki, ki so nujni za pravilno delovanje spletnih storitev in brez njih prenos sporočila v komunikacijskem omrežju ne bi bilo mogoče. Ti piškotki omogočajo uporabnici_ku delovanje prijaznih spletnih storitev, boljšo uporabniško izkušnjo in za njih ni potrebno pridobiti soglasja."
+      cookies_list: "Spletno orodje Consul, ki poganja Sodeluj in glasuj!, uporablja zgolj dva nujno potrebna piškotka:"
+      cookies_list_li1: "_consul_session"
+      cookies_list_li1_desc: "Se uporablja, da je uporabnic_ka lahko vpisan_a v spletno orodje in lahko glasuje."
+      cookies_list_li2: "ahoy_visit in ahoy_visitor"
+      cookies_list_li2_desc: "Se uporabljata za preprečevanje zlorab uporabniške seje."
+      ip_title: "Intelektualna lastnina"
+      ip_intro: 'Vsa koda potrebna za delovanje te spletne strani je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
+      terms_second_checkbox: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Ankaran obdeluje moje osebne podatke za namen izvedbe projekta Sodeluj in glasuj."
+    statuses:
+      title: " Selezionare lo status della proposta "
+      waiting: " In attesa di attuazione"
+      doing: " In corso"
+      done: " Eseguito "
+      nil: "Senza status"
+    errors:
+      data_consent: " Per procedere è necessario acconsentire al trattamento dei dati."
+      price: " Il campo valore del progetto non deve essere vuoto."
+      registration: " A causa di errori, non siamo riusciti a salvare il modulo."
+      submit_investment: " A causa di errori, non siamo riusciti a salvare il modulo."
+      no_answer: " Si prega di compilare la domanda."
+      new_investment_not_allowed: " È possibile inviare solo 3 proposte."
+    footer:
+      djnd: La piattaforma è gestita da
+    registration:
+      already_has_account: " Ha già un account?"
