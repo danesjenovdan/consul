@@ -190,16 +190,16 @@ sl-SI:
         investment:
           no_image: Predlog nima slike.
     meta:
-      pp_name: Maribor sodeluj
-      place_name: Mestna Občina Maribor
+      pp_name: Sodelujem
+      place_name: Občina Ankaran
       guiding_questions: "<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>"
       tos: "pogoji-uporabe"
     switcher:
       select: "Izberi proračun"
     social:
-      fb_desc: Maribor sodeluj - Participativni proračun Mestne občine Maribor
-      tw_desc: "Maribor sodeluj - Participativni proračun Mestne občine Maribor: "
-      email_desc: Oglej si predlog proračunske naložbe v projektu Maribor sodeluj - Participativni proračun Mestne občine Maribor
+      fb_desc: Sodelujem - Participativni proračun občine Ankaran
+      tw_desc: "MSodelujem - Participativni proračun občine Ankaran"
+      email_desc: Oglej si predlog proračunske naložbe v projektu Sodelujem - Participativni proračun občine Ankaran
     headings:
       drafting: Osnutek (skrito javnosti)
       informing: Informiranje
@@ -289,7 +289,7 @@ sl-SI:
         title_3: In nato?
     landing:
       title: Participativni proračun 2025-2026!
-      introduction_text: S projektom participativnega proračuna lahko občani Mestn občine Ankaran soodločate pri razporejanju dela proračunskega denarja. Projektni predlogi, ki so po meri občanov, bodo izboljšali učinkovitost porabe skupnih sredstev, krepili participacijo v lokalnem okolju in izboljšali kakovost življenja v občini.
+      introduction_text: S projektom participativnega proračuna lahko občani občine Ankaran soodločate pri razporejanju dela proračunskega denarja. Projektni predlogi, ki so po meri občanov, bodo izboljšali učinkovitost porabe skupnih sredstev, krepili participacijo v lokalnem okolju in izboljšali kakovost življenja v občini.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
@@ -332,7 +332,7 @@ sl-SI:
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
       date: "1. 1. 2025"
-      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Ideje za Novo mesto ter politike varovanja osebnih podatkov."
+      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Sodelujem ter politike varovanja osebnih podatkov."
       active_use: "Aktivno uporabo spletnega orodja štejemo kot soglasje uporabnice_ka, da se strinja s temi splošnimi pogoji uporabe. Vsi, ki želijo aktivno sodelovati, se morajo registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe. V kolikor se kot uporabnica_k ne strinjate s temi splošnimi pogoji, vas prosimo, da spletnega mesta ne uporabljate."
       changes: "Pridružujemo si pravico, da splošne pogoje kadarkoli in brez predhodne najave spremenimo, tako da novo različico objavimo na tej spletni strani. Različica splošnih pogojev je razvidna iz datuma njihove zadnje spremembe, ki je zabeležena na vrhu teh pogojev."
       help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
@@ -361,7 +361,7 @@ sl-SI:
           desc: "V zadnji fazi orodje omogoča spremljanje rezultatov izvedbe."
       registration_title: "Registracija"
       registration_intro1: "Le registrirane_i uporabnice_ki lahko oddajo predloge projektov, komentirajo in glasujejo za oddane projekte. Neregistrirane_i uporabnice_ki lahko prosto spremljajo objavljene vsebine, ne morejo pa oddajati predlogov projektov, o njih glasovati ali sodelovati v debatah."
-      registration_intro2: "Uporabnica_k z registracijo potrjuje, da je dopolnil_a 15 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Mestno občino Novo mesto, da preveri verodostojnost osebnih podatkov za potrebe projekta Predlagam, odločam! iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
+      registration_intro2: "Uporabnica_k z registracijo potrjuje, da je dopolnil_a 15 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča občino Ankaran, da preveri verodostojnost osebnih podatkov za potrebe projekta Predlagam, odločam! iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
       registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
       name: "uporabniško ime"
       email: "elektronski naslov"
@@ -401,15 +401,15 @@ sl-SI:
       data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: xyxyxyxyxyxyx"
       data_protection_first_note4: "E-naslov: info@obcina-ankaran.si"
       data_protection_first_note5: "telefon: (05) 665 30 00"
-      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodeluj in glasuj! je:"
+      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodelujem je:"
       data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       data_protection_second_note2: "Matična številka: 6468594000"
       data_protection_second_note3: "E-naslov: vsi@danesjenovdan.si"
-      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Mestne občine Novo mesto in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
+      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu občine Ankaran in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
       data_protection_fourth: "Inštitut Danes je nov dan je predan varovanju osebnih podatkov in transparentni rabi podatkov, da lahko uporabniki ter podporniki kar se da brez skrbi spremljajo ter podpirajo naše delo. Spoštujemo vaše zaupanje in vam zagotavljamo, da bomo z vašimi osebnimi podatki ravnali skrbno in jih obdelovali v skladu z veljavno zakonodajo na področju varovanja osebnih podatkov (GDPR in ZVOP-2). V nadaljevanju vam podrobneje opisujemo namene in podlago obdelav vaših osebnih podatkov in vas seznanjamo z vašimi pravicami."
       data_use_title: "Na kateri pravni podlagi obdelujemo osebne podatke"
       data_use_list: "Razlogi za obdelavo osebnih podatkov:"
-      data_use_list_li1: "posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Ideje za Novo mesto."
+      data_use_list_li1: "posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Sodelujem."
       data_store_title: "Katere osebne podatke shranjujemo"
       data_store_list: "Shranjujemo podatke o:"
       data_store_list_li1: "uporabniško ime,"
@@ -460,14 +460,14 @@ sl-SI:
       cookies_why_intro: "So temeljnega pomena za zagotavljanje uporabnici_ku prijaznih spletnih storitev. Interakcija med spletno_im uporabnico_kom in spletno storitvijo je s pomočjo piškotkov hitrejša in enostavnejša. Z njihovo pomočjo si spletna storitve zapomni vaše želje, zanimanja in izkušnje, s tem je prihranjen čas, uporaba spletnih storitev pa je bolj učinkovita in prijazna."
       cookies_min_title: "Nujno potrebni piškotki"
       cookies_min_intro: "To so piškotki, ki so nujni za pravilno delovanje spletnih storitev in brez njih prenos sporočila v komunikacijskem omrežju ne bi bilo mogoče. Ti piškotki omogočajo uporabnici_ku delovanje prijaznih spletnih storitev, boljšo uporabniško izkušnjo in za njih ni potrebno pridobiti soglasja."
-      cookies_list: "Spletno orodje Consul, ki poganja Sodeluj in glasuj!, uporablja zgolj dva nujno potrebna piškotka:"
+      cookies_list: "Spletno orodje Consul, ki poganja Sodelujuem, uporablja zgolj dva nujno potrebna piškotka:"
       cookies_list_li1: "_consul_session"
       cookies_list_li1_desc: "Se uporablja, da je uporabnic_ka lahko vpisan_a v spletno orodje in lahko glasuje."
       cookies_list_li2: "ahoy_visit in ahoy_visitor"
       cookies_list_li2_desc: "Se uporabljata za preprečevanje zlorab uporabniške seje."
       ip_title: "Intelektualna lastnina"
       ip_intro: 'Vsa koda potrebna za delovanje te spletne strani je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
-      terms_second_checkbox: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Ankaran obdeluje moje osebne podatke za namen izvedbe projekta Sodeluj in glasuj."
+      terms_second_checkbox: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Ankaran obdeluje moje osebne podatke za namen izvedbe projekta Sodelujem."
     statuses:
       title: "Izberi status predloga"
       waiting: "Čaka na izvedbo"
