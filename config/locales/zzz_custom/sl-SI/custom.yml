@@ -289,7 +289,7 @@ sl-SI:
         title_3: In nato?
     landing:
       title: Participativni proračun 2025-2026!
-      introduction_text: Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši.
+      introduction_text: S projektom participativnega proračuna lahko občani Mestn občine Ankaran soodločate pri razporejanju dela proračunskega denarja. Projektni predlogi, ki so po meri občanov, bodo izboljšali učinkovitost porabe skupnih sredstev, krepili participacijo v lokalnem okolju in izboljšali kakovost življenja v občini.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
@@ -331,15 +331,15 @@ sl-SI:
       other_contact: 'Kontaktiraj predstavnike Občine Ankaran na <a href="mailto:predlagam@obcina-ankaran.si" target="_blank">predlagam@obcina-ankaran.si</a>.'
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
-      date: "1. 2. 2024"
+      date: "1. 1. 2025"
       intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Ideje za Novo mesto ter politike varovanja osebnih podatkov."
       active_use: "Aktivno uporabo spletnega orodja štejemo kot soglasje uporabnice_ka, da se strinja s temi splošnimi pogoji uporabe. Vsi, ki želijo aktivno sodelovati, se morajo registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe. V kolikor se kot uporabnica_k ne strinjate s temi splošnimi pogoji, vas prosimo, da spletnega mesta ne uporabljate."
       changes: "Pridružujemo si pravico, da splošne pogoje kadarkoli in brez predhodne najave spremenimo, tako da novo različico objavimo na tej spletni strani. Različica splošnih pogojev je razvidna iz datuma njihove zadnje spremembe, ki je zabeležena na vrhu teh pogojev."
       help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
       contact1:
-        mail: "mestna.obcina@novomesto.si"
-        note1: "Telefon: v času uradnih ur občinske uprave na 07/  7 39 39 202"
-        note2: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
+        mail: "info@obcina-ankaran.si"
+        note1: "Telefon: v času uradnih ur občinske uprave na (05) 665 30 00"
+        note2: "Občina Ankaran, Občinska uprava, Regentova ulica 2, 6280 Ankaran"
       contact2:
         mail: "consul@djnd.si"
         note1: "Tehnična pomoč"
@@ -396,13 +396,13 @@ sl-SI:
       responsibilities_eighth: "V primeru kakršnega koli spora med uporabnicami_ki spletnega orodja in/ali tretjo osebo smo izvzeti iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in/ali nastalimi v sodnem postopku."
       data_protection_title: "Varovanje osebnih podatkov"
       data_protection_first: "Upravljalec osebnih podatkov je:"
-      data_protection_first_note1: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
-      data_protection_first_note2: "Matična številka:  5883288000"
+      data_protection_first_note1: "Občina Ankaran, Regentova Ulica 2, 6280 Ankaran"
+      data_protection_first_note2: "Matična številka: 2482851000"
       data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: xyxyxyxyxyxyx"
-      data_protection_first_note4: "E-naslov: mestna.obcina@novomesto.si"
-      data_protection_first_note5: "telefon: 07/ 7 39 39 202"
+      data_protection_first_note4: "E-naslov: info@obcina-ankaran.si"
+      data_protection_first_note5: "telefon: (05) 665 30 00"
       data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodeluj in glasuj! je:"
-      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       data_protection_second_note2: "Matična številka: 6468594000"
       data_protection_second_note3: "E-naslov: vsi@danesjenovdan.si"
       data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Mestne občine Novo mesto in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
@@ -451,7 +451,7 @@ sl-SI:
       data_insight_fourth: "Prav tako ima vsak_a posameznica_k, na katero se nanašajo osebni podatki, pravico, da vloži pritožbo neposredno pri Informacijskem pooblaščencu, če meni, da obdelava osebnih podatkov v zvezi z njo krši veljavno zakonodajo. Kontakt Informacijskega pooblaščenca:"
       data_insight_fourth_note1: "Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana"
       data_insight_fourth_note2: "Telefon: 01 230 97 30"
-      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si'"
+      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si"
       cookies_title: "Piškotki"
       cookies_intro: "Zakon o elektronskih komunikacijah (Uradni list št. 109/2012) ZEKom-1 je v pravni red prinesel pravila glede uporabe piškotkov in podobnih tehnologij za shranjevanje informacij ali dostop do informacij, shranjenih na računalnikih, tablicah ali mobilnih napravah uporabnikov. Naše orodje lahko v brskalnik vašega računalnika odloži tako imenovani »piškotek«."
       cookies_what_title: "Kaj so piškotki?"
