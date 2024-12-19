@@ -214,7 +214,7 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li>  <h6>Območje 1 (196.000 EUR)</h6>  <div>Levi breg: KS Kamnica, KS Bresternica-Gaj, MČ Koroška vrata</div></li><li>  <h6>Območje 2 (196.000 EUR)</h6>  <div>Levi breg: MČ Ivan Cankar, MČ Center, KS Malečnik-Ruperče</div></li><li>  <h6>Območje 3 (196.000 EUR)</h6>  <div>Desni breg: KS Limbuš, KS Pekre, MČ Radvanjem, KS Razvanje</div></li><li>  <h6>Območje 4 (196.000 EUR)</h6>  <div>Desni breg: MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova</div></li><li>  <h6>Območje 5 (196.000 EUR)</h6>  <div>Desni breg: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno</div></li>"
+      headings_sidebar: "<li>  <h6>Območje 1</h6>  <div>MČ Dečkovo naselje in MČ Nova vas</div></li><li>  <h6>Območje 2</h6>  <div>MČ Kajuh, MČ Savinja in MČ Slavko Šlander</div></li><li>  <h6>Območje 3</h6>  <div>KS Ljubečna, KS Škofja vas in KS Trnovlje</div></li><li>  <h6>Območje 4</h6>  <div>KS Gaberje in MČ Hudinja</div></li><li>  <h6>Območje 5</h6>  <div>MČ Lava in KS Medlog</div></li><li>  <h6>Območje 6</h6>  <div>KS Aljažev hrib, KS Pod gradom in KS Teharje</div></li><li>  <h6>Območje 7</h6>  <div>KS Ostrožno in KS Šmartno v Rožni dolini</div></li><li>  <h6>Območje 8</h6>  <div>MČ Center in MČ Dolgo polje</div></li>"
       select_heading: Izberi območje
       select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
