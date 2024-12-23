@@ -4,6 +4,13 @@
 
   <fieldset class="required-fields">
 
+    <%# budget heading is selected automatically based on users' addresses %>
+    <%# unless budget.single_heading? %>
+      <!--div-->
+        <%#= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, label: 'Izberi območje v občini, za katerega predlagaš predlog' }%>
+      <!--/div-->
+    <%# end %>
+
     <div>
       <%= render "shared/globalize_locales", resource: investment %>
     </div>
@@ -23,11 +30,9 @@
               class: "html-area" %>
       </div>
     <% end %>
-  </fieldset>
 
   <%= f.invisible_captcha :subtitle %>
 
-  <fieldset>
     <%= f.fields_for :answers do |builder| %>
       <% if budget.questions.order(:id)[builder.index].text.start_with?('A1') %>
         <%= builder.label :A1, "Točna lokacija projekta", class: "inline-block" %>
@@ -82,16 +87,21 @@
         <%= builder.hidden_field :budget_id %>
         <%= builder.hidden_field :budget_question_id %>
         <br />
-
       <% else %>
-        <p>
-          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
-          <%= builder.hidden_field :budget_id %>
-          <%= builder.hidden_field :budget_question_id %>
-          <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+        <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+          <p>
+            <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5, class: 'is-invalid-input'%>
+            <%= builder.hidden_field :budget_id %>
+            <%= builder.hidden_field :budget_question_id %>
             <span class="form-error is-visible"><%= t("custom.errors.no_answer") %></span>
-          <% end %>
-        </p>
+          </p>
+        <% else %>
+          <p>
+            <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+            <%= builder.hidden_field :budget_id %>
+            <%= builder.hidden_field :budget_question_id %>
+          </p>
+        <% end %> <!-- HERE -->
       <% end %>
     <% end %>
 
@@ -103,7 +113,9 @@
       <br />
       Zgolj za orientacijo so na <a href="#">povezavi  [blank link, še čakamo dokument]</a> navedene vrednosti vzorčnih projektov.</p>
     <%= f.number_field :price, label: false, :required => true %>
+  </fieldset>
 
+  <fieldset>
     <% if feature?(:allow_images) %>
       <%= render Images::NestedComponent.new(f) %>
     <% end %>

@@ -43,6 +43,9 @@ sl-SI:
               invalid: EMŠO ni pravilne oblike.
             address:
               invalid: Ta naslov ni veljaven. Prosimo preverite črkovanje ali vpišite drug naslov.
+  proposals:
+    form:
+      map_remove_marker: "Odstrani trenutno izbrano lokacijo predloga"
   budgets:
     investments:
       investment:
@@ -61,8 +64,9 @@ sl-SI:
       form:
         tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
         submit: "Oddaj predlog"
+        map_location: "Lokacija predloga"
       index:
-        title: Participativni proračun
+        title: Participativni proračun – seznam predlogov
         by_heading: "Investicijski projekti na območju: %{heading}"
         sidebar:
           different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
@@ -294,7 +298,7 @@ sl-SI:
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
     about:
-      intro: "Participativni proračun je proces demokratičnega soodločanja, pri katerem o porabi dela proračunskih sredstev neposredno odločajo občanke in občani. Sami prepoznajo probleme in možnosti izboljšav, tako predlagajo projekte, ki so najnujnejši, njihova izvedba pa bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti. <p class=\"intro\">V Občini Ankaran bodo za proračunski leti 2025 in 2026 lahko občanke in občani predlagali projekte in o njih glasovali, v skupni vrednosti do 100.000,00 EUR, od tega za območje participativnega proračuna Ankaran vzhod za projekte v skupni vrednosti do 35.000,00 EUR, Ankaran center za projekte v skupni vrednosti do 30.000,00 EUR ter Ankaran zahod za projekte v skupni vrednosti do 35.000,00 EUR.</p>"
+      intro: 'Participativni proračun je proces demokratičnega soodločanja, pri katerem o porabi dela proračunskih sredstev neposredno odločajo občanke in občani. Sami prepoznajo probleme in možnosti izboljšav, tako predlagajo projekte, ki so najnujnejši, njihova izvedba pa bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti. <p class="intro">V Občini Ankaran bodo za proračunski leti 2025 in 2026 lahko občanke in občani predlagali projekte in o njih glasovali, v skupni vrednosti do 100.000,00 EUR, od tega za območje participativnega proračuna Ankaran vzhod za projekte v skupni vrednosti do 35.000,00 EUR, Ankaran center za projekte v skupni vrednosti do 30.000,00 EUR ter Ankaran zahod za projekte v skupni vrednosti do 35.000,00 EUR.</p>'
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
       description_1: "Občanke in občani lahko oddajo predloge projektov od 15.01.2025 do 15.02.2025. Posamezen predlog projekta mora biti oddan na za to določenem obrazcu, njegova vrednost mora biti med 1.000,00 in 30.000,00 EUR z vključenim DDV-jem ter ustrezati drugim predpisanim pogojem za uvrstitev v participativni proračun – na glasovanje.</p><p>Projektni predlog mora biti oddan na obrazcu, ki ga  lahko izpolnite na tem spletnem mestu, ga prenesete na tej povezavi ali prevzamete v sprejemni pisarni Občine Ankaran v času uradnih ur.</p><p>Predlagatelj mora na obrazcu navesti zahtevane osebne podatke, anonimi predlogi ne bodo obravnavani. Vsak predlagatelj lahko predlaga največ 3 projektne predloge in sicer za projekte, ki se nanašajo na območje participativnega proračuna v katerem ima stalno prebivališče (območja participativnega proračuna so Ankaran vzhod, Ankaran center in Ankaran zahod ter so razvidna na zemljevidu na tej povezavi).</p><p>Obrazec za oddajo projektnega predloga lahko oddate: <ul><li>na tem spletnem mestu, po registraciji in vpisu v spletno aplikacijo ali</li><li>po elektronski pošti na naslov predlagam@obcina-ankaran.si.  ali</li><li>osebno v sprejemni pisarni (vložišču) Občine Ankaran, na naslovu Regentova ulica 2, Ankaran, v času uradnih ur.</li></ul></p>"
