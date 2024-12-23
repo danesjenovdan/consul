@@ -2,7 +2,7 @@
 
 form {
   .required-fields {
-    label::after {
+    label:not(.djnd-radio label)::after {
       content: ' *';
       font-size: 0.75rem;
       color: red;
