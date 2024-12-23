@@ -71,7 +71,13 @@
           <div class="progress-votes">
             <div class="row">
               <div class="small-12 column">
-                <% if @ballot.valid_heading?(@heading) %>
+                <% if @budget.id == 2 and !@ballot.user.is_young_person %>
+                  <div class="small-12 medium-9">
+                    <div class="callout warning margin-top">
+                      Sodelovanje v tem proračunu je omogočeno samo tistim, ki so mlajši od 30 let.
+                    </div>
+                  </div>
+                <% elsif @ballot.valid_heading?(@heading) %>
                   <div class="progress-bar-nav" data-fixed-bar>
                     <% if @budget.headings.count > 1 %>
                       <h2>
