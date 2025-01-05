@@ -108,9 +108,9 @@ sl-SI:
         not_enough_available_votes: Na voljo nimaš več nobenega glasu. Če želiš glasovati za ta predlog, odstrani svoj glas z drugega predloga.
         organization: Organizacijam ni dovoljeno glasovati
         not_selected: Neizbranih investicij ni mogoče podpreti
-        not_enough_money: "Žal na voljo nimaš več dovolj proračuna."
+        not_enough_money: "Žal nimaš več dovolj sredstev."
         no_ballots_allowed: Faza izbiranja je končana
-        different_heading_assigned: "<strong>Glasuješ lahko samo za predloge v enakem območju.</strong>"
+        different_heading_assigned: "<strong>Glasuješ lahko samo za predloge v enem območju.</strong>"
         change_ballot: spremeniš svoje glasove
   comments:
     actions:
