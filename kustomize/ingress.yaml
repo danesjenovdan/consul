@@ -10,9 +10,31 @@ spec:
   tls:
     - hosts:
         - consul-celje.lb.djnd.si
+        - celjepomoje.si
+        - www.celjepomoje.si
       secretName: consul-celje-tls
   rules:
     - host: consul-celje.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: celjepomoje.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: www.celjepomoje.si
       http:
         paths:
           - path: /
