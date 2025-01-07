@@ -71,7 +71,7 @@
           <div class="progress-votes">
             <div class="row">
               <div class="small-12 column">
-                <% if @budget.id == 2 and !@ballot.user.is_nil? %>
+                <% if @budget.id == 2 and !@ballot.user.nil? %>
                   <% if !@ballot.user.is_young_person %>
                     <div class="small-12 medium-9">
                       <div class="callout warning margin-top">
