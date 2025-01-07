@@ -278,7 +278,7 @@ it:
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
     about:
-      intro: "Il bilancio partecipativo è una procedura di partecipazione democratica in cui i cittadini decidono direttamente come spendere parte dei fondi del bilancio. Individuano autonomamente i problemi e le opportunità di miglioramento, proponendo i progetti più urgenti, la cui realizzazione contribuirebbe maggiormente a migliorare la qualità della vita della comunità. <p class="intro">Nel Comune di Ancarano, per gli esercizi finanziari 2025 e 2026, i cittadini potranno proporre e votare i progetti. I progetti hanno un valore massimo di 100.000 euro, di cui 40.000 euro per la zona del bilancio partecipativo Ancarano est, 20.000 euro per Ancarano centro e 40.000 euro per la zona del bilancio partecipativo Ancarano ovest.</p>"
+      intro: 'Il bilancio partecipativo è una procedura di partecipazione democratica in cui i cittadini decidono direttamente come spendere parte dei fondi del bilancio. Individuano autonomamente i problemi e le opportunità di miglioramento, proponendo i progetti più urgenti, la cui realizzazione contribuirebbe maggiormente a migliorare la qualità della vita della comunità. <p class="intro">Nel Comune di Ancarano, per gli esercizi finanziari 2025 e 2026, i cittadini potranno proporre e votare i progetti. I progetti hanno un valore massimo di 100.000 euro, di cui 40.000 euro per la zona del bilancio partecipativo Ancarano est, 20.000 euro per Ancarano centro e 40.000 euro per la zona del bilancio partecipativo Ancarano ovest.</p>'
       main_title: Come funziona?
       heading_1: Accoglimento delle proposte
       description_1: "I cittadini possono presentare le proposte progettuali a partire dal 27 gennaio 2025 fino al 23 febbraio 2025. Ogni proposta progettuale deve essere presentata sull'apposito modulo, avere un valore compreso tra 1.000,00 e 30.000,00 euro, IVA inclusa, e soddisfare le altre condizioni per essere inserita nel Bilancio partecipativo - da sottoporre a votazione.</p><p>Le proposte progettuali devono essere presentate tramite modulo che può essere compilato su questo sito web, scaricato qui o ritirato presso l’ufficio protocollo del Comune di Ancarano durante l’orario d’ufficio.</p><p>Il proponente deve fornire i propri dati personali richiesti nel modulo, le proposte anonime non saranno prese in considerazione. Ogni candidato può proporre un massimo di 3 proposte progettuali, per progetti relativi alla zona del bilancio partecipativo in cui risiede (le zone del bilancio partecipativo sono Ancarano est, Ancarano centro e Ancarano ovest e sono visibili sulla mappa disponibile a questo collegamento).</p><p>È possibile presentare il modulo per le proposte progettuali:<ul><li>su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online,</li><li>via posta elettronica all’indirizzo sodelujem@obcina-ankaran.si ,</li><li>di persona presso l’ufficio protocollo del Comune di Ancarano, Via Ivan Regent 2, Ancarano, durante l’orario d'ufficio.</li></ul></p>"
@@ -299,7 +299,7 @@ it:
     help:
       main_title: "Domande frequenti"
       heading_1: "È necessario avere un numero di telefono e una connessione ad internet per partecipare?"
-      description_1: "ZPer creare un account online sono necessari un numero di telefono, un indirizzo e-mail e una connessione a internet, ma è possibile completare tutte le funzionalità anche presso il comune."
+      description_1: "Per creare un account online sono necessari un numero di telefono, un indirizzo e-mail e una connessione a internet, ma è possibile completare tutte le funzionalità anche presso il comune."
       heading_2: "Come creare e verificare il proprio account?"
       description_2: "Per creare un account, premere il pulsante “Registrati” a fondo pagina del sito web, premendo su uno qualsiasi dei pulsanti si accede allo stesso modulo online. Per creare un account, è necessario inserire il nome utente, l'indirizzo e-mail, il CAUC, l'indirizzo permanente e la password. Una volta creato l'account, è necessario confermarlo cliccando sul collegamento contenuto nell'e-mail che verrà inviata al vostro indirizzo di posta elettronica."
       heading_3: "Come creare una nuova proposta?"
@@ -310,9 +310,9 @@ it:
       description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
       help_title: "Serve aiuto"
       technical_issues: "Avete problemi tecnici? "
-      technical_contact: 'Contattate il gestore dell'app all'indirizzo <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
+      technical_contact: Contattate il gestore dell'app all'indirizzo <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.
       other_questions: "Avete altre domande?"
-      other_contact: 'Contattate il Comune di Ancarano all'indirizzo <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">predlagam@obcina-ankaran.si</a>. Durante l’orario d'ufficio è a disposizione anche il numero di telefono 05 66 53 000.'
+      other_contact: Contattate il Comune di Ancarano all'indirizzo <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">predlagam@obcina-ankaran.si</a>. Durante l’orario d'ufficio è a disposizione anche il numero di telefono 05 66 53 000.
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
       date: "1. 1. 2025"
