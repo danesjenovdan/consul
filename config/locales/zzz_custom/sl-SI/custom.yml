@@ -343,11 +343,11 @@ sl-SI:
       contact1:
         mail: "info@obcina-ankaran.si"
         note1: "Telefon: v času uradnih ur občinske uprave na (05) 665 30 00"
-        note2: "Občina Ankaran, Občinska uprava, Regentova ulica 2, 6280 Ankaran"
+        note2: "Občina Ankaran, Občinska uprava, Jadranska cesta 66, 6280 Ankaran"
       contact2:
         mail: "consul@djnd.si"
         note1: "Tehnična pomoč"
-        note2: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+        note2: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       about_title: "O orodju"
       about_first: "Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
       about_second: "Spletno orodje omogoča direktno soodločanje o delu občinskega proračuna. Uporabnice_ki lahko oddajajo, podpirajo in glasujejo o predlogih za projekte ter spremljajo njihov razvoj."
