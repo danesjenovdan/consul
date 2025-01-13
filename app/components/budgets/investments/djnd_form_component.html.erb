@@ -35,53 +35,47 @@
 
     <%= f.fields_for :answers do |builder| %>
       <% if budget.questions.order(:id)[builder.index].text.start_with?('A1') %>
-        <%= builder.label :A1, "Točna lokacija projekta", class: "inline-block" %>
+        <%= builder.label :A1, t('custom.ankaran.form.tocna_lokacija_label'), class: "inline-block" %>
         <p class="help-text">
-          Navedite parcelno številko (skupaj s katastrsko občino) ali naslov lokacije
-          kjer naj bi se projekt izvedel. Podatke o parcelnih številkah in naslovih lahko
-          dobite na prostorskem portalu Občine Ankaran na spletni strani občine oz. na
-          povezavi <a href="https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz">https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz</a>.</p>
+          <%= t('custom.ankaran.form.tocna_lokacija_info').html_safe %>
+        </p>
         <%= builder.text_field :text, label: false, :required => true %>
         <%= builder.hidden_field :budget_id %>
         <%= builder.hidden_field :budget_question_id %>
         <br />
 
       <% elsif budget.questions.order(:id)[builder.index].text.start_with?('A2') %>
-        <%= builder.label :A2, "Lastništvo nepremičnine", class: "inline-block" %>
+        <%= builder.label :A2, t('custom.ankaran.form.lastnistvo_nepremicnine_label'), class: "inline-block" %>
         <p class="help-text">
-          Kdo je lastnik nepremičnine (parcele, stavbe,…) kjer naj bi se izvedel projekt in ste jo navedli v prejšnji točki?
+          <%= t('custom.ankaran.form.lastnistvo_nepremicnine_info') %>
         </p>
         <div class="djnd-radio">
-          <%= builder.radio_button :text, "lastnik je občina Ankaran", :label => "lastnik je občina Ankaran" %>
+          <%= builder.radio_button :text, "lastnik je občina Ankaran", :label => t('custom.ankaran.form.lastnistvo_nepremicnine_obcina') %>
         </div>
         <div class="djnd-radio">
-          <%= builder.radio_button :text, "lastnik je druga pravna ali fizična oseba", :label => "lastnik je druga pravna ali fizična oseba" %>
+          <%= builder.radio_button :text, "lastnik je druga pravna ali fizična oseba", :label => t('custom.ankaran.form.lastnistvo_nepremicnine_drugi') %>
         </div>
         <%= builder.hidden_field :budget_id %>
         <%= builder.hidden_field :budget_question_id %>
         <br />
 
       <% elsif budget.questions.order(:id)[builder.index].text.start_with?('A3') %>
-        <%= builder.label :A3, "Pravica uporabe oz. gradnje na nepremičnini" %>
+        <%= builder.label :A3, t('custom.ankaran.form.pravica_uporabe_label') %>
         <p class="help-text">
-          Izpolnite le, če je lastnik nepremičnine druga pravna ali fizična oseba in ne Občina Ankaran.
-          Označite ali je pridobljeno soglasje za uporabo nepremičnine oziroma druga pravica, ki omogoča
-          gradnjo ali uporabo nepremičnine (stavbna pravica, služnost). V kolikor je soglasje pridobljeno,
-          obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča
-          uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost, ...).
+          <%= t('custom.ankaran.form.pravica_uporabe_info') %>
         </p>
         <div class="djnd-radio">
           <%=
             builder.radio_button :text,
             "ni soglasja",
-            :label => "ni soglasja oz. druge pravice za uporabo nepremičnine"
+            :label => t('custom.ankaran.form.pravica_uporabe_ni_soglasja')
           %>
         </div>
         <div class="djnd-radio">
           <%=
             builder.radio_button :text,
             "je soglasje",
-            :label => "je soglasje oz. druga pravica uporabe nepremičnine – obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost,..)"
+            :label => t('custom.ankaran.form.pravica_uporabe_je_soglasje')
           %>
         </div>
         <%= builder.hidden_field :budget_id %>
@@ -105,13 +99,10 @@
       <% end %>
     <% end %>
 
-    <%= f.label :price, "Ocena stroškov projektnega predloga (skupaj z DDV-jem)", class: "inline-block" %>
+    <%= f.label :price, t('custom.ankaran.form.ocena_stroskov_label'), class: "inline-block" %>
     <p class="help-text">
-      Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.
-      <br />
-      Navedite oz. po lastni presoji podajte ocenjeno vrednost projekta. Vrednost projektnega predloga je je lahko najmanj 1.000,00 EUR in največ 35.000,00 EUR, z vključenim DDV.
-      <br />
-      Zgolj za orientacijo so na <a href="#">povezavi  [blank link, še čakamo dokument]</a> navedene vrednosti vzorčnih projektov.</p>
+      <%= t('custom.ankaran.form.ocena_stroskov_info').html_safe %>
+    </p>
     <%= f.number_field :price, label: false, :required => true %>
   </fieldset>
 

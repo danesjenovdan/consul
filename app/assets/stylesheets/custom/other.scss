@@ -21,6 +21,29 @@
 }
 
 .mayor {
+  background-color: #ccefdf;
+  padding: 60px;
+
+  .heading-with-photo {
+    display: flex;
+    margin-bottom: 40px;
+
+    .mayor-image-container {
+      width: 200px;
+      height: 200px;
+      background-image: image-url('mayor.jpg');
+      background-size: cover;
+      border-radius: 200px;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      height: 200px;
+      align-content: center;
+      margin-left: 30px;
+    }
+  }
+
   .introduction-text {
     // max-width: 60%;
     padding-top: 80px;

@@ -301,7 +301,7 @@ sl-SI:
       intro: 'Participativni proračun je proces demokratičnega soodločanja, pri katerem o porabi dela proračunskih sredstev neposredno odločajo občanke in občani. Sami prepoznajo probleme in možnosti izboljšav, tako predlagajo projekte, ki so najnujnejši, njihova izvedba pa bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti. <p class="intro">V Občini Ankaran bodo za proračunski leti 2025 in 2026 občanke in občani lahko predlagali projekte in o njih tudi glasovali. Gre za projekte v skupni vrednosti do 100.000,00 EUR, od tega za območje participativnega proračuna Ankaran vzhod za projekte v skupni vrednosti do 40.000,00 EUR, Ankaran center za projekte v skupni vrednosti do 20.000,00 EUR ter Ankaran zahod za projekte v skupni vrednosti do 40.000,00 EUR.</p>'
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Občanke in občani lahko oddajo predloge projektov od 27. 1. 2025 do 23. 2. 2025. Posamezen predlog projekta mora biti oddan na za ta namen določenem obrazcu, njegova vrednost mora biti med 1.000,00 in 30.000,00 EUR z vključenim DDV-jem ter ustrezati drugim predpisanim pogojem za uvrstitev v participativni proračun – na glasovanje.</p><p>Projektni predlog mora biti oddan na obrazcu, ki ga  lahko izpolnite na tem spletnem mestu, ga prenesete na tej povezavi ali prevzamete v sprejemni pisarni Občine Ankaran v času uradnih ur.</p><p>Predlagatelj mora na obrazcu navesti zahtevane osebne podatke, anonimni predlogi ne bodo obravnavani. Vsak predlagatelj lahko predlaga največ 3 projektne predloge, in sicer za projekte, ki se nanašajo na območje participativnega proračuna, v katerem ima stalno prebivališče (območja participativnega proračuna so Ankaran vzhod, Ankaran center in Ankaran zahod ter so razvidna na zemljevidu na tej povezavi).</p><p>Obrazec za oddajo projektnega predloga lahko oddate: <ul><li>na tem spletnem mestu, po registraciji in vpisu v spletno aplikacijo ali</li><li>po elektronski pošti na naslov sodelujem@obcina-ankaran.si.  ali</li><li>osebno v sprejemni pisarni (vložišču) Občine Ankaran, na naslovu Regentova ulica 2, Ankaran, v času uradnih ur.</li></ul></p>"
+      description_1: 'Občanke in občani lahko oddajo predloge projektov od 27. 1. 2025 do 23. 2. 2025. Posamezen predlog projekta mora biti oddan na za ta namen določenem obrazcu, njegova vrednost mora biti med 1.000,00 in 30.000,00 EUR z vključenim DDV-jem ter ustrezati drugim predpisanim pogojem za uvrstitev v participativni proračun – na glasovanje.</p><p>Projektni predlog mora biti oddan na obrazcu, ki ga  lahko izpolnite na tem spletnem mestu, ga prenesete <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">na tej povezavi</a> ali prevzamete v sprejemni pisarni Občine Ankaran v času uradnih ur.</p><p>Predlagatelj mora na obrazcu navesti zahtevane osebne podatke, anonimni predlogi ne bodo obravnavani. Vsak predlagatelj lahko predlaga največ 3 projektne predloge, in sicer za projekte, ki se nanašajo na območje participativnega proračuna, v katerem ima stalno prebivališče (območja participativnega proračuna so Ankaran vzhod, Ankaran center in Ankaran zahod ter so razvidna na zemljevidu <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dafc8022c0cba6d7d83152f3646dbbd4b79ab007/obmo%C4%8Dja%20PP%20OA%20-%20zemljevid%20z%20ulicami.pdf">na tej povezavi</a>).</p><p>Obrazec za oddajo projektnega predloga lahko oddate: <ul><li>na tem spletnem mestu, po registraciji in vpisu v spletno aplikacijo ali</li><li>po elektronski pošti na naslov sodelujem@obcina-ankaran.si.  ali</li><li>osebno v sprejemni pisarni (vložišču) Občine Ankaran, na naslovu Regentova ulica 2, Ankaran, v času uradnih ur.</li></ul></p>'
       date_1: 27. 1.-23. 2. 2025
       heading_2: Pregled predlogov
       description_2: "Vse oddane predloge pregleda strokovna komisija, ki vsak oddan predlog finančno ovrednoti, preveri njegovo izvedljivost ter skladnost s predpisanimi pogoji (v pristojnostmi občine, skladen z zakonodajo, skladen s prostorskimi in razvojnimi akti, prispeva k uresničevanju javnega interesa...). Komisija lahko enake ali podobne projektne predloge združi v en projektni predlog oziroma posamezni projektni predlog delno prilagodi.<p>Predloge, ki ne bodo ustrezali predpisanim pogojem, bo komisija izločila z obrazložitvijo, kateremu pogoju ali pogojem predlog projekta ni ustrezal.</p><p>Vsi projektni predlogi, ki bodo ustrezali vsem razpisnim pogojem, se uvrstijo naprej na glasovanje.</p>"
@@ -323,7 +323,13 @@ sl-SI:
       heading_2: "Kako ustvarim in potrdim svoj račun?"
       description_2: "Račun ustvarite tako, da v nogi spletnega mesta kliknete na gumb »Registracija«, klik na kateri koli gumb za akcijo pa vas prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa morate vpisati uporabniško ime, e-naslov, EMŠO, naslov stalnega prebivališča in geslo. Po kreiranju računa ga morate potrditi še s klikom na povezavo v e-pošti, ki vam jo bomo poslali na vaš e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Poleg spletnega je mogoče predlog oddati tudi: <ul><li>V elektronski obliki (obrazec je potrebno prenesti …., izpolniti in poslati po elektronski pošti na naslov …</li><li>v fizični obliki osebno na naslovu Občinska uprava Občine Ankaran, Regentova ulica 2, 6280 Ankaran, v času uradnih ur.</li></ul><p>Za pomoč pri pripravi predlogov projektov se lahko udeležite praktične delavnice, ki bo potekala v sredo, 15. 1. 2025 ob 18. uri v prostorih Medgeneracijskega središča Ankaran, na naslovu Ulica Rudija Mahniča 1, 6280 Ankaran.</p>"
+      description_3: |
+        <p>Poleg spletnega je mogoče predlog oddati tudi:</p>
+        <ul>
+          <li>V elektronski obliki (obrazec je potrebno prenesti …., izpolniti in poslati po elektronski pošti na naslov …</li>
+          <li>v fizični obliki osebno na naslovu Občinska uprava Občine Ankaran, Regentova ulica 2, 6280 Ankaran, v času uradnih ur.</li>
+        </ul>
+        <p>Za pomoč pri pripravi predlogov projektov se lahko udeležite praktične delavnice, ki bo potekala v sredo, 15. 1. 2025 ob 18. uri v prostorih Medgeneracijskega središča Ankaran, na naslovu Ulica Rudija Mahniča 1, 6280 Ankaran.</p>
       heading_4: "Pozabil_a sem svoje geslo. Kaj lahko storim?"
       description_4: "Kliknite na gumb »Vpišite se«, potem pa izberite povezavo »Pozabljeno geslo«. Na svoj elektronski naslov boste prejeli navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
@@ -489,3 +495,40 @@ sl-SI:
       djnd: Za platformo skrbi
     registration:
       already_has_account: "Že imaš račun?"
+    ankaran:
+      mayor:
+        title: Spoštovane občanke in občani!
+        content: |
+          <p>Vsak od nas je gradnik skupnosti, v kateri živimo - najpomembnejšo ožjo skupnost predstavlja družina, širša, a prav tako pomembna skupnost za vsakega posameznika pa je tudi občina. Ta močno vpliva na naša življenja, saj zagotavlja delovanje številnih vsebin; skrbi za vrtec in osnovno šolo, oskrbo z vodo, kanalizacijo, odvoz odpadkov, občinske ceste in infrastrukturo, urejanje okolice, glasbeno šolo, kulturne vsebine, knjižnico, zdravstvene ambulante in lekarno, programe za starejše, socialne pomoči, športno infrastrukturo in ne nazadnje sofinancira delovanj športnih, kulturnih in drugih društev. </p>
+          <p>Prebivalke in prebivalci Ankarana smo člani lokalne skupnosti Občine Ankaran. Nastanek naše občine in njena prehojena pot sta v mnogočem drugačna od ostalih. Občina Ankaran je edina občina v Republiki Sloveniji, ki je nastala na podlagi neposrednega angažiranja prebivalcev Ankarana, ki smo s ciljem zaščite narave in svojega življenjskega prostora podali pobudo za ustanovitev lastne občine ter njeno ustanovitev nazadnje dosegli s pomočjo Ustavnega sodišča RS.</p>
+          <p>Od začetka delovanja občine 1. januarja 2015 smo bili občani in občanke Ankarana vključeni v pripravo vseh ključnih dokumentov za razvoj občine: občinski prostorski načrt, ustanovitev krajinskega parka, dolgoročni razvojni načrt.... Že od priprave prvega samostojnega proračuna občine za leto 2016 smo na poziv strokovnih služb občine vsako leto podajali pobude za projekte in vsebine, ki (smo) si jih želeli v občini. Na tak način je bilo v preteklih  letih prejetih okoli 950 pobud, izmed katerih jih je že veliko izvedenih, nekaj jih je še v teku, tiste največje pa bodo zaradi zahtevnosti izvedene v dolgoročnem obdobju.</p>
+          <p>To prakso sodelovanja in vključevanja občank in občanov pri oblikovanju ključnih odločitev v občini si želimo pri pripravi načrta dela občine Ankaran za leto 2025 in 2026 še nadgraditi. S tem namenom se uvaja glasovanje občank in občanov o umestitvi posameznih projektov v predlog proračuna oziroma t.i. participativni proračun. S pomočjo participativnega proračuna lahko občanke in občani sami prepoznajo potrebe ali možnosti izboljšav, predlagajo rešitve ali projekte ter v zadnji fazi tudi izmed podanih predlogov z demokratičnim glasovanjem izberejo tiste, ki se v nadaljevanju realizirajo.</p>
+          <p>V želji, da se kot skupnost še bolj povežemo ter s skupnimi močmi uredimo naš življenjski prostor vas vabim, da sodelujete s svojimi predlogi, predlagate projekte in na glasovanju izberete tiste, ki naj se v letih 2025 in 2026 v naši občini izvedejo. Bodimo aktivni člani skupnosti, da bo ta še bolj po naši meri.</p>
+          <p>Gregor Strmčnik, župan</p>
+      form:
+        tocna_lokacija_label: Točna lokacija projekta
+        tocna_lokacija_info: |
+          Navedite parcelno številko (skupaj s katastrsko občino) ali naslov lokacije
+          kjer naj bi se projekt izvedel. Podatke o parcelnih številkah in naslovih lahko
+          dobite na prostorskem portalu Občine Ankaran na spletni strani občine oz. na
+          povezavi <a href="https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz">https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz</a>.
+        lastnistvo_nepremicnine_label: Lastništvo nepremičnine
+        lastnistvo_nepremicnine_info: Kdo je lastnik nepremičnine (parcele, stavbe,…) kjer naj bi se izvedel projekt in ste jo navedli v prejšnji točki?
+        lastnistvo_nepremicnine_obcina: lastnik je občina Ankaran
+        lastnistvo_nepremicnine_drugi: lastnik je druga pravna ali fizična oseba
+        pravica_uporabe_label: Pravica uporabe oz. gradnje na nepremičnini
+        pravica_uporabe_info: |
+          Izpolnite le, če je lastnik nepremičnine druga pravna ali fizična oseba in ne Občina Ankaran.
+          Označite ali je pridobljeno soglasje za uporabo nepremičnine oziroma druga pravica, ki omogoča
+          gradnjo ali uporabo nepremičnine (stavbna pravica, služnost). V kolikor je soglasje pridobljeno,
+          obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča
+          uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost, ...).
+        pravica_uporabe_ni_soglasja: ni soglasja oz. druge pravice za uporabo nepremičnine
+        pravica_uporabe_je_soglasje: je soglasje oz. druga pravica uporabe nepremičnine – obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost,..)
+        ocena_stroskov_label: Ocena stroškov projektnega predloga (skupaj z DDV-jem)
+        ocena_stroskov_info: |
+          Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.
+          <br />
+          Navedite oz. po lastni presoji podajte ocenjeno vrednost projekta. Vrednost projektnega predloga je je lahko najmanj 1.000,00 EUR in največ 35.000,00 EUR, z vključenim DDV.
+          <br />
+          Zgolj za orientacijo so na <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--da36007552c3dd0b59c0ba98e74a445c45492724/Orientacijske%20vrednosti.pdf">povezavi</a> navedene vrednosti vzorčnih projektov.</p>

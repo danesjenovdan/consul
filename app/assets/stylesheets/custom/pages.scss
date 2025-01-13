@@ -16,7 +16,7 @@
   }
 
   &.finished {
-    background: image-url("phases/izvedi.svg") no-repeat;
+    background: image-url("phases/spremljaj.svg") no-repeat;
   }
 
   &.reviewing,
@@ -1153,7 +1153,7 @@ span:hover::before {
     }
 
     &.accordion-collapsed {
-      p {
+      p, div {
         display: none;
       }
 
