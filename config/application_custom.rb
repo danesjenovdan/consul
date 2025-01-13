@@ -5,8 +5,7 @@ module Consul
     available_locales = [
       # "sl",
       "sl-SI",
-      "it",
-      "en"
+      "it"
     ]
     config.i18n.available_locales = available_locales
 
