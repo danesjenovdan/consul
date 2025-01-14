@@ -477,38 +477,31 @@ it:
       already_has_account: " Ha già un account?"
     ankaran:
       mayor:
-        title: ITA Spoštovane občanke in občani!
+        title: Gentili cittadine e cittadini!
         content: |
-          <p>ITA Vsak od nas je gradnik skupnosti, v kateri živimo - najpomembnejšo ožjo skupnost predstavlja družina, širša, a prav tako pomembna skupnost za vsakega posameznika pa je tudi občina. Ta močno vpliva na naša življenja, saj zagotavlja delovanje številnih vsebin; skrbi za vrtec in osnovno šolo, oskrbo z vodo, kanalizacijo, odvoz odpadkov, občinske ceste in infrastrukturo, urejanje okolice, glasbeno šolo, kulturne vsebine, knjižnico, zdravstvene ambulante in lekarno, programe za starejše, socialne pomoči, športno infrastrukturo in ne nazadnje sofinancira delovanj športnih, kulturnih in drugih društev. </p>
-          <p>Prebivalke in prebivalci Ankarana smo člani lokalne skupnosti Občine Ankaran. Nastanek naše občine in njena prehojena pot sta v mnogočem drugačna od ostalih. Občina Ankaran je edina občina v Republiki Sloveniji, ki je nastala na podlagi neposrednega angažiranja prebivalcev Ankarana, ki smo s ciljem zaščite narave in svojega življenjskega prostora podali pobudo za ustanovitev lastne občine ter njeno ustanovitev nazadnje dosegli s pomočjo Ustavnega sodišča RS.</p>
-          <p>Od začetka delovanja občine 1. januarja 2015 smo bili občani in občanke Ankarana vključeni v pripravo vseh ključnih dokumentov za razvoj občine: občinski prostorski načrt, ustanovitev krajinskega parka, dolgoročni razvojni načrt.... Že od priprave prvega samostojnega proračuna občine za leto 2016 smo na poziv strokovnih služb občine vsako leto podajali pobude za projekte in vsebine, ki (smo) si jih želeli v občini. Na tak način je bilo v preteklih  letih prejetih okoli 950 pobud, izmed katerih jih je že veliko izvedenih, nekaj jih je še v teku, tiste največje pa bodo zaradi zahtevnosti izvedene v dolgoročnem obdobju.</p>
-          <p>To prakso sodelovanja in vključevanja občank in občanov pri oblikovanju ključnih odločitev v občini si želimo pri pripravi načrta dela občine Ankaran za leto 2025 in 2026 še nadgraditi. S tem namenom se uvaja glasovanje občank in občanov o umestitvi posameznih projektov v predlog proračuna oziroma t.i. participativni proračun. S pomočjo participativnega proračuna lahko občanke in občani sami prepoznajo potrebe ali možnosti izboljšav, predlagajo rešitve ali projekte ter v zadnji fazi tudi izmed podanih predlogov z demokratičnim glasovanjem izberejo tiste, ki se v nadaljevanju realizirajo.</p>
-          <p>V želji, da se kot skupnost še bolj povežemo ter s skupnimi močmi uredimo naš življenjski prostor vas vabim, da sodelujete s svojimi predlogi, predlagate projekte in na glasovanju izberete tiste, ki naj se v letih 2025 in 2026 v naši občini izvedejo. Bodimo aktivni člani skupnosti, da bo ta še bolj po naši meri.</p>
-          <p>Gregor Strmčnik, župan</p>
+          <p>Ognuno di noi rappresenta un elemento portante della comunità in cui vive: la comunità di cerchia ristretta più importante è la famiglia, invece la comunità più ampia, ma altrettanto importante per ogni individuo è rappresentata dal comune. Il Comune ha un grande impatto sulla nostra vita, fornendo un'ampia gamma di servizi: asili e scuole elementari, approvvigionamento idrico, fognature, raccolta dei rifiuti, strade e infrastrutture comunali, aree verdi, scuole di musica, contenuti culturali, biblioteche, poliambulatori e farmacie, programmi per gli anziani, assistenza sociale, infrastrutture sportive e cofinanziamento di associazioni sportive, culturali e di altro tipo.</p>
+          <p>Noi, abitanti di Ancarano, siamo membri della comunità locale del Comune di Ancarano. Le origini del nostro Comune e il percorso che ha seguito sono per molti versi diversi dagli altri. Il Comune di Ancarano è l'unico comune della Repubblica di Slovenia che è stato costituito grazie al coinvolgimento diretto degli abitanti di Ancarano, i quali, con l'obiettivo di proteggere la natura e il proprio spazio vitale, hanno avviato l’iniziativa per l’istituzione di un proprio comune e infine hanno ottenuto la sua costituzione con l'aiuto della Corte costituzionale della Repubblica di Slovenia.</p>
+          <p>Dalla costituzione del comune, il 1° gennaio 2015, noi cittadini di Ancarano siamo stati coinvolti nella preparazione di tutti i documenti chiave per lo sviluppo del comune: il piano regolatore comunale, l'istituzione del parco naturale, il piano di sviluppo a lungo termine ... Fin dalla preparazione del primo bilancio comunale per il 2016, ogni anno, su invito dei servizi professionali del comune, abbiamo presentato varie iniziative per progetti e contenuti che vorremmo vengano realizzati nel comune. Nel corso degli anni sono state accolte in questo modo circa 950 iniziative, molte delle quali sono già state realizzate, altre sono ancora in corso e le più importanti, a causa della loro complessità, saranno realizzate nei prossimi anni.</p>
+          <p>Nella preparazione del Piano di lavoro del Comune di Ancarano per il 2025 e il 2026 intendiamo basarci su questa pratica di coinvolgimento e partecipazione dei cittadini alle decisioni più importanti del Comune. A tal fine, è stato introdotto il voto dei cittadini per decidere quali progetti includere nella bozza di bilancio, il cosiddetto bilancio partecipativo. Attraverso il bilancio partecipativo, i cittadini stessi possono individuare esigenze o opportunità di miglioramento, proporre soluzioni o progetti e nella fase finale, votare democraticamente le proposte da attuare. </p>
+          <p>Per diventare ancora più uniti come comunità e lavorare insieme per migliorare il nostro spazio vitale, vi invito a partecipare con le vostre proposte, suggerire progetti e votare per scegliere quelli da realizzare nel nostro Comune nel 2025 e 2026. Dobbiamo essere membri attivi della nostra comunità per renderla più adeguata alle nostre aspettative.</p>
+          <p>Gregor Strmčnik, sindaco</p>
       form:
-        tocna_lokacija_label: ITA Točna lokacija projekta
+        tocna_lokacija_label: Locazione esatta del progetto
         tocna_lokacija_info: |
-          ITA Navedite parcelno številko (skupaj s katastrsko občino) ali naslov lokacije
-          kjer naj bi se projekt izvedel. Podatke o parcelnih številkah in naslovih lahko
-          dobite na prostorskem portalu Občine Ankaran na spletni strani občine oz. na
-          povezavi <a href="https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz">https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz</a>.
-        lastnistvo_nepremicnine_label: ITA Lastništvo nepremičnine
-        lastnistvo_nepremicnine_info: ITA Kdo je lastnik nepremičnine (parcele, stavbe,…) kjer naj bi se izvedel projekt in ste jo navedli v prejšnji točki?
-        lastnistvo_nepremicnine_obcina: ITA lastnik je občina Ankaran
-        lastnistvo_nepremicnine_drugi: ITA lastnik je druga pravna ali fizična oseba
-        pravica_uporabe_label: ITA Pravica uporabe oz. gradnje na nepremičnini
+          Indicare il numero del lotto (indicando il comune catastale) o l’indirizzo del luogo in cui il progetto verrà realizzato. Informazioni sui numeri dei lotti e gli indirizzi sono disponibili nel sistema informativo territoriale del comune di Ancarano sul sito web del comune oppure al collegamento <a href="https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz">https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz</a>.
+        lastnistvo_nepremicnine_label: Proprietà dell’immobile
+        lastnistvo_nepremicnine_info: Chi è il proprietario degli immobili (terreni, edifici…) sui quali il progetto verrà realizzato e da lei indicato nel punto precedente?
+        lastnistvo_nepremicnine_obcina: Il proprietario è il comune di Ancarano
+        lastnistvo_nepremicnine_drugi: il proprietario è una persona fisica o giuridica
+        pravica_uporabe_label: Diritto d'uso o di costruzione sull’immobile
         pravica_uporabe_info: |
-          ITA Izpolnite le, če je lastnik nepremičnine druga pravna ali fizična oseba in ne Občina Ankaran.
-          Označite ali je pridobljeno soglasje za uporabo nepremičnine oziroma druga pravica, ki omogoča
-          gradnjo ali uporabo nepremičnine (stavbna pravica, služnost). V kolikor je soglasje pridobljeno,
-          obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča
-          uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost, ...).
-        pravica_uporabe_ni_soglasja: ITA ni soglasja oz. druge pravice za uporabo nepremičnine
-        pravica_uporabe_je_soglasje: ITA je soglasje oz. druga pravica uporabe nepremičnine – obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost,..)
-        ocena_stroskov_label: ITA Ocena stroškov projektnega predloga (skupaj z DDV-jem)
+          Compilare solo se l'immobile è di proprietà di una persona fisica o giuridica e non del comune di Ancarano. Indicare se è stato ottenuto il consenso per l’uso dell’immobile o altri diritti che consentono la costruzione o l’uso dell’immobile (diritto di superficie, servitù).
+        pravica_uporabe_ni_soglasja: non vi è alcun consenso o altro diritto per l’utilizzo dell'immobile
+        pravica_uporabe_je_soglasje: consenso o altro diritto di utilizzo dell’immobile - è necessario allegare il consenso scritto del proprietario, il contratto o altra prova del diritto che consente l'uso dell’immobile o di costruzione su di esso (diritto di superficie, servitù...)
+        ocena_stroskov_label: Valore stimato della proposta progettuale (IVA inclusa)
         ocena_stroskov_info: |
-          ITA Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.
+          Inserire un numero intero senza punti, virgole, lettere o altri simboli..
           <br />
-          Navedite oz. po lastni presoji podajte ocenjeno vrednost projekta. Vrednost projektnega predloga je je lahko najmanj 1.000,00 EUR in največ 35.000,00 EUR, z vključenim DDV.
+          Indicare o a propria discrezione, valutare il valore stimato del progetto. Il valore della proposta progettuale (IVA inclusa) può essere di un minimo di 1.000,00 euro e di un massimo di 20.000,00 euro (per progetti nella zona Centro) o massimo di 40.000 euro (per progetti nelle zone Ovest ed Est).
           <br />
-          Zgolj za orientacijo so na <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7981f2847f70c5af01fb4272d356b32a4f3a7d28/Orientacijske%20vrednosti-ITA.pdf">povezavi</a> navedene vrednosti vzorčnih projektov.</p>
+          A titolo puramente indicativo, i valori medi dei progetti campione nel 2024 sono indicati <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7981f2847f70c5af01fb4272d356b32a4f3a7d28/Orientacijske%20vrednosti-ITA.pdf">qui</a> </p>
