@@ -15,7 +15,7 @@ sl-SI:
   account:
     show:
       change_credentials_link: Spremeni elektronski naslov ali geslo
-      verified_account: "Tvoj račun je potrjen."
+      verified_account: "Vaš račun je potrjen."
   activerecord:
     attributes:
       user:
@@ -49,30 +49,30 @@ sl-SI:
   budgets:
     investments:
       investment:
-        add: Glasuj za ta predlog
+        add: Glasujte za ta predlog
       show:
-        share_title: "Povej naprej!"
-        share: "Deli!"
-        copy: "Skopiraj povezavo!"
+        share_title: "Povejte naprej!"
+        share: "Delite!"
+        copy: "Skopirajte povezavo!"
         price: "Vrednost projekta"
-        votes: "Želiš podpreti ta projekt?"
+        votes: "Želite podpreti ta projekt?"
         top_investment: "Ta predlog je trenutno eden izmed top 3 predlogov po številu glasov na tem območju!"
         top_investment_close: "Temu predlogu manjka samo nekaj glasov, da bo v top 3 na tem območju!"
         top_investment_far: "Temu predlogu manjka veliko glasov, da bo v top 3 na tem območju!"
       edit:
         submit: "Shrani spremembe"
       form:
-        tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
+        tags_instructions: "Označite ta predlog. Izbirate lahko med predlaganimi kategorijami."
         submit: "Oddaj predlog"
         map_location: "Lokacija predloga"
       index:
         title: Participativni proračun – seznam predlogov
         by_heading: "Investicijski projekti na območju: %{heading}"
         sidebar:
-          different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
+          different_heading_assigned: "Imate aktivna glasovanja na drugem območju: %{heading_link}."
       header:
-        different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
-        change_ballot: "Če si premisliš, lahko odstraniš svoje glasove iz tega območja in začneš znova."
+        different_heading_assigned: "Imate aktivna glasovanja na drugem območju: %{heading_link}."
+        change_ballot: "Če ste si premislili, lahko odstranite svoje glasove iz tega območja in začnete znova."
     ballots:
       show:
         amount_progress: "%{amount_spent} / %{amount_limit}"
@@ -103,65 +103,65 @@ sl-SI:
             four: "Lahko glasujete za <span>4</span> predloge"
             other: "Lahko glasujete za <span>%{count}</span> predlogov"
       reasons_for_not_balloting:
-        not_logged_in: "<strong>Za nadaljevanje se moraš vpisati ali registrirati.</strong>"
+        not_logged_in: "<strong>Za nadaljevanje se morate vpisati ali registrirati.</strong>"
         not_verified: Le verificirani uporabniki lahko glasujejo o naložbah; %{verify_account}.
-        not_enough_available_votes: Na voljo nimaš več nobenega glasu. Če želiš glasovati za ta predlog, odstrani svoj glas z drugega predloga.
+        not_enough_available_votes: Na voljo nimate več nobenega glasu. Če želite glasovati za ta predlog, odstranite svoj glas z drugega predloga.
         organization: Organizacijam ni dovoljeno glasovati
         not_selected: Neizbranih investicij ni mogoče podpreti
-        not_enough_money: "Žal na voljo nimaš več dovolj proračuna."
+        not_enough_money: "Žal na voljo nimate več dovolj sredstev."
         no_ballots_allowed: Faza izbiranja je končana
-        different_heading_assigned: "<strong>Glasuješ lahko samo za predloge v enakem območju.</strong>"
-        change_ballot: spremeniš svoje glasove
+        different_heading_assigned: "<strong>Glasujete lahko samo za predloge v enakem območju.</strong>"
+        change_ballot: spremenite svoje glasove
   comments:
     actions:
       confirm_delete: Potrdi izbris
       delete: Izbriši
   devise:
     sessions:
-      signed_in: "Uspešno si se vpisal_a."
-      signed_out: "Uspešno si se izpisal_a."
-      already_signed_out: "Uspešno si se izpisal_a."
+      signed_in: "Uspešno ste se vpisali."
+      signed_out: "Uspešno ste se izpisali."
+      already_signed_out: "Uspešno ste se izpisali."
     failure:
-      already_authenticated: "Si že vpisan_a."
+      already_authenticated: "Ste že vpisani."
       invalid: "Neveljavni %{authentication_keys} ali geslo."
       not_found_in_database: "Neveljavni %{authentication_keys} ali geslo."
     registrations:
-      signed_up_but_unconfirmed: "Poslali smo ti e-pošto za potrditev registracije. Prosimo, klikni na povezavo v elektronskem sporočilu, da aktiviraš svoj račun."
+      signed_up_but_unconfirmed: "Poslali smo vam e-pošto za potrditev registracije. Prosimo, kliknite na povezavo v elektronskem sporočilu, da aktivirate svoj račun."
   devise_views:
     shared:
       links:
-        login: Vpiši se
-        new_confirmation: Nisi prejel_a navodil, kako aktivirati svoj račun?
-        new_unlock: Nisi prejel_a navodil, kako odkleniti svoj račun?
+        login: Vpišite se
+        new_confirmation: Niste prejeli navodil, kako aktivirati svoj račun?
+        new_unlock: Niste prejeli navodil, kako odkleniti svoj račun?
     users:
       registrations:
         new:
-          terms: Z registracijo sprejemaš %{terms}.
+          terms: Z registracijo sprejemate %{terms}.
           password_hint: Geslo mora imeti najmanj 8 znakov.
           address: Vpišite ulico stalnega prebivališča
         success:
-          back_to_index: Velja, vrni me na začetno stran
-          instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
-          instructions_2: Ko potrdiš račun, lahko začneš sodelovati.
-          thank_you: Hvala za registracijo na spletnem portalu. Zdaj moraš <b>potrditi svoj e-naslov</b>.
+          back_to_index: Velja, vrnite me na začetno stran
+          instructions_1: Prosimo, <b>preverite svojo e-pošto</b> – poslali smo vam <b>povezavo za potrditev tvojega računa</b>.
+          instructions_2: Ko potrdite račun, lahko začnete sodelovati.
+          thank_you: Hvala za registracijo na spletnem portalu. Zdaj morate <b>potrditi svoj e-naslov</b>.
           title: Registracija
-          account_confirmed: "Hvala za registracijo! Za nadaljevanje se moraš <b>vpisati</b>."
+          account_confirmed: "Hvala za registracijo! Za nadaljevanje se morate <b>vpisati</b>."
     mailer:
       reset_password_instructions:
-        ignore_text: Če nisi zahteval_a spremembe gesla, lahko ignoriraš to e-sporočilo.
+        ignore_text: Če niste zahtevali spremembe gesla, lahko ignorirate to e-sporočilo.
   documents:
-    max_documents_allowed_reached: Dosegel_a si največje dovoljeno število dokumentov! <strong>Preden lahko naložiš novega, moraš vsaj enega izbrisati.</strong>
+    max_documents_allowed_reached: Dosegeli ste največje dovoljeno število dokumentov! <strong>Preden lahko naložite novega, morate vsaj enega izbrisati.</strong>
     buttons:
       destroy_document: Odstrani dokument
     form:
-      note: "Naložiš lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
+      note: "Naložite lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
   images:
     form:
       title: Slika
   mailers:
     budget_investment_created:
       intro: "Hej, <strong>%{author}</strong>,"
-      share: Oglej si svoj projekt
+      share: Oglejte si svoj projekt
   milestones:
     index:
       no_milestones: Nima definiranih mejnikov
@@ -199,7 +199,7 @@ sl-SI:
       guiding_questions: "<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>"
       tos: "pogoji-uporabe"
     switcher:
-      select: "Izberi proračun"
+      select: "Izberite proračun"
     social:
       fb_desc: Sodelujem - Participativni proračun občine Ankaran
       tw_desc: "MSodelujem - Participativni proračun občine Ankaran"
@@ -217,12 +217,13 @@ sl-SI:
       finished: Spremljaj
       headings: Območja
       headings_sidebar: "<li>  <h6>Območje 1 - Ankaran vzhod</h6>  <div>Na Logu, Železniška cesta, Rožnik, Ivančičeva cesta, Cesta na Prisojo, Pod Vrhom, Oljčna pot, Jadranska cesta</div></li><li>  <h6>Območje 2 - Ankaran center</h6>  <div>Oljčna pot, Pervanjeva ulica, Bertokova ulica, Pot na Brido, Srebrničeva ulica, Regentova ulica, Hrvatinova ulica, Vlahovičeva ulica, Bevkova ulica, Kocjančičeva ulica, Cahova ulica, Ulica Rudija Mahniča, Tomažičeva ulica, Larisova ulica, Frenkova ulica, Razgledna pot, Jadranska cesta</div></li><li>  <h6>Območje 3 - Ankaran zahod</h6>  <div>območje krajinskega parka Debeli rtič: Vinogradniška pot, Lazaret, Jadranska cesta</div></li>"
-      select_heading: Izberi območje
-      select_tag: Izberi mestno četrt
-      select_status: Izberi status predloga
-      select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
+      select_heading: Izberite območje
+      select_tag: Izberite mestno četrt
+      select_status: Izberite status predloga
+      select_heading_to_vote: Da lahko glasujete za projekte, morate izbrati območje.
       instructions: "Kriteriji, ki jih morajo izpolnjevati projekti:"
       instructions_description: |
+        <h3>Predlagatelj projekta</h3>
         <ol>
           <li>ima pravico podati projektni predlog (je imel na dan 01.01.2025 stalno prebivališče v OA ter dopolnjenih 15 let starosti oz. bo v letu 2025 dopolnili 15 let starosti (rojeni najkasneje leta 2010);</li>
           <li>ne sme nastopati kot izvajalec projektnega predloga – ne kot fizična oseba oziroma lastnik ali poslovodna oseba pravne osebe izvajalca;</li>
@@ -326,10 +327,10 @@ sl-SI:
       description_3: |
         <p>Poleg spletnega je mogoče predlog oddati tudi:</p>
         <ul>
-          <li>V elektronski obliki (obrazec je potrebno prenesti …., izpolniti in poslati po elektronski pošti na naslov …</li>
+          <li>V elektronski obliki (obrazec je potrebno prenesti <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">na tej povezavi</a>, izpolniti in poslati po elektronski pošti na naslov <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a></li>
           <li>v fizični obliki osebno na naslovu Občinska uprava Občine Ankaran, Regentova ulica 2, 6280 Ankaran, v času uradnih ur.</li>
         </ul>
-        <p>Za pomoč pri pripravi predlogov projektov se lahko udeležite praktične delavnice, ki bo potekala v sredo, 15. 1. 2025 ob 18. uri v prostorih Medgeneracijskega središča Ankaran, na naslovu Ulica Rudija Mahniča 1, 6280 Ankaran.</p>
+        <p>Za pomoč pri pripravi predlogov projektov se lahko udeležite praktične delavnice, ki bo potekala v sredo, 29. 1. 2025 ob 18. uri v prostorih Medgeneracijskega središča Ankaran, na naslovu Ulica Rudija Mahniča 1, 6280 Ankaran.</p>
       heading_4: "Pozabil_a sem svoje geslo. Kaj lahko storim?"
       description_4: "Kliknite na gumb »Vpišite se«, potem pa izberite povezavo »Pozabljeno geslo«. Na svoj elektronski naslov boste prejeli navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
@@ -338,7 +339,7 @@ sl-SI:
       technical_issues: "Imate tehnične tehnične težave?"
       technical_contact: 'Kontaktirajte upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imate kakršnokoli drugo vprašanje?"
-      other_contact: 'Kontaktirajte predstavnike Občine Ankaran na <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">predlagam@obcina-ankaran.si</a>. V času uradnih ur smo vam na voljo tudi po telefonu 05 66 53 000.'
+      other_contact: 'Kontaktirajte predstavnike Občine Ankaran na <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a>. V času uradnih ur smo vam na voljo tudi po telefonu 05 66 53 000.'
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
       date: "1. 1. 2025"
