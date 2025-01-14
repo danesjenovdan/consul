@@ -221,8 +221,9 @@ sl-SI:
       select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
-      instructions: "Predlagatelj projekta"
+      instructions: "Kriteriji, ki jih morajo izpolnjevati projekti:"
       instructions_description: |
+      <h3>Predlagatelj projekta</h3>
         <ol>
           <li>ima pravico podati projektni predlog (je imel na dan 01.01.2025 stalno prebivališče v OA ter dopolnjenih 15 let starosti oz. bo v letu 2025 dopolnili 15 let starosti (rojeni najkasneje leta 2010)</li>
           <li>ne sme nastopati kot izvajalec projektnega predloga – ne kot fizična oseba oziroma lastnik ali poslovodna oseba pravne osebe izvajalca</li>
