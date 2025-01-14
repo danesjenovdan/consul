@@ -203,14 +203,14 @@ it:
     headings:
       drafting: Bozza (nascosta al pubblico)
       informing: Informazioni
-      accepting: Propost
+      accepting: Presentate la proposta
       reviewing: Revisione dei progetti
       selecting: Selezione
       valuating: Valutazione di progetti
       publishing_prices: Pubblicazione delle proposte sottoposte a votazione
-      balloting: Votazioni
+      balloting: Votate
       reviewing_ballots: Verifica delle votazioni
-      finished: Seguire
+      finished: Vorrei monitorare la procedura
       headings: Zone
       headings_sidebar: "<li>  <h6>Območje 1 - Ankaran vzhod</h6>  <div>Na Logu, Železniška cesta, Rožnik, Ivančičeva cesta, Cesta na Prisojo, Pod Vrhom, Oljčna pot, Jadranska cesta</div></li><li>  <h6>Območje 2 - Ankaran center</h6>  <div>Oljčna pot, Pervanjeva ulica, Bertokova ulica, Pot na Brido, Srebrničeva ulica, Regentova ulica, Hrvatinova ulica, Vlahovičeva ulica, Bevkova ulica, Kocjančičeva ulica, Cahova ulica, Ulica Rudija Mahniča, Tomažičeva ulica, Larisova ulica, Frenkova ulica, Razgledna pot, Jadranska cesta</div></li><li>  <h6>Območje 3 - Ankaran zahod</h6>  <div>območje krajinskega parka Debeli rtič: Vinogradniška pot, Lazaret, Jadranska cesta</div></li>"
       select_heading: Selezionare zona
