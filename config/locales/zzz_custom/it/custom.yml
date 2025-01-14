@@ -203,23 +203,42 @@ it:
     headings:
       drafting: Bozza (nascosta al pubblico)
       informing: Informazioni
-      accepting: Presentate la proposta
+      accepting: Propongo
       reviewing: Revisione dei progetti
-      selecting: Selezione
+      selecting: Voto
       valuating: Valutazione di progetti
       publishing_prices: Pubblicazione delle proposte sottoposte a votazione
       balloting: Votate
       reviewing_ballots: Verifica delle votazioni
-      finished: Vorrei monitorare la procedura
+      finished: Seguo
       headings: Zone
-      headings_sidebar: "<li>  <h6>Območje 1 - Ankaran vzhod</h6>  <div>Na Logu, Železniška cesta, Rožnik, Ivančičeva cesta, Cesta na Prisojo, Pod Vrhom, Oljčna pot, Jadranska cesta</div></li><li>  <h6>Območje 2 - Ankaran center</h6>  <div>Oljčna pot, Pervanjeva ulica, Bertokova ulica, Pot na Brido, Srebrničeva ulica, Regentova ulica, Hrvatinova ulica, Vlahovičeva ulica, Bevkova ulica, Kocjančičeva ulica, Cahova ulica, Ulica Rudija Mahniča, Tomažičeva ulica, Larisova ulica, Frenkova ulica, Razgledna pot, Jadranska cesta</div></li><li>  <h6>Območje 3 - Ankaran zahod</h6>  <div>območje krajinskega parka Debeli rtič: Vinogradniška pot, Lazaret, Jadranska cesta</div></li>"
+      headings_sidebar: "<li>  <h6>Zona 1 - Ankaran est</h6>  <div>Al boschetto, Strada della Ferrovia, Roseto, Strada Ivančič Franc-Rudi, Strada per Prisoje, Sotto la cima, Strada dell'Adriatico</div></li><li>  <h6>Zona 2 - Ancarano centro</h6>  <div>Vicolo degli Olivi, Via Stanko Pervanja, Via D. Bertok-Churchill, Vicolo per Brida, Via J. Srebrnič, Via I. Regent, Via M. Hrvatin, Via V. Vlahovič, Via F. Bevk, Via V. Kocjančič-Marko, Via I. Cah-Iskra, Ulica Rudi Mahnič, Via P. Tomažič, Via M. Laris-Moro, Via F. P. Frenk, Vicolo del Panorama, Strada dell'Adriatico</div></li><li>  <h6>Zona 3 - Ancarano ovest</h6>  <div>Via dei Vigneti, Lazzaretto, Strada dell'Adriatico</div></li>"
       select_heading: Selezionare zona
 
       select_tag: Selezionare quartiere
       select_status: Selezionare lo status della proposta
       select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
       instructions: "Condizioni e criteri per la presentazione delle proposte progettuali"
-      instructions_description: "<p>Predlagatelj projektnih predlogov je lahko občanka/občan s stalnim prebivališčem v OA, ki je na dan oddaje predloga dopolnil 15 let. Predlagatelj ne sme nastopati kot izvajalec projektnega predloga. To velja za fizične osebe, lastnike pravne osebe ali člane poslovodstva pravne osebe.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje naslednje pogoje:</p> <ol> <li>Prispeva k uresničevanju javnega interesa in se izvaja na območju občine Ankaran.</li> <li>Prispeva k namenom poziva — spodbuja aktivno participacijo in vključenost občanov, dviga kakovost bivanja v lokalnem okolju, gradi skupnostni pristop in je namenjen splošni javni uporabi.</li> <li>Je takšne narave, da ga bo občina Ankaran lahko izpeljala v okviru občinskih zmogljivosti in zakonskih pristojnosti.</li> <li>Ni uvrščen v proračun oz. načrt razvojnih programov občine in ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov občine Ankaran.</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> <li>Je načrtovan na zemljišču v javni lasti oziroma na zasebnem zemljišču s soglasjem lastnika</li> <li>V preteklih petih letih ni bil financiran/sofinanciran iz proračuna občine Ankaran.</li> <li>Je finančno ovrednoten do največ 30.000 eur z vključenim DDV-jem.</li><li>Je realno izvedljiv v proračunskem letu 2025.</li><li>Je umeščen v enega od treh območij občine, opredeljenih za participativni proračun.</li><li>Je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično)</li> </ol> <h5>VSEBINA PROJEKTOV:</h5> <ul> <li>gradnja ali obnova otroških igrišč,</li> <li>gradnja ali obnova športnih površin,</li> <li>ureditve/preplastitve krajših cest, manjkajočih pločnikov</li> <li>ureditev javnih površin</li> <li>urbane ureditve (urbana oprema: klopi, koši za smeti, stojala za kolesa, javna razsvetljava,…),</li> <li>izobraževalne, turistične, kulturne vsebine,</li> <li>inovativni projekti za boljšo kakovost bivanja</li> </ul>"
+      instructions_description: |
+        <h3>Proponente:</h3>
+        <ol>
+          <li>ha diritto di presentare la proposta progettuale chi in data 1.1.2025 aveva la residenza nel Comune di Ancarano e 15 anni di età ovvero ne compirà 15 nel 2025 (nati al più tardi nel 2010);</li>
+          <li>non può agire in qualità di esecutore della proposta di progetto – né quale persona fisica ovvero quale proprietario oppure membro del direttivo di una persona giuridica dell’esecutore;</li>
+          <li>ha presentato la proposta per l'area del bilancio partecipativo del comune di residenza.</li>
+        </ol>
+        <h3>Progetto proposto:</h3>
+        <ol>
+          <li>è di competenza del comune;</li>
+          <li>verrà attuato sul territorio del Comune di Ancarano;</li>
+          <li>non è contrario alla legislazione ovvero alle norme comunali;</li>
+          <li>è conforme con gli atti di pianificazione territoriale del comune, con gli atti e le strategie di sviluppo e con gli altri programmi di sviluppo comunale;</li>
+          <li>contribuisce alla realizzazione dell’interesse pubblico sul territorio del comune;</li>
+          <li>è per natura tale da poter essere attuato dal comune e realizzato nell'ambito delle capacità dell’ente nel periodo del bilancio partecipativo per gli anni 2025 e 2026;</li>
+          <li>promuove la partecipazione attiva e il coinvolgimento dei cittadini, migliora la qualità della vita nell'ambiente locale, ovvero sprona un approccio comunitario ed è destinato all'uso pubblico generale;</li>
+          <li>è stato progettato su un terreno di proprietà del Comune di Ancarano ovvero su un terreno di proprietà di un altro soggetto per il quale il richiedente ha ottenuto un'autorizzazione di utilizzo oppure altro diritto reale che consenta la realizzazione del progetto;</li>
+          <li>il valore reale stimato è compreso tra i 1.000,00 ed i 30.000,00 euro, IVA inclusa;</li>
+          <li>viene presentato sull'apposito modulo e compilato in ogni sua parte (elettronicamente o fisicamente).</li>
+        </ol>
       back_to_all_proposals: "Tornare all'elenco delle proposte"
     feasibility:
       select_feasibility: Filtrare le proposte non votate
@@ -287,7 +306,7 @@ it:
       description_2: "Tutte le proposte presentate verranno esaminate da una commissione di esperti, che valuterà ogni proposta dal punto di vista finanziario, ne verificherà la fattibilità e la conformità alle condizioni stabilite (nell'ambito delle competenze del Comune, in linea con la legislazione, con i documenti di pianificazione territoriale e di sviluppo, il contributo all'interesse pubblico, ecc.) La commissione può unire proposte progettuali identiche o simili in un'unica proposta progettuale o adattare parzialmente una singola proposta progettuale.<p>Le proposte che non soddisferanno le condizioni secondo la valutazione della commissione, verranno eliminate, tramite una motivazione che specificherà per quali condizioni non sono risultate idonee.</p><p>Tutte le proposte progettuali che soddisferanno tutte le condizioni del bando saranno sottoposte a votazione.</p>"
       date_2: 24. 2.-24. 3. 2025
       heading_3: Votazioni
-      description_3: Tra il 7 e il 20 aprile 2025, i cittadini avranno l'opportunità di votare per scegliere i progetti del Comune di Ancarano che verranno finanziati.</p>GPotranno votare i cittadini del Comune di Ancarano, che con il 1° gennaio 2025 hanno:<ul><li>residenza permanente nel Comune di Ancarano,</li><li>compiuto o compiranno 15 anni di età nel 2025 (nati nel 2010).</li></ul></p><p>Ognuno potrà votare per un massimo di 3 proposte per tutto il comune, indipendentemente dalla zona di residenza. Per ogni singola proposta progettuale è consentito votare solo una volta.</p><p>SÈ possibile inviare il proprio voto dal 7 aprile 2025 fino al 20 aprile 2025 su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online. Potrete consegnare il vostro voto online anche con l'aiuto di un assistente presso l'ufficio protocollo del Comune di Ancarano, Via Ivan Regent 2, Ancarano, durante l'orario d’ufficio:<ul><li>lunedì, 7. 4. e 14. 4. 2025 dalle 8.00 alle 12.00 </li><li>mercoledì 2. 4. e 9. 4. 2025 dalle 8.00 alle 14.00 e dalle 14.00 alle 17.00.</li><li>venerdì 4. 4. e 11. 4. 2025 dalle 8.00 alle 12.00.</li></ul></p>"
+      description_3: Tra il 7 e il 20 aprile 2025, i cittadini avranno l'opportunità di votare per scegliere i progetti del Comune di Ancarano che verranno finanziati.</p>GPotranno votare i cittadini del Comune di Ancarano, che con il 1° gennaio 2025 hanno:<ul><li>residenza permanente nel Comune di Ancarano,</li><li>compiuto o compiranno 15 anni di età nel 2025 (nati nel 2010).</li></ul></p><p>Ognuno potrà votare per un massimo di 3 proposte per tutto il comune, indipendentemente dalla zona di residenza. Per ogni singola proposta progettuale è consentito votare solo una volta.</p><p>SÈ possibile inviare il proprio voto dal 7 aprile 2025 fino al 20 aprile 2025 su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online. Potrete consegnare il vostro voto online anche con l'aiuto di un assistente presso l'ufficio protocollo del Comune di Ancarano.</li></ul></p>"
       date_3: 7. 4.-20. 4. 2025
       heading_4: Annuncio dei progetti prescelti
       description_4: "Alla conclusione delle votazioni, il comune controllerà i risultati e annuncerà i progetti selezionati. In base all'esito delle votazioni, i progetti saranno selezionati per essere inseriti nel bilancio partecipativo del Comune di Ancarano per gli anni 2025 e 2026 e per la loro attuazione per ogni zona del bilancio partecipativo del Comune di Ancarano fino all'importo totale dei fondi stanziati per ogni zona (Ancarano est totale 40.000,00 euro; Ancarano centro totale 20.000,00 euro e Ancarano ovest totale 40.000,00 euro).<p>I risultati delle votazioni saranno pubblicati sul sito web del comune dopo il 9 maggio 2025.</p>"
@@ -306,10 +325,10 @@ it:
       description_3: |
         <p>Oltre a presentare una proposta online, è possibile farlo anche</p>
         <ul>
-          <li>In formato elettronico (scaricando il modulo ...., compilandolo e inviandolo per e-mail a ...)</li>
+          <li>In formato elettronico (scaricando il <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">modulo</a>, compilandolo e inviandolo per e-mail a <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a>)</li>
           <li>I moduli stampati possono essere ritirati presso l'ufficio protocollo del Comune di Ancarano, Via Ivan Regentova 2, 6280 Ancarano durante l’orario d’ufficio.</li>
         </ul>
-        <p>Per aiutarvi a preparare le vostre proposte progettuali, potrete partecipare ad un laboratorio pratico, che si terrà mercoledì 15 gennaio 2025 alle ore 18:00 presso il Centro ingregenerazional Ancarano, sul indirizzo Via Rudi Mahnič1, 6280 Ancarano.</p>
+        <p>Per aiutarvi a preparare le vostre proposte progettuali, potrete partecipare ad un laboratorio pratico, che si terrà mercoledì 29 gennaio 2025 alle ore 18:00 presso il Centro ingregenerazional Ancarano, sul indirizzo Via Rudi Mahnič1, 6280 Ancarano.</p>
       heading_4: "Password dimenticata. Come procedere?"
       description_4: "Premere il pulsante “Iscrivetevi”, quindi selezionare il collegamento “Password dimenticata”. Riceverete le istruzioni per creare una nuova password al vostro indirizzo e-mail."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
