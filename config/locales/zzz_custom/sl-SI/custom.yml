@@ -259,7 +259,7 @@ sl-SI:
       table_price: Znesek z DDV
       table_total: Skupaj
       price_label: Ocena stroškov projektnega predloga (skupaj z DDV-jem)
-      price_help_text: Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov. <p>Ocena stroškov mora biti med 1.000,00 EUR in 30.000,00 EUR z DDV. (1.000,00 EUR in 10.000,00 EUR z DDV za PP Za Mlade)</p>
+      price_help_text: Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov. Ocena stroškov mora biti med 1.000,00 EUR in 30.000,00 EUR z DDV (1.000,00 EUR in 10.000,00 EUR z DDV za PP Za Mlade).
     presentation:
       accepting:
         title_1: Kakšen je proračun?
