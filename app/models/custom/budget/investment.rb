@@ -15,8 +15,18 @@ class Budget
     end
 
     def has_all_answers?
-      filtered_answers = answers.select { |answer| answer.text.strip != "" }
-      filtered_answers.length == self.budget.questions.count
+      filtered_answers = answers.select { |answer| !answer.text.nil? && answer.text.strip != "" }
+      empty_answers = answers.select { |answer| answer.text.nil? || answer.text.strip == "" }
+      if ((
+        filtered_answers.length == self.budget.questions.count - 1
+      ) && (
+        empty_answers.length == 1
+      ) && (
+        Budget::Question.where(id: empty_answers[0].budget_question_id).first.text == "A3"
+      ))
+        empty_answers[0].text = 'NI IZPOLNJENO' # TODO warning this is a bit dodgy because it has side effects, but it works (for now)
+        return true
+      end
     end
 
     # this is quite possibly useless and/or redundant

@@ -3,7 +3,7 @@
   width: 300px;
 
   &.accepting {
-    background: image-url("predlagaj-MB.svg") no-repeat;
+    background: image-url("phases/predlagaj.svg") no-repeat;
   }
 
   &.selecting {
@@ -12,11 +12,11 @@
   }
 
   &.balloting {
-    background: image-url("glasuj-MB.svg") no-repeat;
+    background: image-url("phases/glasuj.svg") no-repeat;
   }
 
   &.finished {
-    background: image-url("izvedi-MB.svg") no-repeat;
+    background: image-url("phases/spremljaj.svg") no-repeat;
   }
 
   &.reviewing,
@@ -252,6 +252,7 @@ only screen and (min-resolution: 240dpi) {
 .bgblack {
   background-color: $black;
 }
+
 /* hover style just for information */
 span:hover::before {
   border: 2px solid #3c3583 !important;
@@ -332,7 +333,7 @@ span:hover::before {
 
       .image-holder {
         text-align: center;
-  
+
         img {
           height: auto;
           width: 100%;
@@ -341,10 +342,10 @@ span:hover::before {
           object-fit: cover;
           display: block;
         }
-  
+
         .investment-default-image {
           background-color: $theme-color-opacity-90;
-  
+
           img {
             object-fit: none;
           }
@@ -354,7 +355,7 @@ span:hover::before {
       &:hover {
         border: 2px solid $theme-color;
         border-bottom: 3px solid $theme-color;
-        
+
         a {
           color: $black;
         }
@@ -427,7 +428,7 @@ span:hover::before {
     margin-bottom: 3rem;
 
     img {
-      margin-top: 2rem;  
+      margin-top: 2rem;
     }
 
     p {
@@ -513,6 +514,7 @@ span:hover::before {
 
           &:last-child {
             flex-direction: column;
+
             input {
               width: 400px;
             }
@@ -729,9 +731,11 @@ span:hover::before {
         display: flex;
         align-items: center;
         margin-bottom: 0;
+
         .info {
           margin-bottom: 0;
         }
+
         .tags {
           margin-left: 1.5rem;
         }
@@ -783,11 +787,12 @@ span:hover::before {
         max-height: 35px;
         margin: 10px;
       }
-  
+
       p {
         margin-bottom: 0;
         font-size: 14px;
         font-weight: 700;
+
         @media screen and (min-width: 64em) {
           width: 400px;
         }
@@ -828,7 +833,7 @@ span:hover::before {
           margin-top: 0;
         }
       }
-      
+
     }
   }
 }
@@ -1055,7 +1060,7 @@ span:hover::before {
   }
 }
 
-// about page 
+// about page
 .about {
   padding-bottom: 3rem;
 
@@ -1094,7 +1099,7 @@ span:hover::before {
     }
   }
 
-  p {
+  p, ul, ol {
     font-size: 1.25rem;
     line-height: 1.5625rem;
     font-weight: 500;
@@ -1148,7 +1153,7 @@ span:hover::before {
     }
 
     &.accordion-collapsed {
-      p {
+      p, div {
         display: none;
       }
 
