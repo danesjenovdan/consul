@@ -27,6 +27,9 @@
   .heading-with-photo {
     display: flex;
     margin-bottom: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 
     .mayor-image-container {
       width: 200px;
@@ -38,9 +41,8 @@
     }
 
     h1 {
-      height: 200px;
       align-content: center;
-      margin-left: 30px;
+      margin: auto;
     }
   }
 
@@ -159,6 +161,14 @@
         }
       }
     }
+  }
+
+  @media screen and (max-width: 51.9375em) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 39.9375em) {
+    padding: 15px;
   }
 }
 
