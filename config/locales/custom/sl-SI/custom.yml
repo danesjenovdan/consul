@@ -67,6 +67,8 @@ sl-SI:
       header:
         different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
         change_ballot: "Če si premisliš, lahko odstraniš svoje glasove iz tega območja in začneš znova."
+        go_to_regular_budget: "Pojdi na Celje po mojem"
+        go_to_young_budget: "Pojdi na Celje po mojem za mlade"
     ballots:
       show:
         amount_progress: "%{amount_spent} / %{amount_limit}"
@@ -271,6 +273,7 @@ sl-SI:
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
+      current_phase: Trenutno poteka
     about:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
       main_title: Kako deluje?
@@ -457,7 +460,9 @@ sl-SI:
       registration: "Zaradi napak obrazca nismo mogli shraniti."
       submit_investment: "Zaradi napak obrazca nismo mogli shraniti."
       no_answer: "Prosim izpolni vprašanje."
+      new_investment_not_allowed: "V tem proračunu lahko glasujejo samo mlajši od 30 let."
     footer:
       djnd: Za platformo skrbi
     registration:
       already_has_account: "Že imaš račun?"
+      data_consent: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Celje obdeluje moje osebne podatke za namen izvedbe projekta Celje po moje."

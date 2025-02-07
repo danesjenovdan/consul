@@ -22,7 +22,6 @@
         <div class="tabs-panel is-active" id="tab-comments">
           <%= render MachineLearning::CommentsSummaryComponent.new(@investment) %>
 
-          <%= render Shared::CommentsComponent.new(@investment, @comment_tree) %>
         </div>
 
         <%= render "milestones/milestones", milestoneable: @investment %>

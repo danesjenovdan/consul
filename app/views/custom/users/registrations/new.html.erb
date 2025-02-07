@@ -23,9 +23,6 @@
 
       <%= f.invisible_captcha :address %>
 
-      <%# TODO: dodaj autocomplete polje za naslov %>
-      <%# <%= f.text_field :naslov %>
-
       <%= f.email_field :email %>
 
       <%= f.password_field :password, autocomplete: "off", hint: t("devise_views.users.registrations.new.password_hint") %>
@@ -42,6 +39,8 @@
         label: t("devise_views.users.registrations.new.terms",
                  terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
                 ) %>
+
+      <%= f.check_box :data_consent, title: t('custom.registration.data_consent'), label: t("custom.registration.data_consent") %>
 
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>

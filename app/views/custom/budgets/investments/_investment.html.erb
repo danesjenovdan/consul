@@ -118,7 +118,14 @@
               <% end %>
 
               <% unless investment.unfeasible? %>
-                <% if @heading and investment.should_show_ballots? %>
+                <% if @budget.id == 2 and !@ballot.user.nil? %>
+                  <% if !@ballot.user.is_young_person and investment.should_show_ballots? %>
+                    <div class="small-12 medium-12 callout warning margin-top">
+                      <strong>Glasujejo lahko samo mlajši od 30 let.</strong>
+                    </div>
+                    <div <%= "data-equalizer-watch" if feature?(:allow_images) && investment.image.present? %>></div>
+                  <% end %>
+                <% elsif @heading and investment.should_show_ballots? %>
                   <div id="<%= dom_id(investment) %>_ballot"
                       class="small-12 medium-12 text-right"
                       <%= "data-equalizer-watch" if feature?(:allow_images) && investment.image.present? %>>

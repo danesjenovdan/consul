@@ -16,16 +16,33 @@
       <div class="column">
         <div class="landing">
           <div class="introduction-text">
-            <h1><%= t("custom.landing.title") %></h1>
-            <p><%= t("custom.landing.introduction_text") %></p>
-            <!-- TODO: can we get current budget - current phase url directly? -->
-            <% if current_budget.present? %>
-              <% current_budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
-                <% if phase.enabled && phase.active %>
-                  <a class="action-button large" href="<%= phase.url %>">
-                    <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
-                  </a>
-                <% end %>
+            <% @budgets.order('id').each_with_index do |budget, i| %>
+              <% if i == 0 %>
+                <div>
+                  <%= image_tag(image_path_for("logo-header.png"), class: "double-header-logo", alt: "Logotip 1") %>
+                  <h1><%= t("custom.landing.title") %></h1>
+                  <p><%= t("custom.landing.introduction_text") %></p>
+                  <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
+                    <% if phase.enabled && phase.active %>
+                      <a class="action-button large" href="<%= phase.url %>">
+                        <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
+                      </a>
+                    <% end %>
+                  <% end %>
+                </div>
+              <% elsif %>
+                <div>
+                  <%= image_tag(image_path_for("logo-header2.png"), class: "double-header-logo", alt: "Logotip 2") %>
+                  <h1><%= t("custom.landing.title2") %></h1>
+                  <p><%= t("custom.landing.introduction_text2") %></p>
+                  <% budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
+                    <% if phase.enabled && phase.active %>
+                      <a class="action-button large" href="<%= phase.url %>">
+                        <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
+                      </a>
+                    <% end %>
+                  <% end %>
+                </div>
               <% end %>
             <% end %>
           </div>
@@ -39,22 +56,11 @@
                     <div class="phase-enrichment <%= phase.kind %>"></div>
                   </div>
                   <div class="column-content">
+                    <% if phase.active %>
+                      <span class="datum"><%= t("custom.landing.current_phase") %></span>
+                    <% end %>
                     <h2><%= t("custom.headings.#{phase.kind}") %></h2>
                     <h4><%= strip_tags(phase.summary) %></h4>
-                    <% unless phase.active %>
-                    <!-- <div>
-                        TEGA JE DAL FILIP NOT IN POTEM UMAKNIL, KER JE MB TAKO HOTEL, NASLEDNJA DVA STA BILA ZAKOMENTIRANA<div class="large-description"><%= sanitize_and_auto_link phase["presentation_summary_#{phase_name}"] %></div>
-                        <div class="large-description"><%= sanitize_and_auto_link phase.summary %></div>
-                        <% if phase.description %>
-                          <div class="large-description"><%= sanitize_and_auto_link phase.description %></div>
-                        <% end %>
-                      </div> -->
-                    <% end %>
-                    <% if phase.active %>
-                      <a class="action-button large" href="<%= phase.url %>">
-                        <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
-                      </a>
-                    <% end %>
                   </div>
                 </section>
               <% end %>
