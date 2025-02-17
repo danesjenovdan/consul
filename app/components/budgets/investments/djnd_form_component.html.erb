@@ -6,7 +6,7 @@
 
     <% unless budget.single_heading? %>
       <div>
-        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true } %>
+        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, label: 'Izberi območje v občini, za katerega predlagaš predlog' }%>
       </div>
     <% end %>
 
@@ -29,26 +29,32 @@
               class: "html-area" %>
       </div>
     <% end %>
-  </fieldset>
 
   <%= f.invisible_captcha :subtitle %>
 
-  <fieldset>
     <%= f.fields_for :answers do |builder| %>
-      <p>
-        <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
-        <%= builder.hidden_field :budget_id %>
-        <%= builder.hidden_field :budget_question_id %>
-        <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+      <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+        <p>
+          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5, class: 'is-invalid-input'%>
+          <%= builder.hidden_field :budget_id %>
+          <%= builder.hidden_field :budget_question_id %>
           <span class="form-error is-visible"><%= t("custom.errors.no_answer") %></span>
-        <% end %>
-      </p>
+        </p>
+      <% else %>
+        <p>
+          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+          <%= builder.hidden_field :budget_id %>
+          <%= builder.hidden_field :budget_question_id %>
+        </p>
+      <% end %>
     <% end %>
 
-    <%= f.label :price, "Vrednost predloga (v evrih)", class: "inline-block" %>
-    <p class="help-text">Za pomoč pri oceni vrednosti projekta smo pripravili tabelo orientacijskih stroškov, ki jo najdete <a href='https://medvode.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0326fcf84d222355d4a1882bba1b672ed97dc993/SodelujGlasuj-Stroskovnik-2022-1.pdf' target='_blank'>tukaj</a>.</p>
+    <%= f.label :price, t("custom.form.price_label"), class: "inline-block" %>
+    <p class="help-text"><%= t("custom.form.price_help_text") %></p>
     <%= f.number_field :price, label: false, :required => true %>
+  </fieldset>
 
+  <fieldset>
     <% if feature?(:allow_images) %>
       <%= render Images::NestedComponent.new(f) %>
     <% end %>
