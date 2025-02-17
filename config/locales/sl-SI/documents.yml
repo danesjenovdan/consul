@@ -8,7 +8,7 @@ sl-SI:
       title_placeholder: Dodaj poveden naslov dokumenta
       delete_button: Odstrani dokument
       cancel_button: Prekliči
-      note: "Naložiš lahko največ %{max_documents_allowed} dokumentov naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
+      note: "Naložiš lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
       add_new_document: Dodaj nov dokument
     actions:
       destroy:

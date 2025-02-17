@@ -98,11 +98,15 @@
                   <% end %>
                   <div class="small-12 medium-9">
                     <div class="callout warning margin-top">
-                      <%= sanitize(t("budgets.investments.header.different_heading_assigned", heading_link: heading_link(@assigned_heading, @budget))) %>
-                      <br>
-                      <small>
-                        <%= t("budgets.investments.header.change_ballot", check_ballot: heading_link(@assigned_heading, @budget)).html_safe %>
-                      </small>
+                      <% if current_user %>
+                        <%= sanitize(t("budgets.investments.header.different_heading_assigned", heading_link: heading_link(@assigned_heading, @budget))) %>
+                        <br>
+                        <small>
+                          <%= t("budgets.investments.header.change_ballot", check_ballot: heading_link(@assigned_heading, @budget)).html_safe %>
+                        </small>
+                      <% else %>
+                        Za glasovanje se moraš vpisati.
+                      <% end %>
                     </div>
                   </div>
                 <% end %>

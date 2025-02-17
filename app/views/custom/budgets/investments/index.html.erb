@@ -33,7 +33,7 @@
         <% if phase.active %>
           <%= render "/budgets/investments/header" %>
           <div class="main-indented-content">
-            <% if @filtered_investments_count > 0 %> <%#  || @heading.present? %>
+            <% if @filtered_investments_count > 0 %>
               <div class="row budget-investments">
                 <div class="column">
                   <%= render Shared::MapLocationComponent.new(@map_location, investments_coordinates: @investments_map_coordinates, geozones_data: @geozones_data) %>

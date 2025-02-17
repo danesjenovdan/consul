@@ -49,7 +49,7 @@ sl-SI:
       proposals: "Predlogi"
       polls: "Glasovanja"
       polls_description: "Za glasovanje o državljanskih predlogih se registriraj. Pomagaj sprejemati direktne odločitve."
-      budgets: "Participatorni proračun"
+      budgets: "Participativni proračun"
       legislation: "Kolaborativna zakonodaja"
     html:
       per_page_code_head: "Koda, ki bo vključena na vsaki strani (<head>)"
