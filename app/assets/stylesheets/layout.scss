@@ -1328,7 +1328,7 @@ table {
   .date-of-birth {
 
     select {
-      float: left;
+      // float: left;
       width: 30%;
 
       @include breakpoint(medium) {
