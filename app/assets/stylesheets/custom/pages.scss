@@ -3,7 +3,7 @@
   width: 300px;
 
   &.accepting {
-    background: image-url("ilustracija1.png") no-repeat;
+    background: image-url("Oddaja-predlogov-S.png") no-repeat;
     background-size: contain;
   }
 
@@ -13,18 +13,18 @@
   }
 
   &.balloting {
-    background: image-url("ilustracija2.png") no-repeat;
+    background: image-url("Glasovanje-za-projekt-S.png") no-repeat;
     background-size: contain;
   }
 
   &.finished {
-    background: image-url("ilustracija3.png") no-repeat;
+    background: image-url("Zasaditev-dreves-S.png") no-repeat;
     background-size: contain;
   }
 
   &.reviewing,
   &.valuating {
-    background: image-url("phases/kajpazdaj.png") center no-repeat;
+    background: image-url("umetniski-projekti-M.png") center no-repeat;
 
     @include breakpoint(medium up) {
       background-size: 127%;
@@ -74,7 +74,7 @@ only screen and (min-resolution: 240dpi) {
 
     padding-top: 80px;
     padding-bottom: 60px;
-    
+
     h1 {
       font-size: 44px;
       line-height: 54px;
@@ -374,7 +374,7 @@ span:hover::before {
 
       .image-holder {
         text-align: center;
-  
+
         img {
           height: auto;
           width: 100%;
@@ -383,10 +383,10 @@ span:hover::before {
           object-fit: cover;
           display: block;
         }
-  
+
         .investment-default-image {
           background-color: $theme-color-opacity-90;
-  
+
           img {
             object-fit: none;
           }
@@ -396,7 +396,7 @@ span:hover::before {
       &:hover {
         border: 2px solid $theme-color;
         border-bottom: 3px solid $theme-color;
-        
+
         a {
           color: $black;
         }
@@ -469,7 +469,7 @@ span:hover::before {
     margin-bottom: 3rem;
 
     img {
-      margin-top: 2rem;  
+      margin-top: 2rem;
     }
 
     p {
@@ -825,7 +825,7 @@ span:hover::before {
         max-height: 35px;
         margin: 10px;
       }
-  
+
       p {
         margin-bottom: 0;
         font-size: 14px;
@@ -870,7 +870,7 @@ span:hover::before {
           margin-top: 0;
         }
       }
-      
+
     }
   }
 }
@@ -1097,7 +1097,7 @@ span:hover::before {
   }
 }
 
-// about page 
+// about page
 .about {
   padding-bottom: 3rem;
 
