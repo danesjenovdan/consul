@@ -273,7 +273,7 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun 2023–2024!
+      title: Participativni proračun 2025–2026!
       introduction_text: Občina Medvode nadaljuje s procesom participativnega razdeljevanja proračunskih sredstev tudi v letih 2025 in 2026. V novem ciklu bomo razdelili 400.000 EUR za projekte v vrednosti do 25.000 EUR. Ponovno vabljeni, da sooblikujete razvoj naše skupnosti.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
@@ -282,19 +282,19 @@ sl-SI:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Občanke in občani oddate predloge projektov med 30. majem in 16. septembrom 2022. Posamezen predlog projekta mora biti pripravljen v skladu z navodili, njegova vrednost pa ne sme biti nižja od 3 000 ter višja od 25.000 EUR. V primeru, da je za posamezno območje na voljo manj kot 25.000 EUR, vrednost projekta na tem območju ne sme presegati dodeljenih sredstev za to območje. Predlog lahko oddate preko spleta ali z obrazcem v sprejemni pisarni Občine Medvode, po pošti ali na elektronski naslov občine."
-      date_1: 30. 5.–16. 9. 2022
+      description_1: "Občanke in občani oddate predloge projektov med 13. marcem in 6. majem 2025. Posamezen predlog projekta mora biti pripravljen v skladu z navodili, njegova vrednost pa ne sme biti nižja od 3 000 ter višja od 25.000 EUR. V primeru, da je za posamezno območje na voljo manj kot 25.000 EUR, vrednost projekta na tem območju ne sme presegati dodeljenih sredstev za to območje. Predlog lahko oddate preko spleta ali z obrazcem v sprejemni pisarni Občine Medvode, po pošti ali na elektronski naslov občine."
+      date_1: 13. 3.–6. 5. 2025
       heading_2: Pregled predlogov
       description_2: "Vse oddane predloge pregleda komisija, ki vsak oddan predlog finančno ovrednoti in preveri, če je izvedljiv, skladen z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna ter v skladu z drugimi pravili projekta Sodeluj in glasuj!. Komisija lahko podobne predloge združi."
-      date_2: 19. 9.–21. 11. 2022
+      date_2: 7. 5.–1. 9. 2025
       heading_3: Glasovanje
-      description_3: "Glasovanje poteka med 5. in 11. decembrom 2022 prek spleta ali v prostorih Občine Medvode. Sodeluje lahko vsak občan ali občanka s stalnim bivališčem v občini Medvode, ki je dopolnil/-a 15 let. Vsak občan ali občanka lahko glasuje za projektne predloge znotraj območja v katerem ima prijavljeno stalno prebivališče."
-      date_3: 5. 12.–11. 12. 2022
+      description_3: "Glasovanje poteka med 1. in 7. septembrom 2025 prek spleta ali v prostorih Občine Medvode. Sodeluje lahko vsak občan ali občanka s stalnim bivališčem v občini Medvode, ki je dopolnil/-a 15 let. Vsak občan ali občanka lahko glasuje za projektne predloge znotraj območja v katerem ima prijavljeno stalno prebivališče."
+      date_3: 1. 9.–7. 9. 2022
       heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju Občina Medvode preveri rezultate in razglasi projekte, ki so bili izbrani. Izbrani projekti so predlagani v potrditev Občinskemu svetu Občine Medvode za proračunski leti 2023 in 2024."
-      date_4: "December 2022"
+      description_4: "Po končanem glasovanju Občina Medvode preveri rezultate in razglasi projekte, ki so bili izbrani. Izbrani projekti so predlagani v potrditev Občinskemu svetu Občine Medvode za proračunski leti 2025 in 2026."
+      date_4: "Oktober 2025"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi izglasovani projekti so vključeni v proračun Občine Medvode in bodo izvedeni v letih 2023 in 2024. V tej fazi cikla participativnega proračuna skrbimo za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa."
+      description_5: "Vsi izglasovani projekti so vključeni v proračun Občine Medvode in bodo izvedeni v letih 2025 in 2026. V tej fazi cikla participativnega proračuna skrbimo za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa."
     privacy:
       title: "Pogoji uporabe"
     help:
@@ -311,7 +311,7 @@ sl-SI:
       description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
       technical_issues: "Imaš tehnične težave?"
-      technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>. Na voljo smo vam tudi po telefonu vsak ponedeljek od 9:00 do 10:00, vsako sredo od 15:00 do 17:00 ter vsak petek od 9:00 do 11:00 na telefonski številki 031 256 860.'
+      technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
       other_contact: 'Kontaktiraj predstavnike Občine Medvode na <a href="mailto:sodeluj.glasuj@medvode.si" target="_blank">sodeluj.glasuj@medvode.si</a>. Na voljo smo vam tudi po telefonu v času uradnih ur občinske uprave na telefonski številki 01 361 95 20.'
     terms:
