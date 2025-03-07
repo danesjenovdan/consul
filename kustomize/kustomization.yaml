@@ -8,8 +8,8 @@ resources:
   - ingress.yaml
 images:
   - name: consul
-    newName: rg.fr-par.scw.cloud/djnd/consul-medvode-staging
-    newTag: 'd9d694db1d48d2dad7af02f8d94225dcbffa699e'
+    newName: rg.fr-par.scw.cloud/djnd/consul-medvode
+    newTag: '8bba917ed510aa203ea21387a7fe3b19a4f1b515'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: 'd9d694db1d48d2dad7af02f8d94225dcbffa699e'
+  #   newTag: '8bba917ed510aa203ea21387a7fe3b19a4f1b515'
