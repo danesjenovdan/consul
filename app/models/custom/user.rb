@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validate :validate_data_consent, on: :create
   validate :validate_address, on: [:create, :update]
   validates :email, on: :create, presence: true
+  validates :phone_number, on: :create, presence: true
   
   def validate_data_consent
     unless data_consent
