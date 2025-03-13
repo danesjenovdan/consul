@@ -257,7 +257,7 @@ sl-SI:
       table_price: Znesek z DDV
       table_total: Skupaj
       price_label: Vrednost predloga (v evrih)
-      price_help_text: 
+      price_help_text: "Za pomoč pri oceni vrednosti projekta smo pripravili tabelo orientacijskih stroškov, ki jo najdete <a href='https://www.sodelujinglasuj.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBczhEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1c80bbe445d719a8eb6b530b85c79cba91137786/SodelujGlasuj-OrientacijskiStro%C5%A1ki-2025-26.pdf' target='_blank'>tukaj</a>."
     presentation:
       accepting:
         title_1: Kakšen je proračun?
