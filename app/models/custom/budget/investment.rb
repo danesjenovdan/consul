@@ -17,6 +17,9 @@ class Budget
     def has_all_answers?
       filtered_answers = answers.select { |answer| !answer.text.nil? && answer.text.strip != "" }
       empty_answers = answers.select { |answer| answer.text.nil? || answer.text.strip == "" }
+      if (filtered_answers.length == self.budget.questions.count)
+        return true
+      end
       if ((
         filtered_answers.length == self.budget.questions.count - 1
       ) && (
