@@ -156,6 +156,9 @@ sl-SI:
     form:
       title: Slika
   mailers:
+    config:
+      notifications_link: urejanje obvestil
+      unsubscribe_text: 'Če se želiš odjaviti od teh sporočil, obišči %{notifications} in odkljukaj "%{notification}".'
     budget_investment_created:
       intro: "Hej, <strong>%{author}</strong>,"
       share: Oglej si svoj projekt
