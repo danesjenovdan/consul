@@ -208,7 +208,7 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li>  <h6>Območje 1 (20.000 EUR)</h6>  <div>Center Rog-hiša</div></li><li>  <h6>Območje 2 (20.000 EUR)</h6>  <div>Park izbrisanih</div></li><li>  <h6>Območje 3 (20.000 EUR)</h6>  <div>Okolica Centra Rog</div></li>"
+      headings_sidebar: "<li>  <h6>Območje 1 (12.000 EUR)</h6>  <div>Center Rog:hiša</div></li><li>  <h6>Območje 2 (8.000 EUR)</h6>  <div>Center Rog:Okolica hiše in Park Izbrisanih </div></li>"
       select_heading: Izberi območje
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
