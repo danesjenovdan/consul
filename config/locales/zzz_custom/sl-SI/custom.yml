@@ -208,9 +208,8 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li>  <h6>Območje 1 (20.000 EUR)</h6>  <div>Levi breg: KS Kamnica, KS Bresternica-Gaj, MČ Koroška vrata</div></li><li>  <h6>Območje 2 (196.000 EUR)</h6>  <div>Levi breg: MČ Ivan Cankar, MČ Center, KS Malečnik-Ruperče</div></li><li>  <h6>Območje 3 (196.000 EUR)</h6>  <div>Desni breg: KS Limbuš, KS Pekre, MČ Radvanjem, KS Razvanje</div></li><li>  <h6>Območje 4 (196.000 EUR)</h6>  <div>Desni breg: MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova</div></li><li>  <h6>Območje 5 (196.000 EUR)</h6>  <div>Desni breg: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno</div></li>"
+      headings_sidebar: "<li>  <h6>Območje 1 (12.000 EUR)</h6>  <div>Center Rog:hiša</div></li><li>  <h6>Območje 2 (8.000 EUR)</h6>  <div>Center Rog:Okolica hiše in Park Izbrisanih </div></li>"
       select_heading: Izberi območje
-      select_tag: Izberi mestno četrt
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
@@ -460,3 +459,36 @@ sl-SI:
       djnd: Za platformo skrbi
     registration:
       already_has_account: "Že imaš račun?"
+    accessibility:
+      slug: izjava-o-dostopnosti
+      title: Izjava o dostopnosti
+      date: 11. 4. 2025
+      main_title: Izjava o dostopnosti 
+      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://center-rog.si">center-rog.si za katerega skrbi JZ Center Rog.
+      description_title: "Opis dostopnih vsebin:"
+      description_bullets: |
+        <li>Spletna stran ima razumljivo in konsistentno strukturo in navigacijo. HTML koda spletne strani je pregledana in urejena, da ustreza zahtevam različnih naprav.</li>
+        <li>Kontrasti na spletni strani so primerni. Spletna stran le izjemoma uporablja prikaz besedila na sliki.</li>
+        <li>Spletno stran je mogoče upravljati s tipkovnico.</li>
+        <li>Spletni obrazci so dostopni.</li>
+      inaccessible_title: Nedostopna vsebina
+      inaccessible_paragraph: Na podlagi Zakona o dostopnosti spletišč in mobilnih aplikacij (v nadaljevanju ZDSMA) bo spletna stran Centra Rog posodobljena in dopolnjena z namenom omogočiti vsem uporabnikom spletne strani <a href="https://center-rog.si">center-rog.si čim večjo dostopnost do objavljenih dokumentov in vsebin.
+      inaccessible_paragraph2: Center Rog ocenjuje, da bi za zavod nastale finančne posledice, če bi hoteli celotno vsebino ustrezno prilagoditi (prevesti v znakovni jezik in/ali opremiti s podnapisi ali drugače ustrezno prilagoditi skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij), saj je obseg vsebine velik . Prav tako je Center Rog pri oceni nesorazmernega bremena poleg znatnih finančnih posledic upošteval tudi notranjo organizacijo in vrsto dejavnosti, ki jo opravlja.
+      inaccessible_subtitle: Priprava izjave o dostopnosti
+      inaccessible_paragraph3: Datum objave Izjave o dostopnosti 14.04.2023, na podlagi samoocene.
+      feedback_title: Povratne in kontaktne informacije
+      feedback_paragraph: Če nam želite karkoli sporočiti ali pa vas zanima karkoli o dostopnih / nedostopnih vsebinah, nam lahko pišete na info@center-rog.si ali nas pokličete na (01) 251 63 01.
+      feedback_paragraph2: Odgovorna oseba za vsebinsko ustreznost spletišča Centra Rog:Tina Deu, Vodja trženja, tina.deu@center-rog.si
+      surveillance_title: Izvršilni postopek
+      surveillance_paragraph: V primeru, da ugotovite odstopanja od določil Zakona o dostopnosti spletišč in mobilnih aplikacij, lahko podate prijavo inšpektorjem za informacijsko družbo po navadni ali elektronski pošti na naslov
+       MINISTRSTVO ZA DIGITALNO PREOBRAZBO
+        <br>
+        <a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/inspektorat-za-informacijsko-druzbo/o-inspektoratu/">Inšpektorat Republike Slovenije za informacijsko družbo</a>
+        <br>
+        Davčna ulica 1
+        <br>
+        1000 Ljubljana
+        <br>
+        T:<a href="tel:015555848">01 555 58 48</a>
+        <br>
+        E:<a href="mailto:gp.mdp@gov.si">gp.mdp@gov.si</a>
