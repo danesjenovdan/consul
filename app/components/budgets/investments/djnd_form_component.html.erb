@@ -4,11 +4,12 @@
 
   <fieldset class="required-fields">
 
-    <% unless budget.single_heading? %>
-      <div>
-        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, label: 'Izberi območje v občini, za katerega predlagaš predlog' }%>
-      </div>
-    <% end %>
+    <%# budget heading is selected automatically based on users' addresses %>
+    <%# unless budget.single_heading? %>
+      <!--div-->
+        <%#= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, label: 'Izberi območje v občini, za katerega predlagaš predlog' }%>
+      <!--/div-->
+    <%# end %>
 
     <div>
       <%= render "shared/globalize_locales", resource: investment %>
@@ -33,24 +34,81 @@
   <%= f.invisible_captcha :subtitle %>
 
     <%= f.fields_for :answers do |builder| %>
-      <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
-        <p>
-          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5, class: 'is-invalid-input'%>
-          <%= builder.hidden_field :budget_id %>
-          <%= builder.hidden_field :budget_question_id %>
-          <span class="form-error is-visible"><%= t("custom.errors.no_answer") %></span>
+      <% if budget.questions.order(:id)[builder.index].text.start_with?('A1') %>
+        <%= builder.label :A1, t('custom.ankaran.form.tocna_lokacija_label'), class: "inline-block" %>
+        <p class="help-text">
+          <%= t('custom.ankaran.form.tocna_lokacija_info').html_safe %>
         </p>
+        <%= builder.text_field :text, label: false, :required => true %>
+        <%= builder.hidden_field :budget_id %>
+        <%= builder.hidden_field :budget_question_id %>
+        <br />
+
+      <% elsif budget.questions.order(:id)[builder.index].text.start_with?('A2') %>
+        <%= builder.label :A2, t('custom.ankaran.form.lastnistvo_nepremicnine_label'), class: "inline-block" %>
+        <p class="help-text">
+          <%= t('custom.ankaran.form.lastnistvo_nepremicnine_info') %>
+        </p>
+        <div class="djnd-radio">
+          <%= builder.radio_button :text, "lastnik je občina Ankaran", :label => t('custom.ankaran.form.lastnistvo_nepremicnine_obcina') %>
+        </div>
+        <div class="djnd-radio">
+          <%= builder.radio_button :text, "lastnik je druga pravna ali fizična oseba", :label => t('custom.ankaran.form.lastnistvo_nepremicnine_drugi') %>
+        </div>
+        <%= builder.hidden_field :budget_id %>
+        <%= builder.hidden_field :budget_question_id %>
+        <br />
+
+      <% elsif budget.questions.order(:id)[builder.index].text.start_with?('A3') %>
+        </fieldset>
+
+        <fieldset>
+        <%= builder.label :A3, t('custom.ankaran.form.pravica_uporabe_label') %>
+        <p class="help-text">
+          <%= t('custom.ankaran.form.pravica_uporabe_info') %>
+        </p>
+        <div class="djnd-radio">
+          <%=
+            builder.radio_button :text,
+            "ni soglasja",
+            :label => t('custom.ankaran.form.pravica_uporabe_ni_soglasja')
+          %>
+        </div>
+        <div class="djnd-radio">
+          <%=
+            builder.radio_button :text,
+            "je soglasje",
+            :label => t('custom.ankaran.form.pravica_uporabe_je_soglasje')
+          %>
+        </div>
+        <%= builder.hidden_field :budget_id %>
+        <%= builder.hidden_field :budget_question_id %>
+        <br />
+        </fieldset>
+
+        <fieldset class="required-fields">
       <% else %>
-        <p>
-          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
-          <%= builder.hidden_field :budget_id %>
-          <%= builder.hidden_field :budget_question_id %>
-        </p>
+        <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+          <p>
+            <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5, class: 'is-invalid-input'%>
+            <%= builder.hidden_field :budget_id %>
+            <%= builder.hidden_field :budget_question_id %>
+            <span class="form-error is-visible"><%= t("custom.errors.no_answer") %></span>
+          </p>
+        <% else %>
+          <p>
+            <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+            <%= builder.hidden_field :budget_id %>
+            <%= builder.hidden_field :budget_question_id %>
+          </p>
+        <% end %> <!-- HERE -->
       <% end %>
     <% end %>
 
-    <%= f.label :price, t("custom.form.price_label"), class: "inline-block" %>
-    <p class="help-text"><%= t("custom.form.price_help_text") %></p>
+    <%= f.label :price, t('custom.ankaran.form.ocena_stroskov_label'), class: "inline-block" %>
+    <p class="help-text">
+      <%= t('custom.ankaran.form.ocena_stroskov_info').html_safe %>
+    </p>
     <%= f.number_field :price, label: false, :required => true %>
   </fieldset>
 
@@ -74,7 +132,8 @@
       </div>
     <% end %>
 
-    <% if categories.count > 0 %>
+    <!-- hide tags -->
+    <% if false %>
       <div>
         <%= f.label :tag_list, t("budgets.investments.form.tags_label") %>
         <p class="help-text" id="tags-list-help-text"><%= t("budgets.investments.form.tags_instructions") %></p>
@@ -86,7 +145,7 @@
         </div>
 
         <br>
-        <%= f.text_field :tag_list, value: investment.tag_list.to_s,
+        <= f.text_field :tag_list, value: investment.tag_list.to_s,
                           label: false,
                           placeholder: t("budgets.investments.form.tags_placeholder"),
                           aria: { describedby: "tags-list-help-text" },
