@@ -13,9 +13,9 @@ sl-SI:
         title: Potrdi moj račun
     mailer:
       confirmation_instructions:
-        confirm_link: Potrdi moj račun
+        confirm_link: Potrdi moj račun za Projekt več za Tržič
         text: "Svoj e-naslov lahko potrdiš na spodnji povezavi:"
-        title: Dobrodošli na platformi Maribor sodeluj!
+        title: Dobrodošli na platformi Projekt več za Tržič.
         welcome: Dobrodošli
       reset_password_instructions:
         change_link: Spremeni moje geslo

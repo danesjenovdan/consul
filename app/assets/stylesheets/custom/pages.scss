@@ -3,7 +3,9 @@
   width: 300px;
 
   &.accepting {
-    background: image-url("predlagaj-MB.svg") no-repeat;
+    background: image-url("predlagaj.png") no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
   &.selecting {
@@ -12,11 +14,15 @@
   }
 
   &.balloting {
-    background: image-url("glasuj-MB.svg") no-repeat;
+    background: image-url("glasuj.png") no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
   &.finished {
-    background: image-url("izvedi-MB.svg") no-repeat;
+    background: image-url("izvedi.png") no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
   &.reviewing,
@@ -1073,7 +1079,7 @@ span:hover::before {
   }
 
   h3 {
-    color: $theme-color;
+    color: #007DB8;
     font-size: 1.875rem;
     font-weight: 800;
     margin-bottom: 0.9375rem;
@@ -1101,7 +1107,7 @@ span:hover::before {
   }
 
   .nbr5 {
-    color: $theme-color;
+    color: #40A8B1;
     opacity: 0.2;
     font-size: 14rem;
     font-weight: 900;

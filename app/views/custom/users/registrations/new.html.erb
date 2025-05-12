@@ -1,4 +1,143 @@
 <% provide :title do %><%= t("devise_views.users.registrations.new.title") %><% end %>
+
+<!-- TRŽIČ CUSTOM address autocomplete javascript -->
+<script>
+$( function() {
+  console.log('ready');
+  var availableTags = [
+    // Bistrica
+    'Begunjska cesta',
+    'Bistrica',
+    'Cesta na Loko',
+    'Cesta Ste Marie aux Mines',
+    'Deteljica',
+    'Kovorska cesta',
+    'Na Logu',
+    'Pod gradom',
+    'Pod Šijo',
+    'Pot na Bistriško planino',
+    'Spodnja Bistrica',
+    'Zelenica',
+    'Na jasi',
+    'Ročevnica',
+
+    // Kovor
+    'Brdo',
+    'Hudo',
+    'Brezovo',
+    'Cesta na Brdo',
+    'Cesta na Hudo',
+    'Glavna cesta',
+    'Graben',
+    'Iženkovo',
+    'Kriška cesta',
+    'Pod gozdom',
+    'Pod skalco',
+    'Praproše',
+    'Srednja pot',
+    'Stagne',
+    'Vetrovo',
+    'Loka',
+    'Zvirče',
+
+    // Sebenje
+    'Breg ob Bistrici',
+    'Retnje',
+    'Sebenje',
+    'Žiganja vas',
+
+    // Brezje
+    'Brezje pri Tržiču',
+    'Hudi Graben',
+    'Hušica',
+    'Visoče',
+
+    // Tržič – mesto
+    'Čadovlje pri Tržiču',
+    'Slap',
+    'Balos',
+    'Blejska cesta',
+    'Cankarjeva cesta',
+    'Cerkvena ulica',
+    'Cesta Ste Marie aux Mines',
+    'Čevljarska ulica',
+    'Fužinska ulica',
+    'Koroška cesta',
+    'Kosarska ulica',
+    'Kovaška ulica',
+    'Kranjska cesta',
+    'Kukovniška pot',
+    'Kurnikova pot',
+    'Muzejska ulica',
+    'Paradiž',
+    'Partizanska ulica',
+    'Pot na pilarno',
+    'Predilniška cesta',
+    'Prehod',
+    'Preska',
+    'Šolska ulica',
+    'Trg svobode',
+    'Usnjarska ulica',
+    'Virje',
+    'Za Mošenikom',
+
+    // Jelendol
+    'Dolina',
+    'Jelendol',
+
+    // Križe
+    'Gozd',
+    'Cesta Kokrškega odreda',
+    'Hladnikova ulica',
+    'Planinska pot',
+    'Pod Pogovco',
+    'Pod Slemenom',
+    'Pot na Močila',
+    'Snakovška cesta',
+    'Vrtna ulica',
+    'Retnje',
+
+    // Lom pod Storžičem
+    'Grahovše',
+    'Lom pod Storžičem',
+    'Potarje',
+
+    // Leše
+    'Leše',
+    'Paloviče',
+    'Popovo',
+    'Vadiče',
+
+    // Senično
+    'Novake',
+    'Senično',
+    'Spodnje Vetrno',
+    'Zgornje Vetrno',
+
+    // Podljubelj
+    'Podljubelj',
+
+    // Pristava
+    'Mlaka',
+    'Podvasca',
+    'Pot na polje',
+    'Pristavška cesta',
+    'Purgarjeva ulica',
+
+    // Ravne
+    'Koroška cesta',
+    'Muzejska ulica',
+    'Pot na Zali Rovt',
+    'Ravne',
+    'Za jezom',
+  ];
+  $( "#address" ).autocomplete({
+    source: availableTags
+  });
+} );
+</script>
+<!-- end TRŽIČ CUSTOM address autocomplete javascript -->
+
 <h1><%= t("devise_views.users.registrations.new.title") %></h1>
 
 <%= render "devise/omniauth_form", action: "sign_up" %>
@@ -21,10 +160,9 @@
       <%= f.hidden_field :document_type, value: "1" %>
       <%= f.text_field :document_number, label: t("custom.terms.emso"), placeholder: t("devise_views.users.registrations.new.document_number") %>
 
-      <%= f.invisible_captcha :address %>
+      <%= f.invisible_captcha :home_address %>
 
-      <%# TODO: dodaj autocomplete polje za naslov %>
-      <%# <%= f.text_field :naslov %>
+      <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true, placeholder: t("devise_views.users.registrations.new.address") %>
 
       <%= f.email_field :email %>
 
@@ -42,6 +180,8 @@
         label: t("devise_views.users.registrations.new.terms",
                  terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
                 ) %>
+      
+      <%= f.check_box :data_consent, title: t('devise_views.users.registrations.new.terms_second'), label: t("devise_views.users.registrations.new.terms_second") %>
 
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>

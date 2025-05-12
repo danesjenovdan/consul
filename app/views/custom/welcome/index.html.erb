@@ -17,7 +17,7 @@
         <div class="landing">
           <div class="introduction-text">
             <h1><%= t("custom.landing.title") %></h1>
-            <p><%= t("custom.landing.introduction_text") %></p>
+            <p><%= raw(t("custom.landing.introduction_text")) %></p>
             <!-- TODO: can we get current budget - current phase url directly? -->
             <% if current_budget.present? %>
               <% current_budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
