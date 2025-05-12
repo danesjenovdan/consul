@@ -1,0 +1,47 @@
+<% provide :title do %><%= t("custom.accessibility.title") %>
+<% end %>
+<% content_for :canonical do %>
+<%= render "shared/canonical", href: page_url("izjava-o-dostopnosti") %>
+<% end %>
+
+<main>
+  <div class="row privacy">
+    <div class="main-indented-content">
+      <div class="small-12 medium-10 column medium-centered">
+
+        <h1 dir="ltr"><%= t("custom.accessibility.main_title") %></h1>
+        <p><%= t("custom.accessibility.date") %></p>
+        <br/>
+        <p><%= t("custom.accessibility.intention_first").html_safe %></p>
+        <p dir="ltr">
+          <%= t("custom.accessibility.intention_second") %>
+        </p>
+
+        <h2><%= t("custom.accessibility.level_title") %></h2>
+        <p><%= t("custom.accessibility.level_paragraph") %></p>
+
+        <h2><%= t("custom.accessibility.description_title") %></h2>
+        <ul><%= t("custom.accessibility.description_bullets").html_safe %></ul>
+
+        <h2><%= t("custom.accessibility.inaccessible_title") %></h2>
+        <p><%= t("custom.accessibility.inaccessible_paragraph") %></p>
+
+        <h3><%= t("custom.accessibility.less_accessible_subtitle") %></h3>
+        <ul><%= t("custom.accessibility.less_accessible_bullets").html_safe %></ul>
+
+        <h3><%= t("custom.accessibility.inaccessible_subtitle") %></h3>
+        <p><%= t("custom.accessibility.inaccessible_bullets").html_safe %></p>
+
+        <h2><%= t("custom.accessibility.feedback_title") %></h2>
+        <p><%= t("custom.accessibility.feedback_paragraph").html_safe %></p>
+
+        <h2><%= t("custom.accessibility.surveillance_title") %></h2>
+        <p><%= t("custom.accessibility.surveillance_paragraph").html_safe %></p>
+
+        <h2><%= t("custom.accessibility.author_title") %></h2>
+        <p><%= t("custom.accessibility.author_paragraph") %></p>
+
+      </div>
+    </div>
+  </div>
+</main>

@@ -5,7 +5,7 @@
 
     <% unless budget.single_heading? %>
       <div>
-        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true } %>
+        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, label: 'Izberi območje v občini, za katerega predlagaš predlog' }%>
       </div>
     <% end %>
 
@@ -28,29 +28,34 @@
               class: "html-area" %>
       </div>
     <% end %>
-    
   </fieldset>
 
   <%= f.invisible_captcha :subtitle %>
 
   <fieldset>
     <%= f.fields_for :answers do |builder| %>
-      <div>
-        <%= f.label :text, budget.questions.order(:id)[builder.index].text %>
-        <%= builder.text_area :text, label: false, rows: 5 %>
-        <%= builder.hidden_field :budget_id %>
-        <%= builder.hidden_field :budget_question_id %>
-        <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+      <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
+        <p>
+          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5, class: 'is-invalid-input'%>
+          <%= builder.hidden_field :budget_id %>
+          <%= builder.hidden_field :budget_question_id %>
           <span class="form-error is-visible"><%= t("custom.errors.no_answer") %></span>
-        <% end %>
-      </div>
+        </p>
+      <% else %>
+        <p>
+          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+          <%= builder.hidden_field :budget_id %>
+          <%= builder.hidden_field :budget_question_id %>
+        </p>
+      <% end %>
     <% end %>
 
-    <%= f.label :price, "Ocena stroškov izvedbe projektnega predloga", class: "inline-block" %>
-    <p class="help-text">Navedite predviden znesek za realizacijo projekta. Finančno vrednotenje naj bo čim bolj realno. Projektni predlogi so lahko finančno ovrednoteni v višini največ 5.000,00 EUR z DDV.</p>
-    <p class="help-text">Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.</p>
+    <%= f.label :price, t("custom.form.price_label"), class: "inline-block" %>
+    <p class="help-text"><%= t("custom.form.price_help_text") %></p>
     <%= f.number_field :price, label: false, :required => true %>
+  </fieldset>
 
+  <fieldset>
     <br />
 
     <label>Priloge</label>
