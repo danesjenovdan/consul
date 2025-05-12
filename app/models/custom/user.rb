@@ -4,8 +4,10 @@ load Rails.root.join('app', 'models', 'user.rb')
 class User < ApplicationRecord
 
   validate :emso_number, on: :create
-#   validate :validate_data_consent, on: :create
+  validate :validate_data_consent, on: :create
   validates :email, on: :create, presence: true
+  validates :confirm_age, acceptance: { allow_nil: false }, on: :create
+  validates :phone_number, on: :create, :presence => true
   
   def validate_data_consent
     unless data_consent
@@ -28,7 +30,7 @@ class User < ApplicationRecord
   end
 
   def self.is_old_enough(birthday)
-    date_limit = Date.parse('2005-12-13') # TODO make this a constant
+    date_limit = Date.parse('2009-12-31') # TODO make this a constant
     if date_limit < birthday
       return false
     end
