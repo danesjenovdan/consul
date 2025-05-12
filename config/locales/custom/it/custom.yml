@@ -1,0 +1,306 @@
+it:
+  routes:
+    budgets: pp
+    investments: predlogi
+    account: racun
+    help: pomoc
+    sign_in: vpis
+    organizations: organizacije
+    users: uporabniki
+    sign_up: registracija
+    confirmation: potrditev
+    new: se-enkrat
+    password: geslo
+    edit: uredi
+  account:
+    show:
+      change_credentials_link: Modifica l’indirizzo elettronico o la password
+  activerecord:
+    attributes:
+      user:
+        login: "indirizzo elettronico o nome utente"
+        login_form: "Indirizzo elettronico o nome utente"
+      image:
+        attachment: "Immagine"
+      budget/investment:
+        price: "Qual è il valore (costo) previsto per la proposta progettuale?"
+    errors:
+      models:
+        image:
+          attributes:
+            attachment:
+              min_image_width: "mora biti široka vsaj %{required_min_width}px"
+              min_image_height: "mora biti visoka vsaj %{required_min_height}px"
+        user:
+          attributes:
+            document_number:
+              invalid: EMŠO ni pravilne oblike.
+  budgets:
+    investments:
+      show:
+        share_title: "Passa parola!"
+        share: "Condividi!"
+        copy: "Copia il collegamento!"
+        price: "Vrednost projekta"
+      edit:
+        submit: "Salva le modifiche"
+      form:
+        tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
+        submit: "Inoltra la proposta"
+  comments:
+    actions:
+      confirm_delete: Potrdi izbris
+      delete: Izbriši
+  devise:
+    sessions:
+      signed_in: "Iscrizione avvenuta con successo."
+      signed_out: "Operazione avvenuta con successo."
+      already_signed_out: "Operazione avvenuta con successo."
+    failure:
+      already_authenticated: "Si že vpisan_a."
+      invalid: "Indirizzo %{authentication_keys} utente o password non validi."
+      not_found_in_database: "Indirizzo %{authentication_keys} utente o password non validi."
+    registrations:
+      signed_up_but_unconfirmed: "Per favore, controllare l’e-mail - è stato inviato il collegamento per la convalida del conto."
+  devise_views:
+    shared:
+      links:
+        new_confirmation: Non hai ricevuto le istruzioni su come attivare il conto?
+        new_unlock: Non hai ricevuto le istruzioni su come aprire il tuo conto utente?
+    users:
+      registrations:
+        success:
+          back_to_index: Ok, ritorna alla pagina iniziale
+          instructions_1: Per favore, <b>controllare l’e-mail</b> –  è stato inviato il collegamento per la <b>convalida del conto</b>.
+          instructions_2: Avvenuta la convalida, potrai partecipare.
+          thank_you: Grazie per la registrazione sul portale web. <b>Convalidare l’indirizzo e-mail</b>.
+          title: Registracija
+    mailer:
+      reset_password_instructions:
+        ignore_text: Če nisi zahteval_a spremembe gesla, lahko ignoriraš to e-sporočilo.
+  documents:
+    max_documents_allowed_reached: Dosegel_a si največje dovoljeno število dokumentov! <strong>Preden lahko naložiš novega, moraš vsaj enega izbrisati.</strong>
+    buttons:
+      destroy_document: Odstrani dokument
+    form:
+      note: "Puoi caricare al massimo %{max_documents_allowed} documenti dei seguenti formati: %{accepted_content_types}, dimensioni massime %{max_file_size} MB per file."
+  images:
+    form:
+      title: Immagine
+  mailers:
+    budget_investment_created:
+      intro: "Hej, <strong>%{author}</strong>,"
+      share: Oglej si svoj projekt
+  milestones:
+    index:
+      no_milestones: Nima definiranih mejnikov
+      progress: Napredek
+    show:
+      publication_date: "Datum objave %{publication_date}"
+      status_changed: Status spremenjen v
+  shared:
+    suggest:
+      budget_investment:
+        found: Našli smo podoben predlog.
+  custom:
+    price_description: |
+      Allega la suddivisione delle spese previste. Esporta <a style="text-decoration: underline !important;" href='https://koper.lb.djnd.si/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--639877d61c04f22b6945f69789f8b75bda41f74f/Predvideni%20stros%CC%8Cki_Previsione%20delle%20spese.xlsx' target='_blank'>il modulo</a> al tuo computer, compilalo e allegalo al presente modulo. 
+    admin:
+      budget_phases:
+        edit:
+          summary_help_text: Podnaslov
+          description_help_text: Opisni odstavek
+          presentation_summary_accepting: Prvi odstavek, ko faza ni aktivna
+          presentation_summary_balloting: Drugi odstavek, ko faza ni aktivna
+          presentation_summary_finished: Tretji odstavek, ko faza ni aktivna
+          presentation_summary_accepting_help_text: Tekst za prvi odstavek, ko ta faza ni aktivna
+          presentation_summary_balloting_help_text: Tekst za drugi odstavek, ko ta faza ni aktivna
+          presentation_summary_finished_help_text: Tekst za tretji odstavek, ko ta faza ni aktivna
+    meta:
+      pp_name: Propongo - decido
+      place_name: Comune città di Capodistria
+      guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
+      tos: "pogoji-uporabe"
+    switcher:
+      select: "Izberi proračun"
+    social:
+      fb_desc: Propongo - decido, Bilancio partecipativo del Comune città di Capodistria
+      tw_desc: "Propongo - decido, Bilancio partecipativo  del Comune città di Capodistria: "
+      email_desc: Oglej si predlog proračunske naložbe v projektu Predlagam — odločam - Participativni proračun Mestne občine Koper
+    headings:
+      drafting: Bozza (nascosta al pubblico)
+      informing: Informazione
+      accepting: Proponi
+      reviewing: Elenco dei progetti
+      selecting: Selezione
+      valuating: Valutazione finanziaria dei progetti
+      publishing_prices: Pubblicazione dei prezzi dei progetti
+      balloting: Vota
+      reviewing_ballots: Esito della votazione
+      finished: Segui
+      headings: Le aree
+      headings_sidebar: "<li><h6>Area 1:</h6><div>Comunità locali: Capodistria - centro, Olmo - Prisoje, Semedella, Giusterna, Al Castelletto</div></li><li><h6>Area 2:</h6><div>Comunità locali: San Canziano, Šmarje, Vanganel</div></li><li><h6>Area 3:</h6><div>Comunità locali: Dekani, Crevatini, Škofije</div></li><li><h6>Area 4:</h6><div>Comunità locali: Bertocchi, Pobeghi, - Čežarji, Sv. Anton</div></li><li><h6>Area 5:</h6><div>Comunità locali: Boršt, Gračišče, Gradin, Marezige</div></li><li><h6>Area 6:</h6><div>Comunità locali: Črni Kal, Podgorje, Rakitovec, Zazid</div></li>"
+      select_heading: Seleziona l'area
+      select_tag: Izberi mestno četrt
+      select_status: Izberi status predloga
+      select_heading_to_vote: Per votare i progetti, devi scegliere la zona.
+      instructions: "La proposta progettuale deve soddisfare le seguenti condizioni:"
+      instructions_description: "<ol><li>Contribuisce alla realizzazione dell’interesse pubblico e viene attuata nell’area del Comune città di Capodistria.</li><li>Contribuisce agli obiettivi dell’invito - stimola la partecipazione attiva dei cittadini, aumenta la qualità di vita nell’ambiente locale, ha un approccio comunitario ed è destinata all’uso pubblico.</li><li>Il Comune città di Capodistria la potrà realizzare nell’ambito delle sue attività e delle competenze in termini di legge.</li><li>Non è inclusa nel bilancio ovv. piano dei programmi di sviluppo degli investimenti comunali per comunità locale e non soddisfa le condizioni per i mezzi finanziari a fondo perduto, acquisiti a titolo dei bandi di concorso del Comune città di Capodistria.</li><li>È conforme alla legislazione e ai vigenti atti comunali.</li><li>Non è stata finanziata/cofinanziata dal bilancio del Comune città di Capodistria negli ultimi cinque anni.</li><li>È valutata tra i 10.000 e i 40.000 EURO, IVA inclusa.</li><li>È realizzabile nell’anno di bilancio 2023 ovv. 2024.</li><li>È classificata in una delle sei aree del comune del bilancio partecipativo.</li></ol>"
+      back_to_all_proposals: "Torna alla lista delle proposte"
+    titles:
+      edit: Modifica proposta
+      investment_updated: Aggiornamento riuscito
+      added_proposals: Proposte presentate
+      voted_proposals: Predlogi, uvrščeni na glasovanje
+      selected_proposals: Proposte selezionate
+      finished_proposals: Proposte votate
+      denied_proposals: Proposte non selezionate
+      register_with: Per la registrazione compila questo modulo
+      sign_in_with: Per l'accesso compila questo modulo
+      about: Il bilancio partecipativo
+      anonymous_proposal: Proposta anonima
+    messages:
+      finished_accepting: Non è più possibile presentare progetti. É in atto la valutazione dei progetti.
+      finished_voting: La votazione è chiusa. É in atto la verifica dei progetti votati.
+      no_investments: Qui non c'è ancora nessuna proposta di progetto.
+      add_first_investment: Scrivi il primo!
+      loser: Questo progetto non è stato votato
+    form:
+      submit_anonymously: Consegna in forma anonima
+      submit_anonymously_explanation: Con la conferma di questa richiesta il tuo nome e cognome non saranno visibili accanto alla proposta progettuale che verrà pubblicata sulla pagina web.
+      phone: Numero di telefono
+      address: Indirizzo
+      name_and_last_name: Nome e cognome
+      accept_terms: Acconsento alle alle %{conditions}
+      table_content: Contenuto
+      table_price: Importo con IVA
+      table_total: Totale
+    presentation:
+      accepting:
+        title_1: Com'è il bilancio?
+        title_2: Come dovrebbe essere la proposta?
+        title_3: E se va tutto bene?
+      balloting:
+        title_1: Che cosa?
+        title_2: Chi?
+        title_3: Come?
+      finished:
+        title_1: E poi?
+        title_2: E il mio ruolo?
+        title_3: E dopo?
+    landing:
+      title: Con il progetto Propongo – decido il Comune città di Capodistria realizza il bilancio partecipativo per gli anni 2023 e 2024.
+      introduction_text: "Il Comune città di Capodistria ha intrapreso il progetto del bilancio partecipativo nel desiderio di includere le cittadine e i cittadini nel procedimento decisionale sull'allocazione di una parte dei mezzi di bilancio e quindi migliorare l'efficienza del consumo dei fondi comuni e la qualità di vita nel comune."
+      title_past: Bilanci partecipativi passati
+      past_list_description: Controlla i progetti selezionati e segui la loro realizzazione!
+      past_list_more: Ulteriori informazioni
+    about:
+      intro: "Il bilancio partecipativo è un sistema di assegnazione di una quota del bilancio alla gestione dei cittadini. Questi sono chiamati a presentare le proprie proposte e, in seguito, a decidere quali tra esse possono contribuire maggiormente al miglioramento della qualità della vita della comunità."
+      main_title: Come funziona?
+      heading_1: RACCOLTA DELLE PROPOSTE
+      description_1: "I cittadini sono invitati a presentare le proprie proposte tra il 10 giugno e l’11 luglio 2022. Le proposte progettuali devono rispettare le condizioni stabilite e il loro valore non deve essere inferiore a 10.000 EUR e superiore a 40.000 EUR. Le proposte progettuali possono essere trasmesse online (attraverso l’apposita App), via posta elettronica o su apposito modulo presso l'Ufficio Protocollo del Comune città di Capodistria, nonché presso le sedi delle Comunità locali."
+      date_1: 10. 6.–11. 7. 2022
+      heading_2: VALUTAZIONE DELLE PROPOSTE
+      description_2: "Le proposte progettuali inoltrate vengono esaminate da un’apposita commissione che provvederà alla valutazione dei costi di realizzazione del progetto nonché alla verifica della loro fattibilità. Saranno inoltre valutate la conformità del progetto alla legge, l’ubicazione nell’area geografica e i tempi di realizzazione del bilancio partecipativo nonché la conformità alle norme che regolano il budget delle proposte e le rimanenti condizioni. La commissione può anche unire proposte simili."
+      date_2: 12. 7.-22. 8. 2022
+      heading_3: VOTAZIONE
+      description_3: "Le votazioni si terranno dal 12 al 19 settembre 2022 sia online sia presso il Comune città di Capodistria e nelle sedi delle Comunità locali. Possono partecipare tutti i cittadini con la residenza nel Comune città di Capodistria che abbiano compiuto 15 anni. Durante la votazione, ciascun cittadino distribuisce 160.000 EUR, ossia i fondi destinati alla singola area, tra i progetti che vorrebbe vedere realizzati."
+      date_3: 12. 9.-19. 9. 2022
+      heading_4: CONFERMA DEI RISULTATI
+      description_4: "A votazioni concluse, il comune esaminerà i risultati e proclamerà i progetti vincitori. Questi saranno inseriti dal sindaco nella proposta di bilancio di previsione del Comune città di Capodistria per l’anni 2023 e 2024."
+      date_4: "Settembre 2022"
+      heading_5: MONITORAGGIO DELLA REALIZZAZIONE
+      description_5: "Tutti i progetti votati saranno realizzati nel 2024. In questa fase del bilancio partecipativo provvederemo ad informare il pubblico sull'andamento dell'attuazione dei progetti e a mantenere aggiornato lo stato dei lavori."
+    privacy:
+      title: "Termini d'uso"
+    help:
+      main_title: "Domande frequenti"
+      heading_1: "Ho bisogno di un numero di telefono e dell'accesso internet per poter partecipare?"
+      description_1: "Per creare un account sullo strumento web hai bisogno di un numero di telefono, un indirizzo di posta elettronica e della connessione internet, tutte le funzionalità possono essere eseguite anche presso il Comune e nelle sedi delle comunità locali."
+      heading_2: "Come posso creare e verificare il mio account?"
+      description_2: "Per creare un account, clicca su Registrazione in fondo al sito, facendo clic su qualsiasi altro pulsante d’azione si accede allo stesso modulo online. Per creare un account personale devi inserire il nome utente, l’indirizzo di posta elettronica, l’indirizzo di residenza, il numero di telefono, il Codice anagrafico unitario del cittadino (CAUC) e la password. Dopo aver creato l’account, dovrai confermarlo cliccando sul link che ti verrà inviato per posta elettronica."
+      heading_3: "Come posso creare una nuova proposta di progetto?"
+      description_3: "La proposta viene creata tramite uno strumento web, ma può essere presentata anche in forma cartacea presso l'Ufficio Protocollo del Comune città di Capodistria o presso le sedi delle Comunità locali durante gli orari d’ufficio ossia può essere inviata all’indirizzo di posta elettronica: obcina@koper.si."
+      heading_4: "Ho dimenticato la mia password. Cosa posso fare?"
+      description_4: "Clicca su Accedi, quindi seleziona il collegamento Password dimenticata. Le istruzioni per la creazione della nuova password saranno inviate sul tuo indirizzo email."
+      heading_5: "Come posso modificare il mio indirizzo e-mail, nome utente e/o password?"
+      description_5: "In fondo alla pagina clicca su Il mio account, dove potrai modificare tutti i tuoi dati."
+      help_title: "Hai bisogno di aiuto?"
+      technical_issues: "Hai problemi tecnici?"
+      technical_contact: 'Contatta il gestore dell’App: <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
+      other_questions: "Hai altre domande?"
+      other_contact: 'Contatta i rappresentanti del Comune città di Capodistria: <a href="mailto:predlagam-odlocam@koper.si" target="_blank">predlagam-odlocam@koper.si</a>.'
+    terms:
+      main_title: "Termini d'uso"
+      active_use: "L'uso attivo dello strumento web è regolato dai termini di utilizzo presentati di seguito, perciò chiunque desideri partecipare attivamente deve registrarsi, accettando i presenti termini d’uso."
+      changes: " si riserva il diritto di modificare le presenti condizioni d'uso. L'ultima versione sarà pubblicata su questo sito."
+      data_protection_title: "Protezione dei dati personali"
+      data_protection_first: "Registrandosi, l'utente conferma di aver compiuto 15 anni e di essere consapevole dei propri diritti e doveri stabiliti nell'avviso sul trattamento dei dati personali in conformità al Regolamento generale sulla protezione dei dati personali (GDPR) e autorizza il Comune città di Capodistria a verificare l'autenticità dei dati personali (nome e cognome, indirizzo permanente e data di nascita) ai fini del progetto PROPONGO - DECIDO nei registri ufficiali e nelle banche dati dei gestori del sistema di archiviazione dei dati personali."
+      data_protection_second: "OI dati personali ottenuti attraverso il modulo di registrazione sulla piattaforma online URL saranno utilizzati esclusivamente allo scopo di implementare il bilancio partecipativo nel Comune città di Capodistria e non saranno condivisi con terzi, tranne se ciò verrà richiesto dalla legge. La gestione dello strumento web avviene in collaborazione con l’Istituto Danes je nov dan, Inštitut za druga vprašanja, il quale funge da “responsabile contrattuale” ossia “responsabile” dei dati. L’istituto è tenuto, da contratto, ad utilizzare i dati personali esclusivamente per conto del Comune città di Capodistria e a garantire la protezione di essi in conformità alle normative applicabili e alle nostre istruzioni."
+      data_protection_third: "I dati forniti alla registrazione possono essere controllati, modificati oppure integrati nel singolo profilo, al quale si accede online. Sullo stesso profilo, si può scegliere l’opzione di ricevere notifiche di vario genere via posta elettronica."
+      data_use_title: "Informativa sul trattamento dei dati personali"
+      data_use_first: "Il titolare del trattamento dei dati personali (nome e cognome, indirizzo di residenza, e-mail e numero di telefono) è il COMUNE CITTÀ DI CAPODISTRIA, Via Giuseppe Verdi 10, Koper-Capodistria. La persona autorizzata per la protezione dei dati personali può essere contattata tramite posta elettronica varstvopodatkov@koper.si. L'autorizzazione al trattamento dei vostri dati personali rappresenta la base giuridica per il trattamento. I vostri dati personali verranno trattati solamente allo scopo per il quale sono stati raccolti (realizzazione del progetto), ovvero fino alla revoca, i dati sul sito web (in caso di consenso) saranno pubblicati fino alla realizzazione del progetto. L'accesso ai vostri dati personali è riservato esclusivamente al personale autorizzato del Comune città di Capodistria e ai responsabili per il trattamento dei dati personali a contratto. Ciascun individuo ha il diritto alla rettifica del consenso al trattamento o ad accedere ai propri dati personali, modificarli o cancellarli, limitare il loro trattamento o al ricorso, nonché al loro trasferimento. Per esercitare i vostri diritti scrivendo all'indirizzo di posta elettronica: varstvopodatkov@koper.si. Nel caso in cui riteniate che nel processo del trattamento dei vostri dati personali siano stati lesi i vostri diritti, è possibile presentare ricorso presso il Garante per la protezione dei dati personali - Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana."
+      about_title: "Lo strumento web"
+      about_first: "Lo strumento web promuove la partecipazione civica e consente una governance aperta, trasparente e democratica a livello comunale e nazionale. L'App si basa sulla piattaforma open source Consul, creata con l’appoggio del Comune di Madrid e adattata alle esigenze dei Comuni sloveni dall'Istituto Danes je nov dan."
+      registration_title: "Registrazione"
+      registration_intro: "Solamente gli utenti registrati possono presentare le proposte e votare i progetti nell’App. Gli utenti non registrati possono seguire i contenuti pubblicati, ma non possono né presentare proposte né votare."
+      registration_requirements: "Al momento della registrazione, ciascun utente deve indicare:"
+      name: "nome e cognome"
+      email: "indirizzo di posta elettronica"
+      address: "indirizzo"
+      phone: "numero di telefono"
+      emso: "Codice anagrafico unitario del cittadino (CAUC)"
+      registration_first: "L’account dell’utente viene attivato con la conferma dell'e-mail di attivazione ricevuta dall'utente al suo indirizzo di posta elettronica. La creazione di più account da parte di un utente è vietata."
+      registration_second: "Nel caso in cui l'utente non fornisce alcuna delle informazioni di cui sopra, non sarà possibile completare con successo la registrazione e di conseguenza l’utilizzo dell’App non sarà possibile."
+      registration_third: "Gli utenti possono revocare la propria registrazione in qualsiasi momento inviando una richiesta di eliminazione del profilo al moderatore dello strumento all’indirizzo email consul@djnd.si. Dopo aver confermato l'annullamento della registrazione, il gestore dello strumento eliminerà tutti i dati personali dell'utente. Nonostante la cancellazione delle informazioni personali dell’utente, le proposte e le votazioni saranno conservate, sebbene attribuite ad un utente eliminato."
+      rules_title: "Accettazione del regolamento"
+      rules_first: "Al momento della registrazione gli utenti devono accettare le regole di partecipazione e di utilizzo dello strumento web."
+      rules_promise: "Accettando tali regole, l'utente dichiara che durante il processo di consegna delle proposte rispetterà la Costituzione e le leggi della Repubblica di Slovenia, il che significa in particolare che:"
+      rules_promise_first: "non pubblicherà contenuti che incitano all'intolleranza sessuale, raziale, etnica o religiosa o qualsiasi altra forma di discriminazione basata su circostanze individuali;"
+      rules_promise_second: "non pubblicherà contenuti che potrebbero violare o interferire con i diritti personali di terzi;"
+      rules_promise_third: "non pubblicherà immagini o foto di proprietà di terzi o che utilizzino dati di terzi senza il consenso appropriato dei proprietari e di terzi;"
+      rules_promise_fourth: "non pubblicherà minacce, non userà un linguaggio dispregiativo, volgare, degradante o offensivo;"
+      rules_promise_fifth: "non pubblicherà opere di cui non detiene i diritti d'autore e non utilizzerà lo strumento web per la distribuzione di contenuti protetti da copyright o contenuti di proprietà di altre persone fisiche o giuridiche."
+      rules_second: "La violazione delle suddette regole è punibile con la limitazione temporanea dell'attività dell'utente, la chiusura dell'account dell'utente e/o la cancellazione del contenuto."
+      use_title: "Utilizzo del portale"
+      use_intro: "L’App consente la co-decisione diretta su una parte del bilancio comunale. Gli utenti possono inviare, sostenere e votare le proposte di progetto e monitorare il loro sviluppo. Può partecipare qualsiasi cittadino del Comune città di Capodistria, che ha almeno 15 anni, previa registrazione nello strumento web. Per le attività dei minorenni sono responsabili i genitori ovvero i loro tutori."
+      use_list: "L’utente ha la possibilità di:"
+      use_list_first: "Presentare proposte"
+      use_list_first_desc: "Per la corretta presentazione di una proposta, l’utente deve obbligatoriamente fornire il titolo del progetto, la descrizione, può fornire anche una foto della proposta, l’ubicazione e altri documenti. Al momento dell’invio, il progetto viene accettato ed è visibile sul portale. L’utente può condividerlo sui social media, tramite e-mail oppure inoltrandone il link."
+      use_list_second: "Votazione delle proposte"
+      use_list_second_desc: "Gli utenti possono votare le proposte progettuali degli altri utenti. Ciascuna proposta può essere votata una sola volta. Per la votazione si ha a disposizione l’intero budget per l’area interessata, con ogni votazione però i fondi a disposizione diminuiscono. Inoltre, durante il processo di votazione, l’utente può sottrarre il voto ad una proposta."
+      use_list_third: "Monitoraggio delle proposte"
+      use_list_third_desc: "Durante l’ultima fase, lo strumento web acconsente il monitoraggio del processo."
+      cookies_title: "Cookie"
+      cookies_intro: "Vengono utilizzati solamente i cookie tecnici necessari per il funzionamento del sito."
+      ip_title: "Proprietà intellettuale"
+      ip_intro: 'Il codice sorgente dello strumento web si trova sull’indirizzo: http://pp-koper.djnd.si ed è aperto e accessibile a tutti. Il codice può essere usato gratuitamente da chiunque secondo le condizioni della licenza <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
+      responsibilities_title: "Limitazioni della responsabilità"
+      responsibilities_first: "Gli utenti del portale utilizzano lo strumento web, le sue parti e i suoi contenuti esclusivamente su propria responsabilità."
+      responsibilities_second: " non si assume alcuna responsabilità per qualsiasi tipo di polemica diretta o indiretta, controversia e/o contenzioso che potrebbe derivare dalla pubblicazione o dalla distribuzione dei contenuti non autorizzati dai legittimi proprietari. Inoltre, non è responsabile per i danni derivanti dall'uso dello strumento web e non garantisce l'efficacia dello strumento online. In nessun caso sarà ritenuto responsabile per eventuali danni derivanti dall'uso o dall'impossibilità di utilizzo dello strumento web, inclusi danni derivanti dalla perdita di guadagno o profitto previsto, lesione o perdita di avviamento, perdita di affari o perdita di dati."
+      responsibilities_third: "Qualsiasi violazione dei diritti di proprietà intellettuale o industriale è responsabilità della persona che ha fornito il contenuto. Il Comune città di Capodistria non è inoltre responsabile per i contenuti che:"
+      responsibilities_list_first: "incitano all'intolleranza sessuale, razziale, etnica o religiosa e qualsiasi altra forma di discriminazione basata su circostanze personali;"
+      responsibilities_list_second: "violano o interferiscono con i diritti di terzi, oppure sono di proprietà di terzi o che utilizzano dati di terzi senza il consenso dei detentori dei diritti e di terzi."
+      responsibilities_list_third: "contengono minacce, linguaggio dispregiativo, volgare, degradante o offensivo;"
+      responsibilities_list_fourth: "sono opere protette da diritto d’autore per le quali l’utente non ne detiene i diritti. Ogni violazione della proprietà intellettuale o industriale è responsabilità della persona che presenta i contenuti."
+      responsibilities_fourth: " si impegnerà a rimuovere tali contenuti dallo strumento web il più presto possibile e ad imporre sanzioni adeguate agli utenti."
+      responsibilities_fifth: "In caso di controversie tra gli utenti dello strumento web e/o una terza parte, il Comune di Capodistria sarà esonerato da qualsiasi responsabilità per rivendicazioni civili, richieste di risarcimento danni o di qualsiasi natura relative al contenuto dello strumento web e/o derivanti da procedimenti giudiziari."
+      terms_first_checkbox: "trattare i miei dati personali (nome e cognome, indirizzo di residenza, indirizzo di posta elettronica, numero di telefono) ai fini della realizzazione del progetto Propongo – decido nella base dati del CCC."
+      terms_second_checkbox: "pubblicare dati personali (nome e cognome) sul sito web del CCC assieme alla proposta per il progetto Propongo – Decido. (Nota: se non selezioni questo campo, la tua proposta rimarrà anonima. Questo significa che il tuo nome ed il tuo cognome non appariranno sotto la proposta che sarà pubblicata sul sito web del comune)."
+      terms_checkboxes_text: "Fino all’eventuale revoca, autorizzo espressamente, volontariamente, incondizionatamente e chiaramente il Comune città di Capodistria a:"
+    statuses:
+      title: 'Scegli lo stato della proposta'
+      waiting: 'In attesa di realizzazione'
+      doing: 'In fase di attuazione'
+      done: 'Realizzato'
+      nil: 'Senza status'
+    errors:
+      data_consent: "Per procedere, è necessario accettare il trattamento dei dati."
+      price: "Polje vrednost projekta ne sme biti prazen."
+      registration: "Il modulo non è stato salvato a causa di errori."
+      submit_investment: "Il modulo non è stato salvato a causa di errori."
+      no_answer: "Si prega di rispondere alla domanda."
+    footer:
+      djnd: La piattaforma è a cura di
+    registration:
+      already_has_account: "Hai già un account?"

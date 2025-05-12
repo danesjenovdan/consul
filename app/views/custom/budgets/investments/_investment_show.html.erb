@@ -107,14 +107,13 @@
 
       <hr />
 
-      <%# Map  %>
-      <% if feature?(:map) && map_location_available?(@investment.map_location) %>
-        <div class="margin">
-          <%= render_map(@investment.map_location) %>
-        </div>
-
-         <hr />
-      <% end %>
+      <%# hide map %>
+      <%# <% if feature?(:map) && map_location_available?(@investment.map_location) %>
+        <%# <div class="margin"> %>
+          <%# <%= render_map(@investment.map_location) %>
+        <%# </div> %>
+         <%# <hr /> %>
+      <%# <% end %>
 
       <%# Documents  %>
       <% if feature?(:allow_attached_documents) and investment.documents.count > 0 %>
