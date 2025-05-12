@@ -2,6 +2,12 @@
 
 form {
   .required-fields {
+    label::after {
+      content: ' *';
+      font-size: 0.75rem;
+      color: red;
+    }
+    
     select,
     input[type='text'] {
       margin-bottom: 30px;
@@ -82,6 +88,12 @@ form .checkbox-label {
     border: solid $white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
+  }
+
+  input[type="checkbox"]:focus ~ .checkbox::before {
+    // box-shadow: 0 0 0 6px #004a83;
+    border: 3px solid #ffbf47;
+    outline-offset: 1px;
   }
 }
 
