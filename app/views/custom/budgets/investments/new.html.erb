@@ -6,7 +6,7 @@
     <div class="column">
       <div class="small-12">
         <div class="row">
-          <div class="small-12 medium-7 column form">
+          <div class="small-12 medium-7 column form"> <!-- used to contain medium-7 in classes -->
             <%= link_to budget_investments_path(@budget), class: "back" do %>
               <i class="custom-icon arrow-small-left"></i>&nbsp;<span class="text"><%= t("shared.back") %></span>
             <% end %>
@@ -19,11 +19,13 @@
             <div class="sidebar">
               <h2><%= t("custom.headings.instructions") %></h2>
               <%= raw t("custom.headings.instructions_description") %>
+              <!--
               <hr />
               <h2><%= t("custom.headings.headings") %></h2>
               <ul class="custom-list recommendations">
                 <%= raw t("custom.headings.headings_sidebar") %>
               </ul>
+              -->
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@
         <p>
           <a href='mailto:<%= t("custom.terms.contact1.mail") %>' target="_blank"><%= t("custom.terms.contact1.mail") %></a>
           <br/>
-          <%= t("custom.terms.contact1.note1") %>
+          <%= raw(t("custom.terms.contact1.note1")) %>
           <br/>
           <%= t("custom.terms.contact1.note2") %>
         </p>
@@ -91,7 +91,13 @@
             <%= t("custom.terms.email") %>
           </li>
           <li>
+          <%= t("custom.terms.telefon") %>
+          </li>
+          <li>
             <%= t("custom.terms.emso") %>
+          </li>
+          <li>
+          <%= t("custom.terms.address") %>
           </li>
         </ul>
         <p dir="ltr">
@@ -243,6 +249,12 @@
           </li>
           <li dir="ltr">
             <%= t("custom.terms.data_store_list_li3") %>
+          </li>
+          <li dir="ltr">
+            <%= t("custom.terms.data_store_list_li4") %>
+          </li>
+          <li dir="ltr">
+            <%= t("custom.terms.data_store_list_li5") %>
           </li>
         </ul>
         <p dir="ltr">

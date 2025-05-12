@@ -1,5 +1,4 @@
 <%= translatable_form_for(investment, url: url, html: { class: "budget-investment-form" }) do |f| %>
-
   <%= render "shared/errors", resource: investment, message: t("custom.errors.submit_investment") %>
 
   <fieldset class="required-fields">
@@ -29,9 +28,11 @@
               class: "html-area" %>
       </div>
     <% end %>
+  </fieldset>
 
   <%= f.invisible_captcha :subtitle %>
 
+  <fieldset>
     <%= f.fields_for :answers do |builder| %>
       <% if investment.errors[:answers].count > 0 && params[:budget_investment][:answers_attributes][builder.index.to_s][:text].strip == "" %>
         <p>
@@ -55,6 +56,13 @@
   </fieldset>
 
   <fieldset>
+    <br />
+
+    <label>Priloge</label>
+    <p class="help-text">Priložite morebitne fotografije, načrte, skice, predračune ali drugo gradivo v povezavi s projektom, ki lahko jasneje prikažejo vaš projektni predlog.</p>
+    
+    <br/>
+
     <% if feature?(:allow_images) %>
       <%= render Images::NestedComponent.new(f) %>
     <% end %>
@@ -63,6 +71,7 @@
       <%= render Documents::NestedComponent.new(f) %>
     <% end %>
 
+    <!--
     <% if feature?(:map) %>
       <div>
         <%= render "map_locations/form_fields",
@@ -73,6 +82,7 @@
                    i18n_namespace: "budgets.investments" %>
       </div>
     <% end %>
+    -->
 
     <% if categories.count > 0 %>
       <div>

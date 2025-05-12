@@ -28,6 +28,8 @@
 
       <%= f.email_field :email %>
 
+      <%= f.phone_field :phone_number, label: t("custom.form.phone_number") %>
+
       <%= f.password_field :password, autocomplete: "off", hint: t("devise_views.users.registrations.new.password_hint") %>
 
       <%= f.password_field :password_confirmation, autocomplete: "off",
