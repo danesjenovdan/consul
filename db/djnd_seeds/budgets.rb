@@ -19,8 +19,8 @@ QUESTIONS = [
   'Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?',
   'Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?',
   'Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?',
-  'Kje konkretno naj bi se projekt izvajal?',
-  'Kaj bi se po izvedbi projekta spremenilo, izboljšalo?',
+  'Kje in kdaj konkretno naj bi se projekt izvedel?',
+  'Kaj naj bi se po izvedbi projekta spremenilo?',
 ]
 
 PHASES_TO_DISABLE = %w[selecting valuating publishing_prices].freeze
