@@ -41,6 +41,9 @@ sl-SI:
           attributes:
             document_number:
               invalid: EMŠO ni pravilne oblike.
+  proposals:
+    form:
+      map_remove_marker: "Odstrani trenutno izbrano lokacijo predloga"
   budgets:
     investments:
       investment:
@@ -59,8 +62,9 @@ sl-SI:
       form:
         tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
         submit: "Oddaj predlog"
+        map_location: "Lokacija predloga"
       index:
-        title: Participativni proračun
+        title: Participativni proračun – seznam predlogov
         by_heading: "Investicijski projekti na območju: %{heading}"
         sidebar:
           different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
@@ -152,6 +156,9 @@ sl-SI:
     form:
       title: Slika
   mailers:
+    config:
+      notifications_link: urejanje obvestil
+      unsubscribe_text: 'Če se želiš odjaviti od teh sporočil, obišči %{notifications} in odkljukaj "%{notification}".'
     budget_investment_created:
       intro: "Hej, <strong>%{author}</strong>,"
       share: Oglej si svoj projekt
@@ -214,7 +221,7 @@ sl-SI:
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h4>Formalni kriteriji - način oddaje projektnih predlogov</h4> <p>Projektni predlog mora biti oddan preko spletne aplikacije Čuj, sodeluj!, ali na obrazcu v fizični obliki, ki ga lahko občani dobijo preko spletne strani ali v fizični obliki na sedežih mestnih četrti in krajevnih skupnosti ter na MO Maribor.</p> <p>Projektni predlogi morajo biti oddani na predpisnem obrazcu, najkasneje do:</p> <ul> <li>27. junija, 2022, po pošti (naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor) ali</li> <li>27. junija, 2022, do 13.00 ure, osebno na sedežu občine v sprejemno pisarno št. 14 ali na sedežu katerekoli MČ ali KS v času uradnih ur.</li> </ul> <h4>Kriteriji za predlagatelje</h4> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni občan/občanka ali skupine občanov/občank s stalnim bivališčem v Mestni občini Maribor, ki je do oddaje projektnega predloga ali glasovanja dopolnila 15 let.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h4>Merila/kriteriji za uvrstitev predlogov v glasovanje</h4> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h5>Splošna merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor.</li> <li>Je finančno ovrednoten med 3.000,00 EUR in 30.000,00 EUR z DDV.</li> <li>Izveden bo na območju Mestne občine Maribor in/ali na nepremičninah v lasti MO Maribor.</li> <li>Ni uvrščen v proračun MO Maribor oz. načrt razvojnih programov občinskih vlaganj.</li> <li>Ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov s strani MO Maribor?</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskih letih 2023 in 2024</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> </ol> <h5>Vsebinska merila</h5> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor (MOM).</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost občanov, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki, krožnim gospodarstvom, ponovno uporabo,…).</li> <li>Ustvarja pogoje za gospodarski razvoj občine (gostinstvo in turizem, kmetijstvo, samooskrba, vinogradništvo, podjetništvo,…).</li> <li>Ustvarja pogoje za izobraževanje odraslih, pospeševanje raziskovalne, kulturne, mladinske in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in olepševanju mesta, urejanju trgov, zelenic, parkov ter drugih javnih površin.</li> </ol>"
+      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h3>Formalni kriteriji - način oddaje projektnih predlogov</h3> <p>Projektni predlog mora biti oddan preko spletne aplikacije Čuj, sodeluj!, ali na obrazcu v fizični obliki, ki ga lahko občani dobijo preko spletne strani ali v fizični obliki na sedežih mestnih četrti in krajevnih skupnosti ter na MO Maribor.</p> <p>Projektni predlogi morajo biti oddani na predpisnem obrazcu, najkasneje do:</p> <ul> <li>27. junija, 2022, po pošti (naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor) ali</li> <li>27. junija, 2022, do 13.00 ure, osebno na sedežu občine v sprejemno pisarno št. 14 ali na sedežu katerekoli MČ ali KS v času uradnih ur.</li> </ul> <h3>Kriteriji za predlagatelje</h3> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni občan/občanka ali skupine občanov/občank s stalnim bivališčem v Mestni občini Maribor, ki je do oddaje projektnega predloga ali glasovanja dopolnila 15 let.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h3>Merila/kriteriji za uvrstitev predlogov v glasovanje</h3> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h4>Splošna merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor.</li> <li>Je finančno ovrednoten med 3.000,00 EUR in 30.000,00 EUR z DDV.</li> <li>Izveden bo na območju Mestne občine Maribor in/ali na nepremičninah v lasti MO Maribor.</li> <li>Ni uvrščen v proračun MO Maribor oz. načrt razvojnih programov občinskih vlaganj.</li> <li>Ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov s strani MO Maribor?</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskih letih 2023 in 2024</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> </ol> <h4>Vsebinska merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor (MOM).</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost občanov, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki, krožnim gospodarstvom, ponovno uporabo,…).</li> <li>Ustvarja pogoje za gospodarski razvoj občine (gostinstvo in turizem, kmetijstvo, samooskrba, vinogradništvo, podjetništvo,…).</li> <li>Ustvarja pogoje za izobraževanje odraslih, pospeševanje raziskovalne, kulturne, mladinske in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in olepševanju mesta, urejanju trgov, zelenic, parkov ter drugih javnih površin.</li> </ol>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
@@ -252,6 +259,8 @@ sl-SI:
       table_content: Vsebina
       table_price: Znesek z DDV
       table_total: Skupaj
+      price_label: Ocena stroškov projektnega predloga (skupaj z DDV-jem)
+      price_help_text: Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.
     presentation:
       accepting:
         title_1: Kakšen je proračun?
@@ -461,39 +470,55 @@ sl-SI:
       no_answer: "Prosim izpolni vprašanje."
     footer:
       djnd: Za platformo skrbi
+      accessibility: Izjava o dostopnosti
     registration:
       already_has_account: "Že imaš račun?"
     accessibility:
       slug: izjava-o-dostopnosti
       title: Izjava o dostopnosti
-      date: 11. 4. 2025
-      main_title: Izjava o dostopnosti
-      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://center-rog.si">center-rog.si za katerega skrbi JZ Center Rog.
+      date: 30. 1. 2025
+      main_title: Izjava o dostopnosti Celje po moje
+      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://celjepomoje.si">celjepomoje.si</a>.
+      intention_second: "Uporabo portala želimo približati najširšemu krogu uporabnikom, zato ga nenehno oblikujemo in prilagajamo tako, da je dostopen za uporabnike z različnimi oblikami invalidnosti in oviranosti: uporabnikom z okvarami vida (slepim, slabovidnim, barvno slepim), uporabnikom z okvarami sluha (gluhim, naglušnim, gluhoslepim) ter uporabnikom z različnimi kognitivnimi okvarami in motnjami v razumevanju."
+      level_title: Stopnja skladnosti
+      level_paragraph: Spletno mesto Celje po moje je delno skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij javnega sektorja (ZDSMA). Spletne strani in vsebine so pripravljene v skladu z mednarodnimi smernicami za dostopnost spletnih vsebin in ustrezajo standardu WCAG (Web Content Accessibility Guidelines) 2.1. Skladnost dostopnosti spletnega mesta s smernicami WCAG po samooceni ustreza stopnji AA.
       description_title: "Opis dostopnih vsebin:"
       description_bullets: |
-        <li>Spletna stran ima razumljivo in konsistentno strukturo in navigacijo. HTML koda spletne strani je pregledana in urejena, da ustreza zahtevam različnih naprav.</li>
-        <li>Kontrasti na spletni strani so primerni. Spletna stran le izjemoma uporablja prikaz besedila na sliki.</li>
-        <li>Spletno stran je mogoče upravljati s tipkovnico.</li>
-        <li>Spletni obrazci so dostopni.</li>
-      inaccessible_title: Nedostopna vsebina
-      inaccessible_paragraph: Na podlagi Zakona o dostopnosti spletišč in mobilnih aplikacij (v nadaljevanju ZDSMA) bo spletna stran Centra Rog posodobljena in dopolnjena z namenom omogočiti vsem uporabnikom spletne strani <a href="https://center-rog.si">center-rog.si čim večjo dostopnost do objavljenih dokumentov in vsebin.
-      inaccessible_paragraph2: Center Rog ocenjuje, da bi za zavod nastale finančne posledice, če bi hoteli celotno vsebino ustrezno prilagoditi (prevesti v znakovni jezik in/ali opremiti s podnapisi ali drugače ustrezno prilagoditi skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij), saj je obseg vsebine velik . Prav tako je Center Rog pri oceni nesorazmernega bremena poleg znatnih finančnih posledic upošteval tudi notranjo organizacijo in vrsto dejavnosti, ki jo opravlja.
-      inaccessible_subtitle: Priprava izjave o dostopnosti
-      inaccessible_paragraph3: Datum objave Izjave o dostopnosti 14.04.2023, na podlagi samoocene.
+        <li>Spletno mesto ima razumljivo in konsistentno strukturo in navigacijo. HTML koda spletnega mesta je pregledana in urejena, da ustreza zahtevam različnih naprav, spletno mesto je mogoče brez izgube informacij povečati do 200 %. Povezave na posamezne podstrani so prepoznavne.</li>
+        <li>Kontrasti so primerni.</li>
+        <li>Prikaz besedila na sliki se uporablja redko.</li>
+        <li>Spletno mesto je mogoče upravljati s tipkovnico.</li>
+        <li>Pri pisanju besedil pazimo na razumljiva in enostavna besedila.</li>
+        <li>Spletni obrazci so dostopni s tipkovnico.</li>
+        <li>Na obrazcih dovolimo dovolj časa za izpolnjevanje,</li>
+        <li>na formah dovolimo tud dovolj časa za izpolnjevanje, če se uporablja kaka druga oprema kokr tipkovnica (in se posledično počasneje tipka).</li>
+        <li>Na obrazcih prikazujemo tekstovni opis napake.</li>
+        <li>Spletno mesto ima pravilne HTML oznake, vsaka podstran ima določen naslov in uporablja pravilno gnezdenje naslovov.</li>
+        <li>Spletno mesto je optimizirano za bralnike.</li>
+      inaccessible_title: Manj dostopne ali nedostopne vsebine
+      inaccessible_paragraph: Dostopnost spletišča nenehno spremljamo in sproti izboljšujemo posamezne elemente dostopnosti. Kljub temu nekatere objavljene vsebine ne izpolnjujejo vseh zahtev glede dostopnosti, kot jih določa Zakon o dostopnosti spletišč in mobilnih aplikacij.
+      less_accessible_subtitle: "Manj dostopne vsebine:"
+      less_accessible_bullets: |
+        <li>Označba fokusa je na <a href="https://celjepomoje.si/budgets/1/investments">izbirniku območja</a> slabo vidna. Enako velja za označbo polj na obrazcu za oddajo predloga. Ob prvi prenovi bomo to uredili.</li>
+        <li>Velikost tekstov je ponekod določena z absolutnimi merskimi enotami (px), ki lahko povzročijo težave pri prilagajanju velikosti vsebine. Ob prvi prenovi bomo to uredili.</li>
+      inaccessible_subtitle: "Nedostopne vsebine:"
+      inaccessible_bullets: |
+        <li>Spletno mesto nima kazala strani. Razlog je v nesorazmernem bremenu, ki ga ocenjujemo s kadrovskim in finančnim bremenom, ki bi ga optimiziranje trenutno zahtevalo, saj spletna platforma trenutno ne omogoča dodajanja takšne podstrani. Ob prvi prenovi bomo to uredili.</li>
+        <li>Slike, ki jih dodajajo uporabniki sami, nimajo vpisanega alternativnega opisa. Ob prvi prenovi bomo v obrazec za oddajo predloga dodali polje za vpis alternativnega opisa, vendar tudi v tem primeru skrbnik ne more zagotavljati kakovosti opisov. Elementi, ki so integralni del spletnega mesta, imajo vpisan alternativni opis.</li>
+        <li>Datoteke, ki jih uporabniki sami dodajajo, niso nujno dostopne. Razlog je v nesorazmernem bremenu, ki bi ga predstavljalo prilagajanje in optimiziranje že naloženih dokumentov.</li>
+        <li>Zaradi nesorazmernega bremena, ki bi ga optimiziranje zahtevalo, se v obrazcu za oddajo predloga v primeru oddaje s praznim poljem “Ocena stroškov projektnega predloga” izpiše sistemska napaka, ki je odvisna od jezika brskalnika, ki ga uporablja uporabnik. Ta je lahko v angleščini.</li>
       feedback_title: Povratne in kontaktne informacije
-      feedback_paragraph: Če nam želite karkoli sporočiti ali pa vas zanima karkoli o dostopnih / nedostopnih vsebinah, nam lahko pišete na info@center-rog.si ali nas pokličete na (01) 251 63 01.
-      feedback_paragraph2: Odgovorna oseba za vsebinsko ustreznost spletišča Centra Rog:Tina Deu, Vodja trženja, tina.deu@center-rog.si
-      surveillance_title: Izvršilni postopek
-      surveillance_paragraph:
-        V primeru, da ugotovite odstopanja od določil Zakona o dostopnosti spletišč in mobilnih aplikacij, lahko podate prijavo inšpektorjem za informacijsko družbo po navadni ali elektronski pošti na naslov
-        MINISTRSTVO ZA DIGITALNO PREOBRAZBO
-        <br>
+      feedback_paragraph: Če nam želite sporočiti karkoli v zvezi s prilagoditvijo dostopnosti portala Celje po moje za uporabnike z različnimi invalidnostmi ain oviranostmi, nam lahko pišete na <a href="mailto:mestna.obcina@celje.si">mestna.obcina@celje.si</a> ali nas pokličete na <a href="tel:034265750">03 4265 750</a>.
+      surveillance_title: Nadzor nad izvajanjem določb Zakona o dostopnosti spletišč in mobilnih aplikacij (ZDSMA)
+      surveillance_paragraph: |
         <a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/inspektorat-za-informacijsko-druzbo/o-inspektoratu/">Inšpektorat Republike Slovenije za informacijsko družbo</a>
         <br>
         Davčna ulica 1
         <br>
         1000 Ljubljana
         <br>
-        T:<a href="tel:015555848">01 555 58 48</a>
+        T: <a href="tel:015555848">01 555 58 48</a>
         <br>
-        E:<a href="mailto:gp.mdp@gov.si">gp.mdp@gov.si</a>
+        E: <a href="mailto:gp.ijs@gov.si">gp.ijs@gov.si</a>
+      author_title: Priprava izjave o dostopnosti
+      author_paragraph: "Datum objave Izjave o dostopnosti: 30. 1. 2025, na podlagi samoocene. Zadnja posodobitev Izjave o dostopnosti: 30 . 1 .2025."
