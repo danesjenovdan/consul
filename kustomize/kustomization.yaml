@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: consul
+namespace: consul-koper
 resources:
   - database.yaml
   - deployment.yaml
@@ -8,8 +8,8 @@ resources:
   - ingress.yaml
 images:
   - name: consul
-    newName: rg.fr-par.scw.cloud/djnd/consul
-    newTag: '70b80503ce87d4437be6dff84800b883147b864f'
+    newName: rg.fr-par.scw.cloud/djnd/consul-koper
+    newTag: 'c0b03151b38979503ea67e68d92b2360566229c9'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: '70b80503ce87d4437be6dff84800b883147b864f'
+  #   newTag: 'c0b03151b38979503ea67e68d92b2360566229c9'

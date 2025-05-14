@@ -49,11 +49,13 @@
       <% end %>
     <% end %>
 
-    <%= f.label :price, t("custom.form.price_label"), class: "inline-block" %>
-    <p class="help-text"><%= t("custom.form.price_help_text") %></p>
-    <%= f.number_field :price, label: false, :required => true %>
+    <%= f.label :price %>
+    <p class="help-text">
+      <%= t('custom.price_description').html_safe %>
+    </p>
+    <%= f.number_field :price, label: false %>
   </fieldset>
-
+    
   <fieldset>
     <% if feature?(:allow_images) %>
       <%= render Images::NestedComponent.new(f) %>

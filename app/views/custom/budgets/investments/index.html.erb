@@ -122,7 +122,7 @@
             <% else %>
               <div class="row budget-investments">
                 <div class="column">
-                  <%= render Shared::MapLocationComponent.new(@map_location, investments_coordinates: @investments_map_coordinates, geozones_data: @geozones_data) %>
+                  <%# <%= render Shared::MapLocationComponent.new(@map_location, investments_coordinates: @investments_map_coordinates, geozones_data: @geozones_data) %>
                   <h2 class="phase-title bold">
                       <%= t("custom.titles.proposals") %> (<%= @filtered_investments_count %>)
                   </h2>
