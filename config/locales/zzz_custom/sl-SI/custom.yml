@@ -340,8 +340,13 @@ sl-SI:
       registration_intro1: "Le registrirane_i uporabnice_ki lahko oddajo predloge projektov, komentirajo in glasujejo za oddane projekte. Neregistrirane_i uporabnice_ki lahko prosto spremljajo objavljene vsebine, ne morejo pa oddajati predlogov projektov, o njih glasovati ali sodelovati v debatah."
       registration_intro2: "Uporabnik z registracijo potrjuje, da je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Center Rog, da preveri verodostojnost osebnih podatkov za potrebe projekta SODELUJ in ODLOČAJ iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
       registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
-      name: "uporabniško ime"
-      email: "elektronski naslov"
+      registration_requirements_list_html: |
+        <li>
+          uporabniško ime
+        </li>
+        <li>
+          elektronski naslov
+        </li>
       registration_first: "Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v Centru Rog in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon."
       registration_second: "Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnica_k prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani ene_ga uporabnice_ka je prepovedano."
       registration_third: "Če uporabnica_k katerega izmed navedenih podatkov ne posreduje, ji_mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati spletnega orodja."
@@ -461,7 +466,7 @@ sl-SI:
       slug: izjava-o-dostopnosti
       title: Izjava o dostopnosti
       date: 11. 4. 2025
-      main_title: Izjava o dostopnosti 
+      main_title: Izjava o dostopnosti
       intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://center-rog.si">center-rog.si za katerega skrbi JZ Center Rog.
       description_title: "Opis dostopnih vsebin:"
       description_bullets: |
@@ -478,8 +483,9 @@ sl-SI:
       feedback_paragraph: Če nam želite karkoli sporočiti ali pa vas zanima karkoli o dostopnih / nedostopnih vsebinah, nam lahko pišete na info@center-rog.si ali nas pokličete na (01) 251 63 01.
       feedback_paragraph2: Odgovorna oseba za vsebinsko ustreznost spletišča Centra Rog:Tina Deu, Vodja trženja, tina.deu@center-rog.si
       surveillance_title: Izvršilni postopek
-      surveillance_paragraph: V primeru, da ugotovite odstopanja od določil Zakona o dostopnosti spletišč in mobilnih aplikacij, lahko podate prijavo inšpektorjem za informacijsko družbo po navadni ali elektronski pošti na naslov
-       MINISTRSTVO ZA DIGITALNO PREOBRAZBO
+      surveillance_paragraph:
+        V primeru, da ugotovite odstopanja od določil Zakona o dostopnosti spletišč in mobilnih aplikacij, lahko podate prijavo inšpektorjem za informacijsko družbo po navadni ali elektronski pošti na naslov
+        MINISTRSTVO ZA DIGITALNO PREOBRAZBO
         <br>
         <a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/inspektorat-za-informacijsko-druzbo/o-inspektoratu/">Inšpektorat Republike Slovenije za informacijsko družbo</a>
         <br>
