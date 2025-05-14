@@ -210,6 +210,7 @@ sl-SI:
       headings: Območja
       headings_sidebar: "<li>  <h6>Območje 1 (12.000 EUR)</h6>  <div>Center Rog:hiša</div></li><li>  <h6>Območje 2 (8.000 EUR)</h6>  <div>Center Rog:Okolica hiše in Park Izbrisanih </div></li>"
       select_heading: Izberi območje
+      select_tag: Izberi oznako
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
