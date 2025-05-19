@@ -479,12 +479,19 @@ sl-SI:
       date: 15.5.2025
       main_title: Izjava o dostopnosti Center Rog
       intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://center-rog.si">center-rog.si</a> za katerega skrbi JZ Center Rog.
+      intention_second: ""
+      level_title: ""
+      level_paragraph: ""
       description_title: "Opis dostopnih vsebin:"
       description_bullets: |
         <li>Spletna stran ima razumljivo in konsistentno strukturo in navigacijo. HTML koda spletne strani je pregledana in urejena, da ustreza zahtevam različnih naprav.</li>
         <li>Kontrasti na spletni strani so primerni. Spletna stran le izjemoma uporablja prikaz besedila na sliki.</li>
         <li>Spletno stran je mogoče upravljati s tipkovnico.</li>
         <li>Spletni obrazci so dostopni.</li>
+      inaccessible_title: ""
+      inaccessible_paragraph: ""
+      less_accessible_subtitle: ""
+      less_accessible_bullets: ""
       inaccessible_subtitle: "Nedostopna vsebina:"
       inaccessible_bullets: |
         <li>Na podlagi Zakona o dostopnosti spletišč in mobilnih aplikacij (v nadaljevanju: ZDSMA) bo spletna stran Centra Rog posodobljena in dopolnjena z namenom omogočiti vsem uporabnikom spletne strani <a href="https://center-rog.si">center-rog.si</a> čim večjo dostopnost do objavljenih dokumentov in vsebin.</li>
