@@ -3,7 +3,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
                         only: [:edit, :update, :destroy, :finish_signup, :do_finish_signup]
   before_action :configure_permitted_parameters
 
-  invisible_captcha only: [:create], honeypot: :address, scope: :user
+  # WARNING!
+  # DJND removed this and set the honeypot to home_address in their custom registrations_controller
+  # this was removed since they actually need to collect the address
+  # invisible_captcha only: [:create], honeypot: :address, scope: :user
 
   def new
     super do |user|
