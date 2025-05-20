@@ -476,11 +476,11 @@ sl-SI:
       slug: izjava-o-dostopnosti
       title: Izjava o dostopnosti
       date: 30. 1. 2025
-      main_title: Izjava o dostopnosti Celje po moje
-      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://celjepomoje.si">celjepomoje.si</a>.
+      main_title: Izjava o dostopnosti Sodeluj in glasuj
+      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://sodelujinglasuj.si/">sodelujinglasuj.si/</a>.
       intention_second: "Uporabo portala želimo približati najširšemu krogu uporabnikom, zato ga nenehno oblikujemo in prilagajamo tako, da je dostopen za uporabnike z različnimi oblikami invalidnosti in oviranosti: uporabnikom z okvarami vida (slepim, slabovidnim, barvno slepim), uporabnikom z okvarami sluha (gluhim, naglušnim, gluhoslepim) ter uporabnikom z različnimi kognitivnimi okvarami in motnjami v razumevanju."
       level_title: Stopnja skladnosti
-      level_paragraph: Spletno mesto Celje po moje je delno skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij javnega sektorja (ZDSMA). Spletne strani in vsebine so pripravljene v skladu z mednarodnimi smernicami za dostopnost spletnih vsebin in ustrezajo standardu WCAG (Web Content Accessibility Guidelines) 2.1. Skladnost dostopnosti spletnega mesta s smernicami WCAG po samooceni ustreza stopnji AA.
+      level_paragraph: Spletno mesto Sodeluj in glasuj je delno skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij javnega sektorja (ZDSMA). Spletne strani in vsebine so pripravljene v skladu z mednarodnimi smernicami za dostopnost spletnih vsebin in ustrezajo standardu WCAG (Web Content Accessibility Guidelines) 2.1. Skladnost dostopnosti spletnega mesta s smernicami WCAG po samooceni ustreza stopnji AA.
       description_title: "Opis dostopnih vsebin:"
       description_bullets: |
         <li>Spletno mesto ima razumljivo in konsistentno strukturo in navigacijo. HTML koda spletnega mesta je pregledana in urejena, da ustreza zahtevam različnih naprav, spletno mesto je mogoče brez izgube informacij povečati do 200 %. Povezave na posamezne podstrani so prepoznavne.</li>
@@ -498,7 +498,7 @@ sl-SI:
       inaccessible_paragraph: Dostopnost spletišča nenehno spremljamo in sproti izboljšujemo posamezne elemente dostopnosti. Kljub temu nekatere objavljene vsebine ne izpolnjujejo vseh zahtev glede dostopnosti, kot jih določa Zakon o dostopnosti spletišč in mobilnih aplikacij.
       less_accessible_subtitle: "Manj dostopne vsebine:"
       less_accessible_bullets: |
-        <li>Označba fokusa je na <a href="https://celjepomoje.si/budgets/1/investments">izbirniku območja</a> slabo vidna. Enako velja za označbo polj na obrazcu za oddajo predloga. Ob prvi prenovi bomo to uredili.</li>
+        <li>Označba fokusa je na <a href="/budgets/1/investments">izbirniku območja</a> slabo vidna. Enako velja za označbo polj na obrazcu za oddajo predloga. Ob prvi prenovi bomo to uredili.</li>
         <li>Velikost tekstov je ponekod določena z absolutnimi merskimi enotami (px), ki lahko povzročijo težave pri prilagajanju velikosti vsebine. Ob prvi prenovi bomo to uredili.</li>
       inaccessible_subtitle: "Nedostopne vsebine:"
       inaccessible_bullets: |
@@ -507,7 +507,7 @@ sl-SI:
         <li>Datoteke, ki jih uporabniki sami dodajajo, niso nujno dostopne. Razlog je v nesorazmernem bremenu, ki bi ga predstavljalo prilagajanje in optimiziranje že naloženih dokumentov.</li>
         <li>Zaradi nesorazmernega bremena, ki bi ga optimiziranje zahtevalo, se v obrazcu za oddajo predloga v primeru oddaje s praznim poljem “Ocena stroškov projektnega predloga” izpiše sistemska napaka, ki je odvisna od jezika brskalnika, ki ga uporablja uporabnik. Ta je lahko v angleščini.</li>
       feedback_title: Povratne in kontaktne informacije
-      feedback_paragraph: Če nam želite sporočiti karkoli v zvezi s prilagoditvijo dostopnosti portala Celje po moje za uporabnike z različnimi invalidnostmi ain oviranostmi, nam lahko pišete na <a href="mailto:mestna.obcina@celje.si">mestna.obcina@celje.si</a> ali nas pokličete na <a href="tel:034265750">03 4265 750</a>.
+      feedback_paragraph: Če nam želite sporočiti karkoli v zvezi s prilagoditvijo dostopnosti portala Sodeluj in glasuj za uporabnike z različnimi invalidnostmi ain oviranostmi, nam lahko pišete na <a href="mailto:sodeluj.glasuj@medvode.si">sodeluj.glasuj@medvode.si</a>.
       surveillance_title: Nadzor nad izvajanjem določb Zakona o dostopnosti spletišč in mobilnih aplikacij (ZDSMA)
       surveillance_paragraph: |
         <a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/inspektorat-za-informacijsko-druzbo/o-inspektoratu/">Inšpektorat Republike Slovenije za informacijsko družbo</a>
