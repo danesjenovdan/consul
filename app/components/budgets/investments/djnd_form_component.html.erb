@@ -43,7 +43,11 @@
         </p>
       <% else %>
         <p>
-          <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+          <% if builder.index == 0 %>
+            <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5, placeholder: 'Urejanje zelenih površin ter cestne in prometne infrastrukture niso predmet participativnega proračuna. Predlogi , ki se nanašajo na zasebna zemljišča ali zemljišča RS, niso predmet participativnega proračuna.' %>
+          <% else %>
+            <%= builder.text_area :text, label: budget.questions.order(:id)[builder.index].text, rows: 5 %>
+          <% end %>
           <%= builder.hidden_field :budget_id %>
           <%= builder.hidden_field :budget_question_id %>
         </p>
