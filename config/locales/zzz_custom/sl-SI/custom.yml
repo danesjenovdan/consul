@@ -293,19 +293,19 @@ sl-SI:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Občanke in občani oddajo predloge projektov med 22. 4. 2024 in 6. 5. 2024. Posamezen predlog projekta mora biti pripravljen v skladu z navodili, njegova vrednost pa ne sme biti višja od 5.000,00 EUR z DDV. Predlog lahko oddate preko spletnega portala ."
-      date_1: 22. 4.–6. 5. 2024
+      description_1: "Občanke in občani oddajo predloge projektov med 2. 6. 2025 in 1. 7. 2025. Posamezen predlog projekta mora biti pripravljen v skladu z navodili, njegova vrednost pa ne sme biti višja od 7.000,00 EUR z DDV. Predlog lahko oddate preko spletnega portala ."
+      date_1: 2. 6.–1. 7. 2025
       heading_2: Pregled predlogov
       description_2: "Vse oddane predloge pregleda komisija, ki vsak oddan predlog finančno ovrednoti in preveri, če je izvedljiv, skladen z zakonodajo, znotraj geografskega območja in časovnice izvajanja participativnega proračuna ter v skladu z pravili glede vrednosti predlogov. Komisija lahko podobne predloge združi."
-      date_2: 7. 5.-31. 5. 2024
+      date_2: 1. 7.-31. 7. 2025
       heading_3: Glasovanje
-      description_3: "Glasovanje bo izvedeno med 1. in 15. 6. 2024 prek spletnega portala. Sodeluje lahko vsak prebivalec ali prebivalka s stalnim bivališčem v Občini Trebnje, ki je dopolnil/-a 15 let. Vsak občan bo lahko glasoval za en projektni predlog."
-      date_3: 1. 6.-15. 6. 2024
+      description_3: "Glasovanje bo izvedeno med 1. in 14. 9. 2025 prek spletnega portala. Sodeluje lahko vsak prebivalec ali prebivalka s stalnim bivališčem v Občini Trebnje, ki je dopolnil/-a 15 let. Vsak občan bo lahko glasoval za en projektni predlog."
+      date_3: 1. 9.-14. 9. 2025
       heading_4: Razglasitev rezultatov
       description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila projekte, ki so bili izbrani."
-      date_4: "Julij 2024"
+      date_4: "Oktober 2025"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi zmagovalni projekti bodo vključeni v proračun Občine Trebnje in izvedeni v letu 2024. V tej fazi cikla participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa."
+      description_5: "Vsi zmagovalni projekti bodo vključeni v proračun Občine Trebnje in izvedeni do konca leta 2026 oziroma preneseni v leto 2027. V tej fazi cikla participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa."
     privacy:
       title: "Pogoji uporabe"
     help:
@@ -414,7 +414,7 @@ sl-SI:
       data_store_list_li2: "elektronskem naslovu uporabnice_ka,"
       data_store_list_li3: "EMŠO uporabnice_ka,"
       data_store_list_li4: "talni naslov uporabnice_ka."
-      data_store_list_li4: "telefonsko številko uporabnice_ka"
+      data_store_list_li5: "telefonsko številko uporabnice_ka"
       data_store_first: "Drugih osebnih podatkov obdelovalec podatkov ne shranjuje."
       data_store_second: "Osebni podatki se ne prenašajo v tretje države ali mednarodne organizacije."
       data_process_title: "Na kakšen način obdelujemo osebne podatke"
