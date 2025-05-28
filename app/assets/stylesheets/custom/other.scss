@@ -19,3 +19,170 @@
     color: $black;
   }
 }
+
+
+.mayor {
+  background-color: #ccefdf;
+  padding: 60px;
+
+  .heading-with-photo {
+    display: flex;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+
+    .mayor-image-container {
+      width: 200px;
+      height: 200px;
+      background-image: image-url('mayor.jpg');
+      background-size: cover;
+      border-radius: 200px;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      align-content: center;
+      margin: auto;
+    }
+  }
+
+  .introduction-text {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    max-width: 880px;
+    margin: auto;
+
+    h1 {
+      font-size: 44px;
+      line-height: 54px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 34px;
+      font-weight: 500;
+    }
+
+    .action-button {
+      width: 390px;
+    }
+
+    @media screen and (max-width: 87.9375em) {
+      max-width: 100%;
+
+      h1 {
+        font-size: 36px;
+        line-height: 42px;
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .action-button {
+        width: 100%;
+      }
+    }
+  }
+
+  .list {
+    margin: 100px 0;
+
+    h2 {
+      font-size: 36px;
+      line-height: 54px;
+      font-weight: 700;
+      border-bottom: 1px solid $black;
+      padding-bottom: 5px;
+      margin-bottom: 0;
+    }
+
+    .list-element {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $black;
+      padding: 30px 0;
+      text-decoration: none;
+
+      &:hover {
+        color: $black;
+        background-color: #f2f2f2;
+      }
+
+      h3 {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+
+      .more {
+        font-size: 24px;
+      }
+
+      .custom-icon.arrow-small-right {
+        background-image: image-url("arrow-black.svg");
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        background-size: 29px;
+      }
+    }
+
+    @media screen and (max-width: 63.9375em) {
+      margin: 50px 0;
+
+      h2 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .list-element {
+        h3 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        .more span {
+          display: none;
+        }
+
+        .more .custom-icon.arrow-small-right {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 51.9375em) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 39.9375em) {
+    padding: 15px;
+  }
+}
+
+.mayor-image {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.djnd-radio {
+  display: flex;
+
+  input {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+}
