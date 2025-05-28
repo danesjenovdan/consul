@@ -21,12 +21,16 @@
       <%= f.hidden_field :document_type, value: "1" %>
       <%= f.text_field :document_number, label: t("custom.terms.emso"), placeholder: t("devise_views.users.registrations.new.document_number") %>
 
-      <%= f.invisible_captcha :address %>
+      <%= f.invisible_captcha :home_address %>
+
+      <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true %>
 
       <%# TODO: dodaj autocomplete polje za naslov %>
       <%# <%= f.text_field :naslov %>
 
       <%= f.email_field :email %>
+
+      <%= f.phone_field :phone_number %>
 
       <%= f.password_field :password, autocomplete: "off", hint: t("devise_views.users.registrations.new.password_hint") %>
 
@@ -37,11 +41,15 @@
         <%= f.text_field :redeemable_code %>
       <% end %>
 
+      <p><%= t("devise_views.users.registrations.new.terms_title")  %></p>
+
       <%= f.check_box :terms_of_service,
         title: t("devise_views.users.registrations.new.terms_title"),
         label: t("devise_views.users.registrations.new.terms",
                  terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
                 ) %>
+
+      <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: t("custom.terms.terms_second_checkbox") %>
 
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>
