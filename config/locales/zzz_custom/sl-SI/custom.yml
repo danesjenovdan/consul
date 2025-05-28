@@ -21,6 +21,7 @@ sl-SI:
       user:
         login: "e-naslov ali uporabniško ime"
         login_form: "E-naslov ali uporabniško ime"
+        username: "Ime in priimek predlagatelja"
       image:
         attachment: "Slika"
       budget/investment:
@@ -134,7 +135,12 @@ sl-SI:
     users:
       registrations:
         new:
-          terms: Z registracijo sprejemaš %{terms}.
+          terms_title: |
+            Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Dolina (pri vsaki alineji posebej ustrezno označite s kljukico, da se strinjate za obdelavo osebnih podatkov):
+          terms: |
+            obdeluje moje osebne podatke (ime in priimek, naslov stalnega prebivališča, e-naslov, telefonska številka) za namen izvedbe projekta Participativni Proračun Občine Dolina v dokumentarni zbirki MOK
+          data_consent: |
+            objavi osebne podatke (ime in priimek) na spletni strani MOK z namenom javne objave pobud projekta Participativni Proračun Občine Dolina
           password_hint: Geslo mora imeti najmanj 8 znakov.
         success:
           back_to_index: Velja, vrni me na začetno stran
@@ -253,7 +259,8 @@ sl-SI:
       submit_anonymously: Oddaj anonimno
       submit_anonymously_explanation: S potrditvijo te zahteve se tvoje ime in priimek ne bosta izpisala ob predlogu, ki bo objavljen na spletni strani.
       phone: Telefonska številka
-      address: Naslov stalnega prebivališča
+      document_number: Številka volilne izkaznice
+      address: Naslov stalnega prebivališča predlagatelja
       name_and_last_name: Ime in priimek (uporabniško ime)
       accept_terms: Strinjam se s %{conditions}
       table_content: Vsebina
@@ -352,7 +359,7 @@ sl-SI:
       registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
       name: "uporabniško ime"
       email: "elektronski naslov"
-      emso: "EMŠO"
+      emso: "Številka volilne izkaznice"
       registration_first: "Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon."
       registration_second: "Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnica_k prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani ene_ga uporabnice_ka je prepovedano."
       registration_third: "Če uporabnica_k katerega izmed navedenih podatkov ne posreduje, ji_mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati spletnega orodja."
@@ -454,6 +461,8 @@ sl-SI:
       cookies_list_li2_desc: "Se uporabljata za preprečevanje zlorab uporabniške seje."
       ip_title: "Intelektualna lastnina"
       ip_intro: 'Vsa koda potrebna za delovanje te spletne strani je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
+      terms_second_checkbox: |
+        objavi osebne podatke (ime in priimek) na spletni strani MOK z namenom javne objave pobud projekta Participativni Proračun Občine Dolina
     statuses:
       title: "Izberi status predloga"
       waiting: "Čaka na izvedbo"
@@ -520,3 +529,8 @@ sl-SI:
         E: <a href="mailto:gp.ijs@gov.si">gp.ijs@gov.si</a>
       author_title: Priprava izjave o dostopnosti
       author_paragraph: "Datum objave Izjave o dostopnosti: 30. 1. 2025, na podlagi samoocene. Zadnja posodobitev Izjave o dostopnosti: 30 . 1 .2025."
+    dolina:
+      mayor:
+        title: TODO
+        content: |
+          <p>TODO</p>

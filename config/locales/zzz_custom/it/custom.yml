@@ -1,0 +1,531 @@
+it:
+  routes:
+    budgets: pp
+    investments: suggerimenti
+    account: account
+    help: aiuto
+    sign_in: accedi
+    organizations: organizzazioni
+    users: utenti
+    sign_up: registrazione
+    confirmation: conferma
+    new: nuovamente
+    password: password
+    edit: modifica
+  account:
+    show:
+      change_credentials_link: Modificare l’indirizzo elettronico o la password
+      verified_account: " L’account è confermato."
+  activerecord:
+    attributes:
+      user:
+        login: "indirizzo elettronico o nome utente"
+        login_form: "Indirizzo elettronico o nome utente"
+        username: "Nome e cognome del proponente"
+        email: "Indirizzo di posta elettronica"
+        phone_number: "Numero di telefono"
+      image:
+        attachment: "Immagine"
+      budget/investment:
+        q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
+        q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
+        q3: "Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?"
+        q4: "Naselje izvajanja projekta. Kje konkretno naj bi se projekt izvajal? Navedite parcelne številke. Če gre za parcele v zasebni lasti, priložite soglasje lastnika."
+        q5: "Časovni okvir: kdaj naj bi se projekt izvedel? Navedite v primeru, da je iz objektivnih razlogov ta podatek pomemben, sicer se bo projekt izvedel enkrat v časovnem obdobju med 1. 7. 2021 in 31. 12. 2022."
+        q6: "Ali ste pridobili tudi dodatne vire financiranja projekta (npr. krajevna ali vaška skupnost, sponzorstva, ipd.), od koga in koliko? V primeru, da predlagatelj pridobi zunanje vire financiranja, skupna vrednost projekta lahko presega finančne omejitve. Prosimo, da v prilogo priložite izjave sofinancerjev. Opišite tudi morebitna dela, ki ste jih vi ali kdo drug v sklopu tega projekta pripravljeni izvesti brezplačno."
+    errors:
+      models:
+        image:
+          attributes:
+            attachment:
+              min_image_width: " deve essere larga almeno %{required_min_width}px"
+              min_image_height: " deve essere alta almeno %{required_min_height}px"
+        user:
+          attributes:
+            document_number:
+              invalid: il CAUC non è nel formato corretto.
+            address:
+              invalid: Questo indirizzo non è valido. Controllare l'ortografia o inserire un altro indirizzo.
+  budgets:
+    investments:
+      investment:
+        add: Voti a favore di questa proposta
+      show:
+        share_title: "Passa parola!"
+        share: "Condividi!"
+        copy: "Copia il collegamento!"
+        price: " Valore del progetto "
+        votes: " Vuole sostenere questo progetto?"
+        top_investment: " Questa proposta è attualmente fra le prime 3 per numero di voti in questa zona!"
+        top_investment_close: " A questa proposta mancano solo pochi voti per classificarsi tra le prime 3 di questa zona!"
+        top_investment_far: " A questa proposta mancano molti voti per classificarsi tra le prime 3 in questa zona!"
+      edit:
+        submit: "Salva le modifiche"
+      form:
+        tags_instructions: " Contrassegnare questa proposta. É possibile scegliere tra le categorie proposte"
+        submit: "Inoltra la proposta"
+      index:
+        title: Participativni proračun
+        by_heading: " Progetti d’investimento nella zona: %{heading}"
+        sidebar:
+          different_heading_assigned: " Ci sono voti attivi per un'altra zona: %{heading_link}."
+      header:
+        different_heading_assigned: " Ci sono voti attivi per un'altra zona: %{heading_link}."
+        change_ballot: " Se si cambia idea, è possibile cancellare i voti da questa zona e ricominciare da capo"
+    ballots:
+      show:
+        amount_progress: "%{amount_spent} / %{amount_limit}"
+        amount_available:
+          knapsack: " È ancora disponibile <span>%{count}</span>."
+          approval:
+            zero: " Sono stati usati tutti i voti disponibili (<span>%{count}</span>)."
+            one: "É possibile consegnare ancora <span>%{count}</span> voto."
+            two: " É possibile consegnare ancora <span>%{count}</span> voti."
+            three: " È possibile consegnare ancora <span>%{count}</span> voti."
+            four: " È possibile consegnare ancora <span>%{count}</span> voti."
+            other: " È possibile consegnare ancora <span>%{count}</span> voti."
+        amount_spent:
+          knapsack: "Usato: <span>%{count}</span>"
+          approval:
+            zero: "Voti consegnati: <span>%{count}</span>"
+            one: "Voto consegnato: <span>%{count}</span>"
+            two: " Voti consegnati: <span>%{count}</span>"
+            three: "Voti consegnati: <span>%{count}</span>"
+            four: "Voti consegnati: <span>%{count}</span>"
+            other: "Voti consegnati: <span>%{count}</span>"
+        amount_limit:
+          knapsack: "Il suo budget: <span>%{count}</span>"
+          approval:
+            one: "É possibile votare per <span>1</span> proposta"
+            two: "É possibile votare per <span>2</span> proposte"
+            three: "É possibile votare per <span>3</span> proposte"
+            four: "É possibile votare per <span>4</span> proposte"
+            other: "É possibile votare per <span>%{count}</span> proposte"
+      reasons_for_not_balloting:
+        not_logged_in: "<strong> Per continuare è necessario iscriversi o registrarsi.</strong>"
+        not_verified: Solo gli utenti verificati possono votare per gli investimenti; %{verify_account}.
+        not_enough_available_votes: Non ci sono più voti disponibili. Per votare per questa proposta, è necessario togliere il voto da un'altra proposta.
+        organization: Le organizzazioni non sono autorizzate a votare
+        not_selected: Gli investimenti non selezionati non possono essere supportati
+        not_enough_money: " Il budget a disposizione non è sufficiente."
+        no_ballots_allowed: La fase di selezione è terminata
+        different_heading_assigned: "<strong> È possibile votare solo per proposte della stessa zona.</strong>"
+        change_ballot: modifica dei voti
+  comments:
+    actions:
+      confirm_delete: Confermare la cancellazione
+      delete: Cancellare
+  devise:
+    sessions:
+      signed_in: " L'accesso è stato effettuato correttamente."
+      signed_out: " L'utente si è disconnesso correttamente."
+      already_signed_out: " L'utente si è disconnesso correttamente."
+    failure:
+      already_authenticated: " L'utente ha già effettuato l'accesso"
+      invalid: " %{chiave_di_autenticazione} o password non valida."
+      not_found_in_database: "%{chiave_di_autenticazione} o password non valida."
+    registrations:
+      signed_up_but_unconfirmed: " È stata inviata un'e-mail per confermare la registrazione. Cliccare sul link contenuto nell'e-mail per attivare l'account."
+  devise_views:
+    shared:
+      links:
+        login: Iscrizione
+        new_confirmation: Non ha ricevuto istruzioni su come attivare il suo account?
+        new_unlock: Non ha ricevuto istruzioni su come sbloccare il suo account?
+    users:
+      registrations:
+        new:
+          terms_title: |
+            Fino ad un’eventuale revoca autorizzo espressamente, volontariamente, incondizionatamente e chiaramente il Comune di San Dorligo della Valle - Dolina (singolarmente per ogni linea contrassegnate con il segno di spunta per acconsentire il trattamento dei dati personali):
+          terms: |
+            al trattamento dei miei dati personali nelle banche dati del CCC (nome e cognome, indirizzo di residenza, indirizzo di posta elettronica, numero di telefono) ai fini della realizzazione del progetto Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina
+          data_consent: |
+            la pubblicazione dei dati personali (nome e cognome) sul sito internet del CCC ai fini della pubblicazione delle proposte del progetto Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina*
+          password_hint: La password deve avere almeno 8 caratteri.
+          address: Inserire la via di residenza permanente
+          document_number: ""
+        success:
+          back_to_index: Ripartire dalla pagina iniziale
+          instructions_1: Si prega di, <b>controllare l’e-mail</b> – è stato inviato un <b>collegamento per confermare l’account</b>.
+          instructions_2: Una volta confermato l’account, è possibile partecipare.
+          thank_you: Ringraziamo per la registrazione sul portale online. Ora è necessario <b>confermare l’indirizzo e-mail</b>.
+          title: Registrazione
+          account_confirmed: "Ringraziamo per la registrazione! Per continuare è necessario <b>iscriversi</b>"
+    mailer:
+      reset_password_instructions:
+        ignore_text: Se non è stata richiesta la modifica della password, ignorare questa e-mail.
+  documents:
+    max_documents_allowed_reached: È stato raggiunto il numero massimo di documenti consentiti! <strong> Prima di poter caricare un nuovo documento, è necessario cancellarne almeno uno. </strong>
+    buttons:
+      destroy_document: Eliminare documento
+    form:
+      note: " “È possibile caricare un massimo di %{max_documents_allowed} documenti dei seguenti tipi: %{accepted_content_types}, con una dimensione massima di %{max_file_size} MB per file."
+  images:
+    form:
+      title: Slika
+  mailers:
+    budget_investment_created:
+      intro: "Hej, <strong>%{author}</strong>,"
+      share: Visualizzare progetto
+  milestones:
+    index:
+      no_milestones: Non ha limiti definiti
+      progress: Progressi
+    show:
+      publication_date: "Data di pubblicazione %{publication_date}"
+      status_changed: Status modificato in
+  shared:
+    suggest:
+      budget_investment:
+        found: Abbiamo trovato una proposta simile.
+  views:
+    pagination:
+      truncate: "&hellip;"
+  custom:
+    admin:
+      budget_phases:
+        edit:
+          summary_help_text: Sottotitolo
+          description_help_text: Paragrafo descrittivo
+          presentation_summary_accepting: Primo paragrafo quando la fase non è attiva
+          presentation_summary_balloting: Secondo paragrafo quando la fase non è attiva
+          presentation_summary_finished: Terzo paragrafo quando la fase non è attiva
+          presentation_summary_accepting_help_text: Testo per il primo paragrafo quando la fase non è attiva.
+          presentation_summary_balloting_help_text: Testo per il secondo paragrafo quando la fase non è attiva.
+          presentation_summary_finished_help_text: Testo per il terzo paragrafo quando la fase non è attiva
+    budgets:
+      investments:
+        not_allowed_to_add_investment: Ringraziamo per le 3 proposte inviate!
+        investment:
+          no_image: La proposta non ha fotografie.
+    meta:
+      pp_name: Ancarano collabora
+      place_name: Comune di Ancarano
+      guiding_questions: "<p><em>Perché questa proposta? Quale argomento, problema o sfida affronta la proposta progettuale? </em></p><p>&nbsp;</p><p><em>Cosa proponete nello specifico? Qual è il senso della sua proposta? Cosa accadrà? </em></p><p>&nbsp;</p><p><em>Come dovrebbe essere attuato il progetto? Quali attività dovrebbero essere svolte? </em></p><p>&nbsp;</p><p><em>Dove dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p></p><p><em>Tempistica: quando dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p><em>Cosa cambierebbe, migliorerebbe dopo l'implementazione del progetto? </em></p><p>&nbsp;</p><p></p><p><em>Qual è il valore previsto (costo) del progetto proposto? </em></p>"
+      tos: "pogoji-uporabe"
+    switcher:
+      select: " Selezionare il budget"
+    social:
+      fb_desc: Ancarano collabora - Bilancio partecipativo del comune di Ancarano
+      tw_desc: "Ancarano collabora - Bilancio partecipativo del comune di Ancarano: "
+      email_desc: Visualizzare la proposta d’investimento di bilancio nel progetto Acnarano collabora - Bilancio partecipativo del comune di Ancarano
+    headings:
+      drafting: Bozza (nascosta al pubblico)
+      informing: Informazioni
+      accepting: Propongo
+      reviewing: Revisione dei progetti
+      selecting: Voto
+      valuating: Valutazione di progetti
+      publishing_prices: Pubblicazione delle proposte sottoposte a votazione
+      balloting: Voto
+      reviewing_ballots: Verifica delle votazioni
+      finished: Seguo
+      headings: Frazioni
+      headings_sidebar: |
+        <li>
+          <h6>Zona 1 - Ankaran est</h6>
+          <div>Al boschetto, Strada della Ferrovia, Roseto, Strada Ivančič Franc-Rudi, Strada per Prisoje, Sotto la cima, Strada dell'Adriatico</div>
+        </li>
+        <li>
+          <h6>Zona 2 - Ancarano centro</h6>
+          <div>Vicolo degli Olivi, Via Stanko Pervanja, Via D. Bertok-Churchill, Vicolo per Brida, Via J. Srebrnič, Via I. Regent, Via M. Hrvatin, Via V. Vlahovič, Via F. Bevk, Via V. Kocjančič-Marko, Via I. Cah-Iskra, Ulica Rudi Mahnič, Via P. Tomažič, Via M. Laris-Moro, Via F. P. Frenk, Vicolo del Panorama, Strada dell'Adriatico</div>
+        </li>
+        <li>
+          <h6>Zona 3 - Ancarano ovest</h6>
+          <div>Via dei Vigneti, Lazzaretto, Strada dell'Adriatico</div>
+        </li>
+      select_heading: Selezionare zona
+
+      select_tag: Selezionare quartiere
+      select_status: Selezionare lo status della proposta
+      select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
+      instructions: "Per poter candidare la propria proposta progettuale e sottoporla alla votazione della cittadinanza, essa deve soddisfare le seguenti condizioni:"
+      instructions_description: |
+        <h3>proponente:</h3>
+        <ol>
+          <li>deve essere residente nel Comune di San Dorligo della Valle - Dolina, e aver compiuto o compiere 18 anni di età nel 2025 (nati prima del 15.10.2007);</li>
+          <li>non può agire in qualità di esecutore della proposta di progetto – né quale persona fisica ovvero quale proprietario oppure membro del direttivo di una persona giuridica dell’esecutore.</li>
+        </ol>
+        <h3>Progetto proposto:</h3>
+        <ol>
+          <li>è di competenza del comune;</li>
+          <li>verrà attuato sul territorio del Comune di San Dorligo della Valle - Dolina;</li>
+          <li>non è contrario alla legislazione ovvero alle norme comunali;</li>
+          <li>è conforme con gli atti di pianificazione territoriale del comune, con gli atti e le strategie di sviluppo e con gli altri programmi di sviluppo comunale;</li>
+          <li>contribuisce alla realizzazione dell’interesse pubblico sul territorio del comune;</li>
+          <li>è per natura tale da poter essere attuato dal comune e realizzato nell'ambito delle capacità dell’ente nei 18 mesi successivi dall’annuncio delle proposte vincitrici;</li>
+          <li>promuove la partecipazione attiva e il coinvolgimento dei cittadini, migliora la qualità della vita a livello locale, stimola un approccio comunitario ed è destinato alla fruizione pubblica;</li>
+          <li>il valore finanziare reale stimato è compreso tra 3.000 e 15.000 euro IVA inclusa;</li>
+          <li>viene presentato sull'apposito modulo e compilato in ogni sua parte (elettronicamente o fisicamente).</li>
+        </ol>
+      back_to_all_proposals: "Tornare all'elenco delle proposte"
+    feasibility:
+      select_feasibility: Filtrare le proposte non votate
+      feasible: Proposte votate
+      unfeasible: Proposte non votate
+    chosen_for_voting:
+      chosen: PROPOSTE SELEZIONATE
+      not_chosen: PROPOSTE NON SELEZIONATE
+    titles:
+      edit: Modificare proposta
+      investment_updated: Proposta modificata correttamente
+      proposals: Proposte
+      added_proposals: Proposte presentate
+      voted_proposals: Proposte sottoposte a votazione
+      selected_proposals: Proposte selezionate
+      finished_proposals: Proposte votate
+      denied_proposals: Proposte non selezionate
+      register_with: Per registrarsi, compilare questo modulo
+      sign_in_with: Per iscriversi, compilare questo modulo
+      about: Informazioni sul bilancio partecipativo
+      anonymous_proposal: Proposta anonima
+    messages:
+      finished_accepting: I progetti non possono più essere presentati. Sono in fase di revisione.
+      finished_voting: Le votazioni sono chiuse. I progetti votati sono attualmente in fase di revisione.
+      no_investments: Qui non ci sono ancora proposte.
+      add_first_investment: Scrivi il primo!
+      loser: Questo progetto non è stato votato.
+    form:
+      submit_anonymously: Inviare in forma anonima
+      submit_anonymously_explanation: Accettando questa richiesta, il suo nome non verrà visualizzato quando la proposta verrà pubblicata sul sito web.
+      phone: Numero di telefono
+      document_number: Numero di tessera elettorale
+      address: Indirizzo di residenza del proponente
+      name_and_last_name: Nome e cognome (nome utente)
+      accept_terms: L’utente accetta le %{conditions}
+      table_content: Contenuto
+      table_price: Importo IVA inclusa
+      table_total: Totale
+    presentation:
+      accepting:
+        title_1: A quanto ammonta il budget?
+        title_2: Come dovrebbe essere la proposta?
+        title_3: E se tutto è a posto?
+      balloting:
+        title_1: Cosa?
+        title_2: Chi?
+        title_3: Come?
+      finished:
+        title_1: E poi?
+        title_2: E la mia domanda?
+        title_3: E dopo di che?
+    landing:
+      title: Bilancio partecipativo 2025-2026!
+      introduction_text: Grazie al progetto di bilancio partecipativo, i cittadini del comune di Ancarano potete partecipare all'assegnazione di una parte dei fondi di bilancio. Le proposte di progetti su misura per i cittadini miglioreranno l'efficienza dell'uso dei fondi comuni, rafforzeranno la partecipazione all'ambiente locale e miglioreranno la qualità della vita nel comune.
+      title_past: Pretekli participativni proračuni
+      past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
+      past_list_more: Več
+    about:
+      intro: 'Il bilancio partecipativo è una procedura di partecipazione democratica in cui i cittadini decidono direttamente come spendere parte dei fondi del bilancio. Individuano autonomamente i problemi e le opportunità di miglioramento, proponendo i progetti più urgenti, la cui realizzazione contribuirebbe maggiormente a migliorare la qualità della vita della comunità. <p class="intro">Nel Comune di Ancarano, per gli esercizi finanziari 2025 e 2026, i cittadini potranno proporre e votare i progetti. I progetti hanno un valore massimo di 100.000 euro, di cui 40.000 euro per la zona del bilancio partecipativo Ancarano est, 20.000 euro per Ancarano centro e 40.000 euro per la zona del bilancio partecipativo Ancarano ovest.</p>'
+      main_title: Come funziona?
+      heading_1: Accoglimento delle proposte
+      description_1: |
+        I cittadini possono presentare le proposte progettuali a partire dal 27 gennaio 2025 fino al 23 febbraio 2025. Ogni proposta progettuale deve essere presentata sull'apposito modulo, avere un valore tra di 1.000,00 euro e di un massimo di 20.000,00 euro (per progetti nella zona Centro) o massimo di 40.000 euro (per progetti nelle zone Ovest ed Est), IVA inclusa, e soddisfare le altre condizioni per essere inserita nel Bilancio partecipativo - da sottoporre a votazione.</p><p>Le proposte progettuali devono essere presentate tramite modulo che può essere compilato su <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ca27d52eaa7b5121d41e84402bbf6d9016517623/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_-ita.docx">questo sito web</a>, scaricato qui o ritirato presso l’ufficio protocollo del Comune di Ancarano durante l’orario d’ufficio.</p><p>Il proponente deve fornire i propri dati personali richiesti nel modulo, le proposte anonime non saranno prese in considerazione. Ogni candidato può proporre un massimo di 3 proposte progettuali, per progetti relativi alla zona del bilancio partecipativo in cui risiede (le zone del bilancio partecipativo sono Ancarano est, Ancarano centro e Ancarano ovest e sono visibili sulla mappa disponibile a <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--161ac955ff83eb3bd33aa1113b1fc61605eeee76/obmo%C4%8Dja%20PP%20OA%20-%20zemljevid%20z%20ulicami_ITA.pdf">questo collegamento</a>).</p><p>È possibile presentare il modulo per le proposte progettuali:<ul><li>su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online,</li><li>via posta elettronica all’indirizzo sodelujem@obcina-ankaran.si ,</li><li>di persona presso l’ufficio protocollo del Comune di Ancarano, Via Ivan Regent 2, Ancarano, durante l’orario d'ufficio.</li></ul></p>
+      date_1: 27. 1.-23. 2. 2025
+      heading_2: Valutazione delle proposte
+      description_2: "Tutte le proposte presentate verranno esaminate da una commissione di esperti, che valuterà ogni proposta dal punto di vista finanziario, ne verificherà la fattibilità e la conformità alle condizioni stabilite (nell'ambito delle competenze del Comune, in linea con la legislazione, con i documenti di pianificazione territoriale e di sviluppo, il contributo all'interesse pubblico, ecc.) La commissione può unire proposte progettuali identiche o simili in un'unica proposta progettuale o adattare parzialmente una singola proposta progettuale.<p>Le proposte che non soddisferanno le condizioni secondo la valutazione della commissione, verranno eliminate, tramite una motivazione che specificherà per quali condizioni non sono risultate idonee.</p><p>Tutte le proposte progettuali che soddisferanno tutte le condizioni del bando saranno sottoposte a votazione.</p>"
+      date_2: 24. 2.-24. 3. 2025
+      heading_3: Votazioni
+      description_3: Tra il 7 e il 20 aprile 2025, i cittadini avranno l'opportunità di votare per scegliere i progetti del Comune di Ancarano che verranno finanziati.<p>Potranno votare i cittadini del Comune di Ancarano, che con il 1° gennaio 2025 hanno:<ul><li>residenza permanente nel Comune di Ancarano,</li><li>compiuto o compiranno 15 anni di età nel 2025 (nati nel 2010).</li></ul></p><p>Ognuno potrà votare per un massimo di 3 proposte per tutto il comune, indipendentemente dalla zona di residenza. Per ogni singola proposta progettuale è consentito votare solo una volta.</p><p>SÈ possibile inviare il proprio voto dal 7 aprile 2025 fino al 20 aprile 2025 su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online. Potrete consegnare il vostro voto online anche con l'aiuto di un assistente presso l'ufficio protocollo del Comune di Ancarano.</li></ul></p>"
+      date_3: 7. 4.-20. 4. 2025
+      heading_4: Annuncio dei progetti prescelti
+      description_4: "Alla conclusione delle votazioni, il comune controllerà i risultati e annuncerà i progetti selezionati. In base all'esito delle votazioni, i progetti saranno selezionati per essere inseriti nel bilancio partecipativo del Comune di Ancarano per gli anni 2025 e 2026 e per la loro attuazione per ogni zona del bilancio partecipativo del Comune di Ancarano fino all'importo totale dei fondi stanziati per ogni zona (Ancarano est totale 40.000,00 euro; Ancarano centro totale 20.000,00 euro e Ancarano ovest totale 40.000,00 euro).<p>I risultati delle votazioni saranno pubblicati sul sito web del comune dopo il 9 maggio 2025.</p>"
+      date_4: "9. 5. 2025"
+      heading_5: Monitoraggio dei progetti
+      description_5: "I progetti vincitori in ciascuna zona di applicazione del bilancio partecipativo (Ancarano Est, Centro e Ovest) saranno inseriti nel bilancio del comune di Ancarano e realizzati nel 2025 e nel 2026. Sarà possibile seguire l'avanzamento dei progetti su questo sito web."
+    privacy:
+      title: "Pogoji uporabe"
+    help:
+      main_title: "Domande frequenti"
+      heading_1: "È necessario avere un numero di telefono e una connessione ad internet per partecipare?"
+      description_1: "Per creare un account online sono necessari un numero di telefono, un indirizzo e-mail e una connessione a internet, ma è possibile completare tutte le funzionalità anche presso il comune."
+      heading_2: "Come creare e verificare il proprio account?"
+      description_2: "Per creare un account, premere il pulsante “Registrati” a fondo pagina del sito web, premendo su uno qualsiasi dei pulsanti si accede allo stesso modulo online. Per creare un account, è necessario inserire il nome utente, l'indirizzo e-mail, il CAUC, l'indirizzo permanente e la password. Una volta creato l'account, è necessario confermarlo cliccando sul collegamento contenuto nell'e-mail che verrà inviata al vostro indirizzo di posta elettronica."
+      heading_3: "Come creare una nuova proposta?"
+      description_3: |
+        <p>Oltre a presentare una proposta online, è possibile farlo anche</p>
+        <ul>
+          <li>In formato elettronico (scaricando il <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">modulo</a>, compilandolo e inviandolo per e-mail a <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a>)</li>
+          <li>I moduli stampati possono essere ritirati presso l'ufficio protocollo del Comune di Ancarano, Via Ivan Regentova 2, 6280 Ancarano durante l’orario d’ufficio.</li>
+        </ul>
+        <p>Per aiutarvi a preparare le vostre proposte progettuali, potrete partecipare ad un laboratorio pratico, che si terrà mercoledì 29 gennaio 2025 alle ore 18:00 presso il Centro ingregenerazional Ancarano, sul indirizzo Via Rudi Mahnič1, 6280 Ancarano.</p>
+      heading_4: "Password dimenticata. Come procedere?"
+      description_4: "Premere il pulsante “Iscrivetevi”, quindi selezionare il collegamento “Password dimenticata”. Riceverete le istruzioni per creare una nuova password al vostro indirizzo e-mail."
+      heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
+      description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
+      help_title: "Serve aiuto"
+      technical_issues: "Avete problemi tecnici? "
+      technical_contact: Contattate il gestore dell'app all'indirizzo <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.
+      other_questions: "Avete altre domande?"
+      other_contact: Contattate il Comune di Ancarano all'indirizzo <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">predlagam@obcina-ankaran.si</a>. Durante l’orario d'ufficio è a disposizione anche il numero di telefono 05 66 53 000.
+    terms:
+      main_title: "Condizioni d'uso e tutela della Privacy"
+      date: "1. 1. 2025"
+      intention: "Lo scopo di questo avviso è di aiutarvi a comprendere il funzionamento dello strumento online del bilancio partecipativo del Comune di Ancarano e l’informativa sulla privacy."
+      active_use: "L’uso attivo dello strumento online viene considerato quale consenso dell’utente in merito alle presenti condizioni generali d'uso. Per partecipare attivamente è necessario essere iscritti ed aver accettato le presenti condizioni d'uso. Qualora non accettiate le presenti condizioni, siete pregati di non utilizzare il sito."
+      changes: "Ci riserviamo il diritto di modificare le presenti condizioni generali d'uso in qualsiasi momento e senza preavviso pubblicando una nuova versione su questo sito web. La versione più recente delle Condizioni generali d’uso è riscontrabile dalla data dell’ultima modifica, riportata nell’intestazione delle presenti Condizioni."
+      help: "In caso di dubbi, scegliete una delle opzioni di contatto riportate di seguito."
+      contact1:
+        mail: "info@obcina-ankaran.si"
+        note1: "Telefono: durante gli orari di ufficio dell’Amministrazione comunale al numero (05) 665 30 00"
+        note2: "Comune di Ancarano, Strada dell’Adriatico 66, 6280 Ancarano"
+      contact2:
+        mail: "consul@djnd.si"
+        note1: "Assistenza tecnica:"
+        note2: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
+      about_title: "Informazioni sullo strumento online"
+      about_first: "Lo strumento online incentiva la partecipazione civica e consente una governance aperta, trasparente e democratica a livello comunale e nazionale. L'app è basata sulla piattaforma open-source Consul, sviluppata sotto il patrocinio del Comune di Madrid e adattata alle esigenze dei comuni sloveni dall'Istituto Danes je nov dan."
+      about_second: "Lo strumento online vi permette di partecipare direttamente al processo decisionale, per stabilire di comune accordo la destinazione di una parte del bilancio comunale. Gli utenti possono presentare, sostenere, votare e monitorare lo stato di avanzamento delle proposte di progetto."
+      about_third: "Possono partecipare tutte le cittadine ed i cittadini residenti ad Ancarano che abbiano compiuto 15 anni d'età (ovvero ne compiranno nel corso del 2025) e che si siano registrati allo strumento online; i genitori o i tutori sono responsabili delle attività dei minori. Ogni cittadino può presentare 3 proposte di progetto per la propria zona di residenza e, durante il periodo di votazione, ogni utente può votare 3 progetti su tutto il territorio comunale (indipendentemente dalla zona di residenza)."
+      about_list:
+        title: "Lo strumento consente all'utente di:"
+        li1:
+          title: "Presentare proposte"
+          desc: "Per presentare una proposta, l'utente deve specificare il titolo della proposta di progetto e la descrizione, inoltre, può aggiungere un'immagine o la posizione della proposta e altri documenti. La proposta di progetto presentata viene automaticamente accettata e visualizzata nello strumento online. Gli utenti possono condividere la proposta sui social media, via e-mail o tramite il link accorciato."
+        li2:
+          title: "Votare proposte"
+          desc: "Gli utenti possono votare le proposte di progetto degli altri utenti. Ogni utente può votare ogni proposta progettuale un’unica volta. Ogni utente può votare un solo progetto presentato. In fase di raccolta voti, l’utente può anche ritirare il voto espresso alla singola proposta."
+        li3:
+          title: "Monitorare le proposte selezionate"
+          desc: "Nella fase finale, lo strumento consente di monitorare i risultati dell'implementazione."
+      registration_title: "Registrazione"
+      registration_intro1: "Solo gli utenti registrati possono presentare proposte di progetti e votare i progetti presentati. Gli utenti non registrati possono seguire i contenuti pubblicati, ma non possono presentare proposte di progetti o votarli."
+      registration_intro2: "Registrandosi, l'utente conferma di avere 15 anni (o di compierli nel 2025) e di essere a conoscenza dei propri diritti e obblighi riportati nell'Informativa sul trattamento dei dati personali ai sensi del Regolamento generale sulla protezione dei dati e autorizza il Comune di Ancarano a verificare l'autenticità dei dati personali ai fini del progetto del Bilancio partecipativo del Comune di Ancarano da registri ufficiali e banche dati presso i titolari del trattamento dei dati personali."
+      registration_requirements: "Al momento della registrazione, l'utente deve specificare:"
+      name: "il nome utente,"
+      email: "l’indirizzo e-mail,"
+      emso: "Numero di tessera elettorale"
+      registration_first: "I dati personali conferiti dall'utente attraverso l'apposito modulo di registrazione su questa piattaforma online verranno utilizzati al solo fine di implementazione del bilancio partecipativo nel nostro comune e non saranno trasmessi a terzi, fatti salvi gli obblighi di legge."
+      registration_second: "L'account dell'utente viene attivato alla conferma della e-mail di attivazione inviata all'indirizzo e-mail del richiedente. È vietato creare più account da parte dello stesso utente."
+      registration_third: "L'omissione di una qualsiasi delle informazioni di cui sopra impedirà all'utente di completare con successo la registrazione e di conseguenza non potrà utilizzare lo strumento online."
+      registration_fourth: "È possibile verificare, modificare o aggiornare i dati inseriti al momento della registrazione nel proprio profilo, a cui si può accedere dopo la registrazione. Nel proprio profilo è, inoltre, possibile scegliere se ricevere i messaggi al proprio indirizzo e-mail."
+      registration_fifth: "Con l’uso dello strumento online, l'utente acconsente a rendervi pubblicamente visibile il nome utente e/o il nome e cognome ogniqualvolta presenta proposte e commenti."
+      rules_title: "Adozione delle regole"
+      rules_first: "Al momento della registrazione, l'utente deve accettare le regole di utilizzo dello strumento online."
+      rules_promise: "Accettando le regole, l'utente si impegna innanzitutto a rispettare nella formulazione di proposte sia la Costituzione e sia le leggi della Repubblica di Slovenia, ciò significa in particolare, che:"
+      rules_promise_first: "non pubblicherà contenuti che promuovano l’intolleranza sessuale, razziale, etnica o religiosa o qualsiasi forma di discriminazione fondata sulle circostanze personali degli individui;"
+      rules_promise_second: "non pubblicherà contenuti che violino o infrangano i diritti di terzi;"
+      rules_promise_third: "non pubblicherà immagini o fotografie di proprietà di terzi o che utilizzano dati di terzi senza previo consenso di proprietari e terzi;"
+      rules_promise_fourth: "non userà un linguaggio minaccioso, sprezzante, osceno, umiliante o offensivo;"
+      rules_promise_fifth: "non pubblicherà opere protette da copyright e non utilizzerà lo strumento per distribuire contenuti protetti da copyright o contenuti di proprietà di altre persone fisiche o giuridiche."
+      rules_second: "La violazione delle regole di cui sopra comporta la sospensione temporanea o la chiusura definitiva dell'account dell'utente e/o la rimozione dei contenuti."
+      responsibilities_title: "Contenuti e limitazione della responsabilità nell'utilizzo dello strumento online"
+      responsibilities_first: "Ci riserviamo il diritto di modificare, aggiungere o rimuovere contenuti senza preavviso e non ci assumiamo alcuna responsabilità per le conseguenze di tali modifiche."
+      responsibilities_second: "I visitatori dello strumento online utilizzano lo strumento online, le sue parti e i suoi contenuti esclusivamente a proprio rischio e pericolo. Non ci assumiamo alcuna responsabilità per l'accuratezza e la correttezza delle informazioni e dei contenuti pubblicati nello strumento online, per eventuali modifiche di informazioni o contenuti già pubblicati, o per eventuali danni subiti dai visitatori in seguito all'utilizzo delle informazioni o dei contenuti pubblicati."
+      responsibilities_third: "Non ci assumiamo alcuna responsabilità per qualsiasi tipo di controversia, lite, contestazione e/o contenzioso che possa derivare dalla pubblicazione o diffusione di contenuti per i quali non sia stata ottenuta l'autorizzazione da parte dei legittimi proprietari. La responsabilità per ogni violazione dei diritti di proprietà intellettuale o industriale ricade sulla persona che ha fornito i contenuti."
+      responsibilities_fourth: "Inoltre, non ci assumiamo alcuna responsabilità per eventuali danni derivanti dall’utilizzo dello strumento online e non rilasciamo alcuna garanzia in merito ai risultati dell'uso dello strumento online. Non potremo in alcun caso essere ritenuti responsabili di ogni e qualsiasi danno derivante dall'uso o dall'impossibilità di utilizzare lo strumento online, compresi i danni per mancato guadagno o perdita di profitto, perdita o svalutazione dell'avviamento, perdita di giro d’affari o dati. Non saremo responsabili nei confronti dell'utente per danni diretti, indiretti, incidentali, speciali, punitivi, consequenziali o di qualsiasi altra natura derivanti direttamente, indirettamente o in qualsiasi altro modo da errori, sbagli o imprecisioni nei contenuti dello strumento online o da qualsiasi altra circostanza relativa allo strumento stesso o al suo utilizzo."
+      responsibilities_fifth: "Inoltre, non saremo responsabili nei confronti dell’utente per eventuali danni derivanti dall'accesso o dall'uso non autorizzato dei nostri server e/o di tutti i dati in essi contenuti."
+      responsibilities_sixth: "Il sito contiene anche link che reindirizzano a siti web di altri soggetti. Non abbiamo alcun controllo sul funzionamento di questi siti web o sui loro contenuti e pertanto non ci assumiamo alcuna responsabilità per l'accuratezza delle informazioni e dei contenuti ivi pubblicati."
+      responsibilities_list: "Inoltre, non siamo responsabili dei contenuti che"
+      responsibilities_list_first: "promuovono l’intolleranza sessuale, razziale, etnica o religiosa o qualsiasi forma di discriminazione fondata sulle circostanze personali degli individui;"
+      responsibilities_list_second: "infrangono o violano la privacy di terzi, sono di proprietà di terzi o utilizzano dati di terzi senza l'adeguato consenso dei proprietari e dei terzi;"
+      responsibilities_list_third: "contengono minacce e offese oppure un linguaggio osceno, umiliante o offensivo;"
+      responsibilities_list_fourth: "sono opere protette da copyright per le quali l'utente non detiene i diritti d'autore. La responsabilità per ogni violazione dei diritti di proprietà intellettuale o industriale ricade sulla persona che fornisce i contenuti."
+      responsibilities_seventh: "Ci impegneremo a rimuovere tali contenuti dallo strumento online il prima possibile e a imporre sanzioni adeguate agli utenti in questione."
+      responsibilities_eighth: "In caso di controversie tra gli utenti dello strumento online e/o terzi, siamo esonerati da qualsiasi responsabilità in caso di richieste di risarcimento danni o indennizzi di qualsiasi natura relativi ai contenuti dello strumento online e/o derivanti da procedimenti legali."
+      data_protection_title: "Protezione dei dati personali"
+      data_protection_first: "Titolare del trattamento dei dati personali:"
+      data_protection_first_note1: "Comune di Ancarano, Strada dell’Adriatico 66, 6280 Ancarano"
+      data_protection_first_note2: "No. matricola: 2482851000"
+      data_protection_first_note3: "Responsabile della protezione dei dati: DATAINFO.SI d. o. o."
+      data_protection_first_note4: "E-mail: info@datainfo.si"
+      data_protection_first_note5: "Telefono: +386 (0) 40 733 798"
+      data_protection_second: "Responsabile del trattamento in merito allo strumento online Collabora e vota!:"
+      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
+      data_protection_second_note2: "No. matricola: 6468594000"
+      data_protection_second_note3: "E-mail: vsi@danesjenovdan.si"
+      data_protection_third: "Il responsabile del trattamento è contrattualmente obbligato a utilizzare i dati personali solo ed esclusivamente in nome del Comune di Ancarano ed a garantirne la loro protezione in conformità alle normative vigenti e alle nostre istruzioni."
+      data_protection_fourth: "L'Istituto Danes je nov dan si impegna a proteggere i dati personali e a utilizzarli in modo trasparente, affinché gli utenti e i sostenitori possano seguire e sostenere il nostro lavoro nel modo più semplice possibile. Rispettiamo la vostra fiducia e ci impegniamo a gestire i vostri dati personali con cura e a trattarli in conformità con la normativa vigente in materia di protezione dei dati personali (GDPR e ZVOP-2). Di seguito sono descritte in modo più dettagliato le finalità e le basi del trattamento dei vostri dati personali, inclusa l’informativa sui vostri diritti. "
+      data_use_title: "Base giuridica del trattamento dei dati personali"
+      data_use_list: "Motivi del trattamento dei dati personali:"
+      data_use_list_li1: "'interessato ha espresso il consenso al trattamento dei propri dati personali registrandosi e utilizzando lo strumento online Collabora e vota!"
+      data_store_title: "Quali dati personali vengono conservati"
+      data_store_list: "Vengono conservati i seguenti dati:"
+      data_store_list_li1: "nome utente,"
+      data_store_list_li2: "indirizzo e-mail dell'utente,"
+      data_store_list_li3: "codice anagrafico unitario del cittadino."
+      data_store_first: "Gli altri dati personali non verranno conservati dal titolare del trattamento."
+      data_store_second: "I dati personali non vengono trasferiti a paesi terzi o organizzazioni internazionali."
+      data_process_title: "Modalità di trattamento dei dati personali"
+      data_process_first: "UIl titolare del trattamento conserva i dati personali dell'utente solo ai fini del corretto funzionamento dello strumento online, per poter abilitare le suddette funzionalità dello strumento e per inviare comunicazioni obbligatorie e/o convenute con l'utente (aggiornamenti, malfunzionamenti, altre attività legate al funzionamento e all'utilizzo dell'applicazione o qualsiasi altra attività legata all'applicazione)."
+      data_time_title: "Tempi di conservazione dei dati personali"
+      data_time_first: "I dati vengono conservati per il tempo necessario al raggiungimento delle finalità per cui sono stati acquisiti, ovvero fino a quando l'utente non cessa di utilizzare lo strumento. L'utente può interrompere l'utilizzo dello strumento online in qualsiasi momento e richiedere la cancellazione dal registro degli utenti inviando una e-mail all’indirizzo consul@djnd.si. Ricevuta la e-mail di cessazione di utilizzo dello strumento online, il titolare del trattamento provvederà a cancellare tutti i dati entro il mese successivo. Nonostante la cancellazione dei dati personali di un utente, i suggerimenti, i commenti e i dati di voto verranno conservati ma attribuiti all'utente cancellato."
+      data_insight_title: "Accesso a dati e diritti degli interessati"
+      data_insight_first: "Gli interessati godono di specifici diritti in relazione ai dati personali, che sono illustrati di seguito. L’interessato può richiedere l'esportazione e l'accesso ai dati personali che lo riguardano, conservati dal DJND inviando una richiesta scritta all'indirizzo consul@djnd.si. I dati personali vengono conservati in un'applicazione specifica che rispetta i requisiti di privacy e garantisce la massima sicurezza dei dati conservati attraverso varie misure fisiche, tecniche e organizzative."
+      data_insight_second: "Prima di esercitare il diritto, il DJND verifica l'identità del richiedente che ha inviato la richiesta circa i propri diritti."
+      data_insight_third: "Dopo aver inviato la richiesta completa e valida, DJND deve fornire idoneo riscontro al più tardi entro 1 mese dal suo ricevimento; tale termine può essere prorogato di 2 mesi, ove necessario e in caso di particolare complessità o numero ingente di richieste pervenute. In tal caso, DJND deve comunque informare l'interessato della proroga e dei motivi che l'hanno determinata. "
+      data_insight_list: "Tipologie di diritti:"
+      data_insight_list_li1: "diritto di accesso ai dati: su richiesta, informeremo il richiedente se sia o meno in corso un trattamento di dati personali che lo riguardano e in tal caso, gli forniremo le seguenti informazioni:"
+      data_insight_list_li1_subli1: "la tipologia dei dati;"
+      data_insight_list_li1_subli2: "le categorie di destinatari a cui i dati personali sono stati o saranno comunicati;"
+      data_insight_list_li1_subli3: "il periodo di conservazione dei dati personali;"
+      data_insight_list_li1_subli4: "l’esistenza del diritto del richiedente alla rettifica o alla cancellazione dei dati personali o alla limitazione del trattamento dei dati personali che lo riguardano o all’opposizione al loro trattamento richiesto al DJND;"
+      data_insight_list_li1_subli5: "il diritto di proporre reclamo a un'autorità di controllo;"
+      data_insight_list_li1_subli6: "qualora i dati non siano raccolti presso l'interessato, tutte le informazioni disponibili sulla loro origine;"
+      data_insight_list_li1_subli7: "l'esistenza di un processo decisionale automatizzato, compresa la profilazione;"
+      data_insight_list_li1_subli8: "su richiesta, il DJND fornisce una copia dei dati personali trattati all'interessato."
+      data_insight_list_li2: "Diritto di rettifica: l'interessato ha il diritto di ottenere dal DJND la rettifica dei dati personali inesatti che lo riguardano o l'integrazione dei dati personali incompleti."
+      data_insight_list_li3: "Diritto alla cancellazione (diritto all'oblio): l'interessato ha il diritto di ottenere la cancellazione dei dati personali che lo riguardano in presenza di uno dei seguenti casi:"
+      data_insight_list_li3_subli1: "i dati personali non sono più necessari rispetto alle finalità per le quali sono stati raccolti o altrimenti trattati;"
+      data_insight_list_li3_subli2: "l'interessato revoca il consenso su cui si basa il trattamento e se non sussiste altro fondamento giuridico per il trattamento;"
+      data_insight_list_li3_subli3: "l'interessato si oppone al trattamento e non sussiste alcun motivo legittimo prevalente per procedere al trattamento."
+      data_insight_list_li4: "Diritto di limitazione del trattamento: l’interessato ha il diritto di ottenere dal titolare del trattamento la limitazione del trattamento nel caso ricorresse una delle seguenti ipotesi:"
+      data_insight_list_li4_subli1: "i dati non sono accurati;"
+      data_insight_list_li4_subli2: "il trattamento è illecito e l’interessato si oppone alla cancellazione dei dati personali;"
+      data_insight_list_li4_subli3: "benché DJND non ne abbia più bisogno ai fini del trattamento, i dati personali sono necessari all’interessato per l’accertamento, l’esercizio o la difesa di un diritto in sede giudiziaria;"
+      data_insight_list_li4_subli4: "l’interessato si è opposto al trattamento."
+      data_insight_list_li5: "Diritto alla portabilità dei dati: l’interessato ha il diritto di richiedere un estratto dei dati forniti a DJND qualora il trattamento si basi sul consenso o su un contratto e sia effettuato con mezzi automatizzati."
+      data_insight_list_li6: "Diritto di opposizione: l’interessato ha il diritto di opporsi al trattamento dei dati personali. Tale diritto si applica solo al trattamento dei dati personali effettuato in base ad un interesse legittimo che prevale sugli interessi dell'interessato."
+      data_insight_list_li7: "Diritto di proporre reclamo in merito al trattamento dei dati personali: l’interessato ha il diritto di proporre reclamo in merito al trattamento dei dati personali agli indirizzi del titolare del trattamento indicati all'articolo 1 della presente informativa."
+      data_insight_fourth: "Inoltre, nel caso l’interessato ritenesse che il trattamento dei suoi dati personali violi la normativa vigente ha il diritto di proporre reclamo direttamente a un’autorità di controllo. Contatti del Garante per la protezione dei dati personali:"
+      data_insight_fourth_note1: "Garante per la protezione dei dati personali, Dunajska cesta 22, 1000 Ljubljana."
+      data_insight_fourth_note2: "Telefono: 01 230 97 30"
+      data_insight_fourth_note3: "E_mail: gp.ip@ip-rs.si"
+      cookies_title: "Cookies"
+      cookies_intro: "ZLa Legge sulle comunicazioni elettroniche (Gazzetta ufficiale, n. 109/2012) ZEKom-1 ha introdotto le norme sull'uso dei cookie e di altre simili tecnologie per memorizzare o accedere alle informazioni memorizzate sui computer, tablet o dispositivi mobili degli utenti. Il nostro strumento può scaricare il cosiddetto “cookie” nel browser del vostro computer."
+      cookies_what_title: "Che cosa sono i cookie?"
+      cookies_what_intro: "I cookie sono piccoli file di testo che forniscono informazioni sul numero di visite del nostro sito e sui contenuti visualizzati dall'utente. I cookie non sono dannosi e la loro durata è limitata. I cookie non contengono informazioni che consentono l'identificazione personale degli utenti. Gli utenti hanno sempre la possibilità di accettare o rifiutare i cookie. La maggior parte dei browser accetta automaticamente i cookie, ma modificando le impostazioni del browser si può accettare o rifiutare i cookie o decidere di ricevere un messaggio di avviso prima di accettare un cookie dai siti web visitati."
+      cookies_why_title: "A cosa servono i cookie?"
+      cookies_why_intro: "Sono degli strumenti fondamentali che migliorano l'esperienza di navigazione dell'utente. I cookie rendono più semplice e veloce l'interazione tra l'utente ed il servizio web. I cookie consentono di ricordare le preferenze, gli interessi e le esperienze dell'utente, risparmiando tempo e rendendo l'uso del servizio web più efficiente e semplice."
+      cookies_min_title: "Cookie strettamente necessari"
+      cookies_min_intro: "Si tratta di cookie indispensabili per il corretto funzionamento dei servizi online e senza i quali non sarebbe possibile effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica. Questi cookie sono utilizzati per consentire il funzionamento dei servizi online di facile utilizzo, una migliore esperienza dell'utente e non richiedono il consenso."
+      cookies_list: "Lo strumento web Consul, che alimenta Collabora e vota!, utilizza solo due cookie strettamente necessari:"
+      cookies_list_li1: "_consul_session"
+      cookies_list_li1_desc: "viene utilizzato per consentire all'utente di accedere allo strumento online e di votare."
+      cookies_list_li2: "ahoy_visit in ahoy_visitor"
+      cookies_list_li2_desc: "viene utilizzato per impedire gli abusi della sessione utente."
+      ip_title: "Proprietà intellettuale"
+      ip_intro: Il codice necessario per far funzionare questo sito è aperto e disponibile a tutti. L'utilizzo del codice è gratuito per tutti gli utenti in conformità con i termini della licenza <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.
+      terms_second_checkbox: |
+        la pubblicazione dei dati personali (nome e cognome) sul sito internet del CCC ai fini della pubblicazione delle proposte del progetto Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina*
+    statuses:
+      title: " Selezionare lo status della proposta "
+      waiting: " In attesa di attuazione"
+      doing: " In corso"
+      done: " Eseguito "
+      nil: "Senza status"
+    errors:
+      data_consent: " Per procedere è necessario acconsentire al trattamento dei dati."
+      price: " Il campo valore del progetto non deve essere vuoto."
+      registration: " A causa di errori, non siamo riusciti a salvare il modulo."
+      submit_investment: " A causa di errori, non siamo riusciti a salvare il modulo."
+      no_answer: " Si prega di compilare la domanda."
+      new_investment_not_allowed: " È possibile inviare solo 3 proposte."
+    footer:
+      djnd: La piattaforma è gestita da
+    registration:
+      already_has_account: " Ha già un account?"
+    dolina:
+      mayor:
+        title: Gentili cittadine e cittadini,
+        content: |
+          <p>Uno degli obiettivi del mandato di questa Amministrazione è quello di cambiare il metodo con cui si arriva a prendere certe decisioni coinvolgendo in un confronto sempre crescente tutti gli uffici e, in modo progressivo, anche i singoli cittadini attraverso i consigli di frazione ed il processo del bilancio partecipativo.</p>
+          <p>Io e la giunta crediamo fortemente nella necessità di aprire una nuova stagione di dialogo con i cittadini, con l’associazionismo, con le parti sociali, con le istituzioni e con gli altri enti e di affrontare con questa nuova prospettiva dialettica le sfide e le opportunità del nostro territorio.</p>
+          <p>CONDIVISIONE, PRESENZA ED ASCOLTO PER ARRIVARE A SENTIRSI UNA COMUNITA’</p>
+          <p>Sentirsi “comunità” significa condividere valori, prospettive, diritti e doveri. Significa voler stare dentro un futuro comune, da costruire insieme. Significa responsabilità, perché ciascuno di noi è, in misura più o meno grande, protagonista del futuro del nostro Comune. Vuol dire anche essere rispettosi gli uni degli altri. Vuol dire essere consapevoli degli elementi che ci uniscono e nel battersi, come è giusto, per le proprie idee rifiutare l’astio, l’insulto, l’intolleranza, che creano ostilità e timore.</p>
+          <p>So bene che alcuni diranno: questa è retorica dei buoni sentimenti, che la realtà è purtroppo un’altra, che vi sono tanti problemi e che bisogna pensare a risolverli prima di sollevarne altri.</p>
+          <p>Dobbiamo aver fiducia in un cammino positivo. Ma non ci sono ricette miracolistiche. Soltanto il lavoro tenace, coerente, lungimirante produce risultati concreti. Un lavoro approfondito, che richiede competenza e che costa fatica e impegno.</p>
+          <p>La mia missione, la nostra missione, dovrà mirare a fare il bene del territorio e delle comunità presenti, orientando il proprio operato ad ascoltare tutti i cittadini e ad agire nella massima trasparenza, attraverso i canali istituzionali già presenti in Comune e sviluppandone di nuovi, come appunto il bilancio partecipativo, per aumentare sempre di più il livello di conoscenza e partecipazione che i cittadini hanno nei confronti del Comune, la casa di tutti.</p>
+          <p>Cos’è e come funziona il bilancio partecipativo? Il concetto è semplice, in sostanza, l’Amministrazione Comunale si astiene dal decidere come impiegare una parte del bilancio e lascia che siano i cittadini a esprimersi sulle priorità. La filosofia di fondo è quindi quella di ribaltare la piramide decisionale: la scelta proviene dal basso e non dall’alto.</p>
+          <p>È una sfida entusiasmante. Ci accomuna, ne sono convinto, la volontà di operare bene per il nostro territorio. Le differenze sono una ricchezza che possiamo mettere al servizio del territorio. Il mio compito sarà quello di guidare un progetto di cambiamento a cui ciascuno può contribuire nel modo che riterrà più giusto e più opportuno. Ho fiducia che daremo tutti il meglio di noi stessi. Ed è con questo proposito, in qualche modo severo anche con me stesso, che vi auguro e mi auguro di lavorare tutti per il bene del nostro Breg.</p>
+          <p>Aleksander Coretti, Sindaco</p>
