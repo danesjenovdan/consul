@@ -26,6 +26,9 @@ it:
         phone_number: "Numero di telefono"
       image:
         attachment: "Immagine"
+      budget/investment/translation:
+        title: Titolo-nome della proposta progettuale
+        title_hint: Indicare un titolo conciso, che rappresenti il fulcro della proposta progettuale.
       budget/investment:
         q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
         q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"

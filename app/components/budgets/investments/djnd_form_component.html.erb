@@ -16,7 +16,10 @@
 
     <%= f.translatable_fields do |translations_form| %>
       <div>
+        <%= f.label :title, t('activerecord.attributes.budget/investment/translation.title'), class: "inline-block" %>
+        <p class="help-text"><%= t('activerecord.attributes.budget/investment/translation.title_hint') %></p>
         <%= translations_form.text_field :title,
+              label: false,
               maxlength: Budget::Investment.title_max_length,
               data: suggest_data(investment) %>
       </div>
