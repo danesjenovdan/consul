@@ -1,7 +1,6 @@
 <!-- MEDVODE CUSTOM address autocomplete javascript -->
 <script>
 $( function() {
-  console.log('ready');
   var availableTags = [
     // medvode center
     "Arharjeva ulica",
@@ -129,11 +128,12 @@ $( function() {
                     <%= f.text_field :username, maxlength: User.username_max_length %>
                   </div>
 
-                  <!-- TODO address hidden but should be automatically
-                  hidden once voting begins
+                  <!-- address edit field should be automatically hidden once voting begins and available during other phases -->
+                  <% if not ["balloting", "publishing_prices", "valuating", "finished", "reviewing_ballots"].include?(current_budget.current_phase.kind) %>
                   <div>
                     <%= f.text_field :address, id: "address", label: t('custom.form.address'), required: true %>
-                  </div> -->
+                  </div>
+                  <% end %>
                   <div>
                     <p><strong>Naslov:</strong> <%= @account.address %></p>
                   </div>
