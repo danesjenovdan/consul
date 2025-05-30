@@ -16,10 +16,10 @@
       <%= f.hidden_field :locale, value: I18n.locale %>
 
       <%= f.text_field :username,  autofocus: true, maxlength: User.username_max_length,
-                                   hint: t("devise_views.users.registrations.new.username_note") %>
+                                   hint: t("devise_views.users.registrations.new.username_note"), required: true %>
 
       <%= f.hidden_field :document_type, value: "1" %>
-      <%= f.text_field :document_number, label: t("custom.terms.emso"), placeholder: t("devise_views.users.registrations.new.document_number") %>
+      <%= f.text_field :document_number, label: t("custom.terms.emso"), placeholder: t("devise_views.users.registrations.new.document_number"), required: true %>
 
       <%= f.invisible_captcha :home_address %>
 
@@ -28,14 +28,14 @@
       <%# TODO: dodaj autocomplete polje za naslov %>
       <%# <%= f.text_field :naslov %>
 
-      <%= f.email_field :email %>
+      <%= f.email_field :email, required: true %>
 
-      <%= f.phone_field :phone_number %>
+      <%= f.phone_field :phone_number, required: true %>
 
-      <%= f.password_field :password, autocomplete: "off", hint: t("devise_views.users.registrations.new.password_hint") %>
+      <%= f.password_field :password, autocomplete: "off", hint: t("devise_views.users.registrations.new.password_hint"), required: true %>
 
       <%= f.password_field :password_confirmation, autocomplete: "off",
-                           label: t("devise_views.users.registrations.new.password_confirmation_label") %>
+                           label: t("devise_views.users.registrations.new.password_confirmation_label"), required: true %>
 
       <% if resource.use_redeemable_code %>
         <%= f.text_field :redeemable_code %>
@@ -47,9 +47,9 @@
         title: t("devise_views.users.registrations.new.terms_title"),
         label: t("devise_views.users.registrations.new.terms",
                  terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/pogoji-uporabe", { target: "_blank" })
-                ) %>
+                ), required: true %>
 
-      <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: t("custom.terms.terms_second_checkbox") %>
+      <%= f.check_box :data_consent, title: t('custom.terms.terms.terms_second_checkbox'), label: t("custom.terms.terms_second_checkbox"), required: true %>
 
       <div class="small-12 medium-6 small-centered">
         <%= f.submit t("devise_views.users.registrations.new.submit"), class: "action-button" %>
