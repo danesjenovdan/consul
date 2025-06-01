@@ -103,7 +103,7 @@ sl-SI:
             two: "Lahko glasujete za <span>2</span> predloga"
             three: "Lahko glasujete za <span>3</span> predloge"
             four: "Lahko glasujete za <span>4</span> predloge"
-            other: "Lahko glasujete za <span>%{count}</span> predlogov"
+            other: "Lahko glasujete za <span>%{count}</span> predloge"
       reasons_for_not_balloting:
         not_logged_in: "<strong>Za nadaljevanje se moraš vpisati ali registrirati.</strong>"
         not_verified: Le verificirani uporabniki lahko glasujejo o naložbah; %{verify_account}.
@@ -226,11 +226,27 @@ sl-SI:
       headings: Območja
       headings_sidebar: "<li>  <h6>Območje 1 (196.000 EUR)</h6>  <div>Levi breg: KS Kamnica, KS Bresternica-Gaj, MČ Koroška vrata</div></li><li>  <h6>Območje 2 (196.000 EUR)</h6>  <div>Levi breg: MČ Ivan Cankar, MČ Center, KS Malečnik-Ruperče</div></li><li>  <h6>Območje 3 (196.000 EUR)</h6>  <div>Desni breg: KS Limbuš, KS Pekre, MČ Radvanjem, KS Razvanje</div></li><li>  <h6>Območje 4 (196.000 EUR)</h6>  <div>Desni breg: MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova</div></li><li>  <h6>Območje 5 (196.000 EUR)</h6>  <div>Desni breg: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno</div></li>"
       select_heading: Izberi območje
-      select_tag: Izberi mestno četrt
+      select_tag: Izberi oznako
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h3>Formalni kriteriji - način oddaje projektnih predlogov</h3> <p>Projektni predlog mora biti oddan preko spletne aplikacije Čuj, sodeluj!, ali na obrazcu v fizični obliki, ki ga lahko občani dobijo preko spletne strani ali v fizični obliki na sedežih mestnih četrti in krajevnih skupnosti ter na MO Maribor.</p> <p>Projektni predlogi morajo biti oddani na predpisnem obrazcu, najkasneje do:</p> <ul> <li>27. junija, 2022, po pošti (naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor) ali</li> <li>27. junija, 2022, do 13.00 ure, osebno na sedežu občine v sprejemno pisarno št. 14 ali na sedežu katerekoli MČ ali KS v času uradnih ur.</li> </ul> <h3>Kriteriji za predlagatelje</h3> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni občan/občanka ali skupine občanov/občank s stalnim bivališčem v Mestni občini Maribor, ki je do oddaje projektnega predloga ali glasovanja dopolnila 15 let.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h3>Merila/kriteriji za uvrstitev predlogov v glasovanje</h3> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h4>Splošna merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor.</li> <li>Je finančno ovrednoten med 3.000,00 EUR in 30.000,00 EUR z DDV.</li> <li>Izveden bo na območju Mestne občine Maribor in/ali na nepremičninah v lasti MO Maribor.</li> <li>Ni uvrščen v proračun MO Maribor oz. načrt razvojnih programov občinskih vlaganj.</li> <li>Ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov s strani MO Maribor?</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskih letih 2023 in 2024</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> </ol> <h4>Vsebinska merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor (MOM).</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost občanov, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki, krožnim gospodarstvom, ponovno uporabo,…).</li> <li>Ustvarja pogoje za gospodarski razvoj občine (gostinstvo in turizem, kmetijstvo, samooskrba, vinogradništvo, podjetništvo,…).</li> <li>Ustvarja pogoje za izobraževanje odraslih, pospeševanje raziskovalne, kulturne, mladinske in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in olepševanju mesta, urejanju trgov, zelenic, parkov ter drugih javnih površin.</li> </ol>"
+      instructions_description: <h3>Predlagatelj:</h3>
+        <ol>
+          <li>mora imeti stalno prebivališče v dolinski občini in dopolniti 18 let v letu 2025 (rojen pred 15. 10. 2007);</li>
+          <li>ne sme nastopati kot izvajalec predlaganega projekta, niti kot fizična oseba in niti kot lastnik ali član upravnega odbora pravne osebe, ki bi lahko izvedla projekt.</li>
+        </ol>
+        <h3>Značilnosti projektnega predloga:</h3>
+        <ol>
+          <li>mora spadati v izključno pristojnost občine; </li>
+          <li>mora biti predviden za izvedbo izključno na ozemlju dolinske občine;</li>
+          <li>ne sme biti v nasprotju z zakonodajo ali z občinskimi predpisi;</li>
+          <li>mora biti skladen z občinsko prostorsko in razvojno dokumentacijo ter z lokalnimi razvojnimi strategijami in programi;</li>
+          <li>mora prispevati k uresničevanju javnega interesa na območju občine;</li>
+          <li>mora biti po vsebini tak, da ga lahko občina izvede v okviru svojih zmožnosti najkasneje v 18 mesecih od dneva razglasitve zmagovalnih projektov;</li>
+          <li>mora krepiti občansko udeležbo, sodelovanje med prebivalci, izboljševati kakovost življenja v lokalnem okolju, spodbujati skupnostni pristop in biti namenjen vsem občanom, torej za javno rabo;</li>
+          <li>mora imeti realno ocenjeno finančno vrednost med 3.000 in 15.000 EUR, vključno z DDV;</li>
+          <li>mora biti oddan na predpisanem obrazcu, ki mora biti izpolnjen v celoti (elektronsko ali v papirni obliki).</li>
+        </ol>
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
@@ -285,62 +301,62 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun 2023-2024!
-      introduction_text: Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši.
+      title: Participativni proračun 2025-2026!
+      introduction_text: S projektom participativnega proračuna lahko občani občine Dolina soodločate pri razporejanju dela proračunskega denarja. Projektni predlogi, ki so po meri občanov, bodo izboljšali učinkovitost porabe skupnih sredstev, krepili participacijo v lokalnem okolju in izboljšali kakovost življenja v občini.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
     about:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
       main_title: Kako deluje?
-      heading_1: Zbiranje predlogov
-      description_1: "Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši."
-      date_1: 19. 5.-27. 6. 2022
-      heading_2: Pregled predlogov
-      description_2: "Strokovna komisija bo pregledala vse oddane predloge in na seznam za glasovanje uvrstila le tiste, ki ustrezajo pogojem (merilom). Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanov, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes."
-      date_2: 28. 6.-30. 9. 2022
-      heading_3: Glasovanje
-      description_3: "Med 1. in 16. oktobrom, 2022 boš odločal/-a o porabi 1 milijona evrov proračunskih sredstev Mestne občine Maribor. Glasoval/-a boš lahko za oddane predloge, ki so izvedljivi, zakoniti, v občinski pristojnosti in ne presegajo višine sredstev, namenjenih za posamezno območje v okviru participativnega proračuna. Glasuje lahko vsakdo s stalnim prebivališčem v Mestni občini Maribor, star/-a vsaj 15 let. Vsakdo lahko glasuje samo enkrat."
-      date_3: 1. 10.-16. 10. 2022
-      heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Maribor za leti 2023 in 2024."
-      date_4: "2023"
-      heading_5: Spremljanje izvedbe
-      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
+      heading_1: Predložitev porjektnih predlogov
+      description_1: "Občani in občanke lahko predložijo projektne predloge med 11. junijem 2025 in 15. oktobrom 2025. Vsak projektni predlog mora biti predložen na ustreznem obrazcu, imeti finančno vrednost med 3.000 in 15.000 EUR z vključenim DDV ter izpolnjevati kriterije izvedljivosti in možnosti izvedbe na občinskem območju, da bi bil uvrščen med projekte participativnega proračuna Občine Dolina in predložen v glasovanje.<p>Projektne predloge je možno predložiti z obrazcem, ki je na voljo:<p><li>na tej spletni strani, po registraciji in prijavi,</li><li>za prenos tukaj in nato oddajo v vložišču Občine Dolina,</li><li>osebno v vložišču Občine Dolina vsako sredo od 9.00 do 13.00 v času predložitve predlogov.</li><p>Predlagatelj mora vnesti zahtevane osebne podatke v obrazec; anonimni predlogi ne bodo obravnavani. Vsak predlagatelj lahko predloži en projektni predlog, ki se lahko izvede v katerem koli kraju v občini Dolina, in glasuje za največ 3 projektne predloge.</p>"
+      date_1: 11. 6.-15. 10. 2025
+      heading_2: Ocenjevanje projektnih predlogov
+      description_2: "Vse predložene projektne predloge bo pregledala Komisija za nadzor in koordinacijo; strokovnjaki bodo ocenili vsak predlog z vidika finančne vzdržnosti, izvedljivosti, skladnosti in možnosti izvedbe glede na določene pogoje (v okviru pristojnosti občine, skladno z zakonodajo, z dokumenti prostorskega načrtovanja in razvoja, prispevek k javnemu interesu itd.).<p>Komisija lahko združi enake ali podobne predloge v en skupni predlog ali prilagodi posamezen predlog, da bi bil izvedljiv.</p><p>Projektni predlogi, ki po mnenju Komisije ne bodo izpolnjevali pogojev, ne bodo upravičeni do financiranja; obrazloženi bodo razlogi za njihovo neupravičenost.</p><p>Vsi projektni predlogi, ki bodo izpolnjevali vse pogoje za upravičenost, bodo predloženi v glasovanje.</p>"
+      date_2: 16. 10.-15. 11. 2025
+      heading_3: Glasovanje o projektnih predlogih
+      description_3: "Med 16. in 30. novembrom 2025 bodo občani in občanke imeli možnost glasovati za projekte Občine Dolina, ki bodo financirani.<p>Glasujejo lahko občani Občine Dolina, ki:</p><li>imajo stalno prebivališče v dolinski občini;</li><li>so dopolnili ali bodo dopolnili 18 let v letu 2025 (rojeni pred 15. 10.2007).</li><p>Vsak lahko glasuje za največ 3 projektne predloge na območju celotne občine ne glede na kraj stalnega prebivališča. Za vsak predlog je dovoljeno glasovati le enkrat.</p><p>Glasovanje bo mogoče od 16. do 30. novembra 2025 preko te spletne strani po registraciji in prijavi. Alternativno vam lahko pomaga pristojni odbornik Michele Di Donato na sedežu Občine Dolina ali oseba, ki jo naknadno določi župan, po predhodnem telefonskem dogovoru.</p>"
+      date_3: 16. 11.-30. 11. 2025
+      heading_4: Objava zmagovalnih projektov
+      description_4: "Po zaključku glasovanja bo Občina Dolina razglasila in predstavila izbrane projekte na srečanju, odprtem za vse občane. Izbrani projekti bodo vključeni v proračun Občine Dolina za leto 2026 in izvedeni na občinskem ozemlju do višine skupnega razpoložljivega zneska.<p>Rezultati glasovanja bodo objavljeni na občinski spletni strani po 3. decembru 2025.</p>"
+      date_4: "3. 12. 2025"
+      heading_5: Spremljanje izvedbe projektov
+      description_5: "Zmagovalni projekti bodo vključeni v proračun Občine Dolina in izvedeni v letu 2026. Napredek projektov bo mogoče spremljati na tej spletni strani.<p>Za dodatna pojasnila je odgovorna oseba pristojni odbornik Michele Di Donato.</p>"
     privacy:
       title: "Pogoji uporabe"
     help:
       main_title: "Pogosta vprašanja"
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
-      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ e-naslov in internetno povezavo, vse funkcionalnosti lahko opraviš tudi na občini in sedežih krajevnih skupnosti."
+      description_1: "Za ustvarjanje spletnega računa so potrebni številka volilne izkaznice, telefonska številka, naslov stalnega bivališča, naslov elektronske pošte in dostop do interneta, vendar je vse postopke možno opraviti tudi v vložišču občine."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
-      description_2: "Račun ustvariš tako, da v glavi spletnega mesta klikneš na gumb Vpiši se, ter nato na povezavo Registriraj se. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, EMŠO in geslo. Po kreiranju računa ga moraš potrditi še s klikom na povezavo v e-pošti, ki ti jo bomo poslali na tvoj e-naslov."
+      description_2: 'Za ustvarjanje računa pritisnite gumb "Registriraj se" na dnu strani. Kateri koli gumb vas bo pripeljal do istega spletnega obrazca. Vpišite uporabniško ime, številko volilne izkaznice, e-naslov in geslo. Po registraciji boste prejeli potrditveno sporočilo na svoj e-naslov s povezavo za potrditev računa.'
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Poleg spletnega je mogoče predlog oddati tudi v fizični obliki, in sicer: po pošti, na naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor,  osebno na navedem naslovu, v sprejemni pisarni št. 14 (do 13. ure), ali v kateri koli mestni četrti/krajevni skupnosti v času uradnih ur (tam bodo na voljo tudi tiskani obrazci). Za pomoč pri pripravi predlogov projektov se lahko udeležiš interaktivne in praktičnih delavnic, ki bodo vsak četrtek, ob 18. uri od 19. maja do 23. junija."
+      description_3: "Poleg spletne predložitve lahko to storite tudi v elektronski obliki (prenos obrazca ..., izpolnitev in oddaja v vložišču Občine Dolina). Tiskani obrazci so na voljo in jih je mogoče prevzeti ter oddati v vložišču Občine Dolina."
       heading_4: "Pozabil_a sem svoje geslo. Kaj lahko storim?"
-      description_4: "Klikni na gumb Vpiši se, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel_a navodila, kako ustvariti novo geslo."
+      description_4: "Kliknite na gumb “Registriraj se”, nato kliknite na povezavo »Pozabljeno geslo«. Na svoj e-naslov boste prejeli navodila za sestavo novega gesla."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
       description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
-      technical_issues: "Imaš tehnične težave?"
-      technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
+      technical_issues: "Imate tehnične težave?"
+      technical_contact: 'Obrnite se na upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnike Mestne občine Maribor na <a href="mailto:sodeluj@maribor.si" target="_blank">sodeluj@maribor.si</a>.'
+      other_contact: 'Pišite sporočilo Občini Dolina na naslova <a href="mailto:smichele.didonato@sandorligo-dolina.it" target="_blank">michele.didonato@sandorligo-dolina.it</a> in <a href="mailto:segreteria-tajnistvo@sandorligo-dolina.it" target="_blank">segreteria-tajnistvo@sandorligo-dolina.it</a>. Med uradnimi urami bo na voljo tudi telefonska številka urada (0408329245), ki bo prošnjo predal pristojnemu odborniku.'
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
-      date: "1. 2. 2024"
-      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Ideje za Novo mesto ter politike varovanja osebnih podatkov."
+      date: "1. 6. 2025"
+      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Breg ter politike varovanja osebnih podatkov."
       active_use: "Aktivno uporabo spletnega orodja štejemo kot soglasje uporabnice_ka, da se strinja s temi splošnimi pogoji uporabe. Vsi, ki želijo aktivno sodelovati, se morajo registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe. V kolikor se kot uporabnica_k ne strinjate s temi splošnimi pogoji, vas prosimo, da spletnega mesta ne uporabljate."
       changes: "Pridružujemo si pravico, da splošne pogoje kadarkoli in brez predhodne najave spremenimo, tako da novo različico objavimo na tej spletni strani. Različica splošnih pogojev je razvidna iz datuma njihove zadnje spremembe, ki je zabeležena na vrhu teh pogojev."
       help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
       contact1:
-        mail: "mestna.obcina@novomesto.si"
-        note1: "Telefon: v času uradnih ur občinske uprave na 07/  7 39 39 202"
-        note2: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
+        mail: "segreteria-tajnistvo@sandorligo-dolina.it"
+        note1: "Telefon: v času uradnih ur občinske uprave na 00408329111 "
+        note2: "Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)"
       contact2:
         mail: "consul@djnd.si"
         note1: "Tehnična pomoč"
-        note2: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+        note2: "Danes je nov dan, Inštitut za druga vprašanja, Resljevava cesta 25, 1000 Ljubljana"
       about_title: "O orodju"
       about_first: "Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
       about_second: "Spletno orodje omogoča direktno soodločanje o delu občinskega proračuna. Uporabnice_ki lahko oddajajo, podpirajo in glasujejo o predlogih za projekte ter spremljajo njihov razvoj."
@@ -393,16 +409,16 @@ sl-SI:
       responsibilities_eighth: "V primeru kakršnega koli spora med uporabnicami_ki spletnega orodja in/ali tretjo osebo smo izvzeti iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in/ali nastalimi v sodnem postopku."
       data_protection_title: "Varovanje osebnih podatkov"
       data_protection_first: "Upravljalec osebnih podatkov je:"
-      data_protection_first_note1: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
+      data_protection_first_note1: "Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)"
       data_protection_first_note2: "Matična številka:  5883288000"
       data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: xyxyxyxyxyxyx"
       data_protection_first_note4: "E-naslov: mestna.obcina@novomesto.si"
-      data_protection_first_note5: "telefon: 07/ 7 39 39 202"
-      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodeluj in glasuj! je:"
-      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+      data_protection_first_note5: "telefon: 0408329111"
+      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Breg je:"
+      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       data_protection_second_note2: "Matična številka: 6468594000"
       data_protection_second_note3: "E-naslov: vsi@danesjenovdan.si"
-      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Mestne občine Novo mesto in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
+      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Comune di San Dorligo della Valle - Občina Dolina in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
       data_protection_fourth: "Inštitut Danes je nov dan je predan varovanju osebnih podatkov in transparentni rabi podatkov, da lahko uporabniki ter podporniki kar se da brez skrbi spremljajo ter podpirajo naše delo. Spoštujemo vaše zaupanje in vam zagotavljamo, da bomo z vašimi osebnimi podatki ravnali skrbno in jih obdelovali v skladu z veljavno zakonodajo na področju varovanja osebnih podatkov (GDPR in ZVOP-2). V nadaljevanju vam podrobneje opisujemo namene in podlago obdelav vaših osebnih podatkov in vas seznanjamo z vašimi pravicami."
       data_use_title: "Na kateri pravni podlagi obdelujemo osebne podatke"
       data_use_list: "Razlogi za obdelavo osebnih podatkov:"
@@ -446,9 +462,9 @@ sl-SI:
       data_insight_list_li6: "Pravica do ugovora: Posameznica_k lahko ugovarja obdelavi osebnih podatkov. Ta pravica se nanaša le na obdelavo osebnih podatkov, ki jo izvajamo na podlagi legitimnega interesa, ki prevlada nad interesi posameznice_ka."
       data_insight_list_li7: "Pravica do vložitve pritožbe v zvezi z obdelovanjem osebnih podatkov: Posameznica_k lahko morebitno pritožbo v zvezi z obdelovanjem osebnih podatkov pošlje na naslove upravljavca iz prvega člena te politike."
       data_insight_fourth: "Prav tako ima vsak_a posameznica_k, na katero se nanašajo osebni podatki, pravico, da vloži pritožbo neposredno pri Informacijskem pooblaščencu, če meni, da obdelava osebnih podatkov v zvezi z njo krši veljavno zakonodajo. Kontakt Informacijskega pooblaščenca:"
-      data_insight_fourth_note1: "Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana"
-      data_insight_fourth_note2: "Telefon: 01 230 97 30"
-      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si'"
+      data_insight_fourth_note1: "Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 - Roma, Italia"
+      data_insight_fourth_note2: "Telefon: +39 06.696771"
+      data_insight_fourth_note3: "E-pošta: protocollo@gpdp.it"
       cookies_title: "Piškotki"
       cookies_intro: "Zakon o elektronskih komunikacijah (Uradni list št. 109/2012) ZEKom-1 je v pravni red prinesel pravila glede uporabe piškotkov in podobnih tehnologij za shranjevanje informacij ali dostop do informacij, shranjenih na računalnikih, tablicah ali mobilnih napravah uporabnikov. Naše orodje lahko v brskalnik vašega računalnika odloži tako imenovani »piškotek«."
       cookies_what_title: "Kaj so piškotki?"
@@ -457,7 +473,7 @@ sl-SI:
       cookies_why_intro: "So temeljnega pomena za zagotavljanje uporabnici_ku prijaznih spletnih storitev. Interakcija med spletno_im uporabnico_kom in spletno storitvijo je s pomočjo piškotkov hitrejša in enostavnejša. Z njihovo pomočjo si spletna storitve zapomni vaše želje, zanimanja in izkušnje, s tem je prihranjen čas, uporaba spletnih storitev pa je bolj učinkovita in prijazna."
       cookies_min_title: "Nujno potrebni piškotki"
       cookies_min_intro: "To so piškotki, ki so nujni za pravilno delovanje spletnih storitev in brez njih prenos sporočila v komunikacijskem omrežju ne bi bilo mogoče. Ti piškotki omogočajo uporabnici_ku delovanje prijaznih spletnih storitev, boljšo uporabniško izkušnjo in za njih ni potrebno pridobiti soglasja."
-      cookies_list: "Spletno orodje Consul, ki poganja Sodeluj in glasuj!, uporablja zgolj dva nujno potrebna piškotka:"
+      cookies_list: "Spletno orodje Consul, ki poganja Breg, uporablja zgolj dva nujno potrebna piškotka:"
       cookies_list_li1: "_consul_session"
       cookies_list_li1_desc: "Se uporablja, da je uporabnic_ka lahko vpisan_a v spletno orodje in lahko glasuje."
       cookies_list_li2: "ahoy_visit in ahoy_visitor"
@@ -493,11 +509,11 @@ sl-SI:
       slug: izjava-o-dostopnosti
       title: Izjava o dostopnosti
       date: 30. 1. 2025
-      main_title: Izjava o dostopnosti Celje po moje
+      main_title: Izjava o dostopnosti Breg
       intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://celjepomoje.si">celjepomoje.si</a>.
       intention_second: "Uporabo portala želimo približati najširšemu krogu uporabnikom, zato ga nenehno oblikujemo in prilagajamo tako, da je dostopen za uporabnike z različnimi oblikami invalidnosti in oviranosti: uporabnikom z okvarami vida (slepim, slabovidnim, barvno slepim), uporabnikom z okvarami sluha (gluhim, naglušnim, gluhoslepim) ter uporabnikom z različnimi kognitivnimi okvarami in motnjami v razumevanju."
       level_title: Stopnja skladnosti
-      level_paragraph: Spletno mesto Celje po moje je delno skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij javnega sektorja (ZDSMA). Spletne strani in vsebine so pripravljene v skladu z mednarodnimi smernicami za dostopnost spletnih vsebin in ustrezajo standardu WCAG (Web Content Accessibility Guidelines) 2.1. Skladnost dostopnosti spletnega mesta s smernicami WCAG po samooceni ustreza stopnji AA.
+      level_paragraph: Spletno mesto Breg je delno skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij javnega sektorja (ZDSMA). Spletne strani in vsebine so pripravljene v skladu z mednarodnimi smernicami za dostopnost spletnih vsebin in ustrezajo standardu WCAG (Web Content Accessibility Guidelines) 2.1. Skladnost dostopnosti spletnega mesta s smernicami WCAG po samooceni ustreza stopnji AA.
       description_title: "Opis dostopnih vsebin:"
       description_bullets: |
         <li>Spletno mesto ima razumljivo in konsistentno strukturo in navigacijo. HTML koda spletnega mesta je pregledana in urejena, da ustreza zahtevam različnih naprav, spletno mesto je mogoče brez izgube informacij povečati do 200 %. Povezave na posamezne podstrani so prepoznavne.</li>
