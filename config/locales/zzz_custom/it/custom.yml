@@ -239,7 +239,7 @@ it:
         </li>
       select_heading: Selezionare zona
 
-      select_tag: Selezionare quartiere
+      select_tag: Selezionare tag
       select_status: Selezionare lo status della proposta
       select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
       instructions: "Per poter candidare la propria proposta progettuale e sottoporla alla votazione della cittadinanza, essa deve soddisfare le seguenti condizioni:"
@@ -316,44 +316,38 @@ it:
         title_3: E dopo di che?
     landing:
       title: Bilancio partecipativo 2025-2026!
-      introduction_text: Grazie al progetto di bilancio partecipativo, i cittadini del comune di Ancarano potete partecipare all'assegnazione di una parte dei fondi di bilancio. Le proposte di progetti su misura per i cittadini miglioreranno l'efficienza dell'uso dei fondi comuni, rafforzeranno la partecipazione all'ambiente locale e miglioreranno la qualità della vita nel comune.
+      introduction_text: Grazie al progetto di bilancio partecipativo, i cittadini del comune di San Dorligo della Valle - Dolina potete partecipare all'assegnazione di una parte dei fondi di bilancio. Le proposte di progetti su misura per i cittadini miglioreranno l'efficienza dell'uso dei fondi comuni, rafforzeranno la partecipazione all'ambiente locale e miglioreranno la qualità della vita nel comune.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
     about:
-      intro: 'Il bilancio partecipativo è una procedura di partecipazione democratica in cui i cittadini decidono direttamente come spendere parte dei fondi del bilancio. Individuano autonomamente i problemi e le opportunità di miglioramento, proponendo i progetti più urgenti, la cui realizzazione contribuirebbe maggiormente a migliorare la qualità della vita della comunità. <p class="intro">Nel Comune di Ancarano, per gli esercizi finanziari 2025 e 2026, i cittadini potranno proporre e votare i progetti. I progetti hanno un valore massimo di 100.000 euro, di cui 40.000 euro per la zona del bilancio partecipativo Ancarano est, 20.000 euro per Ancarano centro e 40.000 euro per la zona del bilancio partecipativo Ancarano ovest.</p>'
+      intro: 'Il bilancio partecipativo è una procedura di partecipazione democratica in cui i cittadini decidono direttamente come spendere parte dei fondi del bilancio. Individuano autonomamente i problemi e le opportunità di miglioramento, proponendo i progetti più urgenti, la cui realizzazione contribuirebbe maggiormente a migliorare la qualità della vita della comunità. <p class="intro">Nel Comune di San Dorligo della Valle - Dolina, per gli esercizi finanziari 2025 e 2026, i cittadini potranno proporre e votare i progetti.</p>'
       main_title: Come funziona?
-      heading_1: Accoglimento delle proposte
+      heading_1: Candidatura delle proposte progettuali
       description_1: |
-        I cittadini possono presentare le proposte progettuali a partire dal 27 gennaio 2025 fino al 23 febbraio 2025. Ogni proposta progettuale deve essere presentata sull'apposito modulo, avere un valore tra di 1.000,00 euro e di un massimo di 20.000,00 euro (per progetti nella zona Centro) o massimo di 40.000 euro (per progetti nelle zone Ovest ed Est), IVA inclusa, e soddisfare le altre condizioni per essere inserita nel Bilancio partecipativo - da sottoporre a votazione.</p><p>Le proposte progettuali devono essere presentate tramite modulo che può essere compilato su <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ca27d52eaa7b5121d41e84402bbf6d9016517623/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_-ita.docx">questo sito web</a>, scaricato qui o ritirato presso l’ufficio protocollo del Comune di Ancarano durante l’orario d’ufficio.</p><p>Il proponente deve fornire i propri dati personali richiesti nel modulo, le proposte anonime non saranno prese in considerazione. Ogni candidato può proporre un massimo di 3 proposte progettuali, per progetti relativi alla zona del bilancio partecipativo in cui risiede (le zone del bilancio partecipativo sono Ancarano est, Ancarano centro e Ancarano ovest e sono visibili sulla mappa disponibile a <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--161ac955ff83eb3bd33aa1113b1fc61605eeee76/obmo%C4%8Dja%20PP%20OA%20-%20zemljevid%20z%20ulicami_ITA.pdf">questo collegamento</a>).</p><p>È possibile presentare il modulo per le proposte progettuali:<ul><li>su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online,</li><li>via posta elettronica all’indirizzo sodelujem@obcina-ankaran.si ,</li><li>di persona presso l’ufficio protocollo del Comune di Ancarano, Via Ivan Regent 2, Ancarano, durante l’orario d'ufficio.</li></ul></p>
-      date_1: 27. 1.-23. 2. 2025
-      heading_2: Valutazione delle proposte
-      description_2: "Tutte le proposte presentate verranno esaminate da una commissione di esperti, che valuterà ogni proposta dal punto di vista finanziario, ne verificherà la fattibilità e la conformità alle condizioni stabilite (nell'ambito delle competenze del Comune, in linea con la legislazione, con i documenti di pianificazione territoriale e di sviluppo, il contributo all'interesse pubblico, ecc.) La commissione può unire proposte progettuali identiche o simili in un'unica proposta progettuale o adattare parzialmente una singola proposta progettuale.<p>Le proposte che non soddisferanno le condizioni secondo la valutazione della commissione, verranno eliminate, tramite una motivazione che specificherà per quali condizioni non sono risultate idonee.</p><p>Tutte le proposte progettuali che soddisferanno tutte le condizioni del bando saranno sottoposte a votazione.</p>"
-      date_2: 24. 2.-24. 3. 2025
-      heading_3: Votazioni
-      description_3: Tra il 7 e il 20 aprile 2025, i cittadini avranno l'opportunità di votare per scegliere i progetti del Comune di Ancarano che verranno finanziati.<p>Potranno votare i cittadini del Comune di Ancarano, che con il 1° gennaio 2025 hanno:<ul><li>residenza permanente nel Comune di Ancarano,</li><li>compiuto o compiranno 15 anni di età nel 2025 (nati nel 2010).</li></ul></p><p>Ognuno potrà votare per un massimo di 3 proposte per tutto il comune, indipendentemente dalla zona di residenza. Per ogni singola proposta progettuale è consentito votare solo una volta.</p><p>SÈ possibile inviare il proprio voto dal 7 aprile 2025 fino al 20 aprile 2025 su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online. Potrete consegnare il vostro voto online anche con l'aiuto di un assistente presso l'ufficio protocollo del Comune di Ancarano.</li></ul></p>"
-      date_3: 7. 4.-20. 4. 2025
-      heading_4: Annuncio dei progetti prescelti
-      description_4: "Alla conclusione delle votazioni, il comune controllerà i risultati e annuncerà i progetti selezionati. In base all'esito delle votazioni, i progetti saranno selezionati per essere inseriti nel bilancio partecipativo del Comune di Ancarano per gli anni 2025 e 2026 e per la loro attuazione per ogni zona del bilancio partecipativo del Comune di Ancarano fino all'importo totale dei fondi stanziati per ogni zona (Ancarano est totale 40.000,00 euro; Ancarano centro totale 20.000,00 euro e Ancarano ovest totale 40.000,00 euro).<p>I risultati delle votazioni saranno pubblicati sul sito web del comune dopo il 9 maggio 2025.</p>"
-      date_4: "9. 5. 2025"
+        I cittadini e le cittadine possono presentare le proposte progettuali dall’11 giugno 2025 al 15 ottobre 2025. Ogni proposta progettuale deve essere presentata sull'apposito modulo, avere un valore compreso tra 3.000 e 15.000 euro IVA inclusa, e soddisfare i criteri di fattibilità e cantierabilità per essere inserita nel bilancio come proposta di progetto del Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina, da sottoporre a votazione.<p>Le proposte progettuali devono essere presentate tramite modulo che può essere compilato:<ul><li>su questo sito web, dopo essersi registrati e aver effettuato l’accesso, oppure</li><li>scaricato qui e presentato all’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina, oppure</li><li>ritirato presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina, ogni mercoledì dalle ore 9.00 alle ore 13.00 durante la fase di presentazione delle proposte.</li></ul></p><p>Il proponente deve fornire i dati personali richiesti nel modulo, le proposte anonime non saranno prese in considerazione. Ogni proponente può proporre una proposta progettuale, da realizzare in qualsiasi Frazione del Comune di San Dorligo della Valle - Dolina e votare fino ad un massimo di 3 proposte progettuali.</p>
+      date_1: 11. 6.-15. 10. 2025
+      heading_2: Valutazione delle proposte progettuali
+      description_2: "Tutte le proposte progettuali presentate verranno esaminate da una Commissione di supervisione e coordinamento di esperti, che valuterà ogni proposta dal punto di vista finanziario, ne verificherà la fattibilità e la conformità e la cantierabilità alle condizioni stabilite (nell'ambito delle competenze del Comune, in linea con la legislazione, con i documenti di pianificazione territoriale e di sviluppo, il suo contributo all'interesse pubblico, etc.). La Commissione può unire proposte progettuali identiche o simili in un'unica proposta progettuale o adattare parzialmente una singola proposta progettuale, al fine di renderla finanziabile.</p><p>Le proposte progettuali che non soddisferanno le condizioni secondo la valutazione della Commissione, verranno considerate non finanziabili, con una motivazione che specificherà le condizioni di non idoneità.</p><p>Tutte le proposte progettuali che soddisferanno tutte le condizioni di ammissibilità saranno sottoposte a votazione.</p>"
+      date_2: 16. 10.-15. 11. 2025
+      heading_3: Votazione delle proposte progettuali
+      description_3: Tra il 16 e il 30 novembre 2025, i cittadini e le cittadine avranno l'opportunità di votare per scegliere i progetti del Comune di San Dorligo della Valle - Dolina che verranno finanziati.<p>Potranno votare i cittadini del Comune di San Dorligo della Valle - Dolina, che hanno:<ul><li>residenza permanente nel Comune di San Dorligo della Valle - Dolina,</li><li>compiuto o compiranno 18 anni di età nel 2025 (nati prima del 15.10.2007).</li></ul></p><p>Ognuno potrà votare per un massimo di 3 proposte per tutto il comune, indipendentemente dalla zona di residenza. Per ogni singola proposta è consentito votare solo una volta.</p><p>È possibile votare dal 16 al 30 novembre 2025 su questo sito web, dopo essersi registrati e aver effettuato l’accesso. Alternativamente, anche con l'aiuto dell’Assessore di riferimento, Michele Di Donato presso il suo Ufficio nel Comune di San Dorligo della Valle – Dolina o persona successivamente designata dal Sindaco, previo accordo telefonico.</p>"
+      date_3: 16.11.-30. 11. 2025
+      heading_4: Annuncio dei progetti vincitori
+      description_4: "Alla conclusione delle votazioni, il Comune di San Dorligo della Valle - Dolina annuncerà e presenterà i progetti selezionati con un incontro aperto alla cittadinanza. I progetti selezionati saranno inseriti nel bilancio del Comune di San Dorligo della Valle - Dolina per l’anno 2026 e per la loro attuazione nel territorio del Comune, fino all'importo totale dei fondi stanziati.<p>I risultati delle votazioni saranno pubblicati sul sito web del comune dopo il 3 dicembre 2025.</p>"
+      date_4: "3. 12. 2025"
       heading_5: Monitoraggio dei progetti
-      description_5: "I progetti vincitori in ciascuna zona di applicazione del bilancio partecipativo (Ancarano Est, Centro e Ovest) saranno inseriti nel bilancio del comune di Ancarano e realizzati nel 2025 e nel 2026. Sarà possibile seguire l'avanzamento dei progetti su questo sito web."
+      description_5: "II progetti vincitori saranno inseriti nel bilancio del Comune di San Dorligo della Valle - Dolina e realizzati nel 2026. Sarà possibile seguire l'avanzamento dei progetti su questo sito web.<p>Per chiarimenti la persona responsabile è l’Assessore di riferimento, Michele Di Donato.</p>"
     privacy:
       title: "Pogoji uporabe"
     help:
       main_title: "Domande frequenti"
       heading_1: "È necessario avere un numero di telefono e una connessione ad internet per partecipare?"
-      description_1: "Per creare un account online sono necessari un numero di telefono, un indirizzo e-mail e una connessione a internet, ma è possibile completare tutte le funzionalità anche presso il comune."
+      description_1: "Per creare un account online sono necessari il numero di tessera elettorale, un numero di telefono, un indirizzo e-mail e una connessione a internet, ma è possibile completare tutte le funzionalità anche presso l’Ufficio Protocollo del comune."
       heading_2: "Come creare e verificare il proprio account?"
-      description_2: "Per creare un account, premere il pulsante “Registrati” a fondo pagina del sito web, premendo su uno qualsiasi dei pulsanti si accede allo stesso modulo online. Per creare un account, è necessario inserire il nome utente, l'indirizzo e-mail, il CAUC, l'indirizzo permanente e la password. Una volta creato l'account, è necessario confermarlo cliccando sul collegamento contenuto nell'e-mail che verrà inviata al vostro indirizzo di posta elettronica."
+      description_2: "Per creare un account, premere il pulsante “Registrati” a fondo pagina del sito web, premendo su uno qualsiasi dei pulsanti si accede allo stesso modulo online. Per creare un account, è necessario inserire il nome utente, il numero di tessera elettorale, l'indirizzo e-mail e la password. Una volta creato l'account, è necessario confermarlo cliccando sul collegamento contenuto nell'e-mail che verrà inviata al vostro indirizzo di posta elettronica."
       heading_3: "Come creare una nuova proposta?"
-      description_3: |
-        <p>Oltre a presentare una proposta online, è possibile farlo anche</p>
-        <ul>
-          <li>In formato elettronico (scaricando il <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">modulo</a>, compilandolo e inviandolo per e-mail a <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a>)</li>
-          <li>I moduli stampati possono essere ritirati presso l'ufficio protocollo del Comune di Ancarano, Via Ivan Regentova 2, 6280 Ancarano durante l’orario d’ufficio.</li>
-        </ul>
-        <p>Per aiutarvi a preparare le vostre proposte progettuali, potrete partecipare ad un laboratorio pratico, che si terrà mercoledì 29 gennaio 2025 alle ore 18:00 presso il Centro ingregenerazional Ancarano, sul indirizzo Via Rudi Mahnič1, 6280 Ancarano.</p>
+      description_3: "Oltre a presentare una proposta online, è possibile farlo anche in formato elettronico (scaricando il modulo ...., compilandolo e consegnandolo presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina). I moduli stampati possono essere ritirati e consegnati presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina."        
       heading_4: "Password dimenticata. Come procedere?"
       description_4: "Premere il pulsante “Iscrivetevi”, quindi selezionare il collegamento “Password dimenticata”. Riceverete le istruzioni per creare una nuova password al vostro indirizzo e-mail."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
@@ -362,18 +356,18 @@ it:
       technical_issues: "Avete problemi tecnici? "
       technical_contact: Contattate il gestore dell'app all'indirizzo <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.
       other_questions: "Avete altre domande?"
-      other_contact: Contattate il Comune di Ancarano all'indirizzo <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">predlagam@obcina-ankaran.si</a>. Durante l’orario d'ufficio è a disposizione anche il numero di telefono 05 66 53 000.
+      other_contact: Contattate il Comune di San Dorligo della Valle - Dolina all'indirizzo <a href="mailto:michele.didonato@sandorligo-dolina.it" target="_blank">michele.didonato@sandorligo-dolina.it</a> e <a href="segreteria-tajnistvo@sandorligo-dolina.it " target="_blank">segreteria-tajnistvo@sandorligo-dolina.it </a>. Durante l’orario d'ufficio è a disposizione anche il numero di telefono  - 0408329245 – che farà da tramite per l’Assessore di riferimento..
     terms:
       main_title: "Condizioni d'uso e tutela della Privacy"
       date: "1. 1. 2025"
-      intention: "Lo scopo di questo avviso è di aiutarvi a comprendere il funzionamento dello strumento online del bilancio partecipativo del Comune di Ancarano e l’informativa sulla privacy."
+      intention: "Lo scopo di questo avviso è di aiutarvi a comprendere il funzionamento dello strumento online del bilancio partecipativo del Comune di San Dorligo della Valle - Dolina e l’informativa sulla privacy."
       active_use: "L’uso attivo dello strumento online viene considerato quale consenso dell’utente in merito alle presenti condizioni generali d'uso. Per partecipare attivamente è necessario essere iscritti ed aver accettato le presenti condizioni d'uso. Qualora non accettiate le presenti condizioni, siete pregati di non utilizzare il sito."
       changes: "Ci riserviamo il diritto di modificare le presenti condizioni generali d'uso in qualsiasi momento e senza preavviso pubblicando una nuova versione su questo sito web. La versione più recente delle Condizioni generali d’uso è riscontrabile dalla data dell’ultima modifica, riportata nell’intestazione delle presenti Condizioni."
       help: "In caso di dubbi, scegliete una delle opzioni di contatto riportate di seguito."
       contact1:
-        mail: "info@obcina-ankaran.si"
-        note1: "Telefono: durante gli orari di ufficio dell’Amministrazione comunale al numero (05) 665 30 00"
-        note2: "Comune di Ancarano, Strada dell’Adriatico 66, 6280 Ancarano"
+        mail: "segreteria-tajnistvo@sandorligo-dolina.it"
+        note1: "Telefon: v času uradnih ur občinske uprave na 00408329111 "
+        note2: "Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)"
       contact2:
         mail: "consul@djnd.si"
         note1: "Assistenza tecnica:"
@@ -381,7 +375,7 @@ it:
       about_title: "Informazioni sullo strumento online"
       about_first: "Lo strumento online incentiva la partecipazione civica e consente una governance aperta, trasparente e democratica a livello comunale e nazionale. L'app è basata sulla piattaforma open-source Consul, sviluppata sotto il patrocinio del Comune di Madrid e adattata alle esigenze dei comuni sloveni dall'Istituto Danes je nov dan."
       about_second: "Lo strumento online vi permette di partecipare direttamente al processo decisionale, per stabilire di comune accordo la destinazione di una parte del bilancio comunale. Gli utenti possono presentare, sostenere, votare e monitorare lo stato di avanzamento delle proposte di progetto."
-      about_third: "Possono partecipare tutte le cittadine ed i cittadini residenti ad Ancarano che abbiano compiuto 15 anni d'età (ovvero ne compiranno nel corso del 2025) e che si siano registrati allo strumento online; i genitori o i tutori sono responsabili delle attività dei minori. Ogni cittadino può presentare 3 proposte di progetto per la propria zona di residenza e, durante il periodo di votazione, ogni utente può votare 3 progetti su tutto il territorio comunale (indipendentemente dalla zona di residenza)."
+      about_third: "Possono partecipare tutte le cittadine ed i cittadini residenti ad San Dorligo della Valle - Dolina che abbiano compiuto 15 anni d'età (ovvero ne compiranno nel corso del 2025) e che si siano registrati allo strumento online; i genitori o i tutori sono responsabili delle attività dei minori. Ogni cittadino può presentare 3 proposte di progetto per la propria zona di residenza e, durante il periodo di votazione, ogni utente può votare 3 progetti su tutto il territorio comunale (indipendentemente dalla zona di residenza)."
       about_list:
         title: "Lo strumento consente all'utente di:"
         li1:
@@ -395,7 +389,7 @@ it:
           desc: "Nella fase finale, lo strumento consente di monitorare i risultati dell'implementazione."
       registration_title: "Registrazione"
       registration_intro1: "Solo gli utenti registrati possono presentare proposte di progetti e votare i progetti presentati. Gli utenti non registrati possono seguire i contenuti pubblicati, ma non possono presentare proposte di progetti o votarli."
-      registration_intro2: "Registrandosi, l'utente conferma di avere 15 anni (o di compierli nel 2025) e di essere a conoscenza dei propri diritti e obblighi riportati nell'Informativa sul trattamento dei dati personali ai sensi del Regolamento generale sulla protezione dei dati e autorizza il Comune di Ancarano a verificare l'autenticità dei dati personali ai fini del progetto del Bilancio partecipativo del Comune di Ancarano da registri ufficiali e banche dati presso i titolari del trattamento dei dati personali."
+      registration_intro2: "Registrandosi, l'utente conferma di avere 15 anni (o di compierli nel 2025) e di essere a conoscenza dei propri diritti e obblighi riportati nell'Informativa sul trattamento dei dati personali ai sensi del Regolamento generale sulla protezione dei dati e autorizza il Comune di di San Dorligo della Valle - Dolina a verificare l'autenticità dei dati personali ai fini del progetto del Bilancio partecipativo del Comune di San Dorligo della Valle - Dolina da registri ufficiali e banche dati presso i titolari del trattamento dei dati personali."
       registration_requirements: "Al momento della registrazione, l'utente deve specificare:"
       name: "il nome utente,"
       email: "l’indirizzo e-mail,"
@@ -439,7 +433,7 @@ it:
       data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       data_protection_second_note2: "No. matricola: 6468594000"
       data_protection_second_note3: "E-mail: vsi@danesjenovdan.si"
-      data_protection_third: "Il responsabile del trattamento è contrattualmente obbligato a utilizzare i dati personali solo ed esclusivamente in nome del Comune di Ancarano ed a garantirne la loro protezione in conformità alle normative vigenti e alle nostre istruzioni."
+      data_protection_third: "Il responsabile del trattamento è contrattualmente obbligato a utilizzare i dati personali solo ed esclusivamente in nome del Comune di San Dorligo della Valle - Dolina ed a garantirne la loro protezione in conformità alle normative vigenti e alle nostre istruzioni."
       data_protection_fourth: "L'Istituto Danes je nov dan si impegna a proteggere i dati personali e a utilizzarli in modo trasparente, affinché gli utenti e i sostenitori possano seguire e sostenere il nostro lavoro nel modo più semplice possibile. Rispettiamo la vostra fiducia e ci impegniamo a gestire i vostri dati personali con cura e a trattarli in conformità con la normativa vigente in materia di protezione dei dati personali (GDPR e ZVOP-2). Di seguito sono descritte in modo più dettagliato le finalità e le basi del trattamento dei vostri dati personali, inclusa l’informativa sui vostri diritti. "
       data_use_title: "Base giuridica del trattamento dei dati personali"
       data_use_list: "Motivi del trattamento dei dati personali:"
@@ -483,11 +477,11 @@ it:
       data_insight_list_li6: "Diritto di opposizione: l’interessato ha il diritto di opporsi al trattamento dei dati personali. Tale diritto si applica solo al trattamento dei dati personali effettuato in base ad un interesse legittimo che prevale sugli interessi dell'interessato."
       data_insight_list_li7: "Diritto di proporre reclamo in merito al trattamento dei dati personali: l’interessato ha il diritto di proporre reclamo in merito al trattamento dei dati personali agli indirizzi del titolare del trattamento indicati all'articolo 1 della presente informativa."
       data_insight_fourth: "Inoltre, nel caso l’interessato ritenesse che il trattamento dei suoi dati personali violi la normativa vigente ha il diritto di proporre reclamo direttamente a un’autorità di controllo. Contatti del Garante per la protezione dei dati personali:"
-      data_insight_fourth_note1: "Garante per la protezione dei dati personali, Dunajska cesta 22, 1000 Ljubljana."
-      data_insight_fourth_note2: "Telefono: 01 230 97 30"
-      data_insight_fourth_note3: "E_mail: gp.ip@ip-rs.si"
+      data_insight_fourth_note1: "Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 - Roma, Italia"
+      data_insight_fourth_note2: "Telefon: +39 06.696771"
+      data_insight_fourth_note3: "E-pošta: protocollo@gpdp.it"
       cookies_title: "Cookies"
-      cookies_intro: "ZLa Legge sulle comunicazioni elettroniche (Gazzetta ufficiale, n. 109/2012) ZEKom-1 ha introdotto le norme sull'uso dei cookie e di altre simili tecnologie per memorizzare o accedere alle informazioni memorizzate sui computer, tablet o dispositivi mobili degli utenti. Il nostro strumento può scaricare il cosiddetto “cookie” nel browser del vostro computer."
+      cookies_intro: "La Legge sulle comunicazioni elettroniche (Gazzetta ufficiale, n. 109/2012) ZEKom-1 ha introdotto le norme sull'uso dei cookie e di altre simili tecnologie per memorizzare o accedere alle informazioni memorizzate sui computer, tablet o dispositivi mobili degli utenti. Il nostro strumento può scaricare il cosiddetto “cookie” nel browser del vostro computer."
       cookies_what_title: "Che cosa sono i cookie?"
       cookies_what_intro: "I cookie sono piccoli file di testo che forniscono informazioni sul numero di visite del nostro sito e sui contenuti visualizzati dall'utente. I cookie non sono dannosi e la loro durata è limitata. I cookie non contengono informazioni che consentono l'identificazione personale degli utenti. Gli utenti hanno sempre la possibilità di accettare o rifiutare i cookie. La maggior parte dei browser accetta automaticamente i cookie, ma modificando le impostazioni del browser si può accettare o rifiutare i cookie o decidere di ricevere un messaggio di avviso prima di accettare un cookie dai siti web visitati."
       cookies_why_title: "A cosa servono i cookie?"
