@@ -198,7 +198,7 @@ it:
           presentation_summary_finished_help_text: Testo per il terzo paragrafo quando la fase non è attiva
     budgets:
       investments:
-        not_allowed_to_add_investment: Ringraziamo per le 3 proposte inviate!
+        not_allowed_to_add_investment: Grazie per la proposta inviata!
         investment:
           no_image: La proposta non ha fotografie.
     meta:
