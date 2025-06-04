@@ -332,7 +332,7 @@ span:hover::before {
 
       .image-holder {
         text-align: center;
-  
+
         img {
           height: auto;
           width: 100%;
@@ -341,10 +341,10 @@ span:hover::before {
           object-fit: cover;
           display: block;
         }
-  
+
         .investment-default-image {
           background-color: $theme-color-opacity-90;
-  
+
           img {
             object-fit: none;
           }
@@ -354,7 +354,7 @@ span:hover::before {
       &:hover {
         border: 2px solid $theme-color;
         border-bottom: 3px solid $theme-color;
-        
+
         a {
           color: $black;
         }
@@ -427,7 +427,7 @@ span:hover::before {
     margin-bottom: 3rem;
 
     img {
-      margin-top: 2rem;  
+      margin-top: 2rem;
     }
 
     p {
@@ -783,7 +783,7 @@ span:hover::before {
         max-height: 35px;
         margin: 10px;
       }
-  
+
       p {
         margin-bottom: 0;
         font-size: 14px;
@@ -828,7 +828,7 @@ span:hover::before {
           margin-top: 0;
         }
       }
-      
+
     }
   }
 }
@@ -1055,7 +1055,7 @@ span:hover::before {
   }
 }
 
-// about page 
+// about page
 .about {
   padding-bottom: 3rem;
 
@@ -1094,7 +1094,7 @@ span:hover::before {
     }
   }
 
-  p {
+  p, ul, ol {
     font-size: 1.25rem;
     line-height: 1.5625rem;
     font-weight: 500;
