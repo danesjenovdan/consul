@@ -10,9 +10,20 @@ spec:
   tls:
     - hosts:
         - consul-dolina.lb.djnd.si
+        - breg-part.eu
       secretName: consul-dolina
   rules:
     - host: consul-dolina.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: breg-part.eu
       http:
         paths:
           - path: /
