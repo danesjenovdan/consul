@@ -71,7 +71,7 @@ it:
         new_unlock: Non hai ricevuto le istruzioni per sbloccare la tua utenza?
         signin_with_provider: Accedere tramite %{provider}
         signup: Non hai un account? %{signup_link}
-        signup_link: Scollegarsi
+        signup_link: Registrazione
     unlocks:
       new:
         email_label: Email
