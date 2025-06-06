@@ -244,7 +244,7 @@ it:
       select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
       instructions: "Per poter candidare la propria proposta progettuale e sottoporla alla votazione della cittadinanza, essa deve soddisfare le seguenti condizioni:"
       instructions_description: |
-        <h3>proponente:</h3>
+        <h3>Proponente:</h3>
         <ol>
           <li>deve essere residente nel Comune di San Dorligo della Valle - Dolina, e aver compiuto o compiere 18 anni di età nel 2025 (nati prima del 15.10.2007);</li>
           <li>non può agire in qualità di esecutore della proposta di progetto – né quale persona fisica ovvero quale proprietario oppure membro del direttivo di una persona giuridica dell’esecutore.</li>
