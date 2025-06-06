@@ -6,7 +6,7 @@
 
     <% unless budget.single_heading? %>
       <div>
-        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, label: 'Izberi območje v občini, za katerega predlagaš predlog' }%>
+        <%= f.select :heading_id, budget_heading_select_options(budget), { include_blank: true, label: 'Frazione/Območje' }%>
       </div>
     <% end %>
 
