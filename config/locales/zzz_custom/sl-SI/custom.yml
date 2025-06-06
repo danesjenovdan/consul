@@ -224,7 +224,7 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li>  <h6>Območje 1 (196.000 EUR)</h6>  <div>Levi breg: KS Kamnica, KS Bresternica-Gaj, MČ Koroška vrata</div></li><li>  <h6>Območje 2 (196.000 EUR)</h6>  <div>Levi breg: MČ Ivan Cankar, MČ Center, KS Malečnik-Ruperče</div></li><li>  <h6>Območje 3 (196.000 EUR)</h6>  <div>Desni breg: KS Limbuš, KS Pekre, MČ Radvanjem, KS Razvanje</div></li><li>  <h6>Območje 4 (196.000 EUR)</h6>  <div>Desni breg: MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova</div></li><li>  <h6>Območje 5 (196.000 EUR)</h6>  <div>Desni breg: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno</div></li>"
+      headings_sidebar: "<li>  <h6>Območje A</h6>  <div>Dolina in Crogole-Kroglje</div></li><li>  <h6>Območje B</h6>  <div>Bagnoli della Rosandra-Boljunec e Bagnoli Superiore-Gornji konec</div></li><li>  <h6>Območje C</h6>  <div>Sant’Antonio in Bosco-Boršt, Hervati-Hrvati, Moccò-Zabrežec, San Lorenzo-Jezero, Botazzo-Botač, Grozzana-Gročana, Draga in Pesek</div></li><li>  <h6>Območje D</h6>  <div>Frazioni di San Giuseppe della Chiusa-Ricmanje e Log</div></li><li>  <h6>Območje E</h6>  <div>Domio-Domjo, Puglie-Pulje, Lacotisce-Lakotišče in Mattonaia-Krmenka</div></li> <h6>Območje F</h6>  <div>Caresana-Mačkolje, Prebeneg, Crociata-Križpot in Monte D’Oro-Mont</div></li> <h6>Območje G</h6>  <div>Frazioni di Aquilinia-Žavlje in Francovez-Frankovec</div></li>"
       select_heading: Izberi območje
       select_tag: Izberi oznako
       select_status: Izberi status predloga
