@@ -202,16 +202,16 @@ it:
         investment:
           no_image: La proposta non ha fotografie.
     meta:
-      pp_name: Ancarano collabora
-      place_name: Comune di Ancarano
+      pp_name: Breg
+      place_name: Comune di San Dorligo della Valle - Dolina
       guiding_questions: "<p><em>Perché questa proposta? Quale argomento, problema o sfida affronta la proposta progettuale? </em></p><p>&nbsp;</p><p><em>Cosa proponete nello specifico? Qual è il senso della sua proposta? Cosa accadrà? </em></p><p>&nbsp;</p><p><em>Come dovrebbe essere attuato il progetto? Quali attività dovrebbero essere svolte? </em></p><p>&nbsp;</p><p><em>Dove dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p></p><p><em>Tempistica: quando dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p><em>Cosa cambierebbe, migliorerebbe dopo l'implementazione del progetto? </em></p><p>&nbsp;</p><p></p><p><em>Qual è il valore previsto (costo) del progetto proposto? </em></p>"
       tos: "pogoji-uporabe"
     switcher:
       select: " Selezionare il budget"
     social:
-      fb_desc: Ancarano collabora - Bilancio partecipativo del comune di Ancarano
-      tw_desc: "Ancarano collabora - Bilancio partecipativo del comune di Ancarano: "
-      email_desc: Visualizzare la proposta d’investimento di bilancio nel progetto Acnarano collabora - Bilancio partecipativo del comune di Ancarano
+      fb_desc: Breg - Comune di San Dorligo della Valle - Dolina
+      tw_desc: "Breg - Comune di San Dorligo della Valle - Dolina: "
+      email_desc: Visualizzare la proposta d’investimento di bilancio nel progetto Acnarano collabora - Bilancio partecipativo del Comune di San Dorligo della Valle - Dolina
     headings:
       drafting: Bozza (nascosta al pubblico)
       informing: Informazioni
@@ -226,16 +226,32 @@ it:
       headings: Frazioni
       headings_sidebar: |
         <li>
-          <h6>Zona 1 - Ankaran est</h6>
-          <div>Al boschetto, Strada della Ferrovia, Roseto, Strada Ivančič Franc-Rudi, Strada per Prisoje, Sotto la cima, Strada dell'Adriatico</div>
+          <h6>Zona A</h6>
+          <div>Frazioni di Dolina e Crogole-Kroglje</div>
         </li>
         <li>
-          <h6>Zona 2 - Ancarano centro</h6>
-          <div>Vicolo degli Olivi, Via Stanko Pervanja, Via D. Bertok-Churchill, Vicolo per Brida, Via J. Srebrnič, Via I. Regent, Via M. Hrvatin, Via V. Vlahovič, Via F. Bevk, Via V. Kocjančič-Marko, Via I. Cah-Iskra, Ulica Rudi Mahnič, Via P. Tomažič, Via M. Laris-Moro, Via F. P. Frenk, Vicolo del Panorama, Strada dell'Adriatico</div>
+          <h6>Zona B</h6>
+          <div>Frazioni di Bagnoli della Rosandra-Boljunec e Bagnoli Superiore-Gornji konec</div>
         </li>
         <li>
-          <h6>Zona 3 - Ancarano ovest</h6>
-          <div>Via dei Vigneti, Lazzaretto, Strada dell'Adriatico</div>
+          <h6>Zona C</h6>
+          <div>Frazioni di Sant’Antonio in Bosco-Boršt, Hervati-Hrvati, Moccò-Zabrežec, San Lorenzo-Jezero, Botazzo-Botač, Grozzana-Gročana, Draga e Pesek</div>
+        </li>
+        <li>
+          <h6>Zona D</h6>
+          <div>Frazioni di San Giuseppe della Chiusa-Ricmanje e Log</div>
+        </li>
+        <li>
+          <h6>Zona E</h6>
+          <div>Frazioni di Domio-Domjo, Puglie-Pulje, Lacotisce-Lakotišče e Mattonaia-Krmenka</div>
+        </li>
+        <li>
+          <h6>Zona F</h6>
+          <div>Frazioni di Caresana-Mačkolje, Prebeneg, Crociata-Križpot e Monte D’Oro-Mont</div>
+        </li>
+        <li>
+          <h6>Zona G</h6>
+          <div>Frazioni di Aquilinia-Žavlje e Francovez-Frankovec</div>
         </li>
       select_heading: Selezionare zona
 
