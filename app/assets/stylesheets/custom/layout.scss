@@ -263,13 +263,13 @@ a {
   &:active {
     color: $white;
   }
-  
+
   &:focus {
     color: $white;
     background-color: $black;
     outline: $focus-middle-width;
   }
-  
+
   &:focus:hover {
     color: $white;
   }
@@ -341,7 +341,7 @@ input[type="submit"].action-button {
 
   &.large {
     @media screen and (min-width: 52em) {
-      width: 350px;
+      width: 485px;
     }
   }
 
@@ -750,7 +750,7 @@ body > header,
     width: 100%;
     display: flex;
     align-content: space-around;
-    
+
 
     .active-phase {
       > a {
@@ -769,7 +769,7 @@ body > header,
     width: 100%;
     // margin-bottom: 5px;
     margin-right: 0;
-    
+
     border-right: 1px solid $black;
     border-bottom: 0;
     padding: 0 5px;
@@ -795,14 +795,14 @@ body > header,
 
       &[aria-selected="true"],
       &.is-active {
-        @include brand-color;  
+        @include brand-color;
         &::after {
           border-bottom: 0;
         }
       }
     }
   }
-  
+
   .tabs h2,
   .tabs h3,
   .tabs p {
