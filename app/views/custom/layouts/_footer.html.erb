@@ -14,9 +14,11 @@
                                         current_page?(help_path),
                                         accesskey: "6",
                                         title: t("shared.go_to_page") + t("layouts.header.help") %>
+              <% if false %>
               <span>|</span></li>
               <li>
                 <%= link_to t("custom.footer.accessibility"), page_path(t("custom.accessibility.slug")) %>
+              <% end %>
               </li>
             </ul>
           </div>
