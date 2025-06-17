@@ -5,6 +5,7 @@ if comments are hidden:
 else:
   <ul> should always be there
 -->
+<% if @investment.budget.phase == 'finished' && @investment.winner %>
 <ul class="tabs"
     id="investments_tabs"
     data-deep-link="true"
@@ -14,14 +15,14 @@ else:
     data-tabs>
     
   <!-- if comments are hidden, this <li> should be commented out -->
-  <li class="tabs-title is-active">
+  <!-- <li class="tabs-title is-active">
     <%= link_to "#tab-comments" do %>
       <h3>
         <%= t("budgets.investments.show.comments_tab") %>
         <span class="js-comments-count">(<%= @investment.comments_count %>)</span>
       </h3>
     <% end %>
-  </li>
+  </li> -->
   
   <!-- milestones should only be shown in finished phase on winning investments -->
   <% if @investment.budget.phase == 'finished' && @investment.winner %>
@@ -35,3 +36,4 @@ else:
     </li>
   <% end %>
 </ul>
+<% end %>
