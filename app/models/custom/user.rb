@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :email, on: :create, presence: true
   validates :document_number, on: :create, presence: true
   validates :address, on: :create, presence: true
-  validates :phone_number, on: :create, presence: true
+  # validates :phone_number, on: :create, presence: true
   
   def validate_data_consent
     unless data_consent
