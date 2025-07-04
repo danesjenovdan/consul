@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
   layout "devise", only: [:verification]
 
   def load_budgets
-    @budgets = Budget.where(published: true).where.not(phase: "finished")
+    @budgets = Budget.where(published: true) #.where.not(phase: "finished")
   end
 
   def load_past_budgets 
