@@ -3,16 +3,16 @@
     <div class="column">
       <div class="footer-logos">
           <div>
-            <p>Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.</p>
+            <%= t('custom.footer.consul_html') %>
           </div>
           <div>
-            <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
+            <%= t('custom.footer.djnd_html') %>
           </div>
           <div class="logo-right">
-            <a href="https://moc.celje.si/" target="_blank">
+            <a href="<%= t('custom.footer.municipality_url') %>" target="_blank">
               <%= image_tag(image_path_for("municipalities/celje.png"), alt: "Logotip občine") %>
             </a>
-            <p>Participativni proračun <br/><a href="https://moc.celje.si/" target="_blank">Mestne občine Celje</a></p>
+            <%= t('custom.footer.municipality_html') %>
           </div>
       </div>
     </div>

@@ -473,8 +473,14 @@ sl-SI:
       no_answer: "Prosim izpolni vprašanje."
       new_investment_not_allowed: "V tem participativnem proračunu lahko sodelujejo samo mlajši od 30 let."
     footer:
-      djnd: Za platformo skrbi
       accessibility: Izjava o dostopnosti
+      consul_html: |
+        <p>Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.</p>
+      djnd_html: |
+        <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
+      municipality_html: |
+        <p>Participativni proračun <br/><a href="https://moc.celje.si/" target="_blank">Občine Dolina</a></p>
+      municipality_url: https://moc.celje.si/
     registration:
       already_has_account: "Že imaš račun?"
       data_consent: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Mestna občina Celje obdeluje moje osebne podatke za namen izvedbe projekta Celje po moje."
