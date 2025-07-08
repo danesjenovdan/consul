@@ -467,8 +467,14 @@ sl-SI:
       submit_investment: "Zaradi napak obrazca nismo mogli shraniti."
       no_answer: "Prosim izpolni vprašanje."
     footer:
-      djnd: Za platformo skrbi
       accessibility: Izjava o dostopnosti
+      consul_html: |
+        <p>Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.</p>
+      djnd_html: |
+        <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
+      municipality_html: |
+        <p>Participativni proračun <br/><a href="https://www.comune.san-dorligo-della-valle.ts.it/" target="_blank">Občine Dolina</a></p>
+      municipality_url: https://www.comune.san-dorligo-della-valle.ts.it/
     registration:
       already_has_account: "Že imaš račun?"
     accessibility:
