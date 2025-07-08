@@ -254,7 +254,6 @@ it:
           <div>Frazioni di Aquilinia-Žavlje e Francovez-Frankovec</div>
         </li>
       select_heading: Selezionare zona
-
       select_tag: Selezionare tag
       select_status: Selezionare lo status della proposta
       select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
@@ -363,7 +362,7 @@ it:
       heading_2: "Come creare e verificare il proprio account?"
       description_2: "Per creare un account, premere il pulsante “Registrati” a fondo pagina del sito web, premendo su uno qualsiasi dei pulsanti si accede allo stesso modulo online. Per creare un account, è necessario inserire il nome utente, il numero di tessera elettorale, l'indirizzo e-mail e la password. Una volta creato l'account, è necessario confermarlo cliccando sul collegamento contenuto nell'e-mail che verrà inviata al vostro indirizzo di posta elettronica."
       heading_3: "Come creare una nuova proposta?"
-      description_3: "Oltre a presentare una proposta online, è possibile farlo anche in formato elettronico (scaricando il modulo ...., compilandolo e consegnandolo presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina). I moduli stampati possono essere ritirati e consegnati presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina."        
+      description_3: "Oltre a presentare una proposta online, è possibile farlo anche in formato elettronico (scaricando il modulo ...., compilandolo e consegnandolo presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina). I moduli stampati possono essere ritirati e consegnati presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina."
       heading_4: "Password dimenticata. Come procedere?"
       description_4: "Premere il pulsante “Iscrivetevi”, quindi selezionare il collegamento “Password dimenticata”. Riceverete le istruzioni per creare una nuova password al vostro indirizzo e-mail."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
