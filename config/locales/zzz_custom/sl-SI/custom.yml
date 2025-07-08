@@ -203,7 +203,7 @@ sl-SI:
     meta:
       pp_name: Predlagam, odločam!
       place_name: Občina Trebnje
-      guiding_questions: '<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>'
+      guiding_questions: "<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>"
       tos: "pogoji-uporabe"
     switcher:
       select: "Izberi proračun"
@@ -334,7 +334,7 @@ sl-SI:
       help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
       contact1:
         mail: "vanja.kovacic@trebnje.si"
-        note1: 'Telefon: v času uradnih ur občinske uprave na 031 446 858'
+        note1: "Telefon: v času uradnih ur občinske uprave na 031 446 858"
         note2: "Občina Trebnje, Goliev trg 5, 8210 Trebnje"
       contact2:
         mail: "consul@djnd.si"
@@ -480,8 +480,14 @@ sl-SI:
       submit_investment: "Zaradi napak obrazca nismo mogli shraniti."
       no_answer: "Prosim izpolni vprašanje."
     footer:
-      djnd: Za platformo skrbi
       accessibility: Izjava o dostopnosti
+      consul_html: |
+        <p>Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.</p>
+      djnd_html: |
+        <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
+      municipality_html: |
+        <p>Participativni proračun <br/><a href="https://trebnje.si/" target="_blank">Občine Trebnje</a></p>
+      municipality_url: https://trebnje.si/
     registration:
       already_has_account: "Že imaš račun?"
     accessibility:
