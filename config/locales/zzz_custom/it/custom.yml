@@ -21,8 +21,14 @@ it:
       user:
         login: "indirizzo elettronico o nome utente"
         login_form: "Indirizzo elettronico o nome utente"
+        username: "Nome e cognome del proponente"
+        email: "Indirizzo di posta elettronica"
+        phone_number: "Numero di telefono"
       image:
         attachment: "Immagine"
+      budget/investment/translation:
+        title: Titolo-nome della proposta progettuale
+        title_hint: Indicare un titolo conciso, che rappresenti il fulcro della proposta progettuale.
       budget/investment:
         q1: "Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?"
         q2: "Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?"
@@ -133,8 +139,12 @@ it:
       registrations:
         new:
           terms: Con la registrazione l’utente accetta i %{terms}.
+          terms_title: ""
+          data_consent: |
+            la pubblicazione dei dati personali (nome e cognome) sul sito internet del CCC ai fini della pubblicazione delle proposte del progetto Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina*
           password_hint: La password deve avere almeno 8 caratteri.
           address: Inserire la via di residenza permanente
+          document_number: ""
         success:
           back_to_index: Ripartire dalla pagina iniziale
           instructions_1: Si prega di, <b>controllare l’e-mail</b> – è stato inviato un <b>collegamento per confermare l’account</b>.
@@ -271,11 +281,14 @@ it:
       submit_anonymously_explanation: Accettando questa richiesta, il suo nome non verrà visualizzato quando la proposta verrà pubblicata sul sito web.
       phone: Numero di telefono
       address: Indirizzo di residenza permanente
+      document_number: Numero di tessera elettorale
       name_and_last_name: Nome e cognome (nome utente)
       accept_terms: L’utente accetta le %{conditions}
       table_content: Contenuto
       table_price: Importo IVA inclusa
       table_total: Totale
+      price_label: Qual è il valore (costo) previsto per la proposta progettuale?
+      price_help_text: ""
     presentation:
       accepting:
         title_1: A quanto ammonta il budget?
@@ -491,7 +504,14 @@ it:
       no_answer: " Si prega di compilare la domanda."
       new_investment_not_allowed: " È possibile inviare solo 3 proposte."
     footer:
-      djnd: La piattaforma è gestita da
+      accessibility: Izjava o dostopnosti
+      consul_html: |
+        <p>Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.</p>
+      djnd_html: |
+        <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
+      municipality_html: |
+        <p>Bilancio participativo del <br/><a href="https://obcina-ankaran.si/sl/" target="_blank">Comune di Ancarano</a></p>
+      municipality_url: https://obcina-ankaran.si/sl
     registration:
       already_has_account: " Ha già un account?"
     ankaran:
