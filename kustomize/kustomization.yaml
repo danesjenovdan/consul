@@ -5,7 +5,7 @@ resources:
   - database.yaml
   - deployment.yaml
   - service.yaml
-  - ingress.yaml
+  # - ingress.yaml
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-dolina
