@@ -1,10 +1,10 @@
 FROM ruby:3.3.8-bookworm
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 # Install essential Linux packages
 RUN apt-get update -qq \
- && apt-get install -y \
+    && apt-get install -y \
     build-essential \
     cmake \
     imagemagick \
@@ -14,22 +14,29 @@ RUN apt-get update -qq \
     memcached \
     pkg-config \
     postgresql-client \
+    shared-mime-info \
     sudo \
     unzip
 
 # Install Chromium for E2E integration tests
-RUN apt-get update -qq && apt-get install -y chromium chromium-driver
+RUN apt-get update -qq && apt-get install -y chromium
 
 # Files created inside the container repect the ownership
 RUN adduser --shell /bin/bash --disabled-password --gecos "" consul \
- && adduser consul sudo \
- && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+    && adduser consul sudo \
+    && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN echo 'Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bundle/bin:/usr/local/node/bin"' > /etc/sudoers.d/secure_path
 RUN chmod 0440 /etc/sudoers.d/secure_path
 
 # Define where our application will live inside the image
-ENV RAILS_ROOT=/var/www/consul
+ENV RAILS_ROOT /var/www/consul
+
+# Define environment as production
+ENV RAILS_ENV production
+
+# Enable log to stdout
+ENV RAILS_LOG_TO_STDOUT enabled
 
 # Create application home. App server will need the pids dir so just create everything in one shot
 RUN mkdir -p $RAILS_ROOT/tmp/pids
@@ -56,7 +63,11 @@ RUN npm install
 # Copy the Rails application into place
 COPY . .
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+RUN cp config/database.yml.fake config/database.yml
+RUN cp config/secrets.yml.fake config/secrets.yml
+RUN bundle exec rake assets:precompile
+
+# ENTRYPOINT ["./docker-entrypoint.sh"]
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
 # CMD [ "config/containers/app_cmd.sh" ]
