@@ -11,12 +11,13 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
-      - name: pull-request-maribor
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: "maribor-k8s"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Pulling ${{ github.ref }} into maribor-k8s"
+      # We are no longer deploying, PR-in, or building Maribor.
+      # - name: pull-request-maribor
+      #   uses: repo-sync/pull-request@v2
+      #   with:
+      #     destination_branch: "maribor-k8s"
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     pr_title: "Pulling ${{ github.ref }} into maribor-k8s"
 
       - name: pull-request-medvode
         uses: repo-sync/pull-request@v2
