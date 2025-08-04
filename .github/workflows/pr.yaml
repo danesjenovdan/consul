@@ -11,12 +11,13 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
-      - name: pull-request-maribor
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: "maribor-k8s"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Pulling ${{ github.ref }} into maribor-k8s"
+      # We are no longer deploying, PR-in, or building Maribor.
+      # - name: pull-request-maribor
+      #   uses: repo-sync/pull-request@v2
+      #   with:
+      #     destination_branch: "maribor-k8s"
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     pr_title: "Pulling ${{ github.ref }} into maribor-k8s"
 
       - name: pull-request-medvode
         uses: repo-sync/pull-request@v2
@@ -87,3 +88,17 @@ jobs:
           destination_branch: "staging-k8s"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_title: "Pulling ${{ github.ref }} into staging-k8s"
+      
+      - name: pull-request-medvode-staging
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "medvode-k8s-staging"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Pulling ${{ github.ref }} into medvode-k8s-staging"
+
+      - name: pull-request-dolina
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "dolina-k8s"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Pulling ${{ github.ref }} into dolina-k8s"

@@ -49,8 +49,8 @@
       <% end %>
     <% end %>
 
-    <%= f.label :price, "Vrednost predloga (v evrih)", class: "inline-block" %>
-    <p class="help-text">Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.</p>
+    <%= f.label :price, t("custom.form.price_label"), class: "inline-block" %>
+    <p class="help-text"><%= t("custom.form.price_help_text") %></p>
     <%= f.number_field :price, label: false, :required => true %>
   </fieldset>
 
