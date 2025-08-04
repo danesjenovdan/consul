@@ -2,12 +2,6 @@
   <legend><%= t("images.form.title") %></legend>
   <p class="help-text"><%= note %></p>
 
-  <div id="nested-image">
-    <%= f.fields_for image_fields do |image_builder| %>
-      <%= render Images::FieldsComponent.new(image_builder, imageable: imageable) %>
-    <% end %>
-  </div>
-
   <%= link_to_add_association t("images.form.add_new_image"), f, image_fields,
                               force_non_association_create: true,
                               partial: "images/image_fields",
@@ -21,4 +15,11 @@
                                 association_insertion_node: "#nested-image",
                                 association_insertion_method: "append"
                               } %>
+
+  <%# THIS WAS MOVED TO MAKE IT MORE ACCESSIBLE %>
+  <div id="nested-image">
+    <%= f.fields_for image_fields do |image_builder| %>
+      <%= render Images::FieldsComponent.new(image_builder, imageable: imageable) %>
+    <% end %>
+  </div>
 </fieldset>

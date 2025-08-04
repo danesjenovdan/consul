@@ -551,7 +551,7 @@
       vertical-align: top;
     }
 
-    a {
+    a:not(.default-button) {
       color: $text-medium;
     }
   }
