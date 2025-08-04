@@ -15,6 +15,7 @@ section "Creating Users" do
         public_activity:        (rand(1..100) > 30),
         document_number:        unique_document_number,
         phone_number:           "123123123",
+        data_consent:          true
       )
     end
   

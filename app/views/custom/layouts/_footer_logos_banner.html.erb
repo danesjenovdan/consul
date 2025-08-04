@@ -2,6 +2,7 @@
   <div class="row">
     <div class="column">
       <div class="footer-logos">
+        <div>
           <div>
             <%= t('custom.footer.consul_html') %>
           </div>
@@ -10,10 +11,22 @@
           </div>
           <div class="logo-right">
             <a href="<%= t('custom.footer.municipality_url') %>" target="_blank">
-              <%= image_tag(image_path_for("municipalities/dolina.png"), alt: "Logotip občine") %>
+              <%= image_tag(image_path_for("municipalities/mom.png"), alt: "Logotip občine") %>
             </a>
             <%= t('custom.footer.municipality_html') %>
           </div>
+          <div>
+            <a href="https://www.fundacija-prizma.si/" target="_blank">
+              <%= image_tag(image_path_for("municipalities/prizma.png")) %>
+            </a>
+          </div>
+        </div>
+        <div class="logo-right">
+          <span><%= t("custom.footer.djnd") %></span>
+          <a href="https://danesjenovdan.si/" target="_blank">
+            <%= image_tag(image_path_for("logo-djnd.png")) %>
+          </a>
+        </div>
       </div>
     </div>
   </div>

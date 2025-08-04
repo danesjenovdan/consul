@@ -1,3 +1,7 @@
+# DEPRECATION WARNING
+
+This code is here only as an archive. It is not deployed at [Danes je nov dan](https://danesjenovdan.si) anymore. The kustomize folder remains, but it is not applied. You can use it if you want to run this on your own cluster, but it might make more sense for you to run it in a different way. For any questions, feel free to contact us. Good luck!
+
 <!--
   Title: CONSUL DEMOCRACY
   Description: Citizen Participation and Open Government Application
@@ -60,13 +64,13 @@ Note: running the whole test suite on your machine might take more than an hour,
 
 You can use the default admin user from the seeds file:
 
- **user:** admin@consul.dev
- **pass:** 12345678
+**user:** admin@consul.dev
+**pass:** 12345678
 
 But for some actions like voting, you will need a verified user, the seeds file also includes one:
 
- **user:** verified@consul.dev
- **pass:** 12345678
+**user:** verified@consul.dev
+**pass:** 12345678
 
 ## Configuration for production environments
 
