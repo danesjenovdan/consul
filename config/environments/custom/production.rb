@@ -5,4 +5,6 @@ Rails.application.configure do
   # `config/environments/custom/staging.rb` and/or
   # `config/environments/custom/preproduction.rb` files if you don't
   # want these changes to be applied there as well.
+
+  config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "debug")
 end
