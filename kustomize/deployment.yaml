@@ -27,6 +27,8 @@ spec:
           env:
             - name: RAILS_ENV
               value: production
+            - name: RAILS_LOG_LEVEL
+              value: debug
           envFrom:
             - secretRef:
                 name: consul-credentials
@@ -66,6 +68,8 @@ spec:
               value: production
             - name: RAILS_SERVE_STATIC_FILES
               value: "enabled"
+            - name: RAILS_LOG_LEVEL
+              value: debug
           envFrom:
             - secretRef:
                 name: consul-credentials
@@ -98,6 +102,8 @@ spec:
               value: production
             - name: RAILS_SERVE_STATIC_FILES
               value: "enabled"
+            - name: RAILS_LOG_LEVEL
+              value: debug
           envFrom:
             - secretRef:
                 name: consul-credentials
