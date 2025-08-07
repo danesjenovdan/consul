@@ -451,7 +451,7 @@ en:
     dashboard:
       index:
         back: Go back to %{org}
-        title: DJND Admin
+        title: Administration
         description: Welcome to the %{org} admin panel.
         info: |-
           <p>This is the place where you, as an administrator, implement and oversee the citizen participation process in your city or region.</p>
@@ -460,7 +460,7 @@ en:
 
           <p>The CONSUL DEMOCRACY Foundation is at the heart of the global user community. We'd like to ask you to get in touch so we get a grasp of who's using the software and see how we might assist with implementation or use. We can't wait to welcome you to the community.</p>
 
-          <p>Happy administrating from DJND!</p>
+          <p>Happy administrating!</p>
 
           <p>Greetings from the CONSUL DEMOCRACY Foundation team.</p>
       actions:
