@@ -13,6 +13,11 @@ data:
       password: <%= ENV['POSTGRES_PASSWORD'] %>
       database: <%= ENV['CONSUL_DATABASE_NAME'] %>
   secrets.yml: |
+    llm: &llm
+      # Provide keys for the LLM providers you intend to use.
+      # consult RubyLLM https://rubyllm.com/configuration#global-configuration-rubyllmconfigure configuration for all supported providers and use the same key names here.
+      gemini_api_key: ENV['GEMINI_API_KEY']
+
     http_basic_auth: &http_basic_auth
       http_basic_auth: true
 
@@ -29,6 +34,7 @@ data:
       sms_end_point:  ""
       sms_username: ""
       sms_password: ""
+      llm: *llm
 
     production:
       secret_key_base: "<%= ENV['SECRET_KEY_BASE'] %>"
