@@ -165,7 +165,7 @@ module Budgets
         if params[:heading_id].present?
           @heading = @budget.headings.find_by_slug_or_id! params[:heading_id]
 
-          if @budget.phase == "balloting" && !@ballot.user.nil
+          if @budget.phase == "balloting" && !@ballot.user.nil?
             @assigned_heading = @budget.headings.find_by_slug_or_id! @ballot.user.heading_id
           end
 
