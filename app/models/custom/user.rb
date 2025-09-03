@@ -122,6 +122,7 @@ class User < ApplicationRecord
       "Zgornje Pirniče",
       "Spodnje Pirniče",
       "Zavrh pod šmarno goro",
+      "Zavrh pod Šmarno goro",
     ]
     escaped_addresses = valid_addresses.map { |valid_address| Regexp.escape(valid_address)}
     r = /#{escaped_addresses.join("|")}/ # assuming there are no special chars
@@ -348,6 +349,7 @@ class User < ApplicationRecord
       "Verje",
       "Vikrče",
       "Zavrh pod šmarno goro",
+      "Zavrh pod Šmarno goro",
       "Zbilje",
       "Zgornja Senica",
       "Zgornje Pirniče",
