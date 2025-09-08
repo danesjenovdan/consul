@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby file: ".ruby-version"
 
-gem "rails", "7.1.5.1"
+gem "rails", "~> 7.1.5.1"
 
 gem "acts-as-taggable-on", "~> 12.0.0"
 gem "acts_as_votable", "~> 0.14.0"
@@ -38,11 +38,12 @@ gem "omniauth", "~> 2.1.3"
 gem "omniauth-facebook", "~> 10.0.0"
 gem "omniauth-google-oauth2", "~> 1.2.1"
 gem "omniauth-rails_csrf_protection", "~> 1.0.2"
+gem "omniauth-saml", "~> 2.2.4"
 gem "omniauth-twitter", "~> 1.4.0"
 gem "paranoia", "~> 3.0.1"
 gem "pg", "~> 1.5.9"
 gem "pg_search", "~> 2.3.7"
-gem "puma", "~> 5.6.9"
+gem "puma", "~> 6.6.0"
 gem "recipient_interceptor", "~> 0.3.3"
 gem "redcarpet", "~> 3.6.1"
 gem "responders", "~> 3.1.1"
@@ -91,7 +92,7 @@ group :development do
   gem "capistrano-npm", "~> 1.0.3", require: false
   gem "capistrano-rails", "~> 1.7.0", require: false
   gem "capistrano3-delayed-job", "~> 1.7.6"
-  gem "capistrano3-puma", "~> 6.0.0"
+  gem "capistrano3-puma", "~> 6.2.0"
   gem "erb_lint", "~> 0.9.0", require: false
   gem "faraday-retry", "~> 2.3.1", require: false
   gem "htmlbeautifier", "~> 1.4.3", require: false
