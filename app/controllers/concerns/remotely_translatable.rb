@@ -2,13 +2,13 @@ module RemotelyTranslatable
   private
 
     def detect_remote_translations(*)
-      return [] if RemoteTranslations::Caller.translation_provider.blank?
+      return [] unless remote_translation_enabled?
 
       RemoteTranslation.for(*)
     end
 
     def remote_translation_enabled?
       Setting["feature.remote_translations"].present? &&
-        RemoteTranslations::Caller.translation_provider.present?
+        RemoteTranslations::Caller.configured?
     end
 end

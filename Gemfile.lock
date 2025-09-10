@@ -659,7 +659,7 @@ GEM
     ruby-vips (2.2.3)
       ffi (~> 1.12)
       logger
-    ruby_llm (1.5.1)
+    ruby_llm (1.6.4)
       base64
       event_stream_parser (~> 1)
       faraday (>= 1.10.0)
@@ -892,7 +892,7 @@ DEPENDENCIES
   rubocop-rails (~> 2.29.1)
   rubocop-rspec (~> 3.4.0)
   rubocop-rspec_rails (~> 2.30.0)
-  ruby_llm (~> 1.5.1)
+  ruby_llm (~> 1.6.4)
   rvm1-capistrano3 (~> 1.4.0)
   sassc-embedded (~> 1.77.5)
   sassc-rails (~> 2.1.2)

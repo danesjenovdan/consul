@@ -5,6 +5,12 @@ class RemoteTranslations::Caller
     translation_provider ? translation_provider::AvailableLocales.locales : []
   end
 
+  def self.configured?
+    return true if llm?
+
+    Setting["feature.remote_translations"].present? && Tenant.current_secrets.microsoft_api_key.present?
+  end
+
   def self.llm?
     [Setting["llm.provider"], Setting["llm.model"],
      Setting["llm.use_llm_for_translations"]].all?(&:present?)
@@ -39,7 +45,7 @@ class RemoteTranslations::Caller
     def destroy_remote_translation
       if resource.valid?
         remote_translation.destroy
-        resource.save
+        resource.save!
       else
         remote_translation.update(error_message: resource.errors.messages)
       end
