@@ -496,16 +496,49 @@ sl-SI:
     footer:
       accessibility: Izjava o dostopnosti
       consul_html: |
-        <p>Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.</p>
+        <p>
+          <b>O orodju Consul</b>
+        </p>
+        <p>
+          Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.
+        </p>
+        <p>
+          Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
+        </p>
       djnd_html: |
         <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
       municipality_html: |
-        <p>Participativni proračun <br/><a href="https://www.comune.san-dorligo-della-valle.ts.it/" target="_blank">Občine Dolina</a></p>
+        <p>
+          <b>Participativni proračun
+          <br/>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/" target="_blank">
+            Comune di San Dorligo della Valle - Občina Dolina
+          </a></b>
+          <br />
+          Dolina 270, 34018 San Dorligo della Valle (TS) Italija
+        </p>
+        <p>
+          Davčna številka: 80009970320
+          <br />
+          Številka za DDV: 00228430328
+        </p>
+      contact_html: |
+        <p>
+          <b>Kontakt</b>
+        </p>
+        <p>
+          ☎️ Telefon: <a href="tel:003904083629111" target="_blank">+3904083629111</a>
+        </p>
+        <p>
+          📧 E-naslov: <a href="mailto:protocollo-protokol@sandorligo-dolina.it" target="_blank">protocollo-protokol@sandorligo-dolina.it</a>
+        </p>
+        <p>
+          📧 E-naslov overovljene pošte: <a href="mailto:comune-obcina.sandorligodellavalle-dolina@certgov.fvg.it" target="_blank">comune-obcina.sandorligodellavalle-dolina@certgov.fvg.it</a>
+        </p>
       municipality_url: https://www.comune.san-dorligo-della-valle.ts.it/
     registration:
       already_has_account: "Že imaš račun?"
     accessibility:
-      slug: izjava-o-dostopnosti
       title: Izjava o dostopnosti
       date: 30. 1. 2025
       main_title: Izjava o dostopnosti Breg
@@ -553,6 +586,35 @@ sl-SI:
         E: <a href="mailto:gp.ijs@gov.si">gp.ijs@gov.si</a>
       author_title: Priprava izjave o dostopnosti
       author_paragraph: "Datum objave Izjave o dostopnosti: 30. 1. 2025, na podlagi samoocene. Zadnja posodobitev Izjave o dostopnosti: 30 . 1 .2025."
+    italy:
+      privacy:
+        title: Pravilnik o zasebnosti
+        main_title: Transparentno upravljanje
+        date: 12. 12. 2012
+        html: |
+          <h2>Naslov</h2>
+          <p>Odstavek</p>
+      cookies:
+        title: Pravilnik o piškotkih
+        main_title: Pravilnik o piškotkih
+        date: 12. 12. 2012
+        html: |
+          <h2>Naslov</h2>
+          <p>Odstavek</p>
+      transparency:
+        title: Transparentno upravljanje
+        main_title: Transparentno upravljanje
+        date: 12. 12. 2012
+        html: |
+          <h2>Naslov</h2>
+          <p>Odstavek</p>
+      legal:
+        title: Pravno obvestilo
+        main_title: Pravno obvestilo
+        date: 12. 12. 2012
+        html: |
+          <h2>Naslov</h2>
+          <p>Odstavek</p>
     dolina:
       mayor:
         title: Spoštovane občanke in občani,

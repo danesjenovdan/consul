@@ -1,0 +1,18 @@
+<% provide :title do %><%= t("custom.italy.transparency.title") %>
+<% end %>
+<% content_for :canonical do %>
+<%= render "shared/canonical", href: page_url("izjava-o-dostopnosti") %>
+<% end %>
+
+<main>
+  <div class="row privacy">
+    <div class="main-indented-content">
+      <div class="small-12 medium-10 column medium-centered">
+        <h1 dir="ltr"><%= t("custom.italy.transparency.main_title") %></h1>
+        <p><%= t("custom.italy.transparency.date") %></p>
+        <br/>
+        <%= t("custom.italy.transparency.html").html_safe %>
+      </div>
+    </div>
+  </div>
+</main>
