@@ -619,33 +619,394 @@ it:
       author_paragraph: "Datum objave Izjave o dostopnosti: 30. 1. 2025, na podlagi samoocene. Zadnja posodobitev Izjave o dostopnosti: 30 . 1 .2025."
     italy:
       privacy:
-        title: Pravilnik o zasebnosti
-        main_title: Transparentno upravljanje
-        date: 12. 12. 2012
+        title: Protezione dei dati personali
+        main_title: Protezione dei dati personali
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2 dir="ltr">Protezione dei dati personali</h2>
+          <p dir="ltr">
+          Titolare del trattamento dei dati personali:
+          </p>
+          <p dir="ltr">
+          Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)
+          <br/>
+          No. matricola:  80009970320
+          <br/>
+          Responsabile della protezione dei dati: Dott. Andrea Ciappesoni
+          <br/>
+          E-mail: dpo.privacy@sandorligo-dolina.it
+          <br/>
+          Telefono: 0408329111
+          </p>
+          <p dir="ltr">
+          Responsabile del trattamento in merito allo strumento online Breg:"
+          </p>
+          <p dir="ltr" style="margin-left:36pt;">
+          Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana
+          <br/>
+          No. matricola: 6468594000
+          <br/>
+          E-mail: vsi@danesjenovdan.si
+          </p>
+          <p dir="ltr">
+          Il responsabile del trattamento è contrattualmente obbligato a utilizzare i dati personali solo ed esclusivamente in nome del Comune di San Dorligo della Valle - Dolina ed a garantirne la loro protezione in conformità alle normative vigenti e alle nostre istruzioni.
+          </p>
+          <p dir="ltr">
+          L'Istituto Danes je nov dan si impegna a proteggere i dati personali e a utilizzarli in modo trasparente, affinché gli utenti e i sostenitori possano seguire e sostenere il nostro lavoro nel modo più semplice possibile. Rispettiamo la vostra fiducia e ci impegniamo a gestire i vostri dati personali con cura e a trattarli in conformità con la normativa vigente in materia di protezione dei dati personali (GDPR e Codice in materia di protezione dei dati personali). Di seguito sono descritte in modo più dettagliato le finalità e le basi del trattamento dei vostri dati personali, inclusa l’informativa sui vostri diritti.
+          </p>
+
+          <br/>
+          <h3 dir="ltr">Base giuridica del trattamento dei dati personali</h3>
+          <p dir="ltr">
+          Motivi del trattamento dei dati personali:
+          </p>
+          <ul>
+          <li dir="ltr">
+            <p dir="ltr">interessato ha espresso il consenso al trattamento dei propri dati personali registrandosi e utilizzando lo strumento online Breg</p>
+          </li>
+          </ul>
+
+          <br/>
+          <h3 dir="ltr">Quali dati personali vengono conservati</h3>
+          <p dir="ltr">
+          Vengono conservati i seguenti dati:
+          </p>
+          <ul>
+          <li dir="ltr">
+            nome utente,
+          </li>
+          <li dir="ltr">
+            indirizzo e-mail dell'utente,
+          </li>
+          <li dir="ltr">
+            numero di tessera elettorale o codice fiscale
+          </li>
+          </ul>
+          <p dir="ltr">
+          Gli altri dati personali non verranno conservati dal titolare del trattamento.
+          </p>
+          <p dir="ltr">
+          I dati personali non vengono trasferiti a paesi terzi o organizzazioni internazionali.
+          </p>
+
+          <h3 dir="ltr">Modalità di trattamento dei dati personali</h3>
+          <p dir="ltr">
+          UIl titolare del trattamento conserva i dati personali dell'utente solo ai fini del corretto funzionamento dello strumento online, per poter abilitare le suddette funzionalità dello strumento e per inviare comunicazioni obbligatorie e/o convenute con l'utente (aggiornamenti, malfunzionamenti, altre attività legate al funzionamento e all'utilizzo dell'applicazione o qualsiasi altra attività legata all'applicazione).
+          </p>
+
+          <h3 dir="ltr">Tempi di conservazione dei dati personali</h3>
+          <p dir="ltr">
+          I dati vengono conservati per il tempo necessario al raggiungimento delle finalità per cui sono stati acquisiti, ovvero fino a quando l'utente non cessa di utilizzare lo strumento. L'utente può interrompere l'utilizzo dello strumento online in qualsiasi momento e richiedere la cancellazione dal registro degli utenti inviando una e-mail all’indirizzo consul@djnd.si. Ricevuta la e-mail di cessazione di utilizzo dello strumento online, il titolare del trattamento provvederà a cancellare tutti i dati entro il mese successivo. Nonostante la cancellazione dei dati personali di un utente, i suggerimenti, i commenti e i dati di voto verranno conservati ma attribuiti all'utente cancellato.
+          </p>
+
+          <h3 dir="ltr">Accesso a dati e diritti degli interessati</h3>
+          <p dir="ltr">
+          Gli interessati godono di specifici diritti in relazione ai dati personali, che sono illustrati di seguito. L’interessato può richiedere l'esportazione e l'accesso ai dati personali che lo riguardano, conservati dal DJND inviando una richiesta scritta all'indirizzo consul@djnd.si. I dati personali vengono conservati in un'applicazione specifica che rispetta i requisiti di privacy e garantisce la massima sicurezza dei dati conservati attraverso varie misure fisiche, tecniche e organizzative.
+          </p>
+          <p dir="ltr">
+          Prima di esercitare il diritto, il DJND verifica l'identità del richiedente che ha inviato la richiesta circa i propri diritti.
+          </p>
+          <p dir="ltr">
+          Dopo aver inviato la richiesta completa e valida, DJND deve fornire idoneo riscontro al più tardi entro 1 mese dal suo ricevimento; tale termine può essere prorogato di 2 mesi, ove necessario e in caso di particolare complessità o numero ingente di richieste pervenute. In tal caso, DJND deve comunque informare l'interessato della proroga e dei motivi che l'hanno determinata.
+          </p>
+          <p dir="ltr">
+          Tipologie di diritti:
+          </p>
+          <ol>
+          <li dir="ltr">
+            <p>
+              diritto di accesso ai dati: su richiesta, informeremo il richiedente se sia o meno in corso un trattamento di dati personali che lo riguardano e in tal caso, gli forniremo le seguenti informazioni:
+              <ul>
+                <li dir="ltr">la tipologia dei dati;</li>
+                <li dir="ltr">le categorie di destinatari a cui i dati personali sono stati o saranno comunicati;</li>
+                <li dir="ltr">il periodo di conservazione dei dati personali;</li>
+                <li dir="ltr">l’esistenza del diritto del richiedente alla rettifica o alla cancellazione dei dati personali o alla limitazione del trattamento dei dati personali che lo riguardano o all’opposizione al loro trattamento richiesto al DJND;</li>
+                <li dir="ltr">il diritto di proporre reclamo a un'autorità di controllo;</li>
+                <li dir="ltr">qualora i dati non siano raccolti presso l'interessato, tutte le informazioni disponibili sulla loro origine;</li>
+                <li dir="ltr">l'esistenza di un processo decisionale automatizzato, compresa la profilazione;</li>
+                <li dir="ltr">su richiesta, il DJND fornisce una copia dei dati personali trattati all'interessato.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di rettifica: l'interessato ha il diritto di ottenere dal DJND la rettifica dei dati personali inesatti che lo riguardano o l'integrazione dei dati personali incompleti.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto alla cancellazione (diritto all'oblio): l'interessato ha il diritto di ottenere la cancellazione dei dati personali che lo riguardano in presenza di uno dei seguenti casi:
+              <ul>
+                <li dir="ltr">i dati personali non sono più necessari rispetto alle finalità per le quali sono stati raccolti o altrimenti trattati;</li>
+                <li dir="ltr">l'interessato revoca il consenso su cui si basa il trattamento e se non sussiste altro fondamento giuridico per il trattamento;</li>
+                <li dir="ltr">l'interessato si oppone al trattamento e non sussiste alcun motivo legittimo prevalente per procedere al trattamento.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di limitazione del trattamento: l’interessato ha il diritto di ottenere dal titolare del trattamento la limitazione del trattamento nel caso ricorresse una delle seguenti ipotesi:
+              <ul>
+                <li dir="ltr">i dati non sono accurati;</li>
+                <li dir="ltr">il trattamento è illecito e l’interessato si oppone alla cancellazione dei dati personali;</li>
+                <li dir="ltr">benché DJND non ne abbia più bisogno ai fini del trattamento, i dati personali sono necessari all’interessato per l’accertamento, l’esercizio o la difesa di un diritto in sede giudiziaria;</li>
+                <li dir="ltr">l’interessato si è opposto al trattamento.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto alla portabilità dei dati: l’interessato ha il diritto di richiedere un estratto dei dati forniti a DJND qualora il trattamento si basi sul consenso o su un contratto e sia effettuato con mezzi automatizzati.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di opposizione: l’interessato ha il diritto di opporsi al trattamento dei dati personali. Tale diritto si applica solo al trattamento dei dati personali effettuato in base ad un interesse legittimo che prevale sugli interessi dell'interessato.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di proporre reclamo in merito al trattamento dei dati personali: l’interessato ha il diritto di proporre reclamo in merito al trattamento dei dati personali agli indirizzi del titolare del trattamento indicati all'articolo 1 della presente informativa.
+            </p>
+          </li>
+          </ol>
+          <p dir="ltr">
+          Inoltre, nel caso l’interessato ritenesse che il trattamento dei suoi dati personali violi la normativa vigente ha il diritto di proporre reclamo direttamente a un’autorità di controllo. Contatti del Garante per la protezione dei dati personali:
+          </p>
+          <p dir="ltr" style="margin-left:36pt;">
+          Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 - Roma, Italia
+          <br/>
+          Telefon: +39 06.696771
+          <br/>
+          E-pošta: protocollo@gpdp.it
+          </p>
       cookies:
-        title: Pravilnik o piškotkih
-        main_title: Pravilnik o piškotkih
-        date: 12. 12. 2012
+        title: Cookies
+        main_title: Cookies
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2 dir="ltr">Cookies</h2>
+          <p dir="ltr">
+          Le Linee guida cookie e altri strumenti di tracciamento - 10 giugno 2021 [9677876] ha introdotto le norme sull'uso dei cookie e di altre simili tecnologie per memorizzare o accedere alle informazioni memorizzate sui computer, tablet o dispositivi mobili degli utenti. Il nostro strumento può scaricare il cosiddetto “cookie” nel browser del vostro computer.
+          </p>
+
+          <h3 dir="ltr">Che cosa sono i cookie?</h3>
+          <p dir="ltr">
+          I cookie sono piccoli file di testo che forniscono informazioni sul numero di visite del nostro sito e sui contenuti visualizzati dall'utente. I cookie non sono dannosi e la loro durata è limitata. I cookie non contengono informazioni che consentono l'identificazione personale degli utenti. Gli utenti hanno sempre la possibilità di accettare o rifiutare i cookie. La maggior parte dei browser accetta automaticamente i cookie, ma modificando le impostazioni del browser si può accettare o rifiutare i cookie o decidere di ricevere un messaggio di avviso prima di accettare un cookie dai siti web visitati.
+          </p>
+
+          <h3 dir="ltr">A cosa servono i cookie?</h3>
+          <p dir="ltr">
+          Sono degli strumenti fondamentali che migliorano l'esperienza di navigazione dell'utente. I cookie rendono più semplice e veloce l'interazione tra l'utente ed il servizio web. I cookie consentono di ricordare le preferenze, gli interessi e le esperienze dell'utente, risparmiando tempo e rendendo l'uso del servizio web più efficiente e semplice.
+          </p>
+
+          <h3 dir="ltr">Cookie strettamente necessari</h3>
+          <p dir="ltr">
+          Si tratta di cookie indispensabili per il corretto funzionamento dei servizi online e senza i quali non sarebbe possibile effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica. Questi cookie sono utilizzati per consentire il funzionamento dei servizi online di facile utilizzo, una migliore esperienza dell'utente e non richiedono il consenso.
+          </p>
+          <p dir="ltr">
+          Lo strumento web Consul, che alimenta Breg, utilizza solo due cookie strettamente necessari:
+          </p>
+          <ul>
+          <li dir="ltr">
+            <strong>_consul_session</strong>
+            <br/>
+            viene utilizzato per consentire all'utente di accedere allo strumento online e di votare.
+          </li>
+          <li dir="ltr">
+            <strong>ahoy_visit in ahoy_visitor</strong>
+            <br/>
+            viene utilizzato per impedire gli abusi della sessione utente.
+          </li>
+          </ul>
       transparency:
-        title: Transparentno upravljanje
-        main_title: Transparentno upravljanje
-        date: 12. 12. 2012
+        title: Amministrazione trasparente
+        main_title: Amministrazione trasparente
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2>Amministrazione trasparente</h2>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/amministrazione-trasparente-3527/bandi-di-gara-e-contratti-3568">Bandi di gara e contratti</a>
+          <br>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/amministrazione-trasparente-3527/bandi-di-concorso-3552">Bandi di concorso</a>
+          <br>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/albo-pretorio-3612">Albo pretorio</a>
       legal:
-        title: Pravno obvestilo
-        main_title: Pravno obvestilo
-        date: 12. 12. 2012
+        title: Condizioni d'uso
+        main_title: Condizioni d'uso
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2>Condizioni d'uso</h2>
+          <p>Lo scopo di questo avviso è di aiutarvi a comprendere il funzionamento dello strumento online del bilancio partecipativo del Comune di San Dorligo della Valle - Dolina.</p>
+          <p dir="ltr">
+          L’uso attivo dello strumento online viene considerato quale consenso dell’utente in merito alle presenti condizioni generali d'uso. Per partecipare attivamente è necessario essere iscritti ed aver accettato le presenti condizioni d'uso. Qualora non accettiate le presenti condizioni, siete pregati di non utilizzare il sito.
+          </p>
+          <p dir="ltr">
+          Ci riserviamo il diritto di modificare le presenti condizioni generali d'uso in qualsiasi momento e senza preavviso pubblicando una nuova versione su questo sito web. La versione più recente delle Condizioni generali d’uso è riscontrabile dalla data dell’ultima modifica, riportata nell’intestazione delle presenti Condizioni.
+          </p>
+          <p>In caso di dubbi, scegliete una delle opzioni di contatto riportate di seguito</p>
+          <p>
+          <a href='segreteria-tajnistvo@sandorligo-dolina.it' target="_blank">segreteria-tajnistvo@sandorligo-dolina.it</a>
+          <br/>
+          Telefono: durante le ore d'ufficio 040 8329111 (togliendo un zero dal prefisso)
+          <br/>
+          Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)
+          </p>
+          <p>
+          Assistenza tecnica:
+          <br/>
+          <a href='mailto:consul@djnd.si' target="_blank">consul@djnd.si</a>
+          <br/>
+          Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana
+          </p>
+
+          <br/>
+          <hr/>
+          <br/>
+
+          <h2 dir="ltr">
+          Informazioni sullo strumento online
+          </h2>
+          <p dir="ltr">
+          Lo strumento online incentiva la partecipazione civica e consente una governance aperta, trasparente e democratica a livello comunale e nazionale. L'app è basata sulla piattaforma open-source Consul, sviluppata sotto il patrocinio del Comune di Madrid e adattata alle esigenze dei comuni sloveni dall'Istituto Danes je nov dan.
+          </p>
+          <p dir="ltr">
+          Lo strumento online vi permette di partecipare direttamente al processo decisionale, per stabilire di comune accordo la destinazione di una parte del bilancio comunale. Gli utenti possono presentare, sostenere, votare e monitorare lo stato di avanzamento delle proposte di progetto.
+          </p>
+          <p dir="ltr">
+          Possono partecipare tutte le cittadine ed i cittadini residenti ad San Dorligo della Valle - Dolina che abbiano compiuto 18 anni d'età (ovvero ne compiranno nel corso del 2025) e che si siano registrati allo strumento online. Ogni cittadino può presentare 3 proposte di progetto per la propria zona di residenza e, durante il periodo di votazione, ogni utente può votare 3 progetti su tutto il territorio comunale (indipendentemente dalla zona di residenza).
+          </p>
+          <p>
+          Lo strumento consente all'utente di:
+          </p>
+          <ol>
+          <li>
+            <span>Presentare proposte</span>
+            <br/>
+            Per presentare una proposta, l'utente deve specificare il titolo della proposta di progetto e la descrizione, inoltre, può aggiungere un'immagine o la posizione della proposta e altri documenti. La proposta di progetto presentata viene automaticamente accettata e visualizzata nello strumento online. Gli utenti possono condividere la proposta sui social media, via e-mail o tramite il link accorciato.
+          </li>
+          <li>
+            <span>Votare proposte</span>
+            <br/>
+            Gli utenti possono votare le proposte di progetto degli altri utenti. Ogni utente può votare ogni proposta progettuale un’unica volta. Ogni utente può votare un solo progetto presentato. In fase di raccolta voti, l’utente può anche ritirare il voto espresso alla singola proposta.
+          </li>
+          <li>
+            <span>Monitorare le proposte selezionate</span>
+            <br/>
+            Nella fase finale, lo strumento consente di monitorare i risultati dell'implementazione.
+          </li>
+          </ol>
+
+          <br/>
+          <h2 dir="ltr">Registrazione</h2>
+          <p dir="ltr">
+          Solo gli utenti registrati possono presentare proposte di progetti e votare i progetti presentati. Gli utenti non registrati possono seguire i contenuti pubblicati, ma non possono presentare proposte di progetti o votarli.
+          </p>
+          <p dir="ltr">
+          Registrandosi, l'utente conferma di avere 18 anni (o di compierli nel 2025) e di essere a conoscenza dei propri diritti e obblighi riportati nell'Informativa sul trattamento dei dati personali ai sensi del Regolamento generale sulla protezione dei dati e autorizza il Comune di di San Dorligo della Valle - Dolina a verificare l'autenticità dei dati personali ai fini del progetto del Bilancio partecipativo del Comune di San Dorligo della Valle - Dolina da registri ufficiali e banche dati presso i titolari del trattamento dei dati personali.
+          </p>
+          <p dir="ltr">
+          Al momento della registrazione, l'utente deve specificare:
+          </p>
+          <ul>
+          <li>
+            il nome utente,
+          </li>
+          <li>
+            l’indirizzo e-mail,
+          </li>
+          <li>
+            numero di tessera elettorale o codice fiscale
+          </li>
+          </ul>
+          <p dir="ltr">
+          I dati personali conferiti dall'utente attraverso l'apposito modulo di registrazione su questa piattaforma online verranno utilizzati al solo fine di implementazione del bilancio partecipativo nel nostro comune e non saranno trasmessi a terzi, fatti salvi gli obblighi di legge.
+          </p>
+          <p dir="ltr">
+          L'account dell'utente viene attivato alla conferma della e-mail di attivazione inviata all'indirizzo e-mail del richiedente. È vietato creare più account da parte dello stesso utente.
+          </p>
+          <p dir="ltr">
+          L'omissione di una qualsiasi delle informazioni di cui sopra impedirà all'utente di completare con successo la registrazione e di conseguenza non potrà utilizzare lo strumento online.
+          </p>
+          <p dir="ltr">
+          Con l’uso dello strumento online, l'utente acconsente a rendervi pubblicamente visibile il nome utente e/o il nome e cognome ogniqualvolta presenta proposte e commenti.
+          </p>
+
+          <br/>
+          <h2 dir="ltr">Adozione delle regole</h2>
+          <p dir="ltr">
+          Al momento della registrazione, l'utente deve accettare le regole di utilizzo dello strumento online.
+          </p>
+          <p dir="ltr">
+          Accettando le regole, l'utente si impegna innanzitutto a rispettare nella formulazione di proposte sia la Costituzione e sia le leggi della Repubblica Italiana, ciò significa in particolare, che:
+          </p>
+          <ul>
+          <li>
+            non pubblicherà contenuti che promuovano l’intolleranza sessuale, razziale, etnica o religiosa o qualsiasi forma di discriminazione fondata sulle circostanze personali degli individui;
+          </li>
+          <li>
+            non pubblicherà contenuti che violino o infrangano i diritti di terzi;
+          </li>
+          <li>
+            non pubblicherà immagini o fotografie di proprietà di terzi o che utilizzano dati di terzi senza previo consenso di proprietari e terzi;
+          </li>
+          <li>
+            non userà un linguaggio minaccioso, sprezzante, osceno, umiliante o offensivo;
+          </li>
+          <li>
+            non pubblicherà opere protette da copyright e non utilizzerà lo strumento per distribuire contenuti protetti da copyright o contenuti di proprietà di altre persone fisiche o giuridiche.
+          </li>
+          </ul>
+          <p dir="ltr">
+          La violazione delle regole di cui sopra comporta la sospensione temporanea o la chiusura definitiva dell'account dell'utente e/o la rimozione dei contenuti.
+          </p>
+        
+          <br/>
+          <h2 dir="ltr">
+          Contenuti e limitazione della responsabilità nell'utilizzo dello strumento online
+          </h2>
+          <p dir="ltr">
+          Ci riserviamo il diritto di modificare, aggiungere o rimuovere contenuti senza preavviso e non ci assumiamo alcuna responsabilità per le conseguenze di tali modifiche.
+          </p>
+          <p dir="ltr">
+          I visitatori dello strumento online utilizzano lo strumento online, le sue parti e i suoi contenuti esclusivamente a proprio rischio e pericolo. Non ci assumiamo alcuna responsabilità per l'accuratezza e la correttezza delle informazioni e dei contenuti pubblicati nello strumento online, per eventuali modifiche di informazioni o contenuti già pubblicati, o per eventuali danni subiti dai visitatori in seguito all'utilizzo delle informazioni o dei contenuti pubblicati.
+          </p>
+          <p dir="ltr">
+          Non ci assumiamo alcuna responsabilità per qualsiasi tipo di controversia, lite, contestazione e/o contenzioso che possa derivare dalla pubblicazione o diffusione di contenuti per i quali non sia stata ottenuta l'autorizzazione da parte dei legittimi proprietari. La responsabilità per ogni violazione dei diritti di proprietà intellettuale o industriale ricade sulla persona che ha fornito i contenuti.
+          </p>
+          <p dir="ltr">
+          Inoltre, non ci assumiamo alcuna responsabilità per eventuali danni derivanti dall’utilizzo dello strumento online e non rilasciamo alcuna garanzia in merito ai risultati dell'uso dello strumento online. Non potremo in alcun caso essere ritenuti responsabili di ogni e qualsiasi danno derivante dall'uso o dall'impossibilità di utilizzare lo strumento online, compresi i danni per mancato guadagno o perdita di profitto, perdita o svalutazione dell'avviamento, perdita di giro d’affari o dati. Non saremo responsabili nei confronti dell'utente per danni diretti, indiretti, incidentali, speciali, punitivi, consequenziali o di qualsiasi altra natura derivanti direttamente, indirettamente o in qualsiasi altro modo da errori, sbagli o imprecisioni nei contenuti dello strumento online o da qualsiasi altra circostanza relativa allo strumento stesso o al suo utilizzo.
+          </p>
+          <p dir="ltr">
+          Inoltre, non saremo responsabili nei confronti dell’utente per eventuali danni derivanti dall'accesso o dall'uso non autorizzato dei nostri server e/o di tutti i dati in essi contenuti.
+          </p>
+          <p dir="ltr">
+          Il sito contiene anche link che reindirizzano a siti web di altri soggetti. Non abbiamo alcun controllo sul funzionamento di questi siti web o sui loro contenuti e pertanto non ci assumiamo alcuna responsabilità per l'accuratezza delle informazioni e dei contenuti ivi pubblicati.
+          </p>
+          <p dir="ltr">
+          Inoltre, non siamo responsabili dei contenuti che:
+          </p>
+          <ul>
+          <li>
+            promuovono l’intolleranza sessuale, razziale, etnica o religiosa o qualsiasi forma di discriminazione fondata sulle circostanze personali degli individui;
+          </li>
+          <li>
+            infrangono o violano la privacy di terzi, sono di proprietà di terzi o utilizzano dati di terzi senza l'adeguato consenso dei proprietari e dei terzi;
+          <li>
+            contengono minacce e offese oppure un linguaggio osceno, umiliante o offensivo;
+          </li>
+          <li>
+            sono opere protette da copyright per le quali l'utente non detiene i diritti d'autore. La responsabilità per ogni violazione dei diritti di proprietà intellettuale o industriale ricade sulla persona che fornisce i contenuti.
+          </li>
+          </ul>
+          <p dir="ltr">
+          Ci impegneremo a rimuovere tali contenuti dallo strumento online il prima possibile e a imporre sanzioni adeguate agli utenti in questione.
+          </p>
+          <p dir="ltr">
+          In caso di controversie tra gli utenti dello strumento online e/o terzi, siamo esonerati da qualsiasi responsabilità in caso di richieste di risarcimento danni o indennizzi di qualsiasi natura relativi ai contenuti dello strumento online e/o derivanti da procedimenti legali.
+          </p>
+
+          <br/>
+
     dolina:
       mayor:
         title: Gentili cittadine e cittadini,

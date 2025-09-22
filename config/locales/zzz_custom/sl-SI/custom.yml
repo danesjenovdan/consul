@@ -589,32 +589,394 @@ sl-SI:
     italy:
       privacy:
         title: Pravilnik o zasebnosti
-        main_title: Transparentno upravljanje
-        date: 12. 12. 2012
+        main_title: Pravilnik o zasebnosti
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2 dir="ltr">Varovanje osebnih podatkov</h2>
+          <p dir="ltr">
+          Upravljalec osebnih podatkov je:
+          </p>
+          <p dir="ltr">
+          Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)
+          <br/>
+          Matična številka:  80009970320
+          <br/>
+          Pooblaščena oseba za varstvo osebnih podatkov: Dott. Andrea Ciappesoni
+          <br/>
+          E-naslov: dpo.privacy@sandorligo-dolina.it
+          <br/>
+          telefon: 0408329111
+          </p>
+          <p dir="ltr">
+          Obdelovalec osebnih podatkov na spletnem orodju Breg je:
+          </p>
+          <p dir="ltr" style="margin-left:36pt;">
+          Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana
+          <br/>
+          Matična številka: 6468594000
+          <br/>
+          E-naslov: vsi@danesjenovdan.si
+          </p>
+          <p dir="ltr">
+          Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Občine Dolina in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili.
+          </p>
+          <p dir="ltr">
+          Inštitut Danes je nov dan je predan varovanju osebnih podatkov in transparentni rabi podatkov, da lahko uporabniki ter podporniki kar se da brez skrbi spremljajo ter podpirajo naše delo. Spoštujemo vaše zaupanje in vam zagotavljamo, da bomo z vašimi osebnimi podatki ravnali skrbno in jih obdelovali v skladu z veljavno zakonodajo na področju varovanja osebnih podatkov (GDPR in Codice in materia di protezione dei dati personali). V nadaljevanju vam podrobneje opisujemo namene in podlago obdelav vaših osebnih podatkov in vas seznanjamo z vašimi pravicami.
+          </p>
+
+          <br/>
+          <h3 dir="ltr">Na kateri pravni podlagi obdelujemo osebne podatke</h3>
+          <p dir="ltr">
+          Razlogi za obdelavo osebnih podatkov:
+          </p>
+          <ul>
+          <li dir="ltr">
+            <p dir="ltr">posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Breg.</p>
+          </li>
+          </ul>
+
+          <br/>
+          <h3 dir="ltr">Katere osebne podatke shranjujemo</h3>
+          <p dir="ltr">
+          Shranjujemo podatke o:
+          </p>
+          <ul>
+          <li dir="ltr">
+            uporabniško ime,
+          </li>
+          <li dir="ltr">
+            elektronskem naslovu uporabnice_ka,
+          </li>
+          <li dir="ltr">
+            številko volilne izkaznice ali davčno številko
+          </li>
+          </ul>
+          <p dir="ltr">
+          Drugih osebnih podatkov obdelovalec podatkov ne shranjuje.
+          </p>
+          <p dir="ltr">
+          Osebni podatki se ne prenašajo v tretje države ali mednarodne organizacije.
+          </p>
+
+          <h3 dir="ltr">Na kakšen način obdelujemo osebne podatke</h3>
+          <p dir="ltr">
+          Upravljalec hrani osebne podatke o uporabnici_ku zgolj za namene pravilnega delovanja spletnega orodja, omogočanju zgoraj navedenih funkcionalnosti orodja ter obveznega in/ali dovoljenega komuniciranja z uporabnico_kom (posodobitve, motnje v delovanju, druge aktivnosti povezane z delovanjem in uporabo aplikacije ali kakršne koli druge na aplikacijo navezane aktivnosti).
+          </p>
+
+          <h3 dir="ltr">Trajanje hrambe osebnih podatkov</h3>
+          <p dir="ltr">
+          Podatke hranimo do izpolnitve namena, za katerega se ti podatki zbirajo, tj. do prekinitve uporabe orodja s strani uporabnice_ka. Uporabnica_k lahko kadarkoli prekinitev uporabe spletnega orodja in zahtevo za izbris iz evidence uporabnikov javi na e-naslov consul@djnd.si. Po prejetem emailu, ki prekinja uporabo spletnega orodja, bo obdelovalec podatkov vse podatke v naslednjem 1 mesecu izbrisal. Kljub izbrisu osebnih podatkov uporabnice_ka se predlogi, komentarji in podatki o glasovanjih hranijo, a so pripisani &quot;izbrisanemu uporabniku&quot;.
+          </p>
+
+          <h3 dir="ltr">Vpogled v podatke in pravice posameznic_kov</h3>
+          <p dir="ltr">
+          Posameznica_k ima v zvezi z osebnimi podatki vrsto pravic, ki jih navajamo spodaj. Posameznica_k lahko zahteva izvoz in vpogled do osebnih podatkov, ki jih DJND hrani o uporabnici_ku, s posredovanjem pisne zahteve na e-naslov consul@djnd.si. Osebni podatki so shranjeni v posebni aplikaciji, ki spoštuje zahteve zasebnosti ter si za najvišjo varnost hranjenih podatkov prizadeva z različnimi fizičnimi, tehničnimi in organizacijskimi ukrepi.
+          </p>
+          <p dir="ltr">
+          DJND pred izvrševanjem pravice preveri identiteto posameznice_ka, ki sprašuje o svojih pravicah.
+          </p>
+          <p dir="ltr">
+          Izpolnitev upravičene zahteve DJND izpolni v roku 1 meseca, pri čemer se ta rok lahko v primeru kompleksnosti zahtev oziroma večjega števila zahtev podaljša še največ za 2 meseca. V tem primer DJND o podaljšanju in razlogih zanj obvesti posameznico_ka.
+          </p>
+          <p dir="ltr">
+          Vrste pravic:
+          </p>
+          <ol>
+          <li dir="ltr">
+            <p>
+              Pravica dostopa do podatkov: posameznico_ka na njegovo zahtevo seznanimo, ali se v zvezi z njo obdelujejo osebni podatki in kadar to drži, posredujemo naslednje informacije:
+              <ul>
+                <li dir="ltr">vrste osebnih podatkov;</li>
+                <li dir="ltr">kategorije uporabnice_ka, ki so jim bili, ali jim bodo razkriti osebni podatki;</li>
+                <li dir="ltr">roki hrambe;</li>
+                <li dir="ltr">obstoj pravice, da se od DJND zahteva popravek ali izbris osebnih podatkov ali omejitev obdelave osebnih podatkov v zvezi s posameznico_kom, na katero se nanašajo osebni podatki, ali obstoj pravice do ugovora k taki obdelavi;</li>
+                <li dir="ltr">pravica do vložitve pritožbe pri informacijskem pooblaščencu;</li>
+                <li dir="ltr">kadar osebni podatki niso zbrani od posameznice_ka, vse razpoložljive informacije v zvezi z njihovim virom;</li>
+                <li dir="ltr">obstoj avtomatiziranega sprejemanja odločitev, vključno z oblikovanjem profilov;</li>
+                <li dir="ltr">na podlagi zahteve DJND izdela kopijo osebnih podatkov, ki se obdelujejo in jih posreduje posameznici_ku.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Pravica do popravka: Posameznica_k lahko kadarkoli zahteva, da DJND popravi netočne podatke ali dopolni nepopolne podatke, ki se nanašajo nanjo.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Pravica do izbrisa podatkov (pravica do pozabe): Posameznica_k lahko zahteva, da se njeni osebni podatki izbrišejo v naslednjih primerih:
+              <ul>
+                <li dir="ltr">osebni podatki niso več potrebni v namene, za katere so bili zbrani, ali kako drugače obdelani;</li>
+                <li dir="ltr">posameznica_k prekliče privolitev, na podlagi katere poteka obdelava, in kadar za obdelavo ne obstaja nobena druga pravna podlaga;</li>
+                <li dir="ltr">posameznica_k obdelavi osebnih podatkov ugovarja, za njihovo obdelavo pa ne obstajajo nobeni prevladujoči zakoniti razlogi.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Pravica do omejitve obdelave: Posameznica_k lahko zahteva, da se obdelava podatkov, ki se nanašajo nanjo omeji v naslednjih primerih:
+              <ul>
+                <li dir="ltr">podatki niso točni;</li>
+                <li dir="ltr">je obdelava nezakonita in posameznica_k ne želi, da podatke izbrišemo;</li>
+                <li dir="ltr">DJND podatkov ne potrebuje več za namene obdelav, vendar jih potrebuje posameznica_k za uveljavljanje, izvajanje ali nasprotovanje pravnim zahtevkom;</li>
+                <li dir="ltr">je posameznica_k vložil ugovor v zvezi z obdelavo.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Pravica do prenosljivosti podatkov: Posameznica_k lahko zahteva izpis podatkov, ki jih je posredoval_a DJND, pri čemer obdelava teh podatkov temelji na podlagi pogodbe ali privolitve in se obdelava izvaja z avtomatiziranimi sredstvi.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Pravica do ugovora: Posameznica_k lahko ugovarja obdelavi osebnih podatkov. Ta pravica se nanaša le na obdelavo osebnih podatkov, ki jo izvajamo na podlagi legitimnega interesa, ki prevlada nad interesi posameznice_ka.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Pravica do vložitve pritožbe v zvezi z obdelovanjem osebnih podatkov: Posameznica_k lahko morebitno pritožbo v zvezi z obdelovanjem osebnih podatkov pošlje na naslove upravljavca iz prvega člena te politike.
+            </p>
+          </li>
+          </ol>
+          <p dir="ltr">
+          Prav tako ima vsak_a posameznica_k, na katero se nanašajo osebni podatki, pravico, da vloži pritožbo neposredno pri Informacijskem pooblaščencu, če meni, da obdelava osebnih podatkov v zvezi z njo krši veljavno zakonodajo. Kontakt Informacijskega pooblaščenca:
+          </p>
+          <p dir="ltr" style="margin-left:36pt;">
+          Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 - Roma, Italia
+          <br/>
+          Telefon: +39 06.696771
+          <br/>
+          E-pošta: protocollo@gpdp.it
+          </p>
       cookies:
         title: Pravilnik o piškotkih
         main_title: Pravilnik o piškotkih
-        date: 12. 12. 2012
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2 dir="ltr">Piškotki</h2>
+          <p dir="ltr">
+          Smernice o piškotkih in drugih orodjih za sledenje - 10. junij 2021 [9677876] so v pravni red prinesel pravila glede uporabe piškotkov in podobnih tehnologij za shranjevanje informacij ali dostop do informacij, shranjenih na računalnikih, tablicah ali mobilnih napravah uporabnikov. Naše orodje lahko v brskalnik vašega računalnika odloži tako imenovani »piškotek«.
+          </p>
+
+          <h3 dir="ltr">Kaj so piškotki?</h3>
+          <p dir="ltr">
+          Piškotki so majhne besedilne datoteke, ki nam dajejo podatke o tem, kolikokrat oseba obišče našo stran in katere vsebine si uporabnik ogleduje. Piškotki niso škodljivi in so vedno časovno omejeni. Piškotki sami ne vsebujejo nobenih podatkov, ki bi omogočali identifikacijo osebe. Vedno imate možnost, da piškotke sprejmete ali zavrnete. Večina spletnih brskalnikov samodejno sprejme piškotke, kar lahko spremenite v nastavitvah tako, da računalnik piškotke zavrne ali pa da prejmete opozorilo, preden se piškotek shrani.
+          </p>
+
+          <h3 dir="ltr">Zakaj so potrebni?</h3>
+          <p dir="ltr">
+          So temeljnega pomena za zagotavljanje uporabnici_ku prijaznih spletnih storitev. Interakcija med spletno_im uporabnico_kom in spletno storitvijo je s pomočjo piškotkov hitrejša in enostavnejša. Z njihovo pomočjo si spletna storitve zapomni vaše želje, zanimanja in izkušnje, s tem je prihranjen čas, uporaba spletnih storitev pa je bolj učinkovita in prijazna.
+          </p>
+
+          <h3 dir="ltr">Nujno potrebni piškotki</h3>
+          <p dir="ltr">
+          To so piškotki, ki so nujni za pravilno delovanje spletnih storitev in brez njih prenos sporočila v komunikacijskem omrežju ne bi bilo mogoče. Ti piškotki omogočajo uporabnici_ku delovanje prijaznih spletnih storitev, boljšo uporabniško izkušnjo in za njih ni potrebno pridobiti soglasja.
+          </p>
+          <p dir="ltr">
+          Spletno orodje Consul, ki poganja Breg, uporablja zgolj dva nujno potrebna piškotka:
+          </p>
+          <ul>
+          <li dir="ltr">
+            <strong>_consul_session</strong>
+            <br/>
+            Se uporablja, da je uporabnic_ka lahko vpisan_a v spletno orodje in lahko glasuje.
+          </li>
+          <li dir="ltr">
+            <strong>ahoy_visit in ahoy_visitor</strong>
+            <br/>
+            Se uporabljata za preprečevanje zlorab uporabniške seje.
+          </li>
+          </ul>
       transparency:
         title: Transparentno upravljanje
         main_title: Transparentno upravljanje
-        date: 12. 12. 2012
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2>Transparentno upravljanje</h2>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/amministrazione-trasparente-3527/bandi-di-gara-e-contratti-3568">Javna naročila in pogodbe</a>
+          <br>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/amministrazione-trasparente-3527/bandi-di-concorso-3552">Natečaji</a>
+          <br>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/albo-pretorio-3612">Oglasna deska</a>
       legal:
         title: Pravno obvestilo
         main_title: Pravno obvestilo
-        date: 12. 12. 2012
+        date: 1. 6. 2025
         html: |
-          <h2>Naslov</h2>
-          <p>Odstavek</p>
+          <h2>Pravno obvestilo</h2>
+          <p>Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Breg.</p>
+          <p dir="ltr">
+          Aktivno uporabo spletnega orodja štejemo kot soglasje uporabnice_ka, da se strinja s temi splošnimi pogoji uporabe. Vsi, ki želijo aktivno sodelovati, se morajo registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe. V kolikor se kot uporabnica_k ne strinjate s temi splošnimi pogoji, vas prosimo, da spletnega mesta ne uporabljate.
+          </p>
+          <p dir="ltr">
+          Pridružujemo si pravico, da splošne pogoje kadarkoli in brez predhodne najave spremenimo, tako da novo različico objavimo na tej spletni strani. Različica splošnih pogojev je razvidna iz datuma njihove zadnje spremembe, ki je zabeležena na vrhu teh pogojev.
+          </p>
+          <p>V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti.</p>
+          <p>
+          <a href='segreteria-tajnistvo@sandorligo-dolina.it' target="_blank">segreteria-tajnistvo@sandorligo-dolina.it</a>
+          <br/>
+          Telefon: v času uradnih ur občinske uprave na 0408329111
+          <br/>
+          Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)
+          </p>
+          <p>
+          Tehnična pomoč
+          <br/>
+          <a href='mailto:consul@djnd.si' target="_blank">consul@djnd.si</a>
+          <br/>
+          Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana
+          </p>
+
+          <br/>
+          <hr/>
+          <br/>
+
+          <h2 dir="ltr">
+          O orodju
+          </h2>
+          <p dir="ltr">
+          Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih in italijanskih občin pa so jo prilagodili na inštitutu Danes je nov dan.
+          </p>
+          <p dir="ltr">
+          Spletno orodje omogoča direktno soodločanje o delu občinskega proračuna. Uporabnice_ki lahko oddajajo, podpirajo in glasujejo o predlogih za projekte ter spremljajo njihov razvoj.
+          </p>
+          <p dir="ltr">
+          Sodeluje lahko vsak_a občan_ka občine, ki je star_a vsaj 18 let in se je registriral_a na spletnem orodju. Vsak_a občan_ka lahko odda 3 predloge v območju stalnega bivališča ter glasuje za 3 predloge neodvisno od območja stalnega bivališča.
+          </p>
+          <p>
+          Uporabnici_ku orodje omogoča:
+          </p>
+          <ol>
+          <li>
+            <span>Oddajo predlogov</span>
+            <br/>
+            Za oddajo predloga mora uporabnica_k obvezno določiti naslov predloga projekta, opis, doda lahko še sliko predloga, lokacijo predloga, druge dokumente. Po oddaji predloga projekta je ta samodejno sprejet in se prikaže na spletnem orodju. Uporabnica_k lahko predlog deli z drugimi na družbenih omrežjih, po e-pošti ali s skrajšano povezavo.
+          </li>
+          <li>
+            <span>Glasovanje za predloge</span>
+            <br/>
+            Uporabnica_k lahko glasuje za predloge projektov drugih uporabnic_kov. Za en predlog lahko glasuje le enkrat. Vsak uprabnik_ca lahko glasuje za en oddan projekt. Uporabnica_k lahko posameznemu predlogu v fazi zbiranja glasov tudi odvzame glas.
+          </li>
+          <li>
+            <span>Spremljanje izbranih predlogov</span>
+            <br/>
+            V zadnji fazi orodje omogoča spremljanje rezultatov izvedbe.
+          </li>
+          </ol>
+
+          <br/>
+          <h2 dir="ltr">Registracija</h2>
+          <p dir="ltr">
+          Le registrirane_i uporabnice_ki lahko oddajo predloge projektov, komentirajo in glasujejo za oddane projekte. Neregistrirane_i uporabnice_ki lahko prosto spremljajo objavljene vsebine, ne morejo pa oddajati predlogov projektov, o njih glasovati ali sodelovati v debatah.
+          </p>
+          <p dir="ltr">
+          Uporabnica_k z registracijo potrjuje, da je dopolnil_a 18 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Občino Dolina, da preveri verodostojnost osebnih podatkov za potrebe projekta Breg iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov.
+          </p>
+          <p dir="ltr">
+          Uporabnica_k mora ob registraciji navesti:
+          </p>
+          <ul>
+          <li>
+            uporabniško ime
+          </li>
+          <li>
+            elektronski naslov
+          </li>
+          <li>
+            Davčno številko ali številko volilne izkaznice
+          </li>
+          </ul>
+          <p dir="ltr">
+          Osebne podatke, pridobljene z registracijskim formularjem na tej spletni platformi bomo uporabljali izključno v namene izvedbe participativnega proračuna v naši občini in jih ne bomo posredovali v uporabo tretjim osebam, razen če bi od nas to zahteval zakon.
+          </p>
+          <p dir="ltr">
+          Ob potrditvi aktivacijskega elektronskega sporočila, ki ga uporabnica_k prejme na svoj elektronski naslov, se aktivira uporabniški račun. Kreiranje več uporabniških računov s strani ene_ga uporabnice_ka je prepovedano.
+          </p>
+          <p dir="ltr">
+          Če uporabnica_k katerega izmed navedenih podatkov ne posreduje, ji_mu je onemogočeno uspešno dokončanje registracije in posledično ne more uporabljati spletnega orodja.
+          </p>
+          <p dir="ltr">
+          Z uporabo spletnega orodja se uporabnica_k strinja, da se njeno uporabniško ime in/ali ime in priimek kaže javnosti na spletnem orodju pri oddanih predlogih in komentarjih.
+          </p>
+
+          <br/>
+          <h2 dir="ltr">Sprejem pravil</h2>
+          <p dir="ltr">
+          Ob registraciji mora uporabnica_k sprejeti pravila uporabe spletnega orodja.
+          </p>
+          <p dir="ltr">
+          S sprejemom pravil se uporabnica_k najprej zaveže, da bo ob podajanju predlogov spoštoval_a ustavo in zakone Republike Slovenije, kar zlasti pomeni, da:
+          </p>
+          <ul>
+          <li>
+            ne bo objavljal_a vsebin, ki bi spodbujale k spolni, rasni, narodnostni ali verski nestrpnosti ali h kakršni koli obliki diskriminacije na podlagi osebnih okoliščin posameznic_kov;
+          </li>
+          <li>
+            ne bo objavljal_a vsebin, ki bi kršile ali posegale v osebnostne pravice tretjih oseb;
+          </li>
+          <li>
+            ne bo objavljal_a slik ali fotografij, ki so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem dobil_a ustrezno soglasje lastnikov in tretjih oseb;
+          </li>
+          <li>
+            ne bo objavljal_a groženj, ne bo se izražal_a slabšalno, prostaško, poniževalno ali žaljivo;
+          </li>
+          <li>
+            ne bo objavljal_a avtorskih del, za katere nima avtorskih pravic, in orodja ne bo uporabil/-a za distribuiranje avtorsko zaščitenih vsebin ali vsebin, ki so v lasti druge pravne ali fizične osebe.
+          </li>
+          </ul>
+          <p dir="ltr">
+          Kršitev omenjenih pravil se kaznuje z začasno omejitvijo delovanja uporabnice_ka, prekinitvijo uporabniškega računa in/ali izbrisom vsebine.
+          </p>
+        
+          <br/>
+          <h2 dir="ltr">
+          Vsebine in omejitev odgovornosti pri uporabi spletnega orodja
+          </h2>
+          <p dir="ltr">
+          Pridržujemo si pravico do spreminjanja, dodajanja ali odstranitve vsebin brez predhodnega opozorila in ne prevzemamo odgovornosti za kakršne koli posledice takšnih sprememb.
+          </p>
+          <p dir="ltr">
+          Obiskovalci spletnega orodja uporabljajo spletno orodje, njene dele in vsebine izključno na lastno odgovornost. Ne prevzemamo nikakršne odgovornosti o točnosti in pravilnosti objavljenih informacij in vsebin na spletnem orodju, odgovornosti zaradi spremembe že objavljenih informacij ali vsebin in odgovornosti za morebitno nastalo škodo, ki bi obiskovalcu spletnega orodja nastala zaradi uporabe tam objavljenih informacij ali vsebin.
+          </p>
+          <p dir="ltr">
+          Ne prevzemamo odgovornosti za kakršno koli direktno ali indirektno vrsto polemike, spora in/ali pravdnega postopka, ki bi lahko nastal zaradi objave ali razširjanja vsebine, za katero s strani zakonitih lastnic_kov ni bilo pridobljeno dovoljenje. Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki je zagotovila vsebino.
+          </p>
+          <p dir="ltr">
+          Prav tako ne odgovarjamo za škodo, ki bi nastala zaradi uporabe spletnega orodja, in ne jamčimo za uspešnost uporabe spletnega orodja. V nobenem primeru ne odgovarjamo za kakršnokoli škodo, ki bi izvirala iz uporabe oziroma nezmožnosti uporabe spletnega orodja, vključno s škodo zaradi izgubljenega prihodka ali pričakovanega dobička, izgube ali okrnitve dobrega imena, izgube poslov ali izgube podatkov. Ne odgovarjamo za nadomestilo morebitne neposredne, posredne, naključne, posebne, kaznovalne, posledične škode, ali druge kakršne koli druge oblike škode, ki posredno, neposredno ali na kakršenkoli drug način izhaja iz napak, pomot ali netočnosti vsebine spletnega orodja, ali iz kakršnih koli drugih dejstev povezanih s spletnim orodjem ali njegovo uporabo.
+          </p>
+          <p dir="ltr">
+          Prav tako nismo odgovorni za nadomestilo kakršnekoli škode, ki nastane zaradi nepooblaščenega dostopa do, ali uporabe, naših strežnikov in/ali katerihkoli in vseh v njih shranjenih podatkov.
+          </p>
+          <p dir="ltr">
+          Na spletnem mestu so objavljene tudi povezave, ki kažejo na spletna mesta drugih oseb. Na delovanje teh spletnih mest in na njihovo vsebino ne moremo vplivati in zato ne sprejemamo nikakršne odgovornosti za točnost tam objavljenih informacij in vsebin.
+          </p>
+          <p dir="ltr">
+          Prav tako nismo odgovorni za vsebine:
+          </p>
+          <ul>
+          <li>
+            ki spodbujajo k spolni, rasni, narodnostni ali verski nestrpnosti ali h kakršnikoli obliki diskriminacije na podlagi osebnih okoliščin posameznic_kov;
+          </li>
+          <li>
+            ki kršijo ali posegajo v osebnostne pravice tretjih oseb, so v lasti tretjih oseb ali uporabljajo podatke tretjih oseb, ne da bi pri tem obstajalo ustrezno soglasje lastnic_kov in tretjih oseb;
+          </li>
+          <li>
+            ki so grožnje, slabšalne, prostaške, poniževalne ali žaljive;
+          </li>
+          <li>
+            ki so avtorska dela, za katere uporabnica_k nima avtorskih pravic. Vsaka kršitev pravic intelektualne ali industrijske lastnine je odgovornost osebe, ki zagotavlja vsebino.
+          </li>
+          </ul>
+          <p dir="ltr">
+          Trudili se bomo, da tovrstne vsebine kar najhitreje umaknemo s spletnega orodja in proti uporabnicam_kom uvedemo ustrezne sankcije.
+          </p>
+          <p dir="ltr">
+          V primeru kakršnega koli spora med uporabnicami_ki spletnega orodja in/ali tretjo osebo smo izvzeti iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in/ali nastalimi v sodnem postopku.
+          </p>
+
+          <br/>
+
     dolina:
       mayor:
         title: Spoštovane občanke in občani,
