@@ -1,6 +1,13 @@
 require "rails_helper"
 
 describe RemoteTranslations::Llm::Config do
+  # Ensure memoized context from RemoteTranslations::Llm::Config doesn't leak doubles
+  after do
+    if RemoteTranslations::Llm::Config.instance_variable_defined?(:@context)
+      RemoteTranslations::Llm::Config.remove_instance_variable(:@context)
+    end
+  end
+
   describe ".context" do
     it "creates a context with tenant secrets without errors" do
       secrets = { openai_access_token: "token" }

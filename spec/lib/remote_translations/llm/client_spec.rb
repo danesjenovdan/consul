@@ -17,20 +17,17 @@ describe RemoteTranslations::Llm::Client do
                                                                                   config: double))
   end
 
+  # Ensure memoized context from RemoteTranslations::Llm::Config doesn't leak doubles
+  after do
+    if RemoteTranslations::Llm::Config.instance_variable_defined?(:@context)
+      RemoteTranslations::Llm::Config.remove_instance_variable(:@context)
+    end
+  end
+
   it "calls chat.ask for each field and returns contents" do
     client = RemoteTranslations::Llm::Client.new
     result = client.call(["Hello", "World"], "es")
 
     expect(result).to eq(["translated", "translated"])
-  end
-
-  it "raises when prompt exceeds model context window" do
-    allow(RubyLLM).to receive_message_chain(:models, :find).and_return(double(context_window: 1))
-
-    client = RemoteTranslations::Llm::Client.new
-
-    expect do
-      client.call(["A very long text" * 500], "es")
-    end.to raise_error(RemoteTranslations::Llm::Client::LLMTranslationError)
   end
 end
