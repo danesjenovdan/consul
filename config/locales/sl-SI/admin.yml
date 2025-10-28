@@ -130,7 +130,7 @@ sl-SI:
           feasible: "Izvedljivo"
           unfeasible: "Neizvedljivo"
           undecided: "Neodločeno"
-        selected: "Izbrano"
+        selected: "Izbrano ✅"
         select: "Izberi"
         list:
           title: Naslov
