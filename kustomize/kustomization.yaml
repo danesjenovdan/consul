@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-dolina
-    newTag: '19b68f95b7ca140937e6f15d885886a90b994055'
+    newTag: 'b67779104513d64c2e400ed195c838a6d81c0a3b'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-dolina-assets
-  #   newTag: '19b68f95b7ca140937e6f15d885886a90b994055'
+  #   newTag: 'b67779104513d64c2e400ed195c838a6d81c0a3b'
