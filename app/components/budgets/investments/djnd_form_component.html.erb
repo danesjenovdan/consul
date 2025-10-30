@@ -50,7 +50,7 @@
     <% end %>
 
     <%= f.label :price, t("custom.form.price_label"), class: "inline-block" %>
-    <p class="help-text"><%= t("custom.form.price_help_text") %></p>
+    <p class="help-text"><%= raw t("custom.form.price_help_text") %></p>
     <%= f.number_field :price, label: false, :required => true %>
   </fieldset>
 

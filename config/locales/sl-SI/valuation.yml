@@ -4,10 +4,10 @@ sl-SI:
       title: Cenitev
     menu:
       title: Cenitev
-      budgets: Participatorni proračun
+      budgets: Participativni proračun
     budgets:
       index:
-        title: Participatorni proračun
+        title: Participativni proračun
         filters:
           current: Odprti
           finished: Končani

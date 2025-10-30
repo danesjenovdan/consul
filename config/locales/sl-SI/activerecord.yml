@@ -94,7 +94,7 @@ sl-SI:
         name: "Ime"
       budget/investment:
         heading_id: "Območje"
-        title: "Naslov predloga"
+        title: "Ime predloga"
         description: "Opis"
         external_url: "Povezava do dodatne dokumentacije"
         location: "Lokacija (neobvezno)"
@@ -115,7 +115,7 @@ sl-SI:
         valuator_ids: "Skupine"
         valuation_tag_list: "Oznake"
       budget/investment/translation:
-        title: "Naslov predloga"
+        title: "Ime predloga"
         description: "Opis predloga"
       geozone:
         name: Ime
@@ -371,6 +371,8 @@ sl-SI:
           attributes:
             email:
               password_already_set: "Ta uporabnik že ima geslo"
+            address:
+              invalid: "Prosim izberi naslov izmed ponujenih možnosti"
         debate:
           attributes:
             tag_list:

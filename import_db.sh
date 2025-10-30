@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # EDIT DATABASE NAME TO CHOOSE WHICH ONE YOU WANT
-DATABASE_NAME="consul_staging"
+DATABASE_NAME="consul_medvode"
 
 # DATABASE PASSWORD IS DYNAMICALLY RETRIEVED FROM THE CLUSTER
 DATABASE_PASSWORD=$(kubectl get secret postgresql-11 -n shared -o jsonpath="{.data.postgresql-password}" | base64 --decode)
