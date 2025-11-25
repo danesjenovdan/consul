@@ -88,7 +88,7 @@ it:
     budget_investments:
       alert:
         unverified_user: L'utente non è verificato
-      create: Crea un investimento di bilancio
+      create: Crea una proposta progettuale
       edit: Modifica budget investimento
       filters:
         heading: Concetto

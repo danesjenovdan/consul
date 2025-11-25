@@ -3,9 +3,12 @@ load Rails.root.join('app', 'models', 'user.rb')
 
 class User < ApplicationRecord
 
-  validate :emso_number, on: :create
-#   validate :validate_data_consent, on: :create
+  # validate :emso_number, on: :create
+  validate :validate_data_consent, on: :create
   validates :email, on: :create, presence: true
+  validates :document_number, on: :create, presence: true
+  validates :address, on: :create, presence: true
+  # validates :phone_number, on: :create, presence: true
   
   def validate_data_consent
     unless data_consent

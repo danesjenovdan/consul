@@ -1,10 +1,11 @@
 module Consul
   class Application < Rails::Application
     # this is where we set slovenian as the default (and only) locale
-    config.i18n.default_locale = "sl-SI"
+    config.i18n.default_locale = "it"
     available_locales = [
+      "en",
+      "it",
       "sl-SI",
-      "en"
     ]
     config.i18n.available_locales = available_locales
 

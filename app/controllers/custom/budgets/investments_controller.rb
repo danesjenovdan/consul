@@ -140,10 +140,20 @@ module Budgets
       @tag_cloud = tag_cloud
       @remote_translations = detect_remote_translations(@investments)
 
+      # this is used to show / hide the button to add new investments
+      @allowed_to_add_investment = true
+      if @budget.investments.where(author: current_user).count >= 1
+        @allowed_to_add_investment = false
+      end
     end
 
     # this is so we get fields for questions on the new investment form
+    # and to check if user submitted a proposal already before that
     def new
+      if @budget.investments.where(author: current_user).count >= 1
+        flash[:alert] =  t "custom.errors.new_investment_not_allowed"
+        redirect_to budget_investments_path(@budget)
+      end
       @investment.budget.questions.order(:id).each do |question|
         answer = @investment.answers.build({budget_id: @investment.budget.id, budget_question_id: question.id})
       end

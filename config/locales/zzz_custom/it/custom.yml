@@ -198,20 +198,20 @@ it:
           presentation_summary_finished_help_text: Testo per il terzo paragrafo quando la fase non è attiva
     budgets:
       investments:
-        not_allowed_to_add_investment: Ringraziamo per le 3 proposte inviate!
+        not_allowed_to_add_investment: Grazie per la proposta inviata!
         investment:
           no_image: La proposta non ha fotografie.
     meta:
-      pp_name: Ancarano collabora
-      place_name: Comune di Ancarano
+      pp_name: Breg
+      place_name: Comune di San Dorligo della Valle - Dolina
       guiding_questions: "<p><em>Perché questa proposta? Quale argomento, problema o sfida affronta la proposta progettuale? </em></p><p>&nbsp;</p><p><em>Cosa proponete nello specifico? Qual è il senso della sua proposta? Cosa accadrà? </em></p><p>&nbsp;</p><p><em>Come dovrebbe essere attuato il progetto? Quali attività dovrebbero essere svolte? </em></p><p>&nbsp;</p><p><em>Dove dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p></p><p><em>Tempistica: quando dovrebbe essere attuato il progetto? </em></p><p>&nbsp;</p><p><em>Cosa cambierebbe, migliorerebbe dopo l'implementazione del progetto? </em></p><p>&nbsp;</p><p></p><p><em>Qual è il valore previsto (costo) del progetto proposto? </em></p>"
       tos: "pogoji-uporabe"
     switcher:
       select: " Selezionare il budget"
     social:
-      fb_desc: Ancarano collabora - Bilancio partecipativo del comune di Ancarano
-      tw_desc: "Ancarano collabora - Bilancio partecipativo del comune di Ancarano: "
-      email_desc: Visualizzare la proposta d’investimento di bilancio nel progetto Acnarano collabora - Bilancio partecipativo del comune di Ancarano
+      fb_desc: Breg - Comune di San Dorligo della Valle - Dolina
+      tw_desc: "Breg - Comune di San Dorligo della Valle - Dolina: "
+      email_desc: Visualizzare la proposta d’investimento di bilancio nel progetto Acnarano collabora - Bilancio partecipativo del Comune di San Dorligo della Valle - Dolina
     headings:
       drafting: Bozza (nascosta al pubblico)
       informing: Informazioni
@@ -226,25 +226,40 @@ it:
       headings: Frazioni
       headings_sidebar: |
         <li>
-          <h6>Zona 1 - Ankaran est</h6>
-          <div>Al boschetto, Strada della Ferrovia, Roseto, Strada Ivančič Franc-Rudi, Strada per Prisoje, Sotto la cima, Strada dell'Adriatico</div>
+          <h6>Zona A</h6>
+          <div>Frazioni di Dolina e Crogole-Kroglje</div>
         </li>
         <li>
-          <h6>Zona 2 - Ancarano centro</h6>
-          <div>Vicolo degli Olivi, Via Stanko Pervanja, Via D. Bertok-Churchill, Vicolo per Brida, Via J. Srebrnič, Via I. Regent, Via M. Hrvatin, Via V. Vlahovič, Via F. Bevk, Via V. Kocjančič-Marko, Via I. Cah-Iskra, Ulica Rudi Mahnič, Via P. Tomažič, Via M. Laris-Moro, Via F. P. Frenk, Vicolo del Panorama, Strada dell'Adriatico</div>
+          <h6>Zona B</h6>
+          <div>Frazioni di Bagnoli della Rosandra-Boljunec e Bagnoli Superiore-Gornji konec</div>
         </li>
         <li>
-          <h6>Zona 3 - Ancarano ovest</h6>
-          <div>Via dei Vigneti, Lazzaretto, Strada dell'Adriatico</div>
+          <h6>Zona C</h6>
+          <div>Frazioni di Sant’Antonio in Bosco-Boršt, Hervati-Hrvati, Moccò-Zabrežec, San Lorenzo-Jezero, Botazzo-Botač, Grozzana-Gročana, Draga e Pesek</div>
+        </li>
+        <li>
+          <h6>Zona D</h6>
+          <div>Frazioni di San Giuseppe della Chiusa-Ricmanje e Log</div>
+        </li>
+        <li>
+          <h6>Zona E</h6>
+          <div>Frazioni di Domio-Domjo, Puglie-Pulje, Lacotisce-Lakotišče e Mattonaia-Krmenka</div>
+        </li>
+        <li>
+          <h6>Zona F</h6>
+          <div>Frazioni di Caresana-Mačkolje, Prebeneg, Crociata-Križpot e Monte D’Oro-Mont</div>
+        </li>
+        <li>
+          <h6>Zona G</h6>
+          <div>Frazioni di Aquilinia-Žavlje e Francovez-Frankovec</div>
         </li>
       select_heading: Selezionare zona
-
-      select_tag: Selezionare quartiere
+      select_tag: Selezionare tag
       select_status: Selezionare lo status della proposta
       select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
       instructions: "Per poter candidare la propria proposta progettuale e sottoporla alla votazione della cittadinanza, essa deve soddisfare le seguenti condizioni:"
       instructions_description: |
-        <h3>proponente:</h3>
+        <h3>Proponente:</h3>
         <ol>
           <li>deve essere residente nel Comune di San Dorligo della Valle - Dolina, e aver compiuto o compiere 18 anni di età nel 2025 (nati prima del 15.10.2007);</li>
           <li>non può agire in qualità di esecutore della proposta di progetto – né quale persona fisica ovvero quale proprietario oppure membro del direttivo di una persona giuridica dell’esecutore.</li>
@@ -315,45 +330,39 @@ it:
         title_2: E la mia domanda?
         title_3: E dopo di che?
     landing:
-      title: Bilancio partecipativo 2025-2026!
-      introduction_text: Grazie al progetto di bilancio partecipativo, i cittadini del comune di Ancarano potete partecipare all'assegnazione di una parte dei fondi di bilancio. Le proposte di progetti su misura per i cittadini miglioreranno l'efficienza dell'uso dei fondi comuni, rafforzeranno la partecipazione all'ambiente locale e miglioreranno la qualità della vita nel comune.
+      title: Bilancio partecipativo 2025!
+      introduction_text: Con il progetto del Bilancio Partecipativo, i cittadini e le cittadine del comune di San Dorligo della Valle - Dolina possono partecipare alla gestione di una parte dei fondi di bilancio. Le proposte di progetto costruite su misura dalla cittadinanza miglioreranno l'efficienza dell'uso dei fondi pubblici, rafforzeranno la partecipazione attiva a livello locale e contribuiranno ad un'alta qualità della vita nel comune.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
     about:
-      intro: 'Il bilancio partecipativo è una procedura di partecipazione democratica in cui i cittadini decidono direttamente come spendere parte dei fondi del bilancio. Individuano autonomamente i problemi e le opportunità di miglioramento, proponendo i progetti più urgenti, la cui realizzazione contribuirebbe maggiormente a migliorare la qualità della vita della comunità. <p class="intro">Nel Comune di Ancarano, per gli esercizi finanziari 2025 e 2026, i cittadini potranno proporre e votare i progetti. I progetti hanno un valore massimo di 100.000 euro, di cui 40.000 euro per la zona del bilancio partecipativo Ancarano est, 20.000 euro per Ancarano centro e 40.000 euro per la zona del bilancio partecipativo Ancarano ovest.</p>'
+      intro: "Il Bilancio Partecipativo è uno strumento di democrazia diretta attraverso il quale la cittadinanza può proporre, discutere e scegliere progetti da finanziare, con una quota del bilancio comunale. L'obiettivo è promuovere la partecipazione attiva; il dialogo tra i cittadini e le istituzioni; la trasparenza e il coinvolgimento dei cittadini nella gestione di una parte delle risorse pubbliche, migliorando la qualità della vita nell’ambiente locale e rafforzando la comunità.<p class='intro'> Nel Comune di San Dorligo della Valle - Dolina, durante il 2025 per progetti da realizzare nell’esercizio finanziario 2026, i cittadini e le cittadine potranno proporre e votare proposte progettuali, per un valore complessivo di progetti finanziati corrispondente all’1% del totale delle entrate del bilancio, che equivale indicativamente ad € 80.000,00.</p>"
       main_title: Come funziona?
-      heading_1: Accoglimento delle proposte
+      heading_1: Candidatura delle proposte progettuali
       description_1: |
-        I cittadini possono presentare le proposte progettuali a partire dal 27 gennaio 2025 fino al 23 febbraio 2025. Ogni proposta progettuale deve essere presentata sull'apposito modulo, avere un valore tra di 1.000,00 euro e di un massimo di 20.000,00 euro (per progetti nella zona Centro) o massimo di 40.000 euro (per progetti nelle zone Ovest ed Est), IVA inclusa, e soddisfare le altre condizioni per essere inserita nel Bilancio partecipativo - da sottoporre a votazione.</p><p>Le proposte progettuali devono essere presentate tramite modulo che può essere compilato su <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ca27d52eaa7b5121d41e84402bbf6d9016517623/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_-ita.docx">questo sito web</a>, scaricato qui o ritirato presso l’ufficio protocollo del Comune di Ancarano durante l’orario d’ufficio.</p><p>Il proponente deve fornire i propri dati personali richiesti nel modulo, le proposte anonime non saranno prese in considerazione. Ogni candidato può proporre un massimo di 3 proposte progettuali, per progetti relativi alla zona del bilancio partecipativo in cui risiede (le zone del bilancio partecipativo sono Ancarano est, Ancarano centro e Ancarano ovest e sono visibili sulla mappa disponibile a <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--161ac955ff83eb3bd33aa1113b1fc61605eeee76/obmo%C4%8Dja%20PP%20OA%20-%20zemljevid%20z%20ulicami_ITA.pdf">questo collegamento</a>).</p><p>È possibile presentare il modulo per le proposte progettuali:<ul><li>su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online,</li><li>via posta elettronica all’indirizzo sodelujem@obcina-ankaran.si ,</li><li>di persona presso l’ufficio protocollo del Comune di Ancarano, Via Ivan Regent 2, Ancarano, durante l’orario d'ufficio.</li></ul></p>
-      date_1: 27. 1.-23. 2. 2025
-      heading_2: Valutazione delle proposte
-      description_2: "Tutte le proposte presentate verranno esaminate da una commissione di esperti, che valuterà ogni proposta dal punto di vista finanziario, ne verificherà la fattibilità e la conformità alle condizioni stabilite (nell'ambito delle competenze del Comune, in linea con la legislazione, con i documenti di pianificazione territoriale e di sviluppo, il contributo all'interesse pubblico, ecc.) La commissione può unire proposte progettuali identiche o simili in un'unica proposta progettuale o adattare parzialmente una singola proposta progettuale.<p>Le proposte che non soddisferanno le condizioni secondo la valutazione della commissione, verranno eliminate, tramite una motivazione che specificherà per quali condizioni non sono risultate idonee.</p><p>Tutte le proposte progettuali che soddisferanno tutte le condizioni del bando saranno sottoposte a votazione.</p>"
-      date_2: 24. 2.-24. 3. 2025
-      heading_3: Votazioni
-      description_3: Tra il 7 e il 20 aprile 2025, i cittadini avranno l'opportunità di votare per scegliere i progetti del Comune di Ancarano che verranno finanziati.<p>Potranno votare i cittadini del Comune di Ancarano, che con il 1° gennaio 2025 hanno:<ul><li>residenza permanente nel Comune di Ancarano,</li><li>compiuto o compiranno 15 anni di età nel 2025 (nati nel 2010).</li></ul></p><p>Ognuno potrà votare per un massimo di 3 proposte per tutto il comune, indipendentemente dalla zona di residenza. Per ogni singola proposta progettuale è consentito votare solo una volta.</p><p>SÈ possibile inviare il proprio voto dal 7 aprile 2025 fino al 20 aprile 2025 su questo sito web, dopo essersi registrati e aver effettuato l’accesso all'applicazione online. Potrete consegnare il vostro voto online anche con l'aiuto di un assistente presso l'ufficio protocollo del Comune di Ancarano.</li></ul></p>"
-      date_3: 7. 4.-20. 4. 2025
-      heading_4: Annuncio dei progetti prescelti
-      description_4: "Alla conclusione delle votazioni, il comune controllerà i risultati e annuncerà i progetti selezionati. In base all'esito delle votazioni, i progetti saranno selezionati per essere inseriti nel bilancio partecipativo del Comune di Ancarano per gli anni 2025 e 2026 e per la loro attuazione per ogni zona del bilancio partecipativo del Comune di Ancarano fino all'importo totale dei fondi stanziati per ogni zona (Ancarano est totale 40.000,00 euro; Ancarano centro totale 20.000,00 euro e Ancarano ovest totale 40.000,00 euro).<p>I risultati delle votazioni saranno pubblicati sul sito web del comune dopo il 9 maggio 2025.</p>"
-      date_4: "9. 5. 2025"
+        I cittadini e le cittadine possono presentare le proposte progettuali dall’11 giugno 2025 al 15 ottobre 2025. Ogni proposta progettuale deve essere presentata sull'apposito modulo, avere un valore compreso tra 3.000 e 15.000 euro IVA inclusa, e soddisfare i criteri di fattibilità e cantierabilità per essere inserita nel bilancio come proposta di progetto del Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina, da sottoporre a votazione.<p>Le proposte progettuali devono essere presentate tramite modulo che può essere compilato:<ul><li>su questo sito web, dopo essersi registrati e aver effettuato l’accesso, oppure</li><li>scaricato qui e presentato all’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina, oppure</li><li>ritirato presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina, ogni mercoledì dalle ore 9.00 alle ore 13.00 durante la fase di presentazione delle proposte.</li></ul></p><p>Il proponente deve fornire i dati personali richiesti nel modulo, le proposte anonime non saranno prese in considerazione. Ogni proponente può proporre una proposta progettuale, da realizzare in qualsiasi Frazione del Comune di San Dorligo della Valle - Dolina e votare fino ad un massimo di 3 proposte progettuali.</p>
+      date_1: 11. 6.-15. 10. 2025
+      heading_2: Valutazione delle proposte progettuali
+      description_2: "Tutte le proposte progettuali presentate verranno esaminate da una Commissione di supervisione e coordinamento di esperti, che valuterà ogni proposta dal punto di vista finanziario, ne verificherà la fattibilità e la conformità e la cantierabilità alle condizioni stabilite (nell'ambito delle competenze del Comune, in linea con la legislazione, con i documenti di pianificazione territoriale e di sviluppo, il suo contributo all'interesse pubblico, etc.). La Commissione può unire proposte progettuali identiche o simili in un'unica proposta progettuale o adattare parzialmente una singola proposta progettuale, al fine di renderla finanziabile.</p><p>Le proposte progettuali che non soddisferanno le condizioni secondo la valutazione della Commissione, verranno considerate non finanziabili, con una motivazione che specificherà le condizioni di non idoneità.</p><p>Tutte le proposte progettuali che soddisferanno tutte le condizioni di ammissibilità saranno sottoposte a votazione.</p>"
+      date_2: 16. 10.-15. 11. 2025
+      heading_3: Votazione delle proposte progettuali
+      description_3: "Tra il 16 e il 30 novembre 2025, i cittadini e le cittadine avranno l'opportunità di votare per scegliere i progetti del Comune di San Dorligo della Valle - Dolina che verranno finanziati.<p>Potranno votare i cittadini del Comune di San Dorligo della Valle - Dolina, che hanno:<ul><li>residenza permanente nel Comune di San Dorligo della Valle - Dolina,</li><li>compiuto o compiranno 18 anni di età nel 2025 (nati prima del 15.10.2007).</li></ul></p><p>Ognuno potrà votare per un massimo di 3 proposte per tutto il comune, indipendentemente dalla zona di residenza. Per ogni singola proposta è consentito votare solo una volta.</p><p>È possibile votare dal 16 al 30 novembre 2025 su questo sito web, dopo essersi registrati e aver effettuato l’accesso. Alternativamente, anche con l'aiuto dell’Assessore di riferimento, Michele Di Donato presso il suo Ufficio nel Comune di San Dorligo della Valle – Dolina o persona successivamente designata dal Sindaco, previo accordo telefonico.</p>"
+      date_3: 16.11.-30. 11. 2025
+      heading_4: Annuncio dei progetti vincitori
+      description_4: "Alla conclusione delle votazioni, il Comune di San Dorligo della Valle - Dolina annuncerà e presenterà i progetti selezionati con un incontro aperto alla cittadinanza. I progetti selezionati saranno inseriti nel bilancio del Comune di San Dorligo della Valle - Dolina per l’anno 2026 e per la loro attuazione nel territorio del Comune, fino all'importo totale dei fondi stanziati.<p>I risultati delle votazioni saranno pubblicati sul sito web del comune dopo il 3 dicembre 2025.</p>"
+      date_4: "3. 12. 2025"
       heading_5: Monitoraggio dei progetti
-      description_5: "I progetti vincitori in ciascuna zona di applicazione del bilancio partecipativo (Ancarano Est, Centro e Ovest) saranno inseriti nel bilancio del comune di Ancarano e realizzati nel 2025 e nel 2026. Sarà possibile seguire l'avanzamento dei progetti su questo sito web."
+      description_5: "II progetti vincitori saranno inseriti nel bilancio del Comune di San Dorligo della Valle - Dolina e realizzati nel 2026. Sarà possibile seguire l'avanzamento dei progetti su questo sito web.<p>Per chiarimenti la persona responsabile è l’Assessore di riferimento, Michele Di Donato.</p>"
     privacy:
       title: "Pogoji uporabe"
     help:
       main_title: "Domande frequenti"
       heading_1: "È necessario avere un numero di telefono e una connessione ad internet per partecipare?"
-      description_1: "Per creare un account online sono necessari un numero di telefono, un indirizzo e-mail e una connessione a internet, ma è possibile completare tutte le funzionalità anche presso il comune."
+      description_1: "Per creare un account online sono necessari il numero di tessera elettorale, un numero di telefono, un indirizzo e-mail e una connessione a internet, ma è possibile completare tutte le funzionalità anche presso l’Ufficio Protocollo del comune."
       heading_2: "Come creare e verificare il proprio account?"
-      description_2: "Per creare un account, premere il pulsante “Registrati” a fondo pagina del sito web, premendo su uno qualsiasi dei pulsanti si accede allo stesso modulo online. Per creare un account, è necessario inserire il nome utente, l'indirizzo e-mail, il CAUC, l'indirizzo permanente e la password. Una volta creato l'account, è necessario confermarlo cliccando sul collegamento contenuto nell'e-mail che verrà inviata al vostro indirizzo di posta elettronica."
+      description_2: "Per creare un account, premere il pulsante “Registrati” a fondo pagina del sito web, premendo su uno qualsiasi dei pulsanti si accede allo stesso modulo online. Per creare un account, è necessario inserire il nome utente, il numero di tessera elettorale, l'indirizzo e-mail e la password. Una volta creato l'account, è necessario confermarlo cliccando sul collegamento contenuto nell'e-mail che verrà inviata al vostro indirizzo di posta elettronica."
       heading_3: "Come creare una nuova proposta?"
-      description_3: |
-        <p>Oltre a presentare una proposta online, è possibile farlo anche</p>
-        <ul>
-          <li>In formato elettronico (scaricando il <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">modulo</a>, compilandolo e inviandolo per e-mail a <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a>)</li>
-          <li>I moduli stampati possono essere ritirati presso l'ufficio protocollo del Comune di Ancarano, Via Ivan Regentova 2, 6280 Ancarano durante l’orario d’ufficio.</li>
-        </ul>
-        <p>Per aiutarvi a preparare le vostre proposte progettuali, potrete partecipare ad un laboratorio pratico, che si terrà mercoledì 29 gennaio 2025 alle ore 18:00 presso il Centro ingregenerazional Ancarano, sul indirizzo Via Rudi Mahnič1, 6280 Ancarano.</p>
+      description_3: "Oltre a presentare una proposta online, è possibile farlo anche in formato elettronico (scaricando il modulo ...., compilandolo e consegnandolo presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina). I moduli stampati possono essere ritirati e consegnati presso l’Ufficio Protocollo del Comune di San Dorligo della Valle - Dolina."
       heading_4: "Password dimenticata. Come procedere?"
       description_4: "Premere il pulsante “Iscrivetevi”, quindi selezionare il collegamento “Password dimenticata”. Riceverete le istruzioni per creare una nuova password al vostro indirizzo e-mail."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
@@ -362,18 +371,18 @@ it:
       technical_issues: "Avete problemi tecnici? "
       technical_contact: Contattate il gestore dell'app all'indirizzo <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.
       other_questions: "Avete altre domande?"
-      other_contact: Contattate il Comune di Ancarano all'indirizzo <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">predlagam@obcina-ankaran.si</a>. Durante l’orario d'ufficio è a disposizione anche il numero di telefono 05 66 53 000.
+      other_contact: Contattate il Comune di San Dorligo della Valle - Dolina all'indirizzo <a href="mailto:michele.didonato@sandorligo-dolina.it" target="_blank">michele.didonato@sandorligo-dolina.it</a> e <a href="segreteria-tajnistvo@sandorligo-dolina.it " target="_blank">segreteria-tajnistvo@sandorligo-dolina.it </a>. Durante l’orario d'ufficio è a disposizione anche il numero di telefono  - 0408329245 – che farà da tramite per l’Assessore di riferimento..
     terms:
       main_title: "Condizioni d'uso e tutela della Privacy"
       date: "1. 1. 2025"
-      intention: "Lo scopo di questo avviso è di aiutarvi a comprendere il funzionamento dello strumento online del bilancio partecipativo del Comune di Ancarano e l’informativa sulla privacy."
+      intention: "Lo scopo di questo avviso è di aiutarvi a comprendere il funzionamento dello strumento online del bilancio partecipativo del Comune di San Dorligo della Valle - Dolina e l’informativa sulla privacy."
       active_use: "L’uso attivo dello strumento online viene considerato quale consenso dell’utente in merito alle presenti condizioni generali d'uso. Per partecipare attivamente è necessario essere iscritti ed aver accettato le presenti condizioni d'uso. Qualora non accettiate le presenti condizioni, siete pregati di non utilizzare il sito."
       changes: "Ci riserviamo il diritto di modificare le presenti condizioni generali d'uso in qualsiasi momento e senza preavviso pubblicando una nuova versione su questo sito web. La versione più recente delle Condizioni generali d’uso è riscontrabile dalla data dell’ultima modifica, riportata nell’intestazione delle presenti Condizioni."
       help: "In caso di dubbi, scegliete una delle opzioni di contatto riportate di seguito."
       contact1:
-        mail: "info@obcina-ankaran.si"
-        note1: "Telefono: durante gli orari di ufficio dell’Amministrazione comunale al numero (05) 665 30 00"
-        note2: "Comune di Ancarano, Strada dell’Adriatico 66, 6280 Ancarano"
+        mail: "segreteria-tajnistvo@sandorligo-dolina.it"
+        note1: "Telefono: durante le ore d'ufficio 040 8329111 (togliendo un zero dal prefisso)"
+        note2: "Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)"
       contact2:
         mail: "consul@djnd.si"
         note1: "Assistenza tecnica:"
@@ -381,7 +390,7 @@ it:
       about_title: "Informazioni sullo strumento online"
       about_first: "Lo strumento online incentiva la partecipazione civica e consente una governance aperta, trasparente e democratica a livello comunale e nazionale. L'app è basata sulla piattaforma open-source Consul, sviluppata sotto il patrocinio del Comune di Madrid e adattata alle esigenze dei comuni sloveni dall'Istituto Danes je nov dan."
       about_second: "Lo strumento online vi permette di partecipare direttamente al processo decisionale, per stabilire di comune accordo la destinazione di una parte del bilancio comunale. Gli utenti possono presentare, sostenere, votare e monitorare lo stato di avanzamento delle proposte di progetto."
-      about_third: "Possono partecipare tutte le cittadine ed i cittadini residenti ad Ancarano che abbiano compiuto 15 anni d'età (ovvero ne compiranno nel corso del 2025) e che si siano registrati allo strumento online; i genitori o i tutori sono responsabili delle attività dei minori. Ogni cittadino può presentare 3 proposte di progetto per la propria zona di residenza e, durante il periodo di votazione, ogni utente può votare 3 progetti su tutto il territorio comunale (indipendentemente dalla zona di residenza)."
+      about_third: "Possono partecipare tutte le cittadine ed i cittadini residenti ad San Dorligo della Valle - Dolina che abbiano compiuto 18 anni d'età (ovvero ne compiranno nel corso del 2025) e che si siano registrati allo strumento online. Ogni cittadino può presentare 3 proposte di progetto per la propria zona di residenza e, durante il periodo di votazione, ogni utente può votare 3 progetti su tutto il territorio comunale (indipendentemente dalla zona di residenza)."
       about_list:
         title: "Lo strumento consente all'utente di:"
         li1:
@@ -395,19 +404,18 @@ it:
           desc: "Nella fase finale, lo strumento consente di monitorare i risultati dell'implementazione."
       registration_title: "Registrazione"
       registration_intro1: "Solo gli utenti registrati possono presentare proposte di progetti e votare i progetti presentati. Gli utenti non registrati possono seguire i contenuti pubblicati, ma non possono presentare proposte di progetti o votarli."
-      registration_intro2: "Registrandosi, l'utente conferma di avere 15 anni (o di compierli nel 2025) e di essere a conoscenza dei propri diritti e obblighi riportati nell'Informativa sul trattamento dei dati personali ai sensi del Regolamento generale sulla protezione dei dati e autorizza il Comune di Ancarano a verificare l'autenticità dei dati personali ai fini del progetto del Bilancio partecipativo del Comune di Ancarano da registri ufficiali e banche dati presso i titolari del trattamento dei dati personali."
+      registration_intro2: "Registrandosi, l'utente conferma di avere 18 anni (o di compierli nel 2025) e di essere a conoscenza dei propri diritti e obblighi riportati nell'Informativa sul trattamento dei dati personali ai sensi del Regolamento generale sulla protezione dei dati e autorizza il Comune di di San Dorligo della Valle - Dolina a verificare l'autenticità dei dati personali ai fini del progetto del Bilancio partecipativo del Comune di San Dorligo della Valle - Dolina da registri ufficiali e banche dati presso i titolari del trattamento dei dati personali."
       registration_requirements: "Al momento della registrazione, l'utente deve specificare:"
       name: "il nome utente,"
       email: "l’indirizzo e-mail,"
-      emso: "Numero di tessera elettorale"
+      emso: "numero di tessera elettorale"
       registration_first: "I dati personali conferiti dall'utente attraverso l'apposito modulo di registrazione su questa piattaforma online verranno utilizzati al solo fine di implementazione del bilancio partecipativo nel nostro comune e non saranno trasmessi a terzi, fatti salvi gli obblighi di legge."
       registration_second: "L'account dell'utente viene attivato alla conferma della e-mail di attivazione inviata all'indirizzo e-mail del richiedente. È vietato creare più account da parte dello stesso utente."
       registration_third: "L'omissione di una qualsiasi delle informazioni di cui sopra impedirà all'utente di completare con successo la registrazione e di conseguenza non potrà utilizzare lo strumento online."
-      registration_fourth: "È possibile verificare, modificare o aggiornare i dati inseriti al momento della registrazione nel proprio profilo, a cui si può accedere dopo la registrazione. Nel proprio profilo è, inoltre, possibile scegliere se ricevere i messaggi al proprio indirizzo e-mail."
-      registration_fifth: "Con l’uso dello strumento online, l'utente acconsente a rendervi pubblicamente visibile il nome utente e/o il nome e cognome ogniqualvolta presenta proposte e commenti."
+      registration_fourth: "Con l’uso dello strumento online, l'utente acconsente a rendervi pubblicamente visibile il nome utente e/o il nome e cognome ogniqualvolta presenta proposte e commenti."
       rules_title: "Adozione delle regole"
       rules_first: "Al momento della registrazione, l'utente deve accettare le regole di utilizzo dello strumento online."
-      rules_promise: "Accettando le regole, l'utente si impegna innanzitutto a rispettare nella formulazione di proposte sia la Costituzione e sia le leggi della Repubblica di Slovenia, ciò significa in particolare, che:"
+      rules_promise: "Accettando le regole, l'utente si impegna innanzitutto a rispettare nella formulazione di proposte sia la Costituzione e sia le leggi della Repubblica Italiana, ciò significa in particolare, che:"
       rules_promise_first: "non pubblicherà contenuti che promuovano l’intolleranza sessuale, razziale, etnica o religiosa o qualsiasi forma di discriminazione fondata sulle circostanze personali degli individui;"
       rules_promise_second: "non pubblicherà contenuti che violino o infrangano i diritti di terzi;"
       rules_promise_third: "non pubblicherà immagini o fotografie di proprietà di terzi o che utilizzano dati di terzi senza previo consenso di proprietari e terzi;"
@@ -430,25 +438,25 @@ it:
       responsibilities_eighth: "In caso di controversie tra gli utenti dello strumento online e/o terzi, siamo esonerati da qualsiasi responsabilità in caso di richieste di risarcimento danni o indennizzi di qualsiasi natura relativi ai contenuti dello strumento online e/o derivanti da procedimenti legali."
       data_protection_title: "Protezione dei dati personali"
       data_protection_first: "Titolare del trattamento dei dati personali:"
-      data_protection_first_note1: "Comune di Ancarano, Strada dell’Adriatico 66, 6280 Ancarano"
-      data_protection_first_note2: "No. matricola: 2482851000"
-      data_protection_first_note3: "Responsabile della protezione dei dati: DATAINFO.SI d. o. o."
-      data_protection_first_note4: "E-mail: info@datainfo.si"
-      data_protection_first_note5: "Telefono: +386 (0) 40 733 798"
-      data_protection_second: "Responsabile del trattamento in merito allo strumento online Collabora e vota!:"
+      data_protection_first_note1: "Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)"
+      data_protection_first_note2: "CF: 80009970320"
+      data_protection_first_note3: "Responsabile della protezione dei dati: Dott. Andrea Ciappesoni"
+      data_protection_first_note4: "E-mail: dpo.privacy@sandorligo-dolina.it"
+      data_protection_first_note5: "Telefono: 0408329111"
+      data_protection_second: "Responsabile del trattamento in merito allo strumento online Breg:"
       data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       data_protection_second_note2: "No. matricola: 6468594000"
       data_protection_second_note3: "E-mail: vsi@danesjenovdan.si"
-      data_protection_third: "Il responsabile del trattamento è contrattualmente obbligato a utilizzare i dati personali solo ed esclusivamente in nome del Comune di Ancarano ed a garantirne la loro protezione in conformità alle normative vigenti e alle nostre istruzioni."
-      data_protection_fourth: "L'Istituto Danes je nov dan si impegna a proteggere i dati personali e a utilizzarli in modo trasparente, affinché gli utenti e i sostenitori possano seguire e sostenere il nostro lavoro nel modo più semplice possibile. Rispettiamo la vostra fiducia e ci impegniamo a gestire i vostri dati personali con cura e a trattarli in conformità con la normativa vigente in materia di protezione dei dati personali (GDPR e ZVOP-2). Di seguito sono descritte in modo più dettagliato le finalità e le basi del trattamento dei vostri dati personali, inclusa l’informativa sui vostri diritti. "
+      data_protection_third: "Il responsabile del trattamento è contrattualmente obbligato a utilizzare i dati personali solo ed esclusivamente in nome del Comune di San Dorligo della Valle - Dolina ed a garantirne la loro protezione in conformità alle normative vigenti e alle nostre istruzioni."
+      data_protection_fourth: "L'Istituto Danes je nov dan si impegna a proteggere i dati personali e a utilizzarli in modo trasparente, affinché gli utenti e i sostenitori possano seguire e sostenere il nostro lavoro nel modo più semplice possibile. Rispettiamo la vostra fiducia e ci impegniamo a gestire i vostri dati personali con cura e a trattarli in conformità con la normativa vigente in materia di protezione dei dati personali (GDPR e Codice in materia di protezione dei dati personali). Di seguito sono descritte in modo più dettagliato le finalità e le basi del trattamento dei vostri dati personali, inclusa l’informativa sui vostri diritti. "
       data_use_title: "Base giuridica del trattamento dei dati personali"
       data_use_list: "Motivi del trattamento dei dati personali:"
-      data_use_list_li1: "'interessato ha espresso il consenso al trattamento dei propri dati personali registrandosi e utilizzando lo strumento online Collabora e vota!"
+      data_use_list_li1: "'interessato ha espresso il consenso al trattamento dei propri dati personali registrandosi e utilizzando lo strumento online Breg"
       data_store_title: "Quali dati personali vengono conservati"
       data_store_list: "Vengono conservati i seguenti dati:"
       data_store_list_li1: "nome utente,"
       data_store_list_li2: "indirizzo e-mail dell'utente,"
-      data_store_list_li3: "codice anagrafico unitario del cittadino."
+      data_store_list_li3: "numero di tessera elettorale"
       data_store_first: "Gli altri dati personali non verranno conservati dal titolare del trattamento."
       data_store_second: "I dati personali non vengono trasferiti a paesi terzi o organizzazioni internazionali."
       data_process_title: "Modalità di trattamento dei dati personali"
@@ -483,18 +491,18 @@ it:
       data_insight_list_li6: "Diritto di opposizione: l’interessato ha il diritto di opporsi al trattamento dei dati personali. Tale diritto si applica solo al trattamento dei dati personali effettuato in base ad un interesse legittimo che prevale sugli interessi dell'interessato."
       data_insight_list_li7: "Diritto di proporre reclamo in merito al trattamento dei dati personali: l’interessato ha il diritto di proporre reclamo in merito al trattamento dei dati personali agli indirizzi del titolare del trattamento indicati all'articolo 1 della presente informativa."
       data_insight_fourth: "Inoltre, nel caso l’interessato ritenesse che il trattamento dei suoi dati personali violi la normativa vigente ha il diritto di proporre reclamo direttamente a un’autorità di controllo. Contatti del Garante per la protezione dei dati personali:"
-      data_insight_fourth_note1: "Garante per la protezione dei dati personali, Dunajska cesta 22, 1000 Ljubljana."
-      data_insight_fourth_note2: "Telefono: 01 230 97 30"
-      data_insight_fourth_note3: "E_mail: gp.ip@ip-rs.si"
+      data_insight_fourth_note1: "Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 - Roma, Italia"
+      data_insight_fourth_note2: "Telefon: +39 06.696771"
+      data_insight_fourth_note3: "E-pošta: protocollo@gpdp.it"
       cookies_title: "Cookies"
-      cookies_intro: "ZLa Legge sulle comunicazioni elettroniche (Gazzetta ufficiale, n. 109/2012) ZEKom-1 ha introdotto le norme sull'uso dei cookie e di altre simili tecnologie per memorizzare o accedere alle informazioni memorizzate sui computer, tablet o dispositivi mobili degli utenti. Il nostro strumento può scaricare il cosiddetto “cookie” nel browser del vostro computer."
+      cookies_intro: "Le Linee guida cookie e altri strumenti di tracciamento - 10 giugno 2021 [9677876] ha introdotto le norme sull'uso dei cookie e di altre simili tecnologie per memorizzare o accedere alle informazioni memorizzate sui computer, tablet o dispositivi mobili degli utenti. Il nostro strumento può scaricare il cosiddetto “cookie” nel browser del vostro computer."
       cookies_what_title: "Che cosa sono i cookie?"
       cookies_what_intro: "I cookie sono piccoli file di testo che forniscono informazioni sul numero di visite del nostro sito e sui contenuti visualizzati dall'utente. I cookie non sono dannosi e la loro durata è limitata. I cookie non contengono informazioni che consentono l'identificazione personale degli utenti. Gli utenti hanno sempre la possibilità di accettare o rifiutare i cookie. La maggior parte dei browser accetta automaticamente i cookie, ma modificando le impostazioni del browser si può accettare o rifiutare i cookie o decidere di ricevere un messaggio di avviso prima di accettare un cookie dai siti web visitati."
       cookies_why_title: "A cosa servono i cookie?"
       cookies_why_intro: "Sono degli strumenti fondamentali che migliorano l'esperienza di navigazione dell'utente. I cookie rendono più semplice e veloce l'interazione tra l'utente ed il servizio web. I cookie consentono di ricordare le preferenze, gli interessi e le esperienze dell'utente, risparmiando tempo e rendendo l'uso del servizio web più efficiente e semplice."
       cookies_min_title: "Cookie strettamente necessari"
       cookies_min_intro: "Si tratta di cookie indispensabili per il corretto funzionamento dei servizi online e senza i quali non sarebbe possibile effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica. Questi cookie sono utilizzati per consentire il funzionamento dei servizi online di facile utilizzo, una migliore esperienza dell'utente e non richiedono il consenso."
-      cookies_list: "Lo strumento web Consul, che alimenta Collabora e vota!, utilizza solo due cookie strettamente necessari:"
+      cookies_list: "Lo strumento web Consul, che alimenta Breg, utilizza solo due cookie strettamente necessari:"
       cookies_list_li1: "_consul_session"
       cookies_list_li1_desc: "viene utilizzato per consentire all'utente di accedere allo strumento online e di votare."
       cookies_list_li2: "ahoy_visit in ahoy_visitor"
@@ -519,14 +527,486 @@ it:
     footer:
       accessibility: Izjava o dostopnosti
       consul_html: |
-        <p>Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.</p>
+        <p>
+          <b>O orodju Consul</b>
+        </p>
+        <p>
+          Ta platforma temelji na odprtokodnem orodju <a href="https://consuldemocracy.org/" target="_blank">Consul Democracy</a>. Vsa koda je prosto dostopna in je na voljo na <a href="https://github.com/danesjenovdan/consul" target="_blank">Github repozitoriju</a>.
+        </p>
+        <p>
+          Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
+        </p>
       djnd_html: |
         <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
       municipality_html: |
-        <p>Bilancio participativo del <br/><a href="https://www.comune.san-dorligo-della-valle.ts.it/" target="_blank">Comune di San Dorligo della Valle</a></p>
+        <p>
+          <b>Bilancio participativo del
+          <br/>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/" target="_blank">
+            Comune di San Dorligo della Valle - Občina Dolina
+          </a></b>
+          <br />
+          Dolina 270, 34018 San Dorligo della Valle (TS) Italija
+        </p>
+        <p>
+          Davčna številka: 80009970320
+          <br />
+          Številka za DDV: 00228430328
+        </p>
+      contact_html: |
+        <p>
+          <b>Kontakt</b>
+        </p>
+        <p>
+          ☎️ Telefon: <a href="tel:003904083629111" target="_blank">+3904083629111</a>
+        </p>
+        <p>
+          📧 E-naslov: <a href="mailto:protocollo-protokol@sandorligo-dolina.it" target="_blank">protocollo-protokol@sandorligo-dolina.it</a>
+        </p>
+        <p>
+          📧 E-naslov overovljene pošte: <a href="mailto:comune-obcina.sandorligodellavalle-dolina@certgov.fvg.it" target="_blank">comune-obcina.sandorligodellavalle-dolina@certgov.fvg.it</a>
+        </p>
       municipality_url: https://www.comune.san-dorligo-della-valle.ts.it/
     registration:
       already_has_account: " Ha già un account?"
+    accessibility:
+      title: Izjava o dostopnosti
+      date: 30. 1. 2025
+      main_title: Izjava o dostopnosti Breg
+      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://celjepomoje.si">celjepomoje.si</a>.
+      intention_second: "Uporabo portala želimo približati najširšemu krogu uporabnikom, zato ga nenehno oblikujemo in prilagajamo tako, da je dostopen za uporabnike z različnimi oblikami invalidnosti in oviranosti: uporabnikom z okvarami vida (slepim, slabovidnim, barvno slepim), uporabnikom z okvarami sluha (gluhim, naglušnim, gluhoslepim) ter uporabnikom z različnimi kognitivnimi okvarami in motnjami v razumevanju."
+      level_title: Stopnja skladnosti
+      level_paragraph: Spletno mesto Breg je delno skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij javnega sektorja (ZDSMA). Spletne strani in vsebine so pripravljene v skladu z mednarodnimi smernicami za dostopnost spletnih vsebin in ustrezajo standardu WCAG (Web Content Accessibility Guidelines) 2.1. Skladnost dostopnosti spletnega mesta s smernicami WCAG po samooceni ustreza stopnji AA.
+      description_title: "Opis dostopnih vsebin:"
+      description_bullets: |
+        <li>Spletno mesto ima razumljivo in konsistentno strukturo in navigacijo. HTML koda spletnega mesta je pregledana in urejena, da ustreza zahtevam različnih naprav, spletno mesto je mogoče brez izgube informacij povečati do 200 %. Povezave na posamezne podstrani so prepoznavne.</li>
+        <li>Kontrasti so primerni.</li>
+        <li>Prikaz besedila na sliki se uporablja redko.</li>
+        <li>Spletno mesto je mogoče upravljati s tipkovnico.</li>
+        <li>Pri pisanju besedil pazimo na razumljiva in enostavna besedila.</li>
+        <li>Spletni obrazci so dostopni s tipkovnico.</li>
+        <li>Na obrazcih dovolimo dovolj časa za izpolnjevanje,</li>
+        <li>na formah dovolimo tud dovolj časa za izpolnjevanje, če se uporablja kaka druga oprema kokr tipkovnica (in se posledično počasneje tipka).</li>
+        <li>Na obrazcih prikazujemo tekstovni opis napake.</li>
+        <li>Spletno mesto ima pravilne HTML oznake, vsaka podstran ima določen naslov in uporablja pravilno gnezdenje naslovov.</li>
+        <li>Spletno mesto je optimizirano za bralnike.</li>
+      inaccessible_title: Manj dostopne ali nedostopne vsebine
+      inaccessible_paragraph: Dostopnost spletišča nenehno spremljamo in sproti izboljšujemo posamezne elemente dostopnosti. Kljub temu nekatere objavljene vsebine ne izpolnjujejo vseh zahtev glede dostopnosti, kot jih določa Zakon o dostopnosti spletišč in mobilnih aplikacij.
+      less_accessible_subtitle: "Manj dostopne vsebine:"
+      less_accessible_bullets: |
+        <li>Označba fokusa je na <a href="https://celjepomoje.si/budgets/1/investments">izbirniku območja</a> slabo vidna. Enako velja za označbo polj na obrazcu za oddajo predloga. Ob prvi prenovi bomo to uredili.</li>
+        <li>Velikost tekstov je ponekod določena z absolutnimi merskimi enotami (px), ki lahko povzročijo težave pri prilagajanju velikosti vsebine. Ob prvi prenovi bomo to uredili.</li>
+      inaccessible_subtitle: "Nedostopne vsebine:"
+      inaccessible_bullets: |
+        <li>Spletno mesto nima kazala strani. Razlog je v nesorazmernem bremenu, ki ga ocenjujemo s kadrovskim in finančnim bremenom, ki bi ga optimiziranje trenutno zahtevalo, saj spletna platforma trenutno ne omogoča dodajanja takšne podstrani. Ob prvi prenovi bomo to uredili.</li>
+        <li>Slike, ki jih dodajajo uporabniki sami, nimajo vpisanega alternativnega opisa. Ob prvi prenovi bomo v obrazec za oddajo predloga dodali polje za vpis alternativnega opisa, vendar tudi v tem primeru skrbnik ne more zagotavljati kakovosti opisov. Elementi, ki so integralni del spletnega mesta, imajo vpisan alternativni opis.</li>
+        <li>Datoteke, ki jih uporabniki sami dodajajo, niso nujno dostopne. Razlog je v nesorazmernem bremenu, ki bi ga predstavljalo prilagajanje in optimiziranje že naloženih dokumentov.</li>
+        <li>Zaradi nesorazmernega bremena, ki bi ga optimiziranje zahtevalo, se v obrazcu za oddajo predloga v primeru oddaje s praznim poljem “Ocena stroškov projektnega predloga” izpiše sistemska napaka, ki je odvisna od jezika brskalnika, ki ga uporablja uporabnik. Ta je lahko v angleščini.</li>
+      feedback_title: Povratne in kontaktne informacije
+      feedback_paragraph: Če nam želite sporočiti karkoli v zvezi s prilagoditvijo dostopnosti portala Celje po moje za uporabnike z različnimi invalidnostmi ain oviranostmi, nam lahko pišete na <a href="mailto:mestna.obcina@celje.si">mestna.obcina@celje.si</a> ali nas pokličete na <a href="tel:034265750">03 4265 750</a>.
+      surveillance_title: Nadzor nad izvajanjem določb Zakona o dostopnosti spletišč in mobilnih aplikacij (ZDSMA)
+      surveillance_paragraph: |
+        <a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/inspektorat-za-informacijsko-druzbo/o-inspektoratu/">Inšpektorat Republike Slovenije za informacijsko družbo</a>
+        <br>
+        Davčna ulica 1
+        <br>
+        1000 Ljubljana
+        <br>
+        T: <a href="tel:015555848">01 555 58 48</a>
+        <br>
+        E: <a href="mailto:gp.ijs@gov.si">gp.ijs@gov.si</a>
+      author_title: Priprava izjave o dostopnosti
+      author_paragraph: "Datum objave Izjave o dostopnosti: 30. 1. 2025, na podlagi samoocene. Zadnja posodobitev Izjave o dostopnosti: 30 . 1 .2025."
+    italy:
+      privacy:
+        title: Protezione dei dati personali
+        main_title: Protezione dei dati personali
+        date: 1. 6. 2025
+        html: |
+          <h2 dir="ltr">Protezione dei dati personali</h2>
+          <p dir="ltr">
+          Titolare del trattamento dei dati personali:
+          </p>
+          <p dir="ltr">
+          Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)
+          <br/>
+          No. matricola:  80009970320
+          <br/>
+          Responsabile della protezione dei dati: Dott. Andrea Ciappesoni
+          <br/>
+          E-mail: dpo.privacy@sandorligo-dolina.it
+          <br/>
+          Telefono: 0408329111
+          </p>
+          <p dir="ltr">
+          Responsabile del trattamento in merito allo strumento online Breg:"
+          </p>
+          <p dir="ltr" style="margin-left:36pt;">
+          Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana
+          <br/>
+          No. matricola: 6468594000
+          <br/>
+          E-mail: vsi@danesjenovdan.si
+          </p>
+          <p dir="ltr">
+          Il responsabile del trattamento è contrattualmente obbligato a utilizzare i dati personali solo ed esclusivamente in nome del Comune di San Dorligo della Valle - Dolina ed a garantirne la loro protezione in conformità alle normative vigenti e alle nostre istruzioni.
+          </p>
+          <p dir="ltr">
+          L'Istituto Danes je nov dan si impegna a proteggere i dati personali e a utilizzarli in modo trasparente, affinché gli utenti e i sostenitori possano seguire e sostenere il nostro lavoro nel modo più semplice possibile. Rispettiamo la vostra fiducia e ci impegniamo a gestire i vostri dati personali con cura e a trattarli in conformità con la normativa vigente in materia di protezione dei dati personali (GDPR e Codice in materia di protezione dei dati personali). Di seguito sono descritte in modo più dettagliato le finalità e le basi del trattamento dei vostri dati personali, inclusa l’informativa sui vostri diritti.
+          </p>
+
+          <br/>
+          <h3 dir="ltr">Base giuridica del trattamento dei dati personali</h3>
+          <p dir="ltr">
+          Motivi del trattamento dei dati personali:
+          </p>
+          <ul>
+          <li dir="ltr">
+            <p dir="ltr">interessato ha espresso il consenso al trattamento dei propri dati personali registrandosi e utilizzando lo strumento online Breg</p>
+          </li>
+          </ul>
+
+          <br/>
+          <h3 dir="ltr">Quali dati personali vengono conservati</h3>
+          <p dir="ltr">
+          Vengono conservati i seguenti dati:
+          </p>
+          <ul>
+          <li dir="ltr">
+            nome utente,
+          </li>
+          <li dir="ltr">
+            indirizzo e-mail dell'utente,
+          </li>
+          <li dir="ltr">
+            numero di tessera elettorale o codice fiscale
+          </li>
+          </ul>
+          <p dir="ltr">
+          Gli altri dati personali non verranno conservati dal titolare del trattamento.
+          </p>
+          <p dir="ltr">
+          I dati personali non vengono trasferiti a paesi terzi o organizzazioni internazionali.
+          </p>
+
+          <h3 dir="ltr">Modalità di trattamento dei dati personali</h3>
+          <p dir="ltr">
+          UIl titolare del trattamento conserva i dati personali dell'utente solo ai fini del corretto funzionamento dello strumento online, per poter abilitare le suddette funzionalità dello strumento e per inviare comunicazioni obbligatorie e/o convenute con l'utente (aggiornamenti, malfunzionamenti, altre attività legate al funzionamento e all'utilizzo dell'applicazione o qualsiasi altra attività legata all'applicazione).
+          </p>
+
+          <h3 dir="ltr">Tempi di conservazione dei dati personali</h3>
+          <p dir="ltr">
+          I dati vengono conservati per il tempo necessario al raggiungimento delle finalità per cui sono stati acquisiti, ovvero fino a quando l'utente non cessa di utilizzare lo strumento. L'utente può interrompere l'utilizzo dello strumento online in qualsiasi momento e richiedere la cancellazione dal registro degli utenti inviando una e-mail all’indirizzo consul@djnd.si. Ricevuta la e-mail di cessazione di utilizzo dello strumento online, il titolare del trattamento provvederà a cancellare tutti i dati entro il mese successivo. Nonostante la cancellazione dei dati personali di un utente, i suggerimenti, i commenti e i dati di voto verranno conservati ma attribuiti all'utente cancellato.
+          </p>
+
+          <h3 dir="ltr">Accesso a dati e diritti degli interessati</h3>
+          <p dir="ltr">
+          Gli interessati godono di specifici diritti in relazione ai dati personali, che sono illustrati di seguito. L’interessato può richiedere l'esportazione e l'accesso ai dati personali che lo riguardano, conservati dal DJND inviando una richiesta scritta all'indirizzo consul@djnd.si. I dati personali vengono conservati in un'applicazione specifica che rispetta i requisiti di privacy e garantisce la massima sicurezza dei dati conservati attraverso varie misure fisiche, tecniche e organizzative.
+          </p>
+          <p dir="ltr">
+          Prima di esercitare il diritto, il DJND verifica l'identità del richiedente che ha inviato la richiesta circa i propri diritti.
+          </p>
+          <p dir="ltr">
+          Dopo aver inviato la richiesta completa e valida, DJND deve fornire idoneo riscontro al più tardi entro 1 mese dal suo ricevimento; tale termine può essere prorogato di 2 mesi, ove necessario e in caso di particolare complessità o numero ingente di richieste pervenute. In tal caso, DJND deve comunque informare l'interessato della proroga e dei motivi che l'hanno determinata.
+          </p>
+          <p dir="ltr">
+          Tipologie di diritti:
+          </p>
+          <ol>
+          <li dir="ltr">
+            <p>
+              diritto di accesso ai dati: su richiesta, informeremo il richiedente se sia o meno in corso un trattamento di dati personali che lo riguardano e in tal caso, gli forniremo le seguenti informazioni:
+              <ul>
+                <li dir="ltr">la tipologia dei dati;</li>
+                <li dir="ltr">le categorie di destinatari a cui i dati personali sono stati o saranno comunicati;</li>
+                <li dir="ltr">il periodo di conservazione dei dati personali;</li>
+                <li dir="ltr">l’esistenza del diritto del richiedente alla rettifica o alla cancellazione dei dati personali o alla limitazione del trattamento dei dati personali che lo riguardano o all’opposizione al loro trattamento richiesto al DJND;</li>
+                <li dir="ltr">il diritto di proporre reclamo a un'autorità di controllo;</li>
+                <li dir="ltr">qualora i dati non siano raccolti presso l'interessato, tutte le informazioni disponibili sulla loro origine;</li>
+                <li dir="ltr">l'esistenza di un processo decisionale automatizzato, compresa la profilazione;</li>
+                <li dir="ltr">su richiesta, il DJND fornisce una copia dei dati personali trattati all'interessato.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di rettifica: l'interessato ha il diritto di ottenere dal DJND la rettifica dei dati personali inesatti che lo riguardano o l'integrazione dei dati personali incompleti.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto alla cancellazione (diritto all'oblio): l'interessato ha il diritto di ottenere la cancellazione dei dati personali che lo riguardano in presenza di uno dei seguenti casi:
+              <ul>
+                <li dir="ltr">i dati personali non sono più necessari rispetto alle finalità per le quali sono stati raccolti o altrimenti trattati;</li>
+                <li dir="ltr">l'interessato revoca il consenso su cui si basa il trattamento e se non sussiste altro fondamento giuridico per il trattamento;</li>
+                <li dir="ltr">l'interessato si oppone al trattamento e non sussiste alcun motivo legittimo prevalente per procedere al trattamento.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di limitazione del trattamento: l’interessato ha il diritto di ottenere dal titolare del trattamento la limitazione del trattamento nel caso ricorresse una delle seguenti ipotesi:
+              <ul>
+                <li dir="ltr">i dati non sono accurati;</li>
+                <li dir="ltr">il trattamento è illecito e l’interessato si oppone alla cancellazione dei dati personali;</li>
+                <li dir="ltr">benché DJND non ne abbia più bisogno ai fini del trattamento, i dati personali sono necessari all’interessato per l’accertamento, l’esercizio o la difesa di un diritto in sede giudiziaria;</li>
+                <li dir="ltr">l’interessato si è opposto al trattamento.</li>
+              </ul>
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto alla portabilità dei dati: l’interessato ha il diritto di richiedere un estratto dei dati forniti a DJND qualora il trattamento si basi sul consenso o su un contratto e sia effettuato con mezzi automatizzati.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di opposizione: l’interessato ha il diritto di opporsi al trattamento dei dati personali. Tale diritto si applica solo al trattamento dei dati personali effettuato in base ad un interesse legittimo che prevale sugli interessi dell'interessato.
+            </p>
+          </li>
+          <li dir="ltr">
+            <p>
+              Diritto di proporre reclamo in merito al trattamento dei dati personali: l’interessato ha il diritto di proporre reclamo in merito al trattamento dei dati personali agli indirizzi del titolare del trattamento indicati all'articolo 1 della presente informativa.
+            </p>
+          </li>
+          </ol>
+          <p dir="ltr">
+          Inoltre, nel caso l’interessato ritenesse che il trattamento dei suoi dati personali violi la normativa vigente ha il diritto di proporre reclamo direttamente a un’autorità di controllo. Contatti del Garante per la protezione dei dati personali:
+          </p>
+          <p dir="ltr" style="margin-left:36pt;">
+          Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 - Roma, Italia
+          <br/>
+          Telefon: +39 06.696771
+          <br/>
+          E-pošta: protocollo@gpdp.it
+          </p>
+      cookies:
+        title: Cookies
+        main_title: Cookies
+        date: 1. 6. 2025
+        html: |
+          <h2 dir="ltr">Cookies</h2>
+          <p dir="ltr">
+          Le Linee guida cookie e altri strumenti di tracciamento - 10 giugno 2021 [9677876] ha introdotto le norme sull'uso dei cookie e di altre simili tecnologie per memorizzare o accedere alle informazioni memorizzate sui computer, tablet o dispositivi mobili degli utenti. Il nostro strumento può scaricare il cosiddetto “cookie” nel browser del vostro computer.
+          </p>
+
+          <h3 dir="ltr">Che cosa sono i cookie?</h3>
+          <p dir="ltr">
+          I cookie sono piccoli file di testo che forniscono informazioni sul numero di visite del nostro sito e sui contenuti visualizzati dall'utente. I cookie non sono dannosi e la loro durata è limitata. I cookie non contengono informazioni che consentono l'identificazione personale degli utenti. Gli utenti hanno sempre la possibilità di accettare o rifiutare i cookie. La maggior parte dei browser accetta automaticamente i cookie, ma modificando le impostazioni del browser si può accettare o rifiutare i cookie o decidere di ricevere un messaggio di avviso prima di accettare un cookie dai siti web visitati.
+          </p>
+
+          <h3 dir="ltr">A cosa servono i cookie?</h3>
+          <p dir="ltr">
+          Sono degli strumenti fondamentali che migliorano l'esperienza di navigazione dell'utente. I cookie rendono più semplice e veloce l'interazione tra l'utente ed il servizio web. I cookie consentono di ricordare le preferenze, gli interessi e le esperienze dell'utente, risparmiando tempo e rendendo l'uso del servizio web più efficiente e semplice.
+          </p>
+
+          <h3 dir="ltr">Cookie strettamente necessari</h3>
+          <p dir="ltr">
+          Si tratta di cookie indispensabili per il corretto funzionamento dei servizi online e senza i quali non sarebbe possibile effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica. Questi cookie sono utilizzati per consentire il funzionamento dei servizi online di facile utilizzo, una migliore esperienza dell'utente e non richiedono il consenso.
+          </p>
+          <p dir="ltr">
+          Lo strumento web Consul, che alimenta Breg, utilizza solo due cookie strettamente necessari:
+          </p>
+          <ul>
+          <li dir="ltr">
+            <strong>_consul_session</strong>
+            <br/>
+            viene utilizzato per consentire all'utente di accedere allo strumento online e di votare.
+          </li>
+          <li dir="ltr">
+            <strong>ahoy_visit in ahoy_visitor</strong>
+            <br/>
+            viene utilizzato per impedire gli abusi della sessione utente.
+          </li>
+          </ul>
+      transparency:
+        title: Amministrazione trasparente
+        main_title: Amministrazione trasparente
+        date: 1. 6. 2025
+        html: |
+          <h2>Amministrazione trasparente</h2>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/amministrazione-trasparente-3527/bandi-di-gara-e-contratti-3568">Bandi di gara e contratti</a>
+          <br>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/amministrazione-trasparente-3527/bandi-di-concorso-3552">Bandi di concorso</a>
+          <br>
+          <a href="https://www.comune.san-dorligo-della-valle.ts.it/sl/albo-pretorio-3612">Albo pretorio</a>
+      legal:
+        title: Condizioni d'uso
+        main_title: Condizioni d'uso
+        date: 1. 6. 2025
+        html: |
+          <h2>Condizioni d'uso</h2>
+          <p>Lo scopo di questo avviso è di aiutarvi a comprendere il funzionamento dello strumento online del bilancio partecipativo del Comune di San Dorligo della Valle - Dolina.</p>
+          <p dir="ltr">
+          L’uso attivo dello strumento online viene considerato quale consenso dell’utente in merito alle presenti condizioni generali d'uso. Per partecipare attivamente è necessario essere iscritti ed aver accettato le presenti condizioni d'uso. Qualora non accettiate le presenti condizioni, siete pregati di non utilizzare il sito.
+          </p>
+          <p dir="ltr">
+          Ci riserviamo il diritto di modificare le presenti condizioni generali d'uso in qualsiasi momento e senza preavviso pubblicando una nuova versione su questo sito web. La versione più recente delle Condizioni generali d’uso è riscontrabile dalla data dell’ultima modifica, riportata nell’intestazione delle presenti Condizioni.
+          </p>
+          <p>In caso di dubbi, scegliete una delle opzioni di contatto riportate di seguito</p>
+          <p>
+          <a href='segreteria-tajnistvo@sandorligo-dolina.it' target="_blank">segreteria-tajnistvo@sandorligo-dolina.it</a>
+          <br/>
+          Telefono: durante le ore d'ufficio 040 8329111 (togliendo un zero dal prefisso)
+          <br/>
+          Comune di San Dorligo della Valle - Občina Dolina, Località Dolina, 270, 34018 San Dorligo della Valle (TS)
+          </p>
+          <p>
+          Assistenza tecnica:
+          <br/>
+          <a href='mailto:consul@djnd.si' target="_blank">consul@djnd.si</a>
+          <br/>
+          Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana
+          </p>
+
+          <br/>
+          <hr/>
+          <br/>
+
+          <h2 dir="ltr">
+          Informazioni sullo strumento online
+          </h2>
+          <p dir="ltr">
+          Lo strumento online incentiva la partecipazione civica e consente una governance aperta, trasparente e democratica a livello comunale e nazionale. L'app è basata sulla piattaforma open-source Consul, sviluppata sotto il patrocinio del Comune di Madrid e adattata alle esigenze dei comuni sloveni dall'Istituto Danes je nov dan.
+          </p>
+          <p dir="ltr">
+          Lo strumento online vi permette di partecipare direttamente al processo decisionale, per stabilire di comune accordo la destinazione di una parte del bilancio comunale. Gli utenti possono presentare, sostenere, votare e monitorare lo stato di avanzamento delle proposte di progetto.
+          </p>
+          <p dir="ltr">
+          Possono partecipare tutte le cittadine ed i cittadini residenti ad San Dorligo della Valle - Dolina che abbiano compiuto 18 anni d'età (ovvero ne compiranno nel corso del 2025) e che si siano registrati allo strumento online. Ogni cittadino può presentare 3 proposte di progetto per la propria zona di residenza e, durante il periodo di votazione, ogni utente può votare 3 progetti su tutto il territorio comunale (indipendentemente dalla zona di residenza).
+          </p>
+          <p>
+          Lo strumento consente all'utente di:
+          </p>
+          <ol>
+          <li>
+            <span>Presentare proposte</span>
+            <br/>
+            Per presentare una proposta, l'utente deve specificare il titolo della proposta di progetto e la descrizione, inoltre, può aggiungere un'immagine o la posizione della proposta e altri documenti. La proposta di progetto presentata viene automaticamente accettata e visualizzata nello strumento online. Gli utenti possono condividere la proposta sui social media, via e-mail o tramite il link accorciato.
+          </li>
+          <li>
+            <span>Votare proposte</span>
+            <br/>
+            Gli utenti possono votare le proposte di progetto degli altri utenti. Ogni utente può votare ogni proposta progettuale un’unica volta. Ogni utente può votare un solo progetto presentato. In fase di raccolta voti, l’utente può anche ritirare il voto espresso alla singola proposta.
+          </li>
+          <li>
+            <span>Monitorare le proposte selezionate</span>
+            <br/>
+            Nella fase finale, lo strumento consente di monitorare i risultati dell'implementazione.
+          </li>
+          </ol>
+
+          <br/>
+          <h2 dir="ltr">Registrazione</h2>
+          <p dir="ltr">
+          Solo gli utenti registrati possono presentare proposte di progetti e votare i progetti presentati. Gli utenti non registrati possono seguire i contenuti pubblicati, ma non possono presentare proposte di progetti o votarli.
+          </p>
+          <p dir="ltr">
+          Registrandosi, l'utente conferma di avere 18 anni (o di compierli nel 2025) e di essere a conoscenza dei propri diritti e obblighi riportati nell'Informativa sul trattamento dei dati personali ai sensi del Regolamento generale sulla protezione dei dati e autorizza il Comune di di San Dorligo della Valle - Dolina a verificare l'autenticità dei dati personali ai fini del progetto del Bilancio partecipativo del Comune di San Dorligo della Valle - Dolina da registri ufficiali e banche dati presso i titolari del trattamento dei dati personali.
+          </p>
+          <p dir="ltr">
+          Al momento della registrazione, l'utente deve specificare:
+          </p>
+          <ul>
+          <li>
+            il nome utente,
+          </li>
+          <li>
+            l’indirizzo e-mail,
+          </li>
+          <li>
+            numero di tessera elettorale o codice fiscale
+          </li>
+          </ul>
+          <p dir="ltr">
+          I dati personali conferiti dall'utente attraverso l'apposito modulo di registrazione su questa piattaforma online verranno utilizzati al solo fine di implementazione del bilancio partecipativo nel nostro comune e non saranno trasmessi a terzi, fatti salvi gli obblighi di legge.
+          </p>
+          <p dir="ltr">
+          L'account dell'utente viene attivato alla conferma della e-mail di attivazione inviata all'indirizzo e-mail del richiedente. È vietato creare più account da parte dello stesso utente.
+          </p>
+          <p dir="ltr">
+          L'omissione di una qualsiasi delle informazioni di cui sopra impedirà all'utente di completare con successo la registrazione e di conseguenza non potrà utilizzare lo strumento online.
+          </p>
+          <p dir="ltr">
+          Con l’uso dello strumento online, l'utente acconsente a rendervi pubblicamente visibile il nome utente e/o il nome e cognome ogniqualvolta presenta proposte e commenti.
+          </p>
+
+          <br/>
+          <h2 dir="ltr">Adozione delle regole</h2>
+          <p dir="ltr">
+          Al momento della registrazione, l'utente deve accettare le regole di utilizzo dello strumento online.
+          </p>
+          <p dir="ltr">
+          Accettando le regole, l'utente si impegna innanzitutto a rispettare nella formulazione di proposte sia la Costituzione e sia le leggi della Repubblica Italiana, ciò significa in particolare, che:
+          </p>
+          <ul>
+          <li>
+            non pubblicherà contenuti che promuovano l’intolleranza sessuale, razziale, etnica o religiosa o qualsiasi forma di discriminazione fondata sulle circostanze personali degli individui;
+          </li>
+          <li>
+            non pubblicherà contenuti che violino o infrangano i diritti di terzi;
+          </li>
+          <li>
+            non pubblicherà immagini o fotografie di proprietà di terzi o che utilizzano dati di terzi senza previo consenso di proprietari e terzi;
+          </li>
+          <li>
+            non userà un linguaggio minaccioso, sprezzante, osceno, umiliante o offensivo;
+          </li>
+          <li>
+            non pubblicherà opere protette da copyright e non utilizzerà lo strumento per distribuire contenuti protetti da copyright o contenuti di proprietà di altre persone fisiche o giuridiche.
+          </li>
+          </ul>
+          <p dir="ltr">
+          La violazione delle regole di cui sopra comporta la sospensione temporanea o la chiusura definitiva dell'account dell'utente e/o la rimozione dei contenuti.
+          </p>
+        
+          <br/>
+          <h2 dir="ltr">
+          Contenuti e limitazione della responsabilità nell'utilizzo dello strumento online
+          </h2>
+          <p dir="ltr">
+          Ci riserviamo il diritto di modificare, aggiungere o rimuovere contenuti senza preavviso e non ci assumiamo alcuna responsabilità per le conseguenze di tali modifiche.
+          </p>
+          <p dir="ltr">
+          I visitatori dello strumento online utilizzano lo strumento online, le sue parti e i suoi contenuti esclusivamente a proprio rischio e pericolo. Non ci assumiamo alcuna responsabilità per l'accuratezza e la correttezza delle informazioni e dei contenuti pubblicati nello strumento online, per eventuali modifiche di informazioni o contenuti già pubblicati, o per eventuali danni subiti dai visitatori in seguito all'utilizzo delle informazioni o dei contenuti pubblicati.
+          </p>
+          <p dir="ltr">
+          Non ci assumiamo alcuna responsabilità per qualsiasi tipo di controversia, lite, contestazione e/o contenzioso che possa derivare dalla pubblicazione o diffusione di contenuti per i quali non sia stata ottenuta l'autorizzazione da parte dei legittimi proprietari. La responsabilità per ogni violazione dei diritti di proprietà intellettuale o industriale ricade sulla persona che ha fornito i contenuti.
+          </p>
+          <p dir="ltr">
+          Inoltre, non ci assumiamo alcuna responsabilità per eventuali danni derivanti dall’utilizzo dello strumento online e non rilasciamo alcuna garanzia in merito ai risultati dell'uso dello strumento online. Non potremo in alcun caso essere ritenuti responsabili di ogni e qualsiasi danno derivante dall'uso o dall'impossibilità di utilizzare lo strumento online, compresi i danni per mancato guadagno o perdita di profitto, perdita o svalutazione dell'avviamento, perdita di giro d’affari o dati. Non saremo responsabili nei confronti dell'utente per danni diretti, indiretti, incidentali, speciali, punitivi, consequenziali o di qualsiasi altra natura derivanti direttamente, indirettamente o in qualsiasi altro modo da errori, sbagli o imprecisioni nei contenuti dello strumento online o da qualsiasi altra circostanza relativa allo strumento stesso o al suo utilizzo.
+          </p>
+          <p dir="ltr">
+          Inoltre, non saremo responsabili nei confronti dell’utente per eventuali danni derivanti dall'accesso o dall'uso non autorizzato dei nostri server e/o di tutti i dati in essi contenuti.
+          </p>
+          <p dir="ltr">
+          Il sito contiene anche link che reindirizzano a siti web di altri soggetti. Non abbiamo alcun controllo sul funzionamento di questi siti web o sui loro contenuti e pertanto non ci assumiamo alcuna responsabilità per l'accuratezza delle informazioni e dei contenuti ivi pubblicati.
+          </p>
+          <p dir="ltr">
+          Inoltre, non siamo responsabili dei contenuti che:
+          </p>
+          <ul>
+          <li>
+            promuovono l’intolleranza sessuale, razziale, etnica o religiosa o qualsiasi forma di discriminazione fondata sulle circostanze personali degli individui;
+          </li>
+          <li>
+            infrangono o violano la privacy di terzi, sono di proprietà di terzi o utilizzano dati di terzi senza l'adeguato consenso dei proprietari e dei terzi;
+          <li>
+            contengono minacce e offese oppure un linguaggio osceno, umiliante o offensivo;
+          </li>
+          <li>
+            sono opere protette da copyright per le quali l'utente non detiene i diritti d'autore. La responsabilità per ogni violazione dei diritti di proprietà intellettuale o industriale ricade sulla persona che fornisce i contenuti.
+          </li>
+          </ul>
+          <p dir="ltr">
+          Ci impegneremo a rimuovere tali contenuti dallo strumento online il prima possibile e a imporre sanzioni adeguate agli utenti in questione.
+          </p>
+          <p dir="ltr">
+          In caso di controversie tra gli utenti dello strumento online e/o terzi, siamo esonerati da qualsiasi responsabilità in caso di richieste di risarcimento danni o indennizzi di qualsiasi natura relativi ai contenuti dello strumento online e/o derivanti da procedimenti legali.
+          </p>
+
+          <br/>
+
     dolina:
       mayor:
         title: Gentili cittadine e cittadini,

@@ -4,37 +4,17 @@ metadata:
   name: consul
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true" # auto-redirects to www or to non-www based on which host is configured under rules
     nginx.ingress.kubernetes.io/proxy-body-size: 10m
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - 2022.mariborsodeluj.si
-        - mariborsodeluj.si
-        - www.mariborsodeluj.si
-      secretName: consul-maribor-tls
+        - breg-part.eu
+        - www.breg-part.eu
+      secretName: consul-dolina
   rules:
-    - host: 2022.mariborsodeluj.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: consul
-                port:
-                  number: 3000
-    - host: mariborsodeluj.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: consul
-                port:
-                  number: 3000
-    - host: www.mariborsodeluj.si
+    - host: breg-part.eu
       http:
         paths:
           - path: /

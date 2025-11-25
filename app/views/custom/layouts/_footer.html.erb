@@ -7,7 +7,6 @@
           <div class="footer-links-wrapper">
             <ul class="no-bullet inline-block footer-links">
               <li><%= link_to t("custom.titles.about"), page_path("o-participativnem-proracunu") %><span>|<span></li>
-              <li><%= link_to t("layouts.footer.conditions"), page_path(t("custom.meta.tos")) %><span>|</span></li>
               <li>
                 <%= layout_menu_link_to t("layouts.header.help"),
                                         help_path,
@@ -16,8 +15,12 @@
                                         title: t("shared.go_to_page") + t("layouts.header.help") %>
               <span>|</span></li>
               <li>
-                <%= link_to t("custom.footer.accessibility"), page_path(t("custom.accessibility.slug")) %>
+                <%= link_to t("custom.footer.accessibility"), page_path("izjava-o-dostopnosti") %><span>|</span>
               </li>
+              <li><%= link_to t("custom.italy.privacy.title"), page_path("privacy") %><span>|</span></li>
+              <li><%= link_to t("custom.italy.cookies.title"), page_path("cookies") %><span>|</span></li>
+              <li><%= link_to t("custom.italy.transparency.title"), page_path("transparency") %><span>|</span></li>
+              <li><%= link_to t("custom.italy.legal.title"), page_path("legal") %></li>
             </ul>
           </div>
         </div>
@@ -25,7 +28,7 @@
     </div>
   </div>
   <!-- financer logo -->
-  <%= render "layouts/footer_financer_banner" %>
+  <%# render "layouts/footer_financer_banner" %>
   <!-- logos -->
   <%= render "layouts/footer_logos_banner" %>
 </footer>

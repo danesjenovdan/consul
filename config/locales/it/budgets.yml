@@ -107,10 +107,10 @@ it:
           different_heading_assigned: "Hai voti attivi in un'altra intestazione: %{heading_link}"
           change_ballot: "Se cambi idea è possibile cancellare il tuo voto in %{check_ballot} e ricominciare da capo."
           check_ballot_link: "controllare il mio voto"
-          zero: Non hai ancora votato nessun progetto di investimento in questo gruppo.
+          zero: Non hai ancora votato nessun progettoin questo gruppo.
           verified_only: "Per creare un nuovo budget d'investimento %{verify}."
-          create: "Crea un investimento di bilancio"
-          not_logged_in: "Per creare un nuovo investimento di bilancio è necessario %{sign_in} o %{sign_up}."
+          create: "Crea una proposta progettuale"
+          not_logged_in: "Per creare una nuova proposta progettuale è necessario %{sign_in} o %{sign_up}."
         filter: "Filtrando i progetti per"
         filters:
           not_unfeasible: "Attivo"
@@ -123,7 +123,7 @@ it:
           confidence_score: più apprezzati
           price: per costi
       share:
-        message: "Ho creato il progetto di investimento %{title} in %{handle}. Crea anche tu un progetto di investimento!"
+        message: "Ho creato la proposta progettuale %{title} in %{handle}. Crea anche tu una proposta progettuale!"
       show:
         author_deleted: Utente cancellato
         price_explanation: Informazioni sui costi
