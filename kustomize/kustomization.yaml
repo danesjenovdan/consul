@@ -9,7 +9,7 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-nova-gorica
-    newTag: '8790c88497ec59eb68536b3d56bc977da6f548ff'
+    newTag: '9288f186ea62a8e12129da55db0f2af6747ea2b4'
   # - name: consul-assets
   #   newName: rg.fr-par.scw.cloud/djnd/consul-assets
-  #   newTag: '8790c88497ec59eb68536b3d56bc977da6f548ff'
+  #   newTag: '9288f186ea62a8e12129da55db0f2af6747ea2b4'
