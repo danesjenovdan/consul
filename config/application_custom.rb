@@ -3,7 +3,6 @@ module Consul
     # this is where we set slovenian as the default (and only) locale
     config.i18n.default_locale = "sl-SI"
     available_locales = [
-      # "sl",
       "sl-SI",
       "it"
     ]
