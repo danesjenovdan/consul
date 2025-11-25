@@ -138,10 +138,8 @@ it:
     users:
       registrations:
         new:
-          terms_title: |
-            Fino ad un’eventuale revoca autorizzo espressamente, volontariamente, incondizionatamente e chiaramente il Comune di San Dorligo della Valle - Dolina (singolarmente per ogni linea contrassegnate con il segno di spunta per acconsentire il trattamento dei dati personali):
-          terms: |
-            al trattamento dei miei dati personali nelle banche dati del CCC (nome e cognome, indirizzo di residenza, indirizzo di posta elettronica, numero di telefono) ai fini della realizzazione del progetto Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina
+          terms: Con la registrazione l’utente accetta i %{terms}.
+          terms_title: ""
           data_consent: |
             la pubblicazione dei dati personali (nome e cognome) sul sito internet del CCC ai fini della pubblicazione delle proposte del progetto Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina*
           password_hint: La password deve avere almeno 8 caratteri.
@@ -223,42 +221,32 @@ it:
       balloting: Voto
       reviewing_ballots: Verifica delle votazioni
       finished: Seguo
-      headings: Frazioni
-      headings_sidebar: |
-        <li>
-          <h6>Zona 1 - Ankaran est</h6>
-          <div>Al boschetto, Strada della Ferrovia, Roseto, Strada Ivančič Franc-Rudi, Strada per Prisoje, Sotto la cima, Strada dell'Adriatico</div>
-        </li>
-        <li>
-          <h6>Zona 2 - Ancarano centro</h6>
-          <div>Vicolo degli Olivi, Via Stanko Pervanja, Via D. Bertok-Churchill, Vicolo per Brida, Via J. Srebrnič, Via I. Regent, Via M. Hrvatin, Via V. Vlahovič, Via F. Bevk, Via V. Kocjančič-Marko, Via I. Cah-Iskra, Ulica Rudi Mahnič, Via P. Tomažič, Via M. Laris-Moro, Via F. P. Frenk, Vicolo del Panorama, Strada dell'Adriatico</div>
-        </li>
-        <li>
-          <h6>Zona 3 - Ancarano ovest</h6>
-          <div>Via dei Vigneti, Lazzaretto, Strada dell'Adriatico</div>
-        </li>
+      headings: Zone
+      headings_sidebar: "<li>  <h6>Zona 1 - Ankaran est</h6>  <div>Al boschetto, Strada della Ferrovia, Roseto, Strada Ivančič Franc-Rudi, Strada per Prisoje, Sotto la cima, Strada dell'Adriatico</div></li><li>  <h6>Zona 2 - Ancarano centro</h6>  <div>Vicolo degli Olivi, Via Stanko Pervanja, Via D. Bertok-Churchill, Vicolo per Brida, Via J. Srebrnič, Via I. Regent, Via M. Hrvatin, Via V. Vlahovič, Via F. Bevk, Via V. Kocjančič-Marko, Via I. Cah-Iskra, Ulica Rudi Mahnič, Via P. Tomažič, Via M. Laris-Moro, Via F. P. Frenk, Vicolo del Panorama, Strada dell'Adriatico</div></li><li>  <h6>Zona 3 - Ancarano ovest</h6>  <div>Via dei Vigneti, Lazzaretto, Strada dell'Adriatico</div></li>"
       select_heading: Selezionare zona
 
       select_tag: Selezionare quartiere
       select_status: Selezionare lo status della proposta
       select_heading_to_vote: Per votare per i progetti, è necessario selezionare una zona.
-      instructions: "Per poter candidare la propria proposta progettuale e sottoporla alla votazione della cittadinanza, essa deve soddisfare le seguenti condizioni:"
+      instructions: "Condizioni e criteri per la presentazione delle proposte progettuali"
       instructions_description: |
-        <h3>proponente:</h3>
+        <h3>Proponente:</h3>
         <ol>
-          <li>deve essere residente nel Comune di San Dorligo della Valle - Dolina, e aver compiuto o compiere 18 anni di età nel 2025 (nati prima del 15.10.2007);</li>
-          <li>non può agire in qualità di esecutore della proposta di progetto – né quale persona fisica ovvero quale proprietario oppure membro del direttivo di una persona giuridica dell’esecutore.</li>
+          <li>ha diritto di presentare la proposta progettuale chi in data 1.1.2025 aveva la residenza nel Comune di Ancarano e 15 anni di età ovvero ne compirà 15 nel 2025 (nati al più tardi nel 2010);</li>
+          <li>non può agire in qualità di esecutore della proposta di progetto – né quale persona fisica ovvero quale proprietario oppure membro del direttivo di una persona giuridica dell’esecutore;</li>
+          <li>ha presentato la proposta per l'area del bilancio partecipativo del comune di residenza.</li>
         </ol>
         <h3>Progetto proposto:</h3>
         <ol>
           <li>è di competenza del comune;</li>
-          <li>verrà attuato sul territorio del Comune di San Dorligo della Valle - Dolina;</li>
+          <li>verrà attuato sul territorio del Comune di Ancarano;</li>
           <li>non è contrario alla legislazione ovvero alle norme comunali;</li>
           <li>è conforme con gli atti di pianificazione territoriale del comune, con gli atti e le strategie di sviluppo e con gli altri programmi di sviluppo comunale;</li>
           <li>contribuisce alla realizzazione dell’interesse pubblico sul territorio del comune;</li>
-          <li>è per natura tale da poter essere attuato dal comune e realizzato nell'ambito delle capacità dell’ente nei 18 mesi successivi dall’annuncio delle proposte vincitrici;</li>
-          <li>promuove la partecipazione attiva e il coinvolgimento dei cittadini, migliora la qualità della vita a livello locale, stimola un approccio comunitario ed è destinato alla fruizione pubblica;</li>
-          <li>il valore finanziare reale stimato è compreso tra 3.000 e 15.000 euro IVA inclusa;</li>
+          <li>è per natura tale da poter essere attuato dal comune e realizzato nell'ambito delle capacità dell’ente nel periodo del bilancio partecipativo per gli anni 2025 e 2026;</li>
+          <li>promuove la partecipazione attiva e il coinvolgimento dei cittadini, migliora la qualità della vita nell'ambiente locale, ovvero sprona un approccio comunitario ed è destinato all'uso pubblico generale;</li>
+          <li>è stato progettato su un terreno di proprietà del Comune di Ancarano ovvero su un terreno di proprietà di un altro soggetto per il quale il richiedente ha ottenuto un'autorizzazione di utilizzo oppure altro diritto reale che consenta la realizzazione del progetto;</li>
+          <li>il valore reale stimato è compreso tra i 1.000,00 ed i 30.000,00 euro, IVA inclusa;</li>
           <li>viene presentato sull'apposito modulo e compilato in ogni sua parte (elettronicamente o fisicamente).</li>
         </ol>
       back_to_all_proposals: "Tornare all'elenco delle proposte"
@@ -292,8 +280,8 @@ it:
       submit_anonymously: Inviare in forma anonima
       submit_anonymously_explanation: Accettando questa richiesta, il suo nome non verrà visualizzato quando la proposta verrà pubblicata sul sito web.
       phone: Numero di telefono
+      address: Indirizzo di residenza permanente
       document_number: Numero di tessera elettorale
-      address: Indirizzo di residenza del proponente
       name_and_last_name: Nome e cognome (nome utente)
       accept_terms: L’utente accetta le %{conditions}
       table_content: Contenuto
@@ -399,7 +387,7 @@ it:
       registration_requirements: "Al momento della registrazione, l'utente deve specificare:"
       name: "il nome utente,"
       email: "l’indirizzo e-mail,"
-      emso: "Numero di tessera elettorale"
+      emso: "il codice anagrafico unitario del cittadino."
       registration_first: "I dati personali conferiti dall'utente attraverso l'apposito modulo di registrazione su questa piattaforma online verranno utilizzati al solo fine di implementazione del bilancio partecipativo nel nostro comune e non saranno trasmessi a terzi, fatti salvi gli obblighi di legge."
       registration_second: "L'account dell'utente viene attivato alla conferma della e-mail di attivazione inviata all'indirizzo e-mail del richiedente. È vietato creare più account da parte dello stesso utente."
       registration_third: "L'omissione di una qualsiasi delle informazioni di cui sopra impedirà all'utente di completare con successo la registrazione e di conseguenza non potrà utilizzare lo strumento online."
@@ -501,8 +489,7 @@ it:
       cookies_list_li2_desc: "viene utilizzato per impedire gli abusi della sessione utente."
       ip_title: "Proprietà intellettuale"
       ip_intro: Il codice necessario per far funzionare questo sito è aperto e disponibile a tutti. L'utilizzo del codice è gratuito per tutti gli utenti in conformità con i termini della licenza <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.
-      terms_second_checkbox: |
-        la pubblicazione dei dati personali (nome e cognome) sul sito internet del CCC ai fini della pubblicazione delle proposte del progetto Bilancio Partecipativo del Comune di San Dorligo della Valle - Dolina*
+      terms_second_checkbox: "Fino a revoca, acconsento espressamente, volontariamente, incondizionatamente e chiaramente al trattamento dei miei dati personali da parte del Comune di Ancarano ai fini dell'attuazione del progetto Collabora"
     statuses:
       title: " Selezionare lo status della proposta "
       waiting: " In attesa di attuazione"
@@ -523,21 +510,37 @@ it:
       djnd_html: |
         <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
       municipality_html: |
-        <p>Bilancio participativo del <br/><a href="https://www.comune.san-dorligo-della-valle.ts.it/" target="_blank">Comune di San Dorligo della Valle</a></p>
-      municipality_url: https://www.comune.san-dorligo-della-valle.ts.it/
+        <p>Bilancio participativo del <br/><a href="https://obcina-ankaran.si/sl/" target="_blank">Comune di Ancarano</a></p>
+      municipality_url: https://obcina-ankaran.si/sl
     registration:
       already_has_account: " Ha già un account?"
-    dolina:
+    ankaran:
       mayor:
-        title: Gentili cittadine e cittadini,
+        title: Gentili cittadine e cittadini!
         content: |
-          <p>Uno degli obiettivi del mandato di questa Amministrazione è quello di cambiare il metodo con cui si arriva a prendere certe decisioni coinvolgendo in un confronto sempre crescente tutti gli uffici e, in modo progressivo, anche i singoli cittadini attraverso i consigli di frazione ed il processo del bilancio partecipativo.</p>
-          <p>Io e la giunta crediamo fortemente nella necessità di aprire una nuova stagione di dialogo con i cittadini, con l’associazionismo, con le parti sociali, con le istituzioni e con gli altri enti e di affrontare con questa nuova prospettiva dialettica le sfide e le opportunità del nostro territorio.</p>
-          <p>CONDIVISIONE, PRESENZA ED ASCOLTO PER ARRIVARE A SENTIRSI UNA COMUNITA’</p>
-          <p>Sentirsi “comunità” significa condividere valori, prospettive, diritti e doveri. Significa voler stare dentro un futuro comune, da costruire insieme. Significa responsabilità, perché ciascuno di noi è, in misura più o meno grande, protagonista del futuro del nostro Comune. Vuol dire anche essere rispettosi gli uni degli altri. Vuol dire essere consapevoli degli elementi che ci uniscono e nel battersi, come è giusto, per le proprie idee rifiutare l’astio, l’insulto, l’intolleranza, che creano ostilità e timore.</p>
-          <p>So bene che alcuni diranno: questa è retorica dei buoni sentimenti, che la realtà è purtroppo un’altra, che vi sono tanti problemi e che bisogna pensare a risolverli prima di sollevarne altri.</p>
-          <p>Dobbiamo aver fiducia in un cammino positivo. Ma non ci sono ricette miracolistiche. Soltanto il lavoro tenace, coerente, lungimirante produce risultati concreti. Un lavoro approfondito, che richiede competenza e che costa fatica e impegno.</p>
-          <p>La mia missione, la nostra missione, dovrà mirare a fare il bene del territorio e delle comunità presenti, orientando il proprio operato ad ascoltare tutti i cittadini e ad agire nella massima trasparenza, attraverso i canali istituzionali già presenti in Comune e sviluppandone di nuovi, come appunto il bilancio partecipativo, per aumentare sempre di più il livello di conoscenza e partecipazione che i cittadini hanno nei confronti del Comune, la casa di tutti.</p>
-          <p>Cos’è e come funziona il bilancio partecipativo? Il concetto è semplice, in sostanza, l’Amministrazione Comunale si astiene dal decidere come impiegare una parte del bilancio e lascia che siano i cittadini a esprimersi sulle priorità. La filosofia di fondo è quindi quella di ribaltare la piramide decisionale: la scelta proviene dal basso e non dall’alto.</p>
-          <p>È una sfida entusiasmante. Ci accomuna, ne sono convinto, la volontà di operare bene per il nostro territorio. Le differenze sono una ricchezza che possiamo mettere al servizio del territorio. Il mio compito sarà quello di guidare un progetto di cambiamento a cui ciascuno può contribuire nel modo che riterrà più giusto e più opportuno. Ho fiducia che daremo tutti il meglio di noi stessi. Ed è con questo proposito, in qualche modo severo anche con me stesso, che vi auguro e mi auguro di lavorare tutti per il bene del nostro Breg.</p>
-          <p>Aleksander Coretti, Sindaco</p>
+          <p>Ognuno di noi rappresenta un elemento portante della comunità in cui vive: la comunità di cerchia ristretta più importante è la famiglia, invece la comunità più ampia, ma altrettanto importante per ogni individuo è rappresentata dal comune. Il Comune ha un grande impatto sulla nostra vita, fornendo un'ampia gamma di servizi: asili e scuole elementari, approvvigionamento idrico, fognature, raccolta dei rifiuti, strade e infrastrutture comunali, aree verdi, scuole di musica, contenuti culturali, biblioteche, poliambulatori e farmacie, programmi per gli anziani, assistenza sociale, infrastrutture sportive e cofinanziamento di associazioni sportive, culturali e di altro tipo.</p>
+          <p>Noi, abitanti di Ancarano, siamo membri della comunità locale del Comune di Ancarano. Le origini del nostro Comune e il percorso che ha seguito sono per molti versi diversi dagli altri. Il Comune di Ancarano è l'unico comune della Repubblica di Slovenia che è stato costituito grazie al coinvolgimento diretto degli abitanti di Ancarano, i quali, con l'obiettivo di proteggere la natura e il proprio spazio vitale, hanno avviato l’iniziativa per l’istituzione di un proprio comune e infine hanno ottenuto la sua costituzione con l'aiuto della Corte costituzionale della Repubblica di Slovenia.</p>
+          <p>Dalla costituzione del comune, il 1° gennaio 2015, noi cittadini di Ancarano siamo stati coinvolti nella preparazione di tutti i documenti chiave per lo sviluppo del comune: il piano regolatore comunale, l'istituzione del parco naturale, il piano di sviluppo a lungo termine ... Fin dalla preparazione del primo bilancio comunale per il 2016, ogni anno, su invito dei servizi professionali del comune, abbiamo presentato varie iniziative per progetti e contenuti che vorremmo vengano realizzati nel comune. Nel corso degli anni sono state accolte in questo modo circa 950 iniziative, molte delle quali sono già state realizzate, altre sono ancora in corso e le più importanti, a causa della loro complessità, saranno realizzate nei prossimi anni.</p>
+          <p>Nella preparazione del Piano di lavoro del Comune di Ancarano per il 2025 e il 2026 intendiamo basarci su questa pratica di coinvolgimento e partecipazione dei cittadini alle decisioni più importanti del Comune. A tal fine, è stato introdotto il voto dei cittadini per decidere quali progetti includere nella bozza di bilancio, il cosiddetto bilancio partecipativo. Attraverso il bilancio partecipativo, i cittadini stessi possono individuare esigenze o opportunità di miglioramento, proporre soluzioni o progetti e nella fase finale, votare democraticamente le proposte da attuare. </p>
+          <p>Per diventare ancora più uniti come comunità e lavorare insieme per migliorare il nostro spazio vitale, vi invito a partecipare con le vostre proposte, suggerire progetti e votare per scegliere quelli da realizzare nel nostro Comune nel 2025 e 2026. Dobbiamo essere membri attivi della nostra comunità per renderla più adeguata alle nostre aspettative.</p>
+          <p>Gregor Strmčnik, sindaco</p>
+      form:
+        tocna_lokacija_label: Locazione esatta del progetto
+        tocna_lokacija_info: |
+          Indicare il numero del lotto (indicando il comune catastale) o l’indirizzo del luogo in cui il progetto verrà realizzato. Informazioni sui numeri dei lotti e gli indirizzi sono disponibili nel sistema informativo territoriale del comune di Ancarano sul sito web del comune oppure al collegamento <a href="https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz">https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz</a>.
+        lastnistvo_nepremicnine_label: Proprietà dell’immobile
+        lastnistvo_nepremicnine_info: Chi è il proprietario degli immobili (terreni, edifici…) sui quali il progetto verrà realizzato e da lei indicato nel punto precedente?
+        lastnistvo_nepremicnine_obcina: Il proprietario è il comune di Ancarano
+        lastnistvo_nepremicnine_drugi: il proprietario è una persona fisica o giuridica
+        pravica_uporabe_label: Diritto d'uso o di costruzione sull’immobile
+        pravica_uporabe_info: |
+          Compilare solo se l'immobile è di proprietà di una persona fisica o giuridica e non del comune di Ancarano. Indicare se è stato ottenuto il consenso per l’uso dell’immobile o altri diritti che consentono la costruzione o l’uso dell’immobile (diritto di superficie, servitù).
+        pravica_uporabe_ni_soglasja: non vi è alcun consenso o altro diritto per l’utilizzo dell'immobile
+        pravica_uporabe_je_soglasje: consenso o altro diritto di utilizzo dell’immobile - è necessario allegare il consenso scritto del proprietario, il contratto o altra prova del diritto che consente l'uso dell’immobile o di costruzione su di esso (diritto di superficie, servitù...)
+        ocena_stroskov_label: Valore stimato della proposta progettuale (IVA inclusa)
+        ocena_stroskov_info: |
+          Inserire un numero intero senza punti, virgole, lettere o altri simboli..
+          <br />
+          Indicare o a propria discrezione, valutare il valore stimato del progetto. Il valore della proposta progettuale (IVA inclusa) può essere di un minimo di 1.000,00 euro e di un massimo di 20.000,00 euro (per progetti nella zona Centro) o massimo di 40.000 euro (per progetti nelle zone Ovest ed Est).
+          <br />
+          A titolo puramente indicativo, i valori medi dei progetti campione nel 2024 sono indicati <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7981f2847f70c5af01fb4272d356b32a4f3a7d28/Orientacijske%20vrednosti-ITA.pdf">qui</a> </p>

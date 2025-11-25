@@ -3,16 +3,6 @@
 
   <fieldset class="required-fields">
 
-    <% if @budget.headings.count > 1 %>
-      <div>
-        <%= f.select :heading_id, budget_heading_select_options(@budget), { include_blank: true }, class: "on-form" %>
-      </div>
-    <% elsif @budget.headings.count == 1 %>
-      <div class="small-12 medium-8 column hide">
-        <%= f.text_field :heading_id, value: @budget.headings.first.id %>
-      </div>
-    <% end %>
-
     <%= f.translatable_fields do |translations_form| %>
       <div>
         <%= translations_form.text_field :title,
@@ -77,7 +67,8 @@
       <%= f.text_field :organization_name %>
     </div>
 
-    <% if @categories.count > 0 %>
+    <!-- hide tags -->
+    <% if false %>
       <div>
         <%= f.label :tag_list, t("budgets.investments.form.tags_label") %>
         <p class="help-text" id="tags-list-help-text"><%= t("budgets.investments.form.tags_instructions") %></p>
@@ -89,7 +80,7 @@
         </div>
 
         <br>
-        <%= f.text_field :tag_list, value: @investment.tag_list.to_s,
+        <= f.text_field :tag_list, value: @investment.tag_list.to_s,
                           label: false,
                           placeholder: t("budgets.investments.form.tags_placeholder"),
                           aria: { describedby: "tags-list-help-text" },

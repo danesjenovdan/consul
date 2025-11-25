@@ -15,16 +15,22 @@
     <div class="row">
       <div class="column">
         <div class="landing">
-          <div class="introduction-text">
+          <div class="introduction-text" style="max-width: 100%; background-color: #ccefdf; padding-left: 40px; padding-right: 40px; padding-top: 60px; margin-top: 20px;">
             <h1><%= t("custom.landing.title") %></h1>
             <p><%= t("custom.landing.introduction_text") %></p>
             <!-- TODO: can we get current budget - current phase url directly? -->
+          
             <% if current_budget.present? %>
               <% current_budget.custom_phases(current_user, method(:budget_investments_url)).each do |_, phase| %>
                 <% if phase.enabled && phase.active %>
-                  <a class="action-button large" href="<%= phase.url %>">
-                    <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
-                  </a>
+                  <div class="intro-buttons" style="display: flex; flex-wrap: wrap;">
+                    <a class="action-button large" href="<%= phase.url %>" style="margin-right: 20px; width: 450px;">
+                      <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
+                    </a>
+                    <a class="action-button large" href="<%= page_path("o-participativnem-proracunu") %>" style="width: 450px;">
+                      <%= t("custom.titles.about") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
+                    </a>
+                  </div>
                 <% end %>
               <% end %>
             <% end %>
@@ -82,6 +88,19 @@
               </div>
             </section>
           <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row phase-description">
+      <div class="large-12 column">
+        <div class="mayor">
+          <div class="introduction-text">
+            <div class="heading-with-photo">
+              <div class="mayor-image-container"></div>
+              <h1><%= t("custom.ankaran.mayor.title") %></h1>
+            </div>
+            <%= t("custom.ankaran.mayor.content").html_safe %>
           </div>
         </div>
       </div>

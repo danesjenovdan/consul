@@ -15,7 +15,7 @@ sl-SI:
   account:
     show:
       change_credentials_link: Spremeni elektronski naslov ali geslo
-      verified_account: "Tvoj račun je potrjen."
+      verified_account: "Vaš račun je potrjen."
   activerecord:
     attributes:
       user:
@@ -41,36 +41,38 @@ sl-SI:
           attributes:
             document_number:
               invalid: EMŠO ni pravilne oblike.
+            address:
+              invalid: Ta naslov ni veljaven. Prosimo preverite črkovanje ali vpišite drug naslov.
   proposals:
     form:
       map_remove_marker: "Odstrani trenutno izbrano lokacijo predloga"
   budgets:
     investments:
       investment:
-        add: Glasuj za ta predlog
+        add: Glasujte za ta predlog
       show:
-        share_title: "Povej naprej!"
-        share: "Deli!"
-        copy: "Skopiraj povezavo!"
+        share_title: "Povejte naprej!"
+        share: "Delite!"
+        copy: "Skopirajte povezavo!"
         price: "Vrednost projekta"
-        votes: "Želiš podpreti ta projekt?"
+        votes: "Želite podpreti ta projekt?"
         top_investment: "Ta predlog je trenutno eden izmed top 3 predlogov po številu glasov na tem območju!"
         top_investment_close: "Temu predlogu manjka samo nekaj glasov, da bo v top 3 na tem območju!"
         top_investment_far: "Temu predlogu manjka veliko glasov, da bo v top 3 na tem območju!"
       edit:
         submit: "Shrani spremembe"
       form:
-        tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
+        tags_instructions: "Označite ta predlog. Izbirate lahko med predlaganimi kategorijami."
         submit: "Oddaj predlog"
         map_location: "Lokacija predloga"
       index:
         title: Participativni proračun – seznam predlogov
         by_heading: "Investicijski projekti na območju: %{heading}"
         sidebar:
-          different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
+          different_heading_assigned: "Imate aktivna glasovanja na drugem območju: %{heading_link}."
       header:
-        different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
-        change_ballot: "Če si premisliš, lahko odstraniš svoje glasove iz tega območja in začneš znova."
+        different_heading_assigned: "Imate aktivna glasovanja na drugem območju: %{heading_link}."
+        change_ballot: "Če ste si premislili, lahko odstranite svoje glasove iz tega območja in začnete znova."
     ballots:
       show:
         amount_progress: "%{amount_spent} / %{amount_limit}"
@@ -101,57 +103,58 @@ sl-SI:
             four: "Lahko glasujete za <span>4</span> predloge"
             other: "Lahko glasujete za <span>%{count}</span> predlogov"
       reasons_for_not_balloting:
-        not_logged_in: "<strong>Za nadaljevanje se moraš vpisati ali registrirati.</strong>"
+        not_logged_in: "<strong>Za nadaljevanje se morate vpisati ali registrirati.</strong>"
         not_verified: Le verificirani uporabniki lahko glasujejo o naložbah; %{verify_account}.
-        not_enough_available_votes: Na voljo nimaš več nobenega glasu. Če želiš glasovati za ta predlog, odstrani svoj glas z drugega predloga.
+        not_enough_available_votes: Na voljo nimate več nobenega glasu. Če želite glasovati za ta predlog, odstranite svoj glas z drugega predloga.
         organization: Organizacijam ni dovoljeno glasovati
         not_selected: Neizbranih investicij ni mogoče podpreti
-        not_enough_money: "Žal na voljo nimaš več dovolj proračuna."
+        not_enough_money: "Žal na voljo nimate več dovolj sredstev."
         no_ballots_allowed: Faza izbiranja je končana
-        different_heading_assigned: "<strong>Glasuješ lahko samo za predloge v enakem območju.</strong>"
-        change_ballot: spremeniš svoje glasove
+        different_heading_assigned: "<strong>Glasujete lahko samo za predloge v enakem območju.</strong>"
+        change_ballot: spremenite svoje glasove
   comments:
     actions:
       confirm_delete: Potrdi izbris
       delete: Izbriši
   devise:
     sessions:
-      signed_in: "Uspešno si se vpisal_a."
-      signed_out: "Uspešno si se izpisal_a."
-      already_signed_out: "Uspešno si se izpisal_a."
+      signed_in: "Uspešno ste se vpisali."
+      signed_out: "Uspešno ste se izpisali."
+      already_signed_out: "Uspešno ste se izpisali."
     failure:
-      already_authenticated: "Si že vpisan_a."
+      already_authenticated: "Ste že vpisani."
       invalid: "Neveljavni %{authentication_keys} ali geslo."
       not_found_in_database: "Neveljavni %{authentication_keys} ali geslo."
     registrations:
-      signed_up_but_unconfirmed: "Poslali smo ti e-pošto za potrditev registracije. Prosimo, klikni na povezavo v elektronskem sporočilu, da aktiviraš svoj račun."
+      signed_up_but_unconfirmed: "Poslali smo vam e-pošto za potrditev registracije. Prosimo, kliknite na povezavo v elektronskem sporočilu, da aktivirate svoj račun."
   devise_views:
     shared:
       links:
-        login: Vpiši se
-        new_confirmation: Nisi prejel_a navodil, kako aktivirati svoj račun?
-        new_unlock: Nisi prejel_a navodil, kako odkleniti svoj račun?
+        login: Vpišite se
+        new_confirmation: Niste prejeli navodil, kako aktivirati svoj račun?
+        new_unlock: Niste prejeli navodil, kako odkleniti svoj račun?
     users:
       registrations:
         new:
-          terms: Z registracijo sprejemaš %{terms}.
+          terms: Z registracijo sprejemate %{terms}.
           password_hint: Geslo mora imeti najmanj 8 znakov.
+          address: Vpišite ulico stalnega prebivališča
         success:
-          back_to_index: Velja, vrni me na začetno stran
-          instructions_1: Prosimo, <b>preveri svojo e-pošto</b> – poslali smo ti <b>povezavo za potrditev tvojega računa</b>.
-          instructions_2: Ko potrdiš račun, lahko začneš sodelovati.
-          thank_you: Hvala za registracijo na spletnem portalu. Zdaj moraš <b>potrditi svoj e-naslov</b>.
+          back_to_index: Velja, vrnite me na začetno stran
+          instructions_1: Prosimo, <b>preverite svojo e-pošto</b> – poslali smo vam <b>povezavo za potrditev tvojega računa</b>.
+          instructions_2: Ko potrdite račun, lahko začnete sodelovati.
+          thank_you: Hvala za registracijo na spletnem portalu. Zdaj morate <b>potrditi svoj e-naslov</b>.
           title: Registracija
-          account_confirmed: "Hvala za registracijo! Za nadaljevanje se moraš <b>vpisati</b>."
+          account_confirmed: "Hvala za registracijo! Za nadaljevanje se morate <b>vpisati</b>."
     mailer:
       reset_password_instructions:
-        ignore_text: Če nisi zahteval_a spremembe gesla, lahko ignoriraš to e-sporočilo.
+        ignore_text: Če niste zahtevali spremembe gesla, lahko ignorirate to e-sporočilo.
   documents:
-    max_documents_allowed_reached: Dosegel_a si največje dovoljeno število dokumentov! <strong>Preden lahko naložiš novega, moraš vsaj enega izbrisati.</strong>
+    max_documents_allowed_reached: Dosegeli ste največje dovoljeno število dokumentov! <strong>Preden lahko naložite novega, morate vsaj enega izbrisati.</strong>
     buttons:
       destroy_document: Odstrani dokument
     form:
-      note: "Naložiš lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
+      note: "Naložite lahko največ %{max_documents_allowed} dokumente naslednjih vrst: %{accepted_content_types}, velikih največ %{max_file_size} MB na datoteko."
   images:
     form:
       title: Slika
@@ -161,7 +164,7 @@ sl-SI:
       unsubscribe_text: 'Če se želiš odjaviti od teh sporočil, obišči %{notifications} in odkljukaj "%{notification}".'
     budget_investment_created:
       intro: "Hej, <strong>%{author}</strong>,"
-      share: Oglej si svoj projekt
+      share: Oglejte si svoj projekt
   milestones:
     index:
       no_milestones: Nima definiranih mejnikov
@@ -190,19 +193,20 @@ sl-SI:
           presentation_summary_finished_help_text: Tekst za tretji odstavek, ko ta faza ni aktivna
     budgets:
       investments:
+        not_allowed_to_add_investment: Hvala za oddane 3 predloge!
         investment:
           no_image: Predlog nima slike.
     meta:
-      pp_name: Maribor sodeluj
-      place_name: Mestna Občina Maribor
+      pp_name: Sodelujem
+      place_name: Občina Ankaran
       guiding_questions: "<p><em>Zakaj ta predlog? Katero temo, težavo oz. izziv projektni predlog naslavlja?</em></p><p>&nbsp;</p><p><em>Kaj konkretno predlagate? Kaj je bistvo vašega predloga? Kaj se bo zgodilo?</em></p><p>&nbsp;</p><p><em>Kako naj bi se projekt izvedel? Katere aktivnosti bi bilo treba izpeljati?</em></p><p>&nbsp;</p><p><em>Kje konkretno naj bi se projekt izvajal?</em></p><p>&nbsp;</p><p><em>Časovni okvir: kdaj naj bi se projekt izvedel?</em></p><p>&nbsp;</p><p><em>Kaj bi se po izvedbi projekta spremenilo, izboljšalo?</em></p><p>&nbsp;</p><p><em>Kakšna je pričakovana vrednost (cena) predlaganega projekta?</em></p>"
       tos: "pogoji-uporabe"
     switcher:
-      select: "Izberi proračun"
+      select: "Izberite proračun"
     social:
-      fb_desc: Maribor sodeluj - Participativni proračun Mestne občine Maribor
-      tw_desc: "Maribor sodeluj - Participativni proračun Mestne občine Maribor: "
-      email_desc: Oglej si predlog proračunske naložbe v projektu Maribor sodeluj - Participativni proračun Mestne občine Maribor
+      fb_desc: Sodelujem - Participativni proračun občine Ankaran
+      tw_desc: "MSodelujem - Participativni proračun občine Ankaran"
+      email_desc: Oglej si predlog proračunske naložbe v projektu Sodelujem - Participativni proračun občine Ankaran
     headings:
       drafting: Osnutek (skrito javnosti)
       informing: Informiranje
@@ -215,13 +219,32 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li>  <h6>Območje 1 (196.000 EUR)</h6>  <div>Levi breg: KS Kamnica, KS Bresternica-Gaj, MČ Koroška vrata</div></li><li>  <h6>Območje 2 (196.000 EUR)</h6>  <div>Levi breg: MČ Ivan Cankar, MČ Center, KS Malečnik-Ruperče</div></li><li>  <h6>Območje 3 (196.000 EUR)</h6>  <div>Desni breg: KS Limbuš, KS Pekre, MČ Radvanjem, KS Razvanje</div></li><li>  <h6>Območje 4 (196.000 EUR)</h6>  <div>Desni breg: MČ Magdalena, MČ Studenci, MČ Tabor, MČ Nova</div></li><li>  <h6>Območje 5 (196.000 EUR)</h6>  <div>Desni breg: MČ Brezje-Dogoše-Zrkovci, MČ Pobrežje, MČ Tezno</div></li>"
-      select_heading: Izberi območje
-      select_tag: Izberi mestno četrt
-      select_status: Izberi status predloga
-      select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
-      instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanom, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h3>Formalni kriteriji - način oddaje projektnih predlogov</h3> <p>Projektni predlog mora biti oddan preko spletne aplikacije Čuj, sodeluj!, ali na obrazcu v fizični obliki, ki ga lahko občani dobijo preko spletne strani ali v fizični obliki na sedežih mestnih četrti in krajevnih skupnosti ter na MO Maribor.</p> <p>Projektni predlogi morajo biti oddani na predpisnem obrazcu, najkasneje do:</p> <ul> <li>27. junija, 2022, po pošti (naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor) ali</li> <li>27. junija, 2022, do 13.00 ure, osebno na sedežu občine v sprejemno pisarno št. 14 ali na sedežu katerekoli MČ ali KS v času uradnih ur.</li> </ul> <h3>Kriteriji za predlagatelje</h3> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni občan/občanka ali skupine občanov/občank s stalnim bivališčem v Mestni občini Maribor, ki je do oddaje projektnega predloga ali glasovanja dopolnila 15 let.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h3>Merila/kriteriji za uvrstitev predlogov v glasovanje</h3> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h4>Splošna merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor.</li> <li>Je finančno ovrednoten med 3.000,00 EUR in 30.000,00 EUR z DDV.</li> <li>Izveden bo na območju Mestne občine Maribor in/ali na nepremičninah v lasti MO Maribor.</li> <li>Ni uvrščen v proračun MO Maribor oz. načrt razvojnih programov občinskih vlaganj.</li> <li>Ne ustreza pogojem za nepovratna finančna sredstva, ki jih predlagatelji lahko pridobijo iz javnih razpisov s strani MO Maribor?</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskih letih 2023 in 2024</li> <li>Je skladen z zakonodajo in veljavnimi občinskimi akti.</li> </ol> <h4>Vsebinska merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Mestne občine Maribor (MOM).</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost občanov, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki, krožnim gospodarstvom, ponovno uporabo,…).</li> <li>Ustvarja pogoje za gospodarski razvoj občine (gostinstvo in turizem, kmetijstvo, samooskrba, vinogradništvo, podjetništvo,…).</li> <li>Ustvarja pogoje za izobraževanje odraslih, pospeševanje raziskovalne, kulturne, mladinske in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in olepševanju mesta, urejanju trgov, zelenic, parkov ter drugih javnih površin.</li> </ol>"
+      headings_sidebar: "<li>  <h6>Območje 1 - Ankaran vzhod</h6>  <div>Na Logu, Železniška cesta, Rožnik, Ivančičeva cesta, Cesta na Prisojo, Pod Vrhom, Jadranska cesta</div></li><li>  <h6>Območje 2 - Ankaran center</h6>  <div>Oljčna pot, Pervanjeva ulica, Bertokova ulica, Pot na Brido, Srebrničeva ulica, Regentova ulica, Hrvatinova ulica, Vlahovičeva ulica, Bevkova ulica, Kocjančičeva ulica, Cahova ulica, Ulica Rudija Mahniča, Tomažičeva ulica, Larisova ulica, Frenkova ulica, Razgledna pot, Jadranska cesta</div></li><li>  <h6>Območje 3 - Ankaran zahod</h6>  <div>območje krajinskega parka Debeli rtič: Vinogradniška pot, Lazaret, Jadranska cesta</div></li>"
+      select_heading: Izberite območje
+      select_tag: Izberite mestno četrt
+      select_status: Izberite status predloga
+      select_heading_to_vote: Da lahko glasujete za projekte, morate izbrati območje.
+      instructions: "Kriteriji, ki jih morajo izpolnjevati projekti:"
+      instructions_description: |
+        <h3>Predlagatelj projekta</h3>
+        <ol>
+          <li>ima pravico podati projektni predlog (je imel na dan 01.01.2025 stalno prebivališče v OA ter dopolnjenih 15 let starosti oz. bo v letu 2025 dopolnili 15 let starosti (rojeni najkasneje leta 2010);</li>
+          <li>ne sme nastopati kot izvajalec projektnega predloga – ne kot fizična oseba oziroma lastnik ali poslovodna oseba pravne osebe izvajalca;</li>
+          <li>je podal predlog za območje participativnega proračuna občine v katerem ima stalno bivališče.</li>
+        </ol>
+        <h3>Predlagan projekt</h3>
+        <ol>
+          <li>je v pristojnosti občine;</li>
+          <li>bo izveden na območju Občine Ankaran;</li>
+          <li>ni v nasprotju z zakonodajo ali občinski predpisi;</li>
+          <li>je skladen s prostorskimi akti občine, razvojnimi akti občine, strategijami razvoja občine in drugimi razvojnimi programi občine;</li>
+          <li>prispeva k uresničevanju javnega interesa na območju občine;</li>
+          <li>je takšne narave, da bo njegova izvajalka lahko občina ter ga je mogoče izpeljati v okviru občinskih zmogljivosti in obdobja participativnega proračuna za leto 2025 in 2026;</li>
+          <li>spodbuja aktivno participacijo in vključenost občanov oziroma dviga kakovost bivanja v lokalnem okolju oziroma gradi skupnostni pristop in je namenjen splošni javni uporabi;</li>
+          <li>je načrtovan na zemljišču v lasti Občine Ankaran oziroma na zemljišču v lasti druge osebe za katerega je predlagatelj pridobil soglasje za uporabo ali drugo stvarno pravico, ki omogoča izvedbo projekta;</li>
+          <li>je njegova realna ocenjena vrednost (z vključenim davkom na dodano vrednost) najmanj 1.000 EUR ter največ 20.000 EUR za projekte na območju centra oziroma  največ 40.000 EUR za projekte na območjih zahoda in vzhoda;</li>
+          <li>je oddan na predvidenem in v celoti izpolnjenem obrazcu (elektronsko ali fizično).</li>
+        </ol>
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
@@ -275,66 +298,72 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun 2023-2024!
-      introduction_text: Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši.
+      title: Participativni proračun 2025-2026!
+      introduction_text: S projektom participativnega proračuna lahko občani občine Ankaran soodločate pri razporejanju dela proračunskega denarja. Projektni predlogi, ki so po meri občanov, bodo izboljšali učinkovitost porabe skupnih sredstev, krepili participacijo v lokalnem okolju in izboljšali kakovost življenja v občini.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
       past_list_more: Več
     about:
-      intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo občanke in občani. Sami predlagajo projekte in določijo, kateri so najnujnejši in bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti."
+      intro: 'Participativni proračun je proces demokratičnega soodločanja, pri katerem o porabi dela proračunskih sredstev neposredno odločajo občanke in občani. Sami prepoznajo probleme in možnosti izboljšav, tako predlagajo projekte, ki so najnujnejši, njihova izvedba pa bi največ prispevali k izboljšanju kakovosti bivanja v skupnosti. <p class="intro">V Občini Ankaran bodo za proračunski leti 2025 in 2026 občanke in občani lahko predlagali projekte in o njih tudi glasovali. Gre za projekte v skupni vrednosti do 100.000,00 EUR, od tega za območje participativnega proračuna Ankaran vzhod za projekte v skupni vrednosti do 40.000,00 EUR, Ankaran center za projekte v skupni vrednosti do 20.000,00 EUR ter Ankaran zahod za projekte v skupni vrednosti do 40.000,00 EUR.</p>'
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Mestna občina Maribor za naslednje proračunsko obdobje - 2023-2024 - načrtuje 1 milijon evrov za participativni proračun. V njem lahko s podajanjem predlogov in glasovanjem sodeluje vsak občan oz. občanka, ki ima stalno prebivališče v Mestni občini Maribor in je star/a več kot 15 let. S tem soodloča o porabi teh sredstev. Radi bi slišali, kaj predlagate v Mestni občini Maribor. Tako aktivno prispevate k izboljšanju kakovosti življenja v mestu. Spodaj si lahko ogledate, katere projekte so Mariborčani in Mariborčanke izglasovali za izvedbo v letih 2021 in 2022 in kateri so že izvedeni. Vabljeni k oddaji projektnega predloga tudi letos, za projekte, ki jih bomo izvedli v letih 2023 in 2024. Skupaj bomo poskrbeli, da bo Maribor še boljši."
-      date_1: 19. 5.-27. 6. 2022
+      description_1: 'Občanke in občani lahko oddajo predloge projektov od 27. 1. 2025 do 23. 2. 2025. Posamezen predlog projekta mora biti oddan na za ta namen določenem obrazcu, je njegova realna ocenjena vrednost (z vključenim davkom na dodano vrednost) najmanj 1.000 EUR ter največ 20.000 EUR za projekte na območju centra oziroma  največ 40.000 EUR za projekte na območjih zahoda in vzhoda, ter ustrezati drugim predpisanim pogojem za uvrstitev v participativni proračun – na glasovanje.</p><p>Projektni predlog mora biti oddan na obrazcu, ki ga  lahko izpolnite na tem spletnem mestu, ga prenesete <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">na tej povezavi</a> ali prevzamete v sprejemni pisarni Občine Ankaran v času uradnih ur.</p><p>Predlagatelj mora na obrazcu navesti zahtevane osebne podatke, anonimni predlogi ne bodo obravnavani. Vsak predlagatelj lahko predlaga največ 3 projektne predloge, in sicer za projekte, ki se nanašajo na območje participativnega proračuna, v katerem ima stalno prebivališče (območja participativnega proračuna so Ankaran vzhod, Ankaran center in Ankaran zahod ter so razvidna na zemljevidu <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dafc8022c0cba6d7d83152f3646dbbd4b79ab007/obmo%C4%8Dja%20PP%20OA%20-%20zemljevid%20z%20ulicami.pdf">na tej povezavi</a>).</p><p>Obrazec za oddajo projektnega predloga lahko oddate: <ul><li>na tem spletnem mestu, po registraciji in vpisu v spletno aplikacijo ali</li><li>po elektronski pošti na naslov sodelujem@obcina-ankaran.si.  ali</li><li>osebno v sprejemni pisarni (vložišču) Občine Ankaran, na naslovu Regentova ulica 2, Ankaran, v času uradnih ur.</li></ul></p>'
+      date_1: 27. 1.-23. 2. 2025
       heading_2: Pregled predlogov
-      description_2: "Strokovna komisija bo pregledala vse oddane predloge in na seznam za glasovanje uvrstila le tiste, ki ustrezajo pogojem (merilom). Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti občanov, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes."
-      date_2: 28. 6.-30. 9. 2022
+      description_2: "Vse oddane predloge pregleda strokovna komisija, ki vsak oddan predlog finančno ovrednoti, preveri njegovo izvedljivost ter skladnost s predpisanimi pogoji (v pristojnostmi občine, skladen z zakonodajo, skladen s prostorskimi in razvojnimi akti, prispeva k uresničevanju javnega interesa...). Komisija lahko enake ali podobne projektne predloge združi v en projektni predlog oziroma posamezni projektni predlog delno prilagodi.<p>Predloge, ki ne bodo ustrezali predpisanim pogojem, bo komisija izločila z obrazložitvijo, kateremu pogoju ali pogojem predlog projekta ni ustrezal.</p><p>Vsi projektni predlogi, ki bodo ustrezali vsem razpisnim pogojem, se uvrstijo naprej na glasovanje.</p>"
+      date_2: 24. 2.-24. 3. 2025
       heading_3: Glasovanje
-      description_3: "Med 1. in 16. oktobrom, 2022 boš odločal/-a o porabi 1 milijona evrov proračunskih sredstev Mestne občine Maribor. Glasoval/-a boš lahko za oddane predloge, ki so izvedljivi, zakoniti, v občinski pristojnosti in ne presegajo višine sredstev, namenjenih za posamezno območje v okviru participativnega proračuna. Glasuje lahko vsakdo s stalnim prebivališčem v Mestni občini Maribor, star/-a vsaj 15 let. Vsakdo lahko glasuje samo enkrat."
-      date_3: 1. 10.-16. 10. 2022
+      description_3: "Med 7. in 20. aprilom 2025 boste občani in občanke imeli priložnost glasovati, katerim projektom v Občini Ankaran bodo namenjena sredstva.<p>Glasujejo lahko občanke in občani Občine Ankaran, ki so imeli na dan 1. 1. 2025: <ul><li>stalno prebivališče na območju Občine Ankaran ter</li><li>dopolnjenih 15 let starosti oz. boste v letu 2025 dopolnili 15 let starosti (rojeni najkasneje leta 2010).</li></ul></p><p>Vsak upravičenec lahko glasuje za največ 3 projektne predloge na območju celotne občine, ne glede na območje participativnega proračuna, v katerem ima stalno prebivališče. Za posamezen projektni predlog lahko vsak upravičenec glasuje samo enkrat.</p><p>Svoj glas lahko oddate med 7. 4. 2025 do 20. 4. 2025 na tem spletnem mestu, po registraciji in vpisu v spletno aplikacijo. Svoj glas v spletni aplikaciji lahko oddate tudi s pomočjo asistenta na občini.</li></ul></p>"
+      date_3: 7. 4.-20. 4. 2025
       heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila izglasovane projekte. Izglasovane projekte bo župan vključil v predlog proračuna Mestne občine Maribor za leti 2023 in 2024."
-      date_4: "2023"
+      description_4: "Po končanem glasovanju bo občina preverila rezultate in razglasila projekte, ki so bili izbrani. Za vnos v proračun Občine Ankaran za leti 2025 in 2026 ter njihovo izvedbo bodo, glede na izid glasovanja, izbrani projekti za vsako posamezno območje participativnega proračuna Občine Ankaran do skupne višine določenih sredstev za posamezno območje (Ankaran vzhod skupno 40.000,00 EUR; Ankaran center skupno 20.000,00 EUR in Ankaran zahod 40.000,00 EUR).<p>Rezultati glasovanja bodo objavljeni na spletni strani občine po 25. 4. 2025.</p>"
+      date_4: "9. 5. 2025"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi izglasovani projekti bodo izvedeni v letih 2023 in 2024. V tej fazi participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju izvedbe projektov in sprotno posodabljanje njihovega statusa."
+      description_5: "Vsi zmagovalni projekti na posameznem območju participativnega proračuna Občine Ankaran (Ankaran vzhod, Ankaran center in Ankaran zahod) bodo vključeni v proračun Občine Ankaran in izvedeni v letih 2025 in 2026. Stanje izvajanja projektov boste lahko spremljali na tem spletnem mestu."
     privacy:
       title: "Pogoji uporabe"
     help:
       main_title: "Pogosta vprašanja"
       heading_1: "Potrebujem telefonsko številko in dostop do interneta, da lahko sodelujem?"
-      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebuješ e-naslov in internetno povezavo, vse funkcionalnosti lahko opraviš tudi na občini in sedežih krajevnih skupnosti."
+      description_1: "Za kreiranje uporabniškega računa na spletnem orodju potrebujete telefonsko številko, e-naslov in internetno povezavo, lahko pa vse funkcionalnosti opravite tudi na občini."
       heading_2: "Kako ustvarim in potrdim svoj račun?"
-      description_2: "Račun ustvariš tako, da v glavi spletnega mesta klikneš na gumb Vpiši se, ter nato na povezavo Registriraj se. Za kreiranje uporabniškega računa moraš vpisati uporabniško ime, e-naslov, EMŠO in geslo. Po kreiranju računa ga moraš potrditi še s klikom na povezavo v e-pošti, ki ti jo bomo poslali na tvoj e-naslov."
+      description_2: "Račun ustvarite tako, da v nogi spletnega mesta kliknete na gumb »Registracija«, klik na kateri koli gumb za akcijo pa vas prav tako pripelje do istega spletnega obrazca. Za kreiranje uporabniškega računa morate vpisati uporabniško ime, e-naslov, EMŠO, naslov stalnega prebivališča in geslo. Po kreiranju računa ga morate potrditi še s klikom na povezavo v e-pošti, ki vam jo bomo poslali na vaš e-naslov."
       heading_3: "Kako lahko ustvarim nov predlog?"
-      description_3: "Poleg spletnega je mogoče predlog oddati tudi v fizični obliki, in sicer: po pošti, na naslov Mestna občina Maribor, Ulica heroja Staneta 1, 2000 Maribor,  osebno na navedem naslovu, v sprejemni pisarni št. 14 (do 13. ure), ali v kateri koli mestni četrti/krajevni skupnosti v času uradnih ur (tam bodo na voljo tudi tiskani obrazci). Za pomoč pri pripravi predlogov projektov se lahko udeležiš interaktivne in praktičnih delavnic, ki bodo vsak četrtek, ob 18. uri od 19. maja do 23. junija."
+      description_3: |
+        <p>Poleg spletnega je mogoče predlog oddati tudi:</p>
+        <ul>
+          <li>V elektronski obliki (obrazec je potrebno prenesti <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f576c5c4668e5e257d716aef6ae1a7a1cf0f2d0/obrazec%20za%20podajo%20projektnega%20preldoga%20PP%20OA%2025-26_vk.docx">na tej povezavi</a>, izpolniti in poslati po elektronski pošti na naslov <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a></li>
+          <li>v fizični obliki osebno na naslovu Občinska uprava Občine Ankaran, Regentova ulica 2, 6280 Ankaran, v času uradnih ur.</li>
+        </ul>
+        <p>Za pomoč pri pripravi predlogov projektov se lahko udeležite praktične delavnice, ki bo potekala v sredo, 29. 1. 2025 ob 18. uri v prostorih Medgeneracijskega središča Ankaran, na naslovu Ulica Rudija Mahniča 1, 6280 Ankaran.</p>
       heading_4: "Pozabil_a sem svoje geslo. Kaj lahko storim?"
-      description_4: "Klikni na gumb Vpiši se, nato izberi povezavo Pozabljeno geslo. Na svoj elektronski naslov boš prejel_a navodila, kako ustvariti novo geslo."
+      description_4: "Kliknite na gumb »Vpišite se«, potem pa izberite povezavo »Pozabljeno geslo«. Na svoj elektronski naslov boste prejeli navodila, kako ustvariti novo geslo."
       heading_5: "Kako lahko spremenim svoj e-naslov, uporabniško ime in / ali geslo?"
       description_5: "V glavi spletnega mesta klikni na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
       help_title: "Potrebuješ pomoč?"
-      technical_issues: "Imaš tehnične težave?"
-      technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
-      other_questions: "Imaš kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnike Mestne občine Maribor na <a href="mailto:sodeluj@maribor.si" target="_blank">sodeluj@maribor.si</a>.'
+      technical_issues: "Imate tehnične tehnične težave?"
+      technical_contact: 'Kontaktirajte upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
+      other_questions: "Imate kakršnokoli drugo vprašanje?"
+      other_contact: 'Kontaktirajte predstavnike Občine Ankaran na <a href="mailto:sodelujem@obcina-ankaran.si" target="_blank">sodelujem@obcina-ankaran.si</a>. V času uradnih ur smo vam na voljo tudi po telefonu 05 66 53 000.'
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
-      date: "1. 2. 2024"
-      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Ideje za Novo mesto ter politike varovanja osebnih podatkov."
+      date: "1. 1. 2025"
+      intention: "Namen tega obvestila je, da vam pomaga razumeti delovanje spletnega orodja Participativnega proračuna Občine Ankaran ter politike varovanja osebnih podatkov."
       active_use: "Aktivno uporabo spletnega orodja štejemo kot soglasje uporabnice_ka, da se strinja s temi splošnimi pogoji uporabe. Vsi, ki želijo aktivno sodelovati, se morajo registrirati, za kar se bo zahtevalo sprejetje teh pogojev uporabe. V kolikor se kot uporabnica_k ne strinjate s temi splošnimi pogoji, vas prosimo, da spletnega mesta ne uporabljate."
       changes: "Pridružujemo si pravico, da splošne pogoje kadarkoli in brez predhodne najave spremenimo, tako da novo različico objavimo na tej spletni strani. Različica splošnih pogojev je razvidna iz datuma njihove zadnje spremembe, ki je zabeležena na vrhu teh pogojev."
       help: "V primeru kakršnih koli nejasnosti se prosimo obrnite na katero od spodnjih kontaktnih možnosti."
       contact1:
-        mail: "mestna.obcina@novomesto.si"
-        note1: "Telefon: v času uradnih ur občinske uprave na 07/  7 39 39 202"
-        note2: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
+        mail: "info@obcina-ankaran.si"
+        note1: "Telefon: v času uradnih ur občinske uprave na (05) 665 30 00"
+        note2: "Občina Ankaran, Občinska uprava, Jadranska cesta 66, 6280 Ankaran"
       contact2:
         mail: "consul@djnd.si"
         note1: "Tehnična pomoč"
-        note2: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+        note2: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       about_title: "O orodju"
       about_first: "Spletno orodje vzpodbuja državljansko participacijo in omogoča odprto, transparentno ter demokratično vodenje na občinski in državni ravni. Aplikacija gradi na osnovi odprtokodne platforme Consul, ki je nastala pod okriljem občine Madrid, za potrebe slovenskih občin pa so jo prilagodili na inštitutu Danes je nov dan."
       about_second: "Spletno orodje omogoča direktno soodločanje o delu občinskega proračuna. Uporabnice_ki lahko oddajajo, podpirajo in glasujejo o predlogih za projekte ter spremljajo njihov razvoj."
-      about_third: "Sodeluje lahko vsak_a občan_ka občine, ki je star_a vsaj 15 let in se je registriral_a na spletnem orodju, za aktivnosti mladoletnikov so odgovorni starši ali skrbniki. Ni omejitev glede števila oddanih predlogov ali komentarjev, med glasovanjem pa lahko vsak uporabnik glasuje za en projekt."
+      about_third: "Sodeluje lahko vsak_a občan_ka občine, ki je star_a vsaj 15 let (oz. bo v letu 2025 dopolnil 15 let) in se je registriral_a na spletnem orodju, za aktivnosti mladoletnikov so odgovorni starši ali skrbniki. Vsak lahko odda 3 projektne predloge za območje, v katerem ima stalno prebivališče, med glasovanjem pa lahko vsak uporabnik glasuje za 3 projekte na območju celotne občine (ne glede na območje, v katerem ima stalno prebivališče)."
       about_list:
         title: "Uporabnici_ku orodje omogoča:"
         li1:
@@ -348,7 +377,7 @@ sl-SI:
           desc: "V zadnji fazi orodje omogoča spremljanje rezultatov izvedbe."
       registration_title: "Registracija"
       registration_intro1: "Le registrirane_i uporabnice_ki lahko oddajo predloge projektov, komentirajo in glasujejo za oddane projekte. Neregistrirane_i uporabnice_ki lahko prosto spremljajo objavljene vsebine, ne morejo pa oddajati predlogov projektov, o njih glasovati ali sodelovati v debatah."
-      registration_intro2: "Uporabnica_k z registracijo potrjuje, da je dopolnil_a 15 let in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Mestno občino Novo mesto, da preveri verodostojnost osebnih podatkov za potrebe projekta Predlagam, odločam! iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
+      registration_intro2: "Uporabnik z registracijo potrjuje, da je dopolnil_a 15 let (oz. bo v letu 2025 dopolnil 15 let) in je seznanjen_a s svojimi pravicami in obveznostmi, ki so določene v obvestilu o obdelavi osebnih podatkov v skladu s Splošno uredbo o varstvu osebnih podatkov ter pooblašča Občino Ankaran, da preveri verodostojnost osebnih podatkov za potrebe projekta Participativnega proračuna Občine Ankaran iz uradnih evidenc in zbirk osebnih podatkov pri upravljavcih zbirk osebnih podatkov."
       registration_requirements: "Uporabnica_k mora ob registraciji navesti:"
       name: "uporabniško ime"
       email: "elektronski naslov"
@@ -383,20 +412,20 @@ sl-SI:
       responsibilities_eighth: "V primeru kakršnega koli spora med uporabnicami_ki spletnega orodja in/ali tretjo osebo smo izvzeti iz kakršnekoli odgovornosti za pravdne zahtevke, zahtevke za odškodnine ali odškodnine kakršne koli narave, povezane z vsebinami na spletnem orodju in/ali nastalimi v sodnem postopku."
       data_protection_title: "Varovanje osebnih podatkov"
       data_protection_first: "Upravljalec osebnih podatkov je:"
-      data_protection_first_note1: "Mestna občina Novo mesto, Seidlova cesta 1, 8000 Novo mesto"
-      data_protection_first_note2: "Matična številka:  5883288000"
-      data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: xyxyxyxyxyxyx"
-      data_protection_first_note4: "E-naslov: mestna.obcina@novomesto.si"
-      data_protection_first_note5: "telefon: 07/ 7 39 39 202"
-      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodeluj in glasuj! je:"
-      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Parmova ulica 20, 1000 Ljubljana"
+      data_protection_first_note1: "Občina Ankaran, Regentova Ulica 2, 6280 Ankaran"
+      data_protection_first_note2: "Matična številka: 2482851000"
+      data_protection_first_note3: "Pooblaščena oseba za varstvo osebnih podatkov: DATAINFO.SI d. o. o."
+      data_protection_first_note4: "E-naslov: info@datainfo.si"
+      data_protection_first_note5: "telefon: +386 (0) 40 733 798"
+      data_protection_second: "Obdelovalec osebnih podatkov na spletnem orodju Sodelujem je:"
+      data_protection_second_note1: "Danes je nov dan, Inštitut za druga vprašanja, Resljeva cesta 25, 1000 Ljubljana"
       data_protection_second_note2: "Matična številka: 6468594000"
       data_protection_second_note3: "E-naslov: vsi@danesjenovdan.si"
-      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu Mestne občine Novo mesto in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
+      data_protection_third: "Obdelovalec je pogodbeno zavezan, da osebne podatke uporablja izključno v imenu občine Ankaran in da zagotavlja njihovo varstvo v skladu z vsakokratnimi veljavnimi predpisi in našimi navodili."
       data_protection_fourth: "Inštitut Danes je nov dan je predan varovanju osebnih podatkov in transparentni rabi podatkov, da lahko uporabniki ter podporniki kar se da brez skrbi spremljajo ter podpirajo naše delo. Spoštujemo vaše zaupanje in vam zagotavljamo, da bomo z vašimi osebnimi podatki ravnali skrbno in jih obdelovali v skladu z veljavno zakonodajo na področju varovanja osebnih podatkov (GDPR in ZVOP-2). V nadaljevanju vam podrobneje opisujemo namene in podlago obdelav vaših osebnih podatkov in vas seznanjamo z vašimi pravicami."
       data_use_title: "Na kateri pravni podlagi obdelujemo osebne podatke"
       data_use_list: "Razlogi za obdelavo osebnih podatkov:"
-      data_use_list_li1: "posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Ideje za Novo mesto."
+      data_use_list_li1: "posameznica_k, na katero se nanašajo osebni podatki, je privolil_a v obdelavo svojih osebnih podatkov z registracijo in uporabo spletnega orodja Sodelujem."
       data_store_title: "Katere osebne podatke shranjujemo"
       data_store_list: "Shranjujemo podatke o:"
       data_store_list_li1: "uporabniško ime,"
@@ -438,7 +467,7 @@ sl-SI:
       data_insight_fourth: "Prav tako ima vsak_a posameznica_k, na katero se nanašajo osebni podatki, pravico, da vloži pritožbo neposredno pri Informacijskem pooblaščencu, če meni, da obdelava osebnih podatkov v zvezi z njo krši veljavno zakonodajo. Kontakt Informacijskega pooblaščenca:"
       data_insight_fourth_note1: "Informacijski pooblaščenec, Dunajska 22, 1000 Ljubljana"
       data_insight_fourth_note2: "Telefon: 01 230 97 30"
-      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si'"
+      data_insight_fourth_note3: "E-pošta: gp.ip@ip-rs.si"
       cookies_title: "Piškotki"
       cookies_intro: "Zakon o elektronskih komunikacijah (Uradni list št. 109/2012) ZEKom-1 je v pravni red prinesel pravila glede uporabe piškotkov in podobnih tehnologij za shranjevanje informacij ali dostop do informacij, shranjenih na računalnikih, tablicah ali mobilnih napravah uporabnikov. Naše orodje lahko v brskalnik vašega računalnika odloži tako imenovani »piškotek«."
       cookies_what_title: "Kaj so piškotki?"
@@ -447,13 +476,14 @@ sl-SI:
       cookies_why_intro: "So temeljnega pomena za zagotavljanje uporabnici_ku prijaznih spletnih storitev. Interakcija med spletno_im uporabnico_kom in spletno storitvijo je s pomočjo piškotkov hitrejša in enostavnejša. Z njihovo pomočjo si spletna storitve zapomni vaše želje, zanimanja in izkušnje, s tem je prihranjen čas, uporaba spletnih storitev pa je bolj učinkovita in prijazna."
       cookies_min_title: "Nujno potrebni piškotki"
       cookies_min_intro: "To so piškotki, ki so nujni za pravilno delovanje spletnih storitev in brez njih prenos sporočila v komunikacijskem omrežju ne bi bilo mogoče. Ti piškotki omogočajo uporabnici_ku delovanje prijaznih spletnih storitev, boljšo uporabniško izkušnjo in za njih ni potrebno pridobiti soglasja."
-      cookies_list: "Spletno orodje Consul, ki poganja Sodeluj in glasuj!, uporablja zgolj dva nujno potrebna piškotka:"
+      cookies_list: "Spletno orodje Consul, ki poganja Participativni proračun Občine Ankaran uporablja zgolj dva nujno potrebna piškotka:"
       cookies_list_li1: "_consul_session"
       cookies_list_li1_desc: "Se uporablja, da je uporabnic_ka lahko vpisan_a v spletno orodje in lahko glasuje."
       cookies_list_li2: "ahoy_visit in ahoy_visitor"
       cookies_list_li2_desc: "Se uporabljata za preprečevanje zlorab uporabniške seje."
       ip_title: "Intelektualna lastnina"
       ip_intro: 'Vsa koda potrebna za delovanje te spletne strani je odprta in dostopna vsakomur. Kodo lahko vsakdo uporablja brezplačno pod pogoji licence <a href="https://github.com/danesjenovdan/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPLv3</a>.'
+      terms_second_checkbox: "Do morebitnega preklica izrecno, prostovoljno, brezpogojno in jasno dovoljujem, da Občina Ankaran obdeluje moje osebne podatke za namen izvedbe projekta Sodelujem."
     statuses:
       title: "Izberi status predloga"
       waiting: "Čaka na izvedbo"
@@ -466,6 +496,7 @@ sl-SI:
       registration: "Zaradi napak obrazca nismo mogli shraniti."
       submit_investment: "Zaradi napak obrazca nismo mogli shraniti."
       no_answer: "Prosim izpolni vprašanje."
+      new_investment_not_allowed: "Oddate lahko samo 3 predloge."
     footer:
       accessibility: Izjava o dostopnosti
       consul_html: |
@@ -473,16 +504,16 @@ sl-SI:
       djnd_html: |
         <p>Slovensko verzijo je pripravil in zanjo skrbi <br/><a href="https://danesjenovdan.si/" target="_blank">Danes je nov dan, Inštitut za druga vprašanja</a>.</p>
       municipality_html: |
-        <p>Participativni proračun <br/><a href="https://www.comune.san-dorligo-della-valle.ts.it/" target="_blank">Občine Dolina</a></p>
-      municipality_url: https://www.comune.san-dorligo-della-valle.ts.it/
+        <p>Participativni proračun <br/><a href="https://obcina-ankaran.si/sl" target="_blank">Občine Ankaran</a></p>
+      municipality_url: https://obcina-ankaran.si/sl
     registration:
       already_has_account: "Že imaš račun?"
     accessibility:
       slug: izjava-o-dostopnosti
       title: Izjava o dostopnosti
       date: 30. 1. 2025
-      main_title: Izjava o dostopnosti Celje po moje
-      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://celjepomoje.si">celjepomoje.si</a>.
+      main_title: Izjava o dostopnosti Sodelujem
+      intention_first: Izjava o dostopnosti se nanaša na spletno mesto <a href="https://sodelujem.obcina-ankaran.si/">Sodelujem</a>.
       intention_second: "Uporabo portala želimo približati najširšemu krogu uporabnikom, zato ga nenehno oblikujemo in prilagajamo tako, da je dostopen za uporabnike z različnimi oblikami invalidnosti in oviranosti: uporabnikom z okvarami vida (slepim, slabovidnim, barvno slepim), uporabnikom z okvarami sluha (gluhim, naglušnim, gluhoslepim) ter uporabnikom z različnimi kognitivnimi okvarami in motnjami v razumevanju."
       level_title: Stopnja skladnosti
       level_paragraph: Spletno mesto Celje po moje je delno skladno z Zakonom o dostopnosti spletišč in mobilnih aplikacij javnega sektorja (ZDSMA). Spletne strani in vsebine so pripravljene v skladu z mednarodnimi smernicami za dostopnost spletnih vsebin in ustrezajo standardu WCAG (Web Content Accessibility Guidelines) 2.1. Skladnost dostopnosti spletnega mesta s smernicami WCAG po samooceni ustreza stopnji AA.
@@ -503,16 +534,16 @@ sl-SI:
       inaccessible_paragraph: Dostopnost spletišča nenehno spremljamo in sproti izboljšujemo posamezne elemente dostopnosti. Kljub temu nekatere objavljene vsebine ne izpolnjujejo vseh zahtev glede dostopnosti, kot jih določa Zakon o dostopnosti spletišč in mobilnih aplikacij.
       less_accessible_subtitle: "Manj dostopne vsebine:"
       less_accessible_bullets: |
-        <li>Označba fokusa je na <a href="https://celjepomoje.si/budgets/1/investments">izbirniku območja</a> slabo vidna. Enako velja za označbo polj na obrazcu za oddajo predloga. Ob prvi prenovi bomo to uredili.</li>
+        <li>Označba fokusa je na <a href="https://sodelujem.obcina-ankaran.si/budgets/1/investments">izbirniku območja</a> slabo vidna. Enako velja za označbo polj na obrazcu za oddajo predloga. Ob prvi prenovi bomo to uredili.</li>
         <li>Velikost tekstov je ponekod določena z absolutnimi merskimi enotami (px), ki lahko povzročijo težave pri prilagajanju velikosti vsebine. Ob prvi prenovi bomo to uredili.</li>
       inaccessible_subtitle: "Nedostopne vsebine:"
       inaccessible_bullets: |
         <li>Spletno mesto nima kazala strani. Razlog je v nesorazmernem bremenu, ki ga ocenjujemo s kadrovskim in finančnim bremenom, ki bi ga optimiziranje trenutno zahtevalo, saj spletna platforma trenutno ne omogoča dodajanja takšne podstrani. Ob prvi prenovi bomo to uredili.</li>
         <li>Slike, ki jih dodajajo uporabniki sami, nimajo vpisanega alternativnega opisa. Ob prvi prenovi bomo v obrazec za oddajo predloga dodali polje za vpis alternativnega opisa, vendar tudi v tem primeru skrbnik ne more zagotavljati kakovosti opisov. Elementi, ki so integralni del spletnega mesta, imajo vpisan alternativni opis.</li>
         <li>Datoteke, ki jih uporabniki sami dodajajo, niso nujno dostopne. Razlog je v nesorazmernem bremenu, ki bi ga predstavljalo prilagajanje in optimiziranje že naloženih dokumentov.</li>
-        <li>Zaradi nesorazmernega bremena, ki bi ga optimiziranje zahtevalo, se v obrazcu za oddajo predloga v primeru oddaje s praznim poljem “Ocena stroškov projektnega predloga” izpiše sistemska napaka, ki je odvisna od jezika brskalnika, ki ga uporablja uporabnik. Ta je lahko v angleščini.</li>
+        <li>Zaradi nesorazmernega bremena, ki bi ga optimiziranje zahtevalo, se v obrazcu za oddajo predloga v primeru oddaje s praznim poljem "Ocena stroškov projektnega predloga" izpiše sistemska napaka, ki je odvisna od jezika brskalnika, ki ga uporablja uporabnik. Ta je lahko v angleščini.</li>
       feedback_title: Povratne in kontaktne informacije
-      feedback_paragraph: Če nam želite sporočiti karkoli v zvezi s prilagoditvijo dostopnosti portala Celje po moje za uporabnike z različnimi invalidnostmi ain oviranostmi, nam lahko pišete na <a href="mailto:mestna.obcina@celje.si">mestna.obcina@celje.si</a> ali nas pokličete na <a href="tel:034265750">03 4265 750</a>.
+      feedback_paragraph: Če nam želite sporočiti karkoli v zvezi s prilagoditvijo dostopnosti portala Sodelujem za uporabnike z različnimi invalidnostmi ain oviranostmi, nam lahko pišete na <a href="mailto:info@obcina-ankaran.si">info@obcina-ankaran.si</a> ali nas pokličete na <a href="tel:056633000">05 663 30 00</a>.
       surveillance_title: Nadzor nad izvajanjem določb Zakona o dostopnosti spletišč in mobilnih aplikacij (ZDSMA)
       surveillance_paragraph: |
         <a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/inspektorat-za-informacijsko-druzbo/o-inspektoratu/">Inšpektorat Republike Slovenije za informacijsko družbo</a>
@@ -526,3 +557,40 @@ sl-SI:
         E: <a href="mailto:gp.ijs@gov.si">gp.ijs@gov.si</a>
       author_title: Priprava izjave o dostopnosti
       author_paragraph: "Datum objave Izjave o dostopnosti: 30. 1. 2025, na podlagi samoocene. Zadnja posodobitev Izjave o dostopnosti: 30 . 1 .2025."
+    ankaran:
+      mayor:
+        title: Spoštovane občanke in občani!
+        content: |
+          <p>Vsak od nas je gradnik skupnosti, v kateri živimo - najpomembnejšo ožjo skupnost predstavlja družina, širša, a prav tako pomembna skupnost za vsakega posameznika pa je tudi občina. Ta močno vpliva na naša življenja, saj zagotavlja delovanje številnih vsebin; skrbi za vrtec in osnovno šolo, oskrbo z vodo, kanalizacijo, odvoz odpadkov, občinske ceste in infrastrukturo, urejanje okolice, glasbeno šolo, kulturne vsebine, knjižnico, zdravstvene ambulante in lekarno, programe za starejše, socialne pomoči, športno infrastrukturo in ne nazadnje sofinancira delovanj športnih, kulturnih in drugih društev. </p>
+          <p>Prebivalke in prebivalci Ankarana smo člani lokalne skupnosti Občine Ankaran. Nastanek naše občine in njena prehojena pot sta v mnogočem drugačna od ostalih. Občina Ankaran je edina občina v Republiki Sloveniji, ki je nastala na podlagi neposrednega angažiranja prebivalcev Ankarana, ki smo s ciljem zaščite narave in svojega življenjskega prostora podali pobudo za ustanovitev lastne občine ter njeno ustanovitev nazadnje dosegli s pomočjo Ustavnega sodišča RS.</p>
+          <p>Od začetka delovanja občine 1. januarja 2015 smo bili občani in občanke Ankarana vključeni v pripravo vseh ključnih dokumentov za razvoj občine: občinski prostorski načrt, ustanovitev krajinskega parka, dolgoročni razvojni načrt.... Že od priprave prvega samostojnega proračuna občine za leto 2016 smo na poziv strokovnih služb občine vsako leto podajali pobude za projekte in vsebine, ki (smo) si jih želeli v občini. Na tak način je bilo v preteklih  letih prejetih okoli 950 pobud, izmed katerih jih je že veliko izvedenih, nekaj jih je še v teku, tiste največje pa bodo zaradi zahtevnosti izvedene v dolgoročnem obdobju.</p>
+          <p>To prakso sodelovanja in vključevanja občank in občanov pri oblikovanju ključnih odločitev v občini si želimo pri pripravi načrta dela občine Ankaran za leto 2025 in 2026 še nadgraditi. S tem namenom se uvaja glasovanje občank in občanov o umestitvi posameznih projektov v predlog proračuna oziroma t.i. participativni proračun. S pomočjo participativnega proračuna lahko občanke in občani sami prepoznajo potrebe ali možnosti izboljšav, predlagajo rešitve ali projekte ter v zadnji fazi tudi izmed podanih predlogov z demokratičnim glasovanjem izberejo tiste, ki se v nadaljevanju realizirajo.</p>
+          <p>V želji, da se kot skupnost še bolj povežemo ter s skupnimi močmi uredimo naš življenjski prostor vas vabim, da sodelujete s svojimi predlogi, predlagate projekte in na glasovanju izberete tiste, ki naj se v letih 2025 in 2026 v naši občini izvedejo. Bodimo aktivni člani skupnosti, da bo ta še bolj po naši meri.</p>
+          <p>Gregor Strmčnik, župan</p>
+      form:
+        tocna_lokacija_label: Točna lokacija projekta
+        tocna_lokacija_info: |
+          Navedite parcelno številko (skupaj s katastrsko občino) ali naslov lokacije
+          kjer naj bi se projekt izvedel. Podatke o parcelnih številkah in naslovih lahko
+          dobite na prostorskem portalu Občine Ankaran na spletni strani občine oz. na
+          povezavi <a href="https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz">https://obcina-ankaran.si/sl/za-obcane/prostorski-portal/zacetni-prikaz</a>.
+        lastnistvo_nepremicnine_label: Lastništvo nepremičnine
+        lastnistvo_nepremicnine_info: Kdo je lastnik nepremičnine (parcele, stavbe,…) kjer naj bi se izvedel projekt in ste jo navedli v prejšnji točki?
+        lastnistvo_nepremicnine_obcina: lastnik je občina Ankaran
+        lastnistvo_nepremicnine_drugi: lastnik je druga pravna ali fizična oseba
+        pravica_uporabe_label: Pravica uporabe oz. gradnje na nepremičnini
+        pravica_uporabe_info: |
+          Izpolnite le, če je lastnik nepremičnine druga pravna ali fizična oseba in ne Občina Ankaran.
+          Označite ali je pridobljeno soglasje za uporabo nepremičnine oziroma druga pravica, ki omogoča
+          gradnjo ali uporabo nepremičnine (stavbna pravica, služnost). V kolikor je soglasje pridobljeno,
+          obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča
+          uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost, ...).
+        pravica_uporabe_ni_soglasja: ni soglasja oz. druge pravice za uporabo nepremičnine
+        pravica_uporabe_je_soglasje: je soglasje oz. druga pravica uporabe nepremičnine – obvezno priložite pisno soglasje lastnika ali pogodbo oz. drugo dokazilo o pravici, ki omogoča uporabo nepremičnine oz. gradnjo na njej (stavbna pravica, služnost,..)
+        ocena_stroskov_label: Ocena stroškov projektnega predloga (skupaj z DDV-jem)
+        ocena_stroskov_info: |
+          Vpišite celo število brez kakršnih koli pik, vejic, črk in ostalih simbolov.
+          <br />
+          Navedite oz. po lastni presoji podajte ocenjeno vrednost projekta. Vrednost projektnega predloga je je lahko najmanj 1.000,00 EUR in največ 35.000,00 EUR, z vključenim DDV.
+          <br />
+          Zgolj za orientacijo so na <a href="https://consul-ankaran.lb.djnd.si/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--da36007552c3dd0b59c0ba98e74a445c45492724/Orientacijske%20vrednosti.pdf">povezavi</a> navedene vrednosti vzorčnih projektov.</p>
