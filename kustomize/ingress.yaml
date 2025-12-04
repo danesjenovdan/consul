@@ -5,8 +5,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
     nginx.ingress.kubernetes.io/proxy-body-size: 10m
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-      proxy_set_header X-Forwarded-Proto https;
+    nginx.ingress.kubernetes.io/session-cookie-secure: true
 spec:
   ingressClassName: nginx
   tls:
