@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-capybara
   - rubocop-factory_bot
   - rubocop-performance
@@ -12,7 +12,6 @@ AllCops:
   Exclude:
     - "db/schema.rb"
     - "app/lib/ckeditor/backend/active_storage.rb"
-    - "config/initializers/disable_active_storage_pdf_auto_previews.rb"
     - "vendor/**/*"
   DisabledByDefault: true
 
@@ -23,9 +22,8 @@ Bundler/OrderedGems:
   Enabled: true
   ConsiderPunctuation: true
 
-Capybara/ClickLinkOrButtonStyle:
+Capybara/AmbiguousClick:
   Enabled: true
-  EnforcedStyle: strict
 
 Capybara/CurrentPathExpectation:
   Enabled: true
@@ -102,6 +100,9 @@ Layout/EmptyLineBetweenDefs:
 Layout/EmptyLines:
   Enabled: true
 
+Layout/EmptyLinesAfterModuleInclusion:
+  Enabled: true
+
 Layout/EmptyLinesAroundAccessModifier:
   Enabled: true
 
@@ -165,7 +166,6 @@ Layout/LineLength:
     - "config/environments/production.rb"
     - "config/environments/staging.rb"
     - "config/initializers/devise.rb"
-    - "config/initializers/backtrace_silencers.rb"
     - "db/migrate/*create_delayed_jobs.rb"
     - "db/migrate/*create_active_storage_variant_records.active_storage.rb"
     - "app/models/budget/stats.rb"
@@ -386,6 +386,9 @@ Performance/StartWith:
 Performance/Sum:
   Enabled: true
 
+Performance/ZipWithoutBlock:
+  Enabled: true
+
 Rails/ActionControllerFlashBeforeRender:
   Enabled: true
 
@@ -438,6 +441,9 @@ Rails/FindBy:
   Exclude:
     - "config/initializers/ahoy.rb"
 
+Rails/FindByOrAssignmentMemoization:
+  Enabled: true
+
 Rails/FindEach:
   Enabled: true
 
@@ -465,6 +471,9 @@ Rails/NotNullColumn:
   Enabled: true
   Exclude:
     - "db/migrate/201[5-7]*"
+
+Rails/OrderArguments:
+  Enabled: true
 
 Rails/OutputSafety:
   Enabled: true
@@ -623,6 +632,9 @@ RSpec/Focus:
 RSpec/HookArgument:
   Enabled: true
 
+RSpec/IncludeExamples:
+  Enabled: true
+
 RSpec/InstanceVariable:
   Enabled: true
   Exclude:
@@ -721,6 +733,9 @@ Style/ArrayCoercion:
 Style/ArrayIntersect:
   Enabled: true
 
+Style/ArrayIntersectWithSingleElement:
+  Enabled: true
+
 Style/BlockDelimiters:
   Enabled: true
 
@@ -734,6 +749,9 @@ Style/ClassVars:
   Enabled: true
 
 Style/CollectionMethods:
+  Enabled: true
+
+Style/CollectionQuerying:
   Enabled: true
 
 Style/ComparableBetween:
@@ -806,6 +824,8 @@ Style/MinMaxComparison:
 
 Style/MutableConstant:
   Enabled: true
+  Exclude:
+    - "bin/setup"
 
 Style/NegatedIfElseCondition:
   Enabled: true

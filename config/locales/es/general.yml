@@ -88,7 +88,6 @@ es:
         confidence_score: Mejor valorados
         created_at: Nuevos
         hot_score: Más activos
-        most_commented: Más comentados
         relevance: Más relevantes
         recommendations: Recomendaciones
       recommendations:
@@ -124,7 +123,6 @@ es:
       recommendations_title: Recomendaciones para crear un debate
       start_new: Empezar un debate
     show:
-      author_deleted: Usuario eliminado
       comments_title: Comentarios
       edit_debate_link: Editar debate
       flag: Este debate ha sido marcado como inapropiado por varios usuarios.
@@ -329,6 +327,7 @@ es:
       tags_placeholder: "Escribe las etiquetas que desees separadas por coma (',')"
       map_location: "Ubicación en el mapa"
       map_location_instructions: "Navega por el mapa hasta la ubicación y coloca el marcador."
+      map_marker_coordinates: "Latitud: %{latitude}. Longitud: %{longitude}"
       map_remove_marker: "Eliminar el marcador"
     index:
       featured_proposals: Destacadas
@@ -415,7 +414,6 @@ es:
       successful: "Esta propuesta ha alcanzado los apoyos necesarios."
       selected: "Propuesta seleccionada"
     show:
-      author_deleted: Usuario eliminado
       code: "Código de la propuesta:"
       comments_tab: Comentarios
       dashboard_proposal_link: Panel de control
@@ -639,6 +637,9 @@ es:
       results:
         title: "Preguntas"
         most_voted_answer: "Respuesta más votada: "
+        open_ended:
+          valid: Válidos
+          blank: En blanco
     poll_header:
       back_to_proposal: Volver a la propuesta
   poll_questions:

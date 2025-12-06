@@ -55,10 +55,10 @@ module Abilities
 
       can [:search, :create, :index, :destroy, :update], ::Administrator
       can [:search, :create, :index, :destroy], ::Moderator
-      can [:search, :show, :update, :create, :index, :destroy, :summary], ::Valuator
+      can [:search, :show, :update, :create, :index, :destroy], ::Valuator
       can [:search, :create, :index, :destroy], ::Manager
       can [:create, :read, :destroy], ::SDG::Manager
-      can [:search, :index], ::User
+      can [:index], ::User
 
       can :manage, Dashboard::Action
 
@@ -83,7 +83,7 @@ module Abilities
 
       can :read_admin_stats, Budget, &:balloting_or_later?
 
-      can [:search, :update, :create, :index, :destroy], Banner
+      can [:update, :create, :index, :destroy], Banner
 
       can [:index, :create, :update, :destroy], Geozone
 
@@ -101,7 +101,7 @@ module Abilities
       end
       can [:read, :order_options], Poll::Question::Option
       can [:create, :update, :destroy], Poll::Question::Option do |option|
-        can?(:update, option.question)
+        can?(:update, option.question) && option.question.accepts_options?
       end
       can :read, Poll::Question::Option::Video
       can [:create, :update, :destroy], Poll::Question::Option::Video do |video|

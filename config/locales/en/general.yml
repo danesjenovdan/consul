@@ -88,7 +88,6 @@ en:
         confidence_score: highest rated
         created_at: newest
         hot_score: most active
-        most_commented: most commented
         relevance: relevance
         recommendations: recommendations
       recommendations:
@@ -124,7 +123,6 @@ en:
       recommendations_title: Recommendations for creating a debate
       start_new: Start a debate
     show:
-      author_deleted: User deleted
       comments_title: Comments
       edit_debate_link: Edit
       flag: This debate has been flagged as inappropriate by several users.
@@ -329,6 +327,7 @@ en:
       tags_placeholder: "Enter the tags you would like to use, separated by commas (',')"
       map_location: "Map location"
       map_location_instructions: "Navigate the map to the location and place the marker."
+      map_marker_coordinates: "Latitude: %{latitude}. Longitude: %{longitude}"
       map_remove_marker: "Remove map marker"
     index:
       featured_proposals: Featured
@@ -415,7 +414,6 @@ en:
       successful: "This proposal has reached the required supports."
       selected: "Selected proposal"
     show:
-      author_deleted: User deleted
       code: "Proposal code:"
       comments_tab: Comments
       dashboard_proposal_link: Dashboard
@@ -639,6 +637,9 @@ en:
       results:
         title: "Questions"
         most_voted_answer: "Most voted answer: "
+        open_ended:
+          valid: Valid
+          blank: Blank
     poll_header:
       back_to_proposal: Back to proposal
   poll_questions:

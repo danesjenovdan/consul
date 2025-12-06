@@ -3,10 +3,6 @@ module RemoteTranslations
     class Client
       attr_reader :context, :chat, :prompt
 
-      TOKENS_PER_WORD = 3 # approximation
-
-      class LLMTranslationError < StandardError; end
-
       def initialize
         @context = build_context
         @chat = build_chat
@@ -22,7 +18,7 @@ module RemoteTranslations
       private
 
         def build_context
-          Config.context
+          ::Llm::Config.context
         end
 
         def build_chat

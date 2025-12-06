@@ -21,22 +21,16 @@ describe "Admin settings", :admin do
   end
 
   describe "Map settings initialization" do
-    before do
+    scenario "Map is only initialized when the map settings tab content is shown" do
       Setting["feature.map"] = true
-    end
 
-    scenario "When `Map settings` tab content is hidden map should not be initialized" do
       visit admin_settings_path
 
-      expect(page).not_to have_css("#admin-map.leaflet-container", visible: :all)
-    end
-
-    scenario "When `Map settings` tab content is shown map should be initialized" do
-      visit admin_settings_path
+      expect(page).not_to have_css ".map-location.leaflet-container", visible: :all
 
       click_link "Map configuration"
 
-      expect(page).to have_css("#admin-map.leaflet-container")
+      expect(page).to have_css ".map-location.leaflet-container"
     end
   end
 
@@ -50,41 +44,7 @@ describe "Admin settings", :admin do
       expect(page).to have_content "To show the map to users you must enable " \
                                    '"Proposals and budget investments geolocation" ' \
                                    'on "Features" tab.'
-      expect(page).not_to have_css("#admin-map")
-    end
-
-    scenario "Should be able when map feature activated" do
-      Setting["feature.map"] = true
-
-      visit admin_settings_path
-      click_link "Map configuration"
-
-      expect(page).to have_css("#admin-map")
-      expect(page).not_to have_content "To show the map to users you must enable " \
-                                       '"Proposals and budget investments geolocation" ' \
-                                       'on "Features" tab.'
-    end
-
-    scenario "Should show successful notice" do
-      Setting["feature.map"] = true
-
-      visit admin_settings_path
-      click_link "Map configuration"
-
-      within "#map-form" do
-        click_button "Update"
-      end
-
-      expect(page).to have_content "Map configuration updated successfully"
-    end
-
-    scenario "Should display marker by default" do
-      Setting["feature.map"] = true
-
-      visit admin_settings_path
-
-      expect(find("#latitude", visible: :hidden).value).to eq "51.48"
-      expect(find("#longitude", visible: :hidden).value).to eq "0.0"
+      expect(page).not_to have_css ".map-location"
     end
 
     scenario "Should update marker" do
@@ -92,13 +52,26 @@ describe "Admin settings", :admin do
 
       visit admin_settings_path
       click_link "Map configuration"
-      find("#admin-map").click
+
+      expect(page).to have_css ".map-location"
+      expect(page).not_to have_content "To show the map to users you must enable " \
+                                       '"Proposals and budget investments geolocation" ' \
+                                       'on "Features" tab.'
+
+      expect(page).to have_field "Latitude", with: "51.48"
+      expect(page).to have_field "Longitude", with: "0.0"
+      expect(page).to have_css ".map-icon[aria-label='Latitude: 51.48. Longitude: 0.0']"
+
       within "#map-form" do
+        find(".map-location").click
         click_button "Update"
       end
 
-      expect(find("#latitude", visible: :hidden).value).not_to eq "51.48"
       expect(page).to have_content "Map configuration updated successfully"
+      expect(page).to have_field "Latitude"
+      expect(page).to have_css ".map-icon"
+      expect(page).not_to have_field "Latitude", with: "51.48"
+      expect(page).not_to have_css ".map-icon[aria-label='Latitude: 51.48. Longitude: 0.0']"
     end
   end
 
@@ -372,69 +345,36 @@ describe "Admin settings", :admin do
   end
 
   describe "LLM settings" do
-    context "Nothing is configured" do
-      scenario "Provider and model are disabled, but Settings render without errors" do
-        visit admin_settings_path
-        click_link "LLM Settings"
-
-        expect(page).to have_content "LLM Provider"
-      end
-    end
-
     context "Required LLM setup is configured" do
+      before do
+        allow(Llm::Config)
+          .to receive(:providers).and_return({ OpenAI: { enabled: true }})
+        ruby_llm_models = [double("Model", name: "GPT-4.1 mini", id: "gpt-4o-mini")]
+        allow(RubyLLM.models).to receive(:by_provider).with(:openai).and_return(ruby_llm_models)
+      end
       scenario "Configure provider, model and enable usage" do
-        # Ensure settings exist
-        Setting["llm.provider"] = nil
-        Setting["llm.model"] = nil
-        Setting["llm.use_llm_for_translations"] = nil
-
-        # Stub openai provider and models directly on the component
-        allow_any_instance_of(Admin::Settings::LlmConfigurationTabComponent)
-          .to receive(:providers)
-          .and_return({ "OpenAI" => { id: "openai", enabled: true }})
-        allow_any_instance_of(Admin::Settings::LlmConfigurationTabComponent)
-          .to receive(:models)
-          .and_return({ "gpt-4o-mini" => { id: "gpt-4o-mini", enabled: true }})
-        model_double = double(name: "gpt-4o-mini", id: "gpt-4o-mini")
-        allow(RubyLLM).to receive_message_chain(:models,
-                                                :by_provider).with(:openai).and_return([model_double])
-
         visit admin_settings_path
         click_link "LLM Settings"
-
-        # Select provider
-        provider_setting = Setting.find_by!(key: "llm.provider")
-        within "#edit_setting_#{provider_setting.id}" do
-          select "OpenAI", from: "setting_value"
+        within "tr", text: "LLM Provider" do
+          expect(page).to have_select selected: "None"
+          select "OpenAI"
           click_button "Update"
+          expect(page).to have_select selected: "OpenAI"
         end
-
-        # Provider selection triggers an ajax submit; wait until model row appears
-        expect(page).to have_content "Model"
-
-        # Select model
-        model_setting = Setting.find_by!(key: "llm.model")
-        within "#edit_setting_#{model_setting.id}" do
-          select "gpt-4o-mini", from: "setting_value"
+        expect(page).to have_content "Value updated"
+        within "tr", text: "Model" do
+          expect(page).to have_select selected: "None"
+          select "GPT-4.1 mini"
           click_button "Update"
+          expect(page).to have_select selected: "GPT-4.1 mini"
         end
-
-        # After provider and model are set, the feature toggle row should appear
-        expect(page).to have_content "Use LLM for content translations"
-
-        # Wait for the feature toggle to be enabled and click it
-        within "tr", text: "Use LLM for content translations" do
+        expect(page).to have_content "Value updated"
+        within "tr", text: "Content Translation" do
           expect(page).to have_button "No"
           click_button "No"
+          expect(page).to have_button "Yes"
         end
-
-        # Wait for the AJAX request to complete
         expect(page).to have_content "Value updated"
-
-        # Verify settings persisted
-        expect(Setting.find_by!(key: "llm.provider").reload.value).to eq "OpenAI"
-        expect(Setting.find_by!(key: "llm.model").reload.value).to eq "gpt-4o-mini"
-        expect(Setting.find_by!(key: "llm.use_llm_for_translations").reload.value).to eq "active"
       end
     end
   end

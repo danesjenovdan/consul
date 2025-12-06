@@ -62,6 +62,7 @@ es:
         filter: Mostrar
         filters:
           all: Todos
+          on_budget_investments: Proyectos de gasto
           on_comments: Comentarios
           on_debates: Debates
           on_proposals: Propuestas
@@ -1131,6 +1132,7 @@ es:
         title: "Tipo de votación"
         unique_description: "Solo se puede responder a la pregunta con una única respuesta."
         multiple_description: "Permite elegir más de una respuesta. Se puede elegir el número máximo de respuestas."
+        open_description: "Pregunta abierta que permite al usuario dar una única respuesta con sus propias palabras."
     questions:
       index:
         create: "Crear pregunta ciudadana"
@@ -1325,6 +1327,7 @@ es:
         participation_processes: "Procesos de participación"
         images_and_documents: "Imágenes y documentos"
         feature_flags: Funcionalidades
+        blank_option: "Ninguno"
         features:
           enabled: "Activada"
         map:
@@ -1349,11 +1352,6 @@ es:
           title: Banner de consentimiento de cookies
         llm:
           title: Configuración LLM
-          provider: "Proveedor LLM"
-          default_help_text: "Los proveedores estarán <strong>deshabilitados</strong> hasta que se configuren las credenciales en secrets.yml."
-          provider_blank_option: "Seleccionar un proveedor..."
-          model_blank_option: "Seleccionar un modelo..."
-          model: "Modelo"
       remote_census_general_name: Datos Generales
       remote_census_request_name: Datos Petición
       remote_census_response_name: Datos Respuesta

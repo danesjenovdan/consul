@@ -4,7 +4,7 @@ class Admin::Settings::LlmConfigurationTabComponent < ApplicationComponent
   end
 
   def providers
-    RemoteTranslations::Llm::Config.providers
+    Llm::Config.providers
   end
 
   def provider_options
@@ -21,8 +21,7 @@ class Admin::Settings::LlmConfigurationTabComponent < ApplicationComponent
 
     RubyLLM.models.by_provider(provider.downcase.to_sym).each_with_object({}) do |model, hash|
       hash[model.name] = {
-        id: model.id,
-        enabled: true
+        id: model.id
       }
     end
   end
@@ -40,5 +39,11 @@ class Admin::Settings::LlmConfigurationTabComponent < ApplicationComponent
 
   def feature_disabled?
     Setting["llm.provider"].blank? || Setting["llm.model"].blank?
+  end
+
+  def image_suggestions_disabled?
+    Setting["llm.provider"].blank? ||
+      Setting["llm.model"].blank? ||
+      Tenant.current_secrets.pexels_access_key.blank?
   end
 end

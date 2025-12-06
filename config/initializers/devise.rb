@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  config.secret_key = Rails.application.secrets.secret_key_base
+  config.secret_key = Rails.application.secret_key_base
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -286,28 +286,13 @@ Devise.setup do |config|
                   Rails.application.secrets.wordpress_oauth2_secret,
                   client_options: { site: Rails.application.secrets.wordpress_oauth2_site },
                   setup: ->(env) { OmniauthTenantSetup.wordpress_oauth2(env) }
-  saml_settings = {}
-  if Rails.application.secrets.saml_idp_metadata_url.present?
-    idp_metadata_parser = OneLogin::RubySaml::IdpMetadataParser.new
-    saml_settings = idp_metadata_parser.parse_remote_to_hash(Rails.application.secrets.saml_idp_metadata_url)
-    saml_settings[:idp_sso_service_url] = Rails.application.secrets.saml_idp_sso_service_url
-    saml_settings[:sp_entity_id] = Rails.application.secrets.saml_sp_entity_id
-    saml_settings[:allowed_clock_drift] = 1.minute
-  end
-  config.omniauth :saml, saml_settings.merge(setup: ->(env) { OmniauthTenantSetup.saml(env) })
-
+  config.omniauth :saml, setup: ->(env) { OmniauthTenantSetup.saml(env) }
   config.omniauth :openid_connect,
                   name: :oidc,
                   scope: [:openid, :email, :profile],
                   response_type: :code,
-                  issuer: Rails.application.secrets.oidc_issuer,
                   discovery: true,
                   client_auth_method: :basic,
-                  client_options: {
-                    identifier: Rails.application.secrets.oidc_client_id,
-                    secret: Rails.application.secrets.oidc_client_secret,
-                    redirect_uri: Rails.application.secrets.oidc_redirect_uri
-                  },
                   setup: ->(env) { OmniauthTenantSetup.oidc(env) }
 
   # ==> Warden configuration

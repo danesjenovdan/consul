@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   include Verification
+
   attribute :registering_from_web, default: false
+  %i[newsletter email_digest email_on_direct_message public_activity recommended_debates
+     recommended_proposals].each do |field|
+    attribute field, :boolean, default: -> { !Setting["feature.gdpr.require_consent_for_notifications"] }
+  end
 
   devise :database_authenticatable, :registerable, :confirmable, :recoverable, :rememberable,
          :trackable, :validatable, :omniauthable, :password_expirable, :secure_validatable,
@@ -87,6 +92,8 @@ class User < ApplicationRecord
 
   validates_associated :organization, message: false
 
+  normalizes :document_number, with: ->(document_number) { document_number.gsub(/[^a-z0-9]+/i, "").upcase }
+
   accepts_nested_attributes_for :organization, update_only: true
 
   attr_accessor :skip_password_validation, :login
@@ -104,10 +111,10 @@ class User < ApplicationRecord
     where(document_type: document_type, document_number: document_number)
   end
   scope :email_digest,   -> { where(email_digest: true) }
+  scope :active,         -> { where(erased_at: nil) }
   scope :erased,         -> { where.not(erased_at: nil) }
-  scope :active,         -> { excluding(erased) }
   scope :public_for_api, -> { all }
-  scope :by_authors,     ->(author_ids) { where(id: author_ids) }
+  scope :with_ids,       ->(ids) { where(id: ids) }
   scope :by_comments,    ->(commentables) do
     joins(:comments).where("comments.commentable": commentables).distinct
   end
@@ -121,8 +128,6 @@ class User < ApplicationRecord
 
     where(date_of_birth: start_date.beginning_of_day..end_date.end_of_day)
   end
-
-  before_validation :clean_document_number
 
   # Get the existing user by email if the provider gives us a verified email.
   def self.first_or_initialize_for_oauth(auth)
@@ -442,12 +447,6 @@ class User < ApplicationRecord
   end
 
   private
-
-    def clean_document_number
-      return if document_number.blank?
-
-      self.document_number = document_number.gsub(/[^a-z0-9]+/i, "").upcase
-    end
 
     def validate_username_length
       validator = ActiveModel::Validations::LengthValidator.new(

@@ -92,37 +92,103 @@ describe User do
   end
 
   describe "preferences" do
-    describe "email_on_comment" do
+    describe "#email_on_comment" do
       it "is false by default" do
         expect(subject.email_on_comment).to be false
       end
     end
 
-    describe "email_on_comment_reply" do
+    describe "#email_on_comment_reply" do
       it "is false by default" do
         expect(subject.email_on_comment_reply).to be false
       end
     end
 
-    describe "subscription_to_website_newsletter" do
-      it "is true by default" do
-        expect(subject.newsletter).to be true
+    describe "#newsletter" do
+      it "is true by default when the consent for notifications setting is disabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = false
+
+        expect(build(:user).newsletter).to be true
+      end
+
+      it "is false by default when the consent for notifications setting is enabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = true
+
+        expect(build(:user).newsletter).to be false
       end
     end
 
-    describe "email_digest" do
-      it "is true by default" do
-        expect(subject.email_digest).to be true
+    describe "#email_digest" do
+      it "is true by default when the consent for notifications setting is disabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = false
+
+        expect(build(:user).email_digest).to be true
+      end
+
+      it "is false by default when the consent for notifications setting is enabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = true
+
+        expect(build(:user).email_digest).to be false
       end
     end
 
-    describe "email_on_direct_message" do
-      it "is true by default" do
-        expect(subject.email_on_direct_message).to be true
+    describe "#email_on_direct_message" do
+      it "is true by default when the consent for notifications setting is disabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = false
+
+        expect(build(:user).email_on_direct_message).to be true
+      end
+
+      it "is false by default when the consent for notifications setting is enabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = true
+
+        expect(build(:user).email_on_direct_message).to be false
       end
     end
 
-    describe "official_position_badge" do
+    describe "#public_activity" do
+      it "is true by default when the consent for notifications setting is disabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = false
+
+        expect(build(:user).public_activity).to be true
+      end
+
+      it "is false by default when the consent for notifications setting is enabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = true
+
+        expect(build(:user).public_activity).to be false
+      end
+    end
+
+    describe "#recommended_debates" do
+      it "is true by default when the consent for notifications setting is disabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = false
+
+        expect(build(:user).recommended_debates).to be true
+      end
+
+      it "is false by default when the consent for notifications setting is enabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = true
+
+        expect(build(:user).recommended_debates).to be false
+      end
+    end
+
+    describe "#recommended_proposals" do
+      it "is true by default when the consent for notifications setting is disabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = false
+
+        expect(build(:user).recommended_proposals).to be true
+      end
+
+      it "is false by default when the consent for notifications setting is enabled" do
+        Setting["feature.gdpr.require_consent_for_notifications"] = true
+
+        expect(build(:user).recommended_proposals).to be false
+      end
+    end
+
+    describe "#official_position_badge" do
       it "is false by default" do
         expect(subject.official_position_badge).to be false
       end
@@ -402,6 +468,26 @@ describe User do
       end
     end
 
+    describe ".newsletter" do
+      it "returns users subscribed to the newsletter" do
+        create(:user, newsletter: true, username: "Subscriber1")
+        create(:user, newsletter: true, username: "Subscriber2")
+        create(:user, newsletter: false, username: "NonSubscriber")
+
+        expect(User.newsletter.pluck(:username)).to match_array ["Subscriber1", "Subscriber2"]
+      end
+    end
+
+    describe ".email_digest" do
+      it "returns users subscribed to email digests" do
+        create(:user, email_digest: true, username: "Digester1")
+        create(:user, email_digest: true, username: "Digester2")
+        create(:user, email_digest: false, username: "NonDigester")
+
+        expect(User.email_digest.pluck(:username)).to match_array ["Digester1", "Digester2"]
+      end
+    end
+
     describe ".by_username_email_or_document_number" do
       let!(:larry) do
         create(:user, email: "larry@consul.dev", username: "Larry Bird", document_number: "12345678Z")
@@ -596,13 +682,11 @@ describe User do
   describe "document_number" do
     it "upcases document number" do
       user = User.new(document_number: "x1234567z")
-      user.valid?
       expect(user.document_number).to eq("X1234567Z")
     end
 
     it "removes all characters except numbers and letters" do
       user = User.new(document_number: " 12.345.678 - B")
-      user.valid?
       expect(user.document_number).to eq("12345678B")
     end
   end
