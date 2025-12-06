@@ -54,7 +54,8 @@ module ImageSuggestions
           tempfile: temp_file,
           filename: filename,
           type: "image/jpeg",
-          head: "Content-Disposition: form-data; name=\"attachment\"; filename=\"#{filename}\"\r\nContent-Type: image/jpeg\r\n"
+          head: "Content-Disposition: form-data; name=\"attachment\"; filename=\"#{filename}\"\r\n" \
+                "Content-Type: image/jpeg\r\n"
         )
       end
   end
