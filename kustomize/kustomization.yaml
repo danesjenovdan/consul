@@ -9,4 +9,4 @@ resources:
 images:
   - name: consul
     newName: rg.fr-par.scw.cloud/djnd/consul-ai
-    newTag: '916d30546e057de50c074519bbe843e414e647e3'
+    newTag: 'c11b301373054d37229b67d77c01863fbaefcf5d'
