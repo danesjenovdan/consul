@@ -3,7 +3,7 @@ class ImageSuggestionsController < ApplicationController
   include ActionView::Helpers::UrlHelper
 
   before_action :authenticate_user!
-  skip_authorization_check
+  skip_authorization_check # like direct uploads does too
 
   def create
     @resource_type = params[:resource_type]
@@ -15,8 +15,20 @@ class ImageSuggestionsController < ApplicationController
   end
 
   def attach
-    attachment_params_hash = attachment_params.merge(user: current_user)
-    @direct_upload = DirectUpload.new(attachment_params_hash)
+    # mimicking the direct uploads behavior, but attaching from pexels
+    begin
+      attachment = ImageSuggestions::Pexels.download(params[:id])
+    rescue ImageSuggestions::Pexels::PexelsError, Pexels::APIError => e
+      return render json: { errors: e.message }, status: :unprocessable_entity
+    end
+
+    @direct_upload = DirectUpload.new(
+      resource_type: params[:resource_type],
+      resource_id: params[:resource_id],
+      resource_relation: "image",
+      attachment: attachment,
+      user: current_user
+    )
 
     if @direct_upload.valid?
       @direct_upload.save_attachment
@@ -31,15 +43,4 @@ class ImageSuggestionsController < ApplicationController
              status: :unprocessable_entity
     end
   end
-
-  private
-
-    def attachment_params
-      {
-        resource_type: params[:resource_type],
-        resource_id: params[:resource_id],
-        resource_relation: "image",
-        attachment: ImageSuggestions::Pexels.download_as_attachment(params[:id])
-      }
-    end
 end

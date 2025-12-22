@@ -186,7 +186,8 @@
         resourceId = $(this).data("resource-id");
         uploadData = App.Imageable.buildData([], $(".direct-upload").first());
         App.Imageable.clearProgressBar(uploadData);
-        App.Imageable.setProgressBar(uploadData, "uploading");
+        $(uploadData.progressBar).find(".loading-bar").css("width", "100%");
+
         dataString = "resource_type=" + encodeURIComponent(resourceType);
         if (resourceId) {
           dataString += "&resource_id=" + encodeURIComponent(resourceId);

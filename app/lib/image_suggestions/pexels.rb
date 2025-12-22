@@ -1,13 +1,17 @@
 module ImageSuggestions
   class Pexels
     class PexelsError < StandardError; end
+    IMAGE_VARIANT_POSTFIX = "?auto=compress&cs=tinysrgb&h=900".freeze
+    attr_reader :photo
 
+    # returns a search response from Pexels
     def self.search(query, **)
       new.search(query, **)
     end
 
-    def self.download_as_attachment(photo_id)
-      new.download_as_attachment(photo_id)
+    # returns an ActionDispatch::Http::UploadedFile of the image from Pexels
+    def self.download(photo_id)
+      new.download(photo_id)
     end
 
     def initialize
@@ -18,45 +22,42 @@ module ImageSuggestions
       @client.photos.search(query, **)
     end
 
-    def download_as_attachment(photo_id)
-      photo = @client.photos.find(photo_id)
-      return nil unless photo
+    def download(photo_id)
+      photo = get_photo(photo_id)
 
-      temp_file = download_to_tempfile(photo)
-      create_uploaded_file(temp_file, photo)
+      uri = URI(photo.src["original"] + IMAGE_VARIANT_POSTFIX)
+      temp_file = download_file(uri)
+
+      ActionDispatch::Http::UploadedFile.new(
+        tempfile: temp_file,
+        filename: I18n.t("images.form.suggested_image_filename", author_name: photo.user.name),
+        type: "image/jpeg"
+      )
     end
 
     private
 
-      def download_to_tempfile(photo)
-        temp_file = Tempfile.new(photo.src["original"].split("/").last)
-        temp_file.binmode
+      # raises Pexels::APIError if the photo is not found or the network request fails
+      def get_photo(photo_id)
+        @client.photos.find(photo_id)
+      end
 
-        uri = URI.parse(photo.src["original"])
-        Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == "https") do |http|
-          request = Net::HTTP::Get.new(uri)
-          http.request(request) do |response|
-            raise PexelsError, "Failed to download image: #{response.code}" unless response.is_a?(Net::HTTPSuccess)
+      def download_file(uri)
+        temp_file = Tempfile.new(uri.path, binmode: true)
 
-            response.read_body do |chunk|
-              temp_file.write(chunk)
-            end
+        Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+          http.request(Net::HTTP::Get.new(uri)) do |response|
+            raise PexelsError, "Network request failed" unless response.is_a?(Net::HTTPSuccess)
+
+            response.read_body { |chunk| temp_file.write(chunk) }
+            temp_file.rewind
           end
         end
 
-        temp_file.rewind
         temp_file
-      end
-
-      def create_uploaded_file(temp_file, photo)
-        filename = I18n.t("images.form.suggested_image_filename", author_name: photo.user.name)
-        ActionDispatch::Http::UploadedFile.new(
-          tempfile: temp_file,
-          filename: filename,
-          type: "image/jpeg",
-          head: "Content-Disposition: form-data; name=\"attachment\"; filename=\"#{filename}\"\r\n" \
-                "Content-Type: image/jpeg\r\n"
-        )
+      rescue => e
+        temp_file.close!
+        raise PexelsError, "Failed to download image from Pexels: #{e.message}"
       end
   end
 end

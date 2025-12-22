@@ -38,12 +38,12 @@
       }
     }
 
-    #suggested-images-container {
+    .suggested-images-container {
       display: inline;
 
       .js-attach-suggested-image {
         background: none;
-        border: none;
+        border: 0;
         cursor: pointer;
         padding: 0;
         position: relative;

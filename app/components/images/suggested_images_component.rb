@@ -9,7 +9,10 @@ module Images
     end
 
     def suggested_images
-      response.results
+      results = response&.results
+      return [] if results.blank?
+
+      results.photos
     end
 
     def has_errors?
