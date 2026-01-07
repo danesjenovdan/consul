@@ -1,6 +1,7 @@
 load Rails.root.join('app', 'controllers', 'valuation', 'budget_investments_controller.rb')
 
 class Valuation::BudgetInvestmentsController < Valuation::BaseController
+  include MapLocationAttributes
 
   def valuate
     if valid_price_params? && @investment.update(valuation_params)
@@ -18,6 +19,15 @@ class Valuation::BudgetInvestmentsController < Valuation::BaseController
   end
 
   private
+    def allowed_params
+      [
+        :price, :price_first_year, :price_explanation,
+        :feasibility, :unfeasibility_explanation,
+        :duration, :valuation_finished,
+        map_location_attributes: map_location_attributes
+      ]
+    end
+
     def restrict_access_to_assigned_items
       return if current_user.administrator? ||
                 Budget::ValuatorAssignment.exists?(investment_id: params[:id],
