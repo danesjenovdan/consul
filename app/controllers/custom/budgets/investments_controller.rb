@@ -4,7 +4,7 @@ module Budgets
   class InvestmentsController < ApplicationController
     attr_reader :budget
 
-    PER_PAGE = 12
+    PER_PAGE = 36
 
     # SETTINGS FOR SOFT VOTING INDICATOR (made originally for Medvode Participativni proracun 2023-2024)
     # soft voting indicator is shown in the balloting phase next to VOTE button on individual project page
