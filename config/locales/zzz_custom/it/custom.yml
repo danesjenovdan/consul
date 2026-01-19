@@ -184,6 +184,16 @@ it:
   views:
     pagination:
       truncate: "&hellip;"
+  admin:
+    segment_recipient:
+      currently_active_budgets_proposal_authors: TODO
+      currently_active_budgets_users_without_submissions: TODO
+      currently_active_budgets_selected_proposal_authors: TODO
+      currently_active_budgets_unfeasible_proposal_authors: TODO
+      currently_active_budgets_undecided_feasibility_proposal_authors: TODO
+      currently_active_budgets_winner_investment_authors: TODO
+      currently_active_budgets_loser_investment_authors: TODO
+      users_without_votes_in_currently_active_budgets: TODO
   custom:
     admin:
       budget_phases:
