@@ -16,7 +16,7 @@
       <div class="column">
         <div class="landing">
           <div class="introduction-text">
-            <% @budgets.order('id').each_with_index do |budget, i| %>
+            <% @budgets.order('id DESC').each_with_index do |budget, i| %>
               <% if budget.id == 5 %>
                 <div>
                   <%= image_tag(image_path_for("logo-header.png"), class: "double-header-logo", alt: "Logotip 1") %>
