@@ -28,7 +28,7 @@ class User < ApplicationRecord
   end
 
   def self.is_old_enough(birthday)
-    date_limit = Date.parse('2010-06-30')
+    date_limit = Date.parse('2011-09-15')
     if date_limit < birthday
       return false
     end
