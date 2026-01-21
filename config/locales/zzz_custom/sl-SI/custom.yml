@@ -288,9 +288,9 @@ sl-SI:
         title_3: In nato?
     landing:
       title: Participativni proračun 2027!
-      introduction_text: Participativni proračun Celje po moje vam omogoča, da aktivno sodelujete pri odločanju o porabi dela proračunskih sredstev in sooblikujete Celje po svoje. To je priložnost, da se uresničijo projekti, ki izhajajo iz dejanskih želja in potreb prebivalk in prebivalcev ter prispevajo k razvoju lokalnega okolja. S participativnim proračunom krepimo sodelovanje v skupnosti, spodbujamo odgovorno rabo skupnih sredstev in skupaj izboljšujemo kakovost življenja v Mestni občini Celje.
+      introduction_text: Participativni proračun Celje po moje vam omogoča, da soodločate o porabi dela proračunskih sredstev in sooblikujete Celje po svoje.
       title2: Participativni proračun za mlade 2027!
-      introduction_text2: Participativni proračun Celje po moje vam daje priložnost, da soodločate, kako se porabi del občinskega denarja, in da aktivno soustvarjate Celje po svoje. To je prostor za ideje mladih – za projekte, ki izhajajo iz vaših potreb, interesov in vsakdanjih izkušenj. S participativnim proračunom krepimo sodelovanje, spodbujamo aktivno državljanstvo, odgovorno rabo skupnih sredstev in skupaj izboljšujemo kakovost življenja v Mestni občini Celje.
+      introduction_text2: Tudi ideje mladih štejejo! Odločite, kam gre del denarja, in pomagajte oblikovati Celje po svoje.
 
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
@@ -329,9 +329,9 @@ sl-SI:
       description_5: "V glavi spletnega mesta kliknite na gumb Moj račun, kjer lahko spremeniš vse svoje podatke."
       help_title: "Potrebujete pomoč?"
       technical_issues: "Imate tehnične težave?"
-      technical_contact: 'Kontaktiraj upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
+      technical_contact: 'Kontaktirajte upravljalca aplikacije na <a href="mailto:consul@djnd.si" target="_blank">consul@djnd.si</a>.'
       other_questions: "Imate kakršno koli drugo vprašanje?"
-      other_contact: 'Kontaktiraj predstavnico Mestne občine Celje, Majo Godec na <a href="mailto:pomoje@celje.si" target="_blank">pomoje@celje.si</a>. Na voljo smo vam tudi po telefonu 03 4265 750.'
+      other_contact: 'Kontaktirajte predstavnico Mestne občine Celje, Majo Godec na <a href="mailto:pomoje@celje.si" target="_blank">pomoje@celje.si</a>. Na voljo smo vam tudi po telefonu 03 4265 750.'
     terms:
       main_title: "Pogoji uporabe in varstvo osebnih podatkov"
       date: "1. 1. 2025"
