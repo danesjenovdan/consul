@@ -180,6 +180,16 @@ sl-SI:
   views:
     pagination:
       truncate: "&hellip;"
+  admin:
+    segment_recipient:
+      currently_active_budgets_proposal_authors: Avtorji predlogov investicij v trenutno aktivnih proračunih
+      currently_active_budgets_users_without_submissions: Uporabniki, ki v trenutno aktivnih proračunih niso oddali predloga
+      currently_active_budgets_selected_proposal_authors: Avtorji izbranih predlogov investicij v trenutno aktivnih proračunih
+      currently_active_budgets_unfeasible_proposal_authors: Avtorji predlogov investicij, ki so bili označeni kot neizvedljivi
+      currently_active_budgets_undecided_feasibility_proposal_authors: Avtorji predlogov investicij, katerih izvedljivos ni določena
+      currently_active_budgets_winner_investment_authors: Avtorji zmagovalnih predlogov investicij v trenutno aktivnih proračunih
+      currently_active_budgets_loser_investment_authors: Avtorji predlogov investicij v trenutno aktivnih proračunih, ki niso bili izglasovani
+      users_without_votes_in_currently_active_budgets: Uporabniki, ki v trenutnih proračunih niso glasovali
   custom:
     admin:
       budget_phases:
