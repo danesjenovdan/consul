@@ -184,6 +184,16 @@ it:
   views:
     pagination:
       truncate: "&hellip;"
+  admin:
+    segment_recipient:
+      currently_active_budgets_proposal_authors: Proponenti di proposte nei bilanci attualmente attivi
+      currently_active_budgets_users_without_submissions: Utenti che non hanno inviato una proposta nei bilanci attualmente attivi
+      currently_active_budgets_selected_proposal_authors: Proponenti di proposte selezionate nei bilanci attualmente attivi
+      currently_active_budgets_unfeasible_proposal_authors: Proponenti di proposte che sono state contrassegnate come irrealizzabili
+      currently_active_budgets_undecided_feasibility_proposal_authors: Proponeti di proposte la cui fattibilità non è stata determinata
+      currently_active_budgets_winner_investment_authors: Proponenti di proposte vincenti nei bilanci attualmente attivi
+      currently_active_budgets_loser_investment_authors: Proponenti di proposte nei bilanci attualmente attivi che non sono stati votati vincitori
+      users_without_votes_in_currently_active_budgets: Utenti che non hanno votato nei bilanci attuali
   custom:
     admin:
       budget_phases:
