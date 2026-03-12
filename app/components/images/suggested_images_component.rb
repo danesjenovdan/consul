@@ -26,6 +26,16 @@ class Images::SuggestedImagesComponent < ApplicationComponent
   private
 
     def response
-      @response ||= ImageSuggestions::Llm::Client.call(title: title, description: description)
+      @response ||= ImageSuggestions::Llm::Client.call(
+        title: title,
+        description: description,
+        rate_limit_cache_key: rate_limit_cache_key
+      )
+    end
+
+    def rate_limit_cache_key
+      return "image_suggestions_rate_limit" unless current_user
+
+      "image_suggestions_rate_limit_#{current_user.id}"
     end
 end

@@ -13,15 +13,18 @@ describe Images::SuggestedImagesComponent do
 
   describe "#suggested_images" do
     it "returns photos from results" do
+      render_inline component
       expect(component.suggested_images).to eq [photo]
     end
 
     it "calls LLM client with title and description" do
       expect(ImageSuggestions::Llm::Client).to receive(:call).with(
         title: title,
-        description: description
+        description: description,
+        rate_limit_cache_key: "image_suggestions_rate_limit"
       ).and_return(llm_response)
 
+      render_inline component
       component.suggested_images
     end
 
@@ -42,6 +45,7 @@ describe Images::SuggestedImagesComponent do
       end
 
       it "returns an empty array" do
+        render_inline component
         expect(component.suggested_images).to eq []
       end
     end
@@ -50,6 +54,7 @@ describe Images::SuggestedImagesComponent do
   describe "#has_errors?" do
     context "when response has no errors" do
       it "returns false" do
+        render_inline component
         expect(component.has_errors?).to be false
       end
     end
@@ -60,6 +65,7 @@ describe Images::SuggestedImagesComponent do
       end
 
       it "returns true" do
+        render_inline component
         expect(component.has_errors?).to be true
       end
     end
@@ -72,12 +78,14 @@ describe Images::SuggestedImagesComponent do
       end
 
       it "returns the errors array" do
+        render_inline component
         expect(component.error_messages).to eq ["Error 1", "Error 2"]
       end
     end
 
     context "when response has no errors" do
       it "returns empty array" do
+        render_inline component
         expect(component.error_messages).to eq []
       end
     end

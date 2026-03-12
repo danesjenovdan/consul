@@ -8,6 +8,7 @@ describe ImageSuggestions::Llm::Client do
   let(:prompt_template) { "Generate a search query for: %{title} - %{description}" }
   let(:search_query) { "test proposal image" }
   let(:pexels_results) { instance_double(::Pexels::PhotoSet, photos: []) }
+  let(:rate_limit_cache_key) { "image_suggestions_rate_limit_123" }
 
   before do
     Setting["llm.provider"] = "OpenAI"
@@ -23,15 +24,17 @@ describe ImageSuggestions::Llm::Client do
     it "creates a new instance and calls it with title and description" do
       expect(ImageSuggestions::Llm::Client).to receive(:new).with(
         title: title,
-        description: description
+        description: description,
+        rate_limit_cache_key: rate_limit_cache_key
       ).and_call_original
 
-      ImageSuggestions::Llm::Client.call(title: title, description: description)
+      ImageSuggestions::Llm::Client.call(title: title, description: description,
+                                         rate_limit_cache_key: rate_limit_cache_key)
     end
   end
 
   describe "#call" do
-    let(:client) { ImageSuggestions::Llm::Client.new(title: title, description: description) }
+    let(:client) { ImageSuggestions::Llm::Client.new(title: title, description: description, rate_limit_cache_key: rate_limit_cache_key) }
 
     it "generates a search query using LLM" do
       expect(chat).to receive(:ask).with(
@@ -61,7 +64,7 @@ describe ImageSuggestions::Llm::Client do
     context "when title and description are blank" do
       let(:title) { "" }
       let(:description) { "" }
-      let(:client) { ImageSuggestions::Llm::Client.new(title: title, description: description) }
+      let(:client) { ImageSuggestions::Llm::Client.new(title: title, description: description, rate_limit_cache_key: rate_limit_cache_key) }
 
       it "adds error and returns early" do
         result = client.call
@@ -78,7 +81,7 @@ describe ImageSuggestions::Llm::Client do
 
     context "when only description is present" do
       let(:title) { "" }
-      let(:client) { ImageSuggestions::Llm::Client.new(title: title, description: description) }
+      let(:client) { ImageSuggestions::Llm::Client.new(title: title, description: description, rate_limit_cache_key: rate_limit_cache_key) }
 
       it "uses empty string for title in prompt" do
         expect(chat).to receive(:ask).with(
@@ -126,6 +129,55 @@ describe ImageSuggestions::Llm::Client do
       it "catches error and adds to response errors" do
         result = client.call
         expect(result.errors).to include "LLM error"
+      end
+    end
+
+    context "with rate limiting" do
+      context "when under the rate limit" do
+        before do
+          allow(Rails.cache).to receive(:read).with(rate_limit_cache_key).and_return(0)
+          allow(Rails.cache).to receive(:write)
+        end
+
+        it "increments the counter and calls LLM and Pexels" do
+          expect(Rails.cache).to receive(:write)
+            .with(rate_limit_cache_key, 1, expires_in: 15.minutes)
+
+          expect(chat).to receive(:ask).and_return(double(content: search_query))
+          expect(ImageSuggestions::Pexels).to receive(:search).with(
+            search_query,
+            per_page: 4
+          ).and_return(pexels_results)
+
+          result = ImageSuggestions::Llm::Client.call(
+            title: title,
+            description: description,
+            rate_limit_cache_key: rate_limit_cache_key
+          )
+
+          expect(result.errors).to be_empty
+        end
+      end
+
+      context "when over the rate limit" do
+        before do
+          allow(Rails.cache).to receive(:read).with(rate_limit_cache_key).and_return(10)
+        end
+
+        it "returns an error and does not call LLM or Pexels" do
+          expect(Rails.cache).not_to receive(:write)
+          expect(chat).not_to receive(:ask)
+          expect(ImageSuggestions::Pexels).not_to receive(:search)
+
+          result = ImageSuggestions::Llm::Client.call(
+            title: title,
+            description: description,
+            rate_limit_cache_key: rate_limit_cache_key
+          )
+
+          expect(result.errors).to include(I18n.t("images.errors.messages.rate_limit_exceeded"))
+          expect(result.results).to be_empty
+        end
       end
     end
 
