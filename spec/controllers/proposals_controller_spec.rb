@@ -10,8 +10,9 @@ describe ProposalsController do
   end
 
   describe "PATCH update" do
-    before { InvisibleCaptcha.timestamp_enabled = false }
-    after { InvisibleCaptcha.timestamp_enabled = true }
+    around do |example|
+      InvisibleCaptcha.with(timestamp_enabled: false) { example.run }
+    end
 
     it "does not delete other proposal's map location" do
       proposal = create(:proposal)
@@ -29,6 +30,32 @@ describe ProposalsController do
 
       expect(proposal.reload.responsible_name).to eq "Skinny Fingers"
       expect(other_proposal.reload.map_location).not_to be nil
+    end
+  end
+
+  describe "POST create" do
+    around do |example|
+      InvisibleCaptcha.with(timestamp_enabled: false) { example.run }
+    end
+
+    it "assigns the responsible name to the proposal" do
+      sign_in(create(:user, document_number: "13572468A"))
+
+      post :create, params: {
+        proposal: {
+          translations_attributes: {
+            "0" => {
+              locale: "en",
+              title: "I'm responsible",
+              summary: "I have a document number",
+              description: "But you won't see my document number"
+            }
+          },
+          terms_of_service: "1"
+        }
+      }
+
+      expect(Proposal.last.responsible_name).to eq "13572468A"
     end
   end
 end

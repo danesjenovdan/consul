@@ -24,7 +24,6 @@ class Legislation::AnnotationsController < Legislation::BaseController
     end
 
     @comment_tree = MergedCommentTree.new(annotations, params[:page], @current_order)
-    set_comment_flags(@comment_tree.comments)
   end
 
   def create
@@ -101,7 +100,7 @@ class Legislation::AnnotationsController < Legislation::BaseController
 
     def convert_ranges_parameters
       annotation = params[:legislation_annotation]
-      if annotation && annotation[:ranges] && annotation[:ranges].is_a?(String)
+      if annotation && annotation[:ranges].is_a?(String)
         params[:legislation_annotation][:ranges] = JSON.parse(annotation[:ranges])
       end
     rescue JSON::ParserError
