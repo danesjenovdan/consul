@@ -2,11 +2,30 @@ class Admin::ProposalsController < Admin::BaseController
   include HasOrders
   include CommentableActions
   include FeatureFlags
+
   feature_flag :proposals
 
   has_orders %w[created_at]
 
-  before_action :load_proposal, except: :index
+  before_action :load_proposal, except: [:index, :successful]
+
+  def index
+    @proposals = Proposal.for_render
+    @proposals = @proposals.search(@search_terms) if @search_terms.present?
+    @proposals = @proposals.send("sort_by_#{@current_order}")
+
+    respond_to do |format|
+      format.html { @proposals = @proposals.page(params[:page]) }
+      format.csv do
+        send_data Proposal::Exporter.new(@proposals).to_csv,
+                  filename: "proposals.csv"
+      end
+    end
+  end
+
+  def successful
+    @proposals = Proposal.successful.sort_by_confidence_score
+  end
 
   def show
   end
@@ -19,9 +38,22 @@ class Admin::ProposalsController < Admin::BaseController
     end
   end
 
-  def toggle_selection
-    @proposal.toggle :selected
-    @proposal.save!
+  def select
+    @proposal.update!(selected: true)
+
+    respond_to do |format|
+      format.html { redirect_to request.referer, notice: t("flash.actions.update.proposal") }
+      format.js { render :toggle_selection }
+    end
+  end
+
+  def deselect
+    @proposal.update!(selected: false)
+
+    respond_to do |format|
+      format.html { redirect_to request.referer, notice: t("flash.actions.update.proposal") }
+      format.js { render :toggle_selection }
+    end
   end
 
   private

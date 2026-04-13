@@ -22,7 +22,6 @@ module Budgets
     before_action :set_random_seed, only: :index
     before_action :load_categories, only: :index
     before_action :set_default_investment_filter, only: :index
-    before_action :set_view, only: :index
 
     feature_flag :budgets
 
@@ -38,7 +37,7 @@ module Budgets
 
     def index
       @investments = investments.page(params[:page]).per(PER_PAGE).for_render
-      @investment_ids = @investments.ids
+      @investment_ids = @investments.unscope(:includes).ids
 
       @investments_in_map = investments
       @tag_cloud = tag_cloud
@@ -51,7 +50,6 @@ module Budgets
     def show
       @commentable = @investment
       @comment_tree = CommentTree.new(@commentable, params[:page], @current_order)
-      set_comment_flags(@comment_tree.comments)
       @investment_ids = [@investment.id]
       @remote_translations = detect_remote_translations([@investment], @comment_tree.comments)
     end
@@ -139,10 +137,6 @@ module Budgets
 
       def load_budget
         @budget = Budget.find_by_slug_or_id! params[:budget_id]
-      end
-
-      def set_view
-        @view = (params[:view] == "minimal") ? "minimal" : "default"
       end
 
       def investments_with_filters

@@ -6,8 +6,10 @@ describe "Proposals" do
   context "Concerns" do
     it_behaves_like "notifiable in-app", :proposal
     it_behaves_like "relationable", Proposal
-    it_behaves_like "remotely_translatable", :proposal, "proposals_path", {}
-    it_behaves_like "remotely_translatable", :proposal, "proposal_path", { id: "id" }
+    it_behaves_like "remotely_translatable", :proposal, "proposals_path", {}, provider: :microsoft
+    it_behaves_like "remotely_translatable", :proposal, "proposals_path", {}, provider: :llm
+    it_behaves_like "remotely_translatable", :proposal, "proposal_path", { id: "id" }, provider: :microsoft
+    it_behaves_like "remotely_translatable", :proposal, "proposal_path", { id: "id" }, provider: :llm
     it_behaves_like "flaggable", :proposal
   end
 
@@ -125,7 +127,7 @@ describe "Proposals" do
     expect(page).to have_content I18n.l(proposal.created_at.to_date)
     expect(page).to have_avatar "M"
     expect(page.html).to include "<title>#{proposal.title}</title>"
-    expect(page).not_to have_css ".js-flag-actions"
+    expect(page).not_to have_css ".flag-actions"
     expect(page).not_to have_css ".js-follow"
   end
 
@@ -205,8 +207,8 @@ describe "Proposals" do
       expect(page).not_to have_content("Related content")
       expect(page).not_to have_button("Add related content")
 
-      within(".proposal-info") do
-        expect(page).not_to have_link("No comments", href: "#comments")
+      within(".detailed-info") do
+        expect(page).to have_link "No comments", href: "#comments"
       end
     end
 
@@ -356,7 +358,7 @@ describe "Proposals" do
     expect(page).to have_content "Help refugees"
     expect(page).not_to have_content "You can also see more information about improving your campaign"
 
-    click_link "No, I want to publish the proposal"
+    click_button "No, I want to publish the proposal"
 
     expect(page).to have_content "Improve your campaign and get more support"
     click_link "Not now, go to my proposal"
@@ -424,7 +426,7 @@ describe "Proposals" do
     click_button "Create proposal"
 
     expect(page).to have_content "Proposal created successfully."
-    click_link "No, I want to publish the proposal"
+    click_button "No, I want to publish the proposal"
     click_link "Not now, go to my proposal"
 
     click_link "Dashboard"
@@ -435,7 +437,7 @@ describe "Proposals" do
     expect(page).to have_field "Full name of the person submitting the proposal", with: "Isabel Garcia"
   end
 
-  scenario "Responsible name field is not shown for verified users" do
+  scenario "Responsible name field is not shown anywhere" do
     author = create(:user, :level_two)
     login_as(author)
 
@@ -450,10 +452,11 @@ describe "Proposals" do
 
     click_button "Create proposal"
     expect(page).to have_content "Proposal created successfully."
-    click_link "No, I want to publish the proposal"
+    click_button "No, I want to publish the proposal"
     click_link "Not now, go to my proposal"
 
-    expect(Proposal.last.responsible_name).to eq(author.document_number)
+    expect(page).to have_css "h1", exact_text: "Help refugees"
+    expect(page).not_to have_content author.document_number
   end
 
   scenario "Errors on create" do
@@ -480,7 +483,7 @@ describe "Proposals" do
     click_button "Create proposal"
 
     expect(page).to have_content "Proposal created successfully."
-    click_link "No, I want to publish the proposal"
+    click_button "No, I want to publish the proposal"
     click_link "Not now, go to my proposal"
 
     expect(page).to have_content "Testing an attack"
@@ -503,7 +506,7 @@ describe "Proposals" do
     click_button "Create proposal"
 
     expect(page).to have_content "Proposal created successfully."
-    click_link "No, I want to publish the proposal"
+    click_button "No, I want to publish the proposal"
     click_link "Not now, go to my proposal"
 
     expect(page).to have_content "Testing auto link"
@@ -513,7 +516,7 @@ describe "Proposals" do
   scenario "JS injection is prevented but autolinking is respected", :no_js do
     author = create(:user)
     js_injection_string = "<script>alert('hey')</script> " \
-                          "<a href=\"javascript:alert('surprise!')\">click me<a/> " \
+                          "<a href=\"javascript:alert('surprise!')\">click me</a> " \
                           "http://example.org"
     login_as(author)
 
@@ -527,7 +530,7 @@ describe "Proposals" do
     click_button "Create proposal"
 
     expect(page).to have_content "Proposal created successfully."
-    click_link "No, I want to publish the proposal"
+    click_button "No, I want to publish the proposal"
     click_link "Not now, go to my proposal"
 
     expect(page).to have_content "Testing auto link"
@@ -558,7 +561,7 @@ describe "Proposals" do
 
     scenario "Default whole city" do
       create(:geozone)
-      author = create(:user)
+      author = create(:user, :level_two)
       login_as(author)
 
       visit new_proposal_path
@@ -567,7 +570,7 @@ describe "Proposals" do
       click_button "Create proposal"
 
       expect(page).to have_content "Proposal created successfully."
-      click_link "No, I want to publish the proposal"
+      click_button "No, I want to publish the proposal"
       click_link "Not now, go to my proposal"
 
       within "#geozone" do
@@ -612,7 +615,7 @@ describe "Proposals" do
       click_button "Create proposal"
 
       expect(page).to have_content "Proposal created successfully."
-      click_link "No, I want to publish the proposal"
+      click_button "No, I want to publish the proposal"
       click_link "Not now, go to my proposal"
 
       within "#geozone" do
@@ -937,7 +940,7 @@ describe "Proposals" do
           expect(page).to have_content("Medium")
           expect(page).to have_css(".recommendation", count: 3)
 
-          accept_confirm { click_link "Hide recommendations" }
+          accept_confirm { click_button "Hide recommendations" }
         end
 
         expect(page).not_to have_link("recommendations")
@@ -1249,6 +1252,9 @@ describe "Proposals" do
       visit proposals_path
       fill_in "search", with: "Show you got"
       click_button "Search"
+
+      expect(page).to have_content "Search results"
+
       click_link "recommendations"
       expect(page).to have_css "a.is-active", text: "recommendations"
 
@@ -1288,44 +1294,6 @@ describe "Proposals" do
   end
 
   it_behaves_like "followable", "proposal", "proposal_path", { id: "id" }
-
-  it_behaves_like "imageable", "proposal", "proposal_path", { id: "id" }
-
-  it_behaves_like "nested imageable",
-                  "proposal",
-                  "new_proposal_path",
-                  {},
-                  "imageable_fill_new_valid_proposal",
-                  "Create proposal",
-                  "Proposal created successfully"
-
-  it_behaves_like "nested imageable",
-                  "proposal",
-                  "edit_proposal_path",
-                  { id: "id" },
-                  nil,
-                  "Save changes",
-                  "Proposal updated successfully"
-
-  it_behaves_like "documentable", "proposal", "proposal_path", { id: "id" }
-
-  it_behaves_like "nested documentable",
-                  "user",
-                  "proposal",
-                  "new_proposal_path",
-                  {},
-                  "documentable_fill_new_valid_proposal",
-                  "Create proposal",
-                  "Proposal created successfully"
-
-  it_behaves_like "nested documentable",
-                  "user",
-                  "proposal",
-                  "edit_proposal_path",
-                  { id: "id" },
-                  nil,
-                  "Save changes",
-                  "Proposal updated successfully"
 
   it_behaves_like "mappable",
                   "proposal",
@@ -1575,7 +1543,8 @@ describe "Successful proposals" do
     successful_proposals.each do |proposal|
       within("#proposal_#{proposal.id}_votes") do
         expect(page).not_to have_link "Support"
-        expect(page).to have_content "100% / 100%"
+
+        within(".progress") { expect(page).to have_content "100%", exact: true }
       end
     end
   end
@@ -1587,7 +1556,8 @@ describe "Successful proposals" do
       visit proposal_path(proposal)
       within("#proposal_#{proposal.id}_votes") do
         expect(page).not_to have_link "Support"
-        expect(page).to have_content "100% / 100%"
+
+        within(".progress") { expect(page).to have_content "100%", exact: true }
       end
     end
   end

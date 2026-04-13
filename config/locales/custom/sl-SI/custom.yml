@@ -41,6 +41,10 @@ sl-SI:
           attributes:
             document_number:
               invalid: EMŠO ni pravilne oblike.
+  admin:
+    budget_investments:
+      selected: "Izbrano ✅"
+      select: "Izberi"
   budgets:
     investments:
       investment:
@@ -59,6 +63,9 @@ sl-SI:
       form:
         tags_instructions: "Označi ta predlog. Izbiraš lahko med predlaganimi kategorijami."
         submit: "Oddaj predlog"
+        map_location: "Lokacija na zemljevidu"
+        map_location_instructions: "Na zemljevidu poišči lokacijo in jo označi."
+        map_remove_marker: "Odstrani označeno lokacijo"
       index:
         title: Participativni proračun
         by_heading: "Investicijski projekti na območju: %{heading}"
