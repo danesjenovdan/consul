@@ -85,9 +85,13 @@ class Setting < ApplicationRecord
         "feature.remote_census": nil,
         "feature.valuation_comment_notification": true,
         "feature.graphql_api": true,
+        "feature.oidc_login": false,
+        "feature.saml_login": false,
         "feature.sdg": true,
         "feature.machine_learning": false,
         "feature.remove_investments_supports": true,
+        "feature.cookies_consent": false,
+        "feature.gdpr.require_consent_for_notifications": false,
         "homepage.widgets.feeds.debates": true,
         "homepage.widgets.feeds.processes": true,
         "homepage.widgets.feeds.proposals": true,
@@ -160,6 +164,8 @@ class Setting < ApplicationRecord
         "related_content_score_threshold": -0.3,
         "featured_proposals_number": 3,
         "feature.dashboard.notification_emails": nil,
+        "cookies_consent.more_info_link": "",
+        "cookies_consent.version_name": "v1",
         "machine_learning.comments_summary": false,
         "machine_learning.related_content": false,
         "machine_learning.tags": false,
@@ -182,7 +188,11 @@ class Setting < ApplicationRecord
         "sdg.process.proposals": true,
         "sdg.process.polls": true,
         "sdg.process.budgets": true,
-        "sdg.process.legislation": true
+        "sdg.process.legislation": true,
+        "llm.provider": nil,
+        "llm.model": nil,
+        "llm.use_llm_for_translations": false,
+        "llm.use_ai_image_suggestions": false
       }
     end
 

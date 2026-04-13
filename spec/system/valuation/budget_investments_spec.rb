@@ -308,6 +308,8 @@ describe "Valuation budget investments" do
       choose "budget_investment_feasibility_feasible"
       click_button "Save changes"
 
+      expect(page).to have_content "Dossier updated"
+
       visit edit_valuation_budget_budget_investment_path(budget, investment)
 
       expect(find("#budget_investment_feasibility_undecided")).not_to be_checked
@@ -315,6 +317,8 @@ describe "Valuation budget investments" do
 
       choose "budget_investment_feasibility_undecided"
       click_button "Save changes"
+
+      expect(page).to have_content "Dossier updated"
 
       visit edit_valuation_budget_budget_investment_path(budget, investment)
       expect(find("#budget_investment_feasibility_undecided")).to be_checked
@@ -356,6 +360,8 @@ describe "Valuation budget investments" do
       end
 
       click_button "Save changes"
+
+      expect(page).to have_content "Dossier updated"
 
       visit edit_valuation_budget_budget_investment_path(budget, investment)
 
@@ -410,7 +416,7 @@ describe "Valuation budget investments" do
       visit valuation_budget_budget_investment_path(budget, investment)
       click_link "Edit dossier"
 
-      accept_confirm { find_field("budget_investment[valuation_finished]").click }
+      accept_confirm { check "Valuation finished" }
       click_button "Save changes"
 
       expect(page).to have_content "Dossier updated"
@@ -421,7 +427,9 @@ describe "Valuation budget investments" do
 
       expect(page).to have_content investment.title
       click_link investment.title
-      expect(page).to have_content("Valuation finished")
+
+      expect(page).to have_content "Investment preview"
+      expect(page).to have_content "Valuation finished"
     end
 
     context "Reopen valuation" do
@@ -460,14 +468,14 @@ describe "Valuation budget investments" do
         expect(page).not_to have_css "input[id='budget_investment_feasibility_undecided']"
         expect(page).not_to have_css "textarea[id='budget_investment_unfeasibility_explanation']"
         expect(page).not_to have_css "input[name='budget_investment[valuation_finished]']"
-        expect(page).to have_content("Valuation finished")
-        expect(page).to have_content("Feasibility: Feasible")
-        expect(page).to have_content("Feasibility explanation: Explanation is explanatory")
-        expect(page).to have_content("Price (€): 999")
-        expect(page).to have_content("Cost during the first year: 666")
-        expect(page).to have_content("Price explanation: Democracy is not cheap")
-        expect(page).to have_content("Time scope: 1 light year")
-        expect(page).not_to have_button("Save changes")
+        expect(page).to have_content "Valuation finished"
+        expect(page).to have_content "Feasibility: Feasible"
+        expect(page).to have_content "Feasibility explanation: Explanation is explanatory"
+        expect(page).to have_content "Price (€): 999"
+        expect(page).to have_content "Cost during the first year (€): 666"
+        expect(page).to have_content "Price explanation: Democracy is not cheap"
+        expect(page).to have_content "Time scope: 1 light year"
+        expect(page).not_to have_button "Save changes"
       end
     end
 

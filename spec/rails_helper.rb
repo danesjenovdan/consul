@@ -40,6 +40,7 @@ end
 Rails.application.load_tasks if Rake::Task.tasks.empty?
 
 include Warden::Test::Helpers
+
 Warden.test_mode!
 
 ActiveRecord::Migration.maintain_test_schema!
@@ -87,13 +88,6 @@ Capybara.app_host ||= "http://127.0.0.1"
 
 OmniAuth.config.test_mode = true
 
-def with_subdomain(subdomain, &block)
-  app_host = Capybara.app_host
-
-  begin
-    Capybara.app_host = "http://#{subdomain}.lvh.me"
-    block.call
-  ensure
-    Capybara.app_host = app_host
-  end
+def with_subdomain(subdomain, &)
+  Capybara.with(app_host: "http://#{subdomain}.lvh.me", &)
 end
