@@ -382,7 +382,6 @@ cs:
         public_interests: "Udržet prvky, které sleduji, veřejné"
         recommended_debates: "Zobrazit doporučení k debatám"
         recommended_proposals: "Zobrazit doporučení k návrhům"
-        redeemable_code: "Verification code received via email"
       direct_message:
         title: "Předmět"
         body: "Zpráva"
@@ -548,6 +547,15 @@ cs:
       image:
         title: Předmět
         attachment: "Attachment"
+      poll/question/option:
+        title: Odpověď
+        description: Popis
+      poll/question/option/translation:
+        title: Odpověď
+        description: "Popis (volitelné)"
+      poll/question/option/video:
+        title: Nadpis
+        url: Externí video
       newsletter:
         segment_recipient: Příjemci
         subject: Subject
@@ -614,6 +622,8 @@ cs:
       votation_type/vote_type:
         unique: Jedinečná odpověď
         multiple: Více odpovědí
+      cookies/vendor:
+        script: Javascript kód
     errors:
       models:
         user:
@@ -649,8 +659,6 @@ cs:
           attributes:
             document_number:
               not_in_census: "Document not in census"
-            user_id:
-              has_voted: "Uživatel již hlasoval"
         legislation/process:
           attributes:
             end_date:

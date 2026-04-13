@@ -98,7 +98,6 @@ cs:
         confidence_score: nejlépe hodnocené
         created_at: nejnovější
         hot_score: nejaktivnější
-        most_commented: nejvíce komentované
         relevance: závažnost
         recommendations: doporučení
       recommendations:
@@ -134,7 +133,6 @@ cs:
       recommendations_title: Doporučení k vytvoření debaty
       start_new: Zahájit debatu
     show:
-      author_deleted: Uživatel
       comments_title: Komentáře
       edit_debate_link: Upravit
       flag: Tato diskuse byla označena několika uživateli za nevhodnou.
@@ -172,6 +170,7 @@ cs:
     legislation/process: proces
     legislation/question: otázka
     poll/shift: Posun
+    poll/question/option: Odpověď
     user: Účet
     verification/sms: telefon
     signature_sheet: Podpisové arch
@@ -209,6 +208,7 @@ cs:
       consul: aplikace CONSUL DEMOCRACY
       consul_url: https://github.com/consuldemocracy/consuldemocracy
       copyright: CONSUL DEMOCRACY, %{year}
+      cookies_consent_management: Spravovat cookies
       description: Tento portál software %{consul}, což je %{open_source}.
       open_source: open source software
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
@@ -291,6 +291,10 @@ cs:
     info:
       sign_in: "Přihlásit se pomocí:"
       sign_up: "Přihlásit se pomocí:"
+    saml:
+      name: SAML
+    oidc:
+      name: OIDC
     or_fill: "Nebo vyplňte následující formulář:"
   proposals:
     create:
@@ -420,12 +424,10 @@ cs:
         many: "%{count} hlasů"
         other: "%{count} hlasů"
       supports_necessary: "Potřebuje podporu %{number} lidí"
-      total_percent: 100%
       archived: "Tento návrh byl archivován a nelze jej již podpořit."
       successful: "Tento návrh dosáhl požadované podpory."
       selected: "Vybraný návrh"
     show:
-      author_deleted: Uživatel
       code: "Kód návrhu:"
       comments_tab: Komentáře
       dashboard_proposal_link: Ovládací panel
@@ -595,7 +597,6 @@ cs:
         support: "Stačí kliknout na tlačítko, které se zobrazí pod \"Podpořte tento návrh\", a můžete se informovat před jeho podporou. Pouze návrhy, které získají maximální podporu, budou městskou radou realizovány, a já si myslím, že mi k tomu určitě pomůžete!"
         share: "A pokud mi také prokážete velkou laskavost a podělíte se o můj návrh se svými přáteli, rodinou a kontakty, bude to perfektní!"
   polls:
-    all: "Vše"
     dates: "Od %{open_at} do %{closed_at}"
     final_date: "Konečné přepočty/výsledky"
     index:
@@ -655,11 +656,7 @@ cs:
     poll_header:
       back_to_proposal: Zpět k návrhu
   poll_questions:
-    show:
-      vote_answer: "Hlasování %{answer}"
-      voted: "Hlasovali jste %{answer}"
     description:
-      unique: "Můžete vybrat maximálně 1 odpověď."
       multiple: "Můžete vybrat maximálně %{maximum} odpovědí."
     read_more_about: "Více informací o:"
   proposal_notifications:
@@ -671,6 +668,8 @@ cs:
     show:
       back: "Jít zpět na své aktivity"
   shared:
+    actions:
+      label: "%{action} %{name}"
     edit: "Upravit"
     filter: "Filtr"
     save: "Uložit"
@@ -758,7 +757,7 @@ cs:
       see_more: Další doporučení
       hide: Skrýt doporučení
     translations:
-      select_language_prompt: Vybrat jazykovou sadu
+      current_language: Aktuální jazyk
       remove_language: Odstranit jazykovou sadu
       add_language: Přidat jazykovou sadu
       languages_in_use:
@@ -781,6 +780,8 @@ cs:
     youtube: "%{org} YouTube"
     telegram: "%{org} Telegram"
     instagram: "%{org} Instagram"
+  ip_denied_handler:
+    unauthorized: "Přístup odepřen. Vaše IP adresa není povolena."
   unauthorized:
     default: Nemáte oprávnění k přístupu na tuto stránku.
     manage:
@@ -965,3 +966,18 @@ cs:
   machine_learning:
     comments_summary: "Souhrn komentářů"
     info_text: "Obsah generovaný umělou inteligencí / strojovým učením"
+  cookies_consent:
+    accept_all_cookies: "Přijmout vše"
+    management: "Spravovat cookies"
+    title: "Zásady cookies"
+  cookies_management:
+    title: Správa cookies
+    description: Tato webová stránka používá pro své správné fungování vlastní soubory cookie a soubory cookie třetích stran. Kliknutím na tlačítko Přijmout vše souhlasíte s používáním těchto technologií a zpracováním vašich dat pro tyto účely.
+    essentials:
+      title: Nezbytné soubory cookie
+      description: Používají se k mnoha různým účelům, například k rozpoznání vás jako uživatele, výběru jazyka nebo přizpůsobení způsobu zobrazení obsahu.
+      hint: Bez nich budou základní navigační funkce omezeny, proto by měly být vždy aktivní.
+    third_party:
+      title: Soubory cookie třetích stran
+      description: Tato webová stránka používá soubory cookie třetích stran. Tyto soubory cookie mohou vylepšovat funkčnost nebo shromažďovat informace za účelem zlepšení uživatelského zážitku.
+    save_preferences: Uložit předvolby
