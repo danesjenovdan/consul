@@ -4,34 +4,16 @@ metadata:
   name: consul
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
-    nginx.ingress.kubernetes.io/proxy-body-size: 10m
-    nginx.ingress.kubernetes.io/session-cookie-secure: true
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-      proxy_set_header X-Forwarded-Proto https;
-      proxy_set_header Host $host:$server_port;
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $remote_addr;
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
-        - consul-novo-mesto.lb.djnd.si
         - idejezanovomesto.si
         - www.idejezanovomesto.si
       secretName: consul-novo-mesto-tls
   rules:
-    - host: consul-novo-mesto.lb.djnd.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: consul
-                port:
-                  number: 3000
     - host: idejezanovomesto.si
-      http:
+      http: &http_paths
         paths:
           - path: /
             pathType: Prefix
@@ -41,13 +23,5 @@ spec:
                 port:
                   number: 3000
     - host: www.idejezanovomesto.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: consul
-                port:
-                  number: 3000
+      http: *http_paths
 
