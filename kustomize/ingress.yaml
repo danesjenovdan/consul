@@ -4,27 +4,15 @@ metadata:
   name: consul
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
-    nginx.ingress.kubernetes.io/proxy-body-size: 10m
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
-        - medvode.lb.djnd.si
         - 2022.sodelujinglasuj.si
         - sodelujinglasuj.si
         - www.sodelujinglasuj.si
       secretName: consul-medvode-tls
   rules:
-    - host: medvode.lb.djnd.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: consul
-                port:
-                  number: 3000
     - host: 2022.sodelujinglasuj.si
       http:
         paths:
