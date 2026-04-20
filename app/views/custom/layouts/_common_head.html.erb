@@ -2,7 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title><%= content_for?(:title) ? yield(:title) : default_title %></title>
+<%= stylesheet_link_tag "vendored" %>
 <%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "administration" %>
 <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
 <!-- analytics -->
 <%= javascript_include_tag "https://plausible.lb.djnd.si/js/plausible.js", "data-domain": "consul.lb.djnd.si", defer: true %>

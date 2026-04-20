@@ -32,7 +32,6 @@ module Budgets
     def show
       @commentable = @investment
       @comment_tree = CommentTree.new(@commentable, params[:page], @current_order)
-      set_comment_flags(@comment_tree.comments)
       @investment_ids = [@investment.id]
       @remote_translations = detect_remote_translations([@investment], @comment_tree.comments)
 
@@ -132,7 +131,7 @@ module Budgets
       @statuses = Milestone::Status.all
 
       # map
-      @investment_ids = @investments.ids
+      @investment_ids = @investments.map(&:id)
       @investments_map_coordinates = MapLocation.investments_json_data(filtered_investments)
       @geozones_data = geozones_data
 

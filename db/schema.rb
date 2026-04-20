@@ -1670,10 +1670,10 @@ ActiveRecord::Schema[7.2].define(version: 2025_10_09_085528) do
     t.string "subscriptions_token"
     t.boolean "data_consent", default: false
     t.text "address"
-    t.boolean "consent_to_publish_name"
     t.integer "failed_attempts", default: 0, null: false
     t.datetime "locked_at", precision: nil
     t.string "unlock_token"
+    t.boolean "consent_to_publish_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["date_of_birth"], name: "index_users_on_date_of_birth"
     t.index ["email"], name: "index_users_on_email", unique: true
