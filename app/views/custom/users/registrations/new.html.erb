@@ -1,7 +1,7 @@
 <% provide :title do %><%= t("devise_views.users.registrations.new.title") %><% end %>
 <h1><%= t("devise_views.users.registrations.new.title") %></h1>
 
-<%= render "devise/omniauth_form", action: "sign_up" %>
+<%= render Devise::OmniauthFormComponent.new("sign_up") %>
 
 <p>
   <%= t("custom.registration.already_has_account") %> <%= link_to t("devise_views.shared.links.login"), new_session_path(resource_name) %>
@@ -31,10 +31,6 @@
 
       <%= f.password_field :password_confirmation, autocomplete: "off",
                            label: t("devise_views.users.registrations.new.password_confirmation_label") %>
-
-      <% if resource.use_redeemable_code %>
-        <%= f.text_field :redeemable_code %>
-      <% end %>
 
       <%= f.check_box :confirm_truth,
         title: t("devise_views.users.registrations.new.confirm_truth"),
