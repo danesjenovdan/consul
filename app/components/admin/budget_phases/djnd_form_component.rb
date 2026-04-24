@@ -3,6 +3,8 @@ class Admin::BudgetPhases::DjndFormComponent < ApplicationComponent
   include GlobalizeHelper
   include Admin::Namespace
 
+  delegate :cktext_area, to: :helpers
+
   attr_reader :phase
 
   def initialize(phase)
