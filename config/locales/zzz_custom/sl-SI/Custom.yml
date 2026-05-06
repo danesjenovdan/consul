@@ -215,13 +215,13 @@ sl-SI:
       reviewing_ballots: Pregled glasovanj
       finished: Spremljaj
       headings: Območja
-      headings_sidebar: "<li>  <h6>Območje 1 (12.000 EUR)</h6>  <div>Center Rog: hiša</div></li><li>  <h6>Območje 2 (8.000 EUR)</h6>  <div>Center Rog: Okolica hiše in Park Izbrisanih </div></li>"
+      headings_sidebar: "<li>  <h6>Območje 1 (20.000 EUR)</h6>  <div>Center Rog: hiša, okolica in Park izbrisanih </div></li><li>"
       select_heading: Izberi območje
       select_tag: Izberi oznako
       select_status: Izberi status predloga
       select_heading_to_vote: Da lahko glasuješ za projekte, moraš izbrati območje.
       instructions: "Pogoji in kriteriji za oddajo predlogov projektov"
-      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti članicam_, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h3>Formalni kriteriji - način oddaje projektnih predlogov</h3> <p>Projektni predlog mora biti oddan preko spletne stran Centra Rog.</ul> <h3>Kriteriji za predlagatelje</h3> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni člani_ ali skupine članov_.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h3>Merila/kriteriji za uvrstitev predlogov v glasovanje</h3> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h4>Splošna merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju javnega zavoda Center Rog.</li> <li>Je finančno ovrednoten med 500,00 EUR in 12.000,00 EUR z DDV.</li> <li>Izveden bo na območju Centra Rog: hiša ali okolica hiše in Park izbrisanih.</li> <li>Ni uvrščen v redni letni proračun JZ Centar Rog.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca</li> <li>Je realno izvedljiv v proračunskem letu 2026.</li> <li>Je skladen z zakonodajo Javnega zavoda Center Rog.</li> </ol> <h4>Vsebinska merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Centra Rog.</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost članov_, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k: skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki), samooskrbi, načelom krožne rabe (krožno gospodarstvo, ponovna uporaba, načela izdelovalniške kulture…).</li> <li>Ustvarja pogoje za vseživljenjsko učenje, pospeševanje raziskovalne, kulturne, mladinske oziroma otroške in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in estetskemu učinku okolice in notranjosti Centra Rog (urejanje zelenice, parka ter drugih javnih površin ter hiše).</li> </ol>"
+      instructions_description: "<p>Osnovna naloga strokovne komisije je pregledovanje upravičenosti predlaganih projektov za uvrstitev na glasovanje na podlagi formalnih kriterijev, splošnih in vsebinskih meril.</p> <p>Upoštevajo se le projektni predlogi, ki ustrezajo pogojem. Pogoji za oddajo projektnih predlogov so zastavljeni tako, da dopuščajo čim več svobode in kreativnosti članicam_, hkrati pa zagotavljajo, da so projektni predlogi zakoniti, izvedljivi, finančno vzdržni in zasledujejo širši javni interes.</p> <h3>Formalni kriteriji - način oddaje projektnih predlogov</h3> <p>Projektni predlog mora biti oddan preko spletne stran Centra Rog.</ul> <h3>Kriteriji za predlagatelje</h3> <ul> <li>Predlagatelj projektnih predlogov je lahko posamezni člani_ ali skupine članov_.</li> <li>Predlagatelj projekta ne more nastopati kot izvajalec predlaganega projekta, ne kot fizična ali pravna oseba, ne kot lastnik izvajalca, ne kot oseba povezana s poslovodstvom izvajalca.</li> </ul> <h3>Merila/kriteriji za uvrstitev predlogov v glasovanje</h3> <p>Projektni predlog je upravičen za uvrstitev na glasovanje, če izpolnjuje splošna in vsebinska merila.</p> <h4>Splošna merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju javnega zavoda Center Rog.</li> <li>Je finančno ovrednoten med 500,00 EUR in 12.000,00 EUR z DDV.</li> <li>Izveden bo na območju Centra Rog: hiša ali okolica hiše in Park izbrisanih.</li> <li>Ni uvrščen v redni letni proračun JZ Centar Rog.</li> <li>Se nanaša na infrastrukturo ali opremo namenjeno članom ali na mehke vsebine namenjene članom.</li> <li>Je realno izvedljiv v proračunskem letu 2027.</li> <li>Je skladen z zakonodajo Javnega zavoda Center Rog.</li> </ol> <h4>Vsebinska merila</h4> <ol> <li>Prispeva k uresničevanju javnega interesa na območju Centra Rog.</li> <li>Prispeva k ciljem poziva: spodbuja aktivno participacijo in vključenost članov_, gradi skupnostni pristop in dviga kakovost bivanja v lokalnem okolju.</li> <li>Prispeva k: skrbi za varstvo okolja in ohranjanju zdravja (npr.: zraka, tal, vodnih virov, virov pitne vode, varstva pred hrupom, ravnanja z odpadki), samooskrbi, načelom krožne rabe (krožno gospodarstvo, ponovna uporaba, načela izdelovalniške kulture…).</li> <li>Ustvarja pogoje za vseživljenjsko učenje, pospeševanje raziskovalne, kulturne, mladinske oziroma otroške in skupnostne dejavnosti ter razvoja športa in rekreacije.</li> <li>Prispeva k urejenosti in estetskemu učinku okolice in notranjosti Centra Rog (urejanje zelenice, parka ter drugih javnih površin ter hiše).</li> </ol>"
       back_to_all_proposals: "Nazaj na seznam predlogov"
     feasibility:
       select_feasibility: Filtriraj (ne)izglasovane predloge
@@ -275,7 +275,7 @@ sl-SI:
         title_2: In moja vloga?
         title_3: In nato?
     landing:
-      title: Participativni proračun Centra Rog 2025–2026!
+      title: Participativni proračun Centra Rog 2026–2027!
       introduction_text: S projektom participativnega proračuna lahko člani_ce Centra Rog soodločate pri razporejanju dela namenskih programskih sredstev za projekte. Projektni predlogi, ki so po meri članov_ic, bodo namenjeni projektom Centra Rog, ki krepijo skupnost med uporabniki_cami, člani_cami in drugih obiskovalcev.
       title_past: Pretekli participativni proračuni
       past_list_description: Preveri izbrane projekte in spremljaj izvedbo!
@@ -284,19 +284,19 @@ sl-SI:
       intro: "Participativni proračun je sistem razporejanja dela proračunskega denarja tako, da o njegovi porabi soodločajo članice in člani Centra Rog. Sami predlagajo projekte in določijo, kateri so zanje najpomembnejši in bi največ prispevali h grajenju in izboljšanju skupnosti med uporabniki, člani in drugimi obiskovalci Centra Rog."
       main_title: Kako deluje?
       heading_1: Zbiranje predlogov
-      description_1: "Članice in člani oddajo predloge projektov med 15. 5. in 15. 9. 2025. Posamezen predlog projekta mora biti v skladu z navodili oziroma pravilnikom Centra Rog o izvajanju participativnega proračuna, njegova vrednost pa ne sme biti nižja od 500 ter višja od 12.000 € (z DDV-jem). Predlog obvezno oddate preko spleta."
-      date_1: 15. 5.– 15. 9. 2025
+      description_1: "Članice in člani oddajo predloge projektov med 15. 5. in 15. 9. 2026. Posamezen predlog projekta mora biti v skladu z navodili oziroma pravilnikom Centra Rog o izvajanju participativnega proračuna, njegova vrednost pa ne sme biti nižja od 500 ter višja od 12.000 € (z DDV-jem). Predlog obvezno oddate preko spleta."
+      date_1: 15. 5.– 15. 9. 2026
       heading_2: Pregled predlogov
       description_2: "Vse oddane predloge bo pregledala komisija, ki bo vsak oddani predlog finančno ovrednotila in preverila, če je izvedljiv, skladen s pravilnikom in časovnico izvajanja participativnega proračuna ter v skladu s pravili glede vrednosti predlogov. Komisija lahko za podobne predloge predlaga združitev."
-      date_2: 15. 9.– 1. 10. 2025
+      date_2: 15. 9.– 1. 10. 2026
       heading_3: Glasovanje
-      description_3: "Glasovanje bo potekalo od 1. 10. 2025 do 15. 11. 2025 preko spleta. Glasujejo lahko vsi člani_ce Centra Rog. Vsak_a član_ica bo lahko glasoval_a za projektni predlog, ki mu_ji je najbolj všeč."
-      date_3: 1. 10.– 15. 11. 2025
+      description_3: "Glasovanje bo potekalo od 1. 10. 2026 do 15. 11. 2026 preko spleta. Glasujejo lahko vsi člani_ce Centra Rog. Vsak_a član_ica bo lahko glasoval_a za projektni predlog, ki mu_ji je najbolj všeč."
+      date_3: 1. 10.– 15. 11. 2026
       heading_4: Razglasitev rezultatov
-      description_4: "Po končanem glasovanju bo Center Rog preveril rezultate in razglasil projekte, ki so bili izbrani. Izbrani projekti bodo predlagani v potrditev Svetu javnega zavoda Center Rog v okviru letnega programa dela in finančnega načrta za leto 2026."
-      date_4: "2026"
+      description_4: "Po končanem glasovanju bo Center Rog preveril rezultate in razglasil projekte, ki so bili izbrani. Izbrani projekti bodo predlagani v potrditev Svetu javnega zavoda Center Rog v okviru letnega programa dela in finančnega načrta za leto 2027."
+      date_4: "2027"
       heading_5: Spremljanje izvedbe
-      description_5: "Vsi zmagovalni projekti bodo vključeni v proračun Centra Rog in izvedeni v letu 2026. V tej fazi cikla participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa, ter za evalviranje procesa z namenom, da bo vsako leto bolje tekel."
+      description_5: "Vsi zmagovalni projekti bodo vključeni v proračun Centra Rog in izvedeni v letu 2027. V tej fazi cikla participativnega proračuna bomo skrbeli za ažurno obveščanje o napredovanju projektov ter sprotno posodabljanje njihovega statusa, ter za evalviranje procesa z namenom, da bo vsako leto bolje tekel."
     privacy:
       title: "Pogoji uporabe"
     help:
