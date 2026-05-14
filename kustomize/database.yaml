@@ -35,6 +35,7 @@ data:
       sms_end_point:  ""
       sms_username: ""
       sms_password: ""
+      llm: *llm
 
     production:
       secret_key_base: "this-should-be-secret"
@@ -65,4 +66,3 @@ data:
       wordpress_oauth2_site: ""
       <<: *maps
       <<: *apis
-      <<: *llm
