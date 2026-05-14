@@ -35,6 +35,7 @@ data:
       sms_end_point:  ""
       sms_username: ""
       sms_password: ""
+      pexels_access_key: "<%= ENV['PEXELS_API_KEY'] %>"
       llm: *llm
 
     production:
