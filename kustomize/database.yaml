@@ -65,3 +65,4 @@ data:
       wordpress_oauth2_site: ""
       <<: *maps
       <<: *apis
+      <<: *llm
