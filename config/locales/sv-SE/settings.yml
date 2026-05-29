@@ -250,3 +250,7 @@ sv:
       model_description: "LLM-modellen som ska användas."
       use_ai_image_suggestions: "AI-bildförslag"
       use_ai_image_suggestions_description: "Låt användare använda AI för att föreslå bilder från Pexels, istället för att ladda upp sina egna."
+      use_llm_speech_to_text: "Speech to Text"
+      use_llm_speech_to_text_description: "Allow users to dictate textarea content; audio is transcribed by the selected LLM model."
+      speech_to_text_model: "Speech to Text Model"
+      speech_to_text_model_description: "Model used to transcribe dictated audio. Options whose provider has no configured credentials are disabled."

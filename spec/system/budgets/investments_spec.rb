@@ -899,6 +899,67 @@ describe "Budget Investments" do
         expect(page).to have_css "img[alt*='Test Photographer']"
       end
     end
+
+    context "Speech to text", :js do
+      before do
+        Setting["llm.provider"] = "OpenAI"
+        Setting["llm.model"] = "gpt-4o"
+        Setting["llm.use_llm_speech_to_text"] = true
+        Setting["llm.speech_to_text_model"] = "whisper-1"
+        allow(Llm::Config).to receive(:transcribe).and_return(double(text: "Dictated text from audio",
+                                                                     segments: []))
+      end
+
+      scenario "Dictates text and inserts it in the description editor" do
+        login_as(author)
+        visit new_budget_investment_path(budget)
+
+        execute_script(<<~JS)
+          Object.defineProperty(window, "MediaRecorder", {
+            configurable: true,
+            writable: true,
+            value: function(stream, options) {
+              this.stream = stream;
+              this.options = options;
+              this.state = "inactive";
+            }
+          });
+          MediaRecorder.isTypeSupported = function() { return true; };
+          MediaRecorder.prototype.start = function() { this.state = "recording"; };
+          MediaRecorder.prototype.stop = function() {
+            this.state = "inactive";
+            if (this.ondataavailable) {
+              this.ondataavailable({ data: new Blob(["fake-audio"], { type: "audio/webm" }) });
+            }
+            if (this.onstop) { this.onstop(); }
+          };
+          Object.defineProperty(navigator, "mediaDevices", {
+            configurable: true,
+            value: {
+              getUserMedia: function() {
+                return Promise.resolve({ getTracks: function() { return [{ stop: function() {} }]; } });
+              }
+            }
+          });
+        JS
+
+        expect(page).to have_button("Say it instead")
+
+        textarea_id = find("textarea[id$='_description']", visible: :all)[:id]
+        until page.evaluate_script("CKEDITOR.instances['#{textarea_id}'] && CKEDITOR.instances['#{textarea_id}'].status === 'ready'")
+          sleep 0.01
+        end
+
+        page.execute_script(<<~JS)
+          var wrapper = document.querySelector(".speech-to-text-wrapper");
+          var textarea = document.getElementById("#{textarea_id}");
+          App.SpeechToText.captureInsertionAnchor($(wrapper), textarea);
+          App.SpeechToText.insertTranscript($(wrapper), "Dictated text from audio");
+        JS
+        editor_content = page.evaluate_script("CKEDITOR.instances['#{textarea_id}'].getData()")
+        expect(editor_content).to include("Dictated text from audio")
+      end
+    end
   end
 
   scenario "Show" do

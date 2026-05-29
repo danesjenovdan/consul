@@ -254,3 +254,7 @@ es:
       model_description: "El modelo LLM a usar."
       use_ai_image_suggestions: "Sugerencias de Imágenes con IA"
       use_ai_image_suggestions_description: "Permitir a los usuarios usar IA para sugerir imágenes de Pexels, en lugar de subir las suyas propias."
+      use_llm_speech_to_text: "Speech to Text"
+      use_llm_speech_to_text_description: "Allow users to dictate textarea content; audio is transcribed by the selected LLM model."
+      speech_to_text_model: "Speech to Text Model"
+      speech_to_text_model_description: "Model used to transcribe dictated audio. Options whose provider has no configured credentials are disabled."

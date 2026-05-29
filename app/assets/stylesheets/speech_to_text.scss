@@ -1,0 +1,20 @@
+.speech-to-text-wrapper {
+  margin-top: 0.5rem;
+
+  .js-speech-to-text[data-state="recording"] {
+    @include has-fa-icon(microphone, solid);
+  }
+
+  .js-speech-to-text[data-state="loading"] {
+    @include has-fa-icon(spinner, solid);
+
+    &::before {
+      animation: fa-spin 2s infinite linear;
+    }
+  }
+
+  .speech-to-text-error {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
