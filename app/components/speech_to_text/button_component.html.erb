@@ -1,0 +1,17 @@
+<div class="speech-to-text-wrapper"
+     data-textarea-id="<%= textarea_id %>"
+     data-locale="<%= locale %>"
+     data-endpoint="<%= helpers.speech_to_text_path %>">
+  <button type="button"
+          class="button hollow js-speech-to-text"
+          data-state="idle"
+          data-label-idle="<%= t("speech_to_text.button.idle") %>"
+          data-label-recording="<%= t("speech_to_text.button.recording") %>"
+          data-label-loading="<%= t("speech_to_text.button.loading") %>"
+          data-error-microphone-blocked="<%= t("speech_to_text.button.microphone_blocked") %>"
+          data-error-unsupported-browser="<%= t("speech_to_text.button.unsupported_browser") %>"
+          data-error-transcription-failed="<%= t("speech_to_text.errors.transcription_failed") %>">
+    <%= t("speech_to_text.button.idle") %>
+  </button>
+  <small class="speech-to-text-error error hide js-speech-to-text-error"></small>
+</div>

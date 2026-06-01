@@ -59,6 +59,39 @@ describe Llm::Config do
     end
   end
 
+  describe ".speech_to_text_model_available?" do
+    it "returns true when the model provider is configured" do
+      stub_secrets(llm: { openai_api_key: "1234" })
+
+      expect(Llm::Config.speech_to_text_model_available?("whisper-1")).to be true
+    end
+
+    it "returns false when the model provider is not configured" do
+      stub_secrets(llm: { gemini_api_key: "1234" })
+
+      expect(Llm::Config.speech_to_text_model_available?("whisper-1")).to be false
+    end
+
+    it "returns false for unknown models" do
+      expect(Llm::Config.speech_to_text_model_available?("unknown-model")).to be false
+    end
+  end
+
+  describe ".transcribe" do
+    let(:context) { double("RubyLLM::Context") }
+
+    before do
+      allow(Llm::Config).to receive(:context).and_return(context)
+    end
+
+    it "delegates transcription to RubyLLM with context" do
+      expect(RubyLLM).to receive(:transcribe).with("audio.wav", model: "whisper-1", language: "en",
+                                                                context: context)
+
+      Llm::Config.transcribe("audio.wav", model: "whisper-1", language: "en")
+    end
+  end
+
   describe "evaluates provider configuration across different tenants" do
     before do
       stub_secrets(

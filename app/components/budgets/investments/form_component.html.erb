@@ -28,6 +28,7 @@
                                         maxlength: Budget::Investment.description_max_length,
                                         class: "html-area" %>
       </div>
+      <%= render SpeechToText::ButtonComponent.new(translations_form) %>
     <% end %>
   </fieldset>
 

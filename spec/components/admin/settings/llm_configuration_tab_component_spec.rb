@@ -18,14 +18,22 @@ describe Admin::Settings::LlmConfigurationTabComponent do
   let(:provider_setting) { Setting.find_by!(key: "llm.provider") }
   let(:model_setting) { Setting.find_by!(key: "llm.model") }
   let(:feature_setting) { Setting.find_by!(key: "llm.use_llm_for_translations") }
+  let(:speech_to_text_feature_setting) { Setting.find_by!(key: "llm.use_llm_speech_to_text") }
+  let(:speech_to_text_model_setting) { Setting.find_by!(key: "llm.speech_to_text_model") }
   let(:provider_select_selector) { "#value_setting_#{provider_setting.id}" }
   let(:model_select_selector) { "#value_setting_#{model_setting.id}" }
   let(:feature_button_selector) { "button[aria-labelledby='title_setting_#{feature_setting.id}']" }
+  let(:speech_to_text_feature_button_selector) do
+    "button[aria-labelledby='title_setting_#{speech_to_text_feature_setting.id}']"
+  end
+  let(:speech_to_text_model_selector) { "#value_setting_#{speech_to_text_model_setting.id}" }
 
   before do
     Setting["llm.provider"] = nil
     Setting["llm.model"] = nil
     Setting["llm.use_llm_for_translations"] = false
+    Setting["llm.use_llm_speech_to_text"] = false
+    Setting["llm.speech_to_text_model"] = nil
     allow(Llm::Config).to receive(:providers).and_return(providers_config)
     allow(RubyLLM.models).to receive(:by_provider).with(:openai).and_return(models_for_openai)
   end
@@ -57,6 +65,15 @@ describe Admin::Settings::LlmConfigurationTabComponent do
                                      "Microsoft translation services."
         expect(page).to have_button "No", disabled: true
       end
+
+      page.find(speech_to_text_feature_button_selector) do
+        expect(page).to have_content "Speech to Text"
+        expect(page).to have_button "No", disabled: true
+      end
+
+      page.find(speech_to_text_model_selector) do
+        expect(page).to have_css "fieldset[disabled]"
+      end
     end
   end
 
@@ -73,11 +90,19 @@ describe Admin::Settings::LlmConfigurationTabComponent do
       page.find(model_select_selector) do
         expect(page).to have_selector(:option, "GPT-4o", selected: false)
         expect(page).to have_selector(:option, "GPT-4o-mini", selected: false)
-        expect(page).not_to have_css "fieldset[disabled]"
+        expect(page).not_to have_xpath("//select[@id='value_setting_#{model_setting.id}']/ancestor::fieldset[@disabled]")
       end
 
       page.find(feature_button_selector) do
         expect(page).to have_button "No", disabled: true
+      end
+
+      page.find(speech_to_text_feature_button_selector) do
+        expect(page).to have_button "No", disabled: true
+      end
+
+      page.find(speech_to_text_model_selector) do
+        expect(page).to have_css "fieldset[disabled]"
       end
     end
   end
@@ -97,11 +122,70 @@ describe Admin::Settings::LlmConfigurationTabComponent do
 
       page.find(model_select_selector) do
         expect(page).to have_selector(:option, "GPT-4o", selected: true)
-        expect(page).not_to have_css "fieldset[disabled]"
+        expect(page).not_to have_xpath("//select[@id='value_setting_#{model_setting.id}']/ancestor::fieldset[@disabled]")
       end
 
       page.find(feature_button_selector) do
         expect(page).to have_button "No", disabled: false
+      end
+
+      page.find(speech_to_text_feature_button_selector) do
+        expect(page).to have_button "No", disabled: false
+      end
+
+      page.find(speech_to_text_model_selector) do
+        expect(page).to have_selector(:option, "whisper-1", selected: false)
+        expect(page).to have_selector(:option, "gpt-4o-transcribe", selected: false)
+        expect(page).to have_selector(:option, "gemini-2.5-flash", selected: false)
+      end
+    end
+  end
+
+  context "when only some speech-to-text providers are configured" do
+    let(:providers_config) do
+      {
+        OpenAI: { enabled: false },
+        Gemini: { enabled: true }
+      }
+    end
+    let(:models_for_gemini) { [double(name: "Gemini 2.5 Flash", id: "gemini-2.5-flash")] }
+
+    before do
+      allow(RubyLLM.models).to receive(:by_provider).with(:gemini).and_return(models_for_gemini)
+      Setting["llm.provider"] = "Gemini"
+      Setting["llm.model"] = "gemini-2.5-flash"
+      Setting["llm.use_llm_speech_to_text"] = true
+      Setting["llm.speech_to_text_model"] = "gemini-2.5-flash"
+    end
+
+    it "disables models from providers without credentials" do
+      render_inline component
+
+      page.find(speech_to_text_model_selector) do
+        expect(page).to have_selector(:option, "whisper-1", disabled: true)
+        expect(page).to have_selector(:option, "gpt-4o-transcribe", disabled: true)
+        expect(page).to have_selector(:option, "gpt-4o-mini-transcribe", disabled: true)
+        expect(page).to have_selector(:option, "gpt-4o-transcribe-diarize", disabled: true)
+        expect(page).to have_selector(:option, "gemini-2.5-flash", disabled: false, selected: true)
+        expect(page).to have_selector(:option, "gemini-2.5-pro", disabled: false)
+      end
+    end
+  end
+
+  context "when speech-to-text feature is enabled" do
+    before do
+      Setting["llm.provider"] = "OpenAI"
+      Setting["llm.model"] = "gpt-4o"
+      Setting["llm.use_llm_speech_to_text"] = true
+      Setting["llm.speech_to_text_model"] = "whisper-1"
+    end
+
+    it "enables speech-to-text model dropdown and selects the current model" do
+      render_inline component
+
+      page.find(speech_to_text_model_selector) do
+        expect(page).not_to have_xpath("//select[@id='value_setting_#{speech_to_text_model_setting.id}']/ancestor::fieldset[@disabled]")
+        expect(page).to have_selector(:option, "whisper-1", selected: true)
       end
     end
   end
