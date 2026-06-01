@@ -128,17 +128,34 @@
         $(this).closest(".direct-upload").remove();
       });
     },
+    imageSuggestionsParams: function(form, resourceType) {
+      var params;
+      params = form.serializeArray().filter(function(item) {
+        return item.name !== "_method";
+      });
+      params.push({ name: "resource_type", value: resourceType });
+      return $.param(params);
+    },
     initializeSuggestImage: function() {
-      // we serialize the entire parent form and submit to the image suggestions endpoint
       $("body").on("click", ".js-suggest-image", function() {
-        var form, resourceType, resourceId, dataString;
-        form = $(this).closest("form");
-        resourceType = $(this).data("resource-type");
-        resourceId = $(this).data("resource-id");
-        dataString = form.serialize() + "&resource_type=" + encodeURIComponent(resourceType);
-        if (resourceId) {
-          dataString += "&resource_id=" + encodeURIComponent(resourceId);
+        var form, dataString, button, wrapper, resourceType;
+        button = $(this);
+        form = button.closest("form");
+        wrapper = button.closest(".suggested-images-wrapper");
+        resourceType = wrapper.data("resource-type");
+
+        button.prop("disabled", true);
+        button.addClass("is-loading");
+
+        if (typeof CKEDITOR !== "undefined") {
+          for (var name in CKEDITOR.instances) {
+            CKEDITOR.instances[name].updateElement();
+          }
         }
+
+        dataString = App.Imageable.imageSuggestionsParams(form, resourceType);
+        var uploadData = App.Imageable.buildData([], button.closest(".image-fields.direct-upload"));
+        App.Imageable.clearInputErrors(uploadData);
         $.ajax({
           url: "/image_suggestions",
           type: "POST",
@@ -148,8 +165,7 @@
       });
     },
     attachSuggestedImageSuccess: function(responseData) {
-      // mimic the direct upload behavior to reuse App.Imageable methods
-      var data = App.Imageable.buildData([], $(".direct-upload").first());
+      var data = App.Imageable.buildData([], this);
       data.result = {
         cached_attachment: responseData.cached_attachment,
         filename: responseData.filename,
@@ -158,45 +174,36 @@
       };
       $(data.cachedAttachmentField).val(data.result.cached_attachment);
       App.Imageable.setTitleFromFile(data, data.result.filename);
-      App.Imageable.setProgressBar(data, "complete");
       App.Imageable.setFilename(data, data.result.filename);
       App.Imageable.setPreview(data);
       $(data.destroyAttachmentLinkContainer).html(data.result.destroy_link);
       $("#new_image_link").addClass("hide");
+      App.Imageable.clearInputErrors(data);
     },
     attachSuggestedImageError: function(xhr) {
-      var data = App.Imageable.buildData([], $(".direct-upload").first());
-      data.jqXHR = {
-        responseJSON: xhr.responseJSON
-      };
-      $(data.cachedAttachmentField).val("");
-      App.Imageable.clearFilename(data);
-      App.Imageable.setProgressBar(data, "errors");
+      var data = App.Imageable.buildData([], this);
+      data.jqXHR = xhr;
       App.Imageable.clearInputErrors(data);
       App.Imageable.setInputErrors(data);
-      App.Imageable.clearPreview(data);
-      $(data.destroyAttachmentLinkContainer).find("a.delete:not(.remove-nested)").remove();
     },
     initializeAttachSuggestedImage: function() {
-      $("body").on("click", ".js-attach-suggested-image", function(event) {
-        var imageId, resourceType, resourceId, dataString, uploadData;
-        event.stopPropagation();
+      $("body").on("click", ".js-attach-suggested-image", function() {
+        var imageId, resourceType, resourceId, dataString, wrapper;
         imageId = $(this).data("image-id");
-        resourceType = $(this).data("resource-type");
-        resourceId = $(this).data("resource-id");
-        uploadData = App.Imageable.buildData([], $(".direct-upload").first());
-        App.Imageable.clearProgressBar(uploadData);
-        $(uploadData.progressBar).find(".loading-bar").css("width", "100%");
+        wrapper = $(this).closest(".suggested-images-wrapper");
+        resourceType = wrapper.data("resource-type");
+        resourceId = wrapper.data("resource-id");
 
-        dataString = "resource_type=" + encodeURIComponent(resourceType);
+        dataString = { resource_type: resourceType };
         if (resourceId) {
-          dataString += "&resource_id=" + encodeURIComponent(resourceId);
+          dataString.resource_id = resourceId;
         }
         $.ajax({
           url: "/image_suggestions/" + imageId + "/attach",
           type: "POST",
           data: dataString,
           dataType: "json",
+          context: $(this).closest(".image-fields.direct-upload"),
           success: App.Imageable.attachSuggestedImageSuccess,
           error: App.Imageable.attachSuggestedImageError
         });

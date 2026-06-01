@@ -63,12 +63,7 @@
 //= require comments
 //= require foundation_extras
 //= require location_changer
-//= require moderator_comment
-//= require moderator_debates
-//= require moderator_proposals
-//= require moderator_budget_investments
-//= require moderator_proposal_notifications
-//= require moderator_legislation_proposals
+//= require moderator
 //= require gettext
 //= require annotator
 //= require jquery.amsify.suggestags
@@ -79,7 +74,7 @@
 //= require suggest
 //= require forms
 //= require valuation_budget_investment_form
-//= require embed_video
+//= require embedded_video
 //= require fixed_bar
 //= require banners
 //= require social_share
@@ -96,7 +91,6 @@
 //= require legislation_annotatable
 //= require legislation_draft_versions
 //= require followable
-//= require flaggable
 //= require documentable
 //= require imageable
 //= require tree_navigator
@@ -111,6 +105,7 @@
 //= require i18n
 //= require globalize
 //= require settings
+//= require external_links
 //= require cookies
 //= require cookies_consent
 //= require columns_selector
@@ -142,7 +137,7 @@ var initialize_modules = function() {
   App.Suggest.initialize();
   App.Forms.initialize();
   App.ValuationBudgetInvestmentForm.initialize();
-  App.EmbedVideo.initialize();
+  App.EmbeddedVideo.initialize();
   App.FixedBar.initialize();
   App.Banners.initialize();
   App.SocialShare.initialize();
@@ -162,6 +157,7 @@ var initialize_modules = function() {
   App.Polls.initialize();
   App.TableSortable.initialize();
   App.InvestmentReportAlert.initialize();
+  App.ExternalLinks.initialize();
   App.Managers.initialize();
   App.Globalize.initialize();
   App.Settings.initialize();

@@ -37,8 +37,8 @@
     <legend><%= t("shared.optional") %></legend>
 
     <% if feature?(:allow_images) %>
-      <%= render Images::NestedComponent.new(f) do |content| %>
-        <%= render Images::SuggestImagesComponent.new(f) %>
+      <%= render Images::NestedComponent.new(f) do %>
+        <%= render ImageSuggestions::SuggestButtonComponent.new(f) %>
       <% end %>
     <% end %>
 

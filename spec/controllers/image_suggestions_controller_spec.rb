@@ -6,29 +6,19 @@ describe ImageSuggestionsController do
   before { sign_in user }
 
   describe "POST create" do
-    let(:resource_type) { "Proposal" }
-    let(:resource_id) { nil }
-    let(:proposal_params) do
+    let(:resource_type) { "Budget::Investment" }
+    let(:budget_investment_params) do
       {
-        title: "Test Proposal",
-        description: "This is a test proposal"
+        translations_attributes: {
+          "0" => { title: "Test Investment", description: "This is a test investment" }
+        }
       }
     end
 
-    it "successfully processes the request" do
+    it "successfully processes the request with resource params" do
       post :create, params: {
         resource_type: resource_type,
-        resource_id: resource_id,
-        proposal: proposal_params
-      }, format: :js
-
-      expect(response).to be_successful
-    end
-
-    it "processes resource attributes from params" do
-      post :create, params: {
-        resource_type: resource_type,
-        proposal: proposal_params
+        budget_investment: budget_investment_params
       }, format: :js
 
       expect(response).to be_successful
@@ -36,8 +26,12 @@ describe ImageSuggestionsController do
 
     it "handles namespaced resource types" do
       post :create, params: {
-        resource_type: "Budget::Investment",
-        budget_investment: { title: "Test Investment" }
+        resource_type: "Proposal",
+        proposal: {
+          translations_attributes: {
+            "0" => { title: "Test Proposal", description: "" }
+          }
+        }
       }, format: :js
 
       expect(response).to be_successful
@@ -50,74 +44,67 @@ describe ImageSuggestionsController do
         }, format: :js
       end.to raise_error(ActionController::ParameterMissing)
     end
+
+    context "when rate limit is exceeded" do
+      render_views
+
+      let(:params) { { resource_type: resource_type, budget_investment: budget_investment_params } }
+
+      before { ImageSuggestionsController.cache_store.clear }
+
+      it "renders rate limit error message" do
+        10.times { post :create, params: params, format: :js }
+
+        post :create, params: params, format: :js
+
+        expect(response).to be_successful
+        expect(response.body).to include "Please wait a few minutes before generating new suggestions."
+      end
+
+      it "allows new requests after waiting a few minutes" do
+        10.times { post :create, params: params, format: :js }
+
+        post :create, params: params, format: :js
+
+        expect(response).to be_successful
+        expect(response.body).to include "Please wait a few minutes before generating new suggestions."
+
+        travel_to(15.minutes.from_now + 1.second) do
+          post :create, params: params, format: :js
+
+          expect(response).to be_successful
+          expect(response.body).not_to include "Please wait a few minutes before generating new suggestions."
+        end
+      end
+
+      it "does not affect other users" do
+        10.times { post :create, params: params, format: :js }
+
+        sign_in create(:user)
+        post :create, params: params, format: :js
+
+        expect(response).to be_successful
+        expect(response.body).not_to include "Please wait a few minutes before generating new suggestions."
+      end
+    end
   end
 
   describe "POST attach" do
-    let(:resource_type) { "Proposal" }
-    let(:resource_id) { nil }
+    let(:resource_type) { "Budget::Investment" }
     let(:photo_id) { "12345" }
-    let(:uploaded_file) do
-      ActionDispatch::Http::UploadedFile.new(
-        tempfile: fixture_file_upload("clippy.jpg"),
-        filename: "test.jpg",
-        type: "image/jpeg"
-      )
-    end
+    let(:uploaded_file) { fixture_file_upload("clippy.jpg") }
 
     before do
       allow(ImageSuggestions::Pexels).to receive(:download).with(photo_id).and_return(uploaded_file)
     end
 
-    it "creates a direct upload with the downloaded image" do
-      expect(DirectUpload).to receive(:new) do |args|
-        expect(args[:resource_type]).to eq(resource_type)
-        expect(args[:resource_relation]).to eq("image")
-        expect(args[:attachment]).to eq(uploaded_file)
-        expect(args[:user]).to eq(user)
-        # resource_id can be nil or empty string depending on params
-        expect([nil, ""]).to include(args[:resource_id])
-      end.and_call_original
+    context "when download succeeds and DirectUpload is valid" do
+      it "returns success and JSON with attachment data" do
+        post :attach, params: { id: photo_id, resource_type: resource_type }
 
-      post :attach, params: {
-        id: photo_id,
-        resource_type: resource_type,
-        resource_id: resource_id
-      }
-    end
-
-    context "when download succeeds" do
-      let(:direct_upload) do
-        instance_double(DirectUpload, valid?: true, relation: relation, errors: errors,
-                                      resource_relation: "image")
-      end
-      let(:blob) { double("blob", save!: true) }
-      let(:attachment_changes) { { "attachment" => double("change", upload: true) } }
-      let(:relation) do
-        instance_double(Image, cached_attachment: "cached", attachment_file_name: "test.jpg",
-                               attachment: attachment, attachment_changes: attachment_changes)
-      end
-      let(:attachment) { double("attachment", blob: blob) }
-      let(:errors) { instance_double(ActiveModel::Errors, :[] => []) }
-
-      before do
-        allow(DirectUpload).to receive(:new).and_return(direct_upload)
-        allow(direct_upload.relation).to receive(:set_cached_attachment_from_attachment)
-        allow(controller).to receive(:polymorphic_path).and_return("/images/1")
-      end
-
-      it "saves the attachment and returns success response" do
-        expect(direct_upload).to receive(:save_attachment)
-        expect(direct_upload.relation).to receive(:set_cached_attachment_from_attachment)
-
-        post :attach, params: {
-          id: photo_id,
-          resource_type: resource_type,
-          resource_id: resource_id
-        }
-
-        expect(response).to have_http_status(:success)
-        json_response = response.parsed_body
-        expect(json_response).to include("cached_attachment", "filename", "destroy_link", "attachment_url")
+        expect(response).to have_http_status(:ok)
+        json = response.parsed_body
+        expect(json).to include("cached_attachment", "filename", "destroy_link", "attachment_url")
       end
     end
 
@@ -128,14 +115,10 @@ describe ImageSuggestionsController do
       end
 
       it "returns error response" do
-        post :attach, params: {
-          id: photo_id,
-          resource_type: resource_type
-        }
+        post :attach, params: { id: photo_id, resource_type: resource_type }
 
         expect(response).to have_http_status(:unprocessable_entity)
-        json_response = response.parsed_body
-        expect(json_response["errors"]).to eq("Download failed")
+        expect(response.parsed_body["errors"]).to eq "Download failed"
       end
     end
 
@@ -146,34 +129,24 @@ describe ImageSuggestionsController do
       end
 
       it "returns error response with message" do
-        post :attach, params: {
-          id: photo_id,
-          resource_type: resource_type
-        }
+        post :attach, params: { id: photo_id, resource_type: resource_type }
 
         expect(response).to have_http_status(:unprocessable_entity)
-        json_response = response.parsed_body
-        expect(json_response["errors"]).to eq("Download failed")
+        expect(response.parsed_body["errors"]).to eq "Download failed"
       end
     end
 
-    context "respects the file limits" do
-      let(:direct_upload) { instance_double(DirectUpload, valid?: false, errors: errors) }
-      let(:errors) { instance_double(ActiveModel::Errors, :[] => ["File is too large"]) }
-
+    context "when DirectUpload is invalid" do
       before do
-        allow(DirectUpload).to receive(:new).and_return(direct_upload)
+        allow(ImageSuggestions::Pexels).to receive(:download).with(photo_id)
+                                                             .and_return(fixture_file_upload("empty.pdf"))
       end
 
-      it "returns validation errors" do
-        post :attach, params: {
-          id: photo_id,
-          resource_type: resource_type
-        }
+      it "returns 422 with validation errors in JSON" do
+        post :attach, params: { id: photo_id, resource_type: resource_type }
 
         expect(response).to have_http_status(:unprocessable_entity)
-        json_response = response.parsed_body
-        expect(json_response["errors"]).to eq("File is too large")
+        expect(response.parsed_body["errors"]).to be_present
       end
     end
   end

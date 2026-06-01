@@ -3,19 +3,26 @@ class ImageSuggestionsController < ApplicationController
   include ActionView::Helpers::UrlHelper
 
   before_action :authenticate_user!
-  skip_authorization_check # like direct uploads does too
+  skip_authorization_check
+
+  rate_limit to: 10,
+             within: 15.minutes,
+             by: -> { current_user.id },
+             only: :create,
+             with: -> { render_rate_limit_response }
 
   def create
-    @resource_type = params[:resource_type]
-    @resource_id = params[:resource_id]
-    @resource_attributes = params.require(@resource_type.parameterize.underscore).permit!.except(:subtitle)
+    @suggestions = ImageSuggestions::Llm::Client.call(
+      title: image_suggestion_params[:title],
+      description: image_suggestion_params[:description]
+    )
+
     respond_to do |format|
       format.js
     end
   end
 
   def attach
-    # mimicking the direct uploads behavior, but attaching from pexels
     begin
       attachment = ImageSuggestions::Pexels.download(params[:id])
     rescue ImageSuggestions::Pexels::PexelsError, Pexels::APIError => e
@@ -43,4 +50,22 @@ class ImageSuggestionsController < ApplicationController
              status: :unprocessable_entity
     end
   end
+
+  private
+
+    def render_rate_limit_response
+      @suggestions = ImageSuggestions::Llm::Client::Response.new
+      @suggestions.errors << I18n.t("images.errors.messages.rate_limit_exceeded")
+
+      respond_to do |format|
+        format.js { render :create }
+      end
+    end
+
+    def image_suggestion_params
+      @image_suggestion_params ||= params.require(params[:resource_type].parameterize.underscore)
+                                         .permit(translations_attributes: [:title, :description])
+                                         .fetch(:translations_attributes, {})
+                                         .values.first || {}
+    end
 end

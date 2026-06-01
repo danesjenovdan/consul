@@ -2,7 +2,8 @@
 
 ## Overview
 
-The AI Image Suggestions feature allows users to get AI-powered image recommendations when creating or editing content in Consul Democracy. Instead of manually searching for and uploading images, users can click a button to receive relevant stock image suggestions from Pexels based on the title and description of their content.
+The AI Image Suggestions feature allows users to get image recommendations
+assisted by AI when creating or editing content in Consul Democracy. Instead of manually searching for and uploading images, users can click a button to receive relevant stock image suggestions from Pexels based on the title and description of their content.
 
 The feature uses a Large Language Model (LLM) to analyze the title and description fields of a resource, extract meaningful concepts, and generate an optimized search query. This query is then used to search the Pexels API for relevant stock images. When a user selects a suggested image, it is downloaded and attached to their content just like a user-uploaded image.
 
@@ -97,25 +98,27 @@ Once you have configured both the LLM provider and the Pexels API key:
 
 ### User Experience
 
-When creating or editing content (proposals, budget investments, debates, etc.) that supports images:
+When creating or editing budget investments:
 
-1. **User fills in title and description**: The feature requires both title and description fields to be filled in order to generate meaningful image suggestions.
+1. **User fills in title and/or description**: The feature uses whichever of these fields is present to generate image suggestions.
 
-2. **User clicks "Suggest an image with AI ✨"**: A button appears next to the image upload field (only when no image is currently attached).
+2. **User clicks "Add image"**: Under optional fields, this button expands both the image upload form and the AI suggestion button.
+
+3. **User clicks "Suggest an image with AI"**: A button appears next to the image upload field (only when no image is currently attached).
 
    ![Image upload form with AI suggestion button](../../img/image_suggestions/upload-form-with-button-en.png)
 
-3. **System generates suggestions**:
+4. **System generates suggestions**:
    - The LLM analyzes the title and description
    - Extracts key concepts and generates a search query
    - Searches Pexels API with the generated query
    - Returns up to 4 relevant image suggestions
 
-4. **User views suggestions**: A grid of suggested images appears below the upload button.
+5. **User views suggestions**: A grid of suggested images appears below the upload button.
 
    ![Suggested images grid](../../img/image_suggestions/suggested-images-grid-en.png)
 
-5. **User selects an image**: Clicking on a suggested image:
+6. **User selects an image**: Clicking on a suggested image:
    - Downloads the image from Pexels
    - Attaches it to the form as if it were user-uploaded
    - Replaces the upload interface with the selected image preview
@@ -128,7 +131,7 @@ When creating or editing content (proposals, budget investments, debates, etc.) 
 
 2. **Backend Processing**:
    - `ImageSuggestionsController#create` receives the request
-   - Creates a model instance with the provided attributes
+   - Extracts the relevant attributes from the request
    - Calls `ImageSuggestions::Llm::Client` to generate a search query
    - The LLM client:
      - Validates LLM configuration
@@ -140,7 +143,7 @@ When creating or editing content (proposals, budget investments, debates, etc.) 
 
 3. **Image Attachment**:
    - When user clicks a suggested image, `ImageSuggestionsController#attach` is called
-   - Downloads the full-resolution image from Pexels
+   - Downloads the image from Pexels
    - Creates an `ActionDispatch::Http::UploadedFile` from the downloaded image
    - Uses the existing `DirectUpload` system to attach the image
    - Returns JSON with attachment details for frontend processing
@@ -189,6 +192,7 @@ For higher usage, Pexels offers paid plans. See [Pexels API pricing](https://www
 
 ### Feature button doesn't appear
 
+- Make sure you clicked **"Add image"** for the descriptive image first; the AI suggestion button only appears after that block is expanded.
 - Check that LLM provider and model are configured in **Admin > Global Settings > LLM Settings**
 - Verify that Image suggestions setting is enabled
 - Ensure Pexels API key is present in `secrets.yml`

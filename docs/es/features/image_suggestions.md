@@ -2,7 +2,7 @@
 
 ## Resumen
 
-La funcionalidad de Sugerencias de Imágenes con IA permite a los usuarios obtener recomendaciones de imágenes potenciadas por IA al crear o editar contenido en Consul Democracy. En lugar de buscar y subir imágenes manualmente, los usuarios pueden hacer clic en un botón para recibir sugerencias relevantes de imágenes de stock de Pexels basadas en el título y la descripción de su contenido.
+La funcionalidad de Sugerencias de Imágenes con IA permite a los usuarios obtener recomendaciones de imágenes de stock mediante una búsqueda generada por IA al crear o editar contenido en Consul Democracy. En lugar de buscar y subir imágenes manualmente, los usuarios pueden hacer clic en un botón para recibir sugerencias relevantes de imágenes de stock de Pexels basadas en el título y/o la descripción de su contenido.
 
 La funcionalidad utiliza un Modelo de Lenguaje Grande (LLM) para analizar los campos de título y descripción de un recurso, extraer conceptos significativos y generar una consulta de búsqueda optimizada. Esta consulta se utiliza luego para buscar en la API de Pexels imágenes de stock relevantes. Cuando un usuario selecciona una imagen sugerida, se descarga y se adjunta a su contenido como si fuera una imagen subida por el usuario.
 
@@ -10,7 +10,7 @@ La funcionalidad utiliza un Modelo de Lenguaje Grande (LLM) para analizar los ca
 
 Para usar esta funcionalidad, necesitas:
 
-1. **Cuenta de Proveedor LLM**: Una cuenta con un proveedor LLM (OpenAI, Anthropic, DeepSeek, etc.) o un endpoint Ollama auto-hospedado
+1. **Cuenta de Proveedor LLM**: Una cuenta con un proveedor LLM (OpenAI, Anthropic, DeepSeek, etc.) o un endpoint Ollama auto-alojado
 2. **Clave API de Pexels**: Una clave API gratuita de [Pexels](https://www.pexels.com/api/)
 
 ### Obtener una Clave API de Pexels
@@ -21,7 +21,7 @@ Para usar esta funcionalidad, necesitas:
 4. Crea una nueva aplicación para obtener tu clave API
 5. Copia la clave API para usarla en la configuración
 
-**Nota**: Pexels ofrece un generoso plan gratuito con 200 solicitudes por hora y 20,000 solicitudes por mes, que debería ser suficiente para la mayoría de los casos de uso.
+**Nota**: Pexels ofrece un generoso plan gratuito con 200 solicitudes por hora y 20.000 solicitudes por mes, que debería ser suficiente para la mayoría de los casos de uso.
 
 ## Configuración
 
@@ -56,7 +56,7 @@ apis: &apis
   llm: *llm
 ```
 
-**Para configuraciones de multitenancy**: Puedes sobrescribir la clave API de Pexels para inquilinos específicos:
+**Para configuraciones de multientidad**: Puedes sobrescribir la clave API de Pexels para entidades específicas:
 
 ```yml
 tenants:
@@ -85,7 +85,7 @@ El prompt usa los marcadores `%{title}` y `%{description}` que serán reemplazad
 Una vez que hayas configurado tanto el proveedor LLM como la clave API de Pexels:
 
 1. Navega a **Admin > Configuración Global > Configuración LLM**
-2. Habilita el interruptor de funcionalidad **Sugerencias de Imágenes con IA**
+2. Habilita la funcionalidad **Sugerencias de Imágenes con IA**
 3. La funcionalidad estará habilitada si:
    - El proveedor LLM está configurado
    - El modelo LLM está seleccionado
@@ -97,25 +97,27 @@ Una vez que hayas configurado tanto el proveedor LLM como la clave API de Pexels
 
 ### Experiencia del Usuario
 
-Al crear o editar contenido (propuestas, inversiones presupuestarias, debates, etc.) que soporta imágenes:
+Al crear o editar proyectos de gasto:
 
-1. **El usuario completa título y descripción**: La funcionalidad requiere que ambos campos de título y descripción estén completados para generar sugerencias de imágenes significativas.
+1. **El usuario completa título y/o descripción**: La funcionalidad usa el contenido de estos campos cuando están disponibles para generar sugerencias.
 
-2. **El usuario hace clic en "Sugerir una imagen con IA ✨"**: Aparece un botón junto al campo de carga de imagen (solo cuando no hay imagen adjunta actualmente).
+2. **El usuario hace clic en "Añadir imagen"**: En la sección de campos opcionales, este botón despliega tanto el formulario para seleccionar una imagen como el botón de sugerencias con IA
+
+3. **El usuario hace clic en "Sugerir una imagen con IA"**: Aparece un botón junto al campo de carga de imagen (solo cuando no hay imagen adjunta actualmente).
 
    ![Formulario de carga de imagen con botón de sugerencia IA](../../img/image_suggestions/upload-form-with-button-es.png)
 
-3. **El sistema genera sugerencias**:
+4. **El sistema genera sugerencias**:
    - El LLM analiza el título y la descripción
    - Extrae conceptos clave y genera una consulta de búsqueda
    - Busca en la API de Pexels con la consulta generada
    - Devuelve hasta 4 sugerencias de imágenes relevantes
 
-4. **El usuario ve las sugerencias**: Aparece una cuadrícula de imágenes sugeridas debajo del botón de carga.
+5. **El usuario ve las sugerencias**: Aparece una cuadrícula de imágenes sugeridas debajo del botón de carga.
 
    ![Cuadrícula de imágenes sugeridas](../../img/image_suggestions/suggested-images-grid-es.png)
 
-5. **El usuario selecciona una imagen**: Al hacer clic en una imagen sugerida:
+6. **El usuario selecciona una imagen**: Al hacer clic en una imagen sugerida:
    - Descarga la imagen de Pexels
    - La adjunta al formulario como si fuera subida por el usuario
    - Reemplaza la interfaz de carga con la vista previa de la imagen seleccionada
@@ -124,11 +126,11 @@ Al crear o editar contenido (propuestas, inversiones presupuestarias, debates, e
 
 ### Flujo Técnico
 
-1. **Frontend**: El usuario hace clic en el botón de sugerencia, que envía una solicitud AJAX con los datos del formulario (título, descripción, tipo de recurso, etc.)
+1. **En la parte pública**: El usuario hace clic en el botón de sugerencia, que envía una solicitud AJAX con los datos del formulario (título, descripción, tipo de recurso, etc.)
 
-2. **Procesamiento Backend**:
+2. **Procesamiento en el servidor**:
    - `ImageSuggestionsController#create` recibe la solicitud
-   - Crea una instancia del modelo con los atributos proporcionados
+   - Extrae los atributos relevantes de la solicitud.
    - Llama a `ImageSuggestions::Llm::Client` para generar una consulta de búsqueda
    - El cliente LLM:
      - Valida la configuración del LLM
@@ -140,10 +142,10 @@ Al crear o editar contenido (propuestas, inversiones presupuestarias, debates, e
 
 3. **Adjuntar Imagen**:
    - Cuando el usuario hace clic en una imagen sugerida, se llama a `ImageSuggestionsController#attach`
-   - Descarga la imagen en resolución completa de Pexels
+   - Descarga la imagen de Pexels
    - Crea un `ActionDispatch::Http::UploadedFile` a partir de la imagen descargada
    - Usa el sistema `DirectUpload` existente para adjuntar la imagen
-   - Devuelve JSON con detalles de adjunto para procesamiento frontend
+   - Devuelve JSON con los detalles del adjunto para su procesamiento en el cliente
 
 ## Recursos Soportados
 
@@ -153,7 +155,7 @@ La funcionalidad de sugerencias de imágenes funciona con cualquier recurso que:
 - Soporte adjuntos de imágenes a través del sistema estándar de adjuntos de imágenes
 - Use `Images::NestedComponent`
 
-¡Actualmente, esto solo está implementado con la funcionalidad de Inversiones Presupuestarias!
+¡Actualmente, esto solo está implementado con la funcionalidad de proyectos de gasto!
 
 ## Personalización
 
@@ -181,14 +183,15 @@ Las consultas de sugerencia de imágenes son relativamente cortas (típicamente 
 Pexels ofrece un plan gratuito que debería ser suficiente para la mayoría de las instalaciones:
 
 - 200 solicitudes por hora
-- 20,000 solicitudes por mes
+- 20.000 solicitudes por mes
 
 Para mayor uso, Pexels ofrece planes de pago. Consulta [precios de la API de Pexels](https://www.pexels.com/api/pricing/) para más detalles.
 
 ## Solución de Problemas
 
-### El botón de funcionalidad no aparece
+### El botón para solicitar imágenes no aparece
 
+- Confirma que has pulsado antes **"Añadir imagen"** en la imagen descriptiva; el botón de sugerencias con IA solo se muestra después de abrir ese bloque.
 - Verifica que el proveedor LLM y el modelo estén configurados en **Admin > Configuración Global > Configuración LLM**
 - Verifica que la configuración de Sugerencias de imágenes esté habilitada
 - Asegúrate de que la clave API de Pexels esté presente en `secrets.yml`
@@ -196,6 +199,6 @@ Para mayor uso, Pexels ofrece planes de pago. Consulta [precios de la API de Pex
 
 ### No se sugieren imágenes
 
-- Pexels podría no tener fotos de stock para ciertos términos.
+- Pexels podría no tener fotos de stock para ciertos términos
 - Verifica que el LLM esté respondiendo correctamente (revisa los registros de la aplicación)
 - Verifica que la clave API de Pexels sea válida y tenga cuota restante

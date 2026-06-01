@@ -1,5 +1,5 @@
-# config valid only for current version of Capistrano
-lock "~> 3.19.1"
+# Avoid using a different version when running `cap` without `bundle exec`
+lock "~> 3.20.0"
 
 def deploysecret(key, default: "")
   @deploy_secrets_yml ||= YAML.load_file("config/deploy-secrets.yml", aliases: true)[fetch(:stage).to_s]
@@ -22,7 +22,8 @@ set :application, deploysecret(:app_name, default: "consul")
 set :deploy_to, deploysecret(:deploy_to)
 set :ssh_options, port: deploysecret(:ssh_port)
 
-set :repo_url, "https://github.com/consuldemocracy/consuldemocracy.git"
+# To use your own repository, don't change this line. Change `lib/consul/repository.rb` instead.
+set :repo_url, Consul::Repository.url # Don't change this line!
 
 set :revision, `git rev-parse --short #{fetch(:branch)}`.strip
 

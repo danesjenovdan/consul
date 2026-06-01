@@ -38,39 +38,44 @@
       }
     }
 
-    .suggested-images-container {
+    .suggested-images-container,
+    .suggested-images-wrapper {
       display: inline;
 
-      .js-attach-suggested-image {
-        background: none;
-        border: 0;
-        cursor: pointer;
-        padding: 0;
-        position: relative;
-
-        &::before {
-          background-color: rgba(0, 0, 0, 0.3);
-          content: "";
-          height: 100%;
-          left: 0;
-          opacity: 0;
-          position: absolute;
-          top: 0;
-          transition: opacity 0.2s ease;
-          width: 100%;
-          z-index: 1;
-        }
-
-        &:hover::before {
-          opacity: 1;
-        }
-
-        .suggested-image {
-          display: block;
-          position: relative;
-          width: 100%;
-        }
+      .help-text {
+        margin-bottom: 1rem;
       }
+    }
+
+    .suggested-image-button {
+      cursor: pointer;
+    }
+
+    .js-suggest-image.is-loading {
+      @include has-fa-icon(spinner, solid);
+
+      &::before {
+        animation: fa-spin 2s infinite linear;
+      }
+    }
+
+    .suggested-images-grid .suggested-image-cell {
+      margin-bottom: 1rem;
+
+      .suggested-image {
+        height: auto;
+        min-height: rem-calc(120);
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .image-attachment:has(label.button.error) .suggested-images-wrapper {
+      display: none;
+    }
+
+    .image-attachment:has(label.button:not(.error)) .js-suggest-image.error {
+      margin: 0 0 1rem;
     }
   }
 
