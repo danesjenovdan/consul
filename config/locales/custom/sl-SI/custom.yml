@@ -193,6 +193,10 @@ sl-SI:
       investments:
         investment:
           no_image: Predlog nima slike.
+      ballots:
+        show:
+          amount_available:
+            alert_message: "Ko boste oddali vaše glasove, bodo ti dokončno potrjeni šele ob zaključku faze glasovanja. Do takrat lahko svojo izbiro projektov kadar koli spremenite."
     meta:
       pp_name: Ideje za Novo mesto
       place_name: Mestna Občina Novo mesto
