@@ -183,6 +183,11 @@ sl-SI:
     pagination:
       truncate: "&hellip;"
   admin:
+    menu:
+      budgets: "Participativni proračuni"
+    budgets:
+      index:
+        title: "Participativni proračuni"
     segment_recipient:
       currently_active_budgets_proposal_authors: Avtorji predlogov investicij v trenutno aktivnih proračunih
       currently_active_budgets_users_without_submissions: Uporabniki, ki v trenutno aktivnih proračunih niso oddali predloga
