@@ -44,6 +44,32 @@ describe Milestone do
     end
   end
 
+  describe ".by_locale" do
+    let(:author) { create(:user, data_consent: true, address: "Bevkova ulica 1") }
+    let(:investment) { create(:budget_investment, author: author) }
+
+    it "only includes milestones with a translation for the given locale" do
+      english = I18n.with_locale(:en) do
+        create(:milestone, milestoneable: investment, description: "English milestone")
+      end
+      spanish = I18n.with_locale(:es) do
+        create(:milestone, milestoneable: investment, description: "Hito español")
+      end
+
+      expect(Milestone.by_locale(:en)).to contain_exactly(english)
+      expect(Milestone.by_locale(:es)).to contain_exactly(spanish)
+    end
+
+    it "defaults to the current locale" do
+      english = I18n.with_locale(:en) { create(:milestone, milestoneable: investment) }
+      I18n.with_locale(:es) { create(:milestone, milestoneable: investment) }
+
+      I18n.with_locale(:en) do
+        expect(Milestone.by_locale).to contain_exactly(english)
+      end
+    end
+  end
+
   describe ".published", :application_zone_west_of_system_zone do
     it "includes milestones published today" do
       todays_milestone = create(:milestone, publication_date: Time.current)
