@@ -11,7 +11,7 @@
         <%= link_to "#tab-milestones" do %>
         <h3>
             <%= t("budgets.investments.show.milestones_tab") %>
-            (<%= @investment.milestones.count %>)
+            (<%= @investment.milestones.by_locale.count %>)
         </h3>
         <% end %>
     </li>
