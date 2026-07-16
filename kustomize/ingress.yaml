@@ -4,15 +4,14 @@ metadata:
   name: consul
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
-    nginx.ingress.kubernetes.io/proxy-body-size: 10m
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
-        - consul-ai.lb.djnd.si
+        - consul-ai.djnd.si
       secretName: consul-ai-tls
   rules:
-    - host: consul-ai.lb.djnd.si
+    - host: consul-ai.djnd.si
       http:
         paths:
           - path: /
