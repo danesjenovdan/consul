@@ -41,7 +41,7 @@ data:
         :user_name: "<%= ENV['SMTP_USERNAME'] %>"
         :password: "<%= ENV['SMTP_PASSWORD'] %>"
         :ssl: true
-      force_ssl: false
+      force_ssl: true
       delay_jobs: true
       rollbar_server_token: ""
       http_basic_username: ""
