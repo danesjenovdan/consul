@@ -20,7 +20,7 @@ class UserSegments
   end
 
   def self.currently_active_budgets_users_without_submissions
-    Users.where.not(user_id: currently_active_budgets_proposal_authors) # ali pa še .ids
+    User.where.not(id: currently_active_budgets_proposal_authors) # ali pa še .ids
   end
 
   def self.currently_active_budgets_selected_proposal_authors
@@ -50,6 +50,6 @@ class UserSegments
 
   def self.users_without_votes_in_currently_active_budgets
     open_budget_ids = Budget.published.open.pluck(:id)
-    author_ids(Budget::Ballot.joins(:lines).where(budget_ballot_lines: {budget_id: open_budget_ids}).pluck(:author_id).uniq) # mogoče 
+    User.where.not(id: Budget::Ballot.joins(:lines).where(budget_ballot_lines: {budget_id: [14]}).pluck(:user_id).uniq)
   end
 end
