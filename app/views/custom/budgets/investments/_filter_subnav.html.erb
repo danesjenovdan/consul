@@ -8,7 +8,7 @@
       data-deep-link-smudge-delay="500"
       data-tabs>
     
-    <!-- REMOVED COMMENTS
+    <!-- if comments are hidden, this <li> should be commented out -->
     <li class="tabs-title is-active">
       <%= link_to "#tab-comments" do %>
         <h3>
@@ -17,7 +17,6 @@
         </h3>
       <% end %>
     </li>
-    -->
     
     <!-- milestones should only be shown in finished phase on winning investments -->
     <% if @investment.budget.phase == 'finished' && @investment.winner %>
@@ -25,7 +24,7 @@
           <%= link_to "#tab-milestones" do %>
           <h3>
               <%= t("budgets.investments.show.milestones_tab") %>
-              (<%= @investment.milestones.count %>)
+              (<%= @investment.milestones.by_locale.count %>)
           </h3>
           <% end %>
       </li>

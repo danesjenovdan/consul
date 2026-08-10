@@ -11,7 +11,10 @@ class WelcomeController < ApplicationController
     @budgets = Budget.where("id > -1");
   end
 
-  def load_past_budgets 
+  def load_past_budgets
     @past_budgets = Budget.finished
+                          .joins(:phases)
+                          .where(budget_phases: { kind: "accepting" })
+                          .order(Arel.sql("budget_phases.starts_at DESC NULLS LAST"))
   end
 end
