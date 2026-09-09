@@ -1,4 +1,4 @@
-FROM ruby:3.2.4-bullseye
+FROM ruby:3.2.4-bookworm
 
 ENV DEBIAN_FRONTEND noninteractive
 
