@@ -65,7 +65,8 @@ sl-SI:
         map_location: "Lokacija predloga"
       index:
         title: Participativni proračun – seznam predlogov
-        by_heading: "Investicijski projekti na območju: %{heading}"
+        by_heading: "%{heading}"
+        by_heading_single: "Proračun za mlade"
         sidebar:
           different_heading_assigned: "Imaš aktivna glasovanja na drugem območju: %{heading_link}."
       header:
