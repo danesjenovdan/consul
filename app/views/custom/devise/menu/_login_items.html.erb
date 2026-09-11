@@ -7,13 +7,13 @@
                               t("layouts.header.my_account_link"),
                             class: "default-button" %> -->
     <% if request.original_url.include?('budgets/1/investments') %>
-      <% if @budget.id == 1 %>
+      <% if @budget.id == 5 %>
         <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 2) %>">
           <%= t("budgets.investments.header.go_to_young_budget") %>
         </a>
       <% end %>
     <% elsif request.original_url.include?('budgets/2/investments') %>
-      <% if @budget.id == 2 %>
+      <% if @budget.id == 4 %>
         <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 1) %>">
           <%= t("budgets.investments.header.go_to_regular_budget") %>
         </a>
