@@ -8,13 +8,13 @@
                             class: "default-button" %> -->
     <% if request.original_url.include?('budgets/5/investments') %>
       <% if @budget.id == 5 %>
-        <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 2) %>">
+        <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 4) %>">
           <%= t("budgets.investments.header.go_to_young_budget") %>
         </a>
       <% end %>
     <% elsif request.original_url.include?('budgets/4/investments') %>
       <% if @budget.id == 4 %>
-        <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 1) %>">
+        <a class="default-button action-color" href="<%= budget_investments_url(budget_id: 5) %>">
           <%= t("budgets.investments.header.go_to_regular_budget") %>
         </a>
       <% end %>
