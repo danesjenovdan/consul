@@ -203,6 +203,7 @@ tr:
       participation_text: Yaşamak istediğiniz şehri nasıl şekillendireceğinize karar verin.
       participation_title: Katılım
       privacy: Gizlilik ilkesi
+      source_code: Kaynak kodu
     header:
       administration_menu: Menü
       administration: Yönetim
@@ -340,7 +341,7 @@ tr:
         archival_date: arşivlenmiş
         recommendations: öneriler
       recommendations:
-        without_results: İlgi alanlarınız ile ilgili bir öneri yok
+        without_results: İlgi alanlarınıza yönelik bir önerge yok
         without_interests: Önergeleri takip edin. Böylece size öneriler sunabiliriz
         disable: "Önerge sunumlarını yok saydığınızda bunlar artık görüntülenmez. Bunları 'Hesabım' bölümünden yeniden açabilirsiniz"
         actions:
@@ -644,6 +645,7 @@ tr:
     description:
       multiple: "En fazla %{maximum} yanıt seçebilirsiniz."
     read_more_about: "Ayrıntılı bilgi alın:"
+    custom_answer_aria_label: "%{option} için yanıt"
   proposal_notifications:
     new:
       title: "Bildirim gönderilsin"
@@ -653,6 +655,10 @@ tr:
     show:
       back: "İçeriğime dön"
   shared:
+    embedded_video:
+      accept: "Videoyu seyredin"
+      warning: "Bu sayfada üçüncü taraf bir hizmet sağlayıcıdan alınan bir video bulunuyor İçeriğe erişerek, verilerinizin üçüncü taraf hizmet sağlayıcılara aktarılabileceğini kabul etmiş olursunuz."
+    warning_for_external_links: "Onaylayarak, siteden ayrılmayı kabul etmiş olursunuz."
     actions:
       label: "%{action} %{name}"
     edit: "Düzenle"

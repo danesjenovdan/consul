@@ -1,5 +1,5 @@
 # Avoid using a different version when running `cap` without `bundle exec`
-lock "~> 3.20.0"
+lock "~> 3.20.1"
 
 def deploysecret(key, default: "")
   @deploy_secrets_yml ||= YAML.load_file("config/deploy-secrets.yml", aliases: true)[fetch(:stage).to_s]
@@ -54,6 +54,7 @@ set :puma_systemctl_user, :user
 set :puma_enable_socket_service, true
 set :puma_service_unit_env_vars, ["EXECJS_RUNTIME=Disabled"]
 set :puma_service_unit_name, -> { "puma_#{fetch(:application)}_#{fetch(:stage)}" }
+set :puma_service_unit_type, "simple"
 set :puma_access_log, -> { File.join(shared_path, "log", "puma_access.log") }
 set :puma_error_log, -> { File.join(shared_path, "log", "puma_error.log") }
 set :puma_systemd_watchdog_sec, 0

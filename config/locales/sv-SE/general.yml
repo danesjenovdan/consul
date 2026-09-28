@@ -203,6 +203,7 @@ sv:
       participation_text: Skapa den stad du vill ha.
       participation_title: Deltagande
       privacy: Integritetspolicy
+      source_code: Källkod
     header:
       administration_menu: Meny
       administration: Administration
@@ -644,6 +645,7 @@ sv:
     description:
       multiple: "Du kan välja maximalt %{maximum} svar."
     read_more_about: "Läs mer om:"
+    custom_answer_aria_label: "Svar på %{option}"
   proposal_notifications:
     new:
       title: "Skicka meddelande"
@@ -653,6 +655,10 @@ sv:
     show:
       back: "Gå tillbaka till min aktivitet"
   shared:
+    embedded_video:
+      accept: "Se videon"
+      warning: "Den här sidan innehåller en video från tredje part. Genom att gå till dess innehåll samtycker du till att dina uppgifter kan överföras till tredjepartsleverantörer."
+    warning_for_external_links: "Genom att bekräfta går du med på att lämna webbplatsen."
     actions:
       label: "%{action} %{name}"
     edit: "Redigera"

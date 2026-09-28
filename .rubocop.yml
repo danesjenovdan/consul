@@ -25,20 +25,20 @@ Bundler/OrderedGems:
 Capybara/AmbiguousClick:
   Enabled: true
 
-Capybara/CurrentPathExpectation:
+Capybara/RSpec/CurrentPathExpectation:
   Enabled: true
-
-Capybara/NegationMatcher:
-  Enabled: true
-  EnforcedStyle: not_to
 
 Capybara/RSpec/HaveSelector:
   Enabled: true
 
-Capybara/SpecificActions:
+Capybara/RSpec/NegationMatcher:
+  Enabled: true
+  EnforcedStyle: not_to
+
+Capybara/RSpec/VisibilityMatcher:
   Enabled: true
 
-Capybara/VisibilityMatcher:
+Capybara/SpecificActions:
   Enabled: true
 
 FactoryBot/AssociationStyle:
@@ -161,11 +161,10 @@ Layout/LineEndStringConcatenationIndentation:
 
 Layout/LineLength:
   Max: 110
+  AllowHeredoc: false
   AllowQualifiedName: false
   Exclude:
     - "Gemfile"
-    - "config/environments/production.rb"
-    - "config/environments/staging.rb"
     - "config/initializers/devise.rb"
     - "db/migrate/*create_delayed_jobs.rb"
     - "db/migrate/*create_active_storage_variant_records.active_storage.rb"
@@ -185,11 +184,6 @@ Layout/MultilineHashKeyLineBreaks:
 
 Layout/MultilineMethodCallBraceLayout:
   Enabled: true
-
-Layout/MultilineMethodCallIndentation:
-  Enabled: true
-  Exclude:
-    - "config/environments/production.rb"
 
 Layout/MultilineOperationIndentation:
   Enabled: true
@@ -289,6 +283,9 @@ Lint/ConstantDefinitionInBlock:
   Enabled: true
 
 Lint/ConstantReassignment:
+  Enabled: true
+
+Lint/CircularArgumentReference:
   Enabled: true
 
 Lint/DeprecatedClassMethods:
@@ -430,7 +427,6 @@ Rails/DynamicFindBy:
     - find_by_domain
     - find_by_slug_or_id
     - find_by_slug_or_id!
-    - find_by_manager_login
 
 Rails/EnumHash:
   Enabled: true
@@ -663,6 +659,9 @@ RSpec/LetBeforeExamples:
 RSpec/LetSetup:
   Enabled: true
 
+RSpec/MatchWithSimpleRegex:
+  Enabled: true
+
 RSpec/MetadataStyle:
   Enabled: true
 
@@ -679,6 +678,9 @@ RSpec/OverwritingSetup:
   Enabled: true
 
 RSpec/ReceiveMessages:
+  Enabled: true
+
+RSpec/RepeatedDescription:
   Enabled: true
 
 RSpec/RepeatedExample:
