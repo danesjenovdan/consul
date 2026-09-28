@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Users" do
   scenario "Create a level 3 user with email from scratch" do
-    login_as_manager
+    login_as create(:manager).user
     visit management_document_verifications_path
     fill_in "Document number", with: "12345678Z"
     click_button "Check document"
@@ -44,9 +44,25 @@ describe "Users" do
     expect(page).to have_content "Account verified"
   end
 
+  scenario "Confirmation link does not accept a password once it has expired" do
+    create(:user,
+           confirmed_at: nil,
+           encrypted_password: "",
+           confirmation_token: "plain-token",
+           confirmation_sent_at: Time.current)
+
+    travel_to(4.days.from_now) do
+      visit user_confirmation_path(confirmation_token: "plain-token")
+
+      expect(page).to have_content "Re-send confirmation instructions"
+      expect(page).to have_content "You need to be verified within 3 days"
+      expect(page).not_to have_field "New access password"
+    end
+  end
+
   scenario "Create a level 3 user without email from scratch" do
     stub_secrets(security: { password_complexity: true })
-    login_as_manager
+    login_as create(:manager).user
 
     visit management_document_verifications_path
     fill_in "document_verification_document_number", with: "12345678Z"
@@ -86,7 +102,7 @@ describe "Users" do
     manager = create(:manager)
     administrator = create(:administrator)
 
-    login_as_manager(manager)
+    login_as manager.user
     visit management_document_verifications_path
     fill_in "document_verification_document_number", with: "12345678Z"
     click_button "Check document"

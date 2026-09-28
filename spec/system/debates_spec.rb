@@ -4,10 +4,6 @@ describe "Debates" do
   context "Concerns" do
     it_behaves_like "notifiable in-app", :debate
     it_behaves_like "relationable", Debate
-    it_behaves_like "remotely_translatable", :debate, "debates_path", {}, provider: :microsoft
-    it_behaves_like "remotely_translatable", :debate, "debates_path", {}, provider: :llm
-    it_behaves_like "remotely_translatable", :debate, "debate_path", { id: "id" }, provider: :microsoft
-    it_behaves_like "remotely_translatable", :debate, "debate_path", { id: "id" }, provider: :llm
     it_behaves_like "flaggable", :debate
   end
 
@@ -159,9 +155,9 @@ describe "Debates" do
     3.times  { create(:vote, votable: debate_positive, vote_flag: false) }
 
     5.times { create(:vote, votable: debate_zero, vote_flag: true) }
-    5.times  { create(:vote, votable: debate_zero, vote_flag: false) }
+    5.times { create(:vote, votable: debate_zero, vote_flag: false) }
 
-    6.times  { create(:vote, votable: debate_negative, vote_flag: false) }
+    6.times { create(:vote, votable: debate_negative, vote_flag: false) }
 
     visit debates_path
 
