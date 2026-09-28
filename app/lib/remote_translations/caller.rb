@@ -30,6 +30,11 @@ class RemoteTranslations::Caller
   def call
     update_resource
     destroy_remote_translation
+  rescue RubyLLM::Error => e
+    ApplicationLogger.new.warn(
+      "LLM remote translation failed for #{resource.class.name}##{resource.id} " \
+      "locale=#{locale}: #{e.class}: #{e.message}"
+    )
   end
 
   private
