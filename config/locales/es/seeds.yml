@@ -19,6 +19,14 @@ es:
       official_level_3_name: Cargo oficial 3
       official_level_4_name: Cargo oficial 4
       official_level_5_name: Cargo oficial 5
+      proposal_feedback_criteria: |-
+        - El título es claro, concreto y resume la propuesta.
+        - El resumen explica la idea principal en pocas frases.
+        - La descripción explica el problema o la necesidad que aborda la propuesta.
+        - La solución propuesta es concreta y realizable.
+        - La propuesta explica a quién beneficiaría y cómo.
+        - La propuesta es realista y está dentro de las competencias del gobierno local.
+        - El lenguaje es respetuoso, inclusivo y fácil de entender.
     geozones:
       north_district: Distrito Norte
       west_district: Distrito Oeste

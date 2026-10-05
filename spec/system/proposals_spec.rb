@@ -761,6 +761,53 @@ describe "Proposals" do
     expect(page).to have_content error_message
   end
 
+  describe "AI feedback" do
+    let(:feedback) { double(feedback: "Explain **who would benefit** from the proposal.", errors: []) }
+
+    before do
+      Setting["llm.provider"] = "OpenAI"
+      Setting["llm.model"] = "gpt-4o"
+      Setting["llm.use_ai_proposal_feedback"] = true
+      allow(ProposalFeedback::Llm::Client).to receive(:call).and_return(feedback)
+    end
+
+    scenario "Get feedback before creating a proposal" do
+      login_as(create(:user))
+      visit new_proposal_path
+
+      fill_in_new_proposal_title with: "Help refugees"
+      fill_in "Proposal summary", with: "In summary, what we want is..."
+      fill_in_ckeditor "Proposal text", with: "This is very important because..."
+      fill_in "Tags", with: "Refugees, Solidarity"
+      fill_in "Full name of the person submitting the proposal", with: "Isabel Garcia"
+      click_button "Get feedback"
+
+      expect(page).to have_content "Explain who would benefit from the proposal."
+      expect(page).to have_button "Refresh feedback"
+      expect(ProposalFeedback::Llm::Client).to have_received(:call).with(
+        title: "Help refugees",
+        summary: "In summary, what we want is...",
+        description: a_string_including("This is very important because..."),
+        tags: "Refugees, Solidarity"
+      )
+
+      check "I agree to the Privacy Policy and the Terms and conditions of use"
+      click_button "Create proposal"
+
+      expect(page).to have_content "Proposal created successfully."
+    end
+
+    scenario "Get feedback while editing a proposal" do
+      proposal = create(:proposal)
+      login_as(proposal.author)
+      visit edit_proposal_path(proposal)
+
+      click_button "Get feedback"
+
+      expect(page).to have_content "Explain who would benefit from the proposal."
+    end
+  end
+
   describe "Proposal index order filters" do
     scenario "Default order is hot_score" do
       best_proposal = create(:proposal, title: "Best proposal")

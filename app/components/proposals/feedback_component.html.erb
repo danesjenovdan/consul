@@ -1,0 +1,19 @@
+<div class="proposal-feedback">
+  <p><%= t("proposals.feedback.intro") %></p>
+
+  <% if feedback.present? %>
+    <div class="proposal-feedback-content" role="region" aria-label="<%= t("proposals.feedback.title") %>">
+      <%= markdown(feedback) %>
+    </div>
+  <% end %>
+
+  <% if errors.any? %>
+    <div role="alert">
+      <small class="error"><%= errors.join(", ") %></small>
+    </div>
+  <% end %>
+
+  <button type="button" class="button hollow js-proposal-feedback">
+    <%= button_text %>
+  </button>
+</div>

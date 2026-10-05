@@ -330,6 +330,15 @@ en:
       map_location_instructions: "Navigate the map to the location and place the marker."
       map_marker_coordinates: "Latitude: %{latitude}. Longitude: %{longitude}"
       map_remove_marker: "Remove map marker"
+    feedback:
+      intro: "Want to improve this proposal before submitting it?"
+      get_feedback: "Get feedback"
+      refresh_feedback: "Refresh feedback"
+      title: "Feedback on your proposal"
+      errors:
+        title_and_description_required: "To get feedback, please write a title and description first."
+        llm_not_configured: "LLM is not properly configured. Please contact an administrator."
+        rate_limit_exceeded: "Please wait a few minutes before requesting new feedback."
     index:
       featured_proposals: Featured
       orders:

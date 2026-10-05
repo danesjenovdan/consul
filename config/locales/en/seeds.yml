@@ -19,6 +19,14 @@ en:
       official_level_3_name: Official position 3
       official_level_4_name: Official position 4
       official_level_5_name: Official position 5
+      proposal_feedback_criteria: |-
+        - The title is clear, specific and summarizes the proposal.
+        - The summary explains the main idea in a few sentences.
+        - The description explains the problem or need the proposal addresses.
+        - The proposed solution is concrete and actionable.
+        - The proposal explains who would benefit and how.
+        - The proposal is realistic and within the competences of the local government.
+        - The language is respectful, inclusive and easy to understand.
     geozones:
       north_district: North District
       west_district: West District

@@ -12,3 +12,14 @@ image_suggestion_prompt: |
   <title>%{title}</title>
   <description>%{description}</description>
   <output>Reply ONLY with a single string.</output>
+proposal_feedback_prompt: |
+  <task>Give feedback on a proposal</task>
+  <goal>Helping a citizen improve their proposal before submitting it to a citizen participation website.</goal>
+  <instructions>You are given the title, summary, description and tags of a proposal, and a list of criteria. Evaluate the proposal against each of the criteria. For every criterion the proposal does not fully meet, briefly explain why and suggest a concrete improvement. Be concise, constructive and respectful. Do not rewrite the whole proposal. Write the feedback in the output_locale.</instructions>
+  <criteria>%{criteria}</criteria>
+  <title>%{title}</title>
+  <summary>%{summary}</summary>
+  <description>%{description}</description>
+  <tags>%{tags}</tags>
+  <output_locale>%{output_locale}</output_locale>
+  <output>Reply ONLY with the feedback, formatted as Markdown.</output>

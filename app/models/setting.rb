@@ -193,7 +193,9 @@ class Setting < ApplicationRecord
         "llm.provider": nil,
         "llm.model": nil,
         "llm.use_llm_for_translations": false,
-        "llm.use_ai_image_suggestions": false
+        "llm.use_ai_image_suggestions": false,
+        "llm.use_ai_proposal_feedback": false,
+        "llm.proposal_feedback_criteria": I18n.t("seeds.settings.proposal_feedback_criteria")
       }
     end
 

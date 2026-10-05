@@ -1,3 +1,19 @@
 .proposal-form {
   @extend %public-form;
+
+  .proposal-feedback {
+    margin-top: $line-height;
+
+    .is-loading {
+      @include has-fa-icon(spinner, solid);
+
+      &::before {
+        animation: fa-spin 2s infinite linear;
+      }
+    }
+  }
+
+  .proposal-feedback-content {
+    text-align: start;
+  }
 }
