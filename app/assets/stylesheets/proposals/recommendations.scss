@@ -1,0 +1,18 @@
+.proposal-recommendations {
+  margin-top: $line-height;
+
+  .recommendations li::before {
+    color: $proposals;
+  }
+}
+
+.proposal-feedback-details {
+
+  .read-more {
+    margin-bottom: calc($line-height / 2);
+
+    button {
+      @include link;
+    }
+  }
+}

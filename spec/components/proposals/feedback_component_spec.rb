@@ -1,0 +1,51 @@
+require "rails_helper"
+
+describe Proposals::FeedbackComponent do
+  let(:response) { ProposalFeedback::Llm::Client::Response.new }
+
+  before do
+    Setting["llm.provider"] = "OpenAI"
+    Setting["llm.model"] = "gpt-4o"
+    Setting["llm.use_ai_proposal_feedback"] = true
+  end
+
+  it "is not rendered when the LLM is not configured" do
+    Setting["llm.model"] = nil
+
+    render_inline Proposals::FeedbackComponent.new("Proposal")
+
+    expect(page).not_to be_rendered
+  end
+
+  it "is not rendered when the feature is disabled" do
+    Setting["llm.use_ai_proposal_feedback"] = false
+
+    render_inline Proposals::FeedbackComponent.new("Proposal")
+
+    expect(page).not_to be_rendered
+  end
+
+  it "renders a button to get feedback for the resource type" do
+    render_inline Proposals::FeedbackComponent.new("Budget::Investment")
+
+    expect(page).to have_css ".proposal-feedback[data-resource-type='Budget::Investment']"
+    expect(page).to have_content "Want to improve this proposal before submitting it?"
+    expect(page).to have_button "Get feedback"
+  end
+
+  it "renders a button to refresh the feedback" do
+    response.feedback = "Be more specific"
+
+    render_inline Proposals::FeedbackComponent.new("Proposal", response)
+
+    expect(page).to have_button "Refresh feedback"
+  end
+
+  it "renders errors" do
+    response.errors << "LLM error"
+
+    render_inline Proposals::FeedbackComponent.new("Proposal", response)
+
+    expect(page).to have_css "[role='alert']", text: "LLM error"
+  end
+end

@@ -330,6 +330,18 @@ es:
       map_location_instructions: "Navega por el mapa hasta la ubicación y coloca el marcador."
       map_marker_coordinates: "Latitud: %{latitude}. Longitud: %{longitude}"
       map_remove_marker: "Eliminar el marcador"
+    feedback:
+      intro: "¿Quieres mejorar esta propuesta antes de enviarla?"
+      get_feedback: "Obtener sugerencias"
+      recommendations_hint: "Cuando introduzcas más detalles de la propuesta, las recomendaciones se personalizarán."
+      refresh_feedback: "Actualizar sugerencias"
+      see_less: "Ver menos"
+      see_more: "Ver más"
+      title: "Sugerencias sobre tu propuesta"
+      errors:
+        invalid_response: "No se han podido generar las sugerencias. Por favor, inténtalo de nuevo."
+        llm_not_configured: "El LLM no está configurado correctamente. Por favor, contacta con un administrador."
+        rate_limit_exceeded: "Por favor, espera unos minutos antes de solicitar nuevas sugerencias."
     index:
       featured_proposals: Destacadas
       orders:

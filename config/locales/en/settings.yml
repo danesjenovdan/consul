@@ -254,3 +254,7 @@ en:
       model_description: "The LLM model to use."
       use_ai_image_suggestions: "AI Image Suggestions"
       use_ai_image_suggestions_description: "Allow users to use AI for suggesting images from Pexels, instead of uploading their own."
+      use_ai_proposal_feedback: "AI Proposal Feedback"
+      use_ai_proposal_feedback_description: "Allow users to get AI feedback on how to improve their proposals before submitting them."
+      proposal_feedback_criteria: "Proposal Feedback Criteria"
+      proposal_feedback_criteria_description: "Criteria the AI uses to evaluate proposals and suggest improvements."

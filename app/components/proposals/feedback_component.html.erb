@@ -1,0 +1,13 @@
+<div class="proposal-feedback" data-resource-type="<%= resource_type %>">
+  <p><%= t("proposals.feedback.intro") %></p>
+
+  <% if errors.any? %>
+    <div role="alert">
+      <small class="error"><%= errors.join(", ") %></small>
+    </div>
+  <% end %>
+
+  <button type="button" class="button hollow js-proposal-feedback">
+    <%= button_text %>
+  </button>
+</div>

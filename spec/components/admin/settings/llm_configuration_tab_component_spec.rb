@@ -21,6 +21,10 @@ describe Admin::Settings::LlmConfigurationTabComponent do
   let(:provider_select_selector) { "#value_setting_#{provider_setting.id}" }
   let(:model_select_selector) { "#value_setting_#{model_setting.id}" }
   let(:feature_button_selector) { "button[aria-labelledby='title_setting_#{feature_setting.id}']" }
+  let(:proposal_feedback_setting) { Setting.find_by!(key: "llm.use_ai_proposal_feedback") }
+  let(:proposal_feedback_button_selector) do
+    "button[aria-labelledby='title_setting_#{proposal_feedback_setting.id}']"
+  end
 
   before do
     Setting["llm.provider"] = nil
@@ -57,6 +61,8 @@ describe Admin::Settings::LlmConfigurationTabComponent do
                                      "Microsoft translation services."
         expect(page).to have_button "No", disabled: true
       end
+
+      expect(page).to have_css "#{proposal_feedback_button_selector}[disabled]"
     end
   end
 
@@ -103,6 +109,8 @@ describe Admin::Settings::LlmConfigurationTabComponent do
       page.find(feature_button_selector) do
         expect(page).to have_button "No", disabled: false
       end
+
+      expect(page).to have_css "#{proposal_feedback_button_selector}:not([disabled])"
     end
   end
 end

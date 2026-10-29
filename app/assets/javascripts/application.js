@@ -67,6 +67,7 @@
 //= require attachable
 //= require documentable
 //= require imageable
+//= require proposal_feedback
 //= require tree_navigator
 //= require tag_autocomplete
 //= require leaflet/dist/leaflet
@@ -124,6 +125,7 @@ var initialize_modules = function() {
   App.TreeNavigator.initialize();
   App.Documentable.initialize();
   App.Imageable.initialize();
+  App.ProposalFeedback.initialize();
   App.TagAutocomplete.initialize();
   App.Map.initialize();
   App.Polls.initialize();
