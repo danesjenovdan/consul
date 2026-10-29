@@ -12,7 +12,7 @@ describe Proposals::FeedbackComponent do
   it "is not rendered when the LLM is not configured" do
     Setting["llm.model"] = nil
 
-    render_inline Proposals::FeedbackComponent.new
+    render_inline Proposals::FeedbackComponent.new("Proposal")
 
     expect(page).not_to be_rendered
   end
@@ -20,34 +20,31 @@ describe Proposals::FeedbackComponent do
   it "is not rendered when the feature is disabled" do
     Setting["llm.use_ai_proposal_feedback"] = false
 
-    render_inline Proposals::FeedbackComponent.new
+    render_inline Proposals::FeedbackComponent.new("Proposal")
 
     expect(page).not_to be_rendered
   end
 
-  it "renders a button to get feedback" do
-    render_inline Proposals::FeedbackComponent.new
+  it "renders a button to get feedback for the resource type" do
+    render_inline Proposals::FeedbackComponent.new("Budget::Investment")
 
+    expect(page).to have_css ".proposal-feedback[data-resource-type='Budget::Investment']"
     expect(page).to have_content "Want to improve this proposal before submitting it?"
     expect(page).to have_button "Get feedback"
-    expect(page).not_to have_css ".proposal-feedback-content"
   end
 
-  it "renders the feedback as sanitized markdown and a button to refresh it" do
-    response.feedback = "**Be more specific**<script>alert('hacked')</script>"
+  it "renders a button to refresh the feedback" do
+    response.feedback = "Be more specific"
 
-    render_inline Proposals::FeedbackComponent.new(response)
+    render_inline Proposals::FeedbackComponent.new("Proposal", response)
 
-    expect(page).to have_css "[role='region'][aria-label='Feedback on your proposal'] strong",
-                             exact_text: "Be more specific"
-    expect(page).not_to have_css "script"
     expect(page).to have_button "Refresh feedback"
   end
 
   it "renders errors" do
     response.errors << "LLM error"
 
-    render_inline Proposals::FeedbackComponent.new(response)
+    render_inline Proposals::FeedbackComponent.new("Proposal", response)
 
     expect(page).to have_css "[role='alert']", text: "LLM error"
   end

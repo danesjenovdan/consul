@@ -1,1 +1,17 @@
-$(".proposal-feedback").replaceWith("<%= j render(Proposals::FeedbackComponent.new(@feedback)) %>");
+$(".proposal-feedback").replaceWith("<%= j render(Proposals::FeedbackComponent.new(params[:resource_type], @feedback)) %>");
+
+<% if @feedback.errors.none? %>
+  var recommendations = $(".recommendations");
+
+  <% if @feedback.feedback.present? %>
+    recommendations.html("<%= j safe_join(@feedback.summary.map { |point| tag.li(point) }) %>");
+    $(".proposal-feedback-details").remove();
+    recommendations.after("<%= j render(Proposals::FeedbackDetailsComponent.new(@feedback.feedback)) %>");
+    recommendations.next().foundation();
+  <% else %>
+    recommendations.find(".proposal-feedback-hint").remove();
+    recommendations.prepend("<%= j tag.li(t("proposals.feedback.recommendations_hint"), class: "proposal-feedback-hint") %>");
+  <% end %>
+
+  $("html, body").animate({ scrollTop: recommendations.parent().offset().top });
+<% end %>

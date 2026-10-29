@@ -9,6 +9,8 @@
 
     <h1><%= t("proposals.edit.editing") %></h1>
 
+    <%= render Proposals::RecommendationsComponent.new %>
+
     <%= render "form", form_url: proposal_path(@proposal) %>
   </div>
 </div>

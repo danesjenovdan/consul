@@ -1,11 +1,5 @@
-<div class="proposal-feedback">
+<div class="proposal-feedback" data-resource-type="<%= resource_type %>">
   <p><%= t("proposals.feedback.intro") %></p>
-
-  <% if feedback.present? %>
-    <div class="proposal-feedback-content" role="region" aria-label="<%= t("proposals.feedback.title") %>">
-      <%= markdown(feedback) %>
-    </div>
-  <% end %>
 
   <% if errors.any? %>
     <div role="alert">

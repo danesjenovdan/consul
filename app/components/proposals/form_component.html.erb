@@ -93,6 +93,6 @@
 
     <%= f.submit(class: "button", value: t("proposals.#{action_name}.form.submit_button")) %>
 
-    <%= render Proposals::FeedbackComponent.new %>
+    <%= render Proposals::FeedbackComponent.new(proposal.class.name) %>
   </div>
 <% end %>

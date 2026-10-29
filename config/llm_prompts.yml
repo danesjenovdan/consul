@@ -15,11 +15,8 @@ image_suggestion_prompt: |
 proposal_feedback_prompt: |
   <task>Give feedback on a proposal</task>
   <goal>Helping a citizen improve their proposal before submitting it to a citizen participation website.</goal>
-  <instructions>You are given the title, summary, description and tags of a proposal, and a list of criteria. Evaluate the proposal against each of the criteria. For every criterion the proposal does not fully meet, briefly explain why and suggest a concrete improvement. Be concise, constructive and respectful. Do not rewrite the whole proposal. Write the feedback in the output_locale.</instructions>
+  <instructions>You are given the fields of a proposal and a list of criteria. Evaluate the proposal against each of the criteria. For every criterion the proposal does not fully meet, briefly explain why and suggest a concrete improvement. Be concise, constructive and respectful. Do not rewrite the whole proposal. Write the feedback in the output_locale.</instructions>
   <criteria>%{criteria}</criteria>
-  <title>%{title}</title>
-  <summary>%{summary}</summary>
-  <description>%{description}</description>
-  <tags>%{tags}</tags>
+  <proposal>%{proposal}</proposal>
   <output_locale>%{output_locale}</output_locale>
-  <output>Reply ONLY with the feedback, formatted as Markdown.</output>
+  <output>Reply ONLY with a JSON object with two keys. "summary": a list of between 1 and %{max_summary_points} short and concrete recommendations to improve this proposal, never more than %{max_summary_points}, one sentence each, most important first. "feedback": the full evaluation of the proposal against each of the criteria, as described in the instructions, formatted as Markdown.</output>

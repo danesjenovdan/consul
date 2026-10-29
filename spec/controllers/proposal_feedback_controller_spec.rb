@@ -10,6 +10,7 @@ describe ProposalFeedbackController do
       }
     }
   end
+  let(:params) { { resource_type: "Proposal", proposal: proposal_params } }
 
   before do
     sign_in user
@@ -18,21 +19,43 @@ describe ProposalFeedbackController do
 
   describe "POST create" do
     it "requests feedback for the proposal fields" do
-      expect(ProposalFeedback::Llm::Client).to receive(:call).with(
+      expect(ProposalFeedback::Llm::Client).to receive(:call).with({
         title: "More trees",
         summary: "Greener city",
         description: "Plant trees",
         tags: "Environment, Trees"
-      ).and_return(ProposalFeedback::Llm::Client::Response.new)
+      }).and_return(ProposalFeedback::Llm::Client::Response.new)
 
-      post :create, params: { proposal: proposal_params }, format: :js
+      post :create, params: params, format: :js
 
       expect(response).to be_successful
     end
 
-    it "raises an error when proposal params are missing" do
+    it "requests feedback for the first translation with content" do
+      proposal_params[:translations_attributes] = {
+        "0" => { locale: "en", title: "", summary: "", description: "" },
+        "1" => { locale: "es", title: "Más árboles", summary: "", description: "Plantar árboles" }
+      }
+
+      expect(ProposalFeedback::Llm::Client).to receive(:call)
+                                           .with(hash_including(title: "Más árboles"))
+                                           .and_return(ProposalFeedback::Llm::Client::Response.new)
+
+      post :create, params: params, format: :js
+    end
+
+    it "requests feedback for other resource types" do
+      expect(ProposalFeedback::Llm::Client).to receive(:call)
+                                           .with(hash_including(title: "More trees"))
+                                           .and_return(ProposalFeedback::Llm::Client::Response.new)
+
+      post :create, params: { resource_type: "Budget::Investment", budget_investment: proposal_params },
+                    format: :js
+    end
+
+    it "raises an error when the resource params are missing" do
       expect do
-        post :create, format: :js
+        post :create, params: { resource_type: "Proposal" }, format: :js
       end.to raise_error(ActionController::ParameterMissing)
     end
 
@@ -48,19 +71,19 @@ describe ProposalFeedbackController do
       end
 
       it "renders rate limit error message" do
-        10.times { post :create, params: { proposal: proposal_params }, format: :js }
+        10.times { post :create, params: params, format: :js }
 
-        post :create, params: { proposal: proposal_params }, format: :js
+        post :create, params: params, format: :js
 
         expect(response).to be_successful
         expect(response.body).to include "Please wait a few minutes before requesting new feedback."
       end
 
       it "does not affect other users" do
-        10.times { post :create, params: { proposal: proposal_params }, format: :js }
+        10.times { post :create, params: params, format: :js }
 
         sign_in create(:user)
-        post :create, params: { proposal: proposal_params }, format: :js
+        post :create, params: params, format: :js
 
         expect(response).to be_successful
         expect(response.body).not_to include "Please wait a few minutes before requesting new feedback."

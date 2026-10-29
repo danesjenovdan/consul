@@ -1,9 +1,9 @@
 class Proposals::FeedbackComponent < ApplicationComponent
-  attr_reader :response
+  attr_reader :resource_type, :response
   delegate :feedback, :errors, to: :response
-  delegate :markdown, to: :helpers
 
-  def initialize(response = ProposalFeedback::Llm::Client::Response.new)
+  def initialize(resource_type, response = ProposalFeedback::Llm::Client::Response.new)
+    @resource_type = resource_type
     @response = response
   end
 
