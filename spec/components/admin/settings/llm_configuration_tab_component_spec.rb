@@ -27,6 +27,10 @@ describe Admin::Settings::LlmConfigurationTabComponent do
     "button[aria-labelledby='title_setting_#{speech_to_text_feature_setting.id}']"
   end
   let(:speech_to_text_model_selector) { "#value_setting_#{speech_to_text_model_setting.id}" }
+  let(:proposal_feedback_setting) { Setting.find_by!(key: "llm.use_ai_proposal_feedback") }
+  let(:proposal_feedback_button_selector) do
+    "button[aria-labelledby='title_setting_#{proposal_feedback_setting.id}']"
+  end
 
   before do
     Setting["llm.provider"] = nil
@@ -74,6 +78,8 @@ describe Admin::Settings::LlmConfigurationTabComponent do
       page.find(speech_to_text_model_selector) do
         expect(page).to have_css "fieldset[disabled]"
       end
+
+      expect(page).to have_css "#{proposal_feedback_button_selector}[disabled]"
     end
   end
 
@@ -138,6 +144,8 @@ describe Admin::Settings::LlmConfigurationTabComponent do
         expect(page).to have_selector(:option, "gpt-4o-transcribe", selected: false)
         expect(page).to have_selector(:option, "gemini-2.5-flash", selected: false)
       end
+
+      expect(page).to have_css "#{proposal_feedback_button_selector}:not([disabled])"
     end
   end
 

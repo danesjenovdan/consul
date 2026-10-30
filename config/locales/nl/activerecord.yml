@@ -361,7 +361,6 @@ nl:
         title: "Title"
       site_customization/page:
         content: Inhoud
-        created_at: Aangemaakt op
         subtitle: Ondertitel
         slug: Slug
         status: Status

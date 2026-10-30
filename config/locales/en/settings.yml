@@ -258,3 +258,7 @@ en:
       use_llm_speech_to_text_description: "Allow users to dictate textarea content; audio is transcribed by the selected LLM model."
       speech_to_text_model: "Speech to Text Model"
       speech_to_text_model_description: "Model used to transcribe dictated audio. Options whose provider has no configured credentials are disabled."
+      use_ai_proposal_feedback: "AI Proposal Feedback"
+      use_ai_proposal_feedback_description: "Allow users to get AI feedback on how to improve their proposals before submitting them."
+      proposal_feedback_criteria: "Proposal Feedback Criteria"
+      proposal_feedback_criteria_description: "Criteria the AI uses to evaluate proposals and suggest improvements."

@@ -196,6 +196,9 @@ class Setting < ApplicationRecord
         "llm.use_ai_image_suggestions": false,
         "llm.use_llm_speech_to_text": false,
         "llm.speech_to_text_model": nil
+        "llm.use_ai_image_suggestions": false,
+        "llm.use_ai_proposal_feedback": false,
+        "llm.proposal_feedback_criteria": I18n.t("seeds.settings.proposal_feedback_criteria")
       }
     end
 

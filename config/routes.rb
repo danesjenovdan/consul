@@ -47,6 +47,7 @@ Rails.application.routes.draw do
       end
     end
     resource :speech_to_text, only: [:create], controller: "speech_to_text"
+    resource :proposal_feedback, only: [:create], controller: "proposal_feedback"
     resources :documents, only: [:destroy]
     resources :follows, only: [:create, :destroy]
     resources :remote_translations, only: [:create]

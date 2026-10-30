@@ -388,6 +388,21 @@ describe "Admin settings", :admin do
           expect(page).to have_button "Yes"
         end
         expect(page).to have_content "Value updated"
+
+        within "tr", text: "AI Proposal Feedback" do
+          expect(page).to have_button "No"
+          click_button "No"
+          expect(page).to have_button "Yes"
+        end
+        expect(page).to have_content "Value updated"
+
+        within "tr", text: "Proposal Feedback Criteria" do
+          expect(page).to have_field with: /The title is clear, specific and summarizes the proposal/
+          fill_in "Proposal Feedback Criteria", with: "The proposal is about the city center"
+          click_button "Update"
+        end
+        expect(page).to have_content "Value updated"
+        expect(page).to have_field "Proposal Feedback Criteria", with: "The proposal is about the city center"
       end
     end
   end

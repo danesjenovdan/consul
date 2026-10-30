@@ -183,6 +183,36 @@ describe RemoteTranslations::Caller, :remote_translations do
     end
   end
 
+  context "when the LLM provider rejects the model" do
+    let(:debate) { create(:debate) }
+    let(:chat) { double("chat") }
+    let(:logger) { instance_double(ApplicationLogger, warn: nil) }
+
+    before do
+      allow(RemoteTranslations::Caller).to receive(:llm?).and_return(true)
+      allow(Llm::Config).to receive(:chat).and_return(chat)
+      allow(chat).to receive(:ask).and_raise(
+        RubyLLM::BadRequestError.new("The model `gpt-4` has been deprecated")
+      )
+      allow(ApplicationLogger).to receive(:new).and_return(logger)
+    end
+
+    it "warns about the provider error and leaves the page untranslated" do
+      create(:remote_translation, remote_translatable: debate, locale: :es)
+
+      expect(debate.translations.count).to eq(1)
+      expect(RemoteTranslation.count).to eq(1)
+      expect(logger).to have_received(:warn).with(
+        a_string_including(
+          "LLM remote translation failed for Debate##{debate.id}",
+          "locale=es",
+          "RubyLLM::BadRequestError",
+          "The model `gpt-4` has been deprecated"
+        )
+      )
+    end
+  end
+
   describe "#field values" do
     let!(:proposal) { create(:proposal, description: "&Sigma; with sample text") }
 

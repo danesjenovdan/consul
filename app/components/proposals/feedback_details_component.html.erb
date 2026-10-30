@@ -1,0 +1,20 @@
+<div class="proposal-feedback-details">
+  <div class="read-more">
+    <button type="button" id="read_more_proposal_feedback"
+            data-toggle="proposal_feedback read_more_proposal_feedback read_less_proposal_feedback"
+            data-toggler="hide">
+      <%= t("proposals.feedback.see_more") %>
+    </button>
+    <button type="button" id="read_less_proposal_feedback"
+            data-toggle="proposal_feedback read_more_proposal_feedback read_less_proposal_feedback"
+            data-toggler="hide"
+            class="hide">
+      <%= t("proposals.feedback.see_less") %>
+    </button>
+  </div>
+
+  <div id="proposal_feedback" class="hide" data-toggler="hide"
+       role="region" aria-label="<%= t("proposals.feedback.title") %>">
+    <%= markdown(feedback) %>
+  </div>
+</div>

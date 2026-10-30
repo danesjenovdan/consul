@@ -7,4 +7,6 @@
   <%= render Admin::Settings::RowComponent.new("llm.use_ai_image_suggestions", type: :feature, tab: tab, disabled: image_suggestions_disabled?) %>
   <%= render Admin::Settings::RowComponent.new("llm.use_llm_speech_to_text", type: :feature, tab: tab, disabled: speech_to_text_disabled?) %>
   <%= render Admin::Settings::RowComponent.new("llm.speech_to_text_model", type: :dropdown, tab: tab, options: speech_to_text_model_options, disabled: speech_to_text_model_disabled?) %>
+  <%= render Admin::Settings::RowComponent.new("llm.use_ai_proposal_feedback", type: :feature, tab: tab, disabled: feature_disabled?) %>
+  <%= render Admin::Settings::RowComponent.new("llm.proposal_feedback_criteria", tab: tab) %>
 <% end %>
