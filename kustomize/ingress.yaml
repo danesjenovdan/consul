@@ -1,3 +1,14 @@
+# 1. Redirect middleware (HTTP -> HTTPS)
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-https
+spec:
+  redirectScheme:
+    scheme: https
+    permanent: true
+---
+# 2. Main Ingress: HTTPS only, owns the Let's Encrypt certificate
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -25,4 +36,27 @@ spec:
                   number: 3000
     - host: www.idejezanovomesto.si
       http: *http_paths
-
+---
+# 3. Redirect Ingress: plain HTTP only, redirects everything to HTTPS
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: consul-http-redirect
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+    traefik.ingress.kubernetes.io/router.middlewares: consul-novo-mesto-redirect-https@kubernetescrd
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: idejezanovomesto.si
+      http: &http_paths
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consul
+                port:
+                  number: 3000
+    - host: www.idejezanovomesto.si
+      http: *http_paths
