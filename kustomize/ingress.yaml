@@ -4,6 +4,7 @@ metadata:
   name: consul
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
 spec:
   ingressClassName: traefik
   tls:
