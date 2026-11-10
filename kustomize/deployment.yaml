@@ -47,6 +47,38 @@ spec:
             - name: db-conf
               mountPath: /var/www/consul/config/secrets.yml
               subPath: secrets.yml
+        - name: update-settings
+          image: consul
+          command:
+            - bundle
+            - exec
+            - rails
+            - settings:add_new_settings
+          ports:
+            - containerPort: 3000
+          env:
+            - name: RAILS_ENV
+              value: production
+          envFrom:
+            - secretRef:
+                name: consul-credentials
+          #
+          # TODO RESOURCES TEMPORARILY REMOVED
+          #
+          # resources:
+          #   requests:
+          #     memory: 2Gi
+          #     cpu: 500m
+          #   limits:
+          #     memory: 2Gi
+          #     cpu: 500m
+          volumeMounts:
+            - name: db-conf
+              mountPath: /var/www/consul/config/database.yml
+              subPath: database.yml
+            - name: db-conf
+              mountPath: /var/www/consul/config/secrets.yml
+              subPath: secrets.yml
       containers:
         - name: consul
           image: consul

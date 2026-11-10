@@ -87,7 +87,6 @@ ne:
         confidence_score: उच्चतम मूल्याङ्कन
         created_at: नवीनतम
         hot_score: सबैभन्दा सक्रिय
-        most_commented: धेरैले टिप्पणी गरेकाे
         relevance: सान्दर्भिकता
         recommendations: सिफारिसहरू
       recommendations:
@@ -123,7 +122,6 @@ ne:
       recommendations_title: बहस सिर्जना गर्न सिफारिसहरू
       start_new: बहस सुरु गर्नुहोस्
     show:
-      author_deleted: प्रयोगकर्ता मेटाइयो
       comments_title: टिप्पणीहरू
       edit_debate_link: सम्पादन
       flag: यो बहस धेरै प्रयोगकर्ताहरू द्वारा अनुपयुक्त रूपमा फ्ल्याग गरिएको छ।
@@ -397,12 +395,10 @@ ne:
         one: १ मत
         other: "%{count} मतहरू"
       supports_necessary: "%{number} समर्थन आवश्यक छ"
-      total_percent: १००%
       archived: "यो प्रस्ताव अभिलेख गरिएको छ र समर्थन सङ्कलन गर्न सक्दैन।"
       successful: "यो प्रस्ताव आवश्यक समर्थन पुगेको छ।"
       selected: "चयन गरिएका प्रस्ताव"
     show:
-      author_deleted: प्रयोगकर्ता मेटाइयो
       code: "प्रस्ताव कोड:"
       comments_tab: टिप्पणीहरू
       dashboard_proposal_link: ड्यासबोर्ड
@@ -564,7 +560,6 @@ ne:
         support: "तपाईंले बटनमा क्लिक गर्नुपर्नेछ जुन तपाईंले तल देख्नुहुनेछ 'यस प्रस्तावलाई समर्थन गर्नुहोस्' र तपाईंले यसलाई प्रचार गर्नु अघि आफैलाई सूचित गर्न सक्नुहुन्छ। अधिकतम समर्थन प्राप्त गर्ने प्रस्तावहरू मात्र सिटी काउन्सिलद्वारा गरिन्छ, र मैले सोचे कि तपाईं, म पक्का छु कि तपाईंले मलाई यो प्राप्त गर्न मद्दत गर्नुहुन्छ!"
         share: "र यदि तपाईंले मलाई मेरो प्रस्ताव आफ्ना साथीहरू, परिवार र सम्पर्कहरूसँग साझा गर्ने ठूलो पक्षमा गर्नुहुन्छ भने, यो उत्तम हुनेछ!"
   polls:
-    all: "सबै"
     dates: "%{open_at} देखि %{closed_at} सम्म"
     final_date: "अन्तिम गणना/नतिजा"
     index:
@@ -624,11 +619,7 @@ ne:
     poll_header:
       back_to_proposal: प्रस्तावमा फर्कनुहोस्
   poll_questions:
-    show:
-      vote_answer: "%{answer} मा मत दिन्नुस्"
-      voted: "तपाईंले %{answer} मत दिनुभयो"
     description:
-      unique: "तपाईं अधिकतम १ जवाफ चयन गर्न सक्नुहुन्छ।"
       multiple: "तपाईले अधिकतम %{maximum} जवाफहरू चयन गर्न सक्नुहुन्छ।"
     read_more_about: "बारे थप पढ्नुहोस्:"
   proposal_notifications:
@@ -736,7 +727,6 @@ ne:
       see_more: थप सिफारिसहरू हेर्नुहोस्
       hide: सिफारिसहरू लुकाउनुहोस्
     translations:
-      select_language_prompt: भाषा छान्नुहोस्
       remove_language: भाषा हटाउनुहोस्
       add_language: भाषा थप्नुहोस्
       languages_in_use:

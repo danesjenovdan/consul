@@ -84,7 +84,6 @@ nn:
         confidence_score: mest populære
         created_at: nyeste
         hot_score: mest aktive
-        most_commented: mest kommenterte
         relevance: relevans
         recommendations: anbefalinger
       recommendations:
@@ -120,7 +119,6 @@ nn:
       recommendations_title: Anbefalinger for debattinnlegg
       start_new: Start en debatt
     show:
-      author_deleted: Brukeren er slettet
       comments_title: Kommentarer
       edit_debate_link: Rediger
       flag: Denne debatten har blitt flagget som upassende av flere brukere.
@@ -377,12 +375,10 @@ nn:
         one: 1 stemme
         other: "%{count} stemmer"
       supports_necessary: "%{number} støtter trengs"
-      total_percent: 100%
       archived: "Dette forslaget har blitt arkivert og kan ikke samle støtte."
       successful: "Dette forslaget har nådd nok støtte."
       selected: "Valgt forslag"
     show:
-      author_deleted: Bruker er slettet
       code: "Forslagskode:"
       comments_tab: Kommentarer
       dashboard_proposal_link: Dashboard
@@ -546,7 +542,6 @@ nn:
         support: "Alt du trenger å gjøre er å klikke på knappen 'Støtt forslag'. Bare forslag som mottar maksimal støtte, vil bli videreført, og jeg er sikker på at du kan hjelpe meg med å få det til!"
         share: "Om du også vil gjøre meg en tjeneste og dele forslaget mitt med vennene dine, familie og kontakter, ville jeg satt stor pris på det!"
   polls:
-    all: "Alle"
     dates: "Fra%{open_at} til%{closed_at}"
     final_date: "Endelige opptellinger/resultater"
     index:
@@ -605,10 +600,6 @@ nn:
         most_voted_answer: "Mest populære svar: "
     poll_header:
       back_to_proposal: Tilbake til forslag
-  poll_questions:
-    show:
-      vote_answer: "Stem %{answer}"
-      voted: "Du har stemt%{answer}"
   proposal_notifications:
     new:
       title: "Send melding"

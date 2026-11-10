@@ -80,3 +80,23 @@
     margin: 0;
   }
 }
+
+.progress-alert-message {
+  @include has-fa-icon(check-circle, solid);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: $success-bg;
+
+  &::before {
+    flex-shrink: 0;
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
