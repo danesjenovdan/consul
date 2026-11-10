@@ -21,22 +21,16 @@ describe "Admin settings", :admin do
   end
 
   describe "Map settings initialization" do
-    before do
+    scenario "Map is only initialized when the map settings tab content is shown" do
       Setting["feature.map"] = true
-    end
 
-    scenario "When `Map settings` tab content is hidden map should not be initialized" do
       visit admin_settings_path
 
-      expect(page).not_to have_css("#admin-map.leaflet-container", visible: :all)
-    end
-
-    scenario "When `Map settings` tab content is shown map should be initialized" do
-      visit admin_settings_path
+      expect(page).not_to have_css ".map-location.leaflet-container", visible: :all
 
       click_link "Map configuration"
 
-      expect(page).to have_css("#admin-map.leaflet-container")
+      expect(page).to have_css ".map-location.leaflet-container"
     end
   end
 
@@ -50,41 +44,7 @@ describe "Admin settings", :admin do
       expect(page).to have_content "To show the map to users you must enable " \
                                    '"Proposals and budget investments geolocation" ' \
                                    'on "Features" tab.'
-      expect(page).not_to have_css("#admin-map")
-    end
-
-    scenario "Should be able when map feature activated" do
-      Setting["feature.map"] = true
-
-      visit admin_settings_path
-      click_link "Map configuration"
-
-      expect(page).to have_css("#admin-map")
-      expect(page).not_to have_content "To show the map to users you must enable " \
-                                       '"Proposals and budget investments geolocation" ' \
-                                       'on "Features" tab.'
-    end
-
-    scenario "Should show successful notice" do
-      Setting["feature.map"] = true
-
-      visit admin_settings_path
-      click_link "Map configuration"
-
-      within "#map-form" do
-        click_button "Update"
-      end
-
-      expect(page).to have_content "Map configuration updated successfully"
-    end
-
-    scenario "Should display marker by default" do
-      Setting["feature.map"] = true
-
-      visit admin_settings_path
-
-      expect(find("#latitude", visible: :hidden).value).to eq "51.48"
-      expect(find("#longitude", visible: :hidden).value).to eq "0.0"
+      expect(page).not_to have_css ".map-location"
     end
 
     scenario "Should update marker" do
@@ -92,13 +52,26 @@ describe "Admin settings", :admin do
 
       visit admin_settings_path
       click_link "Map configuration"
-      find("#admin-map").click
+
+      expect(page).to have_css ".map-location"
+      expect(page).not_to have_content "To show the map to users you must enable " \
+                                       '"Proposals and budget investments geolocation" ' \
+                                       'on "Features" tab.'
+
+      expect(page).to have_field "Latitude", with: "51.48"
+      expect(page).to have_field "Longitude", with: "0.0"
+      expect(page).to have_css ".map-icon[aria-label='Latitude: 51.48. Longitude: 0.0']"
+
       within "#map-form" do
+        find(".map-location").click
         click_button "Update"
       end
 
-      expect(find("#latitude", visible: :hidden).value).not_to eq "51.48"
       expect(page).to have_content "Map configuration updated successfully"
+      expect(page).to have_field "Latitude"
+      expect(page).to have_css ".map-icon"
+      expect(page).not_to have_field "Latitude", with: "51.48"
+      expect(page).not_to have_css ".map-icon[aria-label='Latitude: 51.48. Longitude: 0.0']"
     end
   end
 
@@ -368,6 +341,54 @@ describe "Admin settings", :admin do
       expect(page).not_to have_content "Related Content"
       expect(page).not_to have_content "Tags"
       expect(page).not_to have_css ".translation_missing"
+    end
+  end
+
+  describe "LLM settings" do
+    context "Required LLM setup is configured" do
+      before do
+        allow(Llm::Config)
+          .to receive(:providers).and_return({ OpenAI: { enabled: true }})
+        ruby_llm_models = [double("Model", name: "GPT-4.1 mini", id: "gpt-4o-mini")]
+        allow(RubyLLM.models).to receive(:by_provider).with(:openai).and_return(ruby_llm_models)
+        stub_secrets(pexels_access_key: "test_key")
+      end
+
+      scenario "Configure provider, model and enable usage" do
+        visit admin_settings_path
+
+        click_link "LLM Settings"
+
+        within "tr", text: "LLM Provider" do
+          expect(page).to have_select selected: "None"
+          select "OpenAI"
+          click_button "Update"
+          expect(page).to have_select selected: "OpenAI"
+        end
+        expect(page).to have_content "Value updated"
+
+        within "tr", text: "Model" do
+          expect(page).to have_select selected: "None"
+          select "GPT-4.1 mini"
+          click_button "Update"
+          expect(page).to have_select selected: "GPT-4.1 mini"
+        end
+        expect(page).to have_content "Value updated"
+
+        within "tr", text: "Content Translation" do
+          expect(page).to have_button "No"
+          click_button "No"
+          expect(page).to have_button "Yes"
+        end
+        expect(page).to have_content "Value updated"
+
+        within "tr", text: "AI Image Suggestions" do
+          expect(page).to have_button "No"
+          click_button "No"
+          expect(page).to have_button "Yes"
+        end
+        expect(page).to have_content "Value updated"
+      end
     end
   end
 end

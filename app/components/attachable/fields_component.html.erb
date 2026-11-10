@@ -4,7 +4,7 @@
   <%= f.hidden_field :cached_attachment %>
 
   <div class="small-12 column title">
-    <%= f.text_field :title, placeholder: t("#{plural_name}.form.title_placeholder") %>
+    <%= f.text_field :title %>
   </div>
 
   <% if attachable.attachment.attached? && attachable.attachment.image? %>
@@ -16,6 +16,7 @@
 
     <div class="small-9 column action-add attachment-errors <%= singular_name %>-attachment">
       <%= file_field %>
+      <%= suggested_images_content %>
     </div>
 
     <div class="small-3 column action-remove text-right">
@@ -24,7 +25,9 @@
   </div>
 
   <div class="small-12 column">
-    <div class="progress-bar-placeholder"><div class="loading-bar"></div></div>
+    <div class="progress-bar-placeholder">
+      <div class="loading-bar"></div>
+    </div>
   </div>
 
   <hr>

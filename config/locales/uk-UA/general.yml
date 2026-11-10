@@ -94,7 +94,6 @@ uk-UA:
         confidence_score: з найвищим рейтингом
         created_at: найновіші
         hot_score: найактивніші
-        most_commented: найбільш коментовані
         relevance: актуальність
         recommendations: рекомендації
       recommendations:
@@ -130,7 +129,6 @@ uk-UA:
       recommendations_title: Рекомендації щодо створення обговорень
       start_new: Розпочати обговорення
     show:
-      author_deleted: Користувач видалений
       comments_title: Коментарі
       edit_debate_link: Редагувати
       flag: Це обговорення позначене як недоречне кількома користувачами.
@@ -412,12 +410,10 @@ uk-UA:
         many: "%{count} голосів"
         other: "%{count} голосів"
       supports_necessary: "необхідно %{number} підтримань"
-      total_percent: 100%
       archived: "Ця пропозиція заархівована і не збирає підтримки."
       successful: "Ця пропозиція отримала достатню підтримку."
       selected: "Вибрана пропозиція"
     show:
-      author_deleted: Користувача видалено
       code: "Код пропозиції:"
       comments_tab: Коментарі
       dashboard_proposal_link: Інформаційна панель
@@ -587,7 +583,6 @@ uk-UA:
         support: "Все, що потрібно зробити - натиснути на кнопку \"Підтримати цю пропозицію\", яку ви побачите нижче. Перед тим, як підтримати пропозицію, ви можете ознайомитися з нею.\nЛише ті пропозиції, які отримають максимальну підтримку, будуть роглянуті міською радою. Я впевнений (-на), що ваша підтримка допоможе!"
         share: "Також ви зробите мені велику послугу, якщо поділитеся моєю пропозицією зі своїми друзями, родиною та контактами - це було б чудово!"
   polls:
-    all: "Усі"
     dates: "Від %{open_at} до %{closed_at}"
     final_date: "Остаточний перерахунок/Результати"
     index:
@@ -646,10 +641,6 @@ uk-UA:
         most_voted_answer: "Запитання, яке отримало найбільше голосів: "
     poll_header:
       back_to_proposal: Повернутися до пропозиції
-  poll_questions:
-    show:
-      vote_answer: "Голосувати за %{answer}"
-      voted: "Ми проголосували за%{answer}"
   proposal_notifications:
     new:
       title: "Надіслати повідомлення"
@@ -757,7 +748,6 @@ uk-UA:
       see_more: Переглянути більше рекомендацій
       hide: Приховати рекомендації
     translations:
-      select_language_prompt: Обрати мову
       remove_language: Видалити мову
       add_language: Додати мову
       languages_in_use:
