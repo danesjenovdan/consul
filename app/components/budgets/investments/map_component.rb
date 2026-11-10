@@ -1,6 +1,6 @@
 class Budgets::Investments::MapComponent < ApplicationComponent
   attr_reader :heading, :investments
-  use_helpers :render_map
+  delegate :render_map, to: :helpers
 
   def initialize(investments, heading:)
     @investments = investments
@@ -27,7 +27,8 @@ class Budgets::Investments::MapComponent < ApplicationComponent
       [
         {
           outline_points: heading.geozone.outline_points,
-          color: heading.geozone.color
+          color: heading.geozone.color,
+          name: heading.name
         }
       ]
     end

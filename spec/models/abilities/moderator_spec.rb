@@ -63,7 +63,7 @@ describe Abilities::Moderator do
     it { should_not be_able_to(:hide, own_debate) }
 
     it { should be_able_to(:hide, proposal) }
-    it { should be_able_to(:hide, own_proposal) }
+    it { should_not be_able_to(:hide, own_proposal) }
     it { should_not be_able_to(:hide, hidden_proposal) }
 
     it { should be_able_to(:ignore_flag, comment) }
@@ -113,4 +113,8 @@ describe Abilities::Moderator do
   it { should_not be_able_to(:read, SDG::Manager) }
   it { should_not be_able_to(:create, SDG::Manager) }
   it { should_not be_able_to(:delete, SDG::Manager) }
+
+  it { should_not be_able_to(:create, Cookies::Vendor) }
+  it { should_not be_able_to(:update, Cookies::Vendor) }
+  it { should_not be_able_to(:destroy, Cookies::Vendor) }
 end

@@ -8,13 +8,10 @@ fa:
           all: همه
           pending_flag_review: انتظار
           with_ignored_flag: علامتگذاری به عنوان مشاهده شده
-        headers:
-          comment: توضیح
-          moderate: سردبیر
         hide: پنهان کردن نظرات
         ignore_flags: علامتگذاری به عنوان مشاهده شده
         orders:
-          flags: بیشتر پرچم گذاری شده
+          flags: بیشتر پرچم گذاری شده 
           newest: جدیدترین
         title: توضیحات
     dashboard:
@@ -28,21 +25,18 @@ fa:
           all: همه
           pending_flag_review: انتظار
           with_ignored_flag: علامتگذاری به عنوان مشاهده شده
-        headers:
-          debate: بحث
-          moderate: سردبیر
         hide: پنهان کردن بحث
         ignore_flags: علامتگذاری به عنوان مشاهده شده
         orders:
           created_at: جدیدترین
-          flags: بیشتر پرچم گذاری شده
+          flags: بیشتر پرچم گذاری شده 
         title: مباحثه
     header:
       title: سردبیر
     menu:
       flagged_comments: توضیحات
       flagged_debates: مباحثه
-      flagged_investments: بودجه سرمایه گذاری ها
+      flagged_investments: بودجه سرمایه گذاری ها 
       proposals: طرح های پیشنهادی
       users: انسداد کاربران
     proposals:
@@ -55,12 +49,11 @@ fa:
           with_ignored_flag: علامتگذاری به عنوان مشاهده شده
         headers:
           moderate: سردبیر
-          proposal: طرح های پیشنهادی
         hide: پنهان کردن پیشنهادات
         ignore_flags: علامتگذاری به عنوان مشاهده شده
         orders:
           created_at: جدید ترین
-          flags: بیشتر پرچم گذاری شده
+          flags: بیشتر پرچم گذاری شده 
         title: طرح های پیشنهادی
     budget_investments:
       index:
@@ -70,14 +63,11 @@ fa:
           all: همه
           pending_flag_review: انتظار
           with_ignored_flag: علامتگذاری به عنوان مشاهده شده
-        headers:
-          moderate: سردبیر
-          budget_investment: بودجه سرمایه گذاری
         ignore_flags: علامتگذاری به عنوان مشاهده شده
         orders:
           created_at: جدید ترین
-          flags: بیشتر پرچم گذاری شده
-        title: بودجه سرمایه گذاری ها
+          flags: بیشتر پرچم گذاری شده 
+        title: بودجه سرمایه گذاری ها 
     proposal_notifications:
       index:
         block_authors: بلوک نویسنده
@@ -86,8 +76,6 @@ fa:
           all: همه
           pending_review: بررسی انتظار
           ignored: علامتگذاری به عنوان مشاهده شده
-        headers:
-          moderate: سردبیر
         hide: پنهان کردن پیشنهادات
         ignore_flags: علامتگذاری به عنوان مشاهده شده
         orders:
