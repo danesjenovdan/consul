@@ -3,11 +3,10 @@ FactoryBot.define do
     sequence(:username) { |n| "Manuela#{n}" }
     sequence(:email)    { |n| "manuela#{n}@consul.dev" }
 
-    password            { "judgmentday" }
+    password            { "Judgmentday1" }
     terms_of_service    { "1" }
     confirmed_at        { Time.current }
     date_of_birth       { 20.years.ago }
-    public_activity     { true }
 
     trait :incomplete_verification do
       after :create do |user|

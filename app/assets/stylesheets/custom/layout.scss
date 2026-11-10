@@ -273,6 +273,11 @@ a {
   &:focus:hover {
     color: $white;
   }
+
+  &.error {
+    background-color: $color-alert;
+    color: $white;
+  }
 }
 
 .button:not(.upload-document, .upload-image, .hollow),

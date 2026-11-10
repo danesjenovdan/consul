@@ -5,6 +5,7 @@ module Taggable
     acts_as_taggable_on :tags, :ml_tags
     validate :max_number_of_tags, on: :create
     validate :min_number_of_tags, on: [:create, :update]
+    before_validation :sanitize_tag_list
   end
 
   def tags_list
@@ -28,4 +29,10 @@ module Taggable
   def min_number_of_tags
     errors.add(:tag_list, I18n.t('activerecord.errors.models.tags.minimum')) if tag_list.count < 1
   end
+
+  protected
+
+    def sanitize_tag_list
+      self.tag_list = TagSanitizer.new.sanitize_tag_list(tag_list)
+    end
 end
