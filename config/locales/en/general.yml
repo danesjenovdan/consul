@@ -333,15 +333,14 @@ en:
     feedback:
       intro: "Want to improve this proposal before submitting it?"
       get_feedback: "Get feedback"
-      recommendations_hint: "After you enter more proposal details, recommendations will be personalized."
       refresh_feedback: "Refresh feedback"
-      see_less: "See less"
-      see_more: "See more"
-      title: "Feedback on your proposal"
+      results_title: "Evaluation against criteria"
       errors:
+        blank_draft: "Fill in the title, summary or text to get feedback."
         invalid_response: "The feedback could not be generated. Please try again."
         llm_not_configured: "LLM is not properly configured. Please contact an administrator."
         rate_limit_exceeded: "Please wait a few minutes before requesting new feedback."
+        request_failed: "Sorry, the feedback could not be generated right now. Please try again later."
     index:
       featured_proposals: Featured
       orders:

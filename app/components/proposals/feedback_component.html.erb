@@ -1,13 +1,16 @@
-<div class="proposal-feedback" data-resource-type="<%= resource_type %>">
-  <p><%= t("proposals.feedback.intro") %></p>
+<section class="proposal-feedback" aria-labelledby="proposal_feedback_title"
+         data-resource-type="<%= resource_type %>"
+         data-error-message="<%= t("proposals.feedback.errors.request_failed") %>">
+  <h2 id="proposal_feedback_title"><%= t("proposals.feedback.intro") %></h2>
 
-  <% if errors.any? %>
-    <div role="alert">
+  <button type="button" class="button js-proposal-feedback"><%= button_text %></button>
+
+  <div class="proposal-feedback-results" aria-live="polite">
+    <% if errors.any? %>
       <small class="error"><%= errors.join(", ") %></small>
-    </div>
-  <% end %>
-
-  <button type="button" class="button hollow js-proposal-feedback">
-    <%= button_text %>
-  </button>
-</div>
+    <% elsif feedback.present? %>
+      <h3><%= t("proposals.feedback.results_title") %></h3>
+      <%= feedback_html %>
+    <% end %>
+  </div>
+</section>

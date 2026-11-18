@@ -20,13 +20,11 @@ en:
       official_level_4_name: Official position 4
       official_level_5_name: Official position 5
       proposal_feedback_criteria: |-
-        - The title is clear, specific and summarizes the proposal.
-        - The summary explains the main idea in a few sentences.
-        - The description explains the problem or need the proposal addresses.
-        - The proposed solution is concrete and actionable.
-        - The proposal explains who would benefit and how.
-        - The proposal is realistic and within the competences of the local government.
-        - The language is respectful, inclusive and easy to understand.
+        - Title is brief and descriptive: it can be understood without reading the rest of the proposal.
+        - Summary says what is proposed: in a few words, without repeating the full text.
+        - Problem and proposed action are clearly stated: it is clear what is being asked for; technical details a citizen cannot be expected to know are not required.
+        - Text is clear and concise: well-constructed sentences that get to the point.
+        - Nothing is written in capital letters: neither the title nor whole sentences.
     geozones:
       north_district: North District
       west_district: West District

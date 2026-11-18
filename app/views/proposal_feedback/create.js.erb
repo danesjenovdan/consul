@@ -1,17 +1,12 @@
-$(".proposal-feedback").replaceWith("<%= j render(Proposals::FeedbackComponent.new(params[:resource_type], @feedback)) %>");
+var updated = $("<%= j render(Proposals::FeedbackComponent.new(params[:resource_type], @feedback)) %>");
+var box = $(".proposal-feedback");
+var button = box.find(".js-proposal-feedback");
 
-<% if @feedback.errors.none? %>
-  var recommendations = $(".recommendations");
+if (updated.length > 0) {
+  box.find(".proposal-feedback-results").html(updated.find(".proposal-feedback-results").html());
+  button.text(updated.find(".js-proposal-feedback").text());
+} else {
+  App.ProposalFeedback.showError(box);
+}
 
-  <% if @feedback.feedback.present? %>
-    recommendations.html("<%= j safe_join(@feedback.summary.map { |point| tag.li(point) }) %>");
-    $(".proposal-feedback-details").remove();
-    recommendations.after("<%= j render(Proposals::FeedbackDetailsComponent.new(@feedback.feedback)) %>");
-    recommendations.next().foundation();
-  <% else %>
-    recommendations.find(".proposal-feedback-hint").remove();
-    recommendations.prepend("<%= j tag.li(t("proposals.feedback.recommendations_hint"), class: "proposal-feedback-hint") %>");
-  <% end %>
-
-  $("html, body").animate({ scrollTop: recommendations.parent().offset().top });
-<% end %>
+button.prop("disabled", false).removeClass("is-loading").focus();

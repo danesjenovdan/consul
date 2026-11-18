@@ -39,6 +39,12 @@ describe Admin::Settings::LlmConfigurationTabComponent do
       render_inline component
 
       expect(page).to have_content "LLM Settings"
+      expect(page).to have_css "th", exact_text: "Content features"
+
+      page.find("table", text: "Proposal feedback feature") do |table|
+        expect(table).to have_css "#{proposal_feedback_button_selector}[disabled]"
+        expect(table).to have_content "Proposal Feedback Criteria"
+      end
 
       page.find(provider_select_selector) do
         expect(page).to have_content "LLM Provider"
@@ -61,8 +67,6 @@ describe Admin::Settings::LlmConfigurationTabComponent do
                                      "Microsoft translation services."
         expect(page).to have_button "No", disabled: true
       end
-
-      expect(page).to have_css "#{proposal_feedback_button_selector}[disabled]"
     end
   end
 

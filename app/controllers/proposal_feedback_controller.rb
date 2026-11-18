@@ -30,14 +30,13 @@ class ProposalFeedbackController < ApplicationController
       {
         title: translation_params[:title],
         summary: translation_params[:summary],
-        description: translation_params[:description],
-        tags: resource_params[:tag_list]
+        description: translation_params[:description]
       }
     end
 
     def resource_params
       @resource_params ||= params.require(params.require(:resource_type).parameterize.underscore)
-                                 .permit(:tag_list, translations_attributes: [:title, :summary, :description])
+                                 .permit(translations_attributes: [:title, :summary, :description])
     end
 
     def translation_params
