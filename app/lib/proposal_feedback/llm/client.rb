@@ -1,17 +1,6 @@
 module ProposalFeedback
   module Llm
     class Client
-      MAX_SUMMARY_POINTS = 4
-      SCHEMA = {
-        type: "object",
-        properties: {
-          summary: { type: "array", items: { type: "string" }, minItems: 1, maxItems: MAX_SUMMARY_POINTS },
-          feedback: { type: "string" }
-        },
-        required: ["summary", "feedback"],
-        additionalProperties: false
-      }.freeze
-
       def self.call(fields)
         new(fields).call
       end
@@ -27,22 +16,23 @@ module ProposalFeedback
       def call
         if !self.class.enabled?
           response.errors << I18n.t("proposals.feedback.errors.llm_not_configured")
-        elsif @fields.values.any?(&:present?)
-          parse(::Llm::Config.chat.with_schema(SCHEMA).ask(prompt))
+        elsif @fields.values.none?(&:present?)
+          response.errors << I18n.t("proposals.feedback.errors.blank_draft")
+        else
+          parse(::Llm::Config.chat.ask(prompt))
         end
 
         response
-      rescue RubyLLM::Error => e
-        response.errors << e.message
+      rescue RubyLLM::Error, Faraday::Error, Timeout::Error
+        response.errors << I18n.t("proposals.feedback.errors.request_failed")
         response
       end
 
       class Response
-        attr_accessor :summary, :feedback
+        attr_accessor :feedback
         attr_reader :errors
 
         def initialize
-          @summary = []
           @errors = []
         end
       end
@@ -54,20 +44,19 @@ module ProposalFeedback
         end
 
         def parse(message)
-          content = message.parsed
-          raise JSON::ParserError unless content.is_a?(Hash)
+          feedback = message.content.to_s.strip
 
-          response.summary = Array(content["summary"]).first(MAX_SUMMARY_POINTS)
-          response.feedback = content["feedback"]
-        rescue JSON::ParserError
-          response.errors << I18n.t("proposals.feedback.errors.invalid_response")
+          if feedback.present?
+            response.feedback = feedback
+          else
+            response.errors << I18n.t("proposals.feedback.errors.invalid_response")
+          end
         end
 
         def prompt
           ::Llm::Config.prompts["proposal_feedback_prompt"] % {
             criteria: Setting["llm.proposal_feedback_criteria"],
             proposal: proposal,
-            max_summary_points: MAX_SUMMARY_POINTS,
             output_locale: I18n.locale
           }
         end
