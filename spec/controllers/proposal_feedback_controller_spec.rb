@@ -4,7 +4,6 @@ describe ProposalFeedbackController do
   let(:user) { create(:user) }
   let(:proposal_params) do
     {
-      tag_list: "Environment, Trees",
       translations_attributes: {
         "0" => { title: "More trees", summary: "Greener city", description: "Plant trees" }
       }
@@ -22,8 +21,7 @@ describe ProposalFeedbackController do
       expect(ProposalFeedback::Llm::Client).to receive(:call).with({
         title: "More trees",
         summary: "Greener city",
-        description: "Plant trees",
-        tags: "Environment, Trees"
+        description: "Plant trees"
       }).and_return(ProposalFeedback::Llm::Client::Response.new)
 
       post :create, params: params, format: :js

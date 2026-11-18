@@ -26,6 +26,8 @@
                                         class: "html-area" %>
       </div>
     <% end %>
+
+    <%= render Proposals::FeedbackComponent.new(proposal.class.name) %>
   </fieldset>
 
   <%= f.invisible_captcha :subtitle %>
@@ -92,7 +94,5 @@
     <% end %>
 
     <%= f.submit(class: "button", value: t("proposals.#{action_name}.form.submit_button")) %>
-
-    <%= render Proposals::FeedbackComponent.new(proposal.class.name) %>
   </div>
 <% end %>

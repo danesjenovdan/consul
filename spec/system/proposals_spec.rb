@@ -764,8 +764,8 @@ describe "Proposals" do
   describe "AI feedback" do
     let(:chat) { double }
     let(:content) do
-      { "summary" => ["Explain who would benefit.", "Add a budget estimate."],
-        "feedback" => "Who **benefits**?" }
+      "- **Title is brief and descriptive: Met.** The title says what and where.\n" \
+        "- **Summary says what is proposed: Not met.** Add why it is needed."
     end
 
     before do
@@ -773,8 +773,7 @@ describe "Proposals" do
       Setting["llm.model"] = "gpt-4o"
       Setting["llm.use_ai_proposal_feedback"] = true
       allow(Llm::Config).to receive(:chat).and_return(chat)
-      allow(chat).to receive(:with_schema).and_return(chat)
-      allow(chat).to receive(:ask) { RubyLLM::Message.new(role: :assistant, content: content.to_json) }
+      allow(chat).to receive(:ask) { RubyLLM::Message.new(role: :assistant, content: content) }
     end
 
     scenario "Get feedback before creating a proposal" do
@@ -788,30 +787,31 @@ describe "Proposals" do
       fill_in "Full name of the person submitting the proposal", with: "Isabel Garcia"
       click_button "Get feedback"
 
-      within ".recommendations" do
+      within ".required-fields .proposal-feedback" do
+        expect(page).to have_content "Evaluation against criteria"
         expect(page).to have_css "li", count: 2
-        expect(page).to have_content "Explain who would benefit."
-        expect(page).to have_content "Add a budget estimate."
+        expect(page).to have_content "Title is brief and descriptive: Met. The title says what and where."
+        expect(page).to have_button "Refresh feedback", focused: true
       end
 
-      expect(page.evaluate_script("$('.proposal-recommendations')[0].getBoundingClientRect().top")).to be >= 0
+      expect(page).to have_css ".recommendations li", count: 3
       expect(chat).to have_received(:ask).with(
-        a_string_including("Help refugees", "This is very important because...", "Refugees, Solidarity")
+        a_string_including("Help refugees", "In summary, what we want is...",
+                           "This is very important because...")
       )
+      expect(chat).not_to have_received(:ask).with(a_string_including("Refugees, Solidarity"))
 
-      click_button "See more"
-
-      expect(page).to have_content "Who benefits?"
-
-      content["summary"] = ["Mention the neighbourhood."]
+      allow(chat).to receive(:ask).and_return(
+        RubyLLM::Message.new(role: :assistant,
+                             content: "- **Text is clear and concise: Partially met.** Shorten it.")
+      )
       click_button "Refresh feedback"
 
-      within ".recommendations" do
+      within ".proposal-feedback" do
         expect(page).to have_css "li", count: 1
-        expect(page).to have_content "Mention the neighbourhood."
+        expect(page).to have_content "Text is clear and concise: Partially met."
+        expect(page).not_to have_content "Title is brief and descriptive"
       end
-
-      expect(page).to have_button "See more", count: 1
 
       check "I agree to the Privacy Policy and the Terms and conditions of use"
       click_button "Create proposal"
@@ -819,22 +819,36 @@ describe "Proposals" do
       expect(page).to have_content "Proposal created successfully."
     end
 
-    scenario "Blank proposals keep the generic recommendations and get a hint" do
+    scenario "Blank proposals ask for more details" do
       login_as(create(:user))
       visit new_proposal_path
 
-      expect(page).to have_css ".recommendations li", count: 3
-
-      click_button "Get feedback"
       click_button "Get feedback"
 
-      expect(page).to have_button "Get feedback"
-      expect(page).to have_css ".recommendations li:first-child",
-                               text: "After you enter more proposal details, " \
-                                     "recommendations will be personalized."
-      expect(page).to have_css ".recommendations li", count: 4
-      expect(page).not_to have_css "[role='alert']"
-      expect(page).not_to have_button "See more"
+      within ".proposal-feedback" do
+        expect(page).to have_content "Fill in the title, summary or text to get feedback."
+        expect(page).to have_button "Get feedback"
+        expect(page).not_to have_css "li"
+      end
+
+      expect(chat).not_to have_received(:ask)
+    end
+
+    scenario "Failed requests show a friendly message" do
+      allow(chat).to receive(:ask).and_raise(Faraday::TimeoutError)
+      login_as(create(:user))
+      visit new_proposal_path
+
+      fill_in_new_proposal_title with: "Help refugees"
+      click_button "Get feedback"
+
+      within ".proposal-feedback" do
+        expect(page).to have_content "Sorry, the feedback could not be generated right now. " \
+                                     "Please try again later."
+        expect(page).to have_button "Get feedback"
+      end
+
+      expect(page).to have_field "Proposal title", with: "Help refugees"
     end
 
     scenario "Get feedback while editing a proposal" do
@@ -844,8 +858,8 @@ describe "Proposals" do
 
       click_button "Get feedback"
 
-      within ".recommendations" do
-        expect(page).to have_content "Explain who would benefit."
+      within ".proposal-feedback" do
+        expect(page).to have_content "Summary says what is proposed: Not met."
       end
     end
   end

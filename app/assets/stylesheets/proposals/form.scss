@@ -2,7 +2,23 @@
   @extend %public-form;
 
   .proposal-feedback {
-    margin-top: $line-height;
+    background: $highlight;
+    border: 1px solid $border;
+    margin-bottom: $line-height;
+    padding: $line-height;
+
+    h2 {
+      color: $brand;
+      font-size: rem-calc(24);
+    }
+
+    h3 {
+      font-size: rem-calc(18);
+    }
+
+    .button {
+      margin-bottom: 0;
+    }
 
     .is-loading {
       @include has-fa-icon(spinner, solid);
@@ -10,6 +26,20 @@
       &::before {
         animation: fa-spin 2s infinite linear;
       }
+    }
+
+    .proposal-feedback-results > :first-child {
+      margin-top: $line-height;
+    }
+
+    .proposal-feedback-results > .error {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    ul {
+      margin-bottom: 0;
     }
   }
 }

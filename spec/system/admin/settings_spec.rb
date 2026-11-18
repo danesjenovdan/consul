@@ -397,7 +397,7 @@ describe "Admin settings", :admin do
         expect(page).to have_content "Value updated"
 
         within "tr", text: "Proposal Feedback Criteria" do
-          expect(page).to have_field with: /The title is clear, specific and summarizes the proposal/
+          expect(page).to have_field with: /Title is brief and descriptive/
           fill_in "Proposal Feedback Criteria", with: "The proposal is about the city center"
           click_button "Update"
         end

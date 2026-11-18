@@ -4,4 +4,12 @@
   header h1 {
     @include has-fa-icon(lightbulb, regular, after);
   }
+
+  aside {
+    margin-top: $line-height;
+  }
+
+  .recommendations li::before {
+    color: $proposals;
+  }
 }

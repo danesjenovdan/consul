@@ -20,13 +20,11 @@ es:
       official_level_4_name: Cargo oficial 4
       official_level_5_name: Cargo oficial 5
       proposal_feedback_criteria: |-
-        - El título es claro, concreto y resume la propuesta.
-        - El resumen explica la idea principal en pocas frases.
-        - La descripción explica el problema o la necesidad que aborda la propuesta.
-        - La solución propuesta es concreta y realizable.
-        - La propuesta explica a quién beneficiaría y cómo.
-        - La propuesta es realista y está dentro de las competencias del gobierno local.
-        - El lenguaje es respetuoso, inclusivo y fácil de entender.
+        - El título es breve y descriptivo: se entiende sin leer el resto de la propuesta.
+        - El resumen dice qué se propone: en pocas palabras, sin repetir el texto completo.
+        - El problema y la acción propuesta están claramente expuestos: queda claro qué se pide; no se exigen detalles técnicos que no se puede esperar que conozca la ciudadanía.
+        - El texto es claro y conciso: frases bien construidas que van al grano.
+        - Nada está escrito en mayúsculas: ni el título ni frases enteras.
     geozones:
       north_district: Distrito Norte
       west_district: Distrito Oeste
