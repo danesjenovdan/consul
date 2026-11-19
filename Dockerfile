@@ -1,4 +1,4 @@
-FROM ruby:3.3.10-trixie
+FROM ruby:3.3.14-trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 
