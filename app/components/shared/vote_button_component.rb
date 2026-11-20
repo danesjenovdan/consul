@@ -1,6 +1,5 @@
 class Shared::VoteButtonComponent < ApplicationComponent
   attr_reader :votable, :value, :options
-  use_helpers :current_user, :can?
 
   def initialize(votable, value:, **options)
     @votable = votable
@@ -35,14 +34,14 @@ class Shared::VoteButtonComponent < ApplicationComponent
     end
 
     def vote
-      @vote ||= Vote.find_or_initialize_by(votable: votable, voter: current_user, vote_flag: parsed_value)
+      @vote ||= Vote.find_or_initialize_by(votable: votable, voter: current_user, vote_flag: in_favor?)
     end
 
     def already_voted?
       vote.persisted?
     end
 
-    def parsed_value
+    def in_favor?
       value == "yes"
     end
 end
