@@ -38,14 +38,14 @@
     <% elsif @heading.present? %>
       <div class="row">
         <div class="small-12 column">
-          <%= render "view_mode" %>
+          <%= render Shared::ViewModeComponent.new %>
         </div>
       </div>
     <% end %>
 
     <%= render Shared::AdvancedSearchComponent.new %>
 
-    <% if unfeasible_or_unselected_filter %>
+    <% if unfeasible_or_unselected_filter? %>
       <ul class="no-bullet submenu">
         <li class="inline-block">
           <%= link_to current_path_with_query_params(order: "random", page: 1),
@@ -58,17 +58,13 @@
       <%= render("shared/order_links", i18n_namespace: "budgets.investments.index") %>
     <% end %>
 
-    <% if investments_default_view? %>
-
-      <% @investments.each do |investment| %>
+    <% @investments.each do |investment| %>
+      <% if default_view_mode? %>
         <%= render "/budgets/investments/investment",
                    investment: investment,
                    investment_ids: @investment_ids,
                    ballot: @ballot %>
-      <% end %>
-    <% else %>
-
-      <% @investments.each do |investment| %>
+      <% else %>
         <%= render "/budgets/investments/investment_minimal",
                    investment: investment %>
       <% end %>

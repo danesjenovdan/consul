@@ -87,7 +87,6 @@ de:
         confidence_score: am besten bewertet
         created_at: neuste
         hot_score: aktivste
-        most_commented: am meisten kommentiert
         relevance: Relevanz
         recommendations: Empfehlungen
       recommendations:
@@ -123,7 +122,6 @@ de:
       recommendations_title: Empfehlungen für die Erstellung einer Diskussion
       start_new: Eine Diskussion starten
     show:
-      author_deleted: Benutzer*in gelöscht
       comments_title: Kommentare
       edit_debate_link: Bearbeiten
       flag: Diese Diskussion wurde von verschiedenen Benutzern als unangebracht gemeldet.
@@ -397,12 +395,10 @@ de:
         one: 1 Stimme
         other: "%{count} Stimmen"
       supports_necessary: "%{number} Unterstützungen benötigt"
-      total_percent: 100 %
       archived: "Dieser Vorschlag wurde archiviert und nicht mehr unterstützt werden."
       successful: "Dieser Vorschlag hat die erforderliche Unterstützung erreicht."
       selected: "Ausgewählter Vorschlag"
     show:
-      author_deleted: Benutzer*in gelöscht
       code: "Antrags-Code:"
       comments_tab: Kommentare
       dashboard_proposal_link: Dashboard
@@ -564,7 +560,6 @@ de:
         support: "Sie müssen nur auf die Schaltfläche klicken, die unter \"Diesen Vorschlag unterstützen\" angezeigt wird. Sie können sich dort informieren, bevor Sie ihn bewerben. Nur die Vorschläge, die die notwendige Unterstützung erreichen, werden vom Stadtrat ausgeführt. Sie können mir helfen, dies zu erreichen!"
         share: "Sie würden mir einen großen Gefallen tun, wenn Sie meinen Vorschlag mit Ihren Freunden, Familie und Kontakten teilen - das wäre perfekt!"
   polls:
-    all: "Alle"
     dates: "Von %{open_at} bis %{closed_at}"
     final_date: "Endgültige Nachzählungen/Ergebnisse"
     index:
@@ -624,11 +619,7 @@ de:
     poll_header:
       back_to_proposal: Zurück zum Vorschlag
   poll_questions:
-    show:
-      vote_answer: "Für %{answer} abstimmen"
-      voted: "Sie haben für %{answer} abgestimmt"
     description:
-      unique: "Sie können maximal 1 Antwort auswählen."
       multiple: "Sie können maximal %{maximum} Antworten auswählen."
     read_more_about: "Lesen Sie mehr über:"
   proposal_notifications:
@@ -736,7 +727,6 @@ de:
       see_more: Weitere Empfehlungen anzeigen
       hide: Empfehlungen ausblenden
     translations:
-      select_language_prompt: Sprache wählen
       remove_language: Sprache entfernen
       add_language: Sprache hinzufügen
       languages_in_use:

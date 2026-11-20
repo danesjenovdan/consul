@@ -23,9 +23,7 @@
         </div>
       <% end %>
 
-      <% if option.images.any? %>
-        <%= render "polls/gallery", option: option %>
-      <% end %>
+      <%= render Polls::GalleryComponent.new(option) %>
 
       <% if option.documents.present? %>
         <div class="document-link">
@@ -47,9 +45,7 @@
           </p>
 
           <% option.videos.each do |video| %>
-              <%= link_to video.title,
-                          video.url,
-                          rel: "nofollow" %><br>
+            <%= link_to video.title, video.url, rel: "nofollow" %><br>
           <% end %>
         </div>
       <% end %>

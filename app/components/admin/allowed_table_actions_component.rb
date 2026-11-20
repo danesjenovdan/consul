@@ -1,6 +1,5 @@
 class Admin::AllowedTableActionsComponent < ApplicationComponent
   attr_reader :record, :options
-  use_helpers :can?
   delegate :action, to: :table_actions_component
 
   def initialize(record, **options)
@@ -15,6 +14,6 @@ class Admin::AllowedTableActionsComponent < ApplicationComponent
     end
 
     def table_actions_component
-      @table_actions_component ||= Admin::TableActionsComponent.new(record, **options.merge(actions: actions))
+      @table_actions_component ||= Admin::TableActionsComponent.new(record, **options, actions: actions)
     end
 end
