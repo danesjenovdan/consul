@@ -84,18 +84,14 @@ describe Officing::Residence do
 
       describe "dates" do
         it "is not valid but not because date of birth" do
-          custom_residence = Officing::Residence.new("date_of_birth(3i)" => "1",
-                                                     "date_of_birth(2i)" => "1",
-                                                     "date_of_birth(1i)" => "1980")
+          custom_residence = Officing::Residence.new(date_of_birth: "1980-01-01")
 
           expect(custom_residence).not_to be_valid
           expect(custom_residence.errors[:date_of_birth]).to be_empty
         end
 
         it "is not valid without a date of birth" do
-          custom_residence = Officing::Residence.new("date_of_birth(3i)" => "",
-                                                     "date_of_birth(2i)" => "",
-                                                     "date_of_birth(1i)" => "")
+          custom_residence = Officing::Residence.new(date_of_birth: "")
           expect(custom_residence).not_to be_valid
           expect(custom_residence.errors[:date_of_birth]).to include("can't be blank")
         end
@@ -117,7 +113,7 @@ describe Officing::Residence do
 
         expect(FailedCensusCall.count).to eq(1)
         expect(FailedCensusCall.first).to have_attributes(
-          user_id: residence.user.id,
+          user_id: nil,
           poll_officer_id: residence.officer.id,
           document_number: "12345678Z",
           document_type: "1",
@@ -215,7 +211,7 @@ describe Officing::Residence do
 
       expect(FailedCensusCall.count).to eq(1)
       expect(FailedCensusCall.first).to have_attributes(
-        user_id: residence.user.id,
+        user_id: nil,
         poll_officer_id: residence.officer.id,
         document_number: "12345678Z",
         document_type: "1",
@@ -223,6 +219,14 @@ describe Officing::Residence do
         postal_code: nil,
         year_of_birth: Time.current.year
       )
+    end
+
+    it "generates a complex password for the user" do
+      stub_secrets(security: { password_complexity: true })
+
+      residence.save!
+
+      expect(residence.user).to be_valid
     end
   end
 end

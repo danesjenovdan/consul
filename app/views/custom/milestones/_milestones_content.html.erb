@@ -1,7 +1,7 @@
 <% milestones = milestoneable.milestones.by_locale.order_by_publication_date %>
 <div class="row">
   <div class="small-12 medium-10 medium-centered">
-    <%= render "milestones/progress_bars", milestoneable: milestoneable %>
+    <%= render Milestones::ProgressBarsComponent.new(milestoneable) %>
 
     <% if milestones.blank? %>
       <div class="callout primary text-center margin-top">

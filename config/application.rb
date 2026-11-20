@@ -19,9 +19,39 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# TODO: remove after upgrading to ruby_llm 2.0.0
+RubyLLM.configure do |config|
+  config.use_new_acts_as = true
+end
+
 module Consul
   class Application < Rails::Application
-    config.load_defaults 7.0
+    def secrets
+      @secrets ||= read_secrets
+    end
+
+    def read_secrets
+      secrets = ActiveSupport::OrderedOptions.new
+      path = Rails.root.join("config/secrets.yml")
+      env = Rails.env
+
+      if path.exist?
+        require "erb"
+        parsed_secrets = YAML.unsafe_load(ERB.new(IO.read(path)).result) || {}
+
+        secrets.merge!(parsed_secrets["shared"].deep_symbolize_keys) if parsed_secrets["shared"]
+        secrets.merge!(parsed_secrets[env].deep_symbolize_keys) if parsed_secrets[env]
+      end
+
+      secrets
+    end
+
+    def credentials
+      secrets
+    end
+
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 7.2
 
     # Keep belongs_to fields optional by default, because that's the way
     # Rails 4 models worked
@@ -43,18 +73,37 @@ module Consul
     # order to make upgrades easier.
     config.active_storage.variant_processor = :mini_magick
 
+    # Keep using YAML to serialize the legislation_annotations ranges column
+    config.active_record.default_column_serializer = YAML
+
     # Keep reading existing data in the legislation_annotations ranges column
     config.active_record.yaml_column_permitted_classes = [ActiveSupport::HashWithIndifferentAccess, Symbol]
+
+    # Keep using `:never` because it was the default in Rails 7.1
+    # and it will be the default again in Rails 8.0.
+    # TODO: remove after upgrading to Rails 8.0
+    Rails.application.config.active_job.enqueue_after_transaction_commit = :never
+
+    ###
+    # Enables YJIT on production but not on development/test
+    # because this will be the default in Rails 8.1
+    # TODO: remove after upgrading to Rails 8.1
+    Rails.application.config.yjit = !Rails.env.local?
 
     # Handle custom exceptions
     config.action_dispatch.rescue_responses["FeatureFlags::FeatureDisabled"] = :forbidden
     config.action_dispatch.rescue_responses["Apartment::TenantNotFound"] = :not_found
 
-    # Store uploaded files on the local file system (see config/storage.yml for options).
-    config.active_storage.service = :local
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    # config.autoload_lib(ignore: %w[assets tasks])
 
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
     config.time_zone = Rails.application.secrets.time_zone.presence || "Madrid"
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
@@ -86,6 +135,7 @@ module Consul
       "nl",
       "oc",
       "pl",
+      "pt",
       "pt-BR",
       "ro",
       "ru",
@@ -113,7 +163,9 @@ module Consul
       "val" => "es"
     }]
 
-    config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**[^custom]*", "*.{rb,yml}")]
+    initializer :exclude_custom_locales_automatic_loading, before: :add_locales do
+      paths.add "config/locales", glob: "**[^custom]*/*.{rb,yml}"
+    end
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "custom", "**", "*.{rb,yml}")]
 
     config.after_initialize do
@@ -123,16 +175,15 @@ module Consul
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
     config.assets.paths << Rails.root.join("node_modules", "jquery-ui", "themes", "base")
+    config.assets.paths << Rails.root.join("node_modules", "leaflet", "dist")
     config.assets.paths << Rails.root.join("node_modules")
 
     config.active_job.queue_adapter = :delayed_job
 
     # CONSUL DEMOCRACY specific custom overrides
-    # Read more on documentation:
-    # * English: https://github.com/consuldemocracy/consuldemocracy/blob/master/CUSTOMIZE_EN.md
-    # * Spanish: https://github.com/consuldemocracy/consuldemocracy/blob/master/CUSTOMIZE_ES.md
-    #
-
+    # You can find more info in the documentation:
+    # * English: docs/en/customization/introduction.md
+    # * Spanish: docs/es/customization/introduction.md
     [
       "app/components/custom",
       "app/controllers/custom",
@@ -157,6 +208,12 @@ module Consul
 
     # Set to true to enable managing different tenants using the same application
     config.multitenancy = Rails.application.secrets.multitenancy
+    # Set to true if you want that the default tenant only to be used to manage other tenants
+    config.multitenancy_management_mode = Rails.application.secrets.multitenancy_management_mode
+
+    def multitenancy_management_mode?
+      config.multitenancy && Tenant.default? && config.multitenancy_management_mode
+    end
   end
 end
 

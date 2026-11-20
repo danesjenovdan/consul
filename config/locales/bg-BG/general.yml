@@ -87,7 +87,6 @@ bg:
         confidence_score: най-високо оценени
         created_at: най-нови
         hot_score: най-активни
-        most_commented: най-коментирани
         relevance: приложимост
         recommendations: препоръки
       recommendations:
@@ -123,7 +122,6 @@ bg:
       recommendations_title: Препоръки за създаване на дебат
       start_new: Започнете дебат
     show:
-      author_deleted: Потребителят е изтрит
       comments_title: Коментари
       edit_debate_link: Редактирайте
       flag: Този дебат бе означен като неподходящ от няколко потребители.
@@ -391,12 +389,10 @@ bg:
         one: 1 глас
         other: "%{count} гласа"
       supports_necessary: "%{number} гласове за подкрепа нужни"
-      total_percent: 100%
       archived: "Това предложение е архивирано и не може да събира подкрепа."
       successful: "Това предложение достигна необходимата подкрепа."
       selected: "Избрано предложение"
     show:
-      author_deleted: Потребителят е изтрит
       code: "Код на предложението:"
       comments_tab: Коментари
       dashboard_proposal_link: Табло
@@ -558,7 +554,6 @@ bg:
         support: "Просто трябва да кликнете върху бутона, който ще видите по-долу „Подкрепете това предложение“. Може да се информирате, преди да го популяризирате. Само предложенията, които постигат максимална подкрепа, ще се изпълняват от Общината и си помислих, че вие със сигурност бихте ми помогнали да го постигна!"
         share: "А ако и вие ми направите голяма услуга да споделите моето предложение с вашите приятели, семейство и контакти, би било чудесно!"
   polls:
-    all: "Всички"
     dates: "От %{open_at} до %{closed_at}"
     final_date: "Окончателни изчисления / резултати"
     index:
@@ -617,10 +612,6 @@ bg:
         most_voted_answer: "Най-често гласуван отговор: "
     poll_header:
       back_to_proposal: Назад към предложението
-  poll_questions:
-    show:
-      vote_answer: "Глас %{answer}"
-      voted: "Вие гласувахте %{answer}"
   proposal_notifications:
     new:
       title: "Изпратете съобщение"
@@ -726,7 +717,6 @@ bg:
       see_more: Вижте повече препоръки
       hide: Скрийте препоръки
     translations:
-      select_language_prompt: Изберете език
       remove_language: Премахнете език
       add_language: Добавете език
       languages_in_use:

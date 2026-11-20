@@ -58,18 +58,12 @@
 //= require ckeditor/loader
 //= require_directory ./ckeditor
 //= require social-share-button
-//= require ahoy
 //= require app
 //= require check_all_none
 //= require comments
 //= require foundation_extras
 //= require location_changer
-//= require moderator_comment
-//= require moderator_debates
-//= require moderator_proposals
-//= require moderator_budget_investments
-//= require moderator_proposal_notifications
-//= require moderator_legislation_proposals
+//= require moderator
 //= require gettext
 //= require annotator
 //= require jquery.amsify.suggestags
@@ -97,17 +91,14 @@
 //= require legislation_annotatable
 //= require legislation_draft_versions
 //= require followable
-//= require flaggable
 //= require documentable
 //= require imageable
 //= require tree_navigator
 //= require tag_autocomplete
-//= require polls_admin
 //= require leaflet/dist/leaflet
 //= require leaflet.markercluster/dist/leaflet.markercluster
 //= require map
 //= require polls
-//= require sortable
 //= require table_sortable
 //= require investment_report_alert
 //= require managers
@@ -115,16 +106,19 @@
 //= require globalize
 //= require settings
 //= require cookies
+//= require cookies_consent
 //= require columns_selector
 //= require budget_edit_associations
 //= require budget_hide_money
 //= require datepicker
+//= require account_menu
 //= require authenticity_token_refresh
 //= require_tree ./admin
+//= require_tree ./polls
 //= require_tree ./sdg
 //= require_tree ./sdg_management
-//= require custom
 //= require_tree ./custom
+//= require custom
 
 var initialize_modules = function() {
   "use strict";
@@ -158,10 +152,8 @@ var initialize_modules = function() {
   App.Documentable.initialize();
   App.Imageable.initialize();
   App.TagAutocomplete.initialize();
-  App.PollsAdmin.initialize();
   App.Map.initialize();
   App.Polls.initialize();
-  App.Sortable.initialize();
   App.TableSortable.initialize();
   App.InvestmentReportAlert.initialize();
   App.Managers.initialize();
@@ -171,16 +163,22 @@ var initialize_modules = function() {
     App.ColumnsSelector.initialize();
   }
   App.AdminBudgetsWizardCreationStep.initialize();
+  App.AdminDashboardActionsForm.initialize();
   App.AdminMachineLearningScripts.initialize();
+  App.AdminPollQuestionOptionsTable.initialize();
+  App.AdminPollShiftsForm.initialize();
   App.AdminTenantsForm.initialize();
   App.AdminVotationTypesFields.initialize();
   App.AdminMenu.initialize();
   App.BudgetEditAssociations.initialize();
   App.BudgetHideMoney.initialize();
   App.Datepicker.initialize();
+  App.PollsForm.initialize();
   App.SDGRelatedListSelector.initialize();
   App.SDGManagementRelationSearch.initialize();
+  App.AccountMenu.initialize();
   App.AuthenticityTokenRefresh.initialize();
+  App.CookiesConsent.initialize();
 };
 
 var destroy_non_idempotent_modules = function() {
