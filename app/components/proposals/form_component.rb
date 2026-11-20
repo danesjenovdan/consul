@@ -1,8 +1,9 @@
 class Proposals::FormComponent < ApplicationComponent
   include TranslatableFormHelper
   include GlobalizeHelper
+
   attr_reader :proposal, :url
-  use_helpers :current_user, :suggest_data, :geozone_select_options
+  delegate :suggest_data, :geozone_select_options, to: :helpers
 
   def initialize(proposal, url:)
     @proposal = proposal
@@ -13,5 +14,9 @@ class Proposals::FormComponent < ApplicationComponent
 
     def categories
       Tag.category.order(:name)
+    end
+
+    def map_location
+      proposal.map_location || MapLocation.new(proposal: Proposal.new)
     end
 end

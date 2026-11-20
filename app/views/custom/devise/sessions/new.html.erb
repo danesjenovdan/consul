@@ -5,7 +5,7 @@ window.setTimeout(() => {document.location.href = 'https://center-rog.si/profil'
 <% provide :title do %><%= t("devise_views.sessions.new.title") %><% end %>
 <h1><%= t("devise_views.sessions.new.title") %></h1>
 
-<%= render "devise/omniauth_form", action: "sign_in" %>
+<%= render Devise::OmniauthFormComponent.new("sign_in") %>
 
 <p>
   V participativnem proračunu lahko sodelujejo samo članice in člani Centra Rog.

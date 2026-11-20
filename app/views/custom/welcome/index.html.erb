@@ -41,15 +41,6 @@
                   <div class="column-content">
                     <h2><%= t("custom.headings.#{phase.kind}") %></h2>
                     <h4><%= strip_tags(phase.summary) %></h4>
-                    <% unless phase.active %>
-                    <!-- <div>
-                        TEGA JE DAL FILIP NOT IN POTEM UMAKNIL, KER JE MB TAKO HOTEL, NASLEDNJA DVA STA BILA ZAKOMENTIRANA<div class="large-description"><%= sanitize_and_auto_link phase["presentation_summary_#{phase_name}"] %></div>
-                        <div class="large-description"><%= sanitize_and_auto_link phase.summary %></div>
-                        <% if phase.description %>
-                          <div class="large-description"><%= sanitize_and_auto_link phase.description %></div>
-                        <% end %>
-                      </div> -->
-                    <% end %>
                     <% if phase.active %>
                       <a class="action-button large" href="<%= phase.url %>">
                         <%= t("devise_views.sessions.new.submit") %>&nbsp;<i class="custom-icon arrow-small-right"></i>
