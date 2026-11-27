@@ -11,7 +11,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
-      # We are no longer deploying, PR-in, or building Maribor.
+      # We are no longer deploying, PR-ing or building Maribor.
       # - name: pull-request-maribor
       #   uses: repo-sync/pull-request@v2
       #   with:
@@ -89,9 +89,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_title: "Pulling ${{ github.ref }} into staging-k8s"
 
-      - name: pull-request-dolina
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: "dolina-k8s"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Pulling ${{ github.ref }} into dolina-k8s"
+      # We are no longer deploying, PR-ing, or building Dolina.
+      # - name: pull-request-dolina
+      #   uses: repo-sync/pull-request@v2
+      #   with:
+      #     destination_branch: "dolina-k8s"
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     pr_title: "Pulling ${{ github.ref }} into dolina-k8s"
